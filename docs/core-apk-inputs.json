@@ -1,10 +1,25 @@
 {
-  "scope": "opt-in upstream App document lab; Android execution NOT_RUN",
+  "scope": "opt-in upstream App/Part document lab; Android execution NOT_RUN",
+  "part": true,
+  "builtin_modules": [
+    "FreeCAD",
+    "Materials",
+    "Part"
+  ],
+  "build_inputs": {
+    "app/src/main/cpp/upstream-core/CoreBridge.cpp": "bf05183f422fe1e78dcefca4038cddf3aa89bf8829402bf35c89bf5da53cc89a",
+    "app/src/main/cpp/upstream-core/CMakeLists.txt": "7c38867753bfadac1d69174f61b9395d68827df44a0623bdf9312273969f945f",
+    "scripts/build_freecad_android_core.py": "be84f7bd8da32d22d168a41b55de308d85f8284eae3a24f924f59d2ec3aeca67",
+    "scripts/build_part_occt.py": "190b3cae8b386e374d4c69e3b12e5bc2c5beec650e02461ce2ac20e3c2dc668a",
+    "scripts/build_core_bridge.py": "2183959c5d29c9b1300609fa38d859d678b5fc73bb1d8f0ad1a59d191af5fd2c"
+  },
   "libraries": {
-    "libFreeCADPython.so": "9cf30016cf933dadb4b4d6539c55ffcf7c6cc4ebf7986a385c358bf127678862",
-    "libFreeCADApp.so": "9d1dea0acbf8a57de94e6011a294ae00ca3d3392399158b532b9b925801bfe93",
-    "libFreeCADBase.so": "e1628d27a63a7cb9e33b1e3564d16b9ff921a923168793973d06a0d6a86592e6",
-    "libfreecad_document_bridge.so": "152ab732a5502ac2ac694aba1742904bb8b6b239a9b524efc207369f68659571",
+    "libFreeCADMaterials.so": "0b7d941b1dc0304a41c9372ade89df67e4f0332a7eff76272dc3b7d4ac82786b",
+    "libFreeCADPart.so": "8df12e85f976fc4879cb50415e0ca39223747d6a231abf57644636e4e19733c7",
+    "libFreeCADPython.so": "210a0f6c87f7872e5bd347725d7fa92bb9860575107719ba7b2990e52fcf184d",
+    "libFreeCADApp.so": "fef2bd53df0efcbd288ff5fe682575d8206a25bc5587d66c25c7b085cd0cd592",
+    "libFreeCADBase.so": "c7fcb9a7be72ff5789e5d4e0e76e396ebeffebabe16d82ac8334f9b21b72113c",
+    "libfreecad_document_bridge.so": "4da52fee648d9c3591c2a14b65713431c5daf86ba257ff441f51ad1543603ef2",
     "libboost_date_time.so": "4a7c20867a86b9ab93fc70ccf7edfd990834b61dfd240686fbece8f78b9e17e2",
     "libboost_program_options.so": "84b32bfe46d200af79c9008dc3fc0efd782a813d373f10f5976364fddee779b6",
     "libboost_regex.so": "594f9f32bb6dbb776feea68d43fc484e2f4abb821ffbeecf3f35ac4e9fbf20c9",
@@ -15,6 +30,13 @@
     "libicuuc.so": "8967be000632edf9f3800614abbf3c9d90aaced3338cc139ece8b63832cc3147",
     "libxerces-c-3.2.so": "5da06dead12305de5601cdc5d97dc39771f4f62618d3e046ece0f572aaacb5dc",
     "libyaml-cpp.so": "e161b5ff427b0cf5fa0e7ba0e72580336061488c7f79cd080fe13df8866ebd34",
+    "libTKBin.so": "8b377789e1b14abe2397266cc1c12628815df5915db5291291ce4eafc939c8f7",
+    "libTKBinL.so": "e4c5662b05c342585109b3c826271975f3698a89b58259783f98fdf9387dab6d",
+    "libTKDEGLTF.so": "f483af964c4b10a5ba60419c97cd13e49e253556c27d161fc22318610b94b114",
+    "libTKExpress.so": "507fdd8f0342dfe45f63d9349fdabd2e2bbce979df663df677b5b26213cf3a2b",
+    "libTKFeat.so": "c20bbbce1a4631037e029be7f411127c585b4b878379c77882db4a6ab728c1f6",
+    "libTKMeshVS.so": "bc9c7ac170ac4a3fe0c9d5bdfabca7dfafde542bb64c47c0d2ecf4a326eabca7",
+    "libTKRWMesh.so": "3355855cf077cdace6e24605856084672c2ffcca1bee8bc1cb52d3f871190db5",
     "libQt6Concurrent_arm64-v8a.so": "c7c1b65bc93a279eebb821b481f1d6c2c5419743ba5082036501dd1a5ca39b8e",
     "libQt6Core_arm64-v8a.so": "19ff054945c3480d3bfaa8c2937c6b8fde7d0a2880600a3e9cfcd1ea02bf6a85",
     "libQt6Network_arm64-v8a.so": "655caf7e301840950dba2fc232491db0d60231f4ecb2b9150e426628abd7f16c",
@@ -26,10 +48,12 @@
     "libssl_python.so": "9b1de9f8538f6bd0e62aff027631b0b5c3f70816cc461b92499824141fa56612"
   },
   "original_library_hashes": {
-    "libFreeCADPython.so": "904e755392e363cb96a27c5afe1117e8c50eb1e494cf08662c26df44f8a10e90",
-    "libFreeCADApp.so": "c76181a87961e06b509a208467d66146dc4646fe337b1b31d73eaad4cefd3a94",
-    "libFreeCADBase.so": "ff7a515746951aaeac965dfc97998d9cd1d8db298bc207c974bc9b8b38515159",
-    "libfreecad_document_bridge.so": "2158dd520ace1d7ebfab812c67764a4384af14544ba8247f6e97e58db159f0e3",
+    "libFreeCADMaterials.so": "d6bfa279eaee4c228a6ce83f8883f2b9165f79affd301c856126961b11ba3e94",
+    "libFreeCADPart.so": "33e5be06f95f3266f7623808361aab04bae0d4cb59e4fa5265542db1c83fa339",
+    "libFreeCADPython.so": "4f02863c6adc8f892139515db2e3adcb7a4be135c4c2e3b273ae977db87daf35",
+    "libFreeCADApp.so": "94ab4bdbf99882ba16bd97c742fcd50f14514ad43a564ce230aec0ad1879f4d9",
+    "libFreeCADBase.so": "a292826bfcb019c4d7bb467b1919844903731cdb137c99b75e090e5674bdff5a",
+    "libfreecad_document_bridge.so": "0b788c3b4f845ace55f4deb0a7ff21b2dc433c11731d2e608a29e7ff7724913f",
     "libboost_date_time.so": "90e342e986a41fc8d0627b8069c54862af81521e6de948d6ec175039b792dc81",
     "libboost_program_options.so": "f901e84cff351495e91d887876fa0ffb3da7eabe0d931c975fa70b7026213bcb",
     "libboost_regex.so": "f8dfdb3901aff56d391d31b733d94d9e99dc0ee250985a5c1ce827c0d0972aae",
@@ -40,6 +64,13 @@
     "libicuuc.so": "50461ab1e056cac8ec1f0cd1f4ace399aaefed5e0b9a1619ddfee45e69c2dd93",
     "libxerces-c-3.2.so": "bbcd67259774f957587e2f4ee3c4b6b14d59fb032acc0ec51b8e5c4a91ace7ea",
     "libyaml-cpp.so": "b73b2ad76b014fb5d4514fef0ebaed51c925be6b7ace37c10061d54405242132",
+    "libTKBin.so": "72f58ec75b679e37c812cf97a79e0223e49f1781aa419eb7b5c8448b1a239e74",
+    "libTKBinL.so": "dc3b809b1d8a1bddde00ea507d36aba94176cd8481ed10cf5f4aa10f11ac3eab",
+    "libTKDEGLTF.so": "cca855d42ae1d6a74ec69c948c0eb9cd23e2ddf7e7afd9a851c809840a74a2f3",
+    "libTKExpress.so": "0aadbede4b68e236adcd135c52cceb0ae9acbcb30678840676382ae4d6a63151",
+    "libTKFeat.so": "7ba3cf7f923ee84fd0ddf64650d310d9172d9081712ba621878c30f23e6950d1",
+    "libTKMeshVS.so": "7eff3a75114d0885c8c4fad383557470d962718193ceee4603588c982cf47897",
+    "libTKRWMesh.so": "e736b9eaeee44096c218e94f19e9e00d6e1b928281916be37309e4394666df93",
     "libQt6Concurrent_arm64-v8a.so": "2bf6fc6fc4fb6968f5c20adb361e601171e8b33fce7984e174cba53015508375",
     "libQt6Core_arm64-v8a.so": "1cc91e4afcf197433ac87784ef622c9bf661b31b043e7af7a458dba5badd8317",
     "libQt6Network_arm64-v8a.so": "4cf6fb2e21a34be88eabf92867f7d8af10ab2b8439d94a092d3376583dc2a874",
@@ -4148,8 +4179,8 @@
     },
     {
       "path": "scripts/mobile_core.py",
-      "size": 15789,
-      "sha256": "2fcc5b6387ff78cd765c4d73bc494265a1aa1a7a7ca933bc00db7086b592c1d7"
+      "size": 17536,
+      "sha256": "9916dc7f86dbdf1d30a1958f97fbdb674e719ffc7491b7dd6fac9c376a5b9c85"
     },
     {
       "path": "scripts/mobile_features.py",
@@ -4157,11 +4188,16 @@
       "sha256": "af271ec37ef44594567e3bee73c4f2930ac8e40603cecc024d029ebc1add81f0"
     },
     {
+      "path": "scripts/mobile_part.py",
+      "size": 3282,
+      "sha256": "20b4a0d735566119d391d19e9475d312343347ef92321f3e62f27a4e883dddd1"
+    },
+    {
       "path": "scripts/mobile_python.py",
-      "size": 7539,
-      "sha256": "2dff772e26ef73766a8df09bed4b65b60d23339d075e97e67dfd76087dac8201"
+      "size": 7744,
+      "sha256": "40e2dde458b571c87734e00dfe934eff7fc5c892abab9c291c4542ebbaa9f2e7"
     }
   ],
-  "asset_zip_sha256": "f5fd0963106571ee070b0f609da2eacc00e9278ff82c3ec5f912699a0ac20145",
+  "asset_zip_sha256": "fef976f04223060b2b26d2e16124444e5c6d88aae5609dde44ce4de15f8b06ca",
   "java_jar_sha256": "b4b439629c5aa21db9a3b633d77182d0b25b1c381c391fc447e6104be394bb54"
 }

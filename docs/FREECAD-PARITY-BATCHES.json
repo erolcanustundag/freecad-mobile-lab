@@ -1092,7 +1092,7 @@
       },
       {
         "id": "P-PART-F3",
-        "scope": "Whitelisted native Part FCStd restoration and genuine STEP export/readback",
+        "scope": "Whitelisted native Part FCStd restoration and genuine STEP import/export/readback",
         "status": "IMPLEMENTED_REFERENCE_TEST_PENDING_DEVICE_PENDING"
       },
       {

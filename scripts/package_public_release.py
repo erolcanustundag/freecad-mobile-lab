@@ -10,6 +10,7 @@ import argparse
 import json
 from pathlib import Path
 import subprocess
+import shutil
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -74,6 +75,7 @@ def package_repository(out, version, published_apk, runtime_path, upstream):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--reuse-corresponding-source',type=Path,help='Reuse a prior source ZIP only after verifying every entry against the current frozen sources')
     parser.add_argument('--source-only', action='store_true', help='Refresh repository sources after verifying the existing locked release assets')
     args = parser.parse_args()
     release = json.loads((ROOT/'release.json').read_text())
@@ -142,7 +144,19 @@ def main():
         raise ValueError('OCCT corresponding source is missing')
     entries += [(p, 'FreeCADMobileLab/occt-source/'+str(p.relative_to(occt)), False) for p in sorted(set(sources))]
     upstream = out/f'FreeCAD-Mobile-Lab-{version}-corresponding-sources.zip'
-    write_zip(upstream, entries)
+    if args.reuse_corresponding_source:
+        prior=args.reuse_corresponding_source.resolve()
+        if prior==upstream.resolve():raise ValueError('Select a separate immutable prior source asset')
+        with zipfile.ZipFile(prior) as archive:
+            if archive.testzip() is not None or set(archive.namelist())!={name for _,name,_ in entries}:
+                raise ValueError('Prior corresponding-source entries differ')
+            for source,name,_ in entries:
+                if hashlib.sha256(archive.read(name)).hexdigest()!=digest(source):
+                    raise ValueError('Prior corresponding-source bytes differ: '+name)
+        shutil.copyfile(prior,upstream)
+        print('Verified reused corresponding-source bytes against all frozen inputs',upstream.stat().st_size,flush=True)
+    else:
+        write_zip(upstream, entries)
     assets.append(dict(name=upstream.name, kind='corresponding-source', size_bytes=upstream.stat().st_size, sha256=digest(upstream)))
     is_release=release.get('channel')=='release'
     device=json.loads((ROOT/'docs/device-results.json').read_text())

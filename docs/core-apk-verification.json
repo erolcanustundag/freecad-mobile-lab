@@ -1,13 +1,14 @@
 {
-  "version": "1.0-rc6",
-  "apk_sha256": "0149715a8452953fb311dc6d9f360b0a1b5db520cb9385d0a8472bb9ba4f0621",
+  "version": "1.2-rc1",
+  "apk_sha256": "b0cc38777296d9f8dd080e16e148e56ea7bcb373bbb331eec69ce92908e44979",
   "status": "STATIC_PASS",
   "android_execution": "NOT_RUN",
-  "libraries_and_python_extensions": 123,
+  "libraries_and_python_extensions": 132,
   "strong_symbol_closure": true,
   "native_loader_closure": true,
   "minimum_alignment": 16384,
-  "python_asset_files": 822,
+  "python_asset_files": 823,
+  "original_part_builtin_entrypoints": true,
   "libraries": [
     {
       "path": "lib/arm64-v8a/libFreeCADApp.so",
@@ -49,6 +50,84 @@
         "libfmt.so",
         "libpython3.13.so",
         "liblog.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libFreeCADMaterials.so",
+      "alignment": 16384,
+      "needed": [
+        "libFreeCADApp.so",
+        "libQt6Concurrent_arm64-v8a.so",
+        "libyaml-cpp.so",
+        "libFreeCADBase.so",
+        "libxerces-c-3.2.so",
+        "libz.so",
+        "libicuuc.so",
+        "libicui18n.so",
+        "libpython3.13.so",
+        "libboost_program_options.so",
+        "libboost_regex.so",
+        "libboost_thread.so",
+        "libboost_date_time.so",
+        "libfmt.so",
+        "libQt6Xml_arm64-v8a.so",
+        "libQt6Core_arm64-v8a.so",
+        "liblog.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libFreeCADPart.so",
+      "alignment": 16384,
+      "needed": [
+        "libTKFillet.so",
+        "libTKMesh.so",
+        "libTKernel.so",
+        "libTKG2d.so",
+        "libTKG3d.so",
+        "libTKMath.so",
+        "libTKShHealing.so",
+        "libTKXSBase.so",
+        "libTKBool.so",
+        "libTKBO.so",
+        "libTKBRep.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKGeomBase.so",
+        "libTKOffset.so",
+        "libTKPrim.so",
+        "libTKHLR.so",
+        "libTKFeat.so",
+        "libTKExpress.so",
+        "libTKDESTEP.so",
+        "libTKDEIGES.so",
+        "libTKDEGLTF.so",
+        "libTKDESTL.so",
+        "libFreeCADMaterials.so",
+        "libFreeCADApp.so",
+        "libFreeCADBase.so",
+        "libxerces-c-3.2.so",
+        "libz.so",
+        "libicuuc.so",
+        "libicui18n.so",
+        "libpython3.13.so",
+        "libboost_program_options.so",
+        "libboost_regex.so",
+        "libboost_thread.so",
+        "libboost_date_time.so",
+        "libfmt.so",
+        "libQt6Xml_arm64-v8a.so",
+        "libQt6Concurrent_arm64-v8a.so",
+        "libQt6Core_arm64-v8a.so",
+        "liblog.so",
+        "libyaml-cpp.so",
         "libm.so",
         "libc++_shared.so",
         "libdl.so",
@@ -165,6 +244,38 @@
       ]
     },
     {
+      "path": "lib/arm64-v8a/libTKBin.so",
+      "alignment": 16384,
+      "needed": [
+        "libTKBRep.so",
+        "libTKMath.so",
+        "libTKG2d.so",
+        "libTKG3d.so",
+        "libTKCAF.so",
+        "libTKBinL.so",
+        "libTKernel.so",
+        "libTKCDF.so",
+        "libTKLCAF.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKBinL.so",
+      "alignment": 16384,
+      "needed": [
+        "libTKCDF.so",
+        "libTKernel.so",
+        "libTKLCAF.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
       "path": "lib/arm64-v8a/libTKBool.so",
       "alignment": 16384,
       "needed": [
@@ -230,6 +341,27 @@
         "libTKG2d.so",
         "libTKMath.so",
         "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKDEGLTF.so",
+      "alignment": 16384,
+      "needed": [
+        "libTKRWMesh.so",
+        "libTKernel.so",
+        "libTKMath.so",
+        "libTKMesh.so",
+        "libTKXCAF.so",
+        "libTKLCAF.so",
+        "libTKV3d.so",
+        "libTKBRep.so",
+        "libTKG3d.so",
+        "libTKDE.so",
+        "libTKService.so",
+        "libm.so",
         "libc++_shared.so",
         "libdl.so",
         "libc.so"
@@ -326,6 +458,39 @@
         "libTKG2d.so",
         "libTKMath.so",
         "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKExpress.so",
+      "alignment": 16384,
+      "needed": [
+        "libTKernel.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKFeat.so",
+      "alignment": 16384,
+      "needed": [
+        "libTKBRep.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libTKGeomBase.so",
+        "libTKPrim.so",
+        "libTKG2d.so",
+        "libTKBO.so",
+        "libTKG3d.so",
+        "libTKBool.so",
+        "libTKShHealing.so",
+        "libm.so",
         "libc++_shared.so",
         "libdl.so",
         "libc.so"
@@ -469,6 +634,22 @@
       ]
     },
     {
+      "path": "lib/arm64-v8a/libTKMeshVS.so",
+      "alignment": 16384,
+      "needed": [
+        "libTKV3d.so",
+        "libTKMath.so",
+        "libTKService.so",
+        "libTKernel.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
       "path": "lib/arm64-v8a/libTKOffset.so",
       "alignment": 16384,
       "needed": [
@@ -504,6 +685,26 @@
         "libTKG2d.so",
         "libTKMath.so",
         "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKRWMesh.so",
+      "alignment": 16384,
+      "needed": [
+        "libTKernel.so",
+        "libTKMath.so",
+        "libTKMesh.so",
+        "libTKXCAF.so",
+        "libTKLCAF.so",
+        "libTKV3d.so",
+        "libTKBRep.so",
+        "libTKG3d.so",
+        "libTKDE.so",
+        "libTKService.so",
+        "libm.so",
         "libc++_shared.so",
         "libdl.so",
         "libc.so"
@@ -771,6 +972,8 @@
         "libFreeCADPython.so",
         "libpython3.13.so",
         "libQt6Core_arm64-v8a.so",
+        "libFreeCADPart.so",
+        "libFreeCADMaterials.so",
         "liblog.so",
         "libm.so",
         "libc++_shared.so",

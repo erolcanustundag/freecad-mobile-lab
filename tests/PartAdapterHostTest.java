@@ -31,9 +31,12 @@ public final class PartAdapterHostTest {
         bad("{\"op\":\"part_preview\",\"object\":\"Solid\",\"tolerance\":0}");
         bad("{\"op\":\"part_export\",\"object\":\"Solid\",\"file\":\"../escape.step\"}");
         bad("{\"op\":\"part_export\",\"object\":\"Solid\",\"file\":\"wrong.FCStd\"}");
-        command("Begin");bad("{\"op\":\"part_export\",\"object\":\"Solid\",\"file\":\"Busy.step\"}");command("Abort");
+        command("Begin");bad("{\"op\":\"part_export\",\"object\":\"Solid\",\"file\":\"Busy.step\"}");bad(CoreCommandLine.parse("ImportStep Busy Reference.step").toString());command("Abort");
         state=command("ExportStep Solid Reference.step");check(state.getString("step_file").equals("Reference.step"),"STEP filename");Path step=Paths.get(args[1],"documents","Reference.step");check(Files.size(step)>100,"STEP file produced by native Part.export");
         JSONObject console=python("import Part\ns=Part.read("+JSONObject.quote(step.toString())+")\nassert s.isValid()\nassert abs(s.Volume-1500)<1e-6\nprint('STEP_ROUNDTRIP_OK')");check(console.getString("error").isEmpty(),console.getString("error"));check(console.getString("output").contains("STEP_ROUNDTRIP_OK"),"STEP exact geometry readback");
+        state=command("ImportStep Imported Reference.step");volume(state,"Imported",1500);check(shape(state,"Imported").getJSONArray("bounds").getDouble(3)==30,"STEP bounds restored into native document");
+        state=command("Undo");check(python("print(App.ActiveDocument.getObject('Imported') is None)").getString("output").contains("True"),"Native STEP import undo");state=command("Redo");volume(state,"Imported",1500);
+        bad(CoreCommandLine.parse("ImportStep Duplicate ../escape.step").toString());
         command("Add Round Cylinder");command("Set Round.Radius 3 mm");state=command("Set Round.Height 10 mm");volume(state,"Round",Math.PI*90);
         command("Add Ball Sphere");state=command("Set Ball.Radius 4 mm");volume(state,"Ball",4.0/3*Math.PI*64);
         command("Add Taper Cone");command("Add Ring Torus");state=command("State");check(shape(state,"Taper").getBoolean("valid"),"Native cone");check(shape(state,"Ring").getBoolean("valid"),"Native torus");
@@ -45,6 +48,7 @@ public final class PartAdapterHostTest {
         command("Save Boolean.FCStd");command("Close");state=command("Open Boolean.FCStd");check(shape(state,"Cut").getBoolean("valid"),"Native boolean FCStd restoration");volume(state,"Cut",1500-Math.PI*9*5/4);volume(state,"Union",1500+Math.PI*90-Math.PI*9*5/4);volume(state,"Intersection",Math.PI*9*5/4);
         bad("{\"op\":\"batch\",\"edits\":[{\"op\":\"add\",\"name\":\"Sketch\",\"type\":\"Sketcher::SketchObject\"}]}");
         for(String invalid:new String[]{"Preview Solid x","Preview Solid .2 extra","ExportStep Solid","Add X Unknown","Cut X Solid","Common X Solid Round extra"}){try{CoreCommandLine.parse(invalid);throw new AssertionError(invalid);}catch(IllegalArgumentException expected){count++;}}
+        Path fixtureRoot=Paths.get(args[2],"../../../../..","samples","upstream-part").normalize();Files.createDirectories(fixtureRoot);for(String name:new String[]{"Part.FCStd","Boolean.FCStd","Reference.step"})Files.copy(Paths.get(args[1],"documents",name),fixtureRoot.resolve(name),StandardCopyOption.REPLACE_EXISTING);
         System.out.println("PASS: "+count+" genuine Part JNI/FCStd/STEP/parametric geometry assertions; Android execution NOT_RUN");System.out.flush();System.exit(0);
     }
 }

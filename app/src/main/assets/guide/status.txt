@@ -9,8 +9,8 @@ Open gates: reported phone crash reproduction/fix verification, physical startup
 
 Host tests and static APK signature/alignment checks are evidence for their tested scope; they do not prove Android phone reliability. No full Rhino, Grasshopper or desktop FreeCAD parity is claimed. Public publication has not happened.
 
-The opt-in FreeCAD document lab (Workspace menu or recovery screen) embeds upstream App 1.1.4 and Python. It edits typed metadata properties, expressions, groups/links and native transactions, and saves/opens supported App-only FCStd documents. Native geometry workbenches, arbitrary addon proxy classes and Android runtime validation remain pending. Save your document before closing the process.
+The opt-in FreeCAD document lab (Workspace menu or recovery screen) embeds upstream App 1.1.4 and Python. The1.2 candidate adds original Part/Materials, parametric solid/boolean objects, native dimensional expressions and transactions, bounded software preview and STEP exchange. It saves/opens whitelisted native App/Part FCStd types. Sketcher/PartDesign/other workbench objects, arbitrary addon proxy classes and Android execution validation remain pending. Save your document before closing the process.
 
-Rc6 adds a Python console, saved/recorded Python macros, an App API browser and a portable QuantityDriver scripted metadata feature. Native Part/Gui workbench bindings and geometric proxy templates are still pending.
+Rc6 adds a Python console, saved/recorded Python macros, an App API browser and a portable QuantityDriver scripted metadata feature. The1.2 candidate loads the original Part API; Gui/other workbench bindings and geometric proxy templates remain pending.
 
 RC7: Restart lab can recover a failed or stuck document process. Save before restarting. Android crash/lifecycle verification remains pending.

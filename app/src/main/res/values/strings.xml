@@ -236,6 +236,7 @@
   <string name="ui_0251062d8e7a" formatted="false">"Cannot create saved document directory"</string>
   <string name="ui_ebc5efebcb26" formatted="false">"Cannot create temporary directory"</string>
   <string name="ui_a563fb28887e" formatted="false">"Cannot install runtime"</string>
+  <string name="ui_cd6641dfa33e" formatted="false">"Cannot open STEP input"</string>
   <string name="ui_fb1651bbbdc6" formatted="false">"Cannot open STEP output"</string>
   <string name="ui_b69d75eec198" formatted="false">"Cannot open destination"</string>
   <string name="ui_ec799cd23940" formatted="false">"Cannot open input"</string>
@@ -329,6 +330,7 @@
   <string name="ui_6e157c5da441" formatted="false">"Create"</string>
   <string name="ui_b0ef1b4df83d" formatted="false">"Create "</string>
   <string name="ui_5a51df9256e1" formatted="false">"Create a curve rail first. Select the object to copy."</string>
+  <string name="ui_9f58829cdbd4" formatted="false">"Create a document before importing STEP"</string>
   <string name="ui_bc88394aaae1" formatted="false">"Create a document or open a supported native FCStd file."</string>
   <string name="ui_c11c2f8bcd8d" formatted="false">"Create a document, or open a supported FCStd metadata document."</string>
   <string name="ui_2a848ba4938d" formatted="false">"Create a second curve to use as the rail."</string>
@@ -646,10 +648,12 @@
   <string name="ui_4f325d995b6d" formatted="false">"ISO"</string>
   <string name="ui_d6fbc9d2bdd5" formatted="false">"Import"</string>
   <string name="ui_eeec98db23d7" formatted="false">"Import CSV"</string>
+  <string name="ui_bff2e66d868c" formatted="false">"Import Part STEP"</string>
   <string name="ui_24617dd70272" formatted="false">"Import Python file"</string>
   <string name="ui_f2331487b964" formatted="false">"Import from files"</string>
   <string name="ui_15cc73271115" formatted="false">"Import worksheet CSV"</string>
-  <string name="ui_50e22cc67dcc" formatted="false">"Independent native Android CAD app with selected FreeCAD functionality.\n\nNative ARM64 OpenCASCADE 7.9.2 CAD kernel; actual FreeCAD PlaneGCS Sketcher solver; software 3D renderer, optional OpenGL ES 3, and Android touch UI.\n\nNew: weighted NURBS control points, interpolated splines, profiles, loft/sweep/revolve/extrude, sections, offsets, chamfer, healing, jewellery settings, bounded subdivision primitives and a small typed node graph.\n\nThe optional document lab includes original FreeCAD Base/App, typed metadata documents, expressions, transactions, Python console/macros and one portable scripted feature. Native Part/Sketcher/PartDesign/Gui workbenches and arbitrary FCStd editing/recompute are still pending. The main CAD workspace keeps its independent OCCT recipe engine. STEP transfers solid geometry to desktop FreeCAD.\n\nAll work is local. The app requests no network permission.\n\nCode: LGPL-2.1-or-later. FreeCAD: LGPL-2.1-or-later. OpenCASCADE: LGPL-2.1 with OCCT exception. Eigen: MPL-2.0. Boost: Boost Software License 1.0. meshoptimizer: MIT. Optional lab: Qt6.8.3 LGPL3/GPL3 notices and CPython3.13 PSF licence. Full notices accompany the source bundle and are included in app assets."</string>
+  <string name="ui_0ac055066c7e" formatted="false">"ImportedStep"</string>
+  <string name="ui_a2360e35db1e" formatted="false">"Independent native Android CAD app with selected FreeCAD functionality.\n\nNative ARM64 OpenCASCADE 7.9.2 CAD kernel; actual FreeCAD PlaneGCS Sketcher solver; software 3D renderer, optional OpenGL ES 3, and Android touch UI.\n\nNew: weighted NURBS control points, interpolated splines, profiles, loft/sweep/revolve/extrude, sections, offsets, chamfer, healing, jewellery settings, bounded subdivision primitives and a small typed node graph.\n\nThe optional document lab includes original FreeCAD Base/App/Part/Materials, native parametric solids and booleans, dimensional expressions, transactions, bounded geometry preview, STEP exchange, Python console/macros and one portable scripted metadata feature. Native FCStd restoration is limited to documented App metadata and whitelisted Part types. Sketcher, PartDesign, Gui and arbitrary workbench/addon FCStd support remain pending. The new Part runtime still requires Android execution testing. The main CAD workspace keeps its independent OCCT recipe engine. STEP transfers solid geometry to desktop FreeCAD.\n\nAll work is local. The app requests no network permission.\n\nCode: LGPL-2.1-or-later. FreeCAD: LGPL-2.1-or-later. OpenCASCADE: LGPL-2.1 with OCCT exception. Eigen: MPL-2.0. Boost: Boost Software License 1.0. meshoptimizer: MIT. Optional lab: Qt6.8.3 LGPL3/GPL3 notices and CPython3.13 PSF licence. Full notices accompany the source bundle and are included in app assets."</string>
   <string name="ui_ba805a89fc88" formatted="false">"Index (zero-based)"</string>
   <string name="ui_e01cd8bc414e" formatted="false">"Indices refer to this geometry. Changed topology blocks dependent selected-edge/face recipes.\n\n"</string>
   <string name="ui_4b631f698425" formatted="false">"Info"</string>
@@ -870,7 +874,7 @@
   <string name="ui_5f757ccd0da4" formatted="false">"New upstream document"</string>
   <string name="ui_b21b860f611d" formatted="false">"New workspace"</string>
   <string name="ui_a72564d6e4b4" formatted="false">"New workspace?"</string>
-  <string name="ui_e263adeb1308" formatted="false">"NewDoc MobileDocument\nAdd Source Feature\nAddProperty Source Width Length\nSet Source.Width 2 cm\nAdd Driven Feature\nAddProperty Driven Width Length\nExpression Driven.Width Source.Width * 2\n\nUndo · Redo · Recompute · State\nBegin \"Edit dimensions\" · Commit · Abort\nGroup GroupName ObjectName\nLink InstanceName TargetName\nSave Model.FCStd · Open Model.FCStd\nActivate DocumentName · Close\n\nAdd Solid Box · Set Solid.Length 25 mm\nPreview Solid 0.2 · ExportStep Solid Model.step\nCut Result Solid Tool · Fuse Result Solid Tool · Common Result Solid Tool\n\nObject kinds: Feature, Group, Link, VarSet; native Part runtime: Box, Cylinder, Sphere, Cone, Torus, PartFeature. Property kinds: Length, Angle, Area, Volume, Float, Integer, String, Bool, Link. Quotes preserve spaces. Save before closing the app."</string>
+  <string name="ui_424361e32866" formatted="false">"NewDoc MobileDocument\nAdd Source Feature\nAddProperty Source Width Length\nSet Source.Width 2 cm\nAdd Driven Feature\nAddProperty Driven Width Length\nExpression Driven.Width Source.Width * 2\n\nUndo · Redo · Recompute · State\nBegin \"Edit dimensions\" · Commit · Abort\nGroup GroupName ObjectName\nLink InstanceName TargetName\nSave Model.FCStd · Open Model.FCStd\nActivate DocumentName · Close\n\nAdd Solid Box · Set Solid.Length 25 mm\nPreview Solid 0.2 · ExportStep Solid Model.step\nImportStep Imported Model.step\nCut Result Solid Tool · Fuse Result Solid Tool · Common Result Solid Tool\n\nObject kinds: Feature, Group, Link, VarSet; native Part runtime: Box, Cylinder, Sphere, Cone, Torus, PartFeature. Property kinds: Length, Angle, Area, Volume, Float, Integer, String, Bool, Link. Quotes preserve spaces. Save before closing the app."</string>
   <string name="ui_a4a117030757" formatted="false">"No FreeCAD Document.xml found"</string>
   <string name="ui_f26c5e9a6b86" formatted="false">"No cells. Try Cell A1 18, Cell A2 =A1+2, then Ring =A1 1.6 3.\n"</string>
   <string name="ui_d12923ed74bd" formatted="false">"No change to "</string>
@@ -1129,6 +1133,8 @@
   <string name="ui_8526354e02a9" formatted="false">"Runtime is missing encodings"</string>
   <string name="ui_c367b9f4a0a4" formatted="false">"SCALAR"</string>
   <string name="ui_115cb610bfdd" formatted="false">"SECTION"</string>
+  <string name="ui_e1d2e9f8bc1e" formatted="false">"STEP import did not produce valid Part geometry"</string>
+  <string name="ui_164bcbdeb5dd" formatted="false">"STEP input exceeds 128 MiB"</string>
   <string name="ui_5dcbb616281a" formatted="false">"STEP must stay in the document directory"</string>
   <string name="ui_bdc850c04e2b" formatted="false">"STEP solid"</string>
   <string name="ui_1e314ab44923" formatted="false">"STEP · visible CAD geometry"</string>

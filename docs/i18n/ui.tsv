@@ -627,3 +627,8 @@ STEP must stay in the document directory|STEP dosyası belge klasöründe kalmal
 Export requires valid Part geometry|Dışa aktarma için geçerli Part geometrisi gerekir|Der Export benötigt gültige Part-Geometrie
 Invalid or oversized Part preview|Geçersiz veya çok büyük Part önizlemesi|Ungültige oder zu große Part-Vorschau
 Part preview coordinates out of range|Part önizleme koordinatları aralık dışında|Die Koordinaten der Part-Vorschau liegen außerhalb des Bereichs
+Import Part STEP|Part STEP içe aktar|Part-STEP importieren
+Create a document before importing STEP|STEP içe aktarmadan önce bir belge oluşturun|Erstellen Sie vor dem STEP-Import ein Dokument
+Cannot open STEP input|STEP girdisi açılamıyor|Die STEP-Eingabe kann nicht geöffnet werden
+STEP input exceeds 128 MiB|STEP girdisi 128 MiB sınırını aşıyor|Die STEP-Eingabe überschreitet 128 MiB
+STEP import did not produce valid Part geometry|STEP içe aktarma geçerli Part geometrisi oluşturmadı|Der STEP-Import hat keine gültige Part-Geometrie erzeugt

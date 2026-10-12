@@ -60,3 +60,17 @@ def export_step(obj, root, name):
         raise ValueError("Export requires valid Part geometry")
     Part.export([obj],str(destination))
     return name
+
+def read_step(root, name):
+    require()
+    if not isinstance(name,str) or not 1 <= len(name) <= 160 or '\x00' in name or '/' in name or '\\' in name or not name.lower().endswith(('.step','.stp')):
+        raise ValueError("Use a plain STEP filename")
+    source=(Path(root)/name).resolve()
+    if source.parent != Path(root).resolve():
+        raise ValueError("STEP must stay in the document directory")
+    if source.stat().st_size > 128*1024*1024:
+        raise ValueError("STEP input exceeds 128 MiB")
+    shape=Part.read(str(source))
+    if shape.isNull() or not shape.isValid():
+        raise ValueError("STEP import did not produce valid Part geometry")
+    return shape

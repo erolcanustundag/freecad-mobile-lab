@@ -345,6 +345,25 @@ def execute(request):
         mobile_python.stop_recording(request["name"])
     elif action == "api":
         mobile_python.inspect(request.get("target", "App"))
+    elif action == "part_import":
+        if _transaction:
+            raise ValueError("Finish the current transaction before importing geometry")
+        name = _identifier(request["name"])
+        if _doc().getObject(name) is not None or len(_doc().Objects) >= 1000:
+            raise ValueError("Object name already exists or the document is full")
+        shape = mobile_part.read_step(_root, request["file"])
+        _doc().openTransaction("Import native STEP")
+        try:
+            obj = _doc().addObject("Part::Feature", name)
+            obj.Shape = shape
+            _doc().recompute()
+            if "Invalid" in obj.State:
+                raise ValueError("Imported STEP feature failed recompute")
+            _doc().commitTransaction()
+        except Exception:
+            _doc().abortTransaction()
+            _doc().recompute()
+            raise
     elif action == "part_preview":
         result = snapshot()
         result["preview"] = mobile_part.mesh(_object(request["object"]),float(request.get("tolerance",0.2)))

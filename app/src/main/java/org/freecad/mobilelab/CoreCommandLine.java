@@ -5,7 +5,7 @@ import java.util.*;
 
 /** Human command syntax for the upstream document adapter. */
 final class CoreCommandLine {
-    static final String HELP="NewDoc MobileDocument\nAdd Source Feature\nAddProperty Source Width Length\nSet Source.Width 2 cm\nAdd Driven Feature\nAddProperty Driven Width Length\nExpression Driven.Width Source.Width * 2\n\nUndo · Redo · Recompute · State\nBegin \"Edit dimensions\" · Commit · Abort\nGroup GroupName ObjectName\nLink InstanceName TargetName\nSave Model.FCStd · Open Model.FCStd\nActivate DocumentName · Close\n\nAdd Solid Box · Set Solid.Length 25 mm\nPreview Solid 0.2 · ExportStep Solid Model.step\nCut Result Solid Tool · Fuse Result Solid Tool · Common Result Solid Tool\n\nObject kinds: Feature, Group, Link, VarSet; native Part runtime: Box, Cylinder, Sphere, Cone, Torus, PartFeature. Property kinds: Length, Angle, Area, Volume, Float, Integer, String, Bool, Link. Quotes preserve spaces. Save before closing the app.";
+    static final String HELP="NewDoc MobileDocument\nAdd Source Feature\nAddProperty Source Width Length\nSet Source.Width 2 cm\nAdd Driven Feature\nAddProperty Driven Width Length\nExpression Driven.Width Source.Width * 2\n\nUndo · Redo · Recompute · State\nBegin \"Edit dimensions\" · Commit · Abort\nGroup GroupName ObjectName\nLink InstanceName TargetName\nSave Model.FCStd · Open Model.FCStd\nActivate DocumentName · Close\n\nAdd Solid Box · Set Solid.Length 25 mm\nPreview Solid 0.2 · ExportStep Solid Model.step\nImportStep Imported Model.step\nCut Result Solid Tool · Fuse Result Solid Tool · Common Result Solid Tool\n\nObject kinds: Feature, Group, Link, VarSet; native Part runtime: Box, Cylinder, Sphere, Cone, Torus, PartFeature. Property kinds: Length, Angle, Area, Volume, Float, Integer, String, Bool, Link. Quotes preserve spaces. Save before closing the app.";
     static JSONObject parse(String text)throws Exception{
         if(text==null||text.length()>4096)throw new IllegalArgumentException("Command exceeds 4,096 characters");
         String trimmed=text.trim();if(trimmed.length()>6&&trimmed.regionMatches(true,0,"Python",0,6)&&Character.isWhitespace(trimmed.charAt(6)))return new JSONObject().put("op","python").put("code",trimmed.substring(6).trim());
@@ -38,6 +38,7 @@ final class CoreCommandLine {
             case "preview":
                 if(a.size()!=2&&a.size()!=3)throw new IllegalArgumentException("Preview OBJECT [TOLERANCE_MM]");
                 return request.put("op","part_preview").put("object",a.get(1)).put("tolerance",a.size()==3?Double.parseDouble(a.get(2)):0.2);
+            case "importstep":arity(a,3);return request.put("op","part_import").put("name",a.get(1)).put("file",a.get(2));
             case "exportstep":arity(a,3);return request.put("op","part_export").put("object",a.get(1)).put("file",a.get(2));
             case "addproperty":
                 arity(a,4);String propertyType=null;

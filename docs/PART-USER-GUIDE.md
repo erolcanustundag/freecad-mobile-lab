@@ -19,11 +19,14 @@ Cut Result Solid Tool
 Preview Result 0.2
 Save NativeModel.FCStd
 ExportStep Result NativeModel.step
+ImportStep Imported NativeModel.step
 ```
 
 The preview uses genuine Part tessellation and the software viewport. One finger orbits, pinch zooms, two fingers pan. Tolerance must be0.05–2mm. The display is bounded to30,000 triangles and coordinates within±1,000,000mm; increasing tolerance can reduce display detail. This does not alter the saved BRep. Native tessellation may allocate memory before the display limit can be checked; no global Android memory guarantee is claimed. Wires without faces cannot use this triangle preview.
 
 FCStd save/open preserves native whitelisted geometry, properties, expressions, links and supported metadata. Supported geometry types: Part::Feature, Box, Cylinder, Sphere, Cone, Torus, Cut, Fuse and Common. Other types, including Sketcher/PartDesign objects and arbitrary addon proxies, are rejected before restore. The existing QuantityDriver metadata proxy remains the sole supported scripted proxy. FCStd input remains128MiB, expanded ZIP256MiB, Document.xml16MiB and2,000 entries. This is not a general desktop FCStd editor.
+
+Import Part STEP opens the Android file picker and imports up to128MiB into a native Part::Feature. Create a document first. STEP shape transforms are carried by the imported BRep; document history, source labels/assembly tree, colours and materials are not preserved by this shape-only reader. Import is a native transaction with Undo/Redo. The native parser can use memory before a shape is returned; device budgets remain unmeasured.
 
 ExportStep writes the selected original Part object through native Part.export, then opens Android's save picker. Export uses a plain.step/.stp filename. Files do not transfer the whole document/history/materials. The Python console exposes the loaded original Part API; try Api Part.makeBox or Python print(Part.makeBox(20,10,5).Volume). Gui and other workbench APIs remain pending. Macros have the existing tracing budget; native operations can take longer and Recovery/Restart remains available. Save FCStd before restarting.
 
