@@ -1072,5 +1072,35 @@
       "scope": "Turkish/German interface, persistent language choice, command aliases, recovery-role bug fix",
       "counts_as_original_workbench_parity": false
     }
-  ]
+  ],
+  "part_prerequisite": {
+    "id": "P-PART",
+    "purpose": "Original Part backend before native Sketcher/PartDesign; this does not complete the full Part workbench",
+    "status": "IN_PROGRESS",
+    "version": "1.2-rc1",
+    "apk": null,
+    "scopes": [
+      {
+        "id": "P-PART-F1",
+        "scope": "Original Part/Materials builtin runtime and real OCCT dependencies",
+        "status": "BUILD_IN_PROGRESS_DEVICE_PENDING"
+      },
+      {
+        "id": "P-PART-F2",
+        "scope": "Native parametric solids, dimensions, expressions, transactions and booleans",
+        "status": "IMPLEMENTED_REFERENCE_TEST_PENDING_DEVICE_PENDING"
+      },
+      {
+        "id": "P-PART-F3",
+        "scope": "Whitelisted native Part FCStd restoration and genuine STEP export/readback",
+        "status": "IMPLEMENTED_REFERENCE_TEST_PENDING_DEVICE_PENDING"
+      },
+      {
+        "id": "P-PART-F4",
+        "scope": "Bounded native tessellation and software viewport integration",
+        "status": "IMPLEMENTED_REFERENCE_TEST_PENDING_DEVICE_PENDING"
+      }
+    ],
+    "android_execution": "NOT_RUN"
+  }
 }

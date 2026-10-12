@@ -55,6 +55,15 @@ def main():
         for name in SYSTEM:exports.update(symbols(NDK/'sysroot/usr/lib/aarch64-linux-android/26'/name)[0])
         for record in records:
             assert not (set(record['needed'])-provided-SYSTEM),record
+        if manifest.get('part'):
+            assert manifest['builtin_modules']==['FreeCAD','Materials','Part']
+            expected={'libFreeCADPart.so','libFreeCADMaterials.so'}
+            assert expected.issubset(provided)
+            assert {'PyInit_Part','PyInit_Materials'}.issubset(exports),'Genuine builtin entrypoints are missing'
+            bridge=next(x for x in records if x['path']=='lib/arm64-v8a/libfreecad_document_bridge.so')
+            assert expected.issubset(set(bridge['needed'])),'Part/Materials must be linked by the bridge'
+            assert {'PyInit_Part','PyInit_Materials'}.issubset(required[bridge['path']]),'Builtin registration must reference the real entrypoints'
+            assert 'scripts/mobile_part.py' in {x['path'] for x in manifest['python_assets']}
         missing={name:sorted(values-exports) for name,values in required.items() if values-exports}
         assert not missing,missing
         dex=z.read('classes.dex')
@@ -65,7 +74,7 @@ def main():
     report={'version':release['version'],'apk_sha256':hashlib.sha256(apk.read_bytes()).hexdigest(),
         'status':'STATIC_PASS','android_execution':'NOT_RUN','libraries_and_python_extensions':len(records),
         'strong_symbol_closure':True,'native_loader_closure':True,'minimum_alignment':16384,
-        'python_asset_files':len(manifest['python_assets']),'libraries':records}
+        'python_asset_files':len(manifest['python_assets']),'original_part_builtin_entrypoints':bool(manifest.get('part')),'libraries':records}
     (ROOT/'docs/core-apk-verification.json').write_text(json.dumps(report,indent=2)+'\n')
     print('PASS:',len(records),'packaged ARM64 libraries/extensions, 16 KiB alignment, API26 strong-symbol/loader closure;',len(manifest['python_assets']),'Python files verified. Android execution NOT_RUN')
 if __name__=='__main__':main()

@@ -37,6 +37,7 @@
   <string name="ui_b52b36b7269f" formatted="false">"Hinten"</string>
   <string name="ui_c59203db9a48" formatted="false">"Ausgewogen · 50.000 Dreiecke"</string>
   <string name="ui_78a8bd5c5cc2" formatted="false">"Ringbandbreite / Höhe (mm)"</string>
+  <string name="ui_3e2cdbeee1e4" formatted="false">"Basisobjekt"</string>
   <string name="ui_9230747798f6" formatted="false">"Grundkörper"</string>
   <string name="ui_40af4dcb42fc" formatted="false">"Variantenserie"</string>
   <string name="ui_6c5f4cb5f461" formatted="false">"Druckbett X (mm)"</string>
@@ -196,6 +197,7 @@
   <string name="ui_b1336ed07450" formatted="false">"STL-Variantenserie exportieren"</string>
   <string name="ui_b7e9d2ee1028" formatted="false">"Netzexportqualität"</string>
   <string name="ui_90835234c58c" formatted="false">"Sicherungskopie exportieren"</string>
+  <string name="ui_1d8881d218f9" formatted="false">"Der Export benötigt gültige Part-Geometrie"</string>
   <string name="ui_c934f0c6efba" formatted="false">"Export · Einheiten in Millimetern"</string>
   <string name="ui_97b695b9b9cf" formatted="false">"Ausdruck"</string>
   <string name="ui_6f26fb48d63c" formatted="false">"Ausdruck (z. B. Source.Width * 2)"</string>
@@ -256,6 +258,7 @@
   <string name="ui_f61b62753fb3" formatted="false">"Interpolierte Kurve"</string>
   <string name="ui_19dc8265673d" formatted="false">"Interpolierte Kurve · durch Punkte"</string>
   <string name="ui_46ebb0829a2d" formatted="false">"Schnittmenge"</string>
+  <string name="ui_a7462a1bc44c" formatted="false">"Ungültige oder zu große Part-Vorschau"</string>
   <string name="ui_1373a3c2798a" formatted="false">"Isometrisch"</string>
   <string name="ui_686b2a0ddbbb" formatted="false">"Steinfassungen"</string>
   <string name="ui_9a7cd5bb7c20" formatted="false">"Schmuckvorlagen / Voreinstellungen"</string>
@@ -317,11 +320,15 @@
   <string name="ui_5159e2ab8729" formatted="false">"NURBS · gewichtete Kontrollpunkte"</string>
   <string name="ui_709a23220f2c" formatted="false">"Name"</string>
   <string name="ui_cb04729f44c1" formatted="false">"Name / Ebene / Sperre"</string>
+  <string name="ui_4862367a4934" formatted="false">"Originale Part-Volumenoperation"</string>
   <string name="ui_45211683ce7b" formatted="false">"Nativer Quader"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Nativer Kegel"</string>
+  <string name="ui_c62b92752d38" formatted="false">"Originale Differenz"</string>
   <string name="ui_6117755b333f" formatted="false">"Nativer Zylinder"</string>
+  <string name="ui_55e081e59f06" formatted="false">"Originaler Schnitt"</string>
   <string name="ui_c2c2cc1eb77b" formatted="false">"Native Kugel"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Nativer Torus"</string>
+  <string name="ui_7aaa9ab32d7f" formatted="false">"Originale Vereinigung"</string>
   <string name="ui_b3b46e64b67d" formatted="false">"Navigationswürfel"</string>
   <string name="ui_6403f2b7eb2a" formatted="false">"Neu"</string>
   <string name="ui_0e06e5aa9fcd" formatted="false">"Neues Makro"</string>
@@ -367,6 +374,7 @@
   <string name="ui_ab3d9c6b9e83" formatted="false">"Organisationswerkzeuge"</string>
   <string name="ui_6e349b44e371" formatted="false">"Original-Part"</string>
   <string name="ui_f88fb371ca4e" formatted="false">"Original-Part ist in dieser Laufzeit nicht verfügbar"</string>
+  <string name="ui_c4044bf8f2d4" formatted="false">"Das originale Part-Modul ist in dieser Laufzeit nicht verfügbar"</string>
   <string name="ui_22569744952d" formatted="false">"Orthogonal"</string>
   <string name="ui_eec92f96be86" formatted="false">"PNG-Export"</string>
   <string name="ui_47f82a4ce2c0" formatted="false">"PNG-Export fehlgeschlagen"</string>
@@ -376,6 +384,10 @@
   <string name="ui_fecceacb8e2d" formatted="false">"Parametrischer Knotengraph"</string>
   <string name="ui_85990c7b288a" formatted="false">"Part-Geometrievorschau"</string>
   <string name="ui_6f9d5a6db41a" formatted="false">"Part-Vorschau"</string>
+  <string name="ui_c6a2b1d28a7c" formatted="false">"Die Part-Vorschau enthält nicht endliche Koordinaten"</string>
+  <string name="ui_0a5ac03e1fa7" formatted="false">"Die Koordinaten der Part-Vorschau liegen außerhalb des Bereichs"</string>
+  <string name="ui_5ab3a1c2ca42" formatted="false">"Die Part-Vorschau überschreitet 30.000 Dreiecke; erhöhen Sie die Toleranz"</string>
+  <string name="ui_ae6fdd8e95d3" formatted="false">"Die Part-Vorschau benötigt Flächen oder Volumenkörper; reine Drahtgeometrie wird nicht angezeigt"</string>
   <string name="ui_67b4d6aa8d08" formatted="false">"Pavillontiefe (mm)"</string>
   <string name="ui_ca787afd2cfc" formatted="false">"Leistung / Darstellungsdetails"</string>
   <string name="ui_2dcff8cab2c4" formatted="false">"Rohr entlang einer Kurve erstellen"</string>
@@ -396,6 +408,7 @@
   <string name="ui_722d6c109308" formatted="false">"Private Dokumentumgebung wird vorbereitet…"</string>
   <string name="ui_eb39e1d78db8" formatted="false">"Name der Voreinstellung"</string>
   <string name="ui_793c9c3fc481" formatted="false">"Vorschautoleranz (mm)"</string>
+  <string name="ui_15db4eab13a3" formatted="false">"Die Vorschautoleranz muss zwischen 0.05 und 2 mm liegen"</string>
   <string name="ui_56a1dd1806ff" formatted="false">"Druckbett / Ausrichtung"</string>
   <string name="ui_b21073d807ac" formatted="false">"Druckvorbereitung"</string>
   <string name="ui_d956b27d4917" formatted="false">"Druckerbauraum"</string>
@@ -435,6 +448,7 @@
   <string name="ui_b134bd555a2f" formatted="false">"Neu starten"</string>
   <string name="ui_2d9ae7d5429e" formatted="false">"Dokumentlabor neu starten?"</string>
   <string name="ui_0479c883ff33" formatted="false">"Labor neu starten"</string>
+  <string name="ui_103525d44650" formatted="false">"Ergebnisname"</string>
   <string name="ui_c3a8355746ba" formatted="false">"Rotieren"</string>
   <string name="ui_954daa8b0033" formatted="false">"Rechts"</string>
   <string name="ui_96ddaccf581f" formatted="false">"Ring"</string>
@@ -451,6 +465,7 @@
   <string name="ui_1a58851ca34d" formatted="false">"Befehl ausführen"</string>
   <string name="ui_64019a30fa7b" formatted="false">"Kerntests ausführen"</string>
   <string name="ui_07877327aa79" formatted="false">"Makro ausführen"</string>
+  <string name="ui_5dcbb616281a" formatted="false">"Die STEP-Datei muss im Dokumentordner bleiben"</string>
   <string name="ui_1e314ab44923" formatted="false">"STEP · sichtbare CAD-Geometrie"</string>
   <string name="ui_290f4e40c0f7" formatted="false">"STL überschreitet 2.000.000 Dreiecke"</string>
   <string name="ui_0a6c14b06f09" formatted="false">"STL/OBJ-Tessellierungsqualität"</string>
@@ -482,6 +497,7 @@
   <string name="ui_983f5099f9ce" formatted="false">"Zuerst ein Eingabeobjekt auswählen."</string>
   <string name="ui_57ca8c7c9891" formatted="false">"Ein Objekt auswählen"</string>
   <string name="ui_97f557d1af78" formatted="false">"Zuerst ein Objekt auswählen."</string>
+  <string name="ui_557aeea24be2" formatted="false">"Wählen Sie ein Objekt mit nicht leerer Part-Geometrie"</string>
   <string name="ui_426e995abe36" formatted="false">"Modell auswählen"</string>
   <string name="ui_10c1d5e15f27" formatted="false">"Objekt auswählen"</string>
   <string name="ui_bd562c0fdb06" formatted="false">"Ergebnis auswählen"</string>
@@ -552,6 +568,7 @@
   <string name="ui_24da69de4da3" formatted="false">"Schwelle für dünne Wände (mm)"</string>
   <string name="ui_a430ac3065f8" formatted="false">"Titel · bis zu 100 Zeichen"</string>
   <string name="ui_a09797fefea0" formatted="false">"Toleranz (mm)"</string>
+  <string name="ui_7c205b45bfb9" formatted="false">"Werkzeugobjekt"</string>
   <string name="ui_4fa8cc860c52" formatted="false">"Werkzeuge"</string>
   <string name="ui_cae0435c41e8" formatted="false">"Oben"</string>
   <string name="ui_c0c80372338a" formatted="false">"Oberer Käfigmaßstab · 0.1 bis 3"</string>
@@ -577,6 +594,7 @@
   <string name="ui_6e217f978cea" formatted="false">"Ungespeicherte Labordokumente werden geschlossen. Gespeicherte FCStd-Dateien und Makros bleiben erhalten. Der CAD-Arbeitsbereich bleibt in seinem separaten Prozess."</string>
   <string name="ui_028679f571b4" formatted="false">"NURBS-Fläche enttrimmen"</string>
   <string name="ui_f9f4b89fd160" formatted="false">"Original App/Part 1.1.4 · Volumenkörper, Eigenschaften, Ausdrücke und Transaktionen"</string>
+  <string name="ui_68f1fb85d13b" formatted="false">"Verwenden Sie einen einfachen STEP-Dateinamen"</string>
   <string name="ui_7dcb3f42d312" formatted="false">"Telefonsprache verwenden"</string>
   <string name="ui_cbd3f9386e07" formatted="false">"V-Endanteil"</string>
   <string name="ui_8946abe055f7" formatted="false">"V-Startanteil"</string>

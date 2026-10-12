@@ -5,7 +5,7 @@ import java.util.*;
 
 /** Human command syntax for the upstream document adapter. */
 final class CoreCommandLine {
-    static final String HELP="NewDoc MobileDocument\nAdd Source Feature\nAddProperty Source Width Length\nSet Source.Width 2 cm\nAdd Driven Feature\nAddProperty Driven Width Length\nExpression Driven.Width Source.Width * 2\n\nUndo · Redo · Recompute · State\nBegin \"Edit dimensions\" · Commit · Abort\nGroup GroupName ObjectName\nLink InstanceName TargetName\nSave Model.FCStd · Open Model.FCStd\nActivate DocumentName · Close\n\nAdd Solid Box · Set Solid.Length 25 mm\nPreview Solid 0.2 · ExportStep Solid Model.step\n\nObject kinds: Feature, Group, Link, VarSet; native Part runtime: Box, Cylinder, Sphere, Cone, Torus, PartFeature. Property kinds: Length, Angle, Area, Volume, Float, Integer, String, Bool, Link. Quotes preserve spaces. Save before closing the app.";
+    static final String HELP="NewDoc MobileDocument\nAdd Source Feature\nAddProperty Source Width Length\nSet Source.Width 2 cm\nAdd Driven Feature\nAddProperty Driven Width Length\nExpression Driven.Width Source.Width * 2\n\nUndo · Redo · Recompute · State\nBegin \"Edit dimensions\" · Commit · Abort\nGroup GroupName ObjectName\nLink InstanceName TargetName\nSave Model.FCStd · Open Model.FCStd\nActivate DocumentName · Close\n\nAdd Solid Box · Set Solid.Length 25 mm\nPreview Solid 0.2 · ExportStep Solid Model.step\nCut Result Solid Tool · Fuse Result Solid Tool · Common Result Solid Tool\n\nObject kinds: Feature, Group, Link, VarSet; native Part runtime: Box, Cylinder, Sphere, Cone, Torus, PartFeature. Property kinds: Length, Angle, Area, Volume, Float, Integer, String, Bool, Link. Quotes preserve spaces. Save before closing the app.";
     static JSONObject parse(String text)throws Exception{
         if(text==null||text.length()>4096)throw new IllegalArgumentException("Command exceeds 4,096 characters");
         String trimmed=text.trim();if(trimmed.length()>6&&trimmed.regionMatches(true,0,"Python",0,6)&&Character.isWhitespace(trimmed.charAt(6)))return new JSONObject().put("op","python").put("code",trimmed.substring(6).trim());
@@ -32,6 +32,8 @@ final class CoreCommandLine {
                 String type=kind.equals("feature")?"App::FeaturePython":kind.equals("group")?"App::DocumentObjectGroup":kind.equals("link")?"App::Link":kind.equals("varset")?"App::VarSet":kind.equals("box")?"Part::Box":kind.equals("cylinder")?"Part::Cylinder":kind.equals("sphere")?"Part::Sphere":kind.equals("cone")?"Part::Cone":kind.equals("torus")?"Part::Torus":kind.equals("partfeature")?"Part::Feature":null;
                 if(type==null)throw new IllegalArgumentException("Unknown object kind");
                 edit.put("op","add").put("name",a.get(1)).put("type",type);break;
+            case "cut":case "fuse":case "common":
+                arity(a,4);return booleanRequest(command.equals("cut")?"Part::Cut":command.equals("fuse")?"Part::Fuse":"Part::Common",a.get(1),a.get(2),a.get(3));
             case "remove":arity(a,2);edit.put("op","remove").put("object",a.get(1));break;
             case "preview":
                 if(a.size()!=2&&a.size()!=3)throw new IllegalArgumentException("Preview OBJECT [TOLERANCE_MM]");
@@ -52,6 +54,13 @@ final class CoreCommandLine {
             default:throw new IllegalArgumentException("Unknown document command. Open Help for the command list.");
         }
         return request.put("op","batch").put("label",text.substring(0,Math.min(128,text.length()))).put("edits",new JSONArray().put(edit));
+    }
+    static JSONObject booleanRequest(String type,String name,String base,String tool)throws Exception{
+        if(!type.equals("Part::Cut")&&!type.equals("Part::Fuse")&&!type.equals("Part::Common"))throw new IllegalArgumentException("Unsupported Part boolean");
+        JSONArray edits=new JSONArray().put(new JSONObject().put("op","add").put("type",type).put("name",name))
+            .put(new JSONObject().put("op","set").put("object",name).put("property","Base").put("value",base))
+            .put(new JSONObject().put("op","set").put("object",name).put("property","Tool").put("value",tool));
+        return new JSONObject().put("op","batch").put("label","Part boolean").put("edits",edits);
     }
     private static void arity(List<String> values,int count){if(values.size()!=count)throw new IllegalArgumentException("Wrong number of command arguments");}
     private static List<String> tokens(String text){

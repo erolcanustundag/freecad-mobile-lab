@@ -15,6 +15,7 @@ public final class PartAdapterHostTest {
         System.load(args[0]);CoreNative.initialize(args[1],args[2],args[1]);
         JSONObject state=command("NewDoc PartReference");check(state.getBoolean("part"),"Genuine Part must be registered");
         command("Add Solid Box");command("Set Solid.Length 20 mm");command("Set Solid.Width 10 mm");state=command("Set Solid.Height 5 mm");volume(state,"Solid",1000);
+        bad(CoreCommandLine.parse("Set Solid.Length -1 mm").toString());volume(command("State"),"Solid",1000);
         command("Add Driven Box");command("Set Driven.Width 10 mm");command("Set Driven.Height 5 mm");state=command("Expression Driven.Length Solid.Length * 2");volume(state,"Driven",2000);
         state=command("Set Solid.Length 30 mm");volume(state,"Solid",1500);volume(state,"Driven",3000);
         state=command("Undo");volume(state,"Solid",1000);volume(state,"Driven",2000);state=command("Redo");volume(state,"Solid",1500);volume(state,"Driven",3000);
@@ -36,11 +37,14 @@ public final class PartAdapterHostTest {
         command("Add Round Cylinder");command("Set Round.Radius 3 mm");state=command("Set Round.Height 10 mm");volume(state,"Round",Math.PI*90);
         command("Add Ball Sphere");state=command("Set Ball.Radius 4 mm");volume(state,"Ball",4.0/3*Math.PI*64);
         command("Add Taper Cone");command("Add Ring Torus");state=command("State");check(shape(state,"Taper").getBoolean("valid"),"Native cone");check(shape(state,"Ring").getBoolean("valid"),"Native torus");
-        console=python("cut=App.ActiveDocument.addObject('Part::Cut','Cut')\ncut.Base=App.ActiveDocument.Solid\ncut.Tool=App.ActiveDocument.Round\nApp.ActiveDocument.recompute()\nassert cut.Shape.isValid()\nassert 0 < cut.Shape.Volume < 1500\nprint('BOOLEAN_OK')");check(console.getString("error").isEmpty(),console.getString("error"));check(console.getString("output").contains("BOOLEAN_OK"),"Native document boolean");
+        state=command("Cut Cut Solid Round");check(shape(state,"Cut").getBoolean("valid"),"Native cut command");volume(state,"Cut",1500-Math.PI*9*5/4);
+        state=command("Fuse Union Solid Round");check(shape(state,"Union").getBoolean("valid"),"Native fuse command");volume(state,"Union",1500+Math.PI*90-Math.PI*9*5/4);
+        state=command("Common Intersection Solid Round");volume(state,"Intersection",Math.PI*9*5/4);
+        bad(CoreCommandLine.parse("Cut Broken Solid Missing").toString());check(python("print(App.ActiveDocument.getObject('Broken') is None)").getString("output").contains("True"),"Failed boolean transaction removes its new object");
         command("Api Part.makeBox");state=command("State");check(state.getJSONObject("python").getJSONObject("api").getString("target").equals("Part.makeBox"),"Original Part API inspection");
-        command("Save Boolean.FCStd");command("Close");state=command("Open Boolean.FCStd");check(shape(state,"Cut").getBoolean("valid"),"Native boolean FCStd restoration");
+        command("Save Boolean.FCStd");command("Close");state=command("Open Boolean.FCStd");check(shape(state,"Cut").getBoolean("valid"),"Native boolean FCStd restoration");volume(state,"Cut",1500-Math.PI*9*5/4);volume(state,"Union",1500+Math.PI*90-Math.PI*9*5/4);volume(state,"Intersection",Math.PI*9*5/4);
         bad("{\"op\":\"batch\",\"edits\":[{\"op\":\"add\",\"name\":\"Sketch\",\"type\":\"Sketcher::SketchObject\"}]}");
-        for(String invalid:new String[]{"Preview Solid x","Preview Solid .2 extra","ExportStep Solid","Add X Unknown"}){try{CoreCommandLine.parse(invalid);throw new AssertionError(invalid);}catch(IllegalArgumentException expected){count++;}}
+        for(String invalid:new String[]{"Preview Solid x","Preview Solid .2 extra","ExportStep Solid","Add X Unknown","Cut X Solid","Common X Solid Round extra"}){try{CoreCommandLine.parse(invalid);throw new AssertionError(invalid);}catch(IllegalArgumentException expected){count++;}}
         System.out.println("PASS: "+count+" genuine Part JNI/FCStd/STEP/parametric geometry assertions; Android execution NOT_RUN");System.out.flush();System.exit(0);
     }
 }

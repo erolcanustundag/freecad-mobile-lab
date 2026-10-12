@@ -609,3 +609,21 @@ Export Part STEP|Part STEP dışa aktarımı|Part-STEP exportieren
 Preview tolerance (mm)|Önizleme toleransı (mm)|Vorschautoleranz (mm)
 Upstream App/Part 1.1.4 · solids, properties, expressions and transactions|Özgün App/Part 1.1.4 · katılar, özellikler, ifadeler ve işlemler|Original App/Part 1.1.4 · Volumenkörper, Eigenschaften, Ausdrücke und Transaktionen
 Create a document or open a supported native FCStd file.|Bir belge oluşturun veya desteklenen bir özgün FCStd dosyasını açın.|Erstellen Sie ein Dokument oder öffnen Sie eine unterstützte native FCStd-Datei.
+Native cut|Özgün çıkarma|Originale Differenz
+Native union|Özgün birleşim|Originale Vereinigung
+Native intersection|Özgün kesişim|Originaler Schnitt
+Native Part boolean|Özgün Part katı işlemi|Originale Part-Volumenoperation
+Result name|Sonuç adı|Ergebnisname
+Base object|Ana nesne|Basisobjekt
+Tool object|Araç nesnesi|Werkzeugobjekt
+Original Part module is not available in this runtime|Özgün Part modülü bu çalışma ortamında kullanılamıyor|Das originale Part-Modul ist in dieser Laufzeit nicht verfügbar
+Preview tolerance must be 0.05 to 2 mm|Önizleme toleransı 0.05 ile 2 mm arasında olmalıdır|Die Vorschautoleranz muss zwischen 0.05 und 2 mm liegen
+Select an object with nonempty Part geometry|Boş olmayan Part geometrisine sahip bir nesne seçin|Wählen Sie ein Objekt mit nicht leerer Part-Geometrie
+Part preview requires faces or solids, not wire-only geometry|Part önizlemesi için yüzey veya katı gerekir; yalnızca eğriler görüntülenemez|Die Part-Vorschau benötigt Flächen oder Volumenkörper; reine Drahtgeometrie wird nicht angezeigt
+Part preview exceeds 30,000 triangles; increase tolerance|Part önizlemesi 30.000 üçgeni aşıyor; toleransı artırın|Die Part-Vorschau überschreitet 30.000 Dreiecke; erhöhen Sie die Toleranz
+Part preview contains nonfinite coordinates|Part önizlemesi sonlu olmayan koordinatlar içeriyor|Die Part-Vorschau enthält nicht endliche Koordinaten
+Use a plain STEP filename|Yalnızca STEP dosya adını girin|Verwenden Sie einen einfachen STEP-Dateinamen
+STEP must stay in the document directory|STEP dosyası belge klasöründe kalmalıdır|Die STEP-Datei muss im Dokumentordner bleiben
+Export requires valid Part geometry|Dışa aktarma için geçerli Part geometrisi gerekir|Der Export benötigt gültige Part-Geometrie
+Invalid or oversized Part preview|Geçersiz veya çok büyük Part önizlemesi|Ungültige oder zu große Part-Vorschau
+Part preview coordinates out of range|Part önizleme koordinatları aralık dışında|Die Koordinaten der Part-Vorschau liegen außerhalb des Bereichs

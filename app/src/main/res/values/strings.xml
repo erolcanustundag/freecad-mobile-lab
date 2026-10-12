@@ -175,6 +175,8 @@
   <string name="ui_6dbb9957a3f6" formatted="false">"Band width"</string>
   <string name="ui_78a8bd5c5cc2" formatted="false">"Band width / height (mm)"</string>
   <string name="ui_04c123bdc64a" formatted="false">"Bangle"</string>
+  <string name="ui_077fe9c54ed5" formatted="false">"Base"</string>
+  <string name="ui_3e2cdbeee1e4" formatted="false">"Base object"</string>
   <string name="ui_9230747798f6" formatted="false">"Basic solids"</string>
   <string name="ui_2a5292adbbd6" formatted="false">"Batch export currently needs one graph output"</string>
   <string name="ui_e77948f7ca23" formatted="false">"Batch transforms need independent roots. Detach derived outputs before selecting them with their inputs."</string>
@@ -486,6 +488,7 @@
   <string name="ui_b7e9d2ee1028" formatted="false">"Export mesh quality"</string>
   <string name="ui_77e679695357" formatted="false">"Export quality"</string>
   <string name="ui_90835234c58c" formatted="false">"Export recovery copy"</string>
+  <string name="ui_1d8881d218f9" formatted="false">"Export requires valid Part geometry"</string>
   <string name="ui_c934f0c6efba" formatted="false">"Export · units millimetres"</string>
   <string name="ui_97b695b9b9cf" formatted="false">"Expression"</string>
   <string name="ui_6f26fb48d63c" formatted="false">"Expression (e.g. Source.Width * 2)"</string>
@@ -850,12 +853,16 @@
   <string name="ui_f2777dc497c4" formatted="false">"NURBSCurve XYZW poles · 2 to 16 poles"</string>
   <string name="ui_709a23220f2c" formatted="false">"Name"</string>
   <string name="ui_cb04729f44c1" formatted="false">"Name / layer / lock"</string>
+  <string name="ui_4862367a4934" formatted="false">"Native Part boolean"</string>
   <string name="ui_45211683ce7b" formatted="false">"Native box"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Native cone"</string>
+  <string name="ui_c62b92752d38" formatted="false">"Native cut"</string>
   <string name="ui_6117755b333f" formatted="false">"Native cylinder"</string>
+  <string name="ui_55e081e59f06" formatted="false">"Native intersection"</string>
   <string name="ui_d87971ad1308" formatted="false">"Native signal "</string>
   <string name="ui_c2c2cc1eb77b" formatted="false">"Native sphere"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Native torus"</string>
+  <string name="ui_7aaa9ab32d7f" formatted="false">"Native union"</string>
   <string name="ui_b3b46e64b67d" formatted="false">"Navigation cube"</string>
   <string name="ui_611857bc810e" formatted="false">"Navigation cube. Tap a visible face for its view, or ISO for perspective."</string>
   <string name="ui_6403f2b7eb2a" formatted="false">"New"</string>
@@ -863,7 +870,7 @@
   <string name="ui_5f757ccd0da4" formatted="false">"New upstream document"</string>
   <string name="ui_b21b860f611d" formatted="false">"New workspace"</string>
   <string name="ui_a72564d6e4b4" formatted="false">"New workspace?"</string>
-  <string name="ui_3dd384931690" formatted="false">"NewDoc MobileDocument\nAdd Source Feature\nAddProperty Source Width Length\nSet Source.Width 2 cm\nAdd Driven Feature\nAddProperty Driven Width Length\nExpression Driven.Width Source.Width * 2\n\nUndo · Redo · Recompute · State\nBegin \"Edit dimensions\" · Commit · Abort\nGroup GroupName ObjectName\nLink InstanceName TargetName\nSave Model.FCStd · Open Model.FCStd\nActivate DocumentName · Close\n\nAdd Solid Box · Set Solid.Length 25 mm\nPreview Solid 0.2 · ExportStep Solid Model.step\n\nObject kinds: Feature, Group, Link, VarSet; native Part runtime: Box, Cylinder, Sphere, Cone, Torus, PartFeature. Property kinds: Length, Angle, Area, Volume, Float, Integer, String, Bool, Link. Quotes preserve spaces. Save before closing the app."</string>
+  <string name="ui_e263adeb1308" formatted="false">"NewDoc MobileDocument\nAdd Source Feature\nAddProperty Source Width Length\nSet Source.Width 2 cm\nAdd Driven Feature\nAddProperty Driven Width Length\nExpression Driven.Width Source.Width * 2\n\nUndo · Redo · Recompute · State\nBegin \"Edit dimensions\" · Commit · Abort\nGroup GroupName ObjectName\nLink InstanceName TargetName\nSave Model.FCStd · Open Model.FCStd\nActivate DocumentName · Close\n\nAdd Solid Box · Set Solid.Length 25 mm\nPreview Solid 0.2 · ExportStep Solid Model.step\nCut Result Solid Tool · Fuse Result Solid Tool · Common Result Solid Tool\n\nObject kinds: Feature, Group, Link, VarSet; native Part runtime: Box, Cylinder, Sphere, Cone, Torus, PartFeature. Property kinds: Length, Angle, Area, Volume, Float, Integer, String, Bool, Link. Quotes preserve spaces. Save before closing the app."</string>
   <string name="ui_a4a117030757" formatted="false">"No FreeCAD Document.xml found"</string>
   <string name="ui_f26c5e9a6b86" formatted="false">"No cells. Try Cell A1 18, Cell A2 =A1+2, then Ring =A1 1.6 3.\n"</string>
   <string name="ui_d12923ed74bd" formatted="false">"No change to "</string>
@@ -931,6 +938,7 @@
   <string name="ui_13b12078f4a5" formatted="false">"Origin point"</string>
   <string name="ui_6e349b44e371" formatted="false">"Original Part"</string>
   <string name="ui_f88fb371ca4e" formatted="false">"Original Part is not available in this runtime"</string>
+  <string name="ui_c4044bf8f2d4" formatted="false">"Original Part module is not available in this runtime"</string>
   <string name="ui_d182bf94dfd9" formatted="false">"Original STL: %,d triangles\nSaving and STL export retain the original mesh. The display may be simplified."</string>
   <string name="ui_22569744952d" formatted="false">"Ortho"</string>
   <string name="ui_4ad54f254de6" formatted="false">"Outer height"</string>
@@ -950,9 +958,13 @@
   <string name="ui_9750284506f8" formatted="false">"Parametric graph · tap a node, then Edit / connect.\nTyped point/list/geometry ports. Number values update on Evaluate."</string>
   <string name="ui_fecceacb8e2d" formatted="false">"Parametric node graph"</string>
   <string name="ui_88be9d62d71b" formatted="false">"Part"</string>
+  <string name="ui_9ca2efd30be1" formatted="false">"Part boolean"</string>
   <string name="ui_85990c7b288a" formatted="false">"Part geometry preview"</string>
   <string name="ui_6f9d5a6db41a" formatted="false">"Part preview"</string>
+  <string name="ui_c6a2b1d28a7c" formatted="false">"Part preview contains nonfinite coordinates"</string>
   <string name="ui_0a5ac03e1fa7" formatted="false">"Part preview coordinates out of range"</string>
+  <string name="ui_5ab3a1c2ca42" formatted="false">"Part preview exceeds 30,000 triangles; increase tolerance"</string>
+  <string name="ui_ae6fdd8e95d3" formatted="false">"Part preview requires faces or solids, not wire-only geometry"</string>
   <string name="ui_190aa842474f" formatted="false">"Patch"</string>
   <string name="ui_1fff6a31661b" formatted="false">"Pattern"</string>
   <string name="ui_67b4d6aa8d08" formatted="false">"Pavilion depth (mm)"</string>
@@ -998,6 +1010,7 @@
   <string name="ui_f73f97f1ba53" formatted="false">"PresetSave \"name\" · save selected primitive parameters"</string>
   <string name="ui_7277c8e83dd9" formatted="false">"Preview OBJECT [TOLERANCE_MM]"</string>
   <string name="ui_793c9c3fc481" formatted="false">"Preview tolerance (mm)"</string>
+  <string name="ui_15db4eab13a3" formatted="false">"Preview tolerance must be 0.05 to 2 mm"</string>
   <string name="ui_ae657d3a9201" formatted="false">"Preview waiting: "</string>
   <string name="ui_56a1dd1806ff" formatted="false">"Print bed / orientation"</string>
   <string name="ui_b21073d807ac" formatted="false">"Print prep"</string>
@@ -1082,6 +1095,8 @@
   <string name="ui_2d9ae7d5429e" formatted="false">"Restart document lab?"</string>
   <string name="ui_0479c883ff33" formatted="false">"Restart lab"</string>
   <string name="ui_4b771e8e8418" formatted="false">"Restoring saved workspace"</string>
+  <string name="ui_5faa59d4bc37" formatted="false">"Result"</string>
+  <string name="ui_103525d44650" formatted="false">"Result name"</string>
   <string name="ui_c3a8355746ba" formatted="false">"Revolve"</string>
   <string name="ui_30492b507ed6" formatted="false">"Revolve "</string>
   <string name="ui_c8b40c840614" formatted="false">"Revolve axisX axisY axisZ directionX directionY directionZ angleDegrees"</string>
@@ -1114,6 +1129,7 @@
   <string name="ui_8526354e02a9" formatted="false">"Runtime is missing encodings"</string>
   <string name="ui_c367b9f4a0a4" formatted="false">"SCALAR"</string>
   <string name="ui_115cb610bfdd" formatted="false">"SECTION"</string>
+  <string name="ui_5dcbb616281a" formatted="false">"STEP must stay in the document directory"</string>
   <string name="ui_bdc850c04e2b" formatted="false">"STEP solid"</string>
   <string name="ui_1e314ab44923" formatted="false">"STEP · visible CAD geometry"</string>
   <string name="ui_290f4e40c0f7" formatted="false">"STL exceeds 2,000,000 triangles"</string>
@@ -1173,6 +1189,7 @@
   <string name="ui_983f5099f9ce" formatted="false">"Select an input object first."</string>
   <string name="ui_57ca8c7c9891" formatted="false">"Select an object"</string>
   <string name="ui_97f557d1af78" formatted="false">"Select an object first."</string>
+  <string name="ui_557aeea24be2" formatted="false">"Select an object with nonempty Part geometry"</string>
   <string name="ui_01cfb92811e1" formatted="false">"Select feature"</string>
   <string name="ui_53b0ccc51102" formatted="false">"Select geometry to frame"</string>
   <string name="ui_426e995abe36" formatted="false">"Select model"</string>
@@ -1341,6 +1358,8 @@
   <string name="ui_fb13b05e6426" formatted="false">"Too many command arguments"</string>
   <string name="ui_43178144a7b7" formatted="false">"Too many native trace fields"</string>
   <string name="ui_b3369896e837" formatted="false">"Too much point data"</string>
+  <string name="ui_9a830c714bb2" formatted="false">"Tool"</string>
+  <string name="ui_7c205b45bfb9" formatted="false">"Tool object"</string>
   <string name="ui_4fa8cc860c52" formatted="false">"Tools"</string>
   <string name="ui_cae0435c41e8" formatted="false">"Top"</string>
   <string name="ui_c0c80372338a" formatted="false">"Top cage scale · 0.1 to 3"</string>
@@ -1405,6 +1424,7 @@
   <string name="ui_d8724cce5a7c" formatted="false">"Unsupported 3MF unit"</string>
   <string name="ui_00b64eaa991f" formatted="false">"Unsupported DXF entity: "</string>
   <string name="ui_8f760eb1f92a" formatted="false">"Unsupported FCStd XML encoding or DTD"</string>
+  <string name="ui_a216c622d618" formatted="false">"Unsupported Part boolean"</string>
   <string name="ui_d1ac7d505ac6" formatted="false">"Unsupported graph version"</string>
   <string name="ui_4e8b11ce8306" formatted="false">"Unsupported native trace wire type"</string>
   <string name="ui_f57ba192f21d" formatted="false">"Unsupported project format, version, or units"</string>
@@ -1422,6 +1442,7 @@
   <string name="ui_2ac5d627cb40" formatted="false">"Use Object.Property"</string>
   <string name="ui_05f362e29902" formatted="false">"Use Source.Property"</string>
   <string name="ui_79ae0a58fc2e" formatted="false">"Use a plain .py filename"</string>
+  <string name="ui_68f1fb85d13b" formatted="false">"Use a plain STEP filename"</string>
   <string name="ui_cc082228eb12" formatted="false">"Use a single-line title (100 characters) and notes (200 characters)"</string>
   <string name="ui_7dcb3f42d312" formatted="false">"Use phone language"</string>
   <string name="ui_cbd3f9386e07" formatted="false">"V end fraction"</string>
