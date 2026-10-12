@@ -20,6 +20,8 @@ def main():
     p.add_argument('--occt-headers',type=Path,default=ROOT.parent/'occt-host/include/opencascade')
     p.add_argument('--jobs',type=int,default=3)
     p.add_argument('--configure-only',action='store_true')
+    p.add_argument('--part',action='store_true',help='Build original Part/Materials after missing OCCT dependencies are available; does not stage an APK')
+    p.add_argument('--occt-prefix',type=Path,default=ROOT.parent/'toolchains/occt-part-android')
     args=p.parse_args()
     if not 1<=args.jobs<=16:p.error('--jobs must be 1 to 16')
     source,build,prefix,qt,qthost,ndk,cpython,occt=(v.resolve() for v in (args.source,args.build,args.prefix,args.qt,args.qt_host,args.ndk,args.cpython,args.occt_headers))
@@ -60,11 +62,15 @@ def main():
         '-DEIGEN3_INCLUDE_DIR='+str(ROOT/'vendor/eigen'),
         '-DICU_ROOT='+str(prefix)]
     command+=['-D'+name+'=OFF' for name in sorted(set(modules))]
+    if args.part:
+        occ=args.occt_prefix.resolve()
+        if not (occ/'lib/libTKFeat.so').is_file() or not (occ/'lib/libTKDEGLTF.so').is_file():p.error('Build the missing Part OCCT dependencies first')
+        command += ['-DBUILD_PART=ON','-DBUILD_MATERIAL=ON','-DOCC_LIBRARY='+str(occ/'lib/libTKernel.so'),'-DOCC_LIBRARY_DIR='+str(occ/'lib'),'-DCMAKE_MODULE_LINKER_FLAGS=-Wl,-z,max-page-size=16384']
     env=dict(os.environ)
     env['LD_LIBRARY_PATH']=str(qthost/'lib')+(':'+env['LD_LIBRARY_PATH'] if env.get('LD_LIBRARY_PATH') else '')
     subprocess.run(command,check=True,env=env)
     if not args.configure_only:
-        subprocess.run(['cmake','--build',str(build),'--target','FreeCADBase','FreeCADApp','FreeCADMainPy',
+        subprocess.run(['cmake','--build',str(build),'--target','FreeCADBase','FreeCADApp','FreeCADMainPy',*(['Materials','Part'] if args.part else []),
             '--parallel',str(args.jobs)],check=True,env=env)
     print('Upstream Android core', 'configured' if args.configure_only else 'cross-built',
         'at',build,'(JNI/Android runtime verification NOT_RUN)')
