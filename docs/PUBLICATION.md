@@ -1,10 +1,10 @@
 # GitHub publication
 
-Publication status: **REPOSITORY_CREATED_RELEASE_PENDING**. The authorized public repository `erolcanustundag/freecad-mobile-lab` has been created. Source upload and the signed RC7 experimental prerelease are in progress.
+Publication status: **PUBLISHED_EXPERIMENTAL_PRERELEASE**. Public repository: https://github.com/erolcanustundag/freecad-mobile-lab . Signed RC7 prerelease: https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.0-rc7 . All four original asset sizes/SHA256 values match GitHub’s recorded digests. Source checks and the release workflow passed; the temporary transport branch was removed. Android runtime and full FreeCAD parity remain incomplete.
 
 The intended public repository is `freecad-mobile-lab` under the authenticated owner's account. Do not reuse an unrelated repository. Candidate releases must be marked prerelease; stable1.0 remains NOT_COMPLETE.
 
-The GitHub integration supports file/tree/commit operations; repository creation and release upload use GitHub's signed-in interface. No credentials are stored in the public source package. The original local public-source ZIP is a sealed preparation snapshot; its publication notes predate the remote publication. Current repository notes record the actual remote state. Frozen Boost/Eigen sources are restored from that ZIP with bootstrap_vendor_sources.py; no header stubs are substituted.
+The GitHub integration published the source. Repository creation used the signed-in interface; a credential-session restriction then blocked browser asset uploads. A temporary GitHub workflow reassembled and verified public artifact bytes, uploaded the unchanged signed APK/bundles, published the prerelease and removed its transport branch. Signing keys were not inputs to that workflow. No credentials are stored in the public source package. The original local public-source ZIP is a sealed preparation snapshot; its publication notes predate the remote publication. Current repository notes record the actual remote state. Frozen Boost/Eigen sources are restored from that ZIP with bootstrap_vendor_sources.py; no header stubs are substituted.
 
 Prepare and validate release assets with `scripts/package_public_release.py`. Run `python3 scripts/publish_github.py --assets dist/public-release` to check their checksums without publishing. When `gh` is authenticated to the intended owner, the explicitly authorized publication is:
 

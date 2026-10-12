@@ -6,7 +6,7 @@ The main workspace uses OCCT 7.9.2 and the upstream FreeCAD PlaneGCS solver. An 
 
 ## Install and start
 
-The public repository is being populated and the RC7 prerelease is being uploaded; see [publication status](docs/PUBLICATION.md). APKs belong in Releases because they exceed GitHub's regular Git file-size limit. Candidates use a development certificate; production signing and update migration remain open gates.
+Download the [signed RC7 APK](https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.0-rc7/FreeCAD-Mobile-Lab-1.0-rc7-arm64.apk) from the [experimental prerelease](https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.0-rc7). See [publication verification](docs/GITHUB-PUBLICATION.json). APKs belong in Releases because they exceed GitHub's regular Git file-size limit. Candidates use a development certificate; production signing and update migration remain open gates.
 
 Software rendering is the default. The recovery screen can open an empty workspace, retain recovery copies, and export local crash reports. OpenGL is optional. The reported instant-start crash has **not** been reproduced or verified fixed on a phone. RC7 adds an explicit document-lab restart for failed initialization or stuck script/native calls; unsaved lab documents close when restarted.
 

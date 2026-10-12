@@ -9,7 +9,7 @@
   "native_runtime": "UNCHANGED_FROM_RC6; prior host/strong-symbol evidence retained, target execution NOT_RUN",
   "device_smoke_instrumentation": "COMPILED_ONLY",
   "production_signing": "PENDING: prototype development certificate retained; production identity/update migration not verified",
-  "publication": "PENDING: repository/release creation absent from plugin; separate browser sign-in declined",
+  "publication": "PASS: public source and RC7 prerelease, four asset size/SHA256 digests verified; no signing keys published",
   "pending": [
     "reported phone and second device cold starts/lifecycle/SAF/process recreation",
     "minimum/current Android, multiple GPU vendors, low-memory and4/16KiB environments",
