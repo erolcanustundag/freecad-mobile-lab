@@ -81,6 +81,11 @@ def main():
         for script in sorted(assets.glob('mobile_*.py')):
             name='scripts/'+script.name;z.write(script,name)
             runtime.append({'path':name,'size':script.stat().st_size,'sha256':digest(script)})
+        if args.part:
+            for resource in sorted((assets/'resources').rglob('*')):
+                if resource.is_file():
+                    name='scripts/'+str(resource.relative_to(assets));z.write(resource,name)
+                    runtime.append({'path':name,'size':resource.stat().st_size,'sha256':digest(resource)})
     with zipfile.ZipFile(out) as z:
         if z.testzip() is not None:raise ValueError('Python asset CRC failure')
         for item in runtime:
@@ -95,12 +100,12 @@ def main():
     (assets/'SOURCES.txt').write_text(('FreeCAD 1.1.4 Base/App/Part/Materials; ' if args.part else 'FreeCAD 1.1.4 Base/App; ')+ ' Qt 6.8.3 headless Core/XML/Network/Concurrent; CPython 3.13.16.\n'
         'Frozen sources, checksums, build scripts and patches: native-cad/docs/FREECAD-ANDROID-TOOLCHAINS.json and scripts.\n'
         'This isolated document lab is experimental. Only the documented bounded Part adapter is included; other workbenches and Android runtime parity remain pending.\n'
-        'Source URLs and dependency notices: native-cad/docs/FREECAD-CORE-PORT.md and the dependency manifests.\n')
+        'Source URLs and dependency notices: native-cad/docs/FREECAD-CORE-PORT.md and the dependency manifests.\n'+('Bundled original FreeCAD material/model resources retain their individual authors/licenses; default material data is GPL-2.0-or-later. Full GPL2 text is included in core/licenses/material-data-GPL-2.0.txt.\n' if args.part else ''))
     report={'scope':'opt-in upstream App/Part document lab; Android execution NOT_RUN' if args.part else 'opt-in upstream App document lab; Android execution NOT_RUN',
         'part':args.part,'builtin_modules':['FreeCAD','Materials','Part'] if args.part else ['FreeCAD'],
         'build_inputs':{str(p.relative_to(ROOT)):digest(p) for p in [ROOT/'app/src/main/cpp/upstream-core/CoreBridge.cpp',ROOT/'app/src/main/cpp/upstream-core/CMakeLists.txt',ROOT/'scripts/build_freecad_android_core.py',ROOT/'scripts/build_part_occt.py',ROOT/'scripts/build_core_bridge.py']},
         'libraries':records,'original_library_hashes':originals,'python_assets':runtime,
         'asset_zip_sha256':digest(out),'java_jar_sha256':digest(jars/'Qt6Android.jar')}
     (ROOT/'docs/core-apk-inputs.json').write_text(json.dumps(report,indent=2)+'\n')
-    print('Staged',len(records),'additional ARM64 libraries,',len(runtime),'Python files; retained 31 mobile libraries unchanged')
+    print('Staged',len(records),'additional ARM64 libraries,',len(runtime),'runtime files; retained 31 mobile libraries unchanged')
 if __name__=='__main__':main()

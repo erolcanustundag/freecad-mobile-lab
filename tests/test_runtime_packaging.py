@@ -38,4 +38,7 @@ class RuntimePackaging(unittest.TestCase):
     def test_runtime_change_is_rejected(self):
         (self.assets/'python-home.zip').write_bytes(b'corrupt')
         with self.assertRaisesRegex(ValueError,'archive changed'):module.check(self.root)
+    def test_part_missing_material_resources_is_rejected(self):
+        path=self.root/'docs/core-apk-inputs.json';manifest=json.loads(path.read_text());manifest['part']=True;path.write_text(json.dumps(manifest))
+        with self.assertRaisesRegex(ValueError,'Part material resources are missing'):module.check(self.root)
 if __name__=='__main__':unittest.main()

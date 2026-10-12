@@ -3,9 +3,10 @@
 Restore the existing core dependency prefixes separately; no signing key is included.
 """
 from pathlib import Path
-import hashlib,json,zipfile
+import argparse,hashlib,json,zipfile
 ROOT=Path(__file__).resolve().parents[1];BASE=ROOT.parent
-for platform in ('host','android'):
+parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--platform',choices=('host','android','all'),default='all');args=parser.parse_args()
+for platform in (('host','android') if args.platform=='all' else (args.platform,)):
     files=[]
     prefix=BASE/'toolchains'/('occt-part-'+platform)
     files += [p for p in (prefix/'include').rglob('*') if p.is_file()]

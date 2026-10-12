@@ -119,3 +119,7 @@ B01–B04 bounded scopes have signed APK checkpoints. B03 contains the real upst
 - PartDesign: https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/PartDesign_Workbench.md
 - FCStd format: https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/File_Format_FCStd.md
 - Sketcher/Spreadsheet/TechDraw documentation in the same official repository.
+
+## Original Part prerequisite checkpoint —1.2-rc1
+
+P-PART adds four bounded foundations before B05: original Part/Materials runtime; native parametric solids/expressions/transactions/linked booleans; whitelisted native Part FCStd and STEP shape exchange; bounded genuine tessellation in the software viewport.270 real host JNI geometry/format/preview checks,88 document regressions and62 Python-tool regressions pass. Required default materials/models are bundled after an actual feature-creation failure identified the missing data. The new ARM64 runtime is built and statically checked; physical Android execution remainsNOT_RUN. B05 and later broad workbench scopes stayPENDING. Next: original Sketcher module and the general entity/edit/attachment infrastructure, followed by native PartDesign.

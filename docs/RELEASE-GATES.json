@@ -1,21 +1,21 @@
 {
-  "candidate": "1.1",
-  "version_code": 22,
+  "candidate": "1.2-rc1",
+  "version_code": 24,
   "stable_1_0": "NOT_COMPLETE",
-  "android_runtime": "USER_REPORTED_STARTUP",
+  "android_runtime": "NOT_RUN",
   "reported_phone_crash": "User now reports startup works; crash root cause and broader workflows remain unverified",
-  "static_apk": "PASS: non-debuggable minAPI26 target35;54 JNI libraries, v2/v3 matching certificate, loader closure and16KiB ELF/ZIP alignment",
-  "runtime_asset_packaging": "PASS: 6 portable regressions;822 Python CRC/hash/source matches;54 JNI library and Java input hashes",
-  "native_runtime": "UNCHANGED_FROM_1_0; historical host evidence retained",
+  "static_apk": "PASS:63 ARM64 JNI libraries plus69 Python extensions, v2/v3 certificate, loader/strong-symbol closure and16KiB ELF/ZIP alignment",
+  "runtime_asset_packaging": "PASS:7 regressions;1074 hashed/CRC/source-matched runtime files including251 original material/model resources",
+  "native_runtime": "PASS: original Android/host Part/Materials and JNI bridge;270 Part plus88/62 regressions",
   "device_smoke_instrumentation": "COMPILED_ONLY",
   "production_signing": "Retained development certificate for RC7 updates; dedicated production identity/update migration pending",
-  "publication": "PASS:1.1 full release/latest, four asset size/SHA256 digests verified; CI/release workflow successful",
+  "publication": "PENDING",
   "pending": [
-    "Phone details and structured cold-start/lifecycle/SAF/process recreation tests; second device",
-    "minimum/current Android, multiple GPU vendors, low-memory and4/16KiB environments",
-    "production signing and update migration",
-    "original Part, Sketcher, PartDesign and remaining workbench/module/format parity",
-    "independent CAD comparison and fabrication calibration"
+    "Physical Android candidate launch/lifecycle/SAF/recovery/language/geometry workflows and second device",
+    "Android memory budgets and4/16KiB device execution",
+    "Production signing and update migration",
+    "Full Part UI/semantics, original Sketcher/PartDesign and remaining workbench/module/format parity",
+    "Independent fabrication calibration"
   ],
   "historical_rc2_evidence": {
     "candidate": "1.0-rc2",
@@ -40,10 +40,10 @@
     "source_apk_provenance": "PASS: build input digests and retained 0.9 ARM64 native binaries",
     "repeat_packaging": "PASS: separately reproduced DEX/assets/native bytes identical; immutable original APK preserved"
   },
-  "release_scope": "current mobile feature set",
-  "release_channel": "release",
+  "release_scope": "four bounded original Part prerequisites",
+  "release_channel": "candidate",
   "stable_1_0_definition": "Original full desktop parity and broad device qualification milestone; NOT_COMPLETE",
   "automated_android_tests": "NOT_RUN",
   "source_metadata": "PASS: syntax, bounded release scope, startup-report classification and unfinished parity",
-  "localization": "PASS:527 Java locale/command/Unicode-data assertions;3 portable resource regressions; physical switching/layout NOT_RUN"
+  "localization": "PASS:527 locale/command/Unicode checks;634 Turkish/German entries and3 resource regressions; device NOT_RUN"
 }

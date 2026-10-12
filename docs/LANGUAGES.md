@@ -1,6 +1,6 @@
-# Languages in1.1
+# Languages in1.1 and1.2
 
-English is the complete default resource set. Turkish and German provide597 reviewed translations for core screen controls, fixed tool menus, common fields, recovery prompts and validation messages. Additional technical output, native Python/kernel diagnostics, canonical API names and advanced reference prose retain English fallback. The start, jewellery and recovery guides have Turkish/German editions. No whole-FreeCAD or whole-document translation is claimed.
+English is the complete default resource set. Turkish and German provide597 reviewed translations for core screen controls, fixed tool menus, common fields, recovery prompts and validation messages. Additional technical output, native Python/kernel diagnostics, canonical API names and advanced reference prose retain English fallback. The start, jewellery and recovery guides have Turkish/German editions. The1.2 candidate extends the catalogue to634 Turkish/German entries, including native Part/STEP controls and common errors. No whole-FreeCAD or whole-document translation is claimed.
 
 Open Workspace → Language or the recovery screen button. Language/Dil/Sprache open the same picker. Automatic follows the phone's primary locale (tr/de/en) and falls back to English otherwise. An atomic private preference is read on resume by every process; no native process is restarted. Existing modal dialogs can be reopened to refresh their captions. Model names, worksheet data, typed identifiers, numeric storage and English command syntax stay intact. Turkish/German convenience aliases are additional command names; use decimal points in command numbers.
 

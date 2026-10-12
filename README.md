@@ -4,7 +4,7 @@
 
 The main workspace uses OCCT 7.9.2 and the upstream FreeCAD PlaneGCS solver. An optional document lab embeds upstream FreeCAD 1.1.4 Base/App, CPython3.13 and headless Qt6.8.3. Models stay on the device; the app requests no network permission.
 
-Development candidate: **1.2-rc1 / code23**, original Part integration in progress; not yet a released APK. The verified public download remains1.1.
+Engineering candidate: **1.2-rc1 / code24** adds original Part/Materials to the isolated document lab: parametric solids/booleans, native dimensional expressions and transactions, whitelisted native FCStd, STEP shape import/export and bounded genuine geometry preview.270 real host JNI geometry/format/preview checks and88/62 existing document/Python regressions pass. Physical Android execution of the new Part runtime remains pending. See [Part guide](docs/PART-USER-GUIDE.md) and [Part evidence](docs/PART-PORT-PROGRESS.md). The latest full release remains1.1.
 
 ## Languages
 
@@ -37,7 +37,7 @@ Save `.fcml` projects and export backups before uninstalling or downgrading. In 
 | Native document lab | Original App metadata documents, units, properties, expressions, transactions, groups/links and supported App-only FCStd |
 | Python lab | Console, saved/recorded macros, App API browser and one portable QuantityDriver FeaturePython template |
 
-The document lab is separate from the custom CAD recipe graph. It does **not** yet provide native Part, Sketcher, PartDesign, Assembly, TechDraw, CAM, FEM or BIM workbenches. Arbitrary FCStd and addon proxy classes are unsupported. Supported file formats and losses are documented in [FORMAT-LIMITS](docs/FORMAT-LIMITS.md). STL import is bounded to2,000,000 triangles/256MiB; display reduction preserves the stored source.
+The document lab is separate from the custom CAD recipe graph. The1.2 candidate includes the bounded native Part adapter described above; the complete Part workbench UI remains pending. It does **not** yet provide native Sketcher, PartDesign, Assembly, TechDraw, CAM, FEM or BIM workbenches. Arbitrary FCStd and addon proxy classes are unsupported. Supported file formats and losses are documented in [FORMAT-LIMITS](docs/FORMAT-LIMITS.md). STL import is bounded to2,000,000 triangles/256MiB; display reduction preserves the stored source.
 
 The [roadmap](docs/ROADMAP.md) covers the frozen FreeCAD1.1.4 scope in36 broad batches. Large scopes require additional batches. The [ledger](docs/FREECAD-PARITY-BATCHES.json) separates engineering evidence from device validation. Four bounded feature batches have APK checkpoints; remaining workbench batches and device gates remain pending.
 

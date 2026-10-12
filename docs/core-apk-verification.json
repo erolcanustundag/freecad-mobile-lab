@@ -1,13 +1,13 @@
 {
   "version": "1.2-rc1",
-  "apk_sha256": "b0cc38777296d9f8dd080e16e148e56ea7bcb373bbb331eec69ce92908e44979",
+  "apk_sha256": "c44626f022bf73c89f0c824ee58e4c04bac93a93091d4681990d72f8e48c07ca",
   "status": "STATIC_PASS",
   "android_execution": "NOT_RUN",
   "libraries_and_python_extensions": 132,
   "strong_symbol_closure": true,
   "native_loader_closure": true,
   "minimum_alignment": 16384,
-  "python_asset_files": 823,
+  "python_asset_files": 1074,
   "original_part_builtin_entrypoints": true,
   "libraries": [
     {

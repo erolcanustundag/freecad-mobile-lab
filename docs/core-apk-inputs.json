@@ -11,7 +11,8 @@
     "app/src/main/cpp/upstream-core/CMakeLists.txt": "7c38867753bfadac1d69174f61b9395d68827df44a0623bdf9312273969f945f",
     "scripts/build_freecad_android_core.py": "be84f7bd8da32d22d168a41b55de308d85f8284eae3a24f924f59d2ec3aeca67",
     "scripts/build_part_occt.py": "190b3cae8b386e374d4c69e3b12e5bc2c5beec650e02461ce2ac20e3c2dc668a",
-    "scripts/build_core_bridge.py": "2183959c5d29c9b1300609fa38d859d678b5fc73bb1d8f0ad1a59d191af5fd2c"
+    "scripts/build_core_bridge.py": "2183959c5d29c9b1300609fa38d859d678b5fc73bb1d8f0ad1a59d191af5fd2c",
+    "scripts/prepare_core_apk.py": "3dcd13f0965861fa654d59c99034b8d4600723be965f6b6b108567c677da4e5a"
   },
   "libraries": {
     "libFreeCADMaterials.so": "0b7d941b1dc0304a41c9372ade89df67e4f0332a7eff76272dc3b7d4ac82786b",
@@ -4179,8 +4180,8 @@
     },
     {
       "path": "scripts/mobile_core.py",
-      "size": 17536,
-      "sha256": "9916dc7f86dbdf1d30a1958f97fbdb674e719ffc7491b7dd6fac9c376a5b9c85"
+      "size": 17564,
+      "sha256": "2b2390abf2ff923566395b89abed048e655aeae077c631c18b3d8c6d6784d844"
     },
     {
       "path": "scripts/mobile_features.py",
@@ -4189,15 +4190,1271 @@
     },
     {
       "path": "scripts/mobile_part.py",
-      "size": 3282,
-      "sha256": "20b4a0d735566119d391d19e9475d312343347ef92321f3e62f27a4e883dddd1"
+      "size": 4263,
+      "sha256": "dbd6af3a5c50c3f381a707ea4f582e4ce74c8f097a10213fbf072d5e449502bf"
     },
     {
       "path": "scripts/mobile_python.py",
       "size": 7744,
       "sha256": "40e2dde458b571c87734e00dfe934eff7fc5c892abab9c291c4542ebbaa9f2e7"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Aluminum.FCMat",
+      "size": 563,
+      "sha256": "0cd2171a835140c1f6289cc0ffdff85af80bf6baffe65d5ab7b4502e975e15fd"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Brass.FCMat",
+      "size": 557,
+      "sha256": "5011c95007205660f47914dbe33c8a9a9a7c106150fc37e277c6d1fb6de8f527"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Bronze.FCMat",
+      "size": 559,
+      "sha256": "91d248033299ff1a367668ed0024b68a0430ed59000019a3e65a5407718e0aff"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Chrome.FCMat",
+      "size": 559,
+      "sha256": "1359a1ee0d2533c448c6d4c79d4729dede29a142e9026348792d4ae39202195e"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Copper.FCMat",
+      "size": 559,
+      "sha256": "f5047aadc60772a19ef9b55453943196fce36a274c0d8f76e8bd0e9ad4047ffd"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Default.FCMat",
+      "size": 561,
+      "sha256": "1c6f233ddb6ccb797d9870ccf8cd1f0446ba20a0007b66e074de79dd8f634fdf"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Emerald.FCMat",
+      "size": 561,
+      "sha256": "12d965d306ff5b3819b44eff635cc3361fed7535d08b6c6b6e3a4b5981c6339f"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Gold.FCMat",
+      "size": 555,
+      "sha256": "bbb6d6878da5dfb11b548bb122aece39f7828f9d5d8bd6fde5531b38528b2d27"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Jade.FCMat",
+      "size": 555,
+      "sha256": "8cf3e3c0897a8658cef7dca880c28ea039793f106ad3c893cb259e2e0984f9f1"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Metalized.FCMat",
+      "size": 565,
+      "sha256": "d2f9c7cd894c402eff191b4fcfe8eb8e06c9c1f5fde4e01e4c315ab413690bd8"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Neon GNC.FCMat",
+      "size": 563,
+      "sha256": "e4e8301ba6d829258bb634e4d0c260bdfe531fd8aa60d257a82d4aceac99d31e"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Neon PHC.FCMat",
+      "size": 563,
+      "sha256": "bbf294190d3cab381c19ed6da2f732ec2a59052ce74a10694c3945487a65f89d"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Obsidian.FCMat",
+      "size": 563,
+      "sha256": "1871b6c79c9e9737fe98e025290b02d1f93d9695e5f757112143fe981e98eb87"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Pewter.FCMat",
+      "size": 559,
+      "sha256": "20703cff117553708fa102634c836c4044d25fdc91e5f386de8d566077c25194"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Plaster.FCMat",
+      "size": 561,
+      "sha256": "7ee118c9d2a47557e71d08e9b1d1ccd82c60b2013c31d16297f435db7be11ae2"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Plastic.FCMat",
+      "size": 561,
+      "sha256": "3f7a405191d9505f366ab3a311279f6bb03ebbaae921ca42bb59faa6cbc7a093"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Ruby.FCMat",
+      "size": 555,
+      "sha256": "cc8e10a6ecc74b4bfb107591565bf2f5a0fc78a996276a05debf794f72c3fa96"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Satin.FCMat",
+      "size": 557,
+      "sha256": "c7933f58b9f05225deb9631c3f765a9d20b5a129f579e42c4992070171cc875f"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Shiny Plastic.FCMat",
+      "size": 573,
+      "sha256": "a3027c78f4d81f9d4a5db7c8243a379fd3b1e3f7b0a786c5365e2f8bb2c9fdf1"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Silver.FCMat",
+      "size": 559,
+      "sha256": "298868b86901b84115da0409d5761cf7af60f92f39fd42d806e86424957458f2"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Steel.FCMat",
+      "size": 557,
+      "sha256": "5e0ee06c7cb832cc43ddfef727da53738087f43402475f08ce49f2deed675a7c"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Stone.FCMat",
+      "size": 557,
+      "sha256": "0159167f520b71768a2ec0e66323793de6bc5bb4a0afdc8d0a9aa3357346177f"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Wood.FCMat",
+      "size": 516,
+      "sha256": "29d3aa990ab4a3708d5ecf3097e1722a931408777326c9ae1fc930c0623e9dd7"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Fluid/Air.FCMat",
+      "size": 839,
+      "sha256": "6a03cb4204a350edd53f276a13f734a777cbf2eda9078cb5df960da4f2b9f295"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Fluid/Argon.FCMat",
+      "size": 838,
+      "sha256": "ce237ade0fde503d4550a51be912ed67a115b9a333e7aaa45453db06d137083a"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Fluid/Carbon Dioxide.FCMat",
+      "size": 865,
+      "sha256": "f3c391f7b0d01a404d2d81a3139f035b4f20575765cd64945dae7382398ee65f"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Fluid/Nitrogen.FCMat",
+      "size": 848,
+      "sha256": "3b6b95714626ca47afff640bb48eb2afffed2c4183ff2a90f7ac8e7af7d71169"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Fluid/None.FCMat",
+      "size": 483,
+      "sha256": "47f9f886b6e506aebda559a74b151547a101ffb18834bbcbb2258bbf5a2e89ef"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Fluid/Water.FCMat",
+      "size": 884,
+      "sha256": "cf67ca7269c9afb1b4474e6c58b23386720efe1c4f2faa922e47ad0ea0dbfc80"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Machining/AluminumCastAlloy.FCMat",
+      "size": 1655,
+      "sha256": "9103086f89db6b6780c6843901211e27ca7bb4f2590df435e95c49fc733cae6f"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Machining/AluminumWroughtAlloy.FCMat",
+      "size": 1711,
+      "sha256": "facf885ae273bf72e9e0f24547a8716af2851dc7729ffab116f307064c621cf6"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Machining/AusteniticStainlessSteel.FCMat",
+      "size": 1622,
+      "sha256": "a3cff21a294e2eaaa2dd5fc32347dfbc512911477e6e566c08538166290447b2"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Machining/BalsaWood.FCMat",
+      "size": 2726,
+      "sha256": "d02586212bc2f88d175c98a986c3c8cc353a523373e6c9388ee0ff9bd5b1fefd"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Machining/GrayCastIron.FCMat",
+      "size": 1597,
+      "sha256": "94d7333040f07295bd5d9584af6b5eebb59a9a94eaebdfdabb4af437103cf1c1"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Machining/HardWood.FCMat",
+      "size": 2836,
+      "sha256": "c53bb7ba510966997eaf8229bb87c192c6ed6501ede5ad510b9405ec25fd5351"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Machining/LowAlloySteel.FCMat",
+      "size": 1625,
+      "sha256": "7277afeb7529dbf457c8a5deb2272a54a6a3d933074ce42ab6ccabcddf368751"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Machining/MDF.FCMat",
+      "size": 2539,
+      "sha256": "166be639539456c110e15960e36e24fa2c8936a95d1cba5f4e9dd698bb66d1c3"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Machining/MalleableCastIron.FCMat",
+      "size": 1609,
+      "sha256": "82aa59bb6eb3dc27984780ec7866172ec50cce78e798d994f78ac5b1cc2eda73"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Machining/MildSteel.FCMat",
+      "size": 1629,
+      "sha256": "8725bb34fe0d0f13b40aa81a267a13ccfb57b9c50f3e583b5e7cd65940497166"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Machining/ParticleBoard.FCMat",
+      "size": 2584,
+      "sha256": "c9a0b9b1ec481e96b0a6dbe5710d703e989017ad3ef236aad394e57d2d371951"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Machining/SoftWood.FCMat",
+      "size": 2841,
+      "sha256": "150013e2ba7d41b441e35cb7eb66388e6f09cf6e43d9ab004c2c0d6a70bf5f68"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Machining/ToolSteel.FCMat",
+      "size": 1664,
+      "sha256": "415ae027bf06b7029e9b1ac66c6d9a28cd1eae352d23506b51c9048d929a577d"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/PAT/Diagonal4.FCMat",
+      "size": 445,
+      "sha256": "c0c8a05c6a074aec0f0d78a6c769c82690e533766c4290736e6e79f65f2854d6"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/PAT/Diagonal5.FCMat",
+      "size": 446,
+      "sha256": "090fcae64985163ee3a7a19223f0640883cdfb363850981e3e30dfdc843db21a"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/PAT/Diamond.FCMat",
+      "size": 466,
+      "sha256": "16923cabb2c7cfe7dbc81a878f57df2f214dca05fb191a9c5c0c27588c605600"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/PAT/Diamond2.FCMat",
+      "size": 468,
+      "sha256": "68765620490e42199c3155e95a59dd20eaeceddce00232bd2299b2792b121715"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/PAT/Diamond4.FCMat",
+      "size": 468,
+      "sha256": "6ac95fdb19b528b23113eb2d28b6e4d444bbf3b77ba555c42dbdca2b460b33e6"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/PAT/Horizontal5.FCMat",
+      "size": 447,
+      "sha256": "57c9da209ed1b83416f3bf9cf95269465b30d718a357bc6de3f8dbfe95a2c25b"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/PAT/Square.FCMat",
+      "size": 455,
+      "sha256": "50d949e0cdded9e06555b6f4aa99c525a9e9a4d75451189b6bf200e4078cf036"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/PAT/Vertical5.FCMat",
+      "size": 443,
+      "sha256": "458704b204b62554971441cf58d90e9db60c1862a7fc07e334968f7c8f7413bd"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/aluminum.FCMat",
+      "size": 4152,
+      "sha256": "d4b3509d7fab662defaa1ce8b304162911e47d3e14e97521a69d914e069cce48"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/brick01.FCMat",
+      "size": 5379,
+      "sha256": "7d60d33569b14595f01c3b004d794ee70558a5c4cdda45290e2398415dc66c23"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/concrete.FCMat",
+      "size": 5949,
+      "sha256": "7fd139d97585882e99a1bc135fe3287510f29935a88e2340605a4dbf311defe4"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/cross.FCMat",
+      "size": 3595,
+      "sha256": "c76fb05a6b50c1569297eb13ac777911197f71b0b6b83960facbf7dc0aac64a4"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/cuprous.FCMat",
+      "size": 13050,
+      "sha256": "b631e1203ef5aa36d46ac42578b808843dc0a983112b135f112d31a30d249a1b"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/diagonal1.FCMat",
+      "size": 16436,
+      "sha256": "7d55cadafba01e22d04445e437050056814eb0cc674370e8761b723462117da7"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/diagonal2.FCMat",
+      "size": 16380,
+      "sha256": "1774f34da05c2fe18d7c4c27de71da15e584171efc8f7103e173989a132ac53b"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/earth.FCMat",
+      "size": 4358,
+      "sha256": "786a0cabb6323527f089699430c0d90eb0556761f8f56864c52c942c14a4ef57"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/general_steel.FCMat",
+      "size": 2943,
+      "sha256": "c547b32db500b33e5c33ff3525265d3f76c907b23623119ac895636df33ef1e6"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/glass.FCMat",
+      "size": 17308,
+      "sha256": "b1ae56530ad8e30ee9941b5a3e7f339181d6495c3e882392a8cbeb67eb84dcff"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/hatch45L.FCMat",
+      "size": 2800,
+      "sha256": "3c410f515ccce2e819dbc27c081d82320120eaeebd33c26798f29e7e0a592e99"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/hatch45R.FCMat",
+      "size": 2800,
+      "sha256": "4a82feb6ef4dc87564cc1a96e708bd3329e105bb45b357b34edafe6744d176cd"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/hbone.FCMat",
+      "size": 8971,
+      "sha256": "fdaa7e728d0258ac6f40561a0175c15859e416cc9f399ac50b0aef0b573f8e8e"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/line.FCMat",
+      "size": 1963,
+      "sha256": "29c9014693158a0b4db5092fb80188d1b79d0d9c3c215a2785f58a5c7aa82525"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/plastic.FCMat",
+      "size": 3905,
+      "sha256": "b1c0e1513dfbed3f62c4b5a1200c21c9619b3166579035a285277204fe0af66c"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/plus.FCMat",
+      "size": 3326,
+      "sha256": "ec8577f84069e73ec6dcf93e56af602ae2e7d1b239e99f914c777c28b107adc5"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/simple.FCMat",
+      "size": 2441,
+      "sha256": "454ae5203cea14b3bfda276c061e5567cb19c37da1708517884463274ae1ce61"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/solid.FCMat",
+      "size": 1716,
+      "sha256": "a78e3caa7123f281737c50f5fe3205c93d889aee5939534101baf74e5264fce5"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/square.FCMat",
+      "size": 2646,
+      "sha256": "c7a5b39ccbb11c200f77739648af8dd144e8fa775505db3d8524ecd8d4a21afe"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/steel.FCMat",
+      "size": 9071,
+      "sha256": "5e8e6f1485d4162603d53acff8c0b4d51fdd6cbfa3489e769e086d3a9a8fb157"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/titanium.FCMat",
+      "size": 12243,
+      "sha256": "d4465ffd97941944c1ac7aea9e3c014e779adcf719f0961ac230352d38727d5a"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/wood.FCMat",
+      "size": 19649,
+      "sha256": "53bd7ee224c8d5757214ceae5f203cb00d295efe6e74816d5f6a8f5b8f5f5515"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/woodgrain.FCMat",
+      "size": 4557,
+      "sha256": "57e4ecf40bc921794ea05eaa63ea06c6e6aab1711eeca684408e51217344a6be"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Patterns/Pattern Files/zinc.FCMat",
+      "size": 4985,
+      "sha256": "12da252c407211423ab0752d530ed0b99dde31fe124a5afa82ac9d9dc3fd8f07"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Aggregate/Concrete-EN-C35_45.FCMat",
+      "size": 839,
+      "sha256": "8c31269ffc4d259fbf41961c1e9943540640dfc8399a4fcd00920f5984d4d8f4"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Aggregate/Concrete-Generic.FCMat",
+      "size": 787,
+      "sha256": "32caefdbb5ea7d2feb0c1de2677189c070e11c5e78a3561386fd0d41871e366f"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Aggregate/Reinforcement-FIB-B500.FCMat",
+      "size": 637,
+      "sha256": "1678a4a1cb4703211e860db52a4453935a104d6952808e5ff0848a6570585ad2"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Carbon/Graphite.FCMat",
+      "size": 1201,
+      "sha256": "a2acbde5f3de7cf10d8f85cd9e0cd6f4c92a9ff39112bc7b681b14097c0beb03"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Default.FCMat",
+      "size": 381,
+      "sha256": "d3863f99d728eaac88069fb20c078c8c231b07d537e20ecc11f3a88c1132c16a"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Glass/Glass-E-GlassFibre.FCMat",
+      "size": 559,
+      "sha256": "351e102d200aaf9d79fdb01cdf01608765033240509460ce58c9bc89ee17a019"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Glass/Glass-Generic.FCMat",
+      "size": 737,
+      "sha256": "c2a902810b2146466f837738712a17030c274fad157e7a3446364b6ca43eabbd"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Glass/Glass-S2-GlassFibre.FCMat",
+      "size": 560,
+      "sha256": "833cc13aa38deb5155d3d0c89786a8fb7bacbb9eb6fc46d75f0664bc4d4fc8bf"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Alloys/Invar-Generic.FCMat",
+      "size": 843,
+      "sha256": "2249173390fc770ec2e22dcea3cc09af7cde9cf4674959ffca165f1149e715cc"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Aluminum/AlMg3F24.FCMat",
+      "size": 930,
+      "sha256": "1581a070bdd2f16f5b9bbb3c8047f6a61ee59eeb697f6483d68616cc24969f56"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Aluminum/AlMgSi1F31.FCMat",
+      "size": 933,
+      "sha256": "46971b79db9f49ca5e5b1432bb2b036520f603f4e8de25a7039620b616b45635"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Aluminum/AlZn4-5Mg1F35.FCMat",
+      "size": 850,
+      "sha256": "f1f9252076ae413229fd4a39e8b4af41745127b3c10569db7f735671a3588c4d"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Aluminum/Aluminum-6061-T6.FCMat",
+      "size": 1144,
+      "sha256": "23f382a406c6e7c1c7fe4bcb3ed1206dc1a8470106234296948c0b351ca5e264"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Aluminum/Aluminum-7075-T6.FCMat",
+      "size": 1144,
+      "sha256": "faf0e835fa41c9656f7450eed6788ca735403ed3380fde7fff4dad2be35f3580"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Aluminum/Aluminum-Generic.FCMat",
+      "size": 943,
+      "sha256": "91a63fe02526283c4ed516a12f05b5d156b986e70d2cd96fcfcc991123821091"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Copper/Copper-Generic.FCMat",
+      "size": 968,
+      "sha256": "68ea2b86a2db3d19154101210342a9a124a6665ffcf661314f5fd81ab08033bf"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Iron/Iron-Generic.FCMat",
+      "size": 957,
+      "sha256": "16c9ae789518ed068366e1acf9b6ecd0b30cd3fd1aff4e6f7dae2a1c7dbebd57"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/CalculiX-Steel.FCMat",
+      "size": 793,
+      "sha256": "271f563e680a559bf53e2fa4c6f8b5326ce025305802cf19a7f4479bb586267c"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-15CrNi6.FCMat",
+      "size": 915,
+      "sha256": "7fd717c1b8039d3713acad671e40eb3fd9adf575b58ebd17bfd6ea36013b5eff"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-17CrNiMo6.FCMat",
+      "size": 874,
+      "sha256": "d8918b1957cd76a17cf3805d06256f0bc5b32c74d751b84cd0a916a54098c158"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-1C22.FCMat",
+      "size": 914,
+      "sha256": "2264661eb983aa44929a40db1d40e3ddfed9dc38e53a88f76e1da69a54cdf8cf"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-1C35.FCMat",
+      "size": 912,
+      "sha256": "ec8c8f4e1fe1558246c5aeda4ee9e12f4a5671b4924b00c9d3feec3a8f5d445d"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-1C45.FCMat",
+      "size": 912,
+      "sha256": "49b771ff97283bc4ab10f6d490e97e92b79b5babb26e61c41d09b60ee903998a"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-1C60.FCMat",
+      "size": 912,
+      "sha256": "31eb450b87f827fe1b246584b39b36298cf10d0eb6fbad57266a634bea349964"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-20NiCrMo2.FCMat",
+      "size": 873,
+      "sha256": "a5f94852fc26719e7d878e55525334c14be934b15b82392f5166b00f1fa20938"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-28Mn6.FCMat",
+      "size": 871,
+      "sha256": "8c0fe4ce27833f825b5652b7f805fb8f0fe63fe217261ba4411fd079d88c2b12"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-2C10.FCMat",
+      "size": 867,
+      "sha256": "6ce945bcc20fa347e548b94a018163faa1616e3df5d74e68f4ff86fcf1ecbb3b"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-30CrNiMo8.FCMat",
+      "size": 876,
+      "sha256": "8eb1c5abc82ae18c9a58c90ae70729948ac84f0b661f0d14090525aeeb2a166f"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-34CrNiMo6.FCMat",
+      "size": 877,
+      "sha256": "2d9bf6d2dbbdbdf5f618c90ee7e4f785d17d901f4cf6181bd80a5e5325ef5491"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-36CrNiMo4.FCMat",
+      "size": 877,
+      "sha256": "e9b2dd6a8ba8161b4cc52b9610719cd3a4353a6f4217552b33c30dc139f32199"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-36NiCrMo16.FCMat",
+      "size": 878,
+      "sha256": "6d47900e0f09f64aee5e94255066e7ad6398177ce518ed271049c1fd4deebe3d"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-3C15.FCMat",
+      "size": 866,
+      "sha256": "8988c5b6cb47e5e5cea39136bef5a041c882a42899c35ee57861ec6f5fb2848b"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-3C22.FCMat",
+      "size": 871,
+      "sha256": "715fe232802f66a4d619f00c58df4cc9f61493ac6897cf15bf2899f3e119c514"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-3C35.FCMat",
+      "size": 870,
+      "sha256": "2626c0f77fd7ec1bc5f40330808fddf97c2917f0b2313f4d8a6082a649a97149"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-3V45.FCMat",
+      "size": 871,
+      "sha256": "baa0ca1673fa60568ce9db8db85b7d840000eb6fb358d74e95e68f5a0b669b88"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-C10.FCMat",
+      "size": 868,
+      "sha256": "186b7392193d6202d167d2fa934a375e7efe7a5b58e34f3dc574f608e8814e31"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-C15.FCMat",
+      "size": 868,
+      "sha256": "beb19c52c5a2da21d61edfa22e9389b4c4fd40630ee26b35cc3a5dea59d6bd77"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-C22E.FCMat",
+      "size": 871,
+      "sha256": "f915a04ae51337078ae990d7a36e6883059a8572f62d1644877f2165aa344e95"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-C25E.FCMat",
+      "size": 871,
+      "sha256": "4e6d7865d8c2a5aee765c56cd31816be70c56cade94177d27d2e6adb5e441ccc"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-C30E.FCMat",
+      "size": 871,
+      "sha256": "58fed40cdfc01b8471672f02ec0d0a95c54886e97a5c5c35669115726613a13e"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-C40E.FCMat",
+      "size": 871,
+      "sha256": "3ba3491e5f91701664564196cb437125bf01135931c70a14b751c8a02ee3d5c5"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-C50E.FCMat",
+      "size": 871,
+      "sha256": "a5dc90402b3e08c36bf993fe57a698b3ae1fc9f982f049845122dc610ab9c086"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-C55E.FCMat",
+      "size": 871,
+      "sha256": "e0bd95be424be63a9e039cd11d919c46894acda7616f7d8afecfd01449ca29ba"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-C60E.FCMat",
+      "size": 871,
+      "sha256": "77511f5ceb7f9220184f861b4e4e2ddf4b9b4d5616c7c3d6e67932ef51dc3602"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-E295-GC.FCMat",
+      "size": 861,
+      "sha256": "919919a967671ac278906682df60f06534756e637e40ec07c13419a117921843"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-E295.FCMat",
+      "size": 858,
+      "sha256": "27fb1799e8a2dd0de9e95ceb6f4a3a213607b3e98c8fbe728804bd2bc71c8a2f"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-E335-GC.FCMat",
+      "size": 861,
+      "sha256": "46a91d652716eee30c79e647f5267bf255c97820e12ede96591ba6b1d113785b"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-E335.FCMat",
+      "size": 858,
+      "sha256": "bf73f1dede2b920aab7bfe398dd9c7be71bdd0b388e0e2967fa3fa8449d7ca0c"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-E360-GC.FCMat",
+      "size": 861,
+      "sha256": "aab3abfdd0d206bac5ad766ea3ea6960843e17c0f4f5e19ad8bd04502e147dc0"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-E360.FCMat",
+      "size": 858,
+      "sha256": "8598af1a996e0a5dc2dfd1a279180f7c4f4c10d6ba850da8393c0416ef6d1663"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJL-100.FCMat",
+      "size": 830,
+      "sha256": "b420be3bf6cd2d419e92a7885440e42c9309d7ce929e2028933d253112b0f3ad"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJL-150.FCMat",
+      "size": 859,
+      "sha256": "976e3a83b3540bef059cb28ecec514e58a7a90b7fbee4c13fdd17ed5d4b19a40"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJL-200.FCMat",
+      "size": 860,
+      "sha256": "6e30683e34ce122b059ce3633d428544cdb0d686e3f13d7c8d261f7522e29793"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJL-250.FCMat",
+      "size": 861,
+      "sha256": "f24a17621e8ca06aa8a47d41ec1cab80e51662841d78bdfc5144524197cacf07"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJL-300.FCMat",
+      "size": 860,
+      "sha256": "350187738e2a643cc01572334533fa5897c3056e7b72e48a01cd280ff6ee13df"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJL-350.FCMat",
+      "size": 862,
+      "sha256": "7f225c0f9f3cfed66c17eb9201a7405fb96c3d1119f53bdb8e843ffc90df7a0f"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJMB-350-10.FCMat",
+      "size": 866,
+      "sha256": "aa619f4e179da09efd594bc30a0ad4aba807ee4be942c9f8c636b81e99e7716b"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJMB-550-4.FCMat",
+      "size": 864,
+      "sha256": "bc37d555e08b76d55ab5ea783de3ab9cf3f5ebd9950a866817beca7dffcd3b44"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJMB-650-2.FCMat",
+      "size": 864,
+      "sha256": "34926d7177296378c3a8b8ec21781d441479dc890f605af2d5f4b8dcf10dee32"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJMW-350-4.FCMat",
+      "size": 835,
+      "sha256": "da44f55987fe46c82bd9a418a026044eaa1c68863d45ebe4fe8ecfcb12e1e611"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJMW-360-12.FCMat",
+      "size": 865,
+      "sha256": "16c5b4227e8a3431177f4cb95c2e76ce7edfac8942214e8324d7d9a0ab2dadd8"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJMW-400-5.FCMat",
+      "size": 863,
+      "sha256": "91a8decab462d0419e1a974b5fe80f1531388a3cc7a91f86692c585f540e0d3c"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJMW-450-7.FCMat",
+      "size": 865,
+      "sha256": "dcca8fd34610649175d95835bb67b9fefc9c1c2a90d6ef578bc39edce926b2e4"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJS-400-15.FCMat",
+      "size": 865,
+      "sha256": "ebe7df75957538f084f035e5eb744881d0c9d5c0471f2a79b18f59e8472af9a2"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJS-500-7.FCMat",
+      "size": 863,
+      "sha256": "c7bd15769cfab93644bacd4deab1eeabf090311a338f3f05a918a3ef7c91f9bb"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJS-600-3.FCMat",
+      "size": 863,
+      "sha256": "676f76d55e40bdf6a315f13415a2ec5d98f553d2077def29fea92dfed1584a7b"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJS-700-2.FCMat",
+      "size": 863,
+      "sha256": "878cca617228df21a9ff9cace3cea583daabe8d76aecc1371a1ec2061e37ffab"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-EN-GJS-800-1.FCMat",
+      "size": 863,
+      "sha256": "7dc7cf306fa7ae1ab4ecfac5fd1a06e6c80d484bbf599c3f08e1cd7e8bb34d1a"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-G16Mn5.FCMat",
+      "size": 860,
+      "sha256": "21542235ddbe6cf4e419c19b4e5dbdb1f142bca1f3acf39d7953f72fa28bd86b"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-G200.FCMat",
+      "size": 858,
+      "sha256": "558bcf7004726940f49096af48b949862cadfb683a0f6cd91a2fa526f7ce9ca4"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-G20Mn5.FCMat",
+      "size": 859,
+      "sha256": "b28e9d2a12d5109c525f797d795e0d04f22b325de4807773e1802a1a71706411"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-G230.FCMat",
+      "size": 859,
+      "sha256": "1ef74d3f9f5ba19e8beedf0a08c7508825b51780f46621d39063477bcf05a88b"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-G260.FCMat",
+      "size": 859,
+      "sha256": "69b3608a009c250d4c30d86b075a308ef287df6e0ad8839e521c5b03f76e09db"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-G300.FCMat",
+      "size": 859,
+      "sha256": "179c0120982a700c4ff09eb9879733217d529ccba9e5bf9d456dab4b5d5cd15c"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-G30Mn5.FCMat",
+      "size": 862,
+      "sha256": "7c1aea5ad38a44ae325c58404d39150ce9a388f224b3d9be8a19804975d7e946"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-Generic.FCMat",
+      "size": 1016,
+      "sha256": "35d0205750524a7878aea9285a54c9bc44da63a747f78fbcaa1d36ae404119de"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S185.FCMat",
+      "size": 859,
+      "sha256": "a37f92540ce285cfa3401013afbe2ec9d91cdd35065c90c3ad109909e01efdd6"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S235JO.FCMat",
+      "size": 861,
+      "sha256": "28bfeb95b919e80a72c2064565a6440c7d5d5fdf2385c4a68e65d5aa5ea817c8"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S235JR.FCMat",
+      "size": 861,
+      "sha256": "beb77dcf5220c31244c3f84aa80b2b189cde3d791c06c22f1a47a19ebe6bf399"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S235JRG1.FCMat",
+      "size": 863,
+      "sha256": "c812923a5dd48b2b379c0d95053fa562e463f0e03e85a5c42baa23d0441bca61"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S260NC.FCMat",
+      "size": 868,
+      "sha256": "9544d2aa7f8510f916cc3864103df5169a6fa01a8d456318da72ffd19946dbfb"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S275JO.FCMat",
+      "size": 861,
+      "sha256": "3963787598f8af662372825676cecaa1c19783af5cc66edba3d9c6eae2f02d07"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S275JR.FCMat",
+      "size": 861,
+      "sha256": "9a5b4ba261a0e98842e022e561185fa9815785637ba55f64c56eeda50b8b242e"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S275N.FCMat",
+      "size": 867,
+      "sha256": "384e7d2ae8f436ea5985cddde900f9cb3a58a25f59d2a49d1db39182c7482843"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S335JO.FCMat",
+      "size": 861,
+      "sha256": "5908b01b1efd719abf46d5d557103fa815b1a6dbdcdba1b50718d38591b4d824"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S335JR.FCMat",
+      "size": 861,
+      "sha256": "64049ac5801bcb68c6bd84618ea14aebc728437e28ba5fc80fb0dc866e6b29ec"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S335N.FCMat",
+      "size": 868,
+      "sha256": "86138b9c44c91523cdb3671414d1088844787e19467270733b66b291ebb7f2f1"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S340MC.FCMat",
+      "size": 868,
+      "sha256": "634d3a9110c7d088b2144a6cfb5178b4856c90aa9874d665e6a7204fe31dfb27"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S355J2G3.FCMat",
+      "size": 862,
+      "sha256": "e081ef862ac7d3d17b262e2cdd88a76b4620336149fc11b7f1bf5c5afd2aea17"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S380MC.FCMat",
+      "size": 868,
+      "sha256": "fb2c725fd8757bff8e7c39e3ffaab33f6474c94d17b42e9213fdf1f8327d3c4a"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S420MC.FCMat",
+      "size": 868,
+      "sha256": "6f188d59f1e6e1cbfa76ce25a5f25b579153cf10ca1197833382158704c1eb5f"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S420N.FCMat",
+      "size": 868,
+      "sha256": "0e518f0db33c1eedaa4650be7fc975897218599f49784b064846a14af8a4a329"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S460MC.FCMat",
+      "size": 868,
+      "sha256": "8fb2cc8f9670bcb9059ebfb955c8504f3dc381c3cafdb91a68bd0cb48ebf20a6"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S460N.FCMat",
+      "size": 868,
+      "sha256": "1d5495db83d8dabaffa31427b4572240b5c5e9a772069e938353d773568a31c5"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S500MC.FCMat",
+      "size": 869,
+      "sha256": "cd11dbf0b6b49558b7430da396085bc65efc322d7580065a11e138414b281445"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S550MC.FCMat",
+      "size": 868,
+      "sha256": "d61a5e0f4a969e7278103f65be496ecf7db899c4f739bcf12fb2a364f5b9d5ca"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-S690MC.FCMat",
+      "size": 868,
+      "sha256": "7484823e5cf2a515a37ba4528848cea252e79597ec8c3bf8ea56f03a4a5d0f64"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-St-37-2K.FCMat",
+      "size": 862,
+      "sha256": "9f4e3d114f7d5a6ca5d5f3c0e9ef7dafabd30622653328b6813befa183a62fea"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-St-E-255.FCMat",
+      "size": 869,
+      "sha256": "0ab7e687189b45024b164dc7e0b02435a1af73ffbc6e399f242848f2ca63f456"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-St-E-315.FCMat",
+      "size": 869,
+      "sha256": "a4ac842640ef926a42eb49f4b344f5740d974bbaf34790560afbe7d7ef2abb78"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-St-E-380.FCMat",
+      "size": 867,
+      "sha256": "341dcefdc01df4c460fc5cb159a4dd2ed3dfbcadade4d63265a35d40feda975b"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-St-E-460.FCMat",
+      "size": 869,
+      "sha256": "95cefd993f99025aea5544f473ca4909488d5c8d505c8d2abeba9e9fcaeeab5d"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-St-E-500.FCMat",
+      "size": 869,
+      "sha256": "ef8955b5cb8c4dee5f2c4f4f86862eb1edb21ad35b0f6494d42863d418a9ffca"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-X2CrNiMoN17-13-3.FCMat",
+      "size": 876,
+      "sha256": "efde5b611da897bcea1da223a459ad6177605fd2ec2a65b08781f616ee1245e9"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-X2CrNiN24-4.FCMat",
+      "size": 871,
+      "sha256": "140ccec63d6695442213ffaf272b161b4b45c3ff4f3bf98f6af38f07278a617e"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-X39CrMo17-1.FCMat",
+      "size": 871,
+      "sha256": "b72ae7273dc2158f1245c6f033552deebfa37a6c39c73d1347120b09b9c1d5e9"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-X3CrNiMo13-14.FCMat",
+      "size": 873,
+      "sha256": "ae6276fa1b7435c94e87f52ea374b91c637ecdaecadb606ac71c73577b8de2bc"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-X5CrNi18-10.FCMat",
+      "size": 871,
+      "sha256": "e43bd15ad063a779752c24e38d021adf4c62ea7495e89220f33d2584dac6d0a5"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-X5CrNiMo17-12-2.FCMat",
+      "size": 875,
+      "sha256": "43ebdb0e4d9ab11ad2c891e51c6e48e5de07eeba4eec18b2ab6840a79e852214"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Steel/Steel-X6CrNiTi18-10.FCMat",
+      "size": 873,
+      "sha256": "4c18385962870e948d9193aa9b9dcb538c6a13d1206fa2d7ea2284da27e1a85b"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Metal/Titanium/Ti-6Al-4V.FCMat",
+      "size": 1030,
+      "sha256": "829a85391185742a7172d4fd98e2971045f7daf17aaddb5ecb7435e4f2fec80c"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Thermoplast/ABS-Generic.FCMat",
+      "size": 1104,
+      "sha256": "b5d29ee316c77d9cbf11507767fbd1a3647e6c8961bb13e0a0dfc3754741f3c6"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Thermoplast/Acrylic-Glass-Generic.FCMat",
+      "size": 1257,
+      "sha256": "d9e58ef983bf24cd604e1d1d4b7705553277f7ffeff5f421fed365b8c69b2944"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Thermoplast/PA6-Generic.FCMat",
+      "size": 819,
+      "sha256": "68a5bf9b769260941e6c8b51271a17cbd5238b15db4a161aec1d3bc043d88f14"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Thermoplast/PC-Molded.FCMat",
+      "size": 1106,
+      "sha256": "1209eec88efd78407b52ccc5c51d8b510af54940bd9d3d1f77333e0d7b6a6811"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Thermoplast/PEEK-Generic.FCMat",
+      "size": 1461,
+      "sha256": "6c2e8aa219d3d8b9653bec91b1d406ab9dd9344643535e4a0f75556ccc48094c"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Thermoplast/PET-Generic.FCMat",
+      "size": 861,
+      "sha256": "f1dc16aac54a2b68c47e40bcbd1494b8ddc70b0fc4b55f3cdb66e1fe4797a140"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Thermoplast/PLA-Generic.FCMat",
+      "size": 1065,
+      "sha256": "3349a9bf468a167d9bd6a18ffe4ce27cbdf75d1fc03995e2b8a9d975caf53334"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Thermoplast/PMMA-Generic.FCMat",
+      "size": 1094,
+      "sha256": "11d3459b9c6e830cda25554c1bd027f93e309d8fadf082d1a474896f83639f65"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Thermoplast/POM-Copolymer-Generic.FCMat",
+      "size": 1184,
+      "sha256": "c1ea01e0b383fea81853d83dd95bf2d589dff4cedd5c473c833db0a375d5eb0f"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Thermoplast/POM-Homopolymer-Generic.FCMat",
+      "size": 1185,
+      "sha256": "4833e43fad39dc2852e19cf1eedf5c69765fbe12031870ed6846dc356f1b48cf"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Thermoplast/PP-Generic.FCMat",
+      "size": 824,
+      "sha256": "4164cacdcfd7909241b73baf0c3c15f625219853783767232bb79e967aede506"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Thermoplast/PTFE-Generic.FCMat",
+      "size": 827,
+      "sha256": "0686f0b63b21725a21c00cf38f7cf6297a66d5fc0d7dbe7fdf5049f47c0873f7"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Thermoplast/PVC-Generic.FCMat",
+      "size": 754,
+      "sha256": "d2241c579360858ec8cf02a447437ffc5f087f3f34cddc58a8686758434ab723"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Standard/Wood/Wood-Generic.FCMat",
+      "size": 692,
+      "sha256": "5b10c9aba7e0b8c36dd974fd74d7603aa7142cfceb1e8f15e4b34ea613302b38"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Materials/Test/Test Material.FCMat",
+      "size": 1796,
+      "sha256": "a604de7ff936def663f05c49ded05bc9cca110b03718504c3d45a16f38620260"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Architectural/Architectural.yml",
+      "size": 2577,
+      "sha256": "bcaa2c37e2f39c79027d272470a1ce825e62dd37f4c60036d5fa6821e9305fe7"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Architectural/ArchitecturalRendering.yml",
+      "size": 2001,
+      "sha256": "90ce7916d7843809a74144710fc8f33800aff4b60c245178e4b338aac180c700"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Costs/Costs.yml",
+      "size": 2397,
+      "sha256": "2532b5c778640149a0d1979b9a5ce43edb8494fe7d368020a59469a6410e8282"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Electromagnetic/Electromagnetic.yml",
+      "size": 2574,
+      "sha256": "473dec600f3c0270d46fa647835fcc3f3d1b07fdd634bcd5b7fb432a9e308d81"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Fluid/Fluid.yml",
+      "size": 2750,
+      "sha256": "735bd6e24bc8515d72f0f3c76ff58d3c1a2fd5ad35ec024e5ea7cee2e7f74a67"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Legacy/Father.yml",
+      "size": 2010,
+      "sha256": "e9ba8c0f14e5976297a10c5b2333a2280fd64a1a1832a31d0c76c15ae815c034"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Legacy/MaterialStandard.yml",
+      "size": 2342,
+      "sha256": "af47c48ef01ed993e00d035dd965c5e7b50479ac7121df241cf3389ea86c987c"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Machining/Machinability.yml",
+      "size": 3440,
+      "sha256": "5856e85c1319c8502d6546cd6b5e82090dbebc97b07b80e326c58f4d3cbe10ce"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/ArrudaBoyce.yml",
+      "size": 2662,
+      "sha256": "3ee45b24f53ca26dfb0a89fb4a9de09506fde738676cab65725608853738fec7"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/Density.yml",
+      "size": 1993,
+      "sha256": "8d7f3effdd9415633af51225169e7dd8d80ae93f33307b262684c425e95be4ba"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/Hardness.yml",
+      "size": 2396,
+      "sha256": "fee3cb680c4c97c53d370923e2fdded7809186c2bac0d13b135c6e1ddcef2c40"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/IsotropicLinearElastic.yml",
+      "size": 2812,
+      "sha256": "97bed3484dca5ecf4afdbb2a419884914b5640dd397f107a82670300314cd3a7"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/LinearElastic.yml",
+      "size": 3818,
+      "sha256": "dd91cd1414737c2b45bdc54ab5fcbfa2e4ca4fdb7111b54b08eea5e725e06b94"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/MooneyRivlin.yml",
+      "size": 2627,
+      "sha256": "762caf6d49095f69cca6a5f43692715e7f058bfe600391114d9f4f44fff7ff08"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/NeoHooke.yml",
+      "size": 2543,
+      "sha256": "d229709405d0185e0994cba6366bb8fd2458e30c6f78cc6f1d3986b9e530ffbc"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/OgdenN1.yml",
+      "size": 2727,
+      "sha256": "7c6df8cdd8b0d9cfc1fb8ae1131ac4f860d7d67477b02c6c4d63f151ddbb67c9"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/OgdenN2.yml",
+      "size": 3126,
+      "sha256": "5f18a3fe186d8b2760922c2b9d051e73e4542af0357088d727b9fca796996a69"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/OgdenN3.yml",
+      "size": 3525,
+      "sha256": "c7d205c7570d802137f6749ed5b6372d1b6a4875547f09de9c6e214a2e683b2d"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/OgdenYld2004p18.yml",
+      "size": 3255,
+      "sha256": "881fa6fa59a3d95be3d174db95f0579872e72a9fc601164f7dfc9b95619af058"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/OrthotropicLinearElastic.yml",
+      "size": 3861,
+      "sha256": "4570cb847664446bce13b4f4b35ccb9d7d8cf2201260f0daf4616e99abbb98bd"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/PolynomialN1.yml",
+      "size": 2555,
+      "sha256": "9bfdc26197f8ea81da37f4db5c868617778537dd94171c25c7d087f4c834f10a"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/PolynomialN2.yml",
+      "size": 2969,
+      "sha256": "6348dce1e99c120e70116d74d075819cd98bc68c1161e91b1bc467ac05d7c373"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/PolynomialN3.yml",
+      "size": 3478,
+      "sha256": "723a06c000fb025f1ef9bdcd247100f19ec771da7440c707e29cbbe38e4fcb1b"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/ReducedPolynomialN1.yml",
+      "size": 2490,
+      "sha256": "e9e9bd99fa0c433ddb50dcd10f2244e4c232e09944f8c77c91e2223945de619a"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/ReducedPolynomialN2.yml",
+      "size": 2711,
+      "sha256": "c06a7b40aa522944effb57fb6efd94f1d82b3d3deaf3b290c38255ce5c668069"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/ReducedPolynomialN3.yml",
+      "size": 2932,
+      "sha256": "b5da6f224efd46b36b3273e88a789eb333c6eaa5b76c6f2835d059d7f9d867f0"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Mechanical/Yeoh.yml",
+      "size": 2908,
+      "sha256": "e9cac69b95b8a116b0c9cab0f25001bc61f5055264e0d0926232bc1e992fd384"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Patterns/PAT.yml",
+      "size": 2342,
+      "sha256": "0df8e7c34cb29c39f0b99c83892176c6cbf57ecd00dab84a57835f0d51fb2647"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Patterns/Pattern File.yml",
+      "size": 2219,
+      "sha256": "23bf0029a228ade2a77a8aaaf516f34e337bada1eac5bcb39089269987698371"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderAppleseed.yml",
+      "size": 1989,
+      "sha256": "33b765d393fe01d46fc4ee60754224b4533a62c8c815c3b78e31c1c8e7569ce8"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderCarpaint.yml",
+      "size": 2441,
+      "sha256": "48605616cc1623d8e836b83aedbe3cb2d264d4b8524ae4e1fd444ce12ae36821"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderCycles.yml",
+      "size": 1980,
+      "sha256": "8a8dd7e737f4beea8b083a547976fe340bb81fd98b092bed7a58beb269c22cd5"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderDiffuse.yml",
+      "size": 2421,
+      "sha256": "9ddde0f064b3f7e21a527e70c1408c75a572a10b9e018094d237b239d9823978"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderDisney.yml",
+      "size": 4776,
+      "sha256": "ed35428d92ec182e383cc09df1cb77b392e84baa25c9402e21fa2249484aec40"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderEmission.yml",
+      "size": 2520,
+      "sha256": "2b96deac13e8a579916634ec3c97b31be272cf098fd0b413c6dbc2483bc1933f"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderGlass.yml",
+      "size": 2620,
+      "sha256": "404673be478755ad70a2695cfb819c9bc67ab868e4a530f9f7ed2aadb963d144"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderLuxcore.yml",
+      "size": 1983,
+      "sha256": "f190b0a4feef86648eae07632104dcf7174d02106eef4205f9e5978f6c9fa630"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderLuxrender.yml",
+      "size": 1989,
+      "sha256": "f0d50e87154eee4180049a065b5d4f90a5a89617076582b3e2234ad10979f229"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderMixed.yml",
+      "size": 3114,
+      "sha256": "62c6edad354ccbc6aa67b9ba6659ad9fa652ab2d250b7b38555613cdb3e76d8d"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderOspray.yml",
+      "size": 1980,
+      "sha256": "5df1cb83714bf2f9234f91675aa9c77e9e003bdb06eba974753e76daeefbff74"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderPbrt.yml",
+      "size": 1974,
+      "sha256": "37ecad501806ba6361c74af16bdd33225f36bf653045a75e517025f3a0261231"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderPovray.yml",
+      "size": 1980,
+      "sha256": "e567c0f48b7984c66f78b864b0d9634dff4ad051808865a1673e3acece95dcdd"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderSubstancePBR.yml",
+      "size": 2995,
+      "sha256": "18fdc6609f1b3a58fa157038e41891131b8b0e96571e0a065640b0fad8ae99a4"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderTexture.yml",
+      "size": 2407,
+      "sha256": "0ed45401b9106afe5eccb23131e1c30cb67f34209b1a2ca58674976edbd14cdd"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Render Workbench/RenderWB.yml",
+      "size": 2040,
+      "sha256": "39a77fd2e52b8caaac57af41e80983d3a8ec7c6bb15e7d1e108787edb180a606"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Rendering/AdvancedRendering.yml",
+      "size": 2162,
+      "sha256": "958ee107433e531072815cb5ff9076770cc896b8e7a5076dfd16962c6178e94f"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Rendering/BasicRendering.yml",
+      "size": 2459,
+      "sha256": "e9aab2f195a8e2880e86b397be37b0d7f664701d0d59e127b92843e5762aedd8"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Rendering/TextureRendering.yml",
+      "size": 2372,
+      "sha256": "99694e07f960c116bc0f05ceb7f81cd1116fdc78f2fbba71dd97f9caf39f6a49"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Rendering/VectorRendering.yml",
+      "size": 2557,
+      "sha256": "0f7258a0818acbb85934638afd8dc00c0078711339fb9a6966ebe9cb399a85f7"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Test/Test Model.yml",
+      "size": 4689,
+      "sha256": "a67df71c57b767192e359fa0c0bea51803a3d7f1fd94a9f3c983174c8abeb784"
+    },
+    {
+      "path": "scripts/resources/Mod/Material/Resources/Models/Thermal/Thermal.yml",
+      "size": 2877,
+      "sha256": "4108f1173295667598d68c2d422fd0b8205296466d7a6cc840e733ab7c2e4a44"
     }
   ],
-  "asset_zip_sha256": "fef976f04223060b2b26d2e16124444e5c6d88aae5609dde44ce4de15f8b06ca",
-  "java_jar_sha256": "b4b439629c5aa21db9a3b633d77182d0b25b1c381c391fc447e6104be394bb54"
+  "asset_zip_sha256": "6586ae2077fe8461c54870967c9e109233effde422d90f25bc8706d44f1e9cb9",
+  "java_jar_sha256": "b4b439629c5aa21db9a3b633d77182d0b25b1c381c391fc447e6104be394bb54",
+  "material_resource_origin": "251 unchanged resources from checksum-pinned FreeCAD1.1.4 src/Mod/Material/Resources/Materials and Models"
 }

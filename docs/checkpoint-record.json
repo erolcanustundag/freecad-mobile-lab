@@ -1,15 +1,14 @@
 {
-  "version": "1.1",
-  "version_name": "1.1",
-  "version_code": 22,
-  "channel": "release",
-  "status": "initial public mobile feature release; broader device qualification pending",
-  "scope": "current mobile feature set",
-  "apk": "FreeCAD-Mobile-Lab-1.1-arm64.apk",
-  "size_bytes": 141552621,
-  "sha256": "543274ea280d3a131f8e49a43cd4a5753e9a752a94296fa9dc342f593b641613",
-  "engineering_changes": "597 Turkish/German core UI entries, persistent three-process language selection, quick guides, command aliases and document-lab recovery role repair.527 locale/command/data assertions and3 resource tests pass; native/Python bytes unchanged from1.0; phone language/layout checks pending.",
-  "android_runtime": "USER_REPORTED_STARTUP_PRIOR_RELEASE; localization NOT_RUN_ON_ANDROID",
-  "signing": "retained development certificate",
-  "milestone_gate": "Original full parity/device milestone NOT_COMPLETE"
+  "version": "1.2-rc1",
+  "version_name": "1.2-rc1",
+  "version_code": 24,
+  "channel": "candidate",
+  "status": "engineering checkpoint; Android device gate pending",
+  "apk": "FreeCAD-Mobile-Lab-1.2-rc1-arm64.apk",
+  "size_bytes": 156455852,
+  "sha256": "c44626f022bf73c89f0c824ee58e4c04bac93a93091d4681990d72f8e48c07ca",
+  "engineering_changes": "Original Part/Materials builtin runtime; native parametric solids/linked booleans/expressions/transactions; whitelisted Part FCStd and STEP import/export; bounded genuine geometry/software preview. Fixed native feature creation by bundling251 upstream material/model resources.634 Turkish/German entries.270 Part,88 document,62 Python host checks;63 JNI/132 total ARM64 library checks; Android execution NOT_RUN.",
+  "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+  "signing": "retained public development identity",
+  "milestone_gate": "not complete until roadmap device/workflow criteria pass"
 }

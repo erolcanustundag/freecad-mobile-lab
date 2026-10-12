@@ -23,6 +23,15 @@ def check(root=ROOT):
         for name in sorted(local):
             if (assets/name).read_bytes()!=archive.read('scripts/'+name):
                 raise ValueError('Embedded mobile module is stale: '+name+'; run refresh_python_assets.py')
+        if manifest.get('part'):
+            base='scripts/resources/Mod/Material/Resources/'
+            required={base+name for name in ('Materials/Standard/Default.FCMat','Materials/Appearance/Default.FCMat','Models/Rendering/BasicRendering.yml','Models/Mechanical/Density.yml')}
+            if not required.issubset(entries):raise ValueError('Bundled Part material resources are missing; restage the complete Part runtime')
+            resources={str(p.relative_to(assets)) for p in (assets/'resources').rglob('*') if p.is_file()}
+            packaged={n[len('scripts/'):] for n in entries if n.startswith('scripts/resources/')}
+            if resources!=packaged:raise ValueError('Bundled Part material resource list is stale')
+            for name in resources:
+                if (assets/name).read_bytes()!=archive.read('scripts/'+name):raise ValueError('Bundled Part material resource differs: '+name)
     if digest((root/'app/libs/Qt6Android.jar').read_bytes())!=manifest['java_jar_sha256']:
         raise ValueError('Qt Java archive differs from the pinned runtime')
     for name,value in manifest['libraries'].items():

@@ -1,11 +1,22 @@
-# Original Part port prerequisite
+# Original Part prerequisite —1.2-rc1
 
-Product1.1 is published and contains the language/recovery update only. Original Part is not staged into that APK.
+This candidate connects genuine FreeCAD1.1.4 Part/Materials to the isolated document lab. Product1.1 remains the latest full release and has no original Part runtime. The main custom mobile CAD scene remains independent.
 
-The original sketch roadmap requires native Part first. An isolated source build now adds genuine OCCT7.9.2 TKFeat, TKExpress, TKBin, TKBinL, TKMeshVS, TKRWMesh and TKDEGLTF against the retained ARM64 toolkit binaries. All seven pass ARM64,16KiB ELF and loader-name closure checks. The build uses real upstream sources, including the C expression-parser sources; no geometry functions are substituted. Optional RapidJSON is disabled, so this does not establish native GLTF import/export.
+Four bounded scopes: original Part/Materials builtin runtime; native parametric primitives, expressions, transactions and linked booleans; whitelisted native Part FCStd plus STEP shape exchange; genuine tessellation displayed in the software viewport. They are engineering verified with Android execution stillNOT_RUN. They do not complete the whole Part workbench, B05 or the full FreeCAD/Rhino milestone.
 
-The original FreeCAD1.1.4 Part target also depends on Materials. build_freecad_android_core.py --part enables both with GUI/other workbenches disabled and an explicit complete OCCT header/library prefix. The default core-only build path remains separate. HostCPython3.13 code generation is restored. Original source/toolchain hashes and dependencies remain frozen.
+| Evidence | Result |
+| --- | --- |
+| Original ARM64 and Linux Part/Materials/bridge compilation | PASS |
+| Real JNI geometry, analytic volumes, expression/recompute, Undo/Redo, rollback, Unicode FCStd, STEP and preview winding/rendering |270 PASS |
+| Existing document JNI and Python-tool regressions with Part loaded |88 and62 PASS |
+| Locale/command/fallback/Unicode checks |527 PASS;3 resource tests |
+| Runtime packaging boundary |7 PASS, including rejection of missing native material data |
+| Packaged ARM64 loader/symbol/alignment checks |See core-apk-verification.json; executionNOT_RUN |
 
-Pending: complete Part/Materials compilation; strong-symbol/load checks; builtin Python registration; real geometry/document round-trip fixtures; bounded renderer integration and Android execution. B05 and subsequent workbenches remainPENDING. Do not claim native Part capability from successful prerequisite libraries alone.
+The port adds real OCCT7.9.2 TKFeat, TKExpress, TKBin, TKBinL, TKMeshVS, TKRWMesh and TKDEGLTF against the retained toolkit binaries. The original expression-parser C sources compile as C. No geometry implementations are stubbed. Default core-only build paths remain separate; --part enables original Part and its Materials dependency with GUI/other workbenches disabled.
 
-The local1.2-rc1/code23 adapter now includes five native primitive types, linked Cut/Fuse/Common commands/menus, native parameter/expression/transaction controls, shape volume/bounds reports, whitelist-based Part FCStd restoration, native STEP shape import/export and bounded software preview. The Android Java/resource build passes;634 Turkish/German resource entries include these controls and common errors. Native reference fixtures are written but must run after the host Part build finishes. This implementation description is not a runtime PASS.
+Actual tests caught Material not found when creating a native box. The fix bundles251 unchanged upstream material/model resources and registers their versioned paths through native module-library preferences. It preserves upstream default UUIDs and data. Code24 replaces any earlier code23 prototype interpreter cache. Material data retains its original author/license notices, including GPL2 default cards; a GPL2 license copy is included. Full material editing, GUI task semantics and other workbench resources remain pending.
+
+Preview is limited to30,000 triangles,0.05–2mm tolerance and coordinates within±1,000,000mm. Native parsers/tessellation can allocate before the display limit is checked; device memory budgets remain unmeasured. FCStd is limited to documented App metadata/proxy and Part primitive/feature/boolean types. STEP exchanges shape geometry; history, assemblies, colours/materials are not preserved by the shape-only adapter. Optional RapidJSON/FreeType are disabled: no new native GLTF/font-curve capability is claimed. Physical Android launch, recovery, lifecycle, language switching and file pickers require execution tests.
+
+Next: the original Sketcher module and B05 general entities/editing/attachments, then native PartDesign. See PART-USER-GUIDE.md and FREECAD-PARITY-BATCHES.json.

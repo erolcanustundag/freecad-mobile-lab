@@ -17,6 +17,23 @@ def require():
     if Part is None:
         raise ValueError("Original Part module is not available in this runtime")
 
+def configure():
+    if not available():
+        return
+    import FreeCAD as App
+    resources=Path(__file__).resolve().parent/'resources/Mod/Material/Resources'
+    if not (resources/'Materials/Standard/Default.FCMat').is_file() or not (resources/'Models').is_dir():
+        raise ValueError("Bundled native material resources are missing")
+    # Use upstream's documented module-library preferences. Its compiled desktop
+    # resource path cannot point at a versioned private Android asset tree.
+    preferences=App.ParamGet("User parameter:BaseApp/Preferences/Mod/Material/Resources")
+    preferences.SetBool("UseBuiltInMaterials",False)
+    preferences.SetBool("UseMaterialsFromWorkbenches",True)
+    library=App.ParamGet("User parameter:BaseApp/Preferences/Mod/Material/Resources/Modules/MobileBundled")
+    library.SetString("ModuleDir",str(resources/'Materials'))
+    library.SetString("ModuleModelDir",str(resources/'Models'))
+    library.SetBool("ModuleReadOnly",True)
+
 def summary(obj):
     if not hasattr(obj, "Shape"):
         return None

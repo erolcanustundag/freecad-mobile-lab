@@ -32,6 +32,7 @@ def configure(root):
     global _root
     _root = Path(root).resolve() / "documents"
     _root.mkdir(parents=True, exist_ok=True)
+    mobile_part.configure()
     mobile_python.configure(Path(root).resolve())
 
 

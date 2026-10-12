@@ -1,6 +1,6 @@
 {
   "baseline": "FreeCAD 1.1.4",
-  "updated": "2026-10-11",
+  "updated": "2026-10-12",
   "batch_size": 4,
   "completion_rule": "All four feature scopes implemented and tested before an engineering APK. Device parity stays pending until device evidence exists. Large feature scopes are subdivided into additional four-feature sub-batches; adding placeholders or menus does not count.",
   "stable_1_0": "NOT_COMPLETE",
@@ -1076,31 +1076,33 @@
   "part_prerequisite": {
     "id": "P-PART",
     "purpose": "Original Part backend before native Sketcher/PartDesign; this does not complete the full Part workbench",
-    "status": "IN_PROGRESS",
+    "status": "ENGINEERING_VERIFIED_DEVICE_PENDING",
     "version": "1.2-rc1",
-    "apk": null,
+    "apk": "FreeCAD-Mobile-Lab-1.2-rc1-arm64.apk",
     "scopes": [
       {
         "id": "P-PART-F1",
         "scope": "Original Part/Materials builtin runtime and real OCCT dependencies",
-        "status": "BUILD_IN_PROGRESS_DEVICE_PENDING"
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
       },
       {
         "id": "P-PART-F2",
         "scope": "Native parametric solids, dimensions, expressions, transactions and booleans",
-        "status": "IMPLEMENTED_REFERENCE_TEST_PENDING_DEVICE_PENDING"
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
       },
       {
         "id": "P-PART-F3",
         "scope": "Whitelisted native Part FCStd restoration and genuine STEP import/export/readback",
-        "status": "IMPLEMENTED_REFERENCE_TEST_PENDING_DEVICE_PENDING"
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
       },
       {
         "id": "P-PART-F4",
         "scope": "Bounded native tessellation and software viewport integration",
-        "status": "IMPLEMENTED_REFERENCE_TEST_PENDING_DEVICE_PENDING"
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
       }
     ],
-    "android_execution": "NOT_RUN"
+    "android_execution": "NOT_RUN",
+    "version_code": 24,
+    "evidence": "native-part-results.json and core-apk-verification.json"
   }
 }

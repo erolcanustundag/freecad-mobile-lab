@@ -162,7 +162,7 @@ def main():
     device=json.loads((ROOT/'docs/device-results.json').read_text())
     manifest = dict(version=version, tag='v'+version, title='FreeCAD Mobile Lab '+version+(' · native Android CAD' if is_release else ' · experimental Android candidate'),
                     prerelease=not is_release, release_scope=release.get('scope','engineering candidate'),
-                    milestone_gate='NOT_COMPLETE', android_runtime=device['android_runtime'], publication='PENDING', assets=assets)
+                    milestone_gate='NOT_COMPLETE', android_runtime=device['android_runtime'] if is_release else 'NOT_RUN', historical_unversioned_startup_report=device['android_runtime'], publication='PENDING', assets=assets)
     (ROOT/'docs/RELEASE-ASSETS.json').write_text(json.dumps(manifest, indent=2)+'\n')
     package_repository(out, version, published_apk, runtime_path, upstream)
 
