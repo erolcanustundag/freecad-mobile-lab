@@ -1059,5 +1059,11 @@
       ],
       "apk": null
     }
-  ]
+  ],
+  "stable_1_0_definition": "Original complete FreeCAD parity and broad device/workflow qualification milestone; not closed by product version 1.0",
+  "product_release": {
+    "version": "1.0",
+    "scope": "current mobile feature set",
+    "desktop_parity": "NOT_COMPLETE"
+  }
 }

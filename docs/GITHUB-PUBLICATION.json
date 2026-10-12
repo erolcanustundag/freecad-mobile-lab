@@ -37,5 +37,11 @@
   "public_signing_keys": "EXCLUDED",
   "private_development_keystore": "RETAINED_NOT_DELETED",
   "android_runtime": "NOT_RUN",
-  "stable_1_0": "NOT_COMPLETE"
+  "stable_1_0": "NOT_COMPLETE",
+  "next_release": {
+    "tag": "v1.0",
+    "status": "PENDING",
+    "scope": "current mobile feature set",
+    "prerelease": false
+  }
 }

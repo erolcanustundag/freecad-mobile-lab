@@ -1,0 +1,13 @@
+# Product 1.0 scope
+
+Version1.0 / Android code21 is the first full GitHub release of the **current mobile feature set**. RC7 stays available as a separate prerelease checkpoint. This release does not close the earlier roadmap's complete-FreeCAD-parity or comprehensive device-qualification milestone. The ledger retains that milestone as NOT_COMPLETE.
+
+The supported product is an offline native ARM64 Android CAD workspace, with a custom OCCT operation graph and extracted FreeCAD PlaneGCS solver. It provides exact primitives and supported solid operations, profiles and bounded freeform tools, command input, object organisation, measurements, scalar variables, a bounded worksheet/node graph, jewellery helpers, limited mesh/printing checks and interchange, and software/optional GLES previews. FORMAT-LIMITS.md defines import/export and repair bounds. Generated meshes approximate the underlying geometry; preview reduction does not enlarge import limits or make unsupported operations exact.
+
+The optional document lab embeds original FreeCAD1.1.4 Base/App and CPython. Its supported metadata documents, transactions, properties/expressions, groups/links, console/macros and QuantityDriver template are separate from the mobile CAD workspace. Full Part/Sketcher/PartDesign/Assembly/TechDraw/CAM/FEM/BIM, arbitrary FCStd editing and arbitrary addons remain unavailable.
+
+Release packaging disables Android debugging. The existing development certificate is retained so this APK can update the published RC7 installation without a certificate change; install/update on a physical phone has not been independently tested. No dedicated production key or signing lineage is claimed. Keys remain excluded from public Git, archives and release workflows. A public release is not a certificate migration.
+
+On 12 October 2026 the user said "it works on my phone". This records one user-reported startup result, without phone/OS/APK version details or workflow logs. Static build/signature/packaging checks and earlier host regressions are separate evidence. Automated Android execution, repeat launches/resumes, file pickers/process recreation, low-memory recovery and multiple devices/GPU/page sizes remain unverified. The earlier crash's root cause is unknown.
+
+Future release priorities: structured device and upgrade checks; selection/snapping/operation previews; general surface editing and continuity; upstream Part/Sketcher/PartDesign integration; stronger drawings, interoperability and fabrication tools. See RHINO-GAPS.md and the complete FreeCAD roadmap. Keep all milestone APKs and increase Android version codes.

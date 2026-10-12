@@ -24,7 +24,7 @@ for item in manifest['assets']:
     if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest()!=item['sha256']:raise SystemExit('Release asset missing or changed: '+item['name'])
     assets.append(path.resolve())
 if not args.publish:
-    print('Ready:',manifest['tag'],'public source repository, experimental prerelease,',len(assets),'verified assets')
+    print('Ready:',manifest['tag'],'prerelease='+str(manifest.get('prerelease',True)),len(assets),'verified assets')
     raise SystemExit(0)
 if not shutil.which('gh'):raise SystemExit('Authenticated GitHub CLI is required')
 subprocess.run(['gh','auth','status'],check=True)
@@ -49,9 +49,9 @@ if any(n.endswith(('.keystore','.jks','.pem','.key')) or n=='docs/CONTINUE.md' f
 existing=subprocess.run(['gh','repo','view',repo],capture_output=True)
 if existing.returncode==0:raise SystemExit('Repository already exists; inspect it before choosing an update path')
 subprocess.run(['gh','repo','create',repo,'--public','--description','Independent experimental native CAD for Android; incomplete FreeCAD desktop parity','--source',str(ROOT),'--remote','origin','--push'],cwd=ROOT,check=True)
-subprocess.run(['gh','release','create',manifest['tag'],'--repo',repo,'--target','main','--prerelease','--title',manifest['title'],'--notes-file',str(ROOT/'docs/RELEASE-NOTES.md'),*[str(path) for path in assets]],check=True)
+subprocess.run(['gh','release','create',manifest['tag'],'--repo',repo,'--target','main',*(['--prerelease'] if manifest.get('prerelease',True) else ['--latest']),'--title',manifest['title'],'--notes-file',str(ROOT/'docs/RELEASE-NOTES.md'),*[str(path) for path in assets]],check=True)
 release=json.loads(subprocess.check_output(['gh','api','repos/'+repo+'/releases/tags/'+manifest['tag']],text=True))
-if not release['prerelease'] or {a['name'] for a in release['assets']}!={a['name'] for a in manifest['assets']}:raise SystemExit('Remote release verification failed')
+if release['prerelease']!=manifest.get('prerelease',True) or {a['name'] for a in release['assets']}!={a['name'] for a in manifest['assets']}:raise SystemExit('Remote release verification failed')
 remote={a['name']:a for a in release['assets']}
 for item in manifest['assets']:
     asset=remote[item['name']]

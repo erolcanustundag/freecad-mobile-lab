@@ -190,5 +190,20 @@
     "android_runtime": "physical startup/lifecycle/SAF workflows pending",
     "signing": "retained public development identity",
     "milestone_gate": "not complete until roadmap device/workflow criteria pass"
+  },
+  {
+    "version": "1.0",
+    "version_name": "1.0",
+    "version_code": 21,
+    "status": "initial public mobile feature release; broader device qualification pending",
+    "channel": "release",
+    "scope": "current mobile feature set",
+    "apk": "FreeCAD-Mobile-Lab-1.0-arm64.apk",
+    "size_bytes": 141339189,
+    "sha256": "35d2088c240a60993a5be9303da8088d390a5569a2f3e64401230170374bbb87",
+    "engineering_changes": "Product1.0 release of current mobile feature set. Disable Android debugging; version21; document scope/Rhino gaps and one user-reported phone startup. Native bytes unchanged from RC7. Original full parity/device qualification remains NOT_COMPLETE.",
+    "android_runtime": "USER_REPORTED_STARTUP; automation NOT_RUN",
+    "signing": "retained development certificate",
+    "milestone_gate": "Original full parity/device milestone NOT_COMPLETE"
   }
 ]

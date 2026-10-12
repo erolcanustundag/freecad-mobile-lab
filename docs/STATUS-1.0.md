@@ -1,6 +1,12 @@
-# 1.0 status — 12 October 2026
+# Product 1.0 and remaining qualification
 
-**1.0-rc7 is an engineering candidate. Stable 1.0 and full desktop FreeCAD parity are NOT COMPLETE.**
+Product **1.0 / code21** releases the current mobile feature set. Full desktop parity and the original comprehensive stable-1.0 qualification milestone remain **NOT COMPLETE**. See RELEASE-SCOPE-1.0.md and RHINO-GAPS.md. Release packaging is non-debuggable and retains the RC7 development certificate for upgrades.
+
+The user reported on 12 October 2026: "it works on my phone". This is one user-reported startup result with no phone/OS/APK details or structured workflow logs. Android automation has not run. Crash diagnosis, repeated lifecycle/SAF/process recreation, upgrade testing, device/GPU/memory/page-size coverage and manufacturing calibration remain open. The original instant-crash root cause is unknown.
+
+The 1.0 build changes version metadata, About text and packaging mode. Native binaries and mobile Python modules remain unchanged from RC7. The complete feature comparison and pending workbench batches are preserved. Static verification and release publication are recorded in RELEASE-GATES.json / GITHUB-PUBLICATION.json after completion.
+
+## Historical candidate evidence
 
 The FreeCAD 1.1.4 parity plan is `ROADMAP.md`, tracked in `FREECAD-PARITY-BATCHES.json`. B01/rc3, B02/rc4, B03/rc5 and B04/rc6 each implement four bounded engineering scopes. Rc5 adds an isolated upstream Base/App editor with typed properties, units, live expressions, native transactions/groups/links and App-only FCStd save/open. Its JNI protocol passes 88 host checks; the APK has 54 JNI libraries and 69 Python extensions, all passing static ARM64/16 KiB/loader/strong-symbol checks. Android execution has not run. Rc6 adds a persistent Python console, saved/recorded macros, available App API browser and one portable QuantityDriver scripted metadata feature, with 62 additional host checks and 88 adapter regressions passed. Part, Sketcher, PartDesign, arbitrary FCStd/addon proxy restoration, workbench/Gui bindings and the remaining modules are pending. `PARITY-B03.md` records the current boundary; the main custom fcml/OCCT workspace stays independent.
 

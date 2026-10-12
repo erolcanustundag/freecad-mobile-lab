@@ -1,8 +1,8 @@
 # GitHub publication
 
-Publication status: **PUBLISHED_EXPERIMENTAL_PRERELEASE**. Public repository: https://github.com/erolcanustundag/freecad-mobile-lab . Signed RC7 prerelease: https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.0-rc7 . All four original asset sizes/SHA256 values match GitHub’s recorded digests. Source checks and the release workflow passed; the temporary transport branch was removed. Android runtime and full FreeCAD parity remain incomplete.
+Product1.0 publication status: **PENDING**. The already verified RC7 publication remains **PUBLISHED_EXPERIMENTAL_PRERELEASE**. Public repository: https://github.com/erolcanustundag/freecad-mobile-lab . Signed RC7 prerelease: https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.0-rc7 . All four original asset sizes/SHA256 values match GitHub’s recorded digests. Source checks and the release workflow passed; the temporary transport branch was removed. Android runtime and full FreeCAD parity remain incomplete.
 
-The intended public repository is `freecad-mobile-lab` under the authenticated owner's account. Do not reuse an unrelated repository. Candidate releases must be marked prerelease; stable1.0 remains NOT_COMPLETE.
+The intended public repository is `freecad-mobile-lab` under the authenticated owner's account. Do not reuse an unrelated repository. Candidate releases must be marked prerelease. Product1.0 is a full release of the current mobile feature set; the earlier complete-FreeCAD-parity/qualification milestone remains NOT_COMPLETE. Its manifest explicitly sets prerelease=false.
 
 The GitHub integration published the source. Repository creation used the signed-in interface; a credential-session restriction then blocked browser asset uploads. A temporary GitHub workflow reassembled and verified public artifact bytes, uploaded the unchanged signed APK/bundles, published the prerelease and removed its transport branch. Signing keys were not inputs to that workflow. No credentials are stored in the public source package. The original local public-source ZIP is a sealed preparation snapshot; its publication notes predate the remote publication. Current repository notes record the actual remote state. Frozen Boost/Eigen sources are restored from that ZIP with bootstrap_vendor_sources.py; no header stubs are substituted.
 
@@ -12,8 +12,8 @@ Prepare and validate release assets with `scripts/package_public_release.py`. Ru
 python3 scripts/publish_github.py --assets dist/public-release --publish
 ```
 
-It creates a new public source repository, pushes its initial source commit, creates the experimental prerelease and uploads the verified assets. It refuses an existing repository to avoid modifying unrelated work. If creation/push succeeds but a later upload fails, inspect the remote before retrying; do not blindly recreate or overwrite it.
+The CLI helper is for initial repository creation: it creates a new public source repository, pushes its initial source commit and uploads the verified assets with the manifest release channel. Existing-repository updates use a reviewed fast-forward source commit and a separately verified release workflow. It refuses an existing repository to avoid modifying unrelated work. If creation/push succeeds but a later upload fails, inspect the remote before retrying; do not blindly recreate or overwrite it.
 
 Signing keys, private continuation files, downloaded toolchains, compiled outputs and large runtime binaries are excluded from Git. Runtime libraries belong in the prerelease asset, restored with `scripts/bootstrap_release_runtime.py`; corresponding source accompanies the binary. Keep the original private checkpoint separately when continuing development.
 
-Verification after publishing must confirm public repository visibility, source commit/CI, prerelease status, every asset name/size/digest and actual download URLs. Do not describe publication as complete from local preparation alone.
+Verification after publishing must confirm public repository visibility, source commit/CI, release channel, every asset name/size/digest and actual download URLs. Do not describe publication as complete from local preparation alone.

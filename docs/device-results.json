@@ -1,5 +1,18 @@
 {
-  "android_runtime": "NOT_RUN",
-  "reason": "No Android debug bridge is available; no connected Android test executed",
-  "stable_1_0": "NOT_COMPLETE"
+  "android_runtime": "USER_REPORTED_STARTUP",
+  "automated_android_tests": "NOT_RUN",
+  "stable_1_0": "NOT_COMPLETE",
+  "stable_1_0_definition": "Original complete FreeCAD parity and multi-device qualification milestone; distinct from the bounded product 1.0 release",
+  "reports": [
+    {
+      "date": "2026-10-12",
+      "source": "user",
+      "statement": "it works on my phone",
+      "scope": "App startup works on one user phone",
+      "apk_version_reported": null,
+      "device_model": null,
+      "android_version": null,
+      "coverage": "No independent test, workflow, lifecycle, GPU or second-device results supplied"
+    }
+  ]
 }

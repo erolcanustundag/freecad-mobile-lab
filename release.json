@@ -1,6 +1,8 @@
 {
-  "version": "1.0-rc7",
-  "version_name": "1.0-rc7",
-  "version_code": 20,
-  "status": "engineering checkpoint; Android device gate pending"
+  "version": "1.0",
+  "version_name": "1.0",
+  "version_code": 21,
+  "status": "initial public mobile feature release; broader device qualification pending",
+  "channel": "release",
+  "scope": "current mobile feature set"
 }

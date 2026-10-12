@@ -70,7 +70,7 @@ def package_repository(out, version, published_apk, runtime_path, upstream):
     manifest['assets'].append(dict(name=public_source.name,kind='application-source',size_bytes=public_source.stat().st_size,sha256=digest(public_source)))
     # Write this after sealing the source ZIP to avoid a self-referential hash.
     (ROOT/'docs/RELEASE-ASSETS.json').write_text(json.dumps(manifest,indent=2)+'\n')
-    print('Public source excludes keys/private continuation. Publication remains PENDING.', flush=True)
+    print('Public source excludes keys/private continuation. Remote publication must be verified separately.', flush=True)
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -144,8 +144,11 @@ def main():
     upstream = out/f'FreeCAD-Mobile-Lab-{version}-corresponding-sources.zip'
     write_zip(upstream, entries)
     assets.append(dict(name=upstream.name, kind='corresponding-source', size_bytes=upstream.stat().st_size, sha256=digest(upstream)))
-    manifest = dict(version=version, tag='v'+version, title='FreeCAD Mobile Lab '+version+' · experimental Android candidate',
-                    milestone_gate='NOT_COMPLETE', android_runtime='NOT_RUN', publication='PENDING', assets=assets)
+    is_release=release.get('channel')=='release'
+    device=json.loads((ROOT/'docs/device-results.json').read_text())
+    manifest = dict(version=version, tag='v'+version, title='FreeCAD Mobile Lab '+version+(' · native Android CAD' if is_release else ' · experimental Android candidate'),
+                    prerelease=not is_release, release_scope=release.get('scope','engineering candidate'),
+                    milestone_gate='NOT_COMPLETE', android_runtime=device['android_runtime'], publication='PENDING', assets=assets)
     (ROOT/'docs/RELEASE-ASSETS.json').write_text(json.dumps(manifest, indent=2)+'\n')
     package_repository(out, version, published_apk, runtime_path, upstream)
 

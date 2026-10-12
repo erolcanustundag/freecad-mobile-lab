@@ -95,7 +95,10 @@ def main():
              '--min-sdk-version','26','--target-sdk-version','35','--version-code',str(RELEASE['version_code']),
              '--version-name',RELEASE['version_name'],'--java',BUILD/'gen',
              '-A',ROOT/'app/src/main/assets','-o',BUILD/'resources.apk']
-    if not args.production:command.append('--debug-mode')
+    # Release packaging and signing identity are separate decisions. Retain the
+    # prototype certificate for upgrades without exposing a debuggable release.
+    debuggable=not args.production and RELEASE.get('channel','candidate')!='release'
+    if debuggable:command.append('--debug-mode')
     command.extend(flats)
     run(*command)
     sources=[p for p in sorted((ROOT/'app/src/main/java').rglob('*.java'))+sorted((BUILD/'gen').rglob('*.java')) if '.rsync-tmp' not in p.parts]
@@ -121,7 +124,7 @@ def main():
     run(JDK/'bin/java','-jar',TOOLS/'lib/apksigner.jar','sign','--ks',key,'--ks-key-alias',alias,'--ks-pass',storepass,'--key-pass',keypass,'--out',apk,aligned)
     run(JDK/'bin/java','-jar',TOOLS/'lib/apksigner.jar','verify','--verbose',apk)
     run(TOOLS/'zipalign','-c','-P','16','4',apk)
-    record=ROOT/'docs'/('apk-inputs'+suffix+'.json');record.write_text(json.dumps({'version_name':RELEASE['version_name'],'apk':apk.name,'sha256':digest(apk),'inputs':frozen,'native_build':'verified 0.9 prebuilts' if args.prebuilt else 'NDK rebuild','signing':'private production key' if args.production else 'public development key'},indent=2)+'\n')
+    record=ROOT/'docs'/('apk-inputs'+suffix+'.json');record.write_text(json.dumps({'version_name':RELEASE['version_name'],'apk':apk.name,'sha256':digest(apk),'inputs':frozen,'native_build':'verified 0.9 prebuilts' if args.prebuilt else 'NDK rebuild','signing':'private production key' if args.production else 'retained development certificate','debuggable':debuggable},indent=2)+'\n')
     print(f'APK: {apk} ({apk.stat().st_size/1024/1024:.1f} MiB)')
 
 if __name__ == '__main__':

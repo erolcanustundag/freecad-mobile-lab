@@ -1,17 +1,17 @@
 {
-  "candidate": "1.0-rc7",
-  "version_code": 20,
+  "candidate": "1.0",
+  "version_code": 21,
   "stable_1_0": "NOT_COMPLETE",
-  "android_runtime": "NOT_RUN",
-  "reported_phone_crash": "root cause not established; fix not verified",
-  "static_apk": "PASS: signed ARM64/API26-35, 54 JNI libraries, dependency-name closure and16KiB ZIP/ELF alignment",
+  "android_runtime": "USER_REPORTED_STARTUP",
+  "reported_phone_crash": "User now reports startup works; crash root cause and broader workflows remain unverified",
+  "static_apk": "PASS: signed ARM64/minAPI26 target35, non-debuggable,54 JNI libraries, loader closure and16KiB ZIP/ELF alignment",
   "runtime_asset_packaging": "PASS: 6 portable regressions;822 Python CRC/hash/source matches;54 JNI library and Java input hashes",
-  "native_runtime": "UNCHANGED_FROM_RC6; prior host/strong-symbol evidence retained, target execution NOT_RUN",
+  "native_runtime": "UNCHANGED_FROM_RC7; historical host/strong-symbol evidence retained, automated target execution NOT_RUN",
   "device_smoke_instrumentation": "COMPILED_ONLY",
-  "production_signing": "PENDING: prototype development certificate retained; production identity/update migration not verified",
-  "publication": "PASS: public source and RC7 prerelease, four asset size/SHA256 digests verified; no signing keys published",
+  "production_signing": "Retained development certificate for RC7 updates; dedicated production identity/update migration pending",
+  "publication": "PENDING_1_0_RELEASE",
   "pending": [
-    "reported phone and second device cold starts/lifecycle/SAF/process recreation",
+    "Phone details and structured cold-start/lifecycle/SAF/process recreation tests; second device",
     "minimum/current Android, multiple GPU vendors, low-memory and4/16KiB environments",
     "production signing and update migration",
     "original Part, Sketcher, PartDesign and remaining workbench/module/format parity",
@@ -39,5 +39,10 @@
     "independent_examples": "PASS: five watertight/winding STL checks, SVG XML/A4 and visual layout",
     "source_apk_provenance": "PASS: build input digests and retained 0.9 ARM64 native binaries",
     "repeat_packaging": "PASS: separately reproduced DEX/assets/native bytes identical; immutable original APK preserved"
-  }
+  },
+  "release_scope": "current mobile feature set",
+  "release_channel": "release",
+  "stable_1_0_definition": "Original full desktop parity and broad device qualification milestone; NOT_COMPLETE",
+  "automated_android_tests": "NOT_RUN",
+  "source_metadata": "PASS: syntax, bounded release scope, startup-report classification and unfinished parity"
 }

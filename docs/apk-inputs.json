@@ -1,11 +1,14 @@
 {
-  "version_name": "1.0-rc7",
-  "apk": "FreeCAD-Mobile-Lab-1.0-rc7-arm64.apk",
-  "sha256": "4bd7c0d19031a8fd1feb46402795bf89bb408f4b8d2f2c1e07cd4e4960b60a84",
+  "version_name": "1.0",
+  "apk": "FreeCAD-Mobile-Lab-1.0-arm64.apk",
+  "sha256": "35d2088c240a60993a5be9303da8088d390a5569a2f3e64401230170374bbb87",
   "inputs": {
     "app/libs/Qt6Android.jar": "b4b439629c5aa21db9a3b633d77182d0b25b1c381c391fc447e6104be394bb54",
     "app/src/main/AndroidManifest.xml": "ec97c9abf625cc7889c6c27d1b5ba9a6be2cf00467f7d20b5077a75952c9b6c4",
     "app/src/main/assets/core/SOURCES.txt": "6fe6059525a52d4aa810bfb7f4a1c62d8bd85ed4150560e421d69d0cfc25ac48",
+    "app/src/main/assets/core/__pycache__/mobile_core.cpython-312.pyc": "fcbc6809b1b0c48058186bc32611ab1f5c5dff412563b5cd98513a6df655c3be",
+    "app/src/main/assets/core/__pycache__/mobile_features.cpython-312.pyc": "4e09049161986e49a3b5d8be534fd4493a0656faee8434b8c75daa19a06671ab",
+    "app/src/main/assets/core/__pycache__/mobile_python.cpython-312.pyc": "09ca91dd765f55edf0940ec3af72802d945137a315fd9c2177c38a44f2418fc9",
     "app/src/main/assets/core/licenses/CPython-LICENSE.txt": "78b12c3a81360b357002334f0e70ea0e92eebf7a9b358805c03c48484945f3bb",
     "app/src/main/assets/core/licenses/FreeCAD-LICENSE.txt": "7ffe1954587c77dfba1cf8eb9b2ea743671fa6e63f9e7a2f258119d42e14eefe",
     "app/src/main/assets/core/licenses/GPL-3.0.txt": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
@@ -91,7 +94,7 @@
     "app/src/main/java/org/freecad/mobilelab/GraphEditor.java": "cf270074ae49320b539fb4457b6d86aa4962097ac4ba047228e774bb36a7491d",
     "app/src/main/java/org/freecad/mobilelab/JewelleryCatalog.java": "032c3cf8c9332db76e0a9106397469fc181abc1470c5ee3a8390d41cc3d3b803",
     "app/src/main/java/org/freecad/mobilelab/LayerTools.java": "d45a3c25eacac0fc9b018eaa7cd89cc72f11e47b509f2eb2256b56eaa0505d83",
-    "app/src/main/java/org/freecad/mobilelab/MainActivity.java": "c16d3a07eeae6459c4b251aacbe0712b140ff2d29d131817e37566921bbd214a",
+    "app/src/main/java/org/freecad/mobilelab/MainActivity.java": "20318e2485ca97f27f7f3d68d73aa6b53aceac8ef0ecdbb252ef05e266eba9ef",
     "app/src/main/java/org/freecad/mobilelab/MeshFormats.java": "96fa54fcb5aa7e828ec067e3ccc6d41f319293417b4e9365c9cce489442a0bec",
     "app/src/main/java/org/freecad/mobilelab/MeshFrame.java": "0b8c722966b365d4cc25c4740a9f386f7cd0521db54aaa418c5b1eea53d405d4",
     "app/src/main/java/org/freecad/mobilelab/ModelViewport.java": "aca246788ef80766029d97eca51455b1bdb089c8e4b7ad0ecdc298d5ac0e3b30",
@@ -104,7 +107,7 @@
     "app/src/main/java/org/freecad/mobilelab/ProjectSchema.java": "ba1086e66e8fc2cbc5853fadf7d16eb7bcf9bb9e8ef7bd8e58a2d0e11e2abaa2",
     "app/src/main/java/org/freecad/mobilelab/ProjectStore.java": "470f9e9b7f314cc6568645c69d6a6bf1d5e663de764caea22a1a2e1f6e1ba5be",
     "app/src/main/java/org/freecad/mobilelab/RecipeFiles.java": "28d7bfb8fcb3daf96d9441d7cf9cb72b4ddcec6118c0043168ef1d4a48276032",
-    "app/src/main/java/org/freecad/mobilelab/ReleaseInfo.java": "afc91ad79d2fe7a8aaa668c7e6808ec044efdc446a972f90dee71c22abebf637",
+    "app/src/main/java/org/freecad/mobilelab/ReleaseInfo.java": "fcf7575854c4600cc81ab4da04d77b3e204e3ab0d690f5f8995ed90259821754",
     "app/src/main/java/org/freecad/mobilelab/RenderSettings.java": "75972e2e1faae68920042aa2f32f427be756acc0979fb2b4ade10c07e6ebe2bd",
     "app/src/main/java/org/freecad/mobilelab/SampleCatalog.java": "4a36939e84868b69a4126ca631391ea9224c46acf5a0a6001dc7ed15c200ba8a",
     "app/src/main/java/org/freecad/mobilelab/Shaders.java": "0b510748c488bab44d1ae53881bd86a08fb8f118f14a0cd4eb813585bfee3325",
@@ -177,8 +180,9 @@
     "app/src/main/jniLibs/arm64-v8a/libyaml-cpp.so": "e161b5ff427b0cf5fa0e7ba0e72580336061488c7f79cd080fe13df8866ebd34",
     "app/src/main/res/drawable/ic_app.xml": "48563a2c7f3e571b5033fc639208fdad4669f32c69a6d0a7326cb4b7ff21bb86",
     "app/src/main/res/values/styles.xml": "2887ba59e2dd59fa5b2268b38575e08f2dd691609ab04f085d93b73cbfca88e3",
-    "release.json": "8eccd26af68021ed856411b06b94d475c39aead7b0455759f21eba1010d866fe"
+    "release.json": "cd1a714bc1bc75650d1e691cbf6c85fd3ff99e9e0bb9ea65f9fb2149e16d760d"
   },
   "native_build": "verified 0.9 prebuilts",
-  "signing": "public development key"
+  "signing": "retained development certificate",
+  "debuggable": false
 }

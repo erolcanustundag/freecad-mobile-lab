@@ -1,22 +1,24 @@
 {
-  "version": "1.0-rc7",
-  "tag": "v1.0-rc7",
-  "title": "FreeCAD Mobile Lab 1.0-rc7 \u00b7 experimental Android candidate",
+  "version": "1.0",
+  "tag": "v1.0",
+  "title": "FreeCAD Mobile Lab 1.0 \u00b7 native Android CAD",
+  "prerelease": false,
+  "release_scope": "current mobile feature set",
   "milestone_gate": "NOT_COMPLETE",
-  "android_runtime": "NOT_RUN",
-  "publication": "PUBLISHED_EXPERIMENTAL_PRERELEASE",
+  "android_runtime": "USER_REPORTED_STARTUP",
+  "publication": "PENDING",
   "assets": [
     {
-      "name": "FreeCAD-Mobile-Lab-1.0-rc7-arm64.apk",
+      "name": "FreeCAD-Mobile-Lab-1.0-arm64.apk",
       "kind": "apk",
-      "size_bytes": 141322508,
-      "sha256": "4bd7c0d19031a8fd1feb46402795bf89bb408f4b8d2f2c1e07cd4e4960b60a84"
+      "size_bytes": 141339189,
+      "sha256": "35d2088c240a60993a5be9303da8088d390a5569a2f3e64401230170374bbb87"
     },
     {
-      "name": "FreeCAD-Mobile-Lab-1.0-rc7-native-runtime.zip",
+      "name": "FreeCAD-Mobile-Lab-1.0-native-runtime.zip",
       "kind": "native-runtime",
       "size_bytes": 56594506,
-      "sha256": "ee46ac7c237146980d1ab1aeca9fdb13af932423a31e57b7d12be149e34c0c38",
+      "sha256": "4298a00e66c5d14102e3c4a533280cd0437e4253b2d82f6c4d5c1c703f2ddc7e",
       "files": [
         {
           "path": "app/src/main/jniLibs/arm64-v8a/libFreeCADApp.so",
@@ -301,18 +303,16 @@
       ]
     },
     {
-      "name": "FreeCAD-Mobile-Lab-1.0-rc7-corresponding-sources.zip",
+      "name": "FreeCAD-Mobile-Lab-1.0-corresponding-sources.zip",
       "kind": "corresponding-source",
       "size_bytes": 430414494,
       "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51"
     },
     {
-      "name": "FreeCAD-Mobile-Lab-1.0-rc7-public-source.zip",
+      "name": "FreeCAD-Mobile-Lab-1.0-public-source.zip",
       "kind": "application-source",
-      "size_bytes": 31613211,
-      "sha256": "35a7dd975490e2b22357487845492fecb44c9863b28d504456bf18ed573d37be"
+      "size_bytes": 31624130,
+      "sha256": "c5347244034de14b53fa2105f958450d90f5ca5360f9e6a36a2a093056e4b942"
     }
-  ],
-  "repository_url": "https://github.com/erolcanustundag/freecad-mobile-lab",
-  "release_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.0-rc7"
+  ]
 }

@@ -1,14 +1,14 @@
 # FreeCAD Mobile Lab
 
-**Current candidate: 1.0-rc7 / Android version code 20.** Experimental native CAD for ARM64 Android 8+ (API26–35). **Stable 1.0 and full desktop FreeCAD parity are NOT COMPLETE.** This is an independent project, not an official FreeCAD Android release.
+**Current release: 1.0 / Android version code 21, current mobile feature set.** Native CAD for ARM64 Android 8+ (min API26, target35). **Full desktop FreeCAD/Rhino parity and the original comprehensive qualification milestone are NOT COMPLETE.** This is an independent project, not an official FreeCAD Android release.
 
 The main workspace uses OCCT 7.9.2 and the upstream FreeCAD PlaneGCS solver. An optional document lab embeds upstream FreeCAD 1.1.4 Base/App, CPython3.13 and headless Qt6.8.3. Models stay on the device; the app requests no network permission.
 
 ## Install and start
 
-Download the [signed RC7 APK](https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.0-rc7/FreeCAD-Mobile-Lab-1.0-rc7-arm64.apk) from the [experimental prerelease](https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.0-rc7). See [publication verification](docs/GITHUB-PUBLICATION.json). APKs belong in Releases because they exceed GitHub's regular Git file-size limit. Candidates use a development certificate; production signing and update migration remain open gates.
+Download the [signed 1.0 APK](https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.0/FreeCAD-Mobile-Lab-1.0-arm64.apk) from the [1.0 release](https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.0). See [publication verification](docs/GITHUB-PUBLICATION.json). APKs belong in Releases because they exceed GitHub's regular Git file-size limit. The APK is not debuggable and retains the RC7 development certificate for compatible upgrades. A dedicated production signing identity and its migration remain future work.
 
-Software rendering is the default. The recovery screen can open an empty workspace, retain recovery copies, and export local crash reports. OpenGL is optional. The reported instant-start crash has **not** been reproduced or verified fixed on a phone. RC7 adds an explicit document-lab restart for failed initialization or stuck script/native calls; unsaved lab documents close when restarted.
+Software rendering is the default. The recovery screen can open an empty workspace, retain recovery copies, and export local crash reports. OpenGL is optional. On 12 October 2026, the user reported that the app works on their phone. This is one user-reported startup result; device details, broader workflows and independent crash diagnosis remain open. RC7 adds an explicit document-lab restart for failed initialization or stuck script/native calls; unsaved lab documents close when restarted.
 
 Try these commands in the CAD workspace:
 
@@ -35,9 +35,11 @@ The document lab is separate from the custom CAD recipe graph. It does **not** y
 
 The [roadmap](docs/ROADMAP.md) covers the frozen FreeCAD1.1.4 scope in36 broad batches. Large scopes require additional batches. The [ledger](docs/FREECAD-PARITY-BATCHES.json) separates engineering evidence from device validation. Four bounded feature batches have APK checkpoints; remaining workbench batches and device gates remain pending.
 
+See [1.0 scope](docs/RELEASE-SCOPE-1.0.md) and [Rhino/FreeCAD gaps](docs/RHINO-GAPS.md) for the next priorities. Version 1.0 freezes the current tools; it does not implement the remaining workbenches.
+
 ## Build
 
-Required: Linux, Python3.12+, JDK17, Android SDK platform35/build-tools35.0.0. NDK27.2.12479018, CMake and Ninja are additionally needed for native source rebuilds. Git contains application/bridge/solver sources and dependency checksums. The full public source ZIP supplies the frozen Boost/Eigen header trees; the runtime ZIP supplies binaries; the corresponding-source ZIP supplies upstream sources and OCCT. All are prerelease assets.
+Required: Linux, Python3.12+, JDK17, Android SDK platform35/build-tools35.0.0. NDK27.2.12479018, CMake and Ninja are additionally needed for native source rebuilds. Git contains application/bridge/solver sources and dependency checksums. The full public source ZIP supplies the frozen Boost/Eigen header trees; the runtime ZIP supplies binaries; the corresponding-source ZIP supplies upstream sources and OCCT. All are release assets.
 
 Use the native runtime release asset matching the release metadata. Verify its SHA256 and extract it at the repository root. It supplies54 ARM64 libraries, Qt6Android.jar and the embedded Python archive. No signing key is included in Git or public source archives. A new local development key is generated if needed; it differs from the certificate on the published prototype APK and cannot upgrade that installation in place.
 
@@ -45,10 +47,10 @@ Use the native runtime release asset matching the release metadata. Verify its S
 export JAVA_HOME=/path/to/jdk17
 export ANDROID_SDK_ROOT=/path/to/android-sdk
 python3 scripts/bootstrap_release_runtime.py --bundle /path/to/native-runtime.zip
-python3 scripts/bootstrap_vendor_sources.py --bundle /path/to/FreeCAD-Mobile-Lab-1.0-rc7-public-source.zip
+python3 scripts/bootstrap_vendor_sources.py --bundle /path/to/FreeCAD-Mobile-Lab-1.0-public-source.zip
 python3 scripts/check_core_runtime_inputs.py
 # Choose a new development version before modifying sealed app inputs.
-python3 scripts/set_release.py 1.0-rc8 21 ''
+python3 scripts/set_release.py 1.0.1 22 ''
 python3 scripts/build_apk.py --prebuilt --upstream-core
 python3 scripts/verify_apk.py
 ```
@@ -61,7 +63,7 @@ For full native rebuilds, read [CORE-PORT](docs/FREECAD-CORE-PORT.md), the sourc
 
 Historical matching-host evidence includes25,694 CAD assertions, a1,441,792-triangle STL fixture,459 freeform checks,88 upstream JNI document checks and62 Python-tooling checks. RC7 adds packaging regressions against stale Python/JAR/native inputs. APK signatures, ARM64 dependency closure and16KiB alignment are checked independently.
 
-**No Android runtime/device pass is claimed.** Source CI checks syntax, release metadata and portable packaging regressions. Native runtime, gestures, file pickers, process recreation and crash reproduction require Android execution. See [DEVICE-TESTS](docs/DEVICE-TESTS.md) and [STATUS](docs/STATUS-1.0.md). Report bugs with APK version, phone/Android version, steps and a redacted recovery report.
+**One user-reported phone startup works; broader device qualification pending.** Automated Android tests have not run. Source CI checks syntax, release metadata and portable packaging regressions. Native runtime, gestures, file pickers, process recreation and crash reproduction require Android execution. See [DEVICE-TESTS](docs/DEVICE-TESTS.md) and [STATUS](docs/STATUS-1.0.md). Report bugs with APK version, phone/Android version, steps and a redacted recovery report.
 
 ## Licences
 

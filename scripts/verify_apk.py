@@ -38,6 +38,8 @@ assert f"versionCode='{RELEASE['version_code']}'" in badging and f"versionName='
 assert "minSdkVersion:'26'" in badging and "targetSdkVersion:'35'" in badging
 assert "native-code: 'arm64-v8a'" in badging
 tree = run(TOOLS/'aapt2','dump','xmltree',APK,'--file','AndroidManifest.xml')
+if RELEASE.get('channel')=='release':
+    assert not re.search(r'debuggable\([^)]*\)=true',tree), 'Public release must not be debuggable'
 assert 'StartupActivity' in tree and ':cad' in tree and 'CrashApplication' in tree
 assert re.search(r'extractNativeLibs\([^)]*\)=true',tree), 'Native extraction must be enabled'
 assert re.search(r'hardwareAccelerated\([^)]*\)=false',tree), 'Recovery UI must not require hardware acceleration'
