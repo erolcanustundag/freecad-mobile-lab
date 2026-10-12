@@ -1,0 +1,599 @@
+<resources>
+  <string name="ui_7850fb9418a1" formatted="false">"+ Erstellen"</string>
+  <string name="ui_6f6a567d5569" formatted="false">"1 Finger: drehen   ·   Pinch: zoomen   ·   2 Finger: verschieben"</string>
+  <string name="ui_a6a68b452e5d" formatted="false">"3D-Ansicht"</string>
+  <string name="ui_90e50b9b0537" formatted="false">"3MF · sichtbares Netz / mm"</string>
+  <string name="ui_3533d09b0914" formatted="false">"Eine vorherige Sitzung ist abgestürzt. Öffnen Sie einen leeren Arbeitsbereich mit Software-3D; das gespeicherte Modell bleibt als Sicherung erhalten. Sie können auch den Bericht unten kopieren."</string>
+  <string name="ui_7327b69c2df3" formatted="false">"A1:H32 · zum Bearbeiten eine Zelle antippen. Formeln beginnen mit = und können Zellen oder Dokumentvariablen verwenden. Geometrie verwendet ausgewertete Momentaufnahmen."</string>
+  <string name="ui_2881e0f06668" formatted="false">"A4-SVG · Gesamtbreite und -höhe in mm. XY-Profil bei Z=0. Mit 100% ohne Seitenanpassung drucken."</string>
+  <string name="ui_d93d10ff0fbe" formatted="false">"API"</string>
+  <string name="ui_78fc30b263a3" formatted="false">"Info / Lizenzen"</string>
+  <string name="ui_0e2465fe2eda" formatted="false">"Mindestens zwei Punkte hinzufügen"</string>
+  <string name="ui_8ea9062f548b" formatted="false">"Komponente hinzufügen"</string>
+  <string name="ui_e864aa24d43c" formatted="false">"Eigenschaft hinzufügen"</string>
+  <string name="ui_4f5edc11fcbd" formatted="false">"Zur Gruppe hinzufügen"</string>
+  <string name="ui_aa5a3afa1cfa" formatted="false">"Begrenzungen passend ausrichten"</string>
+  <string name="ui_49662530d12a" formatted="false">"Objekte ausrichten"</string>
+  <string name="ui_98c19aa80121" formatted="false">"An Objekt ausrichten"</string>
+  <string name="ui_1efe8f5e9768" formatted="false">"Alle Maße in Millimetern"</string>
+  <string name="ui_74c53bd71d43" formatted="false">"Alle Objekte"</string>
+  <string name="ui_0e524de0b822" formatted="false">"Analysieren"</string>
+  <string name="ui_1fd70473fb3d" formatted="false">"Winkel"</string>
+  <string name="ui_f961efd7f9ad" formatted="false">"Winkel (Grad)"</string>
+  <string name="ui_0e0945af36d3" formatted="false">"Winkel in Grad"</string>
+  <string name="ui_cfea419c3b4e" formatted="false">"Anwenden"</string>
+  <string name="ui_b6aa4e83bed4" formatted="false">"Ungefähre Wandstärke"</string>
+  <string name="ui_853a983f6b8a" formatted="false">"Bogen"</string>
+  <string name="ui_2745debaa64a" formatted="false">"Fläche"</string>
+  <string name="ui_4130069ee1c1" formatted="false">"Entlang einer Kurve anordnen"</string>
+  <string name="ui_58b9ff3fe0e6" formatted="false">"Automatisch · Software-Bilddauer"</string>
+  <string name="ui_d74b6cfbbd9f" formatted="false">"Verfügbare Python-API"</string>
+  <string name="ui_1df6251b4693" formatted="false">"Achse X"</string>
+  <string name="ui_27b791621ace" formatted="false">"Achse Y"</string>
+  <string name="ui_e2f1c650f3a2" formatted="false">"Achse Z"</string>
+  <string name="ui_587eac1112fa" formatted="false">"HINTEN"</string>
+  <string name="ui_44d0fd52d22b" formatted="false">"UNTEN"</string>
+  <string name="ui_337a1344ed75" formatted="false">"BREP · sichtbare CAD-Geometrie"</string>
+  <string name="ui_b52b36b7269f" formatted="false">"Hinten"</string>
+  <string name="ui_c59203db9a48" formatted="false">"Ausgewogen · 50.000 Dreiecke"</string>
+  <string name="ui_78a8bd5c5cc2" formatted="false">"Ringbandbreite / Höhe (mm)"</string>
+  <string name="ui_9230747798f6" formatted="false">"Grundkörper"</string>
+  <string name="ui_40af4dcb42fc" formatted="false">"Variantenserie"</string>
+  <string name="ui_6c5f4cb5f461" formatted="false">"Druckbett X (mm)"</string>
+  <string name="ui_eadd0a8e3c3b" formatted="false">"Druckbett Y (mm)"</string>
+  <string name="ui_58e3247bcf3a" formatted="false">"Bearbeitung starten"</string>
+  <string name="ui_c3afba4c4528" formatted="false">"Zargenfassung"</string>
+  <string name="ui_df5eaf37f6db" formatted="false">"Binär-STL · sichtbare Geometrie"</string>
+  <string name="ui_7d44bc449c2a" formatted="false">"Blau"</string>
+  <string name="ui_daf760a167a8" formatted="false">"Boolescher Wert"</string>
+  <string name="ui_e772bc4d3e48" formatted="false">"Boolesche Operationen / Abrunden"</string>
+  <string name="ui_cce7f2f2f0dc" formatted="false">"Unten"</string>
+  <string name="ui_239ca5767afa" formatted="false">"Quader"</string>
+  <string name="ui_a61a594b8eab" formatted="false">"Bauhöhe Z (mm)"</string>
+  <string name="ui_cd5bf23adc29" formatted="false">"CAD-Kurve / Profil"</string>
+  <string name="ui_366beef5b862" formatted="false">"CAD-Kanten"</string>
+  <string name="ui_e33756c9ac13" formatted="false">"CAD-Flächen"</string>
+  <string name="ui_6699eaff9ec1" formatted="false">"CAD-Objekte"</string>
+  <string name="ui_362056b5552b" formatted="false">"CAD-Vorgang"</string>
+  <string name="ui_fa42775b2b49" formatted="false">"CAD-Fläche / Schale"</string>
+  <string name="ui_f07d52a027a8" formatted="false">"CAD-Eckpunkte"</string>
+  <string name="ui_77988f90dd02" formatted="false">"Käfigtiefe (mm)"</string>
+  <string name="ui_05fe0b3030a5" formatted="false">"Käfighöhe (mm)"</string>
+  <string name="ui_a298d8e24e7b" formatted="false">"Käfigbreite (mm)"</string>
+  <string name="ui_16b6e0c696af" formatted="false">"Rechner"</string>
+  <string name="ui_77dfd2135f4d" formatted="false">"Abbrechen"</string>
+  <string name="ui_b8f944abaa35" formatted="false">"Bearbeitung abbrechen"</string>
+  <string name="ui_a3aea4c0ec57" formatted="false">"Versionsstatus"</string>
+  <string name="ui_b69d75eec198" formatted="false">"Ziel kann nicht geöffnet werden"</string>
+  <string name="ui_ec799cd23940" formatted="false">"Eingabe kann nicht geöffnet werden"</string>
+  <string name="ui_8f941b45fc17" formatted="false">"Ausgabe kann nicht geöffnet werden"</string>
+  <string name="ui_07de7fdc8bd6" formatted="false">"Graph konnte nicht gelesen werden"</string>
+  <string name="ui_dd6c6fba22b0" formatted="false">"Gusszugabe · Modell vergrößern"</string>
+  <string name="ui_3fa2f57731aa" formatted="false">"Gussschrumpfungszugabe"</string>
+  <string name="ui_5981b9f942e0" formatted="false">"Catmull-Clark-Stufen · ganze Zahl von 1 bis 4"</string>
+  <string name="ui_16e5447a8046" formatted="false">"Mitte"</string>
+  <string name="ui_d7ea0b653211" formatted="false">"Mittelpunkt X"</string>
+  <string name="ui_13fa992ac041" formatted="false">"Mittelpunkt Y"</string>
+  <string name="ui_ddf0cfc44ea9" formatted="false">"Mittelpunkt Z"</string>
+  <string name="ui_55d0def9c9c6" formatted="false">"Wölbung des mittleren Kontrollpunkts (mm)"</string>
+  <string name="ui_7809bbeb5802" formatted="false">"Ausgewähltes Modell auf Z=0-Druckbett zentrieren"</string>
+  <string name="ui_33f0bce83e2e" formatted="false">"Alle Kanten fasen"</string>
+  <string name="ui_48ea67c14d15" formatted="false">"Fasenabstand"</string>
+  <string name="ui_0062c851307d" formatted="false">"Bauraum / Achsenanordnungen prüfen"</string>
+  <string name="ui_cc76f6f1e953" formatted="false">"Vorherige Sitzung wird geprüft…"</string>
+  <string name="ui_0a13c60e546b" formatted="false">"Eingabe auswählen"</string>
+  <string name="ui_1ab45361070e" formatted="false">"Mehrere Objekte auswählen"</string>
+  <string name="ui_1cc7820a08e2" formatted="false">"Kreis"</string>
+  <string name="ui_719ea396ad92" formatted="false">"Leeren"</string>
+  <string name="ui_a5880260dd6b" formatted="false">"Ausdruck löschen"</string>
+  <string name="ui_1d592272db03" formatted="false">"Freiraum (mm)"</string>
+  <string name="ui_302f19f39cc1" formatted="false">"Oberhalb der Welt-Z-Ebene abschneiden"</string>
+  <string name="ui_bbfa773e5a63" formatted="false">"Schließen"</string>
+  <string name="ui_213b8d6ccddf" formatted="false">"Aktives Dokument schließen"</string>
+  <string name="ui_c8d4423a2e6d" formatted="false">"Den Wert in Anführungszeichen abschließen"</string>
+  <string name="ui_88d86b7721d5" formatted="false">"Geschlossen"</string>
+  <string name="ui_20c2d0dd2852" formatted="false">"Eine geschlossene Kurve benötigt drei Punkte"</string>
+  <string name="ui_c0c30e800020" formatted="false">"Für eine geschlossene Kurve Polyline oder Interpolated curve auswählen"</string>
+  <string name="ui_ada0d773b0af" formatted="false">"Geschlossenes Profil in ebene Fläche umwandeln"</string>
+  <string name="ui_8901895fb1b1" formatted="false">"Befehl"</string>
+  <string name="ui_1a28b29f4f7b" formatted="false">"Befehlshilfe"</string>
+  <string name="ui_0039381a0b2a" formatted="false">"Befehl fehlt oder ist zu lang"</string>
+  <string name="ui_f0cab561b2d1" formatted="false">"Befehlsreferenz"</string>
+  <string name="ui_6966e21c630a" formatted="false">"Befehl · Hilfe, Quader 20 10 4…"</string>
+  <string name="ui_717354ee1f25" formatted="false">"Befehl · Set Source.Width 2 cm"</string>
+  <string name="ui_1a1873ab51c7" formatted="false">"Bestätigen"</string>
+  <string name="ui_a783eca8c9cd" formatted="false">"Kontrollkäfigtiefe (mm)"</string>
+  <string name="ui_71386f1843fe" formatted="false">"Kontrollkäfigbreite (mm)"</string>
+  <string name="ui_ea75a51b0189" formatted="false">"Kopien einschließlich Original · 2 bis 100"</string>
+  <string name="ui_cb42316b57a8" formatted="false">"Absturzbericht kopieren"</string>
+  <string name="ui_b8d853b22221" formatted="false">"Spracheinstellung konnte nicht gespeichert werden"</string>
+  <string name="ui_79b3256d8684" formatted="false">"Anzahl · ganze Zahl von 2 bis 10"</string>
+  <string name="ui_f0e7cc1e6789" formatted="false">"Anzahl · ganze Zahl von 2 bis 100"</string>
+  <string name="ui_2f2503014962" formatted="false">"Absturzbericht / Wiederherstellung"</string>
+  <string name="ui_51f3263e2e52" formatted="false">"Absturzbericht kopiert"</string>
+  <string name="ui_d12b417f8416" formatted="false">"Absturzbericht gespeichert"</string>
+  <string name="ui_6e157c5da441" formatted="false">"Erstellen"</string>
+  <string name="ui_c11c2f8bcd8d" formatted="false">"Ein Dokument erstellen oder ein unterstütztes FCStd-Metadatendokument öffnen."</string>
+  <string name="ui_a0c75994670a" formatted="false">"Zuerst ein Modell erstellen oder importieren."</string>
+  <string name="ui_6651e8ca2a57" formatted="false">"Zuerst ein Objekt erstellen oder importieren"</string>
+  <string name="ui_c65cbfecf121" formatted="false">"Zuerst ein Objekt erstellen oder auswählen."</string>
+  <string name="ui_6abd03c2f98a" formatted="false">"Erstellen · Millimeter"</string>
+  <string name="ui_ede77cc09901" formatted="false">"Querschnitt / 2D-Zeichnung"</string>
+  <string name="ui_908885a69197" formatted="false">"Kurvenanordnung"</string>
+  <string name="ui_7a3eb66f9979" formatted="false">"Kurvenkrümmungsbericht"</string>
+  <string name="ui_4eca91cc687f" formatted="false">"Kurven / Profile"</string>
+  <string name="ui_8e8831bf34cc" formatted="false">"Kurven und Verlauf"</string>
+  <string name="ui_3efa753b477f" formatted="false">"Kurven und Profile"</string>
+  <string name="ui_5e5ee2c203b8" formatted="false">"Nur Kurven"</string>
+  <string name="ui_bfb6fdce937b" formatted="false">"Ausschneiden / Subtrahieren"</string>
+  <string name="ui_817b354dc01a" formatted="false">"Zylinder"</string>
+  <string name="ui_15d5b7c8fd92" formatted="false">"DXF · ausgewählte XY-Kurve / Schnitt"</string>
+  <string name="ui_f6fdbe48dc54" formatted="false">"Löschen"</string>
+  <string name="ui_7700294c798b" formatted="false">"Mehrere Objekte löschen"</string>
+  <string name="ui_b9054d38bdc5" formatted="false">"Versatz X (mm)"</string>
+  <string name="ui_609872d33573" formatted="false">"Versatz Y (mm)"</string>
+  <string name="ui_934b7522dfb3" formatted="false">"Versatz Z (mm)"</string>
+  <string name="ui_64b365fa3ee1" formatted="false">"Tiefe (mm)"</string>
+  <string name="ui_1d97595f7723" formatted="false">"Tiefe Y (mm)"</string>
+  <string name="ui_d71a5056f84c" formatted="false">"Rezept lösen; Geometrie behalten"</string>
+  <string name="ui_b4748fa72923" formatted="false">"Bemaßtes Zeichnungsblatt"</string>
+  <string name="ui_9f4ca9ec0871" formatted="false">"Abmessungen"</string>
+  <string name="ui_6cc62d64e2d0" formatted="false">"Schnitt deaktivieren"</string>
+  <string name="ui_5e77fe9fbd46" formatted="false">"Mehrfachauswahl deaktivieren"</string>
+  <string name="ui_c3aeea8a6be7" formatted="false">"Darstellungsdetails"</string>
+  <string name="ui_ca718436e7d7" formatted="false">"Darstellungsdetails · Export behält volle Qualität"</string>
+  <string name="ui_5a83f580ae83" formatted="false">"Darstellungsleistung"</string>
+  <string name="ui_423208095dd7" formatted="false">"Abstand"</string>
+  <string name="ui_deef3e5498ea" formatted="false">"Abstand zwischen CAD-Objekten"</string>
+  <string name="ui_7a524e14c7f4" formatted="false">"Dokumentbefehle"</string>
+  <string name="ui_1adff3072f22" formatted="false">"Dokumentvorgang"</string>
+  <string name="ui_4214822e9b88" formatted="false">"Dokumentvariablen"</string>
+  <string name="ui_687c82861c95" formatted="false">"Dokumente"</string>
+  <string name="ui_06790c4791eb" formatted="false">"Gewichtete Kontrollpunkte in XY ziehen"</string>
+  <string name="ui_37a4658d6cec" formatted="false">"XY-Skizze mit Fangraster zeichnen"</string>
+  <string name="ui_93aba913bfbb" formatted="false">"Kurve zeichnen"</string>
+  <string name="ui_a4d3311befbe" formatted="false">"Zeichnungsblatt"</string>
+  <string name="ui_972d57379db3" formatted="false">"Duplizieren"</string>
+  <string name="ui_6cb15df59f82" formatted="false">"Duplizieren · Versatz in mm"</string>
+  <string name="ui_6e444774c000" formatted="false">"Kanten- / Flächenindizes"</string>
+  <string name="ui_5301648dcf6b" formatted="false">"Bearbeiten"</string>
+  <string name="ui_76518f63a8ac" formatted="false">"Bearbeiten / Verbinden"</string>
+  <string name="ui_13ee5bbafe07" formatted="false">"Bearbeiten / Größe ändern"</string>
+  <string name="ui_2e8b683e11d1" formatted="false">"NURBS-Kontrollpunkte bearbeiten"</string>
+  <string name="ui_cedd93294b9d" formatted="false">"NURBS-Flächenkontrollpunkte bearbeiten"</string>
+  <string name="ui_b609016dca31" formatted="false">"Graph bearbeiten"</string>
+  <string name="ui_a58957e071b0" formatted="false">"Makro bearbeiten"</string>
+  <string name="ui_9cc1ae872dd0" formatted="false">"Numerische Parameter bearbeiten"</string>
+  <string name="ui_c568c20a08f3" formatted="false">"Eigenschaft bearbeiten"</string>
+  <string name="ui_add2e9497fe8" formatted="false">"Flächenkontrollpunkt bearbeiten"</string>
+  <string name="ui_a432ede67bb8" formatted="false">"Gewichteten Kontrollpunkt bearbeiten"</string>
+  <string name="ui_726c8ebd8a16" formatted="false">"Gewichtete Kontrollpunkte bearbeiten"</string>
+  <string name="ui_68dba1d505ac" formatted="false">"Tabellenzelle bearbeiten"</string>
+  <string name="ui_8580e3175f4e" formatted="false">"Ellipse"</string>
+  <string name="ui_bd97ca585fa7" formatted="false">"Leerer Arbeitsbereich · Modell erstellen oder importieren"</string>
+  <string name="ui_1880c7fdf083" formatted="false">"Mehrfachauswahl aktivieren"</string>
+  <string name="ui_a4bedcc00e9c" formatted="false">"Verlängerung am Ende (mm)"</string>
+  <string name="ui_c3efd7bc0e9e" formatted="false">"Endparameter (0 bis 1)"</string>
+  <string name="ui_56237f0f403d" formatted="false">"Einen Wert zwischen 0 und 20 Prozent eingeben."</string>
+  <string name="ui_4431a60de813" formatted="false">"Einen Wert zwischen 0.005 und 0.5 mm eingeben."</string>
+  <string name="ui_fe22ec60ad7c" formatted="false">"2 bis 64 Punkte eingeben"</string>
+  <string name="ui_e26f15805651" formatted="false">"Einen Befehl oder Help eingeben"</string>
+  <string name="ui_b91b13ed2ad4" formatted="false">"Eine endliche Zahl eingeben"</string>
+  <string name="ui_87980246c454" formatted="false">"Eine positive Größe eingeben."</string>
+  <string name="ui_588e543920ed" formatted="false">"Jeweils einen Befehl eingeben"</string>
+  <string name="ui_99c29caf99a6" formatted="false">"Gültige Zahlen eingeben"</string>
+  <string name="ui_8e43a889e201" formatted="false">"Geschätzte Masse"</string>
+  <string name="ui_d7132581b3dc" formatted="false">"Auswerten"</string>
+  <string name="ui_ebdc276d51c3" formatted="false">"Knotengraph auswerten"</string>
+  <string name="ui_9a451eaf4ae1" formatted="false">"Erwartete lineare Schrumpfung (%) · Gießereiwert verwenden"</string>
+  <string name="ui_c74982e3f0ae" formatted="false">"Experimentelles natives CAD · alle Maße in mm"</string>
+  <string name="ui_f3e4fadb9e37" formatted="false">"Exportieren"</string>
+  <string name="ui_5755f9ac0aa1" formatted="false">"CSV exportieren"</string>
+  <string name="ui_209ea2571f9a" formatted="false">"Python-Datei exportieren"</string>
+  <string name="ui_b1336ed07450" formatted="false">"STL-Variantenserie exportieren"</string>
+  <string name="ui_b7e9d2ee1028" formatted="false">"Netzexportqualität"</string>
+  <string name="ui_90835234c58c" formatted="false">"Sicherungskopie exportieren"</string>
+  <string name="ui_c934f0c6efba" formatted="false">"Export · Einheiten in Millimetern"</string>
+  <string name="ui_97b695b9b9cf" formatted="false">"Ausdruck"</string>
+  <string name="ui_6f26fb48d63c" formatted="false">"Ausdruck (z. B. Source.Width * 2)"</string>
+  <string name="ui_bfa59f13f3da" formatted="false">"Gerade verlängern"</string>
+  <string name="ui_33272d4ea2f5" formatted="false">"Extrudieren"</string>
+  <string name="ui_bf753d1d7540" formatted="false">"VORNE"</string>
+  <string name="ui_0c63436993af" formatted="false">"Fertigungs- / Entformungsbericht"</string>
+  <string name="ui_2fa0d8e94fe5" formatted="false">"Fertigungsbericht"</string>
+  <string name="ui_bf8dec2b148f" formatted="false">"Schnell · 10.000 Dreiecke"</string>
+  <string name="ui_ad565d9d01d0" formatted="false">"Merkmal"</string>
+  <string name="ui_310f395a48b0" formatted="false">"Merkmalsverlauf"</string>
+  <string name="ui_7e9b200cfc89" formatted="false">"Merkmalsverlauf / Kurven- / Flächenwerkzeuge"</string>
+  <string name="ui_69fad97a6c85" formatted="false">"Merkmalsparameter"</string>
+  <string name="ui_c287aea6ca6e" formatted="false">"Merkmalsparameter · mm / Grad"</string>
+  <string name="ui_a3cbb98ddf5e" formatted="false">"Dateiname"</string>
+  <string name="ui_28da585bb9c5" formatted="false">"Ebene Löcher füllen"</string>
+  <string name="ui_11b329023c07" formatted="false">"Ebene Netzrandlöcher füllen"</string>
+  <string name="ui_d00513833e48" formatted="false">"Alle Kanten abrunden"</string>
+  <string name="ui_7633fb1c78b4" formatted="false">"Abrundungsradius"</string>
+  <string name="ui_3d3195acfd27" formatted="false">"Fein · 150.000 Dreiecke"</string>
+  <string name="ui_ebb5cdcc120b" formatted="false">"Erster Körper"</string>
+  <string name="ui_f94e25075b34" formatted="false">"Erster Wert"</string>
+  <string name="ui_e0c6bc5b780d" formatted="false">"Einpassen / Ansicht"</string>
+  <string name="ui_c02484cb2ff4" formatted="false">"Alle sichtbaren Objekte einpassen"</string>
+  <string name="ui_231d301768c6" formatted="false">"Auswahl einpassen"</string>
+  <string name="ui_64435fd82de7" formatted="false">"Fließkommazahl"</string>
+  <string name="ui_7b7ef2314d09" formatted="false">"FreeCAD-Dokumentlabor"</string>
+  <string name="ui_dd19f9887573" formatted="false">"Vorne"</string>
+  <string name="ui_536a4ca1b8a4" formatted="false">"GLB · sichtbares Netz / Meter, Y nach oben"</string>
+  <string name="ui_0e0fef82d3e2" formatted="false">"Galeriewand (mm)"</string>
+  <string name="ui_41ac41d23bc8" formatted="false">"Steinsitz-Schneidkörper"</string>
+  <string name="ui_76e7a3a3f9c2" formatted="false">"Erste Schritte"</string>
+  <string name="ui_6799470dbaed" formatted="false">"Rundiste / obere Freiraumhöhe (mm)"</string>
+  <string name="ui_c57604db5869" formatted="false">"Gold"</string>
+  <string name="ui_4f74d5bdb9c4" formatted="false">"Graphrezepte"</string>
+  <string name="ui_78399476ef16" formatted="false">"Knotengraphen"</string>
+  <string name="ui_e66f1d0faf30" formatted="false">"Raster (mm)"</string>
+  <string name="ui_171a0606f7c7" formatted="false">"Gruppe"</string>
+  <string name="ui_b37e49a1decb" formatted="false">"Gruppenbezeichnung (optional)"</string>
+  <string name="ui_285b2e7f6ef8" formatted="false">"Gruppenbezeichnung überschreitet 80 Zeichen"</string>
+  <string name="ui_6ef096c70437" formatted="false">"Gruppenzugehörigkeit"</string>
+  <string name="ui_bf073fae640d" formatted="false">"Anleitung"</string>
+  <string name="ui_63edab638bb0" formatted="false">"CAD-Form reparieren"</string>
+  <string name="ui_c0df957feb34" formatted="false">"Höhe (mm)"</string>
+  <string name="ui_096df703ca5a" formatted="false">"Helix"</string>
+  <string name="ui_c47ae15370cf" formatted="false">"Hilfe"</string>
+  <string name="ui_34d8b60fe253" formatted="false">"Ausblenden"</string>
+  <string name="ui_8295813677d4" formatted="false">"Alle Objekte ausblenden"</string>
+  <string name="ui_f1769e281b55" formatted="false">"Mehrere Objekte ausblenden"</string>
+  <string name="ui_90ccd6497400" formatted="false">"Verlauf"</string>
+  <string name="ui_e886724cafe9" formatted="false">"Körper an ebener Oberseite aushöhlen"</string>
+  <string name="ui_d81caee8ffee" formatted="false">"IGES · sichtbare CAD-Geometrie"</string>
+  <string name="ui_eeec98db23d7" formatted="false">"CSV importieren"</string>
+  <string name="ui_24617dd70272" formatted="false">"Python-Datei importieren"</string>
+  <string name="ui_f2331487b964" formatted="false">"Aus Dateien importieren"</string>
+  <string name="ui_fcf425f09b31" formatted="false">"Innendurchmesser (mm)"</string>
+  <string name="ui_9edcffff4461" formatted="false">"Ganzzahl"</string>
+  <string name="ui_f61b62753fb3" formatted="false">"Interpolierte Kurve"</string>
+  <string name="ui_19dc8265673d" formatted="false">"Interpolierte Kurve · durch Punkte"</string>
+  <string name="ui_46ebb0829a2d" formatted="false">"Schnittmenge"</string>
+  <string name="ui_1373a3c2798a" formatted="false">"Isometrisch"</string>
+  <string name="ui_686b2a0ddbbb" formatted="false">"Steinfassungen"</string>
+  <string name="ui_9a7cd5bb7c20" formatted="false">"Schmuckvorlagen / Voreinstellungen"</string>
+  <string name="ui_0ef1b69ec7ca" formatted="false">"Schmuckvorlagen und gespeicherte Parameter"</string>
+  <string name="ui_e655ce9d27f1" formatted="false">"Schmuckanleitung"</string>
+  <string name="ui_b87372d942f5" formatted="false">"Verbundene Kurven vereinigen"</string>
+  <string name="ui_969e2cc476ff" formatted="false">"LINKS"</string>
+  <string name="ui_74341e3c271d" formatted="false">"Bezeichnung"</string>
+  <string name="ui_89b86ab0e66f" formatted="false">"Sprache"</string>
+  <string name="ui_285f93e19e32" formatted="false">"Letzter Wert"</string>
+  <string name="ui_4343635cf237" formatted="false">"Ebene"</string>
+  <string name="ui_f055f18aeadc" formatted="false">"Ebenen"</string>
+  <string name="ui_cebbb974d7b7" formatted="false">"Ebenen / Sichtbarkeit / Sperren"</string>
+  <string name="ui_8ae1c34bd37f" formatted="false">"Links"</string>
+  <string name="ui_3bade34ecbc5" formatted="false">"Länge"</string>
+  <string name="ui_ea9676003762" formatted="false">"Linie"</string>
+  <string name="ui_24e92c277f48" formatted="false">"Lineare Anordnung"</string>
+  <string name="ui_09f2903343d1" formatted="false">"Lineare Toleranz (mm) · 0.005 fein, 0.015 normal, 0.1 grob"</string>
+  <string name="ui_d0517071aa37" formatted="false">"Verknüpfung"</string>
+  <string name="ui_74b7b0dd3206" formatted="false">"Verknüpfungsobjekt"</string>
+  <string name="ui_aa6861f53dae" formatted="false">"Verknüpfte Instanz"</string>
+  <string name="ui_b4a68deb3b48" formatted="false">"Nach 450 ms live anwenden · erstellt Rückgängig-Punkte"</string>
+  <string name="ui_a410e77c1b37" formatted="false">"Nativer CAD-Kern wird geladen…"</string>
+  <string name="ui_891ebccd5baa" formatted="false">"Sperren"</string>
+  <string name="ui_e143585c0ba6" formatted="false">"Geometrie sperren"</string>
+  <string name="ui_545377f346d1" formatted="false">"Geometriebearbeitung und Auswahl im Ansichtsfenster sperren"</string>
+  <string name="ui_cc7c4b4c6f24" formatted="false">"Profile loften"</string>
+  <string name="ui_899bd694d29a" formatted="false">"Makros"</string>
+  <string name="ui_3540cb5c297d" formatted="false">"Hauptradius (mm)"</string>
+  <string name="ui_a2a2624901f7" formatted="false">"Materialdichte (g/cm³) · Wert Ihrer Legierung eingeben"</string>
+  <string name="ui_a95e85aed563" formatted="false">"Maximum"</string>
+  <string name="ui_459606cf721f" formatted="false">"Maximal 80 Komponenten"</string>
+  <string name="ui_10ad81d66b2a" formatted="false">"Maximale Reparaturtoleranz (mm)"</string>
+  <string name="ui_d4fd0a232ee5" formatted="false">"Messen"</string>
+  <string name="ui_737bc96abf36" formatted="false">"Messungen"</string>
+  <string name="ui_bb0b32cbc0fc" formatted="false">"Netzdrahtmodell"</string>
+  <string name="ui_ec93954b46bf" formatted="false">"Nur Netze"</string>
+  <string name="ui_2994c4eb23e6" formatted="false">"Metallisch · 0 dielektrisch bis 1 metallisch"</string>
+  <string name="ui_7eb0cee888ab" formatted="false">"Minimum"</string>
+  <string name="ui_d1f998fab103" formatted="false">"Minimaler Abstand"</string>
+  <string name="ui_8dfb742fd17b" formatted="false">"Minimaler Entformungswinkel zur +Z-Richtung (Grad)"</string>
+  <string name="ui_897165b5f2b0" formatted="false">"Minimaler geometrischer Abstand"</string>
+  <string name="ui_03fc6d3db034" formatted="false">"Gespiegelte Kopie"</string>
+  <string name="ui_48065392c2e7" formatted="false">"Kopie an einer Ebene spiegeln"</string>
+  <string name="ui_dfd6ee0a3f47" formatted="false">"Mobile Tabelle"</string>
+  <string name="ui_aca9f8f011ce" formatted="false">"Mobile Tabelle / CSV"</string>
+  <string name="ui_14b2a2193940" formatted="false">"Modellierwerkzeuge"</string>
+  <string name="ui_76cdb9507216" formatted="false">"Verschieben"</string>
+  <string name="ui_bb91d7496e90" formatted="false">"Verschiebegriff"</string>
+  <string name="ui_dd749481385c" formatted="false">"Verschiebegriffe"</string>
+  <string name="ui_5a7ad0f3c06e" formatted="false">"Mehrere Objekte verschieben"</string>
+  <string name="ui_8118fbf12f48" formatted="false">"Ausgewählte Objekte um einen Versatz verschieben"</string>
+  <string name="ui_17815ac4e761" formatted="false">"Mehrere Objekte"</string>
+  <string name="ui_8f5af0d89485" formatted="false">"Mehrfachauswahl"</string>
+  <string name="ui_4435fd3cd5df" formatted="false">"NURBS-Kurve"</string>
+  <string name="ui_18e51d7ca4f0" formatted="false">"NURBS-Flächenstück"</string>
+  <string name="ui_83217d186dff" formatted="false">"NURBS-Kontrollpunkt · Knoten / Grad erhalten"</string>
+  <string name="ui_005d5f7561c3" formatted="false">"NURBS-Flächenstück"</string>
+  <string name="ui_5159e2ab8729" formatted="false">"NURBS · gewichtete Kontrollpunkte"</string>
+  <string name="ui_709a23220f2c" formatted="false">"Name"</string>
+  <string name="ui_cb04729f44c1" formatted="false">"Name / Ebene / Sperre"</string>
+  <string name="ui_b3b46e64b67d" formatted="false">"Navigationswürfel"</string>
+  <string name="ui_6403f2b7eb2a" formatted="false">"Neu"</string>
+  <string name="ui_0e06e5aa9fcd" formatted="false">"Neues Makro"</string>
+  <string name="ui_5f757ccd0da4" formatted="false">"Neues FreeCAD-Dokument"</string>
+  <string name="ui_b21b860f611d" formatted="false">"Neuer Arbeitsbereich"</string>
+  <string name="ui_a72564d6e4b4" formatted="false">"Neuer Arbeitsbereich?"</string>
+  <string name="ui_d725873db2a9" formatted="false">"Keine Sicherungskopie gefunden"</string>
+  <string name="ui_5e7d74314e91" formatted="false">"Knotengraph"</string>
+  <string name="ui_9677e56e681b" formatted="false">"Normale X"</string>
+  <string name="ui_748053973486" formatted="false">"Normale Y"</string>
+  <string name="ui_1654fa1e2d9a" formatted="false">"Normale Z"</string>
+  <string name="ui_8bef9011feca" formatted="false">"Anmerkungen · bis zu 200 Zeichen"</string>
+  <string name="ui_f355b3ee2130" formatted="false">"ID des Zahlenknotens"</string>
+  <string name="ui_18ee83a01b5e" formatted="false">"Zahl, Text oder =Formel"</string>
+  <string name="ui_d23b1aa45b35" formatted="false">"Zahlen müssen endlich sein"</string>
+  <string name="ui_447835a0a09a" formatted="false">"Numerisch verschieben"</string>
+  <string name="ui_71beef68f4dc" formatted="false">"Numerische XYZ- / Gewichtszeilen"</string>
+  <string name="ui_cc5055a6a378" formatted="false">"OBJ · sichtbares Netz"</string>
+  <string name="ui_9ce3bd4224c8" formatted="false">"OK"</string>
+  <string name="ui_2883f191bc5e" formatted="false">"Objekt"</string>
+  <string name="ui_ef0a07fdc8fa" formatted="false">"Objektfarbe"</string>
+  <string name="ui_2e777cd14743" formatted="false">"Objektfarbe · schattierte Darstellung"</string>
+  <string name="ui_6b8bc88a7188" formatted="false">"Objektname"</string>
+  <string name="ui_6678efb1df85" formatted="false">"Das Objekt existiert nicht mehr"</string>
+  <string name="ui_826a56438f54" formatted="false">"Objekteigenschaften"</string>
+  <string name="ui_72a83add2c5e" formatted="false">"Objekte"</string>
+  <string name="ui_9adab2b1431c" formatted="false">"Objekte / Ebenen"</string>
+  <string name="ui_dc3cd00d4b38" formatted="false">"Objekte und Ebenen"</string>
+  <string name="ui_10a737d901b1" formatted="false">"Offline-Anleitung"</string>
+  <string name="ui_5721351c711c" formatted="false">"CAD-Form versetzen"</string>
+  <string name="ui_3051e88f42f8" formatted="false">"Ebene Kurve versetzen"</string>
+  <string name="ui_8fc8191265fa" formatted="false">"Ein Regler → nummerierte STL / Rezept-ZIP"</string>
+  <string name="ui_cf9b77061f7b" formatted="false">"Öffnen"</string>
+  <string name="ui_a8f03cc7dbbc" formatted="false">"Makro öffnen / bearbeiten"</string>
+  <string name="ui_da00e3718084" formatted="false">"CAD-Arbeitsbereich öffnen"</string>
+  <string name="ui_b771e59a678e" formatted="false">"FCStd öffnen"</string>
+  <string name="ui_e734ec3352d6" formatted="false">"Private gespeicherte Datei öffnen"</string>
+  <string name="ui_d706429c07da" formatted="false">"Rezept öffnen"</string>
+  <string name="ui_9591b86db5a3" formatted="false">"Wiederherstellung öffnen"</string>
+  <string name="ui_428224df902f" formatted="false">"Gespeicherten Arbeitsbereich öffnen"</string>
+  <string name="ui_34913ffea97c" formatted="false">"Arbeitsbereich wird geöffnet"</string>
+  <string name="ui_c4e6ed956953" formatted="false">"Vorgang fehlgeschlagen"</string>
+  <string name="ui_ab3d9c6b9e83" formatted="false">"Organisationswerkzeuge"</string>
+  <string name="ui_22569744952d" formatted="false">"Orthogonal"</string>
+  <string name="ui_eec92f96be86" formatted="false">"PNG-Export"</string>
+  <string name="ui_47f82a4ce2c0" formatted="false">"PNG-Export fehlgeschlagen"</string>
+  <string name="ui_92568e6d4afa" formatted="false">"PNG-Größe / Transparenz"</string>
+  <string name="ui_6c706fa8c763" formatted="false">"PNG · Studioansicht"</string>
+  <string name="ui_9750284506f8" formatted="false">"Parametrischer Graph · Knoten antippen, dann Bearbeiten / Verbinden.\nTypisierte Punkt- / Listen- / Geometrieanschlüsse. Zahlen werden mit Auswerten aktualisiert."</string>
+  <string name="ui_fecceacb8e2d" formatted="false">"Parametrischer Knotengraph"</string>
+  <string name="ui_67b4d6aa8d08" formatted="false">"Pavillontiefe (mm)"</string>
+  <string name="ui_ca787afd2cfc" formatted="false">"Leistung / Darstellungsdetails"</string>
+  <string name="ui_2dcff8cab2c4" formatted="false">"Rohr entlang einer Kurve erstellen"</string>
+  <string name="ui_4248ec8cc433" formatted="false">"Steigung pro Windung (mm)"</string>
+  <string name="ui_f0316742b427" formatted="false">"Drehpunkt X"</string>
+  <string name="ui_7941fe8c6d14" formatted="false">"Drehpunkt Y"</string>
+  <string name="ui_f589ef1f2bb6" formatted="false">"Drehpunkt Z"</string>
+  <string name="ui_1caac1724986" formatted="false">"Reparatur ebener Löcher"</string>
+  <string name="ui_2446f554c8a6" formatted="false">"Ebenenpunkt X"</string>
+  <string name="ui_0aae9a49aace" formatted="false">"Ebenenpunkt Y"</string>
+  <string name="ui_076c628bf59a" formatted="false">"Ebenenpunkt Z"</string>
+  <string name="ui_f79a28423ed1" formatted="false">"Punkt"</string>
+  <string name="ui_2725a26b9f78" formatted="false">"Punktkoordinaten müssen endlich sein"</string>
+  <string name="ui_d3467ec940ec" formatted="false">"Polare Anordnung"</string>
+  <string name="ui_dd0c89e0c5bb" formatted="false">"Polylinie"</string>
+  <string name="ui_ee2ddac07f73" formatted="false">"Position in Millimetern"</string>
+  <string name="ui_e7ab1c56ca33" formatted="false">"Präzisionswerkzeuge"</string>
+  <string name="ui_722d6c109308" formatted="false">"Private Dokumentumgebung wird vorbereitet…"</string>
+  <string name="ui_eb39e1d78db8" formatted="false">"Name der Voreinstellung"</string>
+  <string name="ui_56a1dd1806ff" formatted="false">"Druckbett / Ausrichtung"</string>
+  <string name="ui_b21073d807ac" formatted="false">"Druckvorbereitung"</string>
+  <string name="ui_d956b27d4917" formatted="false">"Druckerbauraum"</string>
+  <string name="ui_6436426205f1" formatted="false">"Drucken und Dateien"</string>
+  <string name="ui_cc9b8a9dcbc7" formatted="false">"Privates Dokument"</string>
+  <string name="ui_a8407f5ba885" formatted="false">"Kurve auf XY-Ebene projizieren"</string>
+  <string name="ui_7df994c15a89" formatted="false">"Krappendurchmesser (mm)"</string>
+  <string name="ui_f2ce53ff937e" formatted="false">"Krappenfassung"</string>
+  <string name="ui_093d60ca22c8" formatted="false">"Krappen · ganze Zahl von 3 bis 12"</string>
+  <string name="ui_9ae33a7d0ecb" formatted="false">"Eigenschaft"</string>
+  <string name="ui_6e3604888c4b" formatted="false">"Python"</string>
+  <string name="ui_3ccd1ee50a55" formatted="false">"Python-Konsole · App / FreeCAD"</string>
+  <string name="ui_7cb8efa2f261" formatted="false">"Python-Makros"</string>
+  <string name="ui_95253203f793" formatted="false">"RECHTS"</string>
+  <string name="ui_b527ad3e5740" formatted="false">"Radius (mm)"</string>
+  <string name="ui_3114cd27eef6" formatted="false">"Radius / Abstand / innere Wandstärke (mm)"</string>
+  <string name="ui_98a146ad2070" formatted="false">"Topologie lesen"</string>
+  <string name="ui_3aa97c9aa909" formatted="false">"Vorherige Sitzung wird gelesen…"</string>
+  <string name="ui_1f97f67aae99" formatted="false">"Bereit · Änderungen bleiben bearbeitbar"</string>
+  <string name="ui_168bdcede5ac" formatted="false">"Bereit. Software-3D verwendet beim Start kein OpenGL."</string>
+  <string name="ui_1f1ed2a6398e" formatted="false">"Letzte Befehle"</string>
+  <string name="ui_bcd73e477291" formatted="false">"Merkmal neu berechnen"</string>
+  <string name="ui_2c6ef2d11ed6" formatted="false">"Dokumentbefehle aufzeichnen"</string>
+  <string name="ui_ea924f72d31e" formatted="false">"Wiederherstellung"</string>
+  <string name="ui_dd988f1ae6ae" formatted="false">"Wiederherstellung und Projektversionen"</string>
+  <string name="ui_c158695a64ad" formatted="false">"Rechteck"</string>
+  <string name="ui_da335870846f" formatted="false">"Rechteckiges UV-Flächentrimmen"</string>
+  <string name="ui_471b94d402d1" formatted="false">"Wiederholen"</string>
+  <string name="ui_d00c1074c0b3" formatted="false">"Beispielmodelle"</string>
+  <string name="ui_86f6ce133bd3" formatted="false">"Beispielmodelle · zum Arbeitsbereich hinzufügen"</string>
+  <string name="ui_92d700a362c3" formatted="false">"Objekt entfernen"</string>
+  <string name="ui_e066e80468f5" formatted="false">"Darstellung"</string>
+  <string name="ui_02b3766e464e" formatted="false">"Darstellung / Schnitt / PNG"</string>
+  <string name="ui_0d091771984a" formatted="false">"Netzorientierung reparieren / verschweißen"</string>
+  <string name="ui_28dcb9c55b8c" formatted="false">"Bericht exportieren"</string>
+  <string name="ui_b6229f942a60" formatted="false">"Größe in mm ändern"</string>
+  <string name="ui_b134bd555a2f" formatted="false">"Neu starten"</string>
+  <string name="ui_2d9ae7d5429e" formatted="false">"Dokumentlabor neu starten?"</string>
+  <string name="ui_0479c883ff33" formatted="false">"Labor neu starten"</string>
+  <string name="ui_c3a8355746ba" formatted="false">"Rotieren"</string>
+  <string name="ui_954daa8b0033" formatted="false">"Rechts"</string>
+  <string name="ui_96ddaccf581f" formatted="false">"Ring"</string>
+  <string name="ui_7a4f963d32cf" formatted="false">"Roségold"</string>
+  <string name="ui_87b85dca19e8" formatted="false">"Drehen"</string>
+  <string name="ui_840be5ca139d" formatted="false">"90° um X drehen"</string>
+  <string name="ui_d8f3714ed54a" formatted="false">"90° um Y drehen"</string>
+  <string name="ui_d14bf61a49f0" formatted="false">"90° um Z drehen"</string>
+  <string name="ui_2a215bfcb586" formatted="false">"Um den Mittelpunkt drehen · Grad"</string>
+  <string name="ui_8b879b1ecaea" formatted="false">"In XY zur Kurventangente drehen (1 ja / 0 nein)"</string>
+  <string name="ui_8a0e979e7a6c" formatted="false">"Rauheit · .04 poliert bis 1 matt"</string>
+  <string name="ui_2e305b3b2d28" formatted="false">"Regelfläche (1) oder glatt (0)"</string>
+  <string name="ui_b1b392607dea" formatted="false">"Ausführen"</string>
+  <string name="ui_1a58851ca34d" formatted="false">"Befehl ausführen"</string>
+  <string name="ui_64019a30fa7b" formatted="false">"Kerntests ausführen"</string>
+  <string name="ui_07877327aa79" formatted="false">"Makro ausführen"</string>
+  <string name="ui_1e314ab44923" formatted="false">"STEP · sichtbare CAD-Geometrie"</string>
+  <string name="ui_290f4e40c0f7" formatted="false">"STL überschreitet 2.000.000 Dreiecke"</string>
+  <string name="ui_0a6c14b06f09" formatted="false">"STL/OBJ-Tessellierungsqualität"</string>
+  <string name="ui_fcb2b757547a" formatted="false">"SVG · ausgewählte XY-Kurve / Schnitt"</string>
+  <string name="ui_cac769760c5e" formatted="false">"Abgetastete CAD-Wandstärke"</string>
+  <string name="ui_efc007a393f6" formatted="false">"Speichern"</string>
+  <string name="ui_c0ec36ff19cb" formatted="false">"FCStd speichern"</string>
+  <string name="ui_4d7408933c8f" formatted="false">"SVG speichern"</string>
+  <string name="ui_1299791e599b" formatted="false">"Absturzbericht speichern (.zip)"</string>
+  <string name="ui_1e7b70b3763f" formatted="false">"Natives FCStd speichern"</string>
+  <string name="ui_82889739ca33" formatted="false">"Voreinstellung speichern"</string>
+  <string name="ui_05c1a9075f35" formatted="false">"Projekt speichern (.fcml)"</string>
+  <string name="ui_e3bccbc5ced0" formatted="false">"Rezept speichern (.cadgraph)"</string>
+  <string name="ui_a639aa0e6d33" formatted="false">"Aufzeichnung speichern"</string>
+  <string name="ui_e2535c2c7fdb" formatted="false">"Ausgewählte Parameter speichern"</string>
+  <string name="ui_d762ec3ec2eb" formatted="false">"Vorlagenparameter speichern"</string>
+  <string name="ui_75c30fab8075" formatted="false">"Skalierungsfaktor"</string>
+  <string name="ui_203458e54e62" formatted="false">"Skalierungsfaktor · 1 behält die Größe, 1.02 vergrößert um 2%"</string>
+  <string name="ui_5a9f54c31200" formatted="false">"Skriptmerkmal"</string>
+  <string name="ui_d8a9144ff3eb" formatted="false">"Skriptbasierter QuantityDriver"</string>
+  <string name="ui_9b473b2aa252" formatted="false">"Nach Name, Typ, ID oder Ebene suchen"</string>
+  <string name="ui_d4f1dc7e77fd" formatted="false">"Zweiter Körper / Werkzeug"</string>
+  <string name="ui_8598222918d3" formatted="false">"Auswählen"</string>
+  <string name="ui_3975d731f5d2" formatted="false">"Einen CAD-Körper auswählen"</string>
+  <string name="ui_9eea858822f8" formatted="false">"Ein Modell auswählen"</string>
+  <string name="ui_bb229377716a" formatted="false">"Zuerst ein Modell auswählen."</string>
+  <string name="ui_fb9985a198a2" formatted="false">"Ein Quellobjekt auswählen"</string>
+  <string name="ui_3826ea3958d7" formatted="false">"Eine XY-Kurve oder ein Section-Ergebnis bei Z=0 auswählen."</string>
+  <string name="ui_983f5099f9ce" formatted="false">"Zuerst ein Eingabeobjekt auswählen."</string>
+  <string name="ui_57ca8c7c9891" formatted="false">"Ein Objekt auswählen"</string>
+  <string name="ui_97f557d1af78" formatted="false">"Zuerst ein Objekt auswählen."</string>
+  <string name="ui_426e995abe36" formatted="false">"Modell auswählen"</string>
+  <string name="ui_10c1d5e15f27" formatted="false">"Objekt auswählen"</string>
+  <string name="ui_bd562c0fdb06" formatted="false">"Ergebnis auswählen"</string>
+  <string name="ui_b16a2b5dc226" formatted="false">"Ausgewähltes Material"</string>
+  <string name="ui_28200a981443" formatted="false">"Eigenschaften der Auswahl"</string>
+  <string name="ui_4807c8290649" formatted="false">"Ausgewählte Kanten fasen"</string>
+  <string name="ui_a32785f0f077" formatted="false">"Ausgewählte Kanten abrunden"</string>
+  <string name="ui_5bcf784a80b2" formatted="false">"Schale mit ausgewählten Flächen"</string>
+  <string name="ui_d1f8e5ea93b2" formatted="false">"Auswahl"</string>
+  <string name="ui_35641f25595b" formatted="false">"Auswahlfilter / Mehrfachauswahl"</string>
+  <string name="ui_6251207ebc53" formatted="false">"Auswahlmodus"</string>
+  <string name="ui_b6fde6a79282" formatted="false">"Wert / Formel"</string>
+  <string name="ui_fdc01d1fa7e7" formatted="false">"Ausdruck setzen"</string>
+  <string name="ui_08450773cd38" formatted="false">"Verknüpfungsziel festlegen"</string>
+  <string name="ui_c09a092a4a85" formatted="false">"Längste Seite festlegen (mm)"</string>
+  <string name="ui_ad1dec08294e" formatted="false">"Eigenschaft setzen"</string>
+  <string name="ui_4bc799723453" formatted="false">"Wert setzen"</string>
+  <string name="ui_6daafc18d343" formatted="false">"Flächen vernähen"</string>
+  <string name="ui_859f2b8bec08" formatted="false">"Vernähtoleranz (mm)"</string>
+  <string name="ui_be35800f810f" formatted="false">"Schattiert"</string>
+  <string name="ui_d97d1ee339e4" formatted="false">"Anzeigen"</string>
+  <string name="ui_2866270d3aa2" formatted="false">"Alle Objekte anzeigen"</string>
+  <string name="ui_646877551855" formatted="false">"Als Graphausgabe anzeigen"</string>
+  <string name="ui_8f01b2d4b6dc" formatted="false">"Versatz mit Vorzeichen (mm)"</string>
+  <string name="ui_8697f432058b" formatted="false">"Silber"</string>
+  <string name="ui_3594732ca359" formatted="false">"Skizzenblock"</string>
+  <string name="ui_455673bbb8a0" formatted="false">"Fangen"</string>
+  <string name="ui_fb9da43b6bb0" formatted="false">"Fangen: Kontrollpunkte, Mittelpunkte / Schnittpunkte der Kontrollsegmente und Raster. Die NURBS-Vorschau ist rational; die Interpolation verwendet bis Anwenden eine Führung durch die Punkte."</string>
+  <string name="ui_bd390a2685ec" formatted="false">"Software-3D"</string>
+  <string name="ui_e1c6f64d47b0" formatted="false">"Software-3D aktiv"</string>
+  <string name="ui_a6b985574468" formatted="false">"Software-3D nach Grafikfehler aktiv"</string>
+  <string name="ui_b04a353cab8c" formatted="false">"Körpertiefe (mm)"</string>
+  <string name="ui_f0f6fc83bc0c" formatted="false">"Volumenmodellierung"</string>
+  <string name="ui_7287ba951dfa" formatted="false">"Körper · geschlossene Profile"</string>
+  <string name="ui_a519b1824518" formatted="false">"Geschlossene Schale in Körper umwandeln"</string>
+  <string name="ui_a8bf8702d77d" formatted="false">"Nur Körper"</string>
+  <string name="ui_54ba4f63254d" formatted="false">"Quellobjekt"</string>
+  <string name="ui_0446c388357c" formatted="false">"Kugel"</string>
+  <string name="ui_74086ab9cda8" formatted="false">"Quadratseite · 512 bis 2048 Pixel"</string>
+  <string name="ui_23f05b92724b" formatted="false">"Mit leerem CAD-Arbeitsbereich starten"</string>
+  <string name="ui_77bb6b444f7d" formatted="false">"Mit leerem Arbeitsbereich starten"</string>
+  <string name="ui_c20f18edd376" formatted="false">"Verlängerung am Anfang (mm)"</string>
+  <string name="ui_7c894858f09c" formatted="false">"Startparameter (0 bis 1)"</string>
+  <string name="ui_8aa6fa5ee485" formatted="false">"Schritt X (mm)"</string>
+  <string name="ui_2e1cce7cf93b" formatted="false">"Schritt Y (mm)"</string>
+  <string name="ui_2bf69ae4f910" formatted="false">"Schritt Z (mm)"</string>
+  <string name="ui_3b48aeda246d" formatted="false">"Steindurchmesser (mm)"</string>
+  <string name="ui_9d9d2d9cbca2" formatted="false">"Steinsitztiefe (mm)"</string>
+  <string name="ui_a3d17bdd5ea2" formatted="false">"Steinfassungen · echte CAD-Körper"</string>
+  <string name="ui_3df63b7acb05" formatted="false">"Text"</string>
+  <string name="ui_cfb90aa95fca" formatted="false">"Studiomaterial · pro Objekt gespeichert"</string>
+  <string name="ui_39676d735f34" formatted="false">"Studio · Metall- / Rauheitsvorschau"</string>
+  <string name="ui_e9e1b267887b" formatted="false">"Unterteilungsform"</string>
+  <string name="ui_7a020f9e3ec3" formatted="false">"Fläche · offene oder geschlossene Profile"</string>
+  <string name="ui_6b9c2e223136" formatted="false">"Nur Flächen"</string>
+  <string name="ui_8c1998fcc55d" formatted="false">"Profil entlang einer Führung ziehen"</string>
+  <string name="ui_06183458dae1" formatted="false">"Zu Software-3D gewechselt"</string>
+  <string name="ui_b48813fa0aec" formatted="false">"OBEN"</string>
+  <string name="ui_5395dff4ff26" formatted="false">"Zuerst einen Kontrollpunkt antippen"</string>
+  <string name="ui_834b595838a0" formatted="false">"Tippen → Bearbeiten / Verbinden"</string>
+  <string name="ui_fa25d24ffcc5" formatted="false">"Z der Ziel-XY-Ebene (mm)"</string>
+  <string name="ui_241a0ebee249" formatted="false">"Zielobjekt"</string>
+  <string name="ui_df0ad373b7ff" formatted="false">"Türkis"</string>
+  <string name="ui_f34a7377087e" formatted="false">"Gravurtext"</string>
+  <string name="ui_3cc6e124a8e4" formatted="false">"Textgröße"</string>
+  <string name="ui_691af19dbbef" formatted="false">"Textkörper für Gravur"</string>
+  <string name="ui_91e91153cb8a" formatted="false">"Der aktuelle Arbeitsbereich wird geleert. Rückgängig stellt ihn während dieser Sitzung wieder her."</string>
+  <string name="ui_24da69de4da3" formatted="false">"Schwelle für dünne Wände (mm)"</string>
+  <string name="ui_a430ac3065f8" formatted="false">"Titel · bis zu 100 Zeichen"</string>
+  <string name="ui_a09797fefea0" formatted="false">"Toleranz (mm)"</string>
+  <string name="ui_4fa8cc860c52" formatted="false">"Werkzeuge"</string>
+  <string name="ui_cae0435c41e8" formatted="false">"Oben"</string>
+  <string name="ui_c0c80372338a" formatted="false">"Oberer Käfigmaßstab · 0.1 bis 3"</string>
+  <string name="ui_19ed0b0dff13" formatted="false">"Verdrehung des oberen Käfigs (Grad)"</string>
+  <string name="ui_1b03f33c6462" formatted="false">"Topologieindizes"</string>
+  <string name="ui_bb051365c738" formatted="false">"Torus"</string>
+  <string name="ui_a327452c36ed" formatted="false">"Transaktion offen · zum Abschließen bestätigen oder abbrechen"</string>
+  <string name="ui_dea51bb13a44" formatted="false">"Transformieren"</string>
+  <string name="ui_5e139f45b5e7" formatted="false">"Ausgewähltes Modell transformieren"</string>
+  <string name="ui_b4ebb5c52358" formatted="false">"Transparenz muss 0 oder 1 sein"</string>
+  <string name="ui_922c3af533a4" formatted="false">"Transparenter Hintergrund · 1 ja / 0 nein"</string>
+  <string name="ui_e13428fa3dba" formatted="false">"Kurve trimmen"</string>
+  <string name="ui_a953639a616e" formatted="false">"OpenGL-Darstellung ausprobieren"</string>
+  <string name="ui_a5d13a93df36" formatted="false">"Rohrradius (mm)"</string>
+  <string name="ui_917ac1cf92b5" formatted="false">"Windungen · 0.1 bis 20"</string>
+  <string name="ui_d5dd582170ce" formatted="false">"U-Endanteil"</string>
+  <string name="ui_3d899b54f27a" formatted="false">"U-Startanteil"</string>
+  <string name="ui_39fc72124884" formatted="false">"Rückgängig"</string>
+  <string name="ui_c1452b27c558" formatted="false">"Gleichmäßig skalieren"</string>
+  <string name="ui_8964d3d618ce" formatted="false">"Vereinigen"</string>
+  <string name="ui_1526a17ee757" formatted="false">"Entsperren"</string>
+  <string name="ui_79dc1391f805" formatted="false">"Geometrie entsperren"</string>
+  <string name="ui_6e217f978cea" formatted="false">"Ungespeicherte Labordokumente werden geschlossen. Gespeicherte FCStd-Dateien und Makros bleiben erhalten. Der CAD-Arbeitsbereich bleibt in seinem separaten Prozess."</string>
+  <string name="ui_028679f571b4" formatted="false">"NURBS-Fläche enttrimmen"</string>
+  <string name="ui_7dcb3f42d312" formatted="false">"Telefonsprache verwenden"</string>
+  <string name="ui_cbd3f9386e07" formatted="false">"V-Endanteil"</string>
+  <string name="ui_8946abe055f7" formatted="false">"V-Startanteil"</string>
+  <string name="ui_321fc6124095" formatted="false">"Wert (z. B. 2 cm)"</string>
+  <string name="ui_837297960104" formatted="false">"Variablensatz"</string>
+  <string name="ui_ac018db1f7b0" formatted="false">"Variablen"</string>
+  <string name="ui_69bd4ef9fbd0" formatted="false">"Ansicht"</string>
+  <string name="ui_7d9ff4f0de39" formatted="false">"Sichtbarkeit"</string>
+  <string name="ui_656190362b0d" formatted="false">"Sichtbare Buchstabenhöhe (mm)"</string>
+  <string name="ui_3b18e8e33250" formatted="false">"Volumen"</string>
+  <string name="ui_f1d107a15b94" formatted="false">"Wandstärke (mm)"</string>
+  <string name="ui_e75b3f729f43" formatted="false">"Wandstärke (mm)"</string>
+  <string name="ui_69c0b81540bd" formatted="false">"Gewicht"</string>
+  <string name="ui_47adf35d4345" formatted="false">"Schweiß- / Ebenheitstoleranz (mm)"</string>
+  <string name="ui_37619fc13053" formatted="false">"Weiß"</string>
+  <string name="ui_a58ddf50c5ea" formatted="false">"Breite"</string>
+  <string name="ui_2e57c1b5da0b" formatted="false">"Breite (mm)"</string>
+  <string name="ui_8a751cd34485" formatted="false">"Breite X (mm)"</string>
+  <string name="ui_13b7bfcac438" formatted="false">"Wird bearbeitet…"</string>
+  <string name="ui_4ca0a75c2b7f" formatted="false">"Arbeitsbereich"</string>
+  <string name="ui_aefc2f5d68bf" formatted="false">"Arbeitsbereich bereit"</string>
+  <string name="ui_66bb26002288" formatted="false">"Der Arbeitsbereich konnte nicht gestartet werden. Kehren Sie zur Wiederherstellung zurück, um den Absturzbericht zu kopieren."</string>
+  <string name="ui_4337329c5887" formatted="false">"Welt-Z-Ebene (mm)"</string>
+  <string name="ui_8daa34bd2dff" formatted="false">"Weltachse"</string>
+  <string name="ui_26f15614cab2" formatted="false">"X (mm)"</string>
+  <string name="ui_2186f223e3c8" formatted="false">"X-Radius (mm)"</string>
+  <string name="ui_1f48d503c02a" formatted="false">"XY-Kontrollpunkte · Punkte ziehen · Z / Gewicht über Punkt"</string>
+  <string name="ui_2d825843e49c" formatted="false">"XY-Skizze · zum Hinzufügen tippen, zum Bearbeiten ziehen · Pinch / mit zwei Fingern verschieben"</string>
+  <string name="ui_59a3dfe477fe" formatted="false">"Y (mm)"</string>
+  <string name="ui_fd96870f3c87" formatted="false">"Y-Radius (mm)"</string>
+  <string name="ui_1d607f786bb3" formatted="false">"Z (mm)"</string>
+  <string name="ui_5e5de9014312" formatted="false">"Zebra · Normalenstreifen"</string>
+  <string name="ui_3cd3b258c914" formatted="false">"ungeprüft (mehr als 100.000 Dreiecke)"</string>
+</resources>

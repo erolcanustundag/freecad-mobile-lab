@@ -1,0 +1,1504 @@
+<resources>
+  <string name="ui_43d393e4d263" formatted="false">"\n\nPython print(App.Version())\nRunMacro MyMacro.py\nApi App.Vector\nProxy Scaled Source.Width 2\n\nPython console, saved macros, command recording and the portable QuantityDriver proxy are available from the buttons. Python tracing has a two-second budget; native calls may take longer. The API browser covers available App/Base bindings. Arbitrary addon proxy classes and Part/Gui bindings remain pending.\n\nPart, Sketcher, and PartDesign documents need their workbench ports first."</string>
+  <string name="ui_c9c40500c6bb" formatted="false">"\n\nUse Measure id1 id2 for exact CAD minimum distance; Distance XYZ XYZ; Angle XYZ XYZ XYZ. Mesh distance is not supported."</string>
+  <string name="ui_dec0dce734eb" formatted="false">"\n0=X, 1=Y, 2=Z. This checks the bounding box; supports, adhesion and process settings are separate."</string>
+  <string name="ui_65fe7eb37744" formatted="false">"\nABIs: "</string>
+  <string name="ui_6c104b634ca7" formatted="false">"\nAPI: "</string>
+  <string name="ui_d90dbc1967f5" formatted="false">"\nAndroid "</string>
+  <string name="ui_43c122e58c37" formatted="false">"\nAndroid process exit records:\n"</string>
+  <string name="ui_71c380ff4488" formatted="false">"\nBounding-box centre (mm): "</string>
+  <string name="ui_93db1560bb1c" formatted="false">"\nBounds (mm): "</string>
+  <string name="ui_3f3728717e9c" formatted="false">"\nCommands evaluate expressions once. Changing a variable does not yet regenerate existing geometry."</string>
+  <string name="ui_284f1806e5dc" formatted="false">"\nFault address: 0x"</string>
+  <string name="ui_f4562643580d" formatted="false">"\nFitting source-axis permutations: "</string>
+  <string name="ui_548792c38d60" formatted="false">"\nLatest software frame: "</string>
+  <string name="ui_fa646f9eae35" formatted="false">"\nReferences: "</string>
+  <string name="ui_e2642fcc38b8" formatted="false">"\nSaved macros: "</string>
+  <string name="ui_b9e2ae982f1d" formatted="false">"\nSurface area (mm²): "</string>
+  <string name="ui_a1cb333ffd40" formatted="false">"\nSystem exit history requires Android 11 or newer.\n"</string>
+  <string name="ui_663a8af3088c" formatted="false">"\nTotal edge length (mm): "</string>
+  <string name="ui_cddfecc693cc" formatted="false">"\nUndo: "</string>
+  <string name="ui_4ece964285ff" formatted="false">"\nVolume (mm³): "</string>
+  <string name="ui_1071532ea715" formatted="false">"\n[record truncated]"</string>
+  <string name="ui_706e917230a8" formatted="false">"\n[report truncated; export the ZIP for native traces]"</string>
+  <string name="ui_a0007aec3b21" formatted="false">" (guest)"</string>
+  <string name="ui_68d7a9284b35" formatted="false">" / API "</string>
+  <string name="ui_8449f50facd4" formatted="false">" L "</string>
+  <string name="ui_4a980110005e" formatted="false">" V"</string>
+  <string name="ui_29316f8bccc2" formatted="false">" [build "</string>
+  <string name="ui_c97694a1acd8" formatted="false">" area "</string>
+  <string name="ui_f726fa31538d" formatted="false">" bytes"</string>
+  <string name="ui_826ab9ee7305" formatted="false">" centre "</string>
+  <string name="ui_524a7d520f53" formatted="false">" failed"</string>
+  <string name="ui_a25cc2a21bbc" formatted="false">" first."</string>
+  <string name="ui_5ade8f2d7e4a" formatted="false">" inputs."</string>
+  <string name="ui_8b3f563f287b" formatted="false">" is empty or text"</string>
+  <string name="ui_05c604b5be88" formatted="false">" layerName"</string>
+  <string name="ui_d10cf50de590" formatted="false">" length "</string>
+  <string name="ui_e553158226f6" formatted="false">" mm"</string>
+  <string name="ui_db780cf18629" formatted="false">" ms\nDisplay budget: "</string>
+  <string name="ui_b22d14a4a04d" formatted="false">" ms\nLatest completed CAD job: "</string>
+  <string name="ui_f619968336da" formatted="false">" needs "</string>
+  <string name="ui_0f5ca5f5661a" formatted="false">" pc 0x"</string>
+  <string name="ui_2f0958799d46" formatted="false">" planar holes"</string>
+  <string name="ui_e034d90478d6" formatted="false">" selected"</string>
+  <string name="ui_7b44e2b685ce" formatted="false">" solid"</string>
+  <string name="ui_ae6650f17eb3" formatted="false">" surface"</string>
+  <string name="ui_3a59c4ee70a9" formatted="false">" to "</string>
+  <string name="ui_6376dbe8117c" formatted="false">" triangles\nOriginal geometry remains available for export. Timing is a local sample, not a benchmark."</string>
+  <string name="ui_0d4c6a2426f6" formatted="false">" with a fresh selection."</string>
+  <string name="ui_b811324ee29e" formatted="false">" · Redo: "</string>
+  <string name="ui_a0330aa47486" formatted="false">" · XYZ / weight"</string>
+  <string name="ui_fddf244b392d" formatted="false">" · choose indices"</string>
+  <string name="ui_72ef0990ff4c" formatted="false">" · hidden"</string>
+  <string name="ui_581bbec47f18" formatted="false">" · locked"</string>
+  <string name="ui_a6f297746922" formatted="false">" · native CAD · software 3D"</string>
+  <string name="ui_135803831754" formatted="false">" · no arguments opens dimensions"</string>
+  <string name="ui_0bc88b8f7172" formatted="false">" · open tool or view"</string>
+  <string name="ui_78b46f0ad71f" formatted="false">" · rendering option"</string>
+  <string name="ui_8e79200b1cef" formatted="false">" · select inputs in creation order"</string>
+  <string name="ui_2fa1797f8456" formatted="false">" · status/signal "</string>
+  <string name="ui_defa7efc6ab9" formatted="false">"\" fill=\"black\"&gt;"</string>
+  <string name="ui_34e1eabdc2f7" formatted="false">"\" font-family=\"sans-serif\" font-size=\""</string>
+  <string name="ui_459c6183a097" formatted="false">"\" text-anchor=\"middle\" transform=\"rotate(-90 "</string>
+  <string name="ui_73581f1340a0" formatted="false">"\" v2=\""</string>
+  <string name="ui_c3ce9c33fc6d" formatted="false">"\" v3=\""</string>
+  <string name="ui_abb596165c73" formatted="false">"\" y=\""</string>
+  <string name="ui_c23836f52d6f" formatted="false">"\" z=\""</string>
+  <string name="ui_e4498a00c633" formatted="false">"\"&gt;&lt;resources&gt;&lt;object id=\"1\" type=\"model\"&gt;&lt;mesh&gt;&lt;vertices&gt;"</string>
+  <string name="ui_71364d960426" formatted="false">"#ERR: "</string>
+  <string name="ui_7ace9b1bc667" formatted="false">"%.2f mm³"</string>
+  <string name="ui_1a2de62223ce" formatted="false">"%.2f × %.2f × %.2f mm\n%,d original triangles · %,d scene preview triangles"</string>
+  <string name="ui_5a86b120920c" formatted="false">"%.2f × %.2f × %.2f mm   ·   %s   ·   %,d triangles"</string>
+  <string name="ui_52bd3e750268" formatted="false">"%.4f g\nVolume %.4f mm³ × density %.4f g/cm³\nThis estimate excludes process losses and uses your density value."</string>
+  <string name="ui_43feb3955aa6" formatted="false">"%.6f mm"</string>
+  <string name="ui_8fc0c3919308" formatted="false">"%.6f mm\nOverlapping or touching solids return zero."</string>
+  <string name="ui_93f7b20f4b9c" formatted="false">"%.8f %.8f %.8f %.8f\n"</string>
+  <string name="ui_207996ab12b6" formatted="false">"%.8f %s"</string>
+  <string name="ui_73fa1cf5aeab" formatted="false">"%s · X %.3f, Y %.3f mm"</string>
+  <string name="ui_411da1665ca0" formatted="false">"%s: %+.1f mm"</string>
+  <string name="ui_301f79027d4c" formatted="false">") scale("</string>
+  <string name="ui_74fc12ee2a14" formatted="false">")\" font-family=\"sans-serif\" font-size=\"3\" fill=\"black\"&gt;"</string>
+  <string name="ui_7850fb9418a1" formatted="false">"+ Create"</string>
+  <string name="ui_691d6ea15007" formatted="false">". Detach or delete the dependent feature first."</string>
+  <string name="ui_7b9412a1d7de" formatted="false">". Export LINE/CIRCLE/ARC or straight LWPOLYLINE geometry."</string>
+  <string name="ui_efb074ed9d56" formatted="false">". Type Help."</string>
+  <string name="ui_6f6a567d5569" formatted="false">"1 finger: orbit   ·   pinch: zoom   ·   2 fingers: pan"</string>
+  <string name="ui_506cff3dfeb1" formatted="false">"18 mm comfort ring"</string>
+  <string name="ui_12b17ac8c1be" formatted="false">"20 mm"</string>
+  <string name="ui_a6a68b452e5d" formatted="false">"3D view"</string>
+  <string name="ui_8d9dbed48ca3" formatted="false">"3MF XML requires bounded UTF-8 data"</string>
+  <string name="ui_6e866a07ff0a" formatted="false">"3MF has too many parts"</string>
+  <string name="ui_12c00754a6fc" formatted="false">"3MF import currently supports one model part"</string>
+  <string name="ui_664376ce678a" formatted="false">"3MF import needs one untransformed build item"</string>
+  <string name="ui_bb3147e3083f" formatted="false">"3MF import supports one mesh object"</string>
+  <string name="ui_71b50a971b51" formatted="false">"3MF mesh/build is empty"</string>
+  <string name="ui_bd990dfbf3c1" formatted="false">"3MF triangle index out of range"</string>
+  <string name="ui_bcb59b857771" formatted="false">"3MF triangle limit exceeded"</string>
+  <string name="ui_e10080189d3c" formatted="false">"3MF vertex limit exceeded"</string>
+  <string name="ui_90e50b9b0537" formatted="false">"3MF · visible mesh / mm"</string>
+  <string name="ui_06cb96b10389" formatted="false">"65 parameter samples\nMaximum sampled curvature: %.6f 1/mm\nMinimum sampled radius: %s\nSampling can miss narrow curvature peaks; this is not a Class-A continuity certification."</string>
+  <string name="ui_d3a00b5ffbbc" formatted="false">": GLES error 0x"</string>
+  <string name="ui_5c32d59106bb" formatted="false">": loading native libraries / transaction"</string>
+  <string name="ui_2563cf635e49" formatted="false">": reading model metadata"</string>
+  <string name="ui_159c231f160f" formatted="false">": tessellating display mesh"</string>
+  <string name="ui_57f2b190fb2f" formatted="false">"A feature outside the selection still uses #"</string>
+  <string name="ui_91c6dc4850ae" formatted="false">"A legacy project recovery copy was kept before upgrading autosave to project version 2. Export it from Workspace if needed."</string>
+  <string name="ui_3533d09b0914" formatted="false">"A previous session crashed. Start an empty workspace with software 3D; the saved model will be kept as a recovery copy. Or copy the report below."</string>
+  <string name="ui_7327b69c2df3" formatted="false">"A1:H32 · tap a cell to edit. Formulas start with = and can use cells or document variables. Geometry uses evaluated snapshots."</string>
+  <string name="ui_2881e0f06668" formatted="false">"A4 SVG · overall width and height in mm. XY profile at Z=0. Print at 100%, no page fit."</string>
+  <string name="ui_d93d10ff0fbe" formatted="false">"API"</string>
+  <string name="ui_8257a9cef2fe" formatted="false">"ARC"</string>
+  <string name="ui_340e1d2471e7" formatted="false">"Abort: "</string>
+  <string name="ui_78fc30b263a3" formatted="false">"About / licences"</string>
+  <string name="ui_e9d531812b7d" formatted="false">"Adaptive display detail"</string>
+  <string name="ui_61cc55aa0453" formatted="false">"Add"</string>
+  <string name="ui_e2b431798042" formatted="false">"Add "</string>
+  <string name="ui_b015ce543276" formatted="false">"Add NAME [Feature|Group|Link|VarSet]"</string>
+  <string name="ui_0e2465fe2eda" formatted="false">"Add at least two points"</string>
+  <string name="ui_8ea9062f548b" formatted="false">"Add component"</string>
+  <string name="ui_e864aa24d43c" formatted="false">"Add property"</string>
+  <string name="ui_4f5edc11fcbd" formatted="false">"Add to group"</string>
+  <string name="ui_c83b0ec2d98a" formatted="false">"Align"</string>
+  <string name="ui_aa5a3afa1cfa" formatted="false">"Align matching bounds"</string>
+  <string name="ui_49662530d12a" formatted="false">"Align objects"</string>
+  <string name="ui_3a232ffd1a0c" formatted="false">"Align targetId axis sourceAnchor [targetAnchor] · axis X/Y/Z, anchor Min/Centre/Max"</string>
+  <string name="ui_98c19aa80121" formatted="false">"Align to object"</string>
+  <string name="ui_6a72085653e4" formatted="false">"All"</string>
+  <string name="ui_1efe8f5e9768" formatted="false">"All measurements in millimetres"</string>
+  <string name="ui_74c53bd71d43" formatted="false">"All objects"</string>
+  <string name="ui_0fa0f7ae68ce" formatted="false">"Allowance"</string>
+  <string name="ui_620883b0cd8b" formatted="false">"Allowance · casting percentage and original geometry"</string>
+  <string name="ui_0e524de0b822" formatted="false">"Analyze"</string>
+  <string name="ui_d36fa2632bfc" formatted="false">"Anchor must be Min, Centre or Max"</string>
+  <string name="ui_1fd70473fb3d" formatted="false">"Angle"</string>
+  <string name="ui_f961efd7f9ad" formatted="false">"Angle (degrees)"</string>
+  <string name="ui_7ea07780c487" formatted="false">"Angle XYZ XYZ XYZ · middle point is vertex"</string>
+  <string name="ui_0e0945af36d3" formatted="false">"Angle degrees"</string>
+  <string name="ui_0aa7aeb51b41" formatted="false">"Angle needs three XYZ points; the middle point is the vertex"</string>
+  <string name="ui_fc5f90e06053" formatted="false">"Angle points must be distinct"</string>
+  <string name="ui_cfea419c3b4e" formatted="false">"Apply"</string>
+  <string name="ui_b6aa4e83bed4" formatted="false">"Approximate thickness"</string>
+  <string name="ui_853a983f6b8a" formatted="false">"Arc"</string>
+  <string name="ui_cca208c60120" formatted="false">"Arc centreX centreY centreZ radius startDegrees endDegrees · XY"</string>
+  <string name="ui_27d88ac68912" formatted="false">"Archive exceeds the mobile size limit"</string>
+  <string name="ui_2745debaa64a" formatted="false">"Area"</string>
+  <string name="ui_107004472b7b" formatted="false">"Array"</string>
+  <string name="ui_4130069ee1c1" formatted="false">"Array along curve"</string>
+  <string name="ui_482ff1de15b6" formatted="false">"Array count stepX stepY stepZ"</string>
+  <string name="ui_1fd06cf283cd" formatted="false">"ArrayCurve"</string>
+  <string name="ui_c50db34b868b" formatted="false">"ArrayCurve · distribute copies on a curve"</string>
+  <string name="ui_0639948033ad" formatted="false">"At most 64 document variables"</string>
+  <string name="ui_58b9ff3fe0e6" formatted="false">"Automatic · software frame timing"</string>
+  <string name="ui_ff6ad92011f3" formatted="false">"Autosave"</string>
+  <string name="ui_d74b6cfbbd9f" formatted="false">"Available Python API"</string>
+  <string name="ui_1df6251b4693" formatted="false">"Axis X"</string>
+  <string name="ui_27b791621ace" formatted="false">"Axis Y"</string>
+  <string name="ui_e2f1c650f3a2" formatted="false">"Axis Z"</string>
+  <string name="ui_1522d796e232" formatted="false">"Axis direction X"</string>
+  <string name="ui_818d7e9c3d28" formatted="false">"Axis direction Y"</string>
+  <string name="ui_04d3f4bd99c6" formatted="false">"Axis direction Z"</string>
+  <string name="ui_2a72681bee18" formatted="false">"Axis must be X, Y or Z"</string>
+  <string name="ui_016f2cc0cb75" formatted="false">"Axis point X"</string>
+  <string name="ui_30afd07ccc07" formatted="false">"Axis point Y"</string>
+  <string name="ui_b177e05ab8b4" formatted="false">"Axis point Z"</string>
+  <string name="ui_587eac1112fa" formatted="false">"BACK"</string>
+  <string name="ui_44d0fd52d22b" formatted="false">"BOTTOM"</string>
+  <string name="ui_c10df8d19608" formatted="false">"BREP curve"</string>
+  <string name="ui_b305ef8b7b7f" formatted="false">"BREP solid"</string>
+  <string name="ui_337a1344ed75" formatted="false">"BREP · visible CAD geometry"</string>
+  <string name="ui_b52b36b7269f" formatted="false">"Back"</string>
+  <string name="ui_8c4491933899" formatted="false">"Bail outer radius"</string>
+  <string name="ui_815e51e1c9ba" formatted="false">"Bake 3MF components before import"</string>
+  <string name="ui_9eef82dfc0d8" formatted="false">"Bake GLB node transforms before import"</string>
+  <string name="ui_c59203db9a48" formatted="false">"Balanced · 50,000 triangles"</string>
+  <string name="ui_6dbb9957a3f6" formatted="false">"Band width"</string>
+  <string name="ui_78a8bd5c5cc2" formatted="false">"Band width / height (mm)"</string>
+  <string name="ui_04c123bdc64a" formatted="false">"Bangle"</string>
+  <string name="ui_9230747798f6" formatted="false">"Basic solids"</string>
+  <string name="ui_2a5292adbbd6" formatted="false">"Batch export currently needs one graph output"</string>
+  <string name="ui_e77948f7ca23" formatted="false">"Batch transforms need independent roots. Detach derived outputs before selecting them with their inputs."</string>
+  <string name="ui_40af4dcb42fc" formatted="false">"Batch variants"</string>
+  <string name="ui_6c5f4cb5f461" formatted="false">"Bed X (mm)"</string>
+  <string name="ui_eadd0a8e3c3b" formatted="false">"Bed Y (mm)"</string>
+  <string name="ui_7ef3defd9bd0" formatted="false">"Bed dimensions must exceed twice the margin"</string>
+  <string name="ui_68eca95f49dd" formatted="false">"Begin [\"Edit label\"]"</string>
+  <string name="ui_58e3247bcf3a" formatted="false">"Begin edit"</string>
+  <string name="ui_3fe832876acf" formatted="false">"Bezel"</string>
+  <string name="ui_c3afba4c4528" formatted="false">"Bezel setting"</string>
+  <string name="ui_5532e3a53276" formatted="false">"Binary STL is incomplete"</string>
+  <string name="ui_df5eaf37f6db" formatted="false">"Binary STL · visible geometry"</string>
+  <string name="ui_7d44bc449c2a" formatted="false">"Blue"</string>
+  <string name="ui_b9e14a17aa5d" formatted="false">"Body A"</string>
+  <string name="ui_66640b70e2fc" formatted="false">"Body B"</string>
+  <string name="ui_daf760a167a8" formatted="false">"Bool"</string>
+  <string name="ui_e772bc4d3e48" formatted="false">"Booleans / fillet"</string>
+  <string name="ui_cce7f2f2f0dc" formatted="false">"Bottom"</string>
+  <string name="ui_48726daba90e" formatted="false">"Boundary cannot be triangulated safely"</string>
+  <string name="ui_9ad56d818396" formatted="false">"Boundary is not planar within welding tolerance"</string>
+  <string name="ui_6cbc09750322" formatted="false">"Boundary loop has no planar area"</string>
+  <string name="ui_ceb9f29b0a2c" formatted="false">"Boundary loop self-intersects"</string>
+  <string name="ui_239ca5767afa" formatted="false">"Box"</string>
+  <string name="ui_5bd8492ac554" formatted="false">"Branched boundary cannot be filled safely"</string>
+  <string name="ui_a61a594b8eab" formatted="false">"Build height Z (mm)"</string>
+  <string name="ui_1593a03026d3" formatted="false">"Building software-capable UI"</string>
+  <string name="ui_3389a704b1ee" formatted="false">"Bulge"</string>
+  <string name="ui_b42fc02a08f3" formatted="false">"CAD Activity created"</string>
+  <string name="ui_56625a630033" formatted="false">"CAD Activity startup"</string>
+  <string name="ui_cd5bf23adc29" formatted="false">"CAD curve / profile"</string>
+  <string name="ui_e4ae1e954c15" formatted="false">"CAD drawing"</string>
+  <string name="ui_366beef5b862" formatted="false">"CAD edges"</string>
+  <string name="ui_e33756c9ac13" formatted="false">"CAD faces"</string>
+  <string name="ui_6699eaff9ec1" formatted="false">"CAD objects"</string>
+  <string name="ui_362056b5552b" formatted="false">"CAD operation"</string>
+  <string name="ui_fa42775b2b49" formatted="false">"CAD surface / shell"</string>
+  <string name="ui_9730b057f6ad" formatted="false">"CAD valid: %s · solids: %d\nVolume: %.4f mm³\nSurface area: %.4f mm²\nCurve/edge length: %.4f mm\nTriangles: %,d\nMesh watertight by edge incidence: %s\nBoundary edges: %,d\nNon-manifold edges: %,d\nDegenerate triangles: %,d\nNear-vertical area below %.2f° draft: %.2f%%\n\nDraft is a tessellation-based orientation check, not an undercut or mould-release guarantee. Mesh topology is checked up to 100,000 triangles using 0.00001 mm coordinate welding; it does not detect self-intersections."</string>
+  <string name="ui_f07d52a027a8" formatted="false">"CAD vertices"</string>
+  <string name="ui_aa884ac53759" formatted="false">"CAN"</string>
+  <string name="ui_d9fcd75064d3" formatted="false">"CIRCLE"</string>
+  <string name="ui_f1afe1fd8143" formatted="false">"CSV cell exceeds 256 characters"</string>
+  <string name="ui_3a3a7066f556" formatted="false">"CSV exceeds 32 rows / 8 columns"</string>
+  <string name="ui_a6c8ad17ea57" formatted="false">"CSV exceeds 64 KiB"</string>
+  <string name="ui_77988f90dd02" formatted="false">"Cage depth (mm)"</string>
+  <string name="ui_05fe0b3030a5" formatted="false">"Cage height (mm)"</string>
+  <string name="ui_a298d8e24e7b" formatted="false">"Cage width (mm)"</string>
+  <string name="ui_4a489ac1a7a9" formatted="false">"Calc"</string>
+  <string name="ui_9c2ca3311aab" formatted="false">"Calc expression · scalar calculator"</string>
+  <string name="ui_16b6e0c696af" formatted="false">"Calculator"</string>
+  <string name="ui_77dfd2135f4d" formatted="false">"Cancel"</string>
+  <string name="ui_b8f944abaa35" formatted="false">"Cancel edit"</string>
+  <string name="ui_a3aea4c0ec57" formatted="false">"Candidate status"</string>
+  <string name="ui_5f6af2f3b4e9" formatted="false">"Cannot create runtime directory"</string>
+  <string name="ui_e18e2f4cfa7d" formatted="false">"Cannot create runtime folder"</string>
+  <string name="ui_51218365b877" formatted="false">"Cannot create runtime staging directory"</string>
+  <string name="ui_0251062d8e7a" formatted="false">"Cannot create saved document directory"</string>
+  <string name="ui_ebc5efebcb26" formatted="false">"Cannot create temporary directory"</string>
+  <string name="ui_a563fb28887e" formatted="false">"Cannot install runtime"</string>
+  <string name="ui_b69d75eec198" formatted="false">"Cannot open destination"</string>
+  <string name="ui_ec799cd23940" formatted="false">"Cannot open input"</string>
+  <string name="ui_2ad0358a6824" formatted="false">"Cannot open macro"</string>
+  <string name="ui_816d56008dd3" formatted="false">"Cannot open macro output"</string>
+  <string name="ui_8f941b45fc17" formatted="false">"Cannot open output"</string>
+  <string name="ui_07de7fdc8bd6" formatted="false">"Cannot read graph"</string>
+  <string name="ui_4a126a0d3bdd" formatted="false">"Cannot remove incomplete runtime"</string>
+  <string name="ui_dcb533436e95" formatted="false">"Casting allowance"</string>
+  <string name="ui_e624a1c0d025" formatted="false">"Casting allowance must be 0 to 20 percent"</string>
+  <string name="ui_dd6c6fba22b0" formatted="false">"Casting allowance · enlarge the model"</string>
+  <string name="ui_3fa2f57731aa" formatted="false">"Casting shrinkage allowance"</string>
+  <string name="ui_5981b9f942e0" formatted="false">"Catmull-Clark levels · integer 1 to 4"</string>
+  <string name="ui_c54e78fb4fe7" formatted="false">"Cause: "</string>
+  <string name="ui_4607bc7c42ac" formatted="false">"Cell"</string>
+  <string name="ui_39d214901ec1" formatted="false">"Cell "</string>
+  <string name="ui_9fbd5a3b5c7c" formatted="false">"Cell address value · formula starts with ="</string>
+  <string name="ui_3b18b90cec50" formatted="false">"Cell must be A1 to H32"</string>
+  <string name="ui_d0ab45f3d368" formatted="false">"Cell text is limited to 256 characters"</string>
+  <string name="ui_16e5447a8046" formatted="false">"Centre"</string>
+  <string name="ui_d7ea0b653211" formatted="false">"Centre X"</string>
+  <string name="ui_13fa992ac041" formatted="false">"Centre Y"</string>
+  <string name="ui_ddf0cfc44ea9" formatted="false">"Centre Z"</string>
+  <string name="ui_55d0def9c9c6" formatted="false">"Centre control-point bulge (mm)"</string>
+  <string name="ui_7809bbeb5802" formatted="false">"Centre selected model on Z=0 bed"</string>
+  <string name="ui_abd2115dfcd2" formatted="false">"Chamfer"</string>
+  <string name="ui_33f0bce83e2e" formatted="false">"Chamfer all edges"</string>
+  <string name="ui_48ea67c14d15" formatted="false">"Chamfer distance"</string>
+  <string name="ui_86330e4cdd10" formatted="false">"ChamferSelected"</string>
+  <string name="ui_2015aba5fc12" formatted="false">"ChamferSelected distance edgeIndex [edgeIndex ...]"</string>
+  <string name="ui_0062c851307d" formatted="false">"Check bed envelope / axis permutations"</string>
+  <string name="ui_cc76f6f1e953" formatted="false">"Checking the previous session…"</string>
+  <string name="ui_bcf399c7ae68" formatted="false">"Choose "</string>
+  <string name="ui_95ba92de040d" formatted="false">"Choose 1 to 15 entries"</string>
+  <string name="ui_f82c5a28e5cc" formatted="false">"Choose a Number node"</string>
+  <string name="ui_7ef373e4ce71" formatted="false">"Choose geometry outputs"</string>
+  <string name="ui_0a13c60e546b" formatted="false">"Choose input"</string>
+  <string name="ui_1ab45361070e" formatted="false">"Choose multiple objects"</string>
+  <string name="ui_4812be6a6fc8" formatted="false">"Choose rail · copies use XY centre / bottom anchor"</string>
+  <string name="ui_771b3d15b506" formatted="false">"Choose rail · selected curve is the profile"</string>
+  <string name="ui_d8d96531afb1" formatted="false">"Choose two different objects"</string>
+  <string name="ui_1cc7820a08e2" formatted="false">"Circle"</string>
+  <string name="ui_719ea396ad92" formatted="false">"Clear"</string>
+  <string name="ui_a5880260dd6b" formatted="false">"Clear expression"</string>
+  <string name="ui_9dd6875c99f9" formatted="false">"Clear · empty workspace; Undo restores it"</string>
+  <string name="ui_1d592272db03" formatted="false">"Clearance margin (mm)"</string>
+  <string name="ui_1bd3bd675d34" formatted="false">"Clip"</string>
+  <string name="ui_302f19f39cc1" formatted="false">"Clip above world Z plane"</string>
+  <string name="ui_6054150ee6ec" formatted="false">"Clip display above plane"</string>
+  <string name="ui_2f2df8631301" formatted="false">"ClipOff"</string>
+  <string name="ui_bbfa773e5a63" formatted="false">"Close"</string>
+  <string name="ui_213b8d6ccddf" formatted="false">"Close active document"</string>
+  <string name="ui_c8d4423a2e6d" formatted="false">"Close the quoted value"</string>
+  <string name="ui_88d86b7721d5" formatted="false">"Closed"</string>
+  <string name="ui_e3b9822d1875" formatted="false">"Closed curve"</string>
+  <string name="ui_20c2d0dd2852" formatted="false">"Closed curve needs three points"</string>
+  <string name="ui_c0c30e800020" formatted="false">"Closed curve requires Polyline / Interpolated curve"</string>
+  <string name="ui_477c3b1b4510" formatted="false">"Closed profile"</string>
+  <string name="ui_ada0d773b0af" formatted="false">"Closed profile to planar region"</string>
+  <string name="ui_1d0c8304baed" formatted="false">"Color"</string>
+  <string name="ui_890126c1c2f8" formatted="false">"Color red green blue · each 0 to 1"</string>
+  <string name="ui_f28563a477a9" formatted="false">"Colour"</string>
+  <string name="ui_142b5940284b" formatted="false">"Comfort ring"</string>
+  <string name="ui_8901895fb1b1" formatted="false">"Command"</string>
+  <string name="ui_949bfcc948b8" formatted="false">"Command exceeds 4,096 characters"</string>
+  <string name="ui_1a28b29f4f7b" formatted="false">"Command help"</string>
+  <string name="ui_0039381a0b2a" formatted="false">"Command is missing or too long"</string>
+  <string name="ui_f0cab561b2d1" formatted="false">"Command reference"</string>
+  <string name="ui_6966e21c630a" formatted="false">"Command · Help, Box 20 10 4…"</string>
+  <string name="ui_717354ee1f25" formatted="false">"Command · Set Source.Width 2 cm"</string>
+  <string name="ui_0ca5450f81f6" formatted="false">"Command: "</string>
+  <string name="ui_1a1873ab51c7" formatted="false">"Commit"</string>
+  <string name="ui_3b258fe3d277" formatted="false">"Connect every input on "</string>
+  <string name="ui_968df9b11bbe" formatted="false">"Contours target 0.005 mm (capped) · print at 100%, no page fit"</string>
+  <string name="ui_a783eca8c9cd" formatted="false">"Control cage depth (mm)"</string>
+  <string name="ui_71386f1843fe" formatted="false">"Control cage width (mm)"</string>
+  <string name="ui_58d744ee4c8e" formatted="false">"Copies"</string>
+  <string name="ui_ea75a51b0189" formatted="false">"Copies including original · 2 to 100"</string>
+  <string name="ui_45c7e8785f9e" formatted="false">"Copy count must be an integer"</string>
+  <string name="ui_cb42316b57a8" formatted="false">"Copy crash report"</string>
+  <string name="ui_95b49c2102dc" formatted="false">"Cos"</string>
+  <string name="ui_b8d853b22221" formatted="false">"Could not save language preference"</string>
+  <string name="ui_66e12969c225" formatted="false">"Count"</string>
+  <string name="ui_79b3256d8684" formatted="false">"Count · integer 2 to 10"</string>
+  <string name="ui_f0e7cc1e6789" formatted="false">"Count · integer 2 to 100"</string>
+  <string name="ui_a291d6b844d9" formatted="false">"Count/index must be an integer from "</string>
+  <string name="ui_5dc8e0006187" formatted="false">"Crash records could not be read"</string>
+  <string name="ui_2f2503014962" formatted="false">"Crash report / recovery"</string>
+  <string name="ui_51f3263e2e52" formatted="false">"Crash report copied"</string>
+  <string name="ui_d12b417f8416" formatted="false">"Crash report saved"</string>
+  <string name="ui_6e157c5da441" formatted="false">"Create"</string>
+  <string name="ui_b0ef1b4df83d" formatted="false">"Create "</string>
+  <string name="ui_5a51df9256e1" formatted="false">"Create a curve rail first. Select the object to copy."</string>
+  <string name="ui_c11c2f8bcd8d" formatted="false">"Create a document, or open a supported FCStd metadata document."</string>
+  <string name="ui_2a848ba4938d" formatted="false">"Create a second curve to use as the rail."</string>
+  <string name="ui_6875ee2b291b" formatted="false">"Create a second object to use as a reference"</string>
+  <string name="ui_0f986af26953" formatted="false">"Create an extrusion, loft, Boolean or another modelling operation to record a dependency. Imports and manual transforms are geometry snapshots."</string>
+  <string name="ui_dd24cc8a4cbc" formatted="false">"Create at least "</string>
+  <string name="ui_a0c75994670a" formatted="false">"Create or import a model first."</string>
+  <string name="ui_6651e8ca2a57" formatted="false">"Create or import an object first"</string>
+  <string name="ui_a7c86ae48918" formatted="false">"Create or import two solids first. Use Move to position the tool where it overlaps the first solid."</string>
+  <string name="ui_c65cbfecf121" formatted="false">"Create or select an object first."</string>
+  <string name="ui_98a34db8b516" formatted="false">"Create system-font text outlines as a CAD solid. Move/rotate it, then Cut for engraving or Union for embossing. Curves are sampled at about 0.05 mm."</string>
+  <string name="ui_6abd03c2f98a" formatted="false">"Create · millimetres"</string>
+  <string name="ui_06081ecc8c9a" formatted="false">"Creating initial ring"</string>
+  <string name="ui_ede77cc09901" formatted="false">"Cross-section / 2D drawing"</string>
+  <string name="ui_c746a115b0ff" formatted="false">"Current orientation fits: "</string>
+  <string name="ui_8db0741a1c9e" formatted="false">"Curvature"</string>
+  <string name="ui_09e05c6660bd" formatted="false">"Curvature · sample selected single curve"</string>
+  <string name="ui_908885a69197" formatted="false">"Curve array"</string>
+  <string name="ui_6ad19228a11a" formatted="false">"Curve curvature"</string>
+  <string name="ui_7a3eb66f9979" formatted="false">"Curve curvature report"</string>
+  <string name="ui_80692ae3176e" formatted="false">"Curve point"</string>
+  <string name="ui_07c83b93abf0" formatted="false">"Curves"</string>
+  <string name="ui_4eca91cc687f" formatted="false">"Curves / profiles"</string>
+  <string name="ui_8e8831bf34cc" formatted="false">"Curves and history"</string>
+  <string name="ui_3efa753b477f" formatted="false">"Curves and profiles"</string>
+  <string name="ui_5e5ee2c203b8" formatted="false">"Curves only"</string>
+  <string name="ui_657b40f812d9" formatted="false">"Cushion bezel"</string>
+  <string name="ui_38d13bda5c40" formatted="false">"Cut"</string>
+  <string name="ui_bfb6fdce937b" formatted="false">"Cut / subtract"</string>
+  <string name="ui_79bbef211c88" formatted="false">"Cut bodyId toolId"</string>
+  <string name="ui_817b354dc01a" formatted="false">"Cylinder"</string>
+  <string name="ui_b6c1170a9cef" formatted="false">"DTD/entity declarations are unsupported"</string>
+  <string name="ui_9b3e66e8d531" formatted="false">"DXF bulged polylines require conversion to ARC entities"</string>
+  <string name="ui_1150643b3935" formatted="false">"DXF contains no supported modelspace curves"</string>
+  <string name="ui_d0d15931591e" formatted="false">"DXF coordinates exceed +/-1,000,000 mm"</string>
+  <string name="ui_5bbf8363f176" formatted="false">"DXF exceeds 16 MiB"</string>
+  <string name="ui_1f4be42dc7e9" formatted="false">"DXF exceeds 2,000 curve segments"</string>
+  <string name="ui_f45ed537b7e1" formatted="false">"DXF extrusion axes/thickness are unsupported"</string>
+  <string name="ui_8eebb1c21abf" formatted="false">"DXF needs declared inch/foot/mm/cm/m $INSUNITS; unitless drawings are ambiguous"</string>
+  <string name="ui_4e6e948d70ab" formatted="false">"DXF polyline vertex missing Y"</string>
+  <string name="ui_15d5b7c8fd92" formatted="false">"DXF · selected XY curve / section"</string>
+  <string name="ui_808d7dca8a74" formatted="false">"Default"</string>
+  <string name="ui_07ded793232a" formatted="false">"Degenerate boundary loop"</string>
+  <string name="ui_ae4caa6b19e2" formatted="false">"Degenerate triangles must be repaired first"</string>
+  <string name="ui_f6fdbe48dc54" formatted="false">"Delete"</string>
+  <string name="ui_d0f24e267e66" formatted="false">"Delete multiple"</string>
+  <string name="ui_7700294c798b" formatted="false">"Delete multiple objects"</string>
+  <string name="ui_024a119d4986" formatted="false">"Delete · selected object"</string>
+  <string name="ui_b9054d38bdc5" formatted="false">"Delta X mm"</string>
+  <string name="ui_609872d33573" formatted="false">"Delta Y mm"</string>
+  <string name="ui_934b7522dfb3" formatted="false">"Delta Z mm"</string>
+  <string name="ui_da201e5f22d0" formatted="false">"Dependent selection cannot be deleted"</string>
+  <string name="ui_df0e298e3562" formatted="false">"Depth"</string>
+  <string name="ui_64b365fa3ee1" formatted="false">"Depth (mm)"</string>
+  <string name="ui_1d97595f7723" formatted="false">"Depth Y (mm)"</string>
+  <string name="ui_3a095fef14a4" formatted="false">"Detach"</string>
+  <string name="ui_43cd70a06454" formatted="false">"Detach feature"</string>
+  <string name="ui_d71a5056f84c" formatted="false">"Detach recipe; keep geometry"</string>
+  <string name="ui_ba297950288d" formatted="false">"Detach · keep selected geometry as a snapshot"</string>
+  <string name="ui_a6a7709266d3" formatted="false">"Deutsch"</string>
+  <string name="ui_b4748fa72923" formatted="false">"Dimensioned drawing sheet"</string>
+  <string name="ui_9f4ca9ec0871" formatted="false">"Dimensions"</string>
+  <string name="ui_f8d108dfb868" formatted="false">"Dimensions in mm. Select an object before editing. IDs appear on object chips.\nEnter repeats the previous command. Commands are local CAD actions.\n\n"</string>
+  <string name="ui_6cc62d64e2d0" formatted="false">"Disable clipping"</string>
+  <string name="ui_5e77fe9fbd46" formatted="false">"Disable multiple selection"</string>
+  <string name="ui_83d0373b89b0" formatted="false">"Display bounds are too large"</string>
+  <string name="ui_c3aeea8a6be7" formatted="false">"Display detail"</string>
+  <string name="ui_ca718436e7d7" formatted="false">"Display detail · export keeps full quality"</string>
+  <string name="ui_5a83f580ae83" formatted="false">"Display performance"</string>
+  <string name="ui_423208095dd7" formatted="false">"Distance"</string>
+  <string name="ui_8f3b337849d4" formatted="false">"Distance (mm)"</string>
+  <string name="ui_eaa6c02eb9d5" formatted="false">"Distance XYZ XYZ · point distance in mm"</string>
+  <string name="ui_deef3e5498ea" formatted="false">"Distance between CAD objects"</string>
+  <string name="ui_104ed7c21cfc" formatted="false">"Divide"</string>
+  <string name="ui_50a314209c54" formatted="false">"Division by zero"</string>
+  <string name="ui_7a524e14c7f4" formatted="false">"Document commands"</string>
+  <string name="ui_1adff3072f22" formatted="false">"Document operation"</string>
+  <string name="ui_4214822e9b88" formatted="false">"Document variables"</string>
+  <string name="ui_687c82861c95" formatted="false">"Documents"</string>
+  <string name="ui_22b3f140feb2" formatted="false">"Drag a world axis. Release commits one Undo step. Use numeric Move for exact coordinates."</string>
+  <string name="ui_d8dc1f1899ed" formatted="false">"Drag an axis · 20 px = 1 mm"</string>
+  <string name="ui_06790c4791eb" formatted="false">"Drag weighted poles in XY"</string>
+  <string name="ui_37a4658d6cec" formatted="false">"Draw XY sketch with snap grid"</string>
+  <string name="ui_93aba913bfbb" formatted="false">"Draw curve"</string>
+  <string name="ui_9de36050c765" formatted="false">"Drawing"</string>
+  <string name="ui_8f44f0f47a83" formatted="false">"Drawing contour exceeds 8 MiB"</string>
+  <string name="ui_a4d3311befbe" formatted="false">"Drawing sheet"</string>
+  <string name="ui_2ef65654c711" formatted="false">"Drawing title/notes contain an invalid XML character"</string>
+  <string name="ui_ea28e064d267" formatted="false">"Drawing · A4 dimensioned SVG sheet"</string>
+  <string name="ui_972d57379db3" formatted="false">"Duplicate"</string>
+  <string name="ui_8b28230e28ec" formatted="false">"Duplicate FCStd entries"</string>
+  <string name="ui_eae29560e1e0" formatted="false">"Duplicate dx dy dz"</string>
+  <string name="ui_ebf2a9f7a0b7" formatted="false">"Duplicate or invalid node ID"</string>
+  <string name="ui_6cb15df59f82" formatted="false">"Duplicate · offset in mm"</string>
+  <string name="ui_088b4be85801" formatted="false">"ENDSEC"</string>
+  <string name="ui_c94604a8f316" formatted="false">"ENTITIES"</string>
+  <string name="ui_c02affb5b407" formatted="false">"Each line needs X Y Z and an optional weight"</string>
+  <string name="ui_6e444774c000" formatted="false">"Edge / face indices"</string>
+  <string name="ui_5301648dcf6b" formatted="false">"Edit"</string>
+  <string name="ui_16f01b4a1c6a" formatted="false">"Edit "</string>
+  <string name="ui_76518f63a8ac" formatted="false">"Edit / connect"</string>
+  <string name="ui_13ee5bbafe07" formatted="false">"Edit / resize"</string>
+  <string name="ui_2e8b683e11d1" formatted="false">"Edit NURBS poles"</string>
+  <string name="ui_cedd93294b9d" formatted="false">"Edit NURBS surface poles"</string>
+  <string name="ui_b609016dca31" formatted="false">"Edit graph"</string>
+  <string name="ui_a58957e071b0" formatted="false">"Edit macro"</string>
+  <string name="ui_9cc1ae872dd0" formatted="false">"Edit numeric parameters"</string>
+  <string name="ui_c568c20a08f3" formatted="false">"Edit property"</string>
+  <string name="ui_add2e9497fe8" formatted="false">"Edit surface pole"</string>
+  <string name="ui_a432ede67bb8" formatted="false">"Edit weighted pole"</string>
+  <string name="ui_726c8ebd8a16" formatted="false">"Edit weighted poles"</string>
+  <string name="ui_68dba1d505ac" formatted="false">"Edit worksheet cell"</string>
+  <string name="ui_dc3ac3d24fe3" formatted="false">"Editable circular loft"</string>
+  <string name="ui_23c06b1eb12c" formatted="false">"Editable plate with hole"</string>
+  <string name="ui_8580e3175f4e" formatted="false">"Ellipse"</string>
+  <string name="ui_415f8dedea1c" formatted="false">"Empty view"</string>
+  <string name="ui_bd97ca585fa7" formatted="false">"Empty workspace · create or import a model"</string>
+  <string name="ui_1880c7fdf083" formatted="false">"Enable multiple selection"</string>
+  <string name="ui_a2bb9d34b8a1" formatted="false">"End"</string>
+  <string name="ui_a4bedcc00e9c" formatted="false">"End extension (mm)"</string>
+  <string name="ui_c3efd7bc0e9e" formatted="false">"End parameter fraction (0 to 1)"</string>
+  <string name="ui_649df08a448e" formatted="false">"English"</string>
+  <string name="ui_56237f0f403d" formatted="false">"Enter 0 to 20 percent."</string>
+  <string name="ui_4431a60de813" formatted="false">"Enter 0.005 to 0.5 mm."</string>
+  <string name="ui_fe22ec60ad7c" formatted="false">"Enter 2 to 64 points"</string>
+  <string name="ui_d193b45fcbfb" formatted="false">"Enter a command"</string>
+  <string name="ui_e26f15805651" formatted="false">"Enter a command, or Help"</string>
+  <string name="ui_b91b13ed2ad4" formatted="false">"Enter a finite number"</string>
+  <string name="ui_2f2767a87031" formatted="false">"Enter a non-zero axis and finite angle within +/- 1,000,000 degrees"</string>
+  <string name="ui_87980246c454" formatted="false">"Enter a positive size."</string>
+  <string name="ui_1b37aa5f63df" formatted="false">"Enter a positive solid volume and density between 0 and 30 g/cm³"</string>
+  <string name="ui_3fa3afff32ab" formatted="false">"Enter a valid layer name"</string>
+  <string name="ui_a3125314ec91" formatted="false">"Enter an integer count and orientation 0 or 1"</string>
+  <string name="ui_588e543920ed" formatted="false">"Enter one command at a time"</string>
+  <string name="ui_aef9ab20a555" formatted="false">"Enter radius/wall plus 1 to 15 indices"</string>
+  <string name="ui_99c29caf99a6" formatted="false">"Enter valid numbers"</string>
+  <string name="ui_6d0b521074ed" formatted="false">"Envelope check"</string>
+  <string name="ui_8e43a889e201" formatted="false">"Estimated mass"</string>
+  <string name="ui_d7132581b3dc" formatted="false">"Evaluate"</string>
+  <string name="ui_65d488482f90" formatted="false">"Evaluate a graph first"</string>
+  <string name="ui_ebdc276d51c3" formatted="false">"Evaluate node graph"</string>
+  <string name="ui_eb01bf04c9a0" formatted="false">"Examples"</string>
+  <string name="ui_1756ae78560c" formatted="false">"Expected XYZ"</string>
+  <string name="ui_9b1e42cb4aab" formatted="false">"Expected a number: "</string>
+  <string name="ui_6dc935bf2c40" formatted="false">"Expected a positive integer"</string>
+  <string name="ui_e6d5ac9d4a60" formatted="false">"Expected a positive object ID"</string>
+  <string name="ui_9a451eaf4ae1" formatted="false">"Expected linear shrinkage (%) · use your foundry value"</string>
+  <string name="ui_c74982e3f0ae" formatted="false">"Experimental native CAD · all dimensions in mm"</string>
+  <string name="ui_f3e4fadb9e37" formatted="false">"Export"</string>
+  <string name="ui_5755f9ac0aa1" formatted="false">"Export CSV"</string>
+  <string name="ui_209ea2571f9a" formatted="false">"Export Python file"</string>
+  <string name="ui_b1336ed07450" formatted="false">"Export batch of STL variants"</string>
+  <string name="ui_7a4df81080bc" formatted="false">"Export exceeds the mobile size limit"</string>
+  <string name="ui_4bd01055fa18" formatted="false">"Export macro"</string>
+  <string name="ui_b7e9d2ee1028" formatted="false">"Export mesh quality"</string>
+  <string name="ui_77e679695357" formatted="false">"Export quality"</string>
+  <string name="ui_90835234c58c" formatted="false">"Export recovery copy"</string>
+  <string name="ui_c934f0c6efba" formatted="false">"Export · units millimetres"</string>
+  <string name="ui_97b695b9b9cf" formatted="false">"Expression"</string>
+  <string name="ui_6f26fb48d63c" formatted="false">"Expression (e.g. Source.Width * 2)"</string>
+  <string name="ui_ad179cac2463" formatted="false">"Expression is empty, too long or too deeply nested"</string>
+  <string name="ui_f85f28c15504" formatted="false">"Expression is too complex"</string>
+  <string name="ui_41e5da88d607" formatted="false">"Expression nesting is too deep"</string>
+  <string name="ui_e6a7d9920235" formatted="false">"Expression result must be finite and within +/- 1e12"</string>
+  <string name="ui_03dc992a6408" formatted="false">"Expressions: "</string>
+  <string name="ui_b23e77444e96" formatted="false">"Extend line"</string>
+  <string name="ui_bfa59f13f3da" formatted="false">"Extend straight line"</string>
+  <string name="ui_344956bf56ed" formatted="false">"ExtendLine"</string>
+  <string name="ui_785cf64a82dd" formatted="false">"ExtendLine startLength endLength"</string>
+  <string name="ui_e586bececcf9" formatted="false">"External entities unsupported"</string>
+  <string name="ui_33272d4ea2f5" formatted="false">"Extrude"</string>
+  <string name="ui_ef29723d9159" formatted="false">"Extrude "</string>
+  <string name="ui_47f99084607f" formatted="false">"Extrude height OR Extrude dx dy dz · selected closed profile"</string>
+  <string name="ui_ce052cdf6fa4" formatted="false">"Extrude solid"</string>
+  <string name="ui_7f003d806b84" formatted="false">"Extrude surface"</string>
+  <string name="ui_bcec6db3154c" formatted="false">"ExtrudeSurface"</string>
+  <string name="ui_9836cdf94088" formatted="false">"ExtrudeSurface height OR dx dy dz"</string>
+  <string name="ui_fd6a5ecb0c6d" formatted="false">"FAIL"</string>
+  <string name="ui_bfa86277fd9b" formatted="false">"FCStd XML is too large"</string>
+  <string name="ui_0c8c0c5028fc" formatted="false">"FCStd exceeds 250 saved shapes"</string>
+  <string name="ui_29238ad04674" formatted="false">"FCStd saved shape is missing: "</string>
+  <string name="ui_966541457dda" formatted="false">"FCStd saved shape is too large"</string>
+  <string name="ui_42b9dda2dbd2" formatted="false">"FREECAD  /  MOBILE LAB"</string>
+  <string name="ui_b3d3cda9b70a" formatted="false">"FREECAD / DOCUMENT LAB"</string>
+  <string name="ui_b1044822813a" formatted="false">"FREECAD / MOBILE LAB"</string>
+  <string name="ui_bf753d1d7540" formatted="false">"FRONT"</string>
+  <string name="ui_0c63436993af" formatted="false">"Fabrication / draft report"</string>
+  <string name="ui_2fa0d8e94fe5" formatted="false">"Fabrication report"</string>
+  <string name="ui_f9d7616b16e6" formatted="false">"Face height Z"</string>
+  <string name="ui_1c003b381112" formatted="false">"Face thickness Y"</string>
+  <string name="ui_c10b99356695" formatted="false">"Face width X"</string>
+  <string name="ui_451edd79bd51" formatted="false">"Factor"</string>
+  <string name="ui_bf8dec2b148f" formatted="false">"Fast · 10,000 triangles"</string>
+  <string name="ui_ad565d9d01d0" formatted="false">"Feature"</string>
+  <string name="ui_bf9229a923b1" formatted="false">"Feature / precision tools"</string>
+  <string name="ui_eb8e4a1aa617" formatted="false">"Feature dependency cycle"</string>
+  <string name="ui_310f395a48b0" formatted="false">"Feature history"</string>
+  <string name="ui_7e9b200cfc89" formatted="false">"Feature history / curve / surface tools"</string>
+  <string name="ui_9579c0c7f963" formatted="false">"Feature history exceeds 250 operations"</string>
+  <string name="ui_e7061bd455e9" formatted="false">"Feature limit reached"</string>
+  <string name="ui_a78736185e10" formatted="false">"Feature needs at least two inputs"</string>
+  <string name="ui_a046deaacbec" formatted="false">"Feature needs one input"</string>
+  <string name="ui_1c92f3270e1c" formatted="false">"Feature needs two inputs"</string>
+  <string name="ui_69fad97a6c85" formatted="false">"Feature parameters"</string>
+  <string name="ui_c287aea6ca6e" formatted="false">"Feature parameters · mm / degrees"</string>
+  <string name="ui_83ca519d6b9c" formatted="false">"Feature recompute cycle"</string>
+  <string name="ui_89df56fa0fa0" formatted="false">"FeatureHistory"</string>
+  <string name="ui_0e7b72988924" formatted="false">"FeatureHistory · saved operations and parameters"</string>
+  <string name="ui_09e744fad164" formatted="false">"FeatureSet"</string>
+  <string name="ui_3464cd531f8b" formatted="false">"FeatureSet numericParameters · rebuild selected recipe"</string>
+  <string name="ui_da18f21aaee4" formatted="false">"File could not be opened"</string>
+  <string name="ui_c0407c1a26c9" formatted="false">"File exceeds "</string>
+  <string name="ui_e6dfcdbfd45e" formatted="false">"File exceeds the mobile size limit"</string>
+  <string name="ui_a3cbb98ddf5e" formatted="false">"Filename"</string>
+  <string name="ui_28da585bb9c5" formatted="false">"Fill planar holes"</string>
+  <string name="ui_11b329023c07" formatted="false">"Fill planar mesh boundary holes"</string>
+  <string name="ui_63713a8b2aa9" formatted="false">"Fill planar mesh holes"</string>
+  <string name="ui_a5b751d0fd13" formatted="false">"FillHoles"</string>
+  <string name="ui_84e21a612de4" formatted="false">"FillHoles · bounded planar mesh boundary repair"</string>
+  <string name="ui_c594da0b299b" formatted="false">"Filled "</string>
+  <string name="ui_b2e3fa17a7f1" formatted="false">"Fillet"</string>
+  <string name="ui_d00513833e48" formatted="false">"Fillet all edges"</string>
+  <string name="ui_7633fb1c78b4" formatted="false">"Fillet radius"</string>
+  <string name="ui_b0f08c22c3e5" formatted="false">"Fillet · selected solid"</string>
+  <string name="ui_93d8ad5407cd" formatted="false">"FilletSelected"</string>
+  <string name="ui_61b2ce1179d3" formatted="false">"FilletSelected radius edgeIndex [edgeIndex ...]"</string>
+  <string name="ui_3d3195acfd27" formatted="false">"Fine · 150,000 triangles"</string>
+  <string name="ui_ebb5cdcc120b" formatted="false">"First solid / body"</string>
+  <string name="ui_f94e25075b34" formatted="false">"First value"</string>
+  <string name="ui_dab564d8093c" formatted="false">"Fit"</string>
+  <string name="ui_e0c6bc5b780d" formatted="false">"Fit / view"</string>
+  <string name="ui_c02484cb2ff4" formatted="false">"Fit all visible"</string>
+  <string name="ui_231d301768c6" formatted="false">"Fit selected"</string>
+  <string name="ui_154860255924" formatted="false">"FitSelected"</string>
+  <string name="ui_07abe4cfe0e7" formatted="false">"FitSelected · frame selected geometry"</string>
+  <string name="ui_7e2e92c6f155" formatted="false">"Flatten to XY for SVG/DXF (1 yes / 0 no)"</string>
+  <string name="ui_64435fd82de7" formatted="false">"Float"</string>
+  <string name="ui_1fc73aa74f84" formatted="false">"Font contour could not be sampled"</string>
+  <string name="ui_0e9a70851f79" formatted="false">"Frame wall"</string>
+  <string name="ui_2f53ac65e752" formatted="false">"FreeCAD Mobile Lab "</string>
+  <string name="ui_bc8b249f9c80" formatted="false">"FreeCAD Mobile Lab geometry exporter"</string>
+  <string name="ui_04cbc79436fa" formatted="false">"FreeCAD Mobile Lab · "</string>
+  <string name="ui_accbffcbfe70" formatted="false">"FreeCAD crash report"</string>
+  <string name="ui_7b7ef2314d09" formatted="false">"FreeCAD document lab"</string>
+  <string name="ui_1abc8b131b54" formatted="false">"FreeCADMobileLab"</string>
+  <string name="ui_dd19f9887573" formatted="false">"Front"</string>
+  <string name="ui_6cf5006209a6" formatted="false">"GLB accessor exceeds its buffer view"</string>
+  <string name="ui_84dfe2a0d4a7" formatted="false">"GLB import currently supports one baked mesh in one scene"</string>
+  <string name="ui_fb9e3efab6da" formatted="false">"GLB import requires triangles without morph targets"</string>
+  <string name="ui_4cb5a24980f3" formatted="false">"GLB import supports static geometry without required extensions"</string>
+  <string name="ui_98792c312e50" formatted="false">"GLB index out of range"</string>
+  <string name="ui_e7c37d7b3e3d" formatted="false">"GLB position accessor must be dense float VEC3"</string>
+  <string name="ui_59289c6fdc20" formatted="false">"GLB vertex limit exceeded"</string>
+  <string name="ui_536a4ca1b8a4" formatted="false">"GLB · visible mesh / metres, Y up"</string>
+  <string name="ui_251c271bc715" formatted="false">"GLES program: "</string>
+  <string name="ui_142e5ca7ea00" formatted="false">"GLThread"</string>
+  <string name="ui_82abe2577d64" formatted="false">"Gallery wall"</string>
+  <string name="ui_0e0fef82d3e2" formatted="false">"Gallery wall (mm)"</string>
+  <string name="ui_7958d25aabe6" formatted="false">"GemCutter"</string>
+  <string name="ui_41ac41d23bc8" formatted="false">"Gemstone cutter"</string>
+  <string name="ui_9d1226717c2f" formatted="false">"Geometry"</string>
+  <string name="ui_76e7a3a3f9c2" formatted="false">"Getting started"</string>
+  <string name="ui_6799470dbaed" formatted="false">"Girdle / upper clearance height (mm)"</string>
+  <string name="ui_2fdfbea6f5fb" formatted="false">"Gizmo"</string>
+  <string name="ui_c57604db5869" formatted="false">"Gold"</string>
+  <string name="ui_9a7405ebcedd" formatted="false">"Graph"</string>
+  <string name="ui_f316ffacd669" formatted="false">"Graph connections form a cycle"</string>
+  <string name="ui_1e3e8bba8a58" formatted="false">"Graph is too large"</string>
+  <string name="ui_84f109b461e3" formatted="false">"Graph math exceeds +/-1,000,000"</string>
+  <string name="ui_5f06e93fd6af" formatted="false">"Graph needs 1 to 80 components"</string>
+  <string name="ui_b659eaa596a0" formatted="false">"Graph output must be distinct geometry"</string>
+  <string name="ui_4f74d5bdb9c4" formatted="false">"Graph recipes"</string>
+  <string name="ui_591323ca2ce8" formatted="false">"Graph sample"</string>
+  <string name="ui_bd1d176a1c3c" formatted="false">"Graph · bezel pattern"</string>
+  <string name="ui_464893c608c5" formatted="false">"Graph · parametric ring"</string>
+  <string name="ui_14a27ed96333" formatted="false">"GraphFiles"</string>
+  <string name="ui_0f1b589ecb0b" formatted="false">"GraphFiles · save/open recipes and batch variants"</string>
+  <string name="ui_e06c7fc3d344" formatted="false">"Graphics setup"</string>
+  <string name="ui_e8f4ed7331b3" formatted="false">"Graphics startup/drawing"</string>
+  <string name="ui_78399476ef16" formatted="false">"Graphs"</string>
+  <string name="ui_e66f1d0faf30" formatted="false">"Grid mm"</string>
+  <string name="ui_171a0606f7c7" formatted="false">"Group"</string>
+  <string name="ui_b37e49a1decb" formatted="false">"Group label (optional)"</string>
+  <string name="ui_285b2e7f6ef8" formatted="false">"Group label exceeds 80 characters"</string>
+  <string name="ui_18e8625bd53c" formatted="false">"Group label too long"</string>
+  <string name="ui_6ef096c70437" formatted="false">"Group membership"</string>
+  <string name="ui_bf073fae640d" formatted="false">"Guide"</string>
+  <string name="ui_74a1fb4086cf" formatted="false">"Guide · offline tutorials"</string>
+  <string name="ui_c166015199fe" formatted="false">"Heal"</string>
+  <string name="ui_305a1ecd2b70" formatted="false">"Heal CAD"</string>
+  <string name="ui_63edab638bb0" formatted="false">"Heal CAD shape"</string>
+  <string name="ui_a6d3771071be" formatted="false">"Heal tolerance"</string>
+  <string name="ui_3f608b4935ea" formatted="false">"Height"</string>
+  <string name="ui_c0df957feb34" formatted="false">"Height (mm)"</string>
+  <string name="ui_096df703ca5a" formatted="false">"Helix"</string>
+  <string name="ui_c47ae15370cf" formatted="false">"Help"</string>
+  <string name="ui_1e5bed900418" formatted="false">"Help [command] · show commands"</string>
+  <string name="ui_34d8b60fe253" formatted="false">"Hide"</string>
+  <string name="ui_8295813677d4" formatted="false">"Hide all objects"</string>
+  <string name="ui_2092f231253f" formatted="false">"Hide multiple"</string>
+  <string name="ui_f1769e281b55" formatted="false">"Hide multiple objects"</string>
+  <string name="ui_bf0e4c8638cc" formatted="false">"Hide · selected object"</string>
+  <string name="ui_90ccd6497400" formatted="false">"History"</string>
+  <string name="ui_f3798a707139" formatted="false">"History · recent command input"</string>
+  <string name="ui_e222f2b90dfa" formatted="false">"Hole repair exceeds 512 boundary edges"</string>
+  <string name="ui_891b9df41628" formatted="false">"Hollow"</string>
+  <string name="ui_e886724cafe9" formatted="false">"Hollow planar top"</string>
+  <string name="ui_b9483c52724d" formatted="false">"Hollow top"</string>
+  <string name="ui_20b28ea3f2da" formatted="false">"Hollow wall"</string>
+  <string name="ui_21319cf91018" formatted="false">"IGES solid"</string>
+  <string name="ui_d81caee8ffee" formatted="false">"IGES · visible CAD geometry"</string>
+  <string name="ui_4f325d995b6d" formatted="false">"ISO"</string>
+  <string name="ui_d6fbc9d2bdd5" formatted="false">"Import"</string>
+  <string name="ui_eeec98db23d7" formatted="false">"Import CSV"</string>
+  <string name="ui_24617dd70272" formatted="false">"Import Python file"</string>
+  <string name="ui_f2331487b964" formatted="false">"Import from files"</string>
+  <string name="ui_15cc73271115" formatted="false">"Import worksheet CSV"</string>
+  <string name="ui_50e22cc67dcc" formatted="false">"Independent native Android CAD app with selected FreeCAD functionality.\n\nNative ARM64 OpenCASCADE 7.9.2 CAD kernel; actual FreeCAD PlaneGCS Sketcher solver; software 3D renderer, optional OpenGL ES 3, and Android touch UI.\n\nNew: weighted NURBS control points, interpolated splines, profiles, loft/sweep/revolve/extrude, sections, offsets, chamfer, healing, jewellery settings, bounded subdivision primitives and a small typed node graph.\n\nThe optional document lab includes original FreeCAD Base/App, typed metadata documents, expressions, transactions, Python console/macros and one portable scripted feature. Native Part/Sketcher/PartDesign/Gui workbenches and arbitrary FCStd editing/recompute are still pending. The main CAD workspace keeps its independent OCCT recipe engine. STEP transfers solid geometry to desktop FreeCAD.\n\nAll work is local. The app requests no network permission.\n\nCode: LGPL-2.1-or-later. FreeCAD: LGPL-2.1-or-later. OpenCASCADE: LGPL-2.1 with OCCT exception. Eigen: MPL-2.0. Boost: Boost Software License 1.0. meshoptimizer: MIT. Optional lab: Qt6.8.3 LGPL3/GPL3 notices and CPython3.13 PSF licence. Full notices accompany the source bundle and are included in app assets."</string>
+  <string name="ui_ba805a89fc88" formatted="false">"Index (zero-based)"</string>
+  <string name="ui_e01cd8bc414e" formatted="false">"Indices refer to this geometry. Changed topology blocks dependent selected-edge/face recipes.\n\n"</string>
+  <string name="ui_4b631f698425" formatted="false">"Info"</string>
+  <string name="ui_b96ed10a6c2a" formatted="false">"Inner depth"</string>
+  <string name="ui_da2d5efb1fb4" formatted="false">"Inner diameter"</string>
+  <string name="ui_fcf425f09b31" formatted="false">"Inner diameter (mm)"</string>
+  <string name="ui_f9b10d30c32c" formatted="false">"Inner edge bevel"</string>
+  <string name="ui_9a00a4f52b85" formatted="false">"Inner width"</string>
+  <string name="ui_c568d584a221" formatted="false">"Input "</string>
+  <string name="ui_b2d508a70498" formatted="false">"Inputs: "</string>
+  <string name="ui_7538a7abe8ba" formatted="false">"Insert sample"</string>
+  <string name="ui_5f97f8775628" formatted="false">"Instance"</string>
+  <string name="ui_9edcffff4461" formatted="false">"Integer"</string>
+  <string name="ui_53a40e92b9dc" formatted="false">"InterpCurve"</string>
+  <string name="ui_bfd79e1d8487" formatted="false">"InterpCurve XYZ through-points · 2 to 16 points"</string>
+  <string name="ui_f61b62753fb3" formatted="false">"Interpolated curve"</string>
+  <string name="ui_19dc8265673d" formatted="false">"Interpolated curve · through points"</string>
+  <string name="ui_46ebb0829a2d" formatted="false">"Intersect"</string>
+  <string name="ui_7dbc11949325" formatted="false">"Intersect firstId secondId"</string>
+  <string name="ui_728af160738b" formatted="false">"Invalid DXF number"</string>
+  <string name="ui_f4c56be4a1fd" formatted="false">"Invalid DXF polyline vertex count"</string>
+  <string name="ui_3bee89daf3be" formatted="false">"Invalid GLB JSON chunk"</string>
+  <string name="ui_f1dc16572ed8" formatted="false">"Invalid GLB binary chunk"</string>
+  <string name="ui_dfb64ac7ee27" formatted="false">"Invalid GLB container/version/length"</string>
+  <string name="ui_6106cc0c6c5b" formatted="false">"Invalid GLB indices"</string>
+  <string name="ui_ea03c5ef2044" formatted="false">"Invalid GLB triangle count"</string>
+  <string name="ui_568cd6d2b52f" formatted="false">"Invalid GLB vertex stride"</string>
+  <string name="ui_a9b3fb5cf200" formatted="false">"Invalid NURBS preview"</string>
+  <string name="ui_4d512eb532ce" formatted="false">"Invalid STL or interchange triangle limit exceeded ("</string>
+  <string name="ui_13ca71235fc7" formatted="false">"Invalid boundary loop"</string>
+  <string name="ui_5ca43416fa99" formatted="false">"Invalid casting references"</string>
+  <string name="ui_d4d164c75753" formatted="false">"Invalid cell control character"</string>
+  <string name="ui_a7dac90d82f8" formatted="false">"Invalid contour export"</string>
+  <string name="ui_14d67c0ce44b" formatted="false">"Invalid control point"</string>
+  <string name="ui_7b1b2ae01510" formatted="false">"Invalid display coordinates"</string>
+  <string name="ui_725df6aa2f6e" formatted="false">"Invalid display material"</string>
+  <string name="ui_93bf3bb48766" formatted="false">"Invalid expression character"</string>
+  <string name="ui_9727871978da" formatted="false">"Invalid expression number"</string>
+  <string name="ui_020386cf39b0" formatted="false">"Invalid feature parameter"</string>
+  <string name="ui_747ccc16846e" formatted="false">"Invalid feature record"</string>
+  <string name="ui_e491923852b9" formatted="false">"Invalid focus bounds"</string>
+  <string name="ui_44e056c74898" formatted="false">"Invalid material roughness"</string>
+  <string name="ui_2d31626e696d" formatted="false">"Invalid mesh object"</string>
+  <string name="ui_1ad374506a5d" formatted="false">"Invalid native trace size"</string>
+  <string name="ui_4ba71f5c5b5f" formatted="false">"Invalid object name or layer"</string>
+  <string name="ui_a583e1a7fdb7" formatted="false">"Invalid or duplicate project entries"</string>
+  <string name="ui_4d34763095d3" formatted="false">"Invalid or oversized DXF records"</string>
+  <string name="ui_3cc3b8f3bdfd" formatted="false">"Invalid or oversized curve display"</string>
+  <string name="ui_f90178d14c41" formatted="false">"Invalid or oversized display mesh"</string>
+  <string name="ui_a2f9c77d8386" formatted="false">"Invalid print margin"</string>
+  <string name="ui_919ac6b6d4f0" formatted="false">"Invalid project dimensions or position"</string>
+  <string name="ui_12ec6f2c2458" formatted="false">"Invalid project measurements"</string>
+  <string name="ui_031a982585ec" formatted="false">"Invalid project object"</string>
+  <string name="ui_5f7dcb8857aa" formatted="false">"Invalid protobuf field"</string>
+  <string name="ui_2d5021851b17" formatted="false">"Invalid protobuf integer"</string>
+  <string name="ui_43bd1cf7f398" formatted="false">"Invalid rendering settings"</string>
+  <string name="ui_8bf9f720eb2d" formatted="false">"Invalid runtime archive"</string>
+  <string name="ui_c307d68f5ef1" formatted="false">"Invalid runtime path"</string>
+  <string name="ui_f3da329a563e" formatted="false">"Invalid sketch snapping values"</string>
+  <string name="ui_eac8e9e46016" formatted="false">"Invalid software viewport size"</string>
+  <string name="ui_59dab1a97617" formatted="false">"Invalid variable name"</string>
+  <string name="ui_1373a3c2798a" formatted="false">"Isometric"</string>
+  <string name="ui_cd58e7ec62a7" formatted="false">"Java crash"</string>
+  <string name="ui_686b2a0ddbbb" formatted="false">"Jewellery settings"</string>
+  <string name="ui_9a7cd5bb7c20" formatted="false">"Jewellery templates / presets"</string>
+  <string name="ui_0ef1b69ec7ca" formatted="false">"Jewellery templates and saved parameters"</string>
+  <string name="ui_e655ce9d27f1" formatted="false">"Jewellery tutorial"</string>
+  <string name="ui_e0d73143de80" formatted="false">"Join"</string>
+  <string name="ui_b87372d942f5" formatted="false">"Join connected curves"</string>
+  <string name="ui_31b2ab9d14d6" formatted="false">"Join curves"</string>
+  <string name="ui_640e1e2ef0c4" formatted="false">"Join id1 id2 [id3 ...] · connected curves"</string>
+  <string name="ui_24cb9d21cfef" formatted="false">"Join needs 2 to 8 IDs"</string>
+  <string name="ui_8b79700b1206" formatted="false">"Kernel test failed"</string>
+  <string name="ui_f1b861dcf04e" formatted="false">"Kernel tests"</string>
+  <string name="ui_382b155df91d" formatted="false">"Kernel tests passed"</string>
+  <string name="ui_969e2cc476ff" formatted="false">"LEFT"</string>
+  <string name="ui_528a45acf629" formatted="false">"LINE"</string>
+  <string name="ui_848b9c29372f" formatted="false">"LWPOLYLINE"</string>
+  <string name="ui_74341e3c271d" formatted="false">"Label"</string>
+  <string name="ui_89b86ab0e66f" formatted="false">"Language"</string>
+  <string name="ui_c107b1022b2a" formatted="false">"Language · interface language"</string>
+  <string name="ui_7774a7245a2a" formatted="false">"Last stage: "</string>
+  <string name="ui_285f93e19e32" formatted="false">"Last value"</string>
+  <string name="ui_4343635cf237" formatted="false">"Layer"</string>
+  <string name="ui_24be5d8ee741" formatted="false">"Layer "</string>
+  <string name="ui_88f32943692f" formatted="false">"Layer \"layerName\""</string>
+  <string name="ui_2241cad202b8" formatted="false">"LayerHide"</string>
+  <string name="ui_dea0858aaec4" formatted="false">"LayerLock"</string>
+  <string name="ui_d9f967768437" formatted="false">"LayerShow"</string>
+  <string name="ui_23f69ff70f21" formatted="false">"LayerUnlock"</string>
+  <string name="ui_f055f18aeadc" formatted="false">"Layers"</string>
+  <string name="ui_cebbb974d7b7" formatted="false">"Layers / visibility / locks"</string>
+  <string name="ui_e00ea2193646" formatted="false">"Layers · visibility and lock controls"</string>
+  <string name="ui_8ae1c34bd37f" formatted="false">"Left"</string>
+  <string name="ui_ca0846ea08b3" formatted="false">"Left · orthographic view"</string>
+  <string name="ui_3bade34ecbc5" formatted="false">"Length"</string>
+  <string name="ui_38c2a0ff8f19" formatted="false">"Length property"</string>
+  <string name="ui_ea9676003762" formatted="false">"Line"</string>
+  <string name="ui_77798131a4eb" formatted="false">"Line x1 y1 z1 x2 y2 z2"</string>
+  <string name="ui_24e92c277f48" formatted="false">"Linear array"</string>
+  <string name="ui_09f2903343d1" formatted="false">"Linear tolerance (mm) · 0.005 fine, 0.015 normal, 0.1 coarse"</string>
+  <string name="ui_d0517071aa37" formatted="false">"Link"</string>
+  <string name="ui_74b7b0dd3206" formatted="false">"Link object"</string>
+  <string name="ui_aa6861f53dae" formatted="false">"Linked instance"</string>
+  <string name="ui_8709df24bd58" formatted="false">"List item"</string>
+  <string name="ui_5d197ac8b293" formatted="false">"List/point values out of range"</string>
+  <string name="ui_b4a68deb3b48" formatted="false">"Live apply after 450 ms · creates Undo checkpoints"</string>
+  <string name="ui_19c95c80e992" formatted="false">"Loading isolated upstream document bridge"</string>
+  <string name="ui_a410e77c1b37" formatted="false">"Loading native CAD engine…"</string>
+  <string name="ui_891ebccd5baa" formatted="false">"Lock"</string>
+  <string name="ui_e143585c0ba6" formatted="false">"Lock geometry"</string>
+  <string name="ui_545377f346d1" formatted="false">"Lock geometry edits and viewport selection"</string>
+  <string name="ui_5a080a4b40cb" formatted="false">"Lock · selected object"</string>
+  <string name="ui_e4a6ba20539c" formatted="false">"Loft"</string>
+  <string name="ui_3c15e68efbd1" formatted="false">"Loft "</string>
+  <string name="ui_43b7b32c9cc6" formatted="false">"Loft and weighted curve"</string>
+  <string name="ui_8af5803005e8" formatted="false">"Loft id1 id2 [id3 ...] · smooth solid"</string>
+  <string name="ui_152a8adb02c8" formatted="false">"Loft needs 2 to 8 profile IDs"</string>
+  <string name="ui_cc7c4b4c6f24" formatted="false">"Loft profiles"</string>
+  <string name="ui_df00216be6bf" formatted="false">"Loft solid"</string>
+  <string name="ui_107cabe8536a" formatted="false">"Loft surface"</string>
+  <string name="ui_62d137664e58" formatted="false">"LoftSurface"</string>
+  <string name="ui_6203671ec870" formatted="false">"LoftSurface id1 id2 [id3 ...]"</string>
+  <string name="ui_6a9504e149fb" formatted="false">"Longest side in millimetres"</string>
+  <string name="ui_d8e9409fd819" formatted="false">"Lower profile"</string>
+  <string name="ui_899bd694d29a" formatted="false">"Macros"</string>
+  <string name="ui_cb28836e3930" formatted="false">"Major radius"</string>
+  <string name="ui_3540cb5c297d" formatted="false">"Major radius (mm)"</string>
+  <string name="ui_af0ad10b2a19" formatted="false">"Mass"</string>
+  <string name="ui_709e5e8528cd" formatted="false">"Mass densityGramsPerCubicCentimetre · estimated mass"</string>
+  <string name="ui_d8169782b57c" formatted="false">"Material"</string>
+  <string name="ui_844813213646" formatted="false">"Material buffer length mismatch"</string>
+  <string name="ui_a2a2624901f7" formatted="false">"Material density (g/cm³) · enter your alloy\'s value"</string>
+  <string name="ui_72be5b4aa56f" formatted="false">"Material roughness metallic · no arguments opens editor"</string>
+  <string name="ui_a95e85aed563" formatted="false">"Max"</string>
+  <string name="ui_3b543341d6c1" formatted="false">"Maximum 100 saved presets"</string>
+  <string name="ui_01581ee539fb" formatted="false">"Maximum 64 points"</string>
+  <string name="ui_459606cf721f" formatted="false">"Maximum 80 components"</string>
+  <string name="ui_10ad81d66b2a" formatted="false">"Maximum healing tolerance (mm)"</string>
+  <string name="ui_d4fd0a232ee5" formatted="false">"Measure"</string>
+  <string name="ui_bc35fbd2dc0b" formatted="false">"Measure [firstId secondId]"</string>
+  <string name="ui_028d2bbe9a4d" formatted="false">"Measure [id1 id2] · object report / exact CAD distance"</string>
+  <string name="ui_de10edfac7e7" formatted="false">"Measurement"</string>
+  <string name="ui_737bc96abf36" formatted="false">"Measurements"</string>
+  <string name="ui_f8e80cc20a97" formatted="false">"Memory page size: "</string>
+  <string name="ui_c665b2f291fa" formatted="false">"Merge GLB primitives before import"</string>
+  <string name="ui_6ca8af77b339" formatted="false">"Mesh coordinates exceed +/-1,000,000 mm"</string>
+  <string name="ui_9bce70e66efa" formatted="false">"Mesh has no open boundary loops"</string>
+  <string name="ui_40ed54b0a0eb" formatted="false">"Mesh upload"</string>
+  <string name="ui_bb0b32cbc0fc" formatted="false">"Mesh wireframe"</string>
+  <string name="ui_5c73bf1b5e59" formatted="false">"Meshes"</string>
+  <string name="ui_ec93954b46bf" formatted="false">"Meshes only"</string>
+  <string name="ui_2994c4eb23e6" formatted="false">"Metallic · 0 dielectric to 1 metal"</string>
+  <string name="ui_7eb0cee888ab" formatted="false">"Min"</string>
+  <string name="ui_b9b39a33c3a4" formatted="false">"Minimum CAD distance #%d → #%d: %.8f mm"</string>
+  <string name="ui_d1f998fab103" formatted="false">"Minimum distance"</string>
+  <string name="ui_f5985f19f738" formatted="false">"Minimum distance requires exact CAD objects"</string>
+  <string name="ui_8dfb742fd17b" formatted="false">"Minimum draft angle to +Z pull direction (degrees)"</string>
+  <string name="ui_897165b5f2b0" formatted="false">"Minimum geometric distance"</string>
+  <string name="ui_74adc5789ce9" formatted="false">"Mirror"</string>
+  <string name="ui_03fc6d3db034" formatted="false">"Mirror copy"</string>
+  <string name="ui_48065392c2e7" formatted="false">"Mirror copy across plane"</string>
+  <string name="ui_ef4038389812" formatted="false">"Mirror pointX pointY pointZ normalX normalY normalZ"</string>
+  <string name="ui_5e2a63c36aac" formatted="false">"Missing closing parenthesis"</string>
+  <string name="ui_fbab88ba15fd" formatted="false">"Missing component "</string>
+  <string name="ui_1468442e0847" formatted="false">"Missing expression value"</string>
+  <string name="ui_d29061a476e6" formatted="false">"Missing function parenthesis"</string>
+  <string name="ui_1973dccf8cb3" formatted="false">"Missing graph object"</string>
+  <string name="ui_d47b620f5db6" formatted="false">"Missing or repeated feature input"</string>
+  <string name="ui_958bf1fe0fb6" formatted="false">"Missing project manifest"</string>
+  <string name="ui_302d28bc9a2e" formatted="false">"Missing selected topology indices"</string>
+  <string name="ui_11be4c7bb3b8" formatted="false">"Missing/oversized 3MF model"</string>
+  <string name="ui_da6375a75ad8" formatted="false">"Mobile edit"</string>
+  <string name="ui_dfd6ee0a3f47" formatted="false">"Mobile spreadsheet"</string>
+  <string name="ui_aca9f8f011ce" formatted="false">"Mobile spreadsheet / CSV"</string>
+  <string name="ui_d7e4b4f7f831" formatted="false">"Mobile worksheet A1:H32. Formula cells start with =. Cells can reference other cells and document variables. Existing solids are not automatically bound to cells.\n\n"</string>
+  <string name="ui_18df56d1e982" formatted="false">"MobileCADGraph"</string>
+  <string name="ui_ae4cf6517b0a" formatted="false">"MobileDocument"</string>
+  <string name="ui_14b2a2193940" formatted="false">"Modelling tools"</string>
+  <string name="ui_b65b53cc8d23" formatted="false">"Modulo by zero"</string>
+  <string name="ui_76cdb9507216" formatted="false">"Move"</string>
+  <string name="ui_e402ac7b7366" formatted="false">"Move "</string>
+  <string name="ui_b7a15af3a574" formatted="false">"Move committed"</string>
+  <string name="ui_bb91d7496e90" formatted="false">"Move handle"</string>
+  <string name="ui_dd749481385c" formatted="false">"Move handles"</string>
+  <string name="ui_d2f251ff5fa4" formatted="false">"Move multiple"</string>
+  <string name="ui_5a7ad0f3c06e" formatted="false">"Move multiple objects"</string>
+  <string name="ui_8118fbf12f48" formatted="false">"Move selected objects by offset"</string>
+  <string name="ui_f4f905422802" formatted="false">"Move x y z · absolute position"</string>
+  <string name="ui_17815ac4e761" formatted="false">"Multiple objects"</string>
+  <string name="ui_8f5af0d89485" formatted="false">"Multiple selection"</string>
+  <string name="ui_b20a305f06f0" formatted="false">"Multiply"</string>
+  <string name="ui_21b3708ac898" formatted="false">"NORMAL"</string>
+  <string name="ui_4435fd3cd5df" formatted="false">"NURBS curve"</string>
+  <string name="ui_18e51d7ca4f0" formatted="false">"NURBS patch"</string>
+  <string name="ui_83217d186dff" formatted="false">"NURBS pole · preserve knots / degree"</string>
+  <string name="ui_005d5f7561c3" formatted="false">"NURBS surface patch"</string>
+  <string name="ui_5159e2ab8729" formatted="false">"NURBS · weighted control points"</string>
+  <string name="ui_929dcfec1839" formatted="false">"NURBSCurve"</string>
+  <string name="ui_f2777dc497c4" formatted="false">"NURBSCurve XYZW poles · 2 to 16 poles"</string>
+  <string name="ui_709a23220f2c" formatted="false">"Name"</string>
+  <string name="ui_cb04729f44c1" formatted="false">"Name / layer / lock"</string>
+  <string name="ui_d87971ad1308" formatted="false">"Native signal "</string>
+  <string name="ui_b3b46e64b67d" formatted="false">"Navigation cube"</string>
+  <string name="ui_611857bc810e" formatted="false">"Navigation cube. Tap a visible face for its view, or ISO for perspective."</string>
+  <string name="ui_6403f2b7eb2a" formatted="false">"New"</string>
+  <string name="ui_0e06e5aa9fcd" formatted="false">"New macro"</string>
+  <string name="ui_5f757ccd0da4" formatted="false">"New upstream document"</string>
+  <string name="ui_b21b860f611d" formatted="false">"New workspace"</string>
+  <string name="ui_a72564d6e4b4" formatted="false">"New workspace?"</string>
+  <string name="ui_6dfa5421c5f9" formatted="false">"NewDoc MobileDocument\nAdd Source Feature\nAddProperty Source Width Length\nSet Source.Width 2 cm\nAdd Driven Feature\nAddProperty Driven Width Length\nExpression Driven.Width Source.Width * 2\n\nUndo · Redo · Recompute · State\nBegin \"Edit dimensions\" · Commit · Abort\nGroup GroupName ObjectName\nLink InstanceName TargetName\nSave Model.FCStd · Open Model.FCStd\nActivate DocumentName · Close\n\nObject kinds: Feature, Group, Link, VarSet. Property kinds: Length, Angle, Area, Volume, Float, Integer, String, Bool, Link. Quotes preserve spaces. Save before closing the app."</string>
+  <string name="ui_a4a117030757" formatted="false">"No FreeCAD Document.xml found"</string>
+  <string name="ui_f26c5e9a6b86" formatted="false">"No cells. Try Cell A1 18, Cell A2 =A1+2, then Ring =A1 1.6 3.\n"</string>
+  <string name="ui_d12923ed74bd" formatted="false">"No change to "</string>
+  <string name="ui_860a99b466e8" formatted="false">"No objects on layer: "</string>
+  <string name="ui_153cf7b20162" formatted="false">"No record"</string>
+  <string name="ui_d725873db2a9" formatted="false">"No recovery copy found"</string>
+  <string name="ui_3babd1c56556" formatted="false">"No supported visible saved Part BREP shapes found. This build imports stored geometry, not the desktop feature history or Python objects."</string>
+  <string name="ui_4feb5b00042d" formatted="false">"No system exit records are available.\n"</string>
+  <string name="ui_320be71050c2" formatted="false">"No variables. Try Set bore 18, then Ring bore 1.6 3.\n"</string>
+  <string name="ui_5e7d74314e91" formatted="false">"Node graph"</string>
+  <string name="ui_ce537ce96f24" formatted="false">"Non-manifold edges require manual repair"</string>
+  <string name="ui_9677e56e681b" formatted="false">"Normal X"</string>
+  <string name="ui_748053973486" formatted="false">"Normal Y"</string>
+  <string name="ui_1654fa1e2d9a" formatted="false">"Normal Z"</string>
+  <string name="ui_8bef9011feca" formatted="false">"Notes · up to 200 characters"</string>
+  <string name="ui_97c7f367c41d" formatted="false">"Nothing to redo"</string>
+  <string name="ui_93509bf60439" formatted="false">"Nothing to undo"</string>
+  <string name="ui_b7baa1d40c4e" formatted="false">"Number"</string>
+  <string name="ui_1c1e85a3e293" formatted="false">"Number list"</string>
+  <string name="ui_c9c8daa7053a" formatted="false">"Number must be finite and within +/-1,000,000"</string>
+  <string name="ui_f355b3ee2130" formatted="false">"Number node ID"</string>
+  <string name="ui_18ee83a01b5e" formatted="false">"Number, text, or =formula"</string>
+  <string name="ui_d23b1aa45b35" formatted="false">"Numbers must be finite"</string>
+  <string name="ui_447835a0a09a" formatted="false">"Numeric Move"</string>
+  <string name="ui_71beef68f4dc" formatted="false">"Numeric XYZ / weight rows"</string>
+  <string name="ui_cc5055a6a378" formatted="false">"OBJ · visible mesh"</string>
+  <string name="ui_9ce3bd4224c8" formatted="false">"OK"</string>
+  <string name="ui_2883f191bc5e" formatted="false">"Object"</string>
+  <string name="ui_5f16d6f2a83b" formatted="false">"Object #"</string>
+  <string name="ui_ef0a07fdc8fa" formatted="false">"Object colour"</string>
+  <string name="ui_2e777cd14743" formatted="false">"Object colour · shaded display"</string>
+  <string name="ui_cb32901aac74" formatted="false">"Object does not exist"</string>
+  <string name="ui_3ed321076bb8" formatted="false">"Object is used by feature #"</string>
+  <string name="ui_6b8bc88a7188" formatted="false">"Object name"</string>
+  <string name="ui_6678efb1df85" formatted="false">"Object no longer exists"</string>
+  <string name="ui_826a56438f54" formatted="false">"Object properties"</string>
+  <string name="ui_72a83add2c5e" formatted="false">"Objects"</string>
+  <string name="ui_9adab2b1431c" formatted="false">"Objects / layers"</string>
+  <string name="ui_dc3cd00d4b38" formatted="false">"Objects and layers"</string>
+  <string name="ui_10a737d901b1" formatted="false">"Offline guide"</string>
+  <string name="ui_ce667716547f" formatted="false">"Offset"</string>
+  <string name="ui_5721351c711c" formatted="false">"Offset CAD shape"</string>
+  <string name="ui_87ecefdb24ef" formatted="false">"Offset curve"</string>
+  <string name="ui_4b9aa919f9f0" formatted="false">"Offset distance · CAD shape"</string>
+  <string name="ui_3051e88f42f8" formatted="false">"Offset planar curve"</string>
+  <string name="ui_b9047f3d3ca0" formatted="false">"Offset shape"</string>
+  <string name="ui_df28da4a77e5" formatted="false">"OffsetCurve"</string>
+  <string name="ui_a96f7078d777" formatted="false">"OffsetCurve distance"</string>
+  <string name="ui_0b12489e740e" formatted="false">"One point per line: X Y Z [weight]. Millimetres.\nNURBS follows control points; interpolation passes through points. Maximum 64 points."</string>
+  <string name="ui_8fc8191265fa" formatted="false">"One slider → numbered STL / recipe ZIP"</string>
+  <string name="ui_cf9b77061f7b" formatted="false">"Open"</string>
+  <string name="ui_a8f03cc7dbbc" formatted="false">"Open / edit macro"</string>
+  <string name="ui_da00e3718084" formatted="false">"Open CAD workspace"</string>
+  <string name="ui_b771e59a678e" formatted="false">"Open FCStd"</string>
+  <string name="ui_f18c283fb8dc" formatted="false">"Open boundary chains require manual repair"</string>
+  <string name="ui_e734ec3352d6" formatted="false">"Open private saved file"</string>
+  <string name="ui_d706429c07da" formatted="false">"Open recipe"</string>
+  <string name="ui_9591b86db5a3" formatted="false">"Open recovery screen"</string>
+  <string name="ui_428224df902f" formatted="false">"Open saved workspace"</string>
+  <string name="ui_78876ff802d1" formatted="false">"OpenGL ES"</string>
+  <string name="ui_34913ffea97c" formatted="false">"Opening workspace"</string>
+  <string name="ui_c4e6ed956953" formatted="false">"Operation failed"</string>
+  <string name="ui_ab3d9c6b9e83" formatted="false">"Organisation tools"</string>
+  <string name="ui_64da6d469886" formatted="false">"Orient for printing"</string>
+  <string name="ui_13b12078f4a5" formatted="false">"Origin point"</string>
+  <string name="ui_d182bf94dfd9" formatted="false">"Original STL: %,d triangles\nSaving and STL export retain the original mesh. The display may be simplified."</string>
+  <string name="ui_22569744952d" formatted="false">"Ortho"</string>
+  <string name="ui_4ad54f254de6" formatted="false">"Outer height"</string>
+  <string name="ui_6e54fadf061c" formatted="false">"Outer width"</string>
+  <string name="ui_4e3d63e01c75" formatted="false">"Oval bezel"</string>
+  <string name="ui_9dc1732e92da" formatted="false">"Oval prongs"</string>
+  <string name="ui_ed30d2480758" formatted="false">"Overall dimensions in mm · XY view"</string>
+  <string name="ui_eec92f96be86" formatted="false">"PNG export"</string>
+  <string name="ui_47f82a4ce2c0" formatted="false">"PNG export failed"</string>
+  <string name="ui_92568e6d4afa" formatted="false">"PNG size / transparency"</string>
+  <string name="ui_6c706fa8c763" formatted="false">"PNG · studio view"</string>
+  <string name="ui_7fc60152f68c" formatted="false">"PNGOptions"</string>
+  <string name="ui_d0b03143efff" formatted="false">"POSITION"</string>
+  <string name="ui_f852b509bbae" formatted="false">"Pad height Z (mm)"</string>
+  <string name="ui_a62da49e936f" formatted="false">"Parameter "</string>
+  <string name="ui_c78ba7c727d5" formatted="false">"Parameter fraction"</string>
+  <string name="ui_9750284506f8" formatted="false">"Parametric graph · tap a node, then Edit / connect.\nTyped point/list/geometry ports. Number values update on Evaluate."</string>
+  <string name="ui_fecceacb8e2d" formatted="false">"Parametric node graph"</string>
+  <string name="ui_88be9d62d71b" formatted="false">"Part"</string>
+  <string name="ui_190aa842474f" formatted="false">"Patch"</string>
+  <string name="ui_1fff6a31661b" formatted="false">"Pattern"</string>
+  <string name="ui_67b4d6aa8d08" formatted="false">"Pavilion depth (mm)"</string>
+  <string name="ui_7db58cff8134" formatted="false">"Pendant frame"</string>
+  <string name="ui_63c904559993" formatted="false">"Performance"</string>
+  <string name="ui_ca787afd2cfc" formatted="false">"Performance / display detail"</string>
+  <string name="ui_00dae071c082" formatted="false">"Pipe"</string>
+  <string name="ui_2dcff8cab2c4" formatted="false">"Pipe along curve"</string>
+  <string name="ui_289c50531d08" formatted="false">"Pipe radius"</string>
+  <string name="ui_4248ec8cc433" formatted="false">"Pitch per turn (mm)"</string>
+  <string name="ui_f0316742b427" formatted="false">"Pivot X"</string>
+  <string name="ui_7941fe8c6d14" formatted="false">"Pivot Y"</string>
+  <string name="ui_f589ef1f2bb6" formatted="false">"Pivot Z"</string>
+  <string name="ui_f8702b0d4acb" formatted="false">"Place on print bed"</string>
+  <string name="ui_1b53c949c731" formatted="false">"Planar hole must have 3 to 128 boundary vertices"</string>
+  <string name="ui_1caac1724986" formatted="false">"Planar hole repair"</string>
+  <string name="ui_53961e51b798" formatted="false">"Planar region"</string>
+  <string name="ui_2446f554c8a6" formatted="false">"Plane point X"</string>
+  <string name="ui_0aae9a49aace" formatted="false">"Plane point Y"</string>
+  <string name="ui_076c628bf59a" formatted="false">"Plane point Z"</string>
+  <string name="ui_81e5b5b75ae4" formatted="false">"Plate · edit hidden Rectangle root"</string>
+  <string name="ui_f79a28423ed1" formatted="false">"Point"</string>
+  <string name="ui_310643f82fc7" formatted="false">"Point A"</string>
+  <string name="ui_cefac276c2ed" formatted="false">"Point B"</string>
+  <string name="ui_69716d9b1df3" formatted="false">"Point list"</string>
+  <string name="ui_590bf6227eb0" formatted="false">"Point series"</string>
+  <string name="ui_2725a26b9f78" formatted="false">"Points must be finite"</string>
+  <string name="ui_d3467ec940ec" formatted="false">"Polar array"</string>
+  <string name="ui_cfc2fc53ec07" formatted="false">"PolarArray"</string>
+  <string name="ui_2ad3ca2c12df" formatted="false">"PolarArray count centreX centreY centreZ angle"</string>
+  <string name="ui_38acfbcb5a78" formatted="false">"Pole "</string>
+  <string name="ui_dd0c89e0c5bb" formatted="false">"Polyline"</string>
+  <string name="ui_88a33c0a1ce7" formatted="false">"Polyline XYZ triples · 2 to 16 points"</string>
+  <string name="ui_ee2ddac07f73" formatted="false">"Position in millimetres"</string>
+  <string name="ui_e7ab1c56ca33" formatted="false">"Precision tools"</string>
+  <string name="ui_722d6c109308" formatted="false">"Preparing private document runtime…"</string>
+  <string name="ui_bca788763dd4" formatted="false">"Preset"</string>
+  <string name="ui_621c6a384651" formatted="false">"Preset could not be saved"</string>
+  <string name="ui_eb39e1d78db8" formatted="false">"Preset name"</string>
+  <string name="ui_e4110193f218" formatted="false">"Preset name must be 1 to 80 characters"</string>
+  <string name="ui_18712c5384a4" formatted="false">"Preset: "</string>
+  <string name="ui_9d79fc518db7" formatted="false">"PresetSave"</string>
+  <string name="ui_f73f97f1ba53" formatted="false">"PresetSave \"name\" · save selected primitive parameters"</string>
+  <string name="ui_ae657d3a9201" formatted="false">"Preview waiting: "</string>
+  <string name="ui_56a1dd1806ff" formatted="false">"Print bed / orientation"</string>
+  <string name="ui_b21073d807ac" formatted="false">"Print prep"</string>
+  <string name="ui_68781ceeb187" formatted="false">"PrintPrep"</string>
+  <string name="ui_a98a0099d810" formatted="false">"PrintPrep · bed fit, placement and orientation"</string>
+  <string name="ui_d956b27d4917" formatted="false">"Printer build envelope"</string>
+  <string name="ui_6436426205f1" formatted="false">"Printing and files"</string>
+  <string name="ui_cc9b8a9dcbc7" formatted="false">"Private document"</string>
+  <string name="ui_ff4fc0276e96" formatted="false">"Profile"</string>
+  <string name="ui_21108a1b732b" formatted="false">"Project curve"</string>
+  <string name="ui_a8407f5ba885" formatted="false">"Project curve onto XY plane"</string>
+  <string name="ui_ab49f6d8ab55" formatted="false">"Project entry is too large"</string>
+  <string name="ui_8f7da88448e9" formatted="false">"Project exceeds 250 objects"</string>
+  <string name="ui_bf1ea8201035" formatted="false">"Project manifest is missing"</string>
+  <string name="ui_b7f9dcb5f0c2" formatted="false">"Project metadata is too large"</string>
+  <string name="ui_cea743961237" formatted="false">"Project shape is too large"</string>
+  <string name="ui_3294957c370b" formatted="false">"ProjectCurve"</string>
+  <string name="ui_6682d1566dec" formatted="false">"ProjectCurve targetZ"</string>
+  <string name="ui_e73344a67461" formatted="false">"Prong count"</string>
+  <string name="ui_c9c4d7fc2065" formatted="false">"Prong diameter"</string>
+  <string name="ui_7df994c15a89" formatted="false">"Prong diameter (mm)"</string>
+  <string name="ui_f2ce53ff937e" formatted="false">"Prong setting"</string>
+  <string name="ui_81f99d2510aa" formatted="false">"Prongs"</string>
+  <string name="ui_093d60ca22c8" formatted="false">"Prongs · integer 3 to 12"</string>
+  <string name="ui_bc6c88db2f07" formatted="false">"Properties"</string>
+  <string name="ui_9ae33a7d0ecb" formatted="false">"Property"</string>
+  <string name="ui_914607035846" formatted="false">"Proxy NAME SOURCE.PROPERTY [FACTOR]"</string>
+  <string name="ui_6e3604888c4b" formatted="false">"Python"</string>
+  <string name="ui_3ccd1ee50a55" formatted="false">"Python console · App / FreeCAD"</string>
+  <string name="ui_7cb8efa2f261" formatted="false">"Python macros"</string>
+  <string name="ui_a60f2c73604f" formatted="false">"Quality"</string>
+  <string name="ui_95253203f793" formatted="false">"RIGHT"</string>
+  <string name="ui_e5aaeaac2e19" formatted="false">"Radius"</string>
+  <string name="ui_b527ad3e5740" formatted="false">"Radius (mm)"</string>
+  <string name="ui_3114cd27eef6" formatted="false">"Radius / distance / inward wall (mm)"</string>
+  <string name="ui_0ed8670d3969" formatted="false">"Rail"</string>
+  <string name="ui_a16c5bbe4bf9" formatted="false">"Range"</string>
+  <string name="ui_5635fc85848d" formatted="false">"Read NURBS control points"</string>
+  <string name="ui_0d1855de52dd" formatted="false">"Read selectable topology"</string>
+  <string name="ui_d376d638e286" formatted="false">"Read surface poles"</string>
+  <string name="ui_98a146ad2070" formatted="false">"Read topology"</string>
+  <string name="ui_55b2e031b651" formatted="false">"Read worksheet"</string>
+  <string name="ui_3aa97c9aa909" formatted="false">"Reading the previous session…"</string>
+  <string name="ui_20c7c5522fc2" formatted="false">"Ready"</string>
+  <string name="ui_1f97f67aae99" formatted="false">"Ready · changes remain editable"</string>
+  <string name="ui_168bdcede5ac" formatted="false">"Ready. Software 3D avoids OpenGL at startup."</string>
+  <string name="ui_1f1ed2a6398e" formatted="false">"Recent commands"</string>
+  <string name="ui_d01a63461006" formatted="false">"Recipe exceeds 256 KB"</string>
+  <string name="ui_416697207a73" formatted="false">"Recipe rollback failed"</string>
+  <string name="ui_bcd73e477291" formatted="false">"Recompute feature"</string>
+  <string name="ui_2c6ef2d11ed6" formatted="false">"Record document commands"</string>
+  <string name="ui_d4296fc439f8" formatted="false">"Recording document commands…\n"</string>
+  <string name="ui_ea924f72d31e" formatted="false">"Recovery"</string>
+  <string name="ui_dd988f1ae6ae" formatted="false">"Recovery and project versions"</string>
+  <string name="ui_846920873009" formatted="false">"Recovery screen created"</string>
+  <string name="ui_c158695a64ad" formatted="false">"Rectangle"</string>
+  <string name="ui_fc22e39ad37e" formatted="false">"Rectangle bezel"</string>
+  <string name="ui_da335870846f" formatted="false">"Rectangular UV patch trim"</string>
+  <string name="ui_471b94d402d1" formatted="false">"Redo"</string>
+  <string name="ui_d00c1074c0b3" formatted="false">"Reference samples"</string>
+  <string name="ui_86f6ce133bd3" formatted="false">"Reference samples · added to workspace"</string>
+  <string name="ui_0f217179940c" formatted="false">"Region"</string>
+  <string name="ui_7a3b23e6ce0b" formatted="false">"Region · one closed planar profile"</string>
+  <string name="ui_92d700a362c3" formatted="false">"Remove object"</string>
+  <string name="ui_d3f4cb898fbe" formatted="false">"Rename"</string>
+  <string name="ui_b6bce61bbb96" formatted="false">"Rename \"name\""</string>
+  <string name="ui_b2e402b4da01" formatted="false">"Render"</string>
+  <string name="ui_7c68ab0f7e94" formatted="false">"Renderer: "</string>
+  <string name="ui_e066e80468f5" formatted="false">"Rendering"</string>
+  <string name="ui_02b3766e464e" formatted="false">"Rendering / clipping / PNG"</string>
+  <string name="ui_61861fe8d536" formatted="false">"Rendering failed"</string>
+  <string name="ui_5f60b1c2e605" formatted="false">"Repair"</string>
+  <string name="ui_1cc47382a116" formatted="false">"Repair inconsistent triangle winding before filling holes"</string>
+  <string name="ui_d99f641b9542" formatted="false">"Repair mesh"</string>
+  <string name="ui_0d091771984a" formatted="false">"Repair mesh winding / weld"</string>
+  <string name="ui_28dcb9c55b8c" formatted="false">"Report export"</string>
+  <string name="ui_4ed05be1917a" formatted="false">"Required 3MF extensions unsupported"</string>
+  <string name="ui_f52dc753ee06" formatted="false">"Resize"</string>
+  <string name="ui_b6229f942a60" formatted="false">"Resize to mm"</string>
+  <string name="ui_9a2bc1ec57b5" formatted="false">"Resize · keep proportions"</string>
+  <string name="ui_b134bd555a2f" formatted="false">"Restart"</string>
+  <string name="ui_2d9ae7d5429e" formatted="false">"Restart document lab?"</string>
+  <string name="ui_0479c883ff33" formatted="false">"Restart lab"</string>
+  <string name="ui_4b771e8e8418" formatted="false">"Restoring saved workspace"</string>
+  <string name="ui_c3a8355746ba" formatted="false">"Revolve"</string>
+  <string name="ui_30492b507ed6" formatted="false">"Revolve "</string>
+  <string name="ui_c8b40c840614" formatted="false">"Revolve axisX axisY axisZ directionX directionY directionZ angleDegrees"</string>
+  <string name="ui_9697e34ba490" formatted="false">"Revolve solid"</string>
+  <string name="ui_ecd33530ce6b" formatted="false">"Revolve surface"</string>
+  <string name="ui_954daa8b0033" formatted="false">"Right"</string>
+  <string name="ui_96ddaccf581f" formatted="false">"Ring"</string>
+  <string name="ui_26c03b270d9c" formatted="false">"Rollback failed"</string>
+  <string name="ui_7a4f963d32cf" formatted="false">"Rose gold"</string>
+  <string name="ui_87b85dca19e8" formatted="false">"Rotate"</string>
+  <string name="ui_840be5ca139d" formatted="false">"Rotate 90° about X"</string>
+  <string name="ui_d8f3714ed54a" formatted="false">"Rotate 90° about Y"</string>
+  <string name="ui_d14bf61a49f0" formatted="false">"Rotate 90° about Z"</string>
+  <string name="ui_2a215bfcb586" formatted="false">"Rotate about centre · degrees"</string>
+  <string name="ui_aa9056f7d199" formatted="false">"Rotate around X"</string>
+  <string name="ui_e67c7370ec0a" formatted="false">"Rotate around Y"</string>
+  <string name="ui_260258d91a23" formatted="false">"Rotate around Z"</string>
+  <string name="ui_dd3cf151566a" formatted="false">"Rotate around axis"</string>
+  <string name="ui_8b879b1ecaea" formatted="false">"Rotate in XY to curve tangent (1 yes / 0 no)"</string>
+  <string name="ui_e550c5d15d23" formatted="false">"Rotate xDegrees yDegrees zDegrees"</string>
+  <string name="ui_7eeff1045162" formatted="false">"RotateAround"</string>
+  <string name="ui_47ef55b15c79" formatted="false">"RotateAround pivotXYZ axisXYZ angleDegrees"</string>
+  <string name="ui_8a0e979e7a6c" formatted="false">"Roughness · .04 polished to 1 matte"</string>
+  <string name="ui_2e305b3b2d28" formatted="false">"Ruled (1) or smooth (0)"</string>
+  <string name="ui_b1b392607dea" formatted="false">"Run"</string>
+  <string name="ui_1a58851ca34d" formatted="false">"Run command"</string>
+  <string name="ui_64019a30fa7b" formatted="false">"Run kernel tests"</string>
+  <string name="ui_07877327aa79" formatted="false">"Run macro"</string>
+  <string name="ui_a8c2a08130df" formatted="false">"Runtime archive exceeds limit"</string>
+  <string name="ui_8526354e02a9" formatted="false">"Runtime is missing encodings"</string>
+  <string name="ui_c367b9f4a0a4" formatted="false">"SCALAR"</string>
+  <string name="ui_115cb610bfdd" formatted="false">"SECTION"</string>
+  <string name="ui_bdc850c04e2b" formatted="false">"STEP solid"</string>
+  <string name="ui_1e314ab44923" formatted="false">"STEP · visible CAD geometry"</string>
+  <string name="ui_290f4e40c0f7" formatted="false">"STL exceeds 2,000,000 triangles"</string>
+  <string name="ui_54064db82489" formatted="false">"STL mesh"</string>
+  <string name="ui_0a6c14b06f09" formatted="false">"STL/OBJ tessellation quality"</string>
+  <string name="ui_fcb2b757547a" formatted="false">"SVG · selected XY curve / section"</string>
+  <string name="ui_cac769760c5e" formatted="false">"Sampled CAD wall thickness"</string>
+  <string name="ui_0762e840e84d" formatted="false">"Sampled minimum: %.4f mm\nValid rays: %d / %d\nSamples below %.4f mm: %d\nAt most 128 tessellation samples. Curvature and narrow features can be missed; this is not a minimum-wall guarantee."</string>
+  <string name="ui_b36620be27b9" formatted="false">"Sampled thickness"</string>
+  <string name="ui_672b5148a24e" formatted="false">"Sampled wall thickness"</string>
+  <string name="ui_0fb59422f600" formatted="false">"Samples"</string>
+  <string name="ui_c2fc8882c202" formatted="false">"Samples · editable reference models"</string>
+  <string name="ui_efc007a393f6" formatted="false">"Save"</string>
+  <string name="ui_c0ec36ff19cb" formatted="false">"Save FCStd"</string>
+  <string name="ui_4d7408933c8f" formatted="false">"Save SVG"</string>
+  <string name="ui_1299791e599b" formatted="false">"Save crash report (.zip)"</string>
+  <string name="ui_1e7b70b3763f" formatted="false">"Save native FCStd"</string>
+  <string name="ui_82889739ca33" formatted="false">"Save preset"</string>
+  <string name="ui_2dd80239e14e" formatted="false">"Save project"</string>
+  <string name="ui_05c1a9075f35" formatted="false">"Save project (.fcml)"</string>
+  <string name="ui_b317633d71d9" formatted="false">"Save recipe"</string>
+  <string name="ui_e3bccbc5ced0" formatted="false">"Save recipe (.cadgraph)"</string>
+  <string name="ui_a639aa0e6d33" formatted="false">"Save recording"</string>
+  <string name="ui_e2535c2c7fdb" formatted="false">"Save selected parameters"</string>
+  <string name="ui_d762ec3ec2eb" formatted="false">"Save template parameters"</string>
+  <string name="ui_f96b7a02ec90" formatted="false">"Saved "</string>
+  <string name="ui_945d0c489d64" formatted="false">"Saved feature operations"</string>
+  <string name="ui_ed20a74c7f42" formatted="false">"Saved project shape is missing"</string>
+  <string name="ui_fd004c80db96" formatted="false">"Scalar values. Length units: mm, cm, m, in. Trigonometry uses radians; 90deg converts to radians.\n\n"</string>
+  <string name="ui_a29f0256272e" formatted="false">"Scale"</string>
+  <string name="ui_40f519b262b5" formatted="false">"Scale "</string>
+  <string name="ui_0205495c6542" formatted="false">"Scale around pivot"</string>
+  <string name="ui_75c30fab8075" formatted="false">"Scale factor"</string>
+  <string name="ui_203458e54e62" formatted="false">"Scale factor · 1 keeps size, 1.02 enlarges 2%"</string>
+  <string name="ui_cfa88d6655df" formatted="false">"ScaleAround"</string>
+  <string name="ui_eafd24c0ebe8" formatted="false">"ScaleAround pivotXYZ factor"</string>
+  <string name="ui_5e4ce958ef67" formatted="false">"ScaleAround pivotXYZ factor (0.0001 to 1000)"</string>
+  <string name="ui_d5d207f7e679" formatted="false">"Scaled"</string>
+  <string name="ui_5a9f54c31200" formatted="false">"Script feature"</string>
+  <string name="ui_d8a9144ff3eb" formatted="false">"Scripted QuantityDriver"</string>
+  <string name="ui_9b473b2aa252" formatted="false">"Search name, type, ID or layer"</string>
+  <string name="ui_ede91343a9f1" formatted="false">"Seat depth"</string>
+  <string name="ui_d4f1dc7e77fd" formatted="false">"Second solid / tool"</string>
+  <string name="ui_f2c6b564bd81" formatted="false">"Section"</string>
+  <string name="ui_e72675a4999d" formatted="false">"Section z · flatten horizontal section to XY"</string>
+  <string name="ui_8598222918d3" formatted="false">"Select"</string>
+  <string name="ui_3975d731f5d2" formatted="false">"Select a CAD solid"</string>
+  <string name="ui_9eea858822f8" formatted="false">"Select a model"</string>
+  <string name="ui_bb229377716a" formatted="false">"Select a model first."</string>
+  <string name="ui_b862e8023e5c" formatted="false">"Select a sewn shell first."</string>
+  <string name="ui_fb9985a198a2" formatted="false">"Select a source object"</string>
+  <string name="ui_a81b513391e9" formatted="false">"Select an XY curve or Section result at Z=0"</string>
+  <string name="ui_3826ea3958d7" formatted="false">"Select an XY curve or Section result at Z=0."</string>
+  <string name="ui_3fe5fd6d7e01" formatted="false">"Select an editable primitive or template"</string>
+  <string name="ui_6a3b2239ffc9" formatted="false">"Select an existing object"</string>
+  <string name="ui_5f919d996e36" formatted="false">"Select an imported mesh. This repair creates a new mesh, retaining the original. Up to 100,000 triangles, 512 boundary edges, 128 vertices per planar loop; branched/non-manifold boundaries are rejected."</string>
+  <string name="ui_983f5099f9ce" formatted="false">"Select an input object first."</string>
+  <string name="ui_57ca8c7c9891" formatted="false">"Select an object"</string>
+  <string name="ui_97f557d1af78" formatted="false">"Select an object first."</string>
+  <string name="ui_01cfb92811e1" formatted="false">"Select feature"</string>
+  <string name="ui_53b0ccc51102" formatted="false">"Select geometry to frame"</string>
+  <string name="ui_426e995abe36" formatted="false">"Select model"</string>
+  <string name="ui_10c1d5e15f27" formatted="false">"Select object"</string>
+  <string name="ui_3b582385df01" formatted="false">"Select objectId"</string>
+  <string name="ui_bd562c0fdb06" formatted="false">"Select result"</string>
+  <string name="ui_8aef2ab3853a" formatted="false">"Select the profile curve first. Place it perpendicular to the start of the rail."</string>
+  <string name="ui_9a976fc228b6" formatted="false">"Selected"</string>
+  <string name="ui_04c51f0f846d" formatted="false">"Selected "</string>
+  <string name="ui_ce0aa5e67922" formatted="false">"Selected chamfer"</string>
+  <string name="ui_f29dd042f0bc" formatted="false">"Selected edges/faces changed. Undo this edit, or detach and recreate feature #"</string>
+  <string name="ui_94e22d096659" formatted="false">"Selected fillet"</string>
+  <string name="ui_b16a2b5dc226" formatted="false">"Selected material"</string>
+  <string name="ui_28200a981443" formatted="false">"Selected properties"</string>
+  <string name="ui_1de575e091c1" formatted="false">"Selected shell"</string>
+  <string name="ui_c425eca754a0" formatted="false">"Selected topology signature is missing"</string>
+  <string name="ui_4807c8290649" formatted="false">"Selected-edge chamfer"</string>
+  <string name="ui_a32785f0f077" formatted="false">"Selected-edge fillet"</string>
+  <string name="ui_5bcf784a80b2" formatted="false">"Selected-face shell"</string>
+  <string name="ui_419634397382" formatted="false">"Selecting"</string>
+  <string name="ui_d1f8e5ea93b2" formatted="false">"Selection"</string>
+  <string name="ui_35641f25595b" formatted="false">"Selection filters / multiple"</string>
+  <string name="ui_6251207ebc53" formatted="false">"Selection mode"</string>
+  <string name="ui_8f335bfa1d1d" formatted="false">"Selection · object / topology filters and multiple objects"</string>
+  <string name="ui_40c20d94e78f" formatted="false">"Series"</string>
+  <string name="ui_448ab73ba1c2" formatted="false">"Set"</string>
+  <string name="ui_b6fde6a79282" formatted="false">"Set / formula"</string>
+  <string name="ui_8a7f32db8348" formatted="false">"Set OBJECT.PROPERTY VALUE / Expression OBJECT.PROPERTY FORMULA"</string>
+  <string name="ui_fdc01d1fa7e7" formatted="false">"Set expression"</string>
+  <string name="ui_08450773cd38" formatted="false">"Set link target"</string>
+  <string name="ui_c09a092a4a85" formatted="false">"Set longest side (mm)"</string>
+  <string name="ui_cb3e4d4d6d88" formatted="false">"Set name expression · document variable"</string>
+  <string name="ui_ad1dec08294e" formatted="false">"Set property"</string>
+  <string name="ui_4bc799723453" formatted="false">"Set value"</string>
+  <string name="ui_fb449f71834c" formatted="false">"Setting"</string>
+  <string name="ui_6daafc18d343" formatted="false">"Sew surfaces"</string>
+  <string name="ui_859f2b8bec08" formatted="false">"Sewing tolerance (mm)"</string>
+  <string name="ui_be35800f810f" formatted="false">"Shaded"</string>
+  <string name="ui_15597dd32ccd" formatted="false">"Sheet needs a profile with positive width and height"</string>
+  <string name="ui_23877779bf9e" formatted="false">"SheetClear"</string>
+  <string name="ui_0a47fbef82f2" formatted="false">"SheetClear · remove worksheet cells; Undo restores"</string>
+  <string name="ui_9dbbb1d8e260" formatted="false">"SheetExport"</string>
+  <string name="ui_48169bb6cac6" formatted="false">"SheetExport · UTF-8 CSV file picker"</string>
+  <string name="ui_d9775fec5438" formatted="false">"SheetImport"</string>
+  <string name="ui_54abeef25b70" formatted="false">"SheetImport · UTF-8 CSV file picker"</string>
+  <string name="ui_617b4d9f964e" formatted="false">"ShellSelected"</string>
+  <string name="ui_9fa4dd559157" formatted="false">"ShellSelected wall faceIndex [faceIndex ...]"</string>
+  <string name="ui_d97d1ee339e4" formatted="false">"Show"</string>
+  <string name="ui_2866270d3aa2" formatted="false">"Show all objects"</string>
+  <string name="ui_646877551855" formatted="false">"Show as graph output"</string>
+  <string name="ui_4bd464107e41" formatted="false">"Show objectId"</string>
+  <string name="ui_d07f186c26e3" formatted="false">"ShowAll"</string>
+  <string name="ui_8f01b2d4b6dc" formatted="false">"Signed offset (mm)"</string>
+  <string name="ui_7da1f3ee354c" formatted="false">"Signet ring"</string>
+  <string name="ui_e3822301028c" formatted="false">"Signet with circular seat"</string>
+  <string name="ui_8697f432058b" formatted="false">"Silver"</string>
+  <string name="ui_1baaf4288309" formatted="false">"Sin"</string>
+  <string name="ui_579f3dfe8b29" formatted="false">"Single curve"</string>
+  <string name="ui_b7152342a267" formatted="false">"Size"</string>
+  <string name="ui_32fd056d3d4b" formatted="false">"Sketch"</string>
+  <string name="ui_87d8e53ec2e8" formatted="false">"Sketch exceeds 10,000 mm"</string>
+  <string name="ui_3594732ca359" formatted="false">"Sketch pad"</string>
+  <string name="ui_d3150aa9f8b4" formatted="false">"SketchPad"</string>
+  <string name="ui_455673bbb8a0" formatted="false">"Snap"</string>
+  <string name="ui_fb9da43b6bb0" formatted="false">"Snap: poles, control-segment midpoints/intersections and grid. NURBS preview is rational; interpolation uses a through-point guide until Apply."</string>
+  <string name="ui_bd390a2685ec" formatted="false">"Software 3D"</string>
+  <string name="ui_e1c6f64d47b0" formatted="false">"Software 3D active"</string>
+  <string name="ui_a6b985574468" formatted="false">"Software 3D active after graphics failure"</string>
+  <string name="ui_b04a353cab8c" formatted="false">"Solid depth (mm)"</string>
+  <string name="ui_f0f6fc83bc0c" formatted="false">"Solid modelling"</string>
+  <string name="ui_fbef370bb7ff" formatted="false">"Solid volume: %.4f mm³"</string>
+  <string name="ui_7287ba951dfa" formatted="false">"Solid · closed profiles"</string>
+  <string name="ui_4ad4322fffb9" formatted="false">"Solidify"</string>
+  <string name="ui_a519b1824518" formatted="false">"Solidify closed shell"</string>
+  <string name="ui_d1442e2282cd" formatted="false">"Solidify shell"</string>
+  <string name="ui_9548996de38a" formatted="false">"Solidify · selected closed shell"</string>
+  <string name="ui_5cbc19ae63ce" formatted="false">"Solids"</string>
+  <string name="ui_a8bf8702d77d" formatted="false">"Solids only"</string>
+  <string name="ui_54ba4f63254d" formatted="false">"Source object"</string>
+  <string name="ui_0446c388357c" formatted="false">"Sphere"</string>
+  <string name="ui_cc6fdf1b0963" formatted="false">"Spreadsheet"</string>
+  <string name="ui_e0aa5daff7ba" formatted="false">"Spreadsheet · mobile A1:H32 grid and CSV"</string>
+  <string name="ui_74086ab9cda8" formatted="false">"Square side · 512 to 2048 pixels"</string>
+  <string name="ui_952f375412e8" formatted="false">"Start"</string>
+  <string name="ui_23f05b92724b" formatted="false">"Start empty CAD workspace"</string>
+  <string name="ui_77bb6b444f7d" formatted="false">"Start empty workspace"</string>
+  <string name="ui_c20f18edd376" formatted="false">"Start extension (mm)"</string>
+  <string name="ui_7c894858f09c" formatted="false">"Start parameter fraction (0 to 1)"</string>
+  <string name="ui_f4aa83a5d85a" formatted="false">"Starting empty workspace"</string>
+  <string name="ui_dc416e1088e4" formatted="false">"Step"</string>
+  <string name="ui_8aa6fa5ee485" formatted="false">"Step X (mm)"</string>
+  <string name="ui_2e1cce7cf93b" formatted="false">"Step Y (mm)"</string>
+  <string name="ui_2bf69ae4f910" formatted="false">"Step Z (mm)"</string>
+  <string name="ui_d7c381834c51" formatted="false">"Step vector"</string>
+  <string name="ui_c989d32b1e67" formatted="false">"Stone corner radius"</string>
+  <string name="ui_2988c2a9e9d1" formatted="false">"Stone depth"</string>
+  <string name="ui_534e6b15aa08" formatted="false">"Stone diameter"</string>
+  <string name="ui_3b48aeda246d" formatted="false">"Stone diameter (mm)"</string>
+  <string name="ui_9d9d2d9cbca2" formatted="false">"Stone seat depth (mm)"</string>
+  <string name="ui_a3d17bdd5ea2" formatted="false">"Stone settings · actual CAD solids"</string>
+  <string name="ui_785a9fc2144d" formatted="false">"Stone width"</string>
+  <string name="ui_24be08509309" formatted="false">"Strided indices unsupported"</string>
+  <string name="ui_3df63b7acb05" formatted="false">"String"</string>
+  <string name="ui_5b23bd71b38c" formatted="false">"Studio"</string>
+  <string name="ui_cfb90aa95fca" formatted="false">"Studio material · saved per object"</string>
+  <string name="ui_39676d735f34" formatted="false">"Studio · metallic / roughness preview"</string>
+  <string name="ui_2f3190a37715" formatted="false">"SubD"</string>
+  <string name="ui_e9e1b267887b" formatted="false">"Subdivision form"</string>
+  <string name="ui_ae5f61e523ef" formatted="false">"Subtract"</string>
+  <string name="ui_698ce1402f6e" formatted="false">"Supported: STEP, IGES, OBJ, STL, simple 3MF/GLB meshes, ASCII DXF curves, BREP, saved FCStd Part geometry, .fcml projects and .cadgraph recipes."</string>
+  <string name="ui_83e8e6c3225e" formatted="false">"Surface material"</string>
+  <string name="ui_fd6b79e915c4" formatted="false">"Surface point"</string>
+  <string name="ui_7a020f9e3ec3" formatted="false">"Surface · open or closed profiles"</string>
+  <string name="ui_9d33513c10d7" formatted="false">"SurfacePoints"</string>
+  <string name="ui_e5f3dcaa7b15" formatted="false">"SurfacePoints · edit NURBS surface poles"</string>
+  <string name="ui_22b4b0c3c3e6" formatted="false">"Surfaces"</string>
+  <string name="ui_6b9c2e223136" formatted="false">"Surfaces only"</string>
+  <string name="ui_dfdd7fcf67ed" formatted="false">"Sweep"</string>
+  <string name="ui_160915cb4cf1" formatted="false">"Sweep "</string>
+  <string name="ui_8c1998fcc55d" formatted="false">"Sweep profile along rail"</string>
+  <string name="ui_aff9f193dc21" formatted="false">"Sweep profileId railId"</string>
+  <string name="ui_eeffba1bc4d9" formatted="false">"Sweep solid"</string>
+  <string name="ui_d2cf80a4de9d" formatted="false">"Sweep surface"</string>
+  <string name="ui_06183458dae1" formatted="false">"Switched to software 3D"</string>
+  <string name="ui_102b068eeea6" formatted="false">"System exit records unavailable: "</string>
+  <string name="ui_b48813fa0aec" formatted="false">"TOP"</string>
+  <string name="ui_5395dff4ff26" formatted="false">"Tap a pole first"</string>
+  <string name="ui_834b595838a0" formatted="false">"Tap → Edit / connect"</string>
+  <string name="ui_61ad50a9b918" formatted="false">"Target"</string>
+  <string name="ui_fa25d24ffcc5" formatted="false">"Target XY plane Z (mm)"</string>
+  <string name="ui_a5252ae3e656" formatted="false">"Target longest side (mm)"</string>
+  <string name="ui_241a0ebee249" formatted="false">"Target object"</string>
+  <string name="ui_df0ad373b7ff" formatted="false">"Teal"</string>
+  <string name="ui_f25b700ed9f0" formatted="false">"Templates"</string>
+  <string name="ui_ddb8aae9765f" formatted="false">"Templates · jewellery and saved presets"</string>
+  <string name="ui_b9937dff25ec" formatted="false">"Testing kernel…"</string>
+  <string name="ui_39fdec1194d9" formatted="false">"Tests"</string>
+  <string name="ui_c3328c39b0e2" formatted="false">"Text"</string>
+  <string name="ui_f1e26ff630e6" formatted="false">"Text \"text\" height depth · system font outline solid"</string>
+  <string name="ui_f34a7377087e" formatted="false">"Text for engraving"</string>
+  <string name="ui_383e0fc57da4" formatted="false">"Text has no visible outlines"</string>
+  <string name="ui_15072e5e87e8" formatted="false">"Text outline is too detailed; shorten it or reduce height"</string>
+  <string name="ui_3cc6e124a8e4" formatted="false">"Text size"</string>
+  <string name="ui_1276295b9499" formatted="false">"Text solid"</string>
+  <string name="ui_691af19dbbef" formatted="false">"Text solid for engraving"</string>
+  <string name="ui_aec8f5822f70" formatted="false">"Text: 1–40 characters, height 0.1–100 mm and depth 0.001–100 mm"</string>
+  <string name="ui_91e91153cb8a" formatted="false">"The current workspace will be cleared. Undo can recover it during this session."</string>
+  <string name="ui_278dd996cb83" formatted="false">"The export selection is unavailable after workspace recovery. Select an object and export again."</string>
+  <string name="ui_e5bc5396f384" formatted="false">"The model changed, but autosave failed: "</string>
+  <string name="ui_7e7962671815" formatted="false">"The previous saved workspace was kept as a recovery copy. Use Workspace &gt; Export recovery copy to retrieve it."</string>
+  <string name="ui_475eb2aec3a7" formatted="false">"The saved workspace could not be opened. A recovery copy was kept. Use Workspace &gt; Export recovery copy to retrieve it."</string>
+  <string name="ui_ad48f3418617" formatted="false">"Thickness"</string>
+  <string name="ui_9a2a699909e4" formatted="false">"Thickness · approximate CAD wall ray samples"</string>
+  <string name="ui_24da69de4da3" formatted="false">"Thin-wall threshold (mm)"</string>
+  <string name="ui_3cfc4fba49f8" formatted="false">"This command opens a UI tool"</string>
+  <string name="ui_6a3fdfe6e841" formatted="false">"This object has no editable feature recipe"</string>
+  <string name="ui_3a353224d16c" formatted="false">"This operation has no numeric parameters. Edit its input geometry instead."</string>
+  <string name="ui_3dcedac24ee9" formatted="false">"Thread "</string>
+  <string name="ui_6209d69a9083" formatted="false">"Title limit 100, notes limit 200 characters"</string>
+  <string name="ui_a430ac3065f8" formatted="false">"Title · up to 100 characters"</string>
+  <string name="ui_a09797fefea0" formatted="false">"Tolerance (mm)"</string>
+  <string name="ui_7423110adc68" formatted="false">"Too many casting records"</string>
+  <string name="ui_6375dd0b2851" formatted="false">"Too many cells"</string>
+  <string name="ui_fb13b05e6426" formatted="false">"Too many command arguments"</string>
+  <string name="ui_43178144a7b7" formatted="false">"Too many native trace fields"</string>
+  <string name="ui_b3369896e837" formatted="false">"Too much point data"</string>
+  <string name="ui_4fa8cc860c52" formatted="false">"Tools"</string>
+  <string name="ui_cae0435c41e8" formatted="false">"Top"</string>
+  <string name="ui_c0c80372338a" formatted="false">"Top cage scale · 0.1 to 3"</string>
+  <string name="ui_19ed0b0dff13" formatted="false">"Top cage twist (degrees)"</string>
+  <string name="ui_3aedd475cec6" formatted="false">"Topology"</string>
+  <string name="ui_1b03f33c6462" formatted="false">"Topology indices"</string>
+  <string name="ui_d79e66257f8d" formatted="false">"Topology · indexed edges/faces"</string>
+  <string name="ui_bb051365c738" formatted="false">"Torus"</string>
+  <string name="ui_e33fcef6ef7e" formatted="false">"Total Z-axis angle (degrees)"</string>
+  <string name="ui_132e2942c167" formatted="false">"Trace saved: "</string>
+  <string name="ui_15cc58b37196" formatted="false">"Trace unavailable: "</string>
+  <string name="ui_a327452c36ed" formatted="false">"Transaction open · commit or cancel to finish"</string>
+  <string name="ui_dea51bb13a44" formatted="false">"Transform"</string>
+  <string name="ui_5e139f45b5e7" formatted="false">"Transform selected model"</string>
+  <string name="ui_b4ebb5c52358" formatted="false">"Transparency must be 0 or 1"</string>
+  <string name="ui_922c3af533a4" formatted="false">"Transparent background · 1 yes / 0 no"</string>
+  <string name="ui_e13428fa3dba" formatted="false">"Trim curve"</string>
+  <string name="ui_51a86eeb5fe0" formatted="false">"Trim patch"</string>
+  <string name="ui_2de1eaeead84" formatted="false">"TrimCurve"</string>
+  <string name="ui_037732964f1a" formatted="false">"TrimCurve startFraction endFraction"</string>
+  <string name="ui_0754ae68b057" formatted="false">"TrimPatch"</string>
+  <string name="ui_7b9ca6b51cb2" formatted="false">"TrimPatch uStart uEnd vStart vEnd"</string>
+  <string name="ui_8305d26369bf" formatted="false">"Truncated native trace"</string>
+  <string name="ui_61f47612ccc5" formatted="false">"Truncated protobuf integer"</string>
+  <string name="ui_a953639a616e" formatted="false">"Try OpenGL renderer"</string>
+  <string name="ui_cd80f94a1e62" formatted="false">"Tube radius"</string>
+  <string name="ui_a5d13a93df36" formatted="false">"Tube radius (mm)"</string>
+  <string name="ui_917ac1cf92b5" formatted="false">"Turns · 0.1 to 20"</string>
+  <string name="ui_d5dd582170ce" formatted="false">"U end fraction"</string>
+  <string name="ui_5081c5b959de" formatted="false">"U fraction"</string>
+  <string name="ui_3d899b54f27a" formatted="false">"U start fraction"</string>
+  <string name="ui_ca550b80b653" formatted="false">"Uncaught error on "</string>
+  <string name="ui_13810bc1dd2b" formatted="false">"Unclosed CSV quote"</string>
+  <string name="ui_561cf2dd6714" formatted="false">"Unclosed quote or escape"</string>
+  <string name="ui_39fc72124884" formatted="false">"Undo"</string>
+  <string name="ui_8d900f182469" formatted="false">"Unexpected CSV quote"</string>
+  <string name="ui_7977c889d61a" formatted="false">"Unexpected expression character at "</string>
+  <string name="ui_ba052ae9bc53" formatted="false">"Unexpected text after CSV quote"</string>
+  <string name="ui_c1452b27c558" formatted="false">"Uniform scale"</string>
+  <string name="ui_72d1bc178678" formatted="false">"Union"</string>
+  <string name="ui_8964d3d618ce" formatted="false">"Union / fuse"</string>
+  <string name="ui_827edabe0206" formatted="false">"Union firstId secondId"</string>
+  <string name="ui_73aec899ddfa" formatted="false">"Unknown command"</string>
+  <string name="ui_63206e85287c" formatted="false">"Unknown command: "</string>
+  <string name="ui_5ccdbe8d865a" formatted="false">"Unknown component"</string>
+  <string name="ui_8293247473ea" formatted="false">"Unknown document command. Open Help for the command list."</string>
+  <string name="ui_970f1cc9e324" formatted="false">"Unknown function: "</string>
+  <string name="ui_81be4669cc22" formatted="false">"Unknown graph component"</string>
+  <string name="ui_5f798f46a6c0" formatted="false">"Unknown graph sample"</string>
+  <string name="ui_6a519dda455d" formatted="false">"Unknown object kind"</string>
+  <string name="ui_e6d76ac35ca5" formatted="false">"Unknown property kind"</string>
+  <string name="ui_7753d967efc3" formatted="false">"Unknown sample"</string>
+  <string name="ui_8175bbf3af08" formatted="false">"Unknown unit: "</string>
+  <string name="ui_fcf507a253b6" formatted="false">"Unknown variable: "</string>
+  <string name="ui_1526a17ee757" formatted="false">"Unlock"</string>
+  <string name="ui_79dc1391f805" formatted="false">"Unlock geometry"</string>
+  <string name="ui_45da8869bfc8" formatted="false">"Unlock · selected object"</string>
+  <string name="ui_6e217f978cea" formatted="false">"Unsaved lab documents will close. Saved FCStd files and macros are kept. The CAD workspace stays in its separate process."</string>
+  <string name="ui_1431f68f359f" formatted="false">"Unset"</string>
+  <string name="ui_bb7dfb318686" formatted="false">"Unset name · remove unused variable"</string>
+  <string name="ui_908e3e762be2" formatted="false">"Unsupported 3MF namespace/extension"</string>
+  <string name="ui_d8724cce5a7c" formatted="false">"Unsupported 3MF unit"</string>
+  <string name="ui_00b64eaa991f" formatted="false">"Unsupported DXF entity: "</string>
+  <string name="ui_8f760eb1f92a" formatted="false">"Unsupported FCStd XML encoding or DTD"</string>
+  <string name="ui_d1ac7d505ac6" formatted="false">"Unsupported graph version"</string>
+  <string name="ui_4e8b11ce8306" formatted="false">"Unsupported native trace wire type"</string>
+  <string name="ui_f57ba192f21d" formatted="false">"Unsupported project format, version, or units"</string>
+  <string name="ui_751f16f25401" formatted="false">"Unsupported project reader or geometry kernel"</string>
+  <string name="ui_f850ac57e52b" formatted="false">"Unsupported recipe format/version/units"</string>
+  <string name="ui_028679f571b4" formatted="false">"Untrim NURBS patch"</string>
+  <string name="ui_afad98e60845" formatted="false">"Untrim patch"</string>
+  <string name="ui_edfe910cbb2a" formatted="false">"UntrimPatch"</string>
+  <string name="ui_8282a0e3523f" formatted="false">"UntrimPatch · restore full UV patch"</string>
+  <string name="ui_2d7749ad8168" formatted="false">"Unused angle"</string>
+  <string name="ui_6a195ab24b1f" formatted="false">"Upper profile"</string>
+  <string name="ui_65364772f8c0" formatted="false">"Upstream App 1.1.4 · properties, expressions, transactions\nGeometry workbenches are still being ported."</string>
+  <string name="ui_3874f457f5c4" formatted="false">"Upstream document lab UI created"</string>
+  <string name="ui_893974481948" formatted="false">"Upstream document operation"</string>
+  <string name="ui_2ac5d627cb40" formatted="false">"Use Object.Property"</string>
+  <string name="ui_05f362e29902" formatted="false">"Use Source.Property"</string>
+  <string name="ui_79ae0a58fc2e" formatted="false">"Use a plain .py filename"</string>
+  <string name="ui_cc082228eb12" formatted="false">"Use a single-line title (100 characters) and notes (200 characters)"</string>
+  <string name="ui_7dcb3f42d312" formatted="false">"Use phone language"</string>
+  <string name="ui_cbd3f9386e07" formatted="false">"V end fraction"</string>
+  <string name="ui_95f4def2f451" formatted="false">"V fraction"</string>
+  <string name="ui_8946abe055f7" formatted="false">"V start fraction"</string>
+  <string name="ui_321fc6124095" formatted="false">"Value (e.g. 2 cm)"</string>
+  <string name="ui_0c596281e326" formatted="false">"Value: %.4f"</string>
+  <string name="ui_2764518370bb" formatted="false">"Variable dependency cycle: "</string>
+  <string name="ui_d19eb760e58b" formatted="false">"Variable needs a unique name, starting with a letter (up to 32 characters)"</string>
+  <string name="ui_837297960104" formatted="false">"Variable set"</string>
+  <string name="ui_ac018db1f7b0" formatted="false">"Variables"</string>
+  <string name="ui_d147e822713d" formatted="false">"Variables · saved scalar expressions"</string>
+  <string name="ui_b242a403874e" formatted="false">"Vertex welding tolerance (mm) · maximum 100,000 triangles"</string>
+  <string name="ui_69bd4ef9fbd0" formatted="false">"View"</string>
+  <string name="ui_e5ce5bf06fa4" formatted="false">"ViewCube"</string>
+  <string name="ui_64bfd2743c3a" formatted="false">"ViewCube · choose an orthographic or ISO view"</string>
+  <string name="ui_07b8f4ab5c94" formatted="false">"ViewProvider"</string>
+  <string name="ui_7d9ff4f0de39" formatted="false">"Visibility"</string>
+  <string name="ui_656190362b0d" formatted="false">"Visible letter height (mm)"</string>
+  <string name="ui_3b18e8e33250" formatted="false">"Volume"</string>
+  <string name="ui_c4633c096745" formatted="false">"Wall"</string>
+  <string name="ui_f1d107a15b94" formatted="false">"Wall (mm)"</string>
+  <string name="ui_e75b3f729f43" formatted="false">"Wall thickness (mm)"</string>
+  <string name="ui_69c0b81540bd" formatted="false">"Weight"</string>
+  <string name="ui_c790195277fc" formatted="false">"Weighted freeform curve"</string>
+  <string name="ui_47adf35d4345" formatted="false">"Welding / planarity tolerance (mm)"</string>
+  <string name="ui_6db01c8c62e2" formatted="false">"Welding tolerance must be .000001 to .01 mm"</string>
+  <string name="ui_37619fc13053" formatted="false">"White"</string>
+  <string name="ui_a58ddf50c5ea" formatted="false">"Width"</string>
+  <string name="ui_2e57c1b5da0b" formatted="false">"Width (mm)"</string>
+  <string name="ui_8a751cd34485" formatted="false">"Width X (mm)"</string>
+  <string name="ui_9a1352414e0e" formatted="false">"Width X: %.4f mm\nDepth Y: %.4f mm\nHeight Z: %.4f mm\n"</string>
+  <string name="ui_a5be156d0e86" formatted="false">"Wireframe"</string>
+  <string name="ui_13b7bfcac438" formatted="false">"Working…"</string>
+  <string name="ui_5f0bc277d08c" formatted="false">"Worksheet addresses must be uppercase"</string>
+  <string name="ui_4ca0a75c2b7f" formatted="false">"Workspace"</string>
+  <string name="ui_00a6d72333a4" formatted="false">"Workspace closed"</string>
+  <string name="ui_aefc2f5d68bf" formatted="false">"Workspace ready"</string>
+  <string name="ui_d13bd9578b81" formatted="false">"Workspace recovery"</string>
+  <string name="ui_66bb26002288" formatted="false">"Workspace startup failed. Return to recovery to copy the crash report."</string>
+  <string name="ui_4337329c5887" formatted="false">"World Z plane (mm)"</string>
+  <string name="ui_8daa34bd2dff" formatted="false">"World axis"</string>
+  <string name="ui_ba3fd1f42d8f" formatted="false">"World axis movement handles"</string>
+  <string name="ui_49df268d4c42" formatted="false">"Wrong component connections: "</string>
+  <string name="ui_2f2f454b8520" formatted="false">"Wrong feature parameter count"</string>
+  <string name="ui_e57e1696dd74" formatted="false">"Wrong number of command arguments"</string>
+  <string name="ui_ddafd9c7c568" formatted="false">"X (mm)"</string>
+  <string name="ui_f82f6396994d" formatted="false">"X degrees"</string>
+  <string name="ui_26f15614cab2" formatted="false">"X mm"</string>
+  <string name="ui_22bfe76c39d3" formatted="false">"X offset"</string>
+  <string name="ui_2186f223e3c8" formatted="false">"X radius (mm)"</string>
+  <string name="ui_09527dcc1ac5" formatted="false">"X step"</string>
+  <string name="ui_67bd96db317b" formatted="false">"X vector (mm)"</string>
+  <string name="ui_1f48d503c02a" formatted="false">"XY poles · drag points · Z / weight via Point"</string>
+  <string name="ui_2d825843e49c" formatted="false">"XY sketch · tap to add, drag to edit · pinch / two fingers pan"</string>
+  <string name="ui_7f5a68f0039c" formatted="false">"XY tangent orientation (0/1)"</string>
+  <string name="ui_717c4ecc7239" formatted="false">"XYZ"</string>
+  <string name="ui_026fd0cae7ea" formatted="false">"XYZ +/-10,000 mm; weight .001 to 1000"</string>
+  <string name="ui_6c154ffc540d" formatted="false">"Y (mm)"</string>
+  <string name="ui_732f2f64f131" formatted="false">"Y degrees"</string>
+  <string name="ui_59a3dfe477fe" formatted="false">"Y mm"</string>
+  <string name="ui_c23bd7f616ad" formatted="false">"Y offset"</string>
+  <string name="ui_fd96870f3c87" formatted="false">"Y radius (mm)"</string>
+  <string name="ui_ccb5c4982ce9" formatted="false">"Y step"</string>
+  <string name="ui_4766ca5c5ba1" formatted="false">"Y vector (mm)"</string>
+  <string name="ui_fe2290d0cec3" formatted="false">"Z (mm)"</string>
+  <string name="ui_f332621fc819" formatted="false">"Z degrees"</string>
+  <string name="ui_1d607f786bb3" formatted="false">"Z mm"</string>
+  <string name="ui_6db64b7138c0" formatted="false">"Z offset"</string>
+  <string name="ui_53478231bb71" formatted="false">"Z step"</string>
+  <string name="ui_07a22b7a716f" formatted="false">"Z vector (mm)"</string>
+  <string name="ui_b2d43dc84d9f" formatted="false">"Zebra"</string>
+  <string name="ui_5e5de9014312" formatted="false">"Zebra · normal stripes"</string>
+  <string name="ui_1dab62edbcfd" formatted="false">"curve profiles"</string>
+  <string name="ui_3eb7c606006d" formatted="false">"diameter pavilionDepth clearanceHeight"</string>
+  <string name="ui_67fdbefff60d" formatted="false">"dimensions; Help / template dialog shows fields"</string>
+  <string name="ui_6aa90984232a" formatted="false">"horizontal assist"</string>
+  <string name="ui_dbb9078a7fd0" formatted="false">"import FreeCAD as App\nprint(App.Version())\n"</string>
+  <string name="ui_f50c06e6664e" formatted="false">"infinite (straight)"</string>
+  <string name="ui_2eb00d11a28c" formatted="false">"initialization failure"</string>
+  <string name="ui_7da0b4e12ad6" formatted="false">"innerDiameter wall bandWidth"</string>
+  <string name="ui_093deb254997" formatted="false">"low memory"</string>
+  <string name="ui_a405405ba8cf" formatted="false">"majorRadius tubeRadius"</string>
+  <string name="ui_1e7f58412bf0" formatted="false">"native crash"</string>
+  <string name="ui_5063e8d0c9de" formatted="false">"not responding (ANR)"</string>
+  <string name="ui_ddfbb6cdd71c" formatted="false">"radius height"</string>
+  <string name="ui_e283766bc12a" formatted="false">"radius pitch turns"</string>
+  <string name="ui_0f0525f6b710" formatted="false">"reason "</string>
+  <string name="ui_ed98726d93e3" formatted="false">"stoneDiameter wall height seatDepth"</string>
+  <string name="ui_15c6eed5d6f0" formatted="false">"stoneDiameter wall height seatDepth count prongDiameter"</string>
+  <string name="ui_3cd3b258c914" formatted="false">"unchecked (more than 100,000 triangles)"</string>
+  <string name="ui_8fa37f3d9635" formatted="false">"user requested stop"</string>
+  <string name="ui_020ab662c211" formatted="false">"vertical assist"</string>
+  <string name="ui_3b11d39c5128" formatted="false">"width depth"</string>
+  <string name="ui_1b9e112be360" formatted="false">"width depth bulge"</string>
+  <string name="ui_9dcd8df34e65" formatted="false">"width depth height"</string>
+  <string name="ui_34def5ddcf72" formatted="false">"width depth height levels topScale twistDegrees"</string>
+  <string name="ui_9a0bda3b3717" formatted="false">"xRadius yRadius"</string>
+</resources>

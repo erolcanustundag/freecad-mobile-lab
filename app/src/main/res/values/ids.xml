@@ -1,0 +1,5 @@
+<resources>
+    <item type="id" name="l10n_text" />
+    <item type="id" name="l10n_hint" />
+    <item type="id" name="recovery_control" />
+</resources>

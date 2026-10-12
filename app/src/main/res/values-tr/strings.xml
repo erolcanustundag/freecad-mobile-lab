@@ -1,0 +1,599 @@
+<resources>
+  <string name="ui_7850fb9418a1" formatted="false">"+ Oluştur"</string>
+  <string name="ui_6f6a567d5569" formatted="false">"1 parmak: döndür   ·   kıstır: yakınlaştır   ·   2 parmak: kaydır"</string>
+  <string name="ui_a6a68b452e5d" formatted="false">"3B görünüm"</string>
+  <string name="ui_90e50b9b0537" formatted="false">"3MF · görünür ağ / mm"</string>
+  <string name="ui_3533d09b0914" formatted="false">"Önceki oturum çöktü. Yazılımsal 3B görüntüleme ile boş bir çalışma alanı açın; kayıtlı model kurtarma kopyası olarak korunur. Aşağıdaki raporu da kopyalayabilirsiniz."</string>
+  <string name="ui_7327b69c2df3" formatted="false">"A1:H32 · düzenlemek için hücreye dokunun. Formüller = ile başlar; hücreleri veya belge değişkenlerini kullanabilir. Geometri hesaplanan anlık değerleri kullanır."</string>
+  <string name="ui_2881e0f06668" formatted="false">"A4 SVG · toplam genişlik ve yükseklik mm cinsindedir. XY profili Z=0 düzleminde olmalı. %100 ölçekte, sayfaya sığdırma kapalıyken yazdırın."</string>
+  <string name="ui_d93d10ff0fbe" formatted="false">"API"</string>
+  <string name="ui_78fc30b263a3" formatted="false">"Hakkında / lisanslar"</string>
+  <string name="ui_0e2465fe2eda" formatted="false">"En az iki nokta ekleyin"</string>
+  <string name="ui_8ea9062f548b" formatted="false">"Bileşen ekle"</string>
+  <string name="ui_e864aa24d43c" formatted="false">"Özellik ekle"</string>
+  <string name="ui_4f5edc11fcbd" formatted="false">"Gruba ekle"</string>
+  <string name="ui_aa5a3afa1cfa" formatted="false">"Sınırları eşleştirerek hizala"</string>
+  <string name="ui_49662530d12a" formatted="false">"Nesneleri hizala"</string>
+  <string name="ui_98c19aa80121" formatted="false">"Nesneye hizala"</string>
+  <string name="ui_1efe8f5e9768" formatted="false">"Tüm ölçüler milimetre cinsindedir"</string>
+  <string name="ui_74c53bd71d43" formatted="false">"Tüm nesneler"</string>
+  <string name="ui_0e524de0b822" formatted="false">"Analiz et"</string>
+  <string name="ui_1fd70473fb3d" formatted="false">"Açı"</string>
+  <string name="ui_f961efd7f9ad" formatted="false">"Açı (derece)"</string>
+  <string name="ui_0e0945af36d3" formatted="false">"Açı (derece)"</string>
+  <string name="ui_cfea419c3b4e" formatted="false">"Uygula"</string>
+  <string name="ui_b6aa4e83bed4" formatted="false">"Yaklaşık et kalınlığı"</string>
+  <string name="ui_853a983f6b8a" formatted="false">"Yay"</string>
+  <string name="ui_2745debaa64a" formatted="false">"Alan"</string>
+  <string name="ui_4130069ee1c1" formatted="false">"Eğri boyunca çoğaltma"</string>
+  <string name="ui_58b9ff3fe0e6" formatted="false">"Otomatik · yazılımsal kare süresi"</string>
+  <string name="ui_d74b6cfbbd9f" formatted="false">"Kullanılabilir Python API"</string>
+  <string name="ui_1df6251b4693" formatted="false">"Eksen X"</string>
+  <string name="ui_27b791621ace" formatted="false">"Eksen Y"</string>
+  <string name="ui_e2f1c650f3a2" formatted="false">"Eksen Z"</string>
+  <string name="ui_587eac1112fa" formatted="false">"ARKA"</string>
+  <string name="ui_44d0fd52d22b" formatted="false">"ALT"</string>
+  <string name="ui_337a1344ed75" formatted="false">"BREP · görünür CAD geometrisi"</string>
+  <string name="ui_b52b36b7269f" formatted="false">"Arka"</string>
+  <string name="ui_c59203db9a48" formatted="false">"Dengeli · 50.000 üçgen"</string>
+  <string name="ui_78a8bd5c5cc2" formatted="false">"Yüzük kolu genişliği / yüksekliği (mm)"</string>
+  <string name="ui_9230747798f6" formatted="false">"Temel katılar"</string>
+  <string name="ui_40af4dcb42fc" formatted="false">"Toplu varyantlar"</string>
+  <string name="ui_6c5f4cb5f461" formatted="false">"Tabla X (mm)"</string>
+  <string name="ui_eadd0a8e3c3b" formatted="false">"Tabla Y (mm)"</string>
+  <string name="ui_58e3247bcf3a" formatted="false">"Düzenlemeyi başlat"</string>
+  <string name="ui_c3afba4c4528" formatted="false">"Sıvama taş yuvası"</string>
+  <string name="ui_df5eaf37f6db" formatted="false">"İkili STL · görünür geometri"</string>
+  <string name="ui_7d44bc449c2a" formatted="false">"Mavi"</string>
+  <string name="ui_daf760a167a8" formatted="false">"Mantıksal değer"</string>
+  <string name="ui_e772bc4d3e48" formatted="false">"Katı işlemleri / yuvarlatma"</string>
+  <string name="ui_cce7f2f2f0dc" formatted="false">"Alt"</string>
+  <string name="ui_239ca5767afa" formatted="false">"Kutu"</string>
+  <string name="ui_a61a594b8eab" formatted="false">"Baskı yüksekliği Z (mm)"</string>
+  <string name="ui_cd5bf23adc29" formatted="false">"CAD eğrisi / profili"</string>
+  <string name="ui_366beef5b862" formatted="false">"CAD kenarları"</string>
+  <string name="ui_e33756c9ac13" formatted="false">"CAD yüzleri"</string>
+  <string name="ui_6699eaff9ec1" formatted="false">"CAD nesneleri"</string>
+  <string name="ui_362056b5552b" formatted="false">"CAD işlemi"</string>
+  <string name="ui_fa42775b2b49" formatted="false">"CAD yüzeyi / kabuğu"</string>
+  <string name="ui_f07d52a027a8" formatted="false">"CAD köşeleri"</string>
+  <string name="ui_77988f90dd02" formatted="false">"Kafes derinliği (mm)"</string>
+  <string name="ui_05fe0b3030a5" formatted="false">"Kafes yüksekliği (mm)"</string>
+  <string name="ui_a298d8e24e7b" formatted="false">"Kafes genişliği (mm)"</string>
+  <string name="ui_16b6e0c696af" formatted="false">"Hesap makinesi"</string>
+  <string name="ui_77dfd2135f4d" formatted="false">"İptal"</string>
+  <string name="ui_b8f944abaa35" formatted="false">"Düzenlemeyi iptal et"</string>
+  <string name="ui_a3aea4c0ec57" formatted="false">"Sürüm durumu"</string>
+  <string name="ui_b69d75eec198" formatted="false">"Hedef açılamadı"</string>
+  <string name="ui_ec799cd23940" formatted="false">"Giriş açılamadı"</string>
+  <string name="ui_8f941b45fc17" formatted="false">"Çıkış açılamadı"</string>
+  <string name="ui_07de7fdc8bd6" formatted="false">"Grafik okunamadı"</string>
+  <string name="ui_dd6c6fba22b0" formatted="false">"Döküm payı · modeli büyüt"</string>
+  <string name="ui_3fa2f57731aa" formatted="false">"Döküm çekme payı"</string>
+  <string name="ui_5981b9f942e0" formatted="false">"Catmull-Clark düzeyi · 1 ile 4 arasında tam sayı"</string>
+  <string name="ui_16e5447a8046" formatted="false">"Merkez"</string>
+  <string name="ui_d7ea0b653211" formatted="false">"Merkez X"</string>
+  <string name="ui_13fa992ac041" formatted="false">"Merkez Y"</string>
+  <string name="ui_ddf0cfc44ea9" formatted="false">"Merkez Z"</string>
+  <string name="ui_55d0def9c9c6" formatted="false">"Merkez kontrol noktası kabarıklığı (mm)"</string>
+  <string name="ui_7809bbeb5802" formatted="false">"Seçili modeli Z=0 tablasında ortala"</string>
+  <string name="ui_33f0bce83e2e" formatted="false">"Tüm kenarlara pah kır"</string>
+  <string name="ui_48ea67c14d15" formatted="false">"Pah mesafesi"</string>
+  <string name="ui_0062c851307d" formatted="false">"Baskı hacmini / eksen seçeneklerini kontrol et"</string>
+  <string name="ui_cc76f6f1e953" formatted="false">"Önceki oturum kontrol ediliyor…"</string>
+  <string name="ui_0a13c60e546b" formatted="false">"Giriş seç"</string>
+  <string name="ui_1ab45361070e" formatted="false">"Birden çok nesne seç"</string>
+  <string name="ui_1cc7820a08e2" formatted="false">"Daire"</string>
+  <string name="ui_719ea396ad92" formatted="false">"Temizle"</string>
+  <string name="ui_a5880260dd6b" formatted="false">"İfadeyi temizle"</string>
+  <string name="ui_1d592272db03" formatted="false">"Boşluk payı (mm)"</string>
+  <string name="ui_302f19f39cc1" formatted="false">"Dünya Z düzlemi üstünü kes"</string>
+  <string name="ui_bbfa773e5a63" formatted="false">"Kapat"</string>
+  <string name="ui_213b8d6ccddf" formatted="false">"Etkin belgeyi kapat"</string>
+  <string name="ui_c8d4423a2e6d" formatted="false">"Tırnak içindeki değeri kapatın"</string>
+  <string name="ui_88d86b7721d5" formatted="false">"Kapalı"</string>
+  <string name="ui_20c2d0dd2852" formatted="false">"Kapalı eğri için üç nokta gerekir"</string>
+  <string name="ui_c0c30e800020" formatted="false">"Kapalı eğri için Polyline veya Interpolated curve seçin"</string>
+  <string name="ui_ada0d773b0af" formatted="false">"Kapalı profilden düzlemsel bölge"</string>
+  <string name="ui_8901895fb1b1" formatted="false">"Komut"</string>
+  <string name="ui_1a28b29f4f7b" formatted="false">"Komut yardımı"</string>
+  <string name="ui_0039381a0b2a" formatted="false">"Komut eksik veya çok uzun"</string>
+  <string name="ui_f0cab561b2d1" formatted="false">"Komut başvurusu"</string>
+  <string name="ui_6966e21c630a" formatted="false">"Komut · Yardim, Kutu 20 10 4…"</string>
+  <string name="ui_717354ee1f25" formatted="false">"Komut · Set Source.Width 2 cm"</string>
+  <string name="ui_1a1873ab51c7" formatted="false">"Onayla"</string>
+  <string name="ui_a783eca8c9cd" formatted="false">"Kontrol kafesi derinliği (mm)"</string>
+  <string name="ui_71386f1843fe" formatted="false">"Kontrol kafesi genişliği (mm)"</string>
+  <string name="ui_ea75a51b0189" formatted="false">"Asıl nesne dahil kopya sayısı · 2 ile 100"</string>
+  <string name="ui_cb42316b57a8" formatted="false">"Çökme raporunu kopyala"</string>
+  <string name="ui_b8d853b22221" formatted="false">"Dil tercihi kaydedilemedi"</string>
+  <string name="ui_79b3256d8684" formatted="false">"Adet · 2 ile 10 arasında tam sayı"</string>
+  <string name="ui_f0e7cc1e6789" formatted="false">"Adet · 2 ile 100 arasında tam sayı"</string>
+  <string name="ui_2f2503014962" formatted="false">"Çökme raporu / kurtarma"</string>
+  <string name="ui_51f3263e2e52" formatted="false">"Çökme raporu kopyalandı"</string>
+  <string name="ui_d12b417f8416" formatted="false">"Çökme raporu kaydedildi"</string>
+  <string name="ui_6e157c5da441" formatted="false">"Oluştur"</string>
+  <string name="ui_c11c2f8bcd8d" formatted="false">"Bir belge oluşturun veya desteklenen bir FCStd üstveri belgesi açın."</string>
+  <string name="ui_a0c75994670a" formatted="false">"Önce bir model oluşturun veya içe aktarın."</string>
+  <string name="ui_6651e8ca2a57" formatted="false">"Önce bir nesne oluşturun veya içe aktarın"</string>
+  <string name="ui_c65cbfecf121" formatted="false">"Önce bir nesne oluşturun veya seçin."</string>
+  <string name="ui_6abd03c2f98a" formatted="false">"Oluştur · milimetre"</string>
+  <string name="ui_ede77cc09901" formatted="false">"Kesit / 2B çizim"</string>
+  <string name="ui_908885a69197" formatted="false">"Eğri boyunca çoğaltma"</string>
+  <string name="ui_7a3eb66f9979" formatted="false">"Eğri eğrilik raporu"</string>
+  <string name="ui_4eca91cc687f" formatted="false">"Eğriler / profiller"</string>
+  <string name="ui_8e8831bf34cc" formatted="false">"Eğriler ve işlem geçmişi"</string>
+  <string name="ui_3efa753b477f" formatted="false">"Eğriler ve profiller"</string>
+  <string name="ui_5e5ee2c203b8" formatted="false">"Yalnızca eğriler"</string>
+  <string name="ui_bfb6fdce937b" formatted="false">"Çıkar / kes"</string>
+  <string name="ui_817b354dc01a" formatted="false">"Silindir"</string>
+  <string name="ui_15d5b7c8fd92" formatted="false">"DXF · seçili XY eğrisi / kesiti"</string>
+  <string name="ui_f6fdbe48dc54" formatted="false">"Sil"</string>
+  <string name="ui_7700294c798b" formatted="false">"Birden çok nesneyi sil"</string>
+  <string name="ui_b9054d38bdc5" formatted="false">"X ötelemesi (mm)"</string>
+  <string name="ui_609872d33573" formatted="false">"Y ötelemesi (mm)"</string>
+  <string name="ui_934b7522dfb3" formatted="false">"Z ötelemesi (mm)"</string>
+  <string name="ui_64b365fa3ee1" formatted="false">"Derinlik (mm)"</string>
+  <string name="ui_1d97595f7723" formatted="false">"Y derinliği (mm)"</string>
+  <string name="ui_d71a5056f84c" formatted="false">"İşlem bağını kaldır; geometriyi koru"</string>
+  <string name="ui_b4748fa72923" formatted="false">"Ölçülendirilmiş çizim sayfası"</string>
+  <string name="ui_9f4ca9ec0871" formatted="false">"Ölçüler"</string>
+  <string name="ui_6cc62d64e2d0" formatted="false">"Kesiti kapat"</string>
+  <string name="ui_5e77fe9fbd46" formatted="false">"Çoklu seçimi kapat"</string>
+  <string name="ui_c3aeea8a6be7" formatted="false">"Görüntü ayrıntısı"</string>
+  <string name="ui_ca718436e7d7" formatted="false">"Görüntü ayrıntısı · dışa aktarım tam kaliteyi korur"</string>
+  <string name="ui_5a83f580ae83" formatted="false">"Görüntüleme performansı"</string>
+  <string name="ui_423208095dd7" formatted="false">"Mesafe"</string>
+  <string name="ui_deef3e5498ea" formatted="false">"CAD nesneleri arasındaki mesafe"</string>
+  <string name="ui_7a524e14c7f4" formatted="false">"Belge komutları"</string>
+  <string name="ui_1adff3072f22" formatted="false">"Belge işlemi"</string>
+  <string name="ui_4214822e9b88" formatted="false">"Belge değişkenleri"</string>
+  <string name="ui_687c82861c95" formatted="false">"Belgeler"</string>
+  <string name="ui_06790c4791eb" formatted="false">"Ağırlıklı kontrol noktalarını XY düzleminde sürükle"</string>
+  <string name="ui_37a4658d6cec" formatted="false">"Yakalama ızgarasıyla XY çizimi yap"</string>
+  <string name="ui_93aba913bfbb" formatted="false">"Eğri çiz"</string>
+  <string name="ui_a4d3311befbe" formatted="false">"Çizim sayfası"</string>
+  <string name="ui_972d57379db3" formatted="false">"Kopyala"</string>
+  <string name="ui_6cb15df59f82" formatted="false">"Kopyala · mm cinsinden öteleme"</string>
+  <string name="ui_6e444774c000" formatted="false">"Kenar / yüz indisleri"</string>
+  <string name="ui_5301648dcf6b" formatted="false">"Düzenle"</string>
+  <string name="ui_76518f63a8ac" formatted="false">"Düzenle / bağla"</string>
+  <string name="ui_13ee5bbafe07" formatted="false">"Düzenle / yeniden boyutlandır"</string>
+  <string name="ui_2e8b683e11d1" formatted="false">"NURBS kontrol noktalarını düzenle"</string>
+  <string name="ui_cedd93294b9d" formatted="false">"NURBS yüzey kontrol noktalarını düzenle"</string>
+  <string name="ui_b609016dca31" formatted="false">"Grafiği düzenle"</string>
+  <string name="ui_a58957e071b0" formatted="false">"Makroyu düzenle"</string>
+  <string name="ui_9cc1ae872dd0" formatted="false">"Sayısal parametreleri düzenle"</string>
+  <string name="ui_c568c20a08f3" formatted="false">"Özelliği düzenle"</string>
+  <string name="ui_add2e9497fe8" formatted="false">"Yüzey kontrol noktasını düzenle"</string>
+  <string name="ui_a432ede67bb8" formatted="false">"Ağırlıklı kontrol noktasını düzenle"</string>
+  <string name="ui_726c8ebd8a16" formatted="false">"Ağırlıklı kontrol noktalarını düzenle"</string>
+  <string name="ui_68dba1d505ac" formatted="false">"Hücreyi düzenle"</string>
+  <string name="ui_8580e3175f4e" formatted="false">"Elips"</string>
+  <string name="ui_bd97ca585fa7" formatted="false">"Boş çalışma alanı · model oluşturun veya içe aktarın"</string>
+  <string name="ui_1880c7fdf083" formatted="false">"Çoklu seçimi etkinleştir"</string>
+  <string name="ui_a4bedcc00e9c" formatted="false">"Bitiş uzatması (mm)"</string>
+  <string name="ui_c3efd7bc0e9e" formatted="false">"Bitiş parametresi (0 ile 1)"</string>
+  <string name="ui_56237f0f403d" formatted="false">"Yüzde 0 ile 20 arasında değer girin."</string>
+  <string name="ui_4431a60de813" formatted="false">"0.005 ile 0.5 mm arasında değer girin."</string>
+  <string name="ui_fe22ec60ad7c" formatted="false">"2 ile 64 arasında nokta girin"</string>
+  <string name="ui_e26f15805651" formatted="false">"Bir komut veya Help girin"</string>
+  <string name="ui_b91b13ed2ad4" formatted="false">"Sonlu bir sayı girin"</string>
+  <string name="ui_87980246c454" formatted="false">"Pozitif bir boyut girin."</string>
+  <string name="ui_588e543920ed" formatted="false">"Her seferinde bir komut girin"</string>
+  <string name="ui_99c29caf99a6" formatted="false">"Geçerli sayılar girin"</string>
+  <string name="ui_8e43a889e201" formatted="false">"Tahmini kütle"</string>
+  <string name="ui_d7132581b3dc" formatted="false">"Hesapla"</string>
+  <string name="ui_ebdc276d51c3" formatted="false">"Düğüm grafiğini hesapla"</string>
+  <string name="ui_9a451eaf4ae1" formatted="false">"Beklenen doğrusal çekme (%) · dökümhanenizin değerini kullanın"</string>
+  <string name="ui_c74982e3f0ae" formatted="false">"Deneysel yerel CAD · tüm ölçüler mm"</string>
+  <string name="ui_f3e4fadb9e37" formatted="false">"Dışa aktar"</string>
+  <string name="ui_5755f9ac0aa1" formatted="false">"CSV dışa aktar"</string>
+  <string name="ui_209ea2571f9a" formatted="false">"Python dosyasını dışa aktar"</string>
+  <string name="ui_b1336ed07450" formatted="false">"STL varyantlarını toplu dışa aktar"</string>
+  <string name="ui_b7e9d2ee1028" formatted="false">"Ağ dışa aktarım kalitesi"</string>
+  <string name="ui_90835234c58c" formatted="false">"Kurtarma kopyasını dışa aktar"</string>
+  <string name="ui_c934f0c6efba" formatted="false">"Dışa aktar · birim milimetre"</string>
+  <string name="ui_97b695b9b9cf" formatted="false">"İfade"</string>
+  <string name="ui_6f26fb48d63c" formatted="false">"İfade (ör. Source.Width * 2)"</string>
+  <string name="ui_bfa59f13f3da" formatted="false">"Düz çizgiyi uzat"</string>
+  <string name="ui_33272d4ea2f5" formatted="false">"Ekstrüzyon"</string>
+  <string name="ui_bf753d1d7540" formatted="false">"ÖN"</string>
+  <string name="ui_0c63436993af" formatted="false">"Üretim / kalıp açısı raporu"</string>
+  <string name="ui_2fa0d8e94fe5" formatted="false">"Üretim raporu"</string>
+  <string name="ui_bf8dec2b148f" formatted="false">"Hızlı · 10.000 üçgen"</string>
+  <string name="ui_ad565d9d01d0" formatted="false">"Özellik"</string>
+  <string name="ui_310f395a48b0" formatted="false">"İşlem geçmişi"</string>
+  <string name="ui_7e9b200cfc89" formatted="false">"İşlem geçmişi / eğri / yüzey araçları"</string>
+  <string name="ui_69fad97a6c85" formatted="false">"İşlem parametreleri"</string>
+  <string name="ui_c287aea6ca6e" formatted="false">"İşlem parametreleri · mm / derece"</string>
+  <string name="ui_a3cbb98ddf5e" formatted="false">"Dosya adı"</string>
+  <string name="ui_28da585bb9c5" formatted="false">"Düzlemsel delikleri doldur"</string>
+  <string name="ui_11b329023c07" formatted="false">"Düzlemsel ağ sınır deliklerini doldur"</string>
+  <string name="ui_d00513833e48" formatted="false">"Tüm kenarları yuvarlat"</string>
+  <string name="ui_7633fb1c78b4" formatted="false">"Yuvarlatma yarıçapı"</string>
+  <string name="ui_3d3195acfd27" formatted="false">"Ayrıntılı · 150.000 üçgen"</string>
+  <string name="ui_ebb5cdcc120b" formatted="false">"İlk katı / gövde"</string>
+  <string name="ui_f94e25075b34" formatted="false">"İlk değer"</string>
+  <string name="ui_e0c6bc5b780d" formatted="false">"Sığdır / görünüm"</string>
+  <string name="ui_c02484cb2ff4" formatted="false">"Görünenlerin tümüne sığdır"</string>
+  <string name="ui_231d301768c6" formatted="false">"Seçilene sığdır"</string>
+  <string name="ui_64435fd82de7" formatted="false">"Ondalıklı sayı"</string>
+  <string name="ui_7b7ef2314d09" formatted="false">"FreeCAD belge laboratuvarı"</string>
+  <string name="ui_dd19f9887573" formatted="false">"Ön"</string>
+  <string name="ui_536a4ca1b8a4" formatted="false">"GLB · görünür ağ / metre, Y yukarı"</string>
+  <string name="ui_0e0fef82d3e2" formatted="false">"Galeri et kalınlığı (mm)"</string>
+  <string name="ui_41ac41d23bc8" formatted="false">"Taş yuvası kesicisi"</string>
+  <string name="ui_76e7a3a3f9c2" formatted="false">"Başlangıç"</string>
+  <string name="ui_6799470dbaed" formatted="false">"Kemer / üst boşluk yüksekliği (mm)"</string>
+  <string name="ui_c57604db5869" formatted="false">"Altın"</string>
+  <string name="ui_4f74d5bdb9c4" formatted="false">"Grafik tarifleri"</string>
+  <string name="ui_78399476ef16" formatted="false">"Düğüm grafikleri"</string>
+  <string name="ui_e66f1d0faf30" formatted="false">"Izgara (mm)"</string>
+  <string name="ui_171a0606f7c7" formatted="false">"Grup"</string>
+  <string name="ui_b37e49a1decb" formatted="false">"Grup etiketi (isteğe bağlı)"</string>
+  <string name="ui_285b2e7f6ef8" formatted="false">"Grup etiketi 80 karakteri aşıyor"</string>
+  <string name="ui_6ef096c70437" formatted="false">"Grup üyeliği"</string>
+  <string name="ui_bf073fae640d" formatted="false">"Kılavuz"</string>
+  <string name="ui_63edab638bb0" formatted="false">"CAD şeklini onar"</string>
+  <string name="ui_c0df957feb34" formatted="false">"Yükseklik (mm)"</string>
+  <string name="ui_096df703ca5a" formatted="false">"Helis"</string>
+  <string name="ui_c47ae15370cf" formatted="false">"Yardım"</string>
+  <string name="ui_34d8b60fe253" formatted="false">"Gizle"</string>
+  <string name="ui_8295813677d4" formatted="false">"Tüm nesneleri gizle"</string>
+  <string name="ui_f1769e281b55" formatted="false">"Birden çok nesneyi gizle"</string>
+  <string name="ui_90ccd6497400" formatted="false">"Geçmiş"</string>
+  <string name="ui_e886724cafe9" formatted="false">"Düz üst yüzeyi boşalt"</string>
+  <string name="ui_d81caee8ffee" formatted="false">"IGES · görünür CAD geometrisi"</string>
+  <string name="ui_eeec98db23d7" formatted="false">"CSV içe aktar"</string>
+  <string name="ui_24617dd70272" formatted="false">"Python dosyasını içe aktar"</string>
+  <string name="ui_f2331487b964" formatted="false">"Dosyalardan içe aktar"</string>
+  <string name="ui_fcf425f09b31" formatted="false">"İç çap (mm)"</string>
+  <string name="ui_9edcffff4461" formatted="false">"Tam sayı"</string>
+  <string name="ui_f61b62753fb3" formatted="false">"Noktalardan geçen eğri"</string>
+  <string name="ui_19dc8265673d" formatted="false">"Noktalardan geçen eğri"</string>
+  <string name="ui_46ebb0829a2d" formatted="false">"Kesişim"</string>
+  <string name="ui_1373a3c2798a" formatted="false">"İzometrik"</string>
+  <string name="ui_686b2a0ddbbb" formatted="false">"Taş yuvaları"</string>
+  <string name="ui_9a7cd5bb7c20" formatted="false">"Takı şablonları / önayarlar"</string>
+  <string name="ui_0ef1b69ec7ca" formatted="false">"Takı şablonları ve kayıtlı parametreler"</string>
+  <string name="ui_e655ce9d27f1" formatted="false">"Takı kılavuzu"</string>
+  <string name="ui_b87372d942f5" formatted="false">"Bağlı eğrileri birleştir"</string>
+  <string name="ui_969e2cc476ff" formatted="false">"SOL"</string>
+  <string name="ui_74341e3c271d" formatted="false">"Etiket"</string>
+  <string name="ui_89b86ab0e66f" formatted="false">"Dil"</string>
+  <string name="ui_285f93e19e32" formatted="false">"Son değer"</string>
+  <string name="ui_4343635cf237" formatted="false">"Katman"</string>
+  <string name="ui_f055f18aeadc" formatted="false">"Katmanlar"</string>
+  <string name="ui_cebbb974d7b7" formatted="false">"Katmanlar / görünürlük / kilitler"</string>
+  <string name="ui_8ae1c34bd37f" formatted="false">"Sol"</string>
+  <string name="ui_3bade34ecbc5" formatted="false">"Uzunluk"</string>
+  <string name="ui_ea9676003762" formatted="false">"Çizgi"</string>
+  <string name="ui_24e92c277f48" formatted="false">"Doğrusal çoğaltma"</string>
+  <string name="ui_09f2903343d1" formatted="false">"Doğrusal tolerans (mm) · 0.005 ince, 0.015 normal, 0.1 kaba"</string>
+  <string name="ui_d0517071aa37" formatted="false">"Bağlantı"</string>
+  <string name="ui_74b7b0dd3206" formatted="false">"Bağlantı nesnesi"</string>
+  <string name="ui_aa6861f53dae" formatted="false">"Bağlı örnek"</string>
+  <string name="ui_b4a68deb3b48" formatted="false">"450 ms sonra canlı uygula · Geri al kayıtları oluşturur"</string>
+  <string name="ui_a410e77c1b37" formatted="false">"Yerel CAD motoru yükleniyor…"</string>
+  <string name="ui_891ebccd5baa" formatted="false">"Kilitle"</string>
+  <string name="ui_e143585c0ba6" formatted="false">"Geometriyi kilitle"</string>
+  <string name="ui_545377f346d1" formatted="false">"Geometri düzenlemesini ve görünümden seçimi kilitle"</string>
+  <string name="ui_cc7c4b4c6f24" formatted="false">"Profiller arasında yüzey oluştur"</string>
+  <string name="ui_899bd694d29a" formatted="false">"Makrolar"</string>
+  <string name="ui_3540cb5c297d" formatted="false">"Ana yarıçap (mm)"</string>
+  <string name="ui_a2a2624901f7" formatted="false">"Malzeme yoğunluğu (g/cm³) · alaşımınızın değerini girin"</string>
+  <string name="ui_a95e85aed563" formatted="false">"En büyük"</string>
+  <string name="ui_459606cf721f" formatted="false">"En fazla 80 bileşen"</string>
+  <string name="ui_10ad81d66b2a" formatted="false">"En yüksek onarım toleransı (mm)"</string>
+  <string name="ui_d4fd0a232ee5" formatted="false">"Ölç"</string>
+  <string name="ui_737bc96abf36" formatted="false">"Ölçümler"</string>
+  <string name="ui_bb0b32cbc0fc" formatted="false">"Ağ tel kafesi"</string>
+  <string name="ui_ec93954b46bf" formatted="false">"Yalnızca ağlar"</string>
+  <string name="ui_2994c4eb23e6" formatted="false">"Metaliklik · 0 yalıtkan ile 1 metal"</string>
+  <string name="ui_7eb0cee888ab" formatted="false">"En küçük"</string>
+  <string name="ui_d1f998fab103" formatted="false">"En kısa mesafe"</string>
+  <string name="ui_8dfb742fd17b" formatted="false">"+Z çıkarma yönündeki en düşük kalıp açısı (derece)"</string>
+  <string name="ui_897165b5f2b0" formatted="false">"En kısa geometrik mesafe"</string>
+  <string name="ui_03fc6d3db034" formatted="false">"Aynalanmış kopya"</string>
+  <string name="ui_48065392c2e7" formatted="false">"Düzleme göre aynalanmış kopya"</string>
+  <string name="ui_dfd6ee0a3f47" formatted="false">"Mobil hesap tablosu"</string>
+  <string name="ui_aca9f8f011ce" formatted="false">"Mobil hesap tablosu / CSV"</string>
+  <string name="ui_14b2a2193940" formatted="false">"Modelleme araçları"</string>
+  <string name="ui_76cdb9507216" formatted="false">"Taşı"</string>
+  <string name="ui_bb91d7496e90" formatted="false">"Taşıma tutamacı"</string>
+  <string name="ui_dd749481385c" formatted="false">"Taşıma tutamaçları"</string>
+  <string name="ui_5a7ad0f3c06e" formatted="false">"Birden çok nesneyi taşı"</string>
+  <string name="ui_8118fbf12f48" formatted="false">"Seçili nesneleri öteleyerek taşı"</string>
+  <string name="ui_17815ac4e761" formatted="false">"Birden çok nesne"</string>
+  <string name="ui_8f5af0d89485" formatted="false">"Çoklu seçim"</string>
+  <string name="ui_4435fd3cd5df" formatted="false">"NURBS eğrisi"</string>
+  <string name="ui_18e51d7ca4f0" formatted="false">"NURBS yüzey parçası"</string>
+  <string name="ui_83217d186dff" formatted="false">"NURBS kontrol noktası · düğümleri / dereceyi koru"</string>
+  <string name="ui_005d5f7561c3" formatted="false">"NURBS yüzey parçası"</string>
+  <string name="ui_5159e2ab8729" formatted="false">"NURBS · ağırlıklı kontrol noktaları"</string>
+  <string name="ui_709a23220f2c" formatted="false">"Ad"</string>
+  <string name="ui_cb04729f44c1" formatted="false">"Ad / katman / kilit"</string>
+  <string name="ui_b3b46e64b67d" formatted="false">"Gezinme küpü"</string>
+  <string name="ui_6403f2b7eb2a" formatted="false">"Yeni"</string>
+  <string name="ui_0e06e5aa9fcd" formatted="false">"Yeni makro"</string>
+  <string name="ui_5f757ccd0da4" formatted="false">"Yeni FreeCAD belgesi"</string>
+  <string name="ui_b21b860f611d" formatted="false">"Yeni çalışma alanı"</string>
+  <string name="ui_a72564d6e4b4" formatted="false">"Yeni çalışma alanı?"</string>
+  <string name="ui_d725873db2a9" formatted="false">"Kurtarma kopyası bulunamadı"</string>
+  <string name="ui_5e7d74314e91" formatted="false">"Düğüm grafiği"</string>
+  <string name="ui_9677e56e681b" formatted="false">"Normal X"</string>
+  <string name="ui_748053973486" formatted="false">"Normal Y"</string>
+  <string name="ui_1654fa1e2d9a" formatted="false">"Normal Z"</string>
+  <string name="ui_8bef9011feca" formatted="false">"Notlar · en fazla 200 karakter"</string>
+  <string name="ui_f355b3ee2130" formatted="false">"Sayı düğümü kimliği"</string>
+  <string name="ui_18ee83a01b5e" formatted="false">"Sayı, metin veya =formül"</string>
+  <string name="ui_d23b1aa45b35" formatted="false">"Sayılar sonlu olmalıdır"</string>
+  <string name="ui_447835a0a09a" formatted="false">"Sayısal taşıma"</string>
+  <string name="ui_71beef68f4dc" formatted="false">"Sayısal XYZ / ağırlık satırları"</string>
+  <string name="ui_cc5055a6a378" formatted="false">"OBJ · görünür ağ"</string>
+  <string name="ui_9ce3bd4224c8" formatted="false">"Tamam"</string>
+  <string name="ui_2883f191bc5e" formatted="false">"Nesne"</string>
+  <string name="ui_ef0a07fdc8fa" formatted="false">"Nesne rengi"</string>
+  <string name="ui_2e777cd14743" formatted="false">"Nesne rengi · gölgeli görüntüleme"</string>
+  <string name="ui_6b8bc88a7188" formatted="false">"Nesne adı"</string>
+  <string name="ui_6678efb1df85" formatted="false">"Nesne artık mevcut değil"</string>
+  <string name="ui_826a56438f54" formatted="false">"Nesne özellikleri"</string>
+  <string name="ui_72a83add2c5e" formatted="false">"Nesneler"</string>
+  <string name="ui_9adab2b1431c" formatted="false">"Nesneler / katmanlar"</string>
+  <string name="ui_dc3cd00d4b38" formatted="false">"Nesneler ve katmanlar"</string>
+  <string name="ui_10a737d901b1" formatted="false">"Çevrimdışı kılavuz"</string>
+  <string name="ui_5721351c711c" formatted="false">"CAD şeklini ötele"</string>
+  <string name="ui_3051e88f42f8" formatted="false">"Düzlemsel eğriyi ötele"</string>
+  <string name="ui_8fc8191265fa" formatted="false">"Bir sürgü → numaralı STL / tarif ZIP"</string>
+  <string name="ui_cf9b77061f7b" formatted="false">"Aç"</string>
+  <string name="ui_a8f03cc7dbbc" formatted="false">"Makroyu aç / düzenle"</string>
+  <string name="ui_da00e3718084" formatted="false">"CAD çalışma alanını aç"</string>
+  <string name="ui_b771e59a678e" formatted="false">"FCStd aç"</string>
+  <string name="ui_e734ec3352d6" formatted="false">"Özel kayıtlı dosyayı aç"</string>
+  <string name="ui_d706429c07da" formatted="false">"Tarif aç"</string>
+  <string name="ui_9591b86db5a3" formatted="false">"Kurtarma ekranını aç"</string>
+  <string name="ui_428224df902f" formatted="false">"Kayıtlı çalışma alanını aç"</string>
+  <string name="ui_34913ffea97c" formatted="false">"Çalışma alanı açılıyor"</string>
+  <string name="ui_c4e6ed956953" formatted="false">"İşlem başarısız"</string>
+  <string name="ui_ab3d9c6b9e83" formatted="false">"Düzenleme araçları"</string>
+  <string name="ui_22569744952d" formatted="false">"Dik yön"</string>
+  <string name="ui_eec92f96be86" formatted="false">"PNG dışa aktarımı"</string>
+  <string name="ui_47f82a4ce2c0" formatted="false">"PNG dışa aktarımı başarısız"</string>
+  <string name="ui_92568e6d4afa" formatted="false">"PNG boyutu / saydamlık"</string>
+  <string name="ui_6c706fa8c763" formatted="false">"PNG · stüdyo görünümü"</string>
+  <string name="ui_9750284506f8" formatted="false">"Parametrik grafik · bir düğüme dokunun, sonra Düzenle / bağla seçin.\nTürlü nokta / liste / geometri bağlantıları. Sayılar Hesapla ile güncellenir."</string>
+  <string name="ui_fecceacb8e2d" formatted="false">"Parametrik düğüm grafiği"</string>
+  <string name="ui_67b4d6aa8d08" formatted="false">"Pavilyon derinliği (mm)"</string>
+  <string name="ui_ca787afd2cfc" formatted="false">"Performans / görüntü ayrıntısı"</string>
+  <string name="ui_2dcff8cab2c4" formatted="false">"Eğri boyunca boru oluştur"</string>
+  <string name="ui_4248ec8cc433" formatted="false">"Tur başına adım (mm)"</string>
+  <string name="ui_f0316742b427" formatted="false">"Dönüş merkezi X"</string>
+  <string name="ui_7941fe8c6d14" formatted="false">"Dönüş merkezi Y"</string>
+  <string name="ui_f589ef1f2bb6" formatted="false">"Dönüş merkezi Z"</string>
+  <string name="ui_1caac1724986" formatted="false">"Düzlemsel delik onarımı"</string>
+  <string name="ui_2446f554c8a6" formatted="false">"Düzlem noktası X"</string>
+  <string name="ui_0aae9a49aace" formatted="false">"Düzlem noktası Y"</string>
+  <string name="ui_076c628bf59a" formatted="false">"Düzlem noktası Z"</string>
+  <string name="ui_f79a28423ed1" formatted="false">"Nokta"</string>
+  <string name="ui_2725a26b9f78" formatted="false">"Nokta koordinatları sonlu olmalıdır"</string>
+  <string name="ui_d3467ec940ec" formatted="false">"Dairesel çoğaltma"</string>
+  <string name="ui_dd0c89e0c5bb" formatted="false">"Çoklu çizgi"</string>
+  <string name="ui_ee2ddac07f73" formatted="false">"Milimetre cinsinden konum"</string>
+  <string name="ui_e7ab1c56ca33" formatted="false">"Hassas ölçüm araçları"</string>
+  <string name="ui_722d6c109308" formatted="false">"Özel belge çalışma ortamı hazırlanıyor…"</string>
+  <string name="ui_eb39e1d78db8" formatted="false">"Önayar adı"</string>
+  <string name="ui_56a1dd1806ff" formatted="false">"Baskı tablası / yönlendirme"</string>
+  <string name="ui_b21073d807ac" formatted="false">"Baskı hazırlığı"</string>
+  <string name="ui_d956b27d4917" formatted="false">"Yazıcı baskı hacmi"</string>
+  <string name="ui_6436426205f1" formatted="false">"Baskı ve dosyalar"</string>
+  <string name="ui_cc9b8a9dcbc7" formatted="false">"Özel belge"</string>
+  <string name="ui_a8407f5ba885" formatted="false">"Eğriyi XY düzlemine izdüşür"</string>
+  <string name="ui_7df994c15a89" formatted="false">"Tırnak çapı (mm)"</string>
+  <string name="ui_f2ce53ff937e" formatted="false">"Tırnaklı taş yuvası"</string>
+  <string name="ui_093d60ca22c8" formatted="false">"Tırnak sayısı · 3 ile 12 arasında tam sayı"</string>
+  <string name="ui_9ae33a7d0ecb" formatted="false">"Özellik"</string>
+  <string name="ui_6e3604888c4b" formatted="false">"Python"</string>
+  <string name="ui_3ccd1ee50a55" formatted="false">"Python konsolu · App / FreeCAD"</string>
+  <string name="ui_7cb8efa2f261" formatted="false">"Python makroları"</string>
+  <string name="ui_95253203f793" formatted="false">"SAĞ"</string>
+  <string name="ui_b527ad3e5740" formatted="false">"Yarıçap (mm)"</string>
+  <string name="ui_3114cd27eef6" formatted="false">"Yarıçap / mesafe / içe et kalınlığı (mm)"</string>
+  <string name="ui_98a146ad2070" formatted="false">"Topolojiyi oku"</string>
+  <string name="ui_3aa97c9aa909" formatted="false">"Önceki oturum okunuyor…"</string>
+  <string name="ui_1f97f67aae99" formatted="false">"Hazır · değişiklikler düzenlenebilir"</string>
+  <string name="ui_168bdcede5ac" formatted="false">"Hazır. Yazılımsal 3B görüntüleme açılışta OpenGL kullanmaz."</string>
+  <string name="ui_1f1ed2a6398e" formatted="false">"Son komutlar"</string>
+  <string name="ui_bcd73e477291" formatted="false">"İşlemi yeniden hesapla"</string>
+  <string name="ui_2c6ef2d11ed6" formatted="false">"Belge komutlarını kaydet"</string>
+  <string name="ui_ea924f72d31e" formatted="false">"Kurtarma"</string>
+  <string name="ui_dd988f1ae6ae" formatted="false">"Kurtarma ve proje sürümleri"</string>
+  <string name="ui_c158695a64ad" formatted="false">"Dikdörtgen"</string>
+  <string name="ui_da335870846f" formatted="false">"Dikdörtgen UV yüzey kırpma"</string>
+  <string name="ui_471b94d402d1" formatted="false">"Yinele"</string>
+  <string name="ui_d00c1074c0b3" formatted="false">"Örnek modeller"</string>
+  <string name="ui_86f6ce133bd3" formatted="false">"Örnek modeller · çalışma alanına eklenir"</string>
+  <string name="ui_92d700a362c3" formatted="false">"Nesneyi kaldır"</string>
+  <string name="ui_e066e80468f5" formatted="false">"Görüntüleme"</string>
+  <string name="ui_02b3766e464e" formatted="false">"Görüntüleme / kesit / PNG"</string>
+  <string name="ui_0d091771984a" formatted="false">"Ağ yönlerini düzelt / köşeleri birleştir"</string>
+  <string name="ui_28dcb9c55b8c" formatted="false">"Rapor dışa aktarımı"</string>
+  <string name="ui_b6229f942a60" formatted="false">"Mm cinsinden boyutlandır"</string>
+  <string name="ui_b134bd555a2f" formatted="false">"Yeniden başlat"</string>
+  <string name="ui_2d9ae7d5429e" formatted="false">"Belge laboratuvarı yeniden başlatılsın mı?"</string>
+  <string name="ui_0479c883ff33" formatted="false">"Laboratuvarı yeniden başlat"</string>
+  <string name="ui_c3a8355746ba" formatted="false">"Dönel şekil oluştur"</string>
+  <string name="ui_954daa8b0033" formatted="false">"Sağ"</string>
+  <string name="ui_96ddaccf581f" formatted="false">"Yüzük"</string>
+  <string name="ui_7a4f963d32cf" formatted="false">"Pembe altın"</string>
+  <string name="ui_87b85dca19e8" formatted="false">"Döndür"</string>
+  <string name="ui_840be5ca139d" formatted="false">"X etrafında 90° döndür"</string>
+  <string name="ui_d8f3714ed54a" formatted="false">"Y etrafında 90° döndür"</string>
+  <string name="ui_d14bf61a49f0" formatted="false">"Z etrafında 90° döndür"</string>
+  <string name="ui_2a215bfcb586" formatted="false">"Merkez etrafında döndür · derece"</string>
+  <string name="ui_8b879b1ecaea" formatted="false">"XY düzleminde eğri teğetine döndür (1 evet / 0 hayır)"</string>
+  <string name="ui_8a0e979e7a6c" formatted="false">"Pürüzlülük · .04 parlak ile 1 mat"</string>
+  <string name="ui_2e305b3b2d28" formatted="false">"Doğrusal (1) veya yumuşak (0)"</string>
+  <string name="ui_b1b392607dea" formatted="false">"Çalıştır"</string>
+  <string name="ui_1a58851ca34d" formatted="false">"Komutu çalıştır"</string>
+  <string name="ui_64019a30fa7b" formatted="false">"Çekirdek testlerini çalıştır"</string>
+  <string name="ui_07877327aa79" formatted="false">"Makroyu çalıştır"</string>
+  <string name="ui_1e314ab44923" formatted="false">"STEP · görünür CAD geometrisi"</string>
+  <string name="ui_290f4e40c0f7" formatted="false">"STL 2.000.000 üçgen sınırını aşıyor"</string>
+  <string name="ui_0a6c14b06f09" formatted="false">"STL/OBJ üçgenleme kalitesi"</string>
+  <string name="ui_fcb2b757547a" formatted="false">"SVG · seçili XY eğrisi / kesiti"</string>
+  <string name="ui_cac769760c5e" formatted="false">"Örneklenmiş CAD et kalınlığı"</string>
+  <string name="ui_efc007a393f6" formatted="false">"Kaydet"</string>
+  <string name="ui_c0ec36ff19cb" formatted="false">"FCStd kaydet"</string>
+  <string name="ui_4d7408933c8f" formatted="false">"SVG kaydet"</string>
+  <string name="ui_1299791e599b" formatted="false">"Çökme raporunu kaydet (.zip)"</string>
+  <string name="ui_1e7b70b3763f" formatted="false">"Yerel FCStd kaydet"</string>
+  <string name="ui_82889739ca33" formatted="false">"Önayarı kaydet"</string>
+  <string name="ui_05c1a9075f35" formatted="false">"Projeyi kaydet (.fcml)"</string>
+  <string name="ui_e3bccbc5ced0" formatted="false">"Tarifi kaydet (.cadgraph)"</string>
+  <string name="ui_a639aa0e6d33" formatted="false">"Komut kaydını kaydet"</string>
+  <string name="ui_e2535c2c7fdb" formatted="false">"Seçili parametreleri kaydet"</string>
+  <string name="ui_d762ec3ec2eb" formatted="false">"Şablon parametrelerini kaydet"</string>
+  <string name="ui_75c30fab8075" formatted="false">"Ölçek katsayısı"</string>
+  <string name="ui_203458e54e62" formatted="false">"Ölçek katsayısı · 1 boyutu korur, 1.02 %2 büyütür"</string>
+  <string name="ui_5a9f54c31200" formatted="false">"Betik özelliği"</string>
+  <string name="ui_d8a9144ff3eb" formatted="false">"Betikli QuantityDriver"</string>
+  <string name="ui_9b473b2aa252" formatted="false">"Ad, tür, kimlik veya katman ara"</string>
+  <string name="ui_d4f1dc7e77fd" formatted="false">"İkinci katı / kesici"</string>
+  <string name="ui_8598222918d3" formatted="false">"Seç"</string>
+  <string name="ui_3975d731f5d2" formatted="false">"Bir CAD katısı seçin"</string>
+  <string name="ui_9eea858822f8" formatted="false">"Bir model seçin"</string>
+  <string name="ui_bb229377716a" formatted="false">"Önce bir model seçin."</string>
+  <string name="ui_fb9985a198a2" formatted="false">"Bir kaynak nesne seçin"</string>
+  <string name="ui_3826ea3958d7" formatted="false">"Z=0 düzleminde bir XY eğrisi veya Section sonucu seçin."</string>
+  <string name="ui_983f5099f9ce" formatted="false">"Önce bir giriş nesnesi seçin."</string>
+  <string name="ui_57ca8c7c9891" formatted="false">"Bir nesne seçin"</string>
+  <string name="ui_97f557d1af78" formatted="false">"Önce bir nesne seçin."</string>
+  <string name="ui_426e995abe36" formatted="false">"Model seç"</string>
+  <string name="ui_10c1d5e15f27" formatted="false">"Nesne seç"</string>
+  <string name="ui_bd562c0fdb06" formatted="false">"Sonucu seç"</string>
+  <string name="ui_b16a2b5dc226" formatted="false">"Seçili malzeme"</string>
+  <string name="ui_28200a981443" formatted="false">"Seçili nesnenin özellikleri"</string>
+  <string name="ui_4807c8290649" formatted="false">"Seçili kenara pah kır"</string>
+  <string name="ui_a32785f0f077" formatted="false">"Seçili kenarı yuvarlat"</string>
+  <string name="ui_5bcf784a80b2" formatted="false">"Seçili yüzü kabuklaştır"</string>
+  <string name="ui_d1f8e5ea93b2" formatted="false">"Seçim"</string>
+  <string name="ui_35641f25595b" formatted="false">"Seçim filtreleri / çoklu seçim"</string>
+  <string name="ui_6251207ebc53" formatted="false">"Seçim modu"</string>
+  <string name="ui_b6fde6a79282" formatted="false">"Değer / formül"</string>
+  <string name="ui_fdc01d1fa7e7" formatted="false">"İfade belirle"</string>
+  <string name="ui_08450773cd38" formatted="false">"Bağlantı hedefini belirle"</string>
+  <string name="ui_c09a092a4a85" formatted="false">"En uzun kenarı belirle (mm)"</string>
+  <string name="ui_ad1dec08294e" formatted="false">"Özelliği belirle"</string>
+  <string name="ui_4bc799723453" formatted="false">"Değeri belirle"</string>
+  <string name="ui_6daafc18d343" formatted="false">"Yüzeyleri dik"</string>
+  <string name="ui_859f2b8bec08" formatted="false">"Yüzey dikme toleransı (mm)"</string>
+  <string name="ui_be35800f810f" formatted="false">"Gölgeli"</string>
+  <string name="ui_d97d1ee339e4" formatted="false">"Göster"</string>
+  <string name="ui_2866270d3aa2" formatted="false">"Tüm nesneleri göster"</string>
+  <string name="ui_646877551855" formatted="false">"Grafik çıktısı olarak göster"</string>
+  <string name="ui_8f01b2d4b6dc" formatted="false">"İşaretli öteleme (mm)"</string>
+  <string name="ui_8697f432058b" formatted="false">"Gümüş"</string>
+  <string name="ui_3594732ca359" formatted="false">"Çizim pedi"</string>
+  <string name="ui_455673bbb8a0" formatted="false">"Yakalama"</string>
+  <string name="ui_fb9da43b6bb0" formatted="false">"Yakalama: kontrol noktaları, kontrol parçalarının orta noktaları / kesişimleri ve ızgara. NURBS önizlemesi rasyoneldir; enterpolasyon Uygula seçilene kadar noktalardan geçen bir kılavuz kullanır."</string>
+  <string name="ui_bd390a2685ec" formatted="false">"Yazılımsal 3B"</string>
+  <string name="ui_e1c6f64d47b0" formatted="false">"Yazılımsal 3B etkin"</string>
+  <string name="ui_a6b985574468" formatted="false">"Grafik hatasından sonra yazılımsal 3B etkin"</string>
+  <string name="ui_b04a353cab8c" formatted="false">"Katı derinliği (mm)"</string>
+  <string name="ui_f0f6fc83bc0c" formatted="false">"Katı modelleme"</string>
+  <string name="ui_7287ba951dfa" formatted="false">"Katı · kapalı profiller"</string>
+  <string name="ui_a519b1824518" formatted="false">"Kapalı kabuğu katılaştır"</string>
+  <string name="ui_a8bf8702d77d" formatted="false">"Yalnızca katılar"</string>
+  <string name="ui_54ba4f63254d" formatted="false">"Kaynak nesne"</string>
+  <string name="ui_0446c388357c" formatted="false">"Küre"</string>
+  <string name="ui_74086ab9cda8" formatted="false">"Kare kenarı · 512 ile 2048 piksel"</string>
+  <string name="ui_23f05b92724b" formatted="false">"Boş CAD çalışma alanıyla başla"</string>
+  <string name="ui_77bb6b444f7d" formatted="false">"Boş çalışma alanıyla başla"</string>
+  <string name="ui_c20f18edd376" formatted="false">"Başlangıç uzatması (mm)"</string>
+  <string name="ui_7c894858f09c" formatted="false">"Başlangıç parametresi (0 ile 1)"</string>
+  <string name="ui_8aa6fa5ee485" formatted="false">"X adımı (mm)"</string>
+  <string name="ui_2e1cce7cf93b" formatted="false">"Y adımı (mm)"</string>
+  <string name="ui_2bf69ae4f910" formatted="false">"Z adımı (mm)"</string>
+  <string name="ui_3b48aeda246d" formatted="false">"Taş çapı (mm)"</string>
+  <string name="ui_9d9d2d9cbca2" formatted="false">"Taş yatağı derinliği (mm)"</string>
+  <string name="ui_a3d17bdd5ea2" formatted="false">"Taş yuvaları · gerçek CAD katıları"</string>
+  <string name="ui_3df63b7acb05" formatted="false">"Metin"</string>
+  <string name="ui_cfb90aa95fca" formatted="false">"Stüdyo malzemesi · nesne bazında kaydedilir"</string>
+  <string name="ui_39676d735f34" formatted="false">"Stüdyo · metaliklik / pürüzlülük önizlemesi"</string>
+  <string name="ui_e9e1b267887b" formatted="false">"Alt bölümlenmiş form"</string>
+  <string name="ui_7a020f9e3ec3" formatted="false">"Yüzey · açık veya kapalı profiller"</string>
+  <string name="ui_6b9c2e223136" formatted="false">"Yalnızca yüzeyler"</string>
+  <string name="ui_8c1998fcc55d" formatted="false">"Profili yol boyunca süpür"</string>
+  <string name="ui_06183458dae1" formatted="false">"Yazılımsal 3B görüntülemeye geçildi"</string>
+  <string name="ui_b48813fa0aec" formatted="false">"ÜST"</string>
+  <string name="ui_5395dff4ff26" formatted="false">"Önce bir kontrol noktasına dokunun"</string>
+  <string name="ui_834b595838a0" formatted="false">"Dokun → Düzenle / bağla"</string>
+  <string name="ui_fa25d24ffcc5" formatted="false">"Hedef XY düzleminin Z değeri (mm)"</string>
+  <string name="ui_241a0ebee249" formatted="false">"Hedef nesne"</string>
+  <string name="ui_df0ad373b7ff" formatted="false">"Turkuaz"</string>
+  <string name="ui_f34a7377087e" formatted="false">"Gravür metni"</string>
+  <string name="ui_3cc6e124a8e4" formatted="false">"Metin boyutu"</string>
+  <string name="ui_691af19dbbef" formatted="false">"Gravür için metin katısı"</string>
+  <string name="ui_91e91153cb8a" formatted="false">"Mevcut çalışma alanı temizlenecek. Bu oturumda Geri al ile kurtarabilirsiniz."</string>
+  <string name="ui_24da69de4da3" formatted="false">"İnce et kalınlığı eşiği (mm)"</string>
+  <string name="ui_a430ac3065f8" formatted="false">"Başlık · en fazla 100 karakter"</string>
+  <string name="ui_a09797fefea0" formatted="false">"Tolerans (mm)"</string>
+  <string name="ui_4fa8cc860c52" formatted="false">"Araçlar"</string>
+  <string name="ui_cae0435c41e8" formatted="false">"Üst"</string>
+  <string name="ui_c0c80372338a" formatted="false">"Üst kafes ölçeği · 0.1 ile 3"</string>
+  <string name="ui_19ed0b0dff13" formatted="false">"Üst kafes burulması (derece)"</string>
+  <string name="ui_1b03f33c6462" formatted="false">"Topoloji indisleri"</string>
+  <string name="ui_bb051365c738" formatted="false">"Torus"</string>
+  <string name="ui_a327452c36ed" formatted="false">"İşlem açık · bitirmek için onaylayın veya iptal edin"</string>
+  <string name="ui_dea51bb13a44" formatted="false">"Dönüştür"</string>
+  <string name="ui_5e139f45b5e7" formatted="false">"Seçili modeli dönüştür"</string>
+  <string name="ui_b4ebb5c52358" formatted="false">"Saydamlık değeri 0 veya 1 olmalıdır"</string>
+  <string name="ui_922c3af533a4" formatted="false">"Saydam arka plan · 1 evet / 0 hayır"</string>
+  <string name="ui_e13428fa3dba" formatted="false">"Eğriyi kırp"</string>
+  <string name="ui_a953639a616e" formatted="false">"OpenGL görüntülemeyi dene"</string>
+  <string name="ui_a5d13a93df36" formatted="false">"Boru yarıçapı (mm)"</string>
+  <string name="ui_917ac1cf92b5" formatted="false">"Tur sayısı · 0.1 ile 20"</string>
+  <string name="ui_d5dd582170ce" formatted="false">"U bitiş oranı"</string>
+  <string name="ui_3d899b54f27a" formatted="false">"U başlangıç oranı"</string>
+  <string name="ui_39fc72124884" formatted="false">"Geri al"</string>
+  <string name="ui_c1452b27c558" formatted="false">"Eş ölçekli büyütme / küçültme"</string>
+  <string name="ui_8964d3d618ce" formatted="false">"Birleştir"</string>
+  <string name="ui_1526a17ee757" formatted="false">"Kilidi kaldır"</string>
+  <string name="ui_79dc1391f805" formatted="false">"Geometri kilidini kaldır"</string>
+  <string name="ui_6e217f978cea" formatted="false">"Kaydedilmemiş laboratuvar belgeleri kapanacak. Kayıtlı FCStd dosyaları ve makrolar korunur. CAD çalışma alanı ayrı sürecinde kalır."</string>
+  <string name="ui_028679f571b4" formatted="false">"NURBS yüzey kırpmasını kaldır"</string>
+  <string name="ui_7dcb3f42d312" formatted="false">"Telefonun dilini kullan"</string>
+  <string name="ui_cbd3f9386e07" formatted="false">"V bitiş oranı"</string>
+  <string name="ui_8946abe055f7" formatted="false">"V başlangıç oranı"</string>
+  <string name="ui_321fc6124095" formatted="false">"Değer (ör. 2 cm)"</string>
+  <string name="ui_837297960104" formatted="false">"Değişken kümesi"</string>
+  <string name="ui_ac018db1f7b0" formatted="false">"Değişkenler"</string>
+  <string name="ui_69bd4ef9fbd0" formatted="false">"Görünüm"</string>
+  <string name="ui_7d9ff4f0de39" formatted="false">"Görünürlük"</string>
+  <string name="ui_656190362b0d" formatted="false">"Görünür harf yüksekliği (mm)"</string>
+  <string name="ui_3b18e8e33250" formatted="false">"Hacim"</string>
+  <string name="ui_f1d107a15b94" formatted="false">"Et kalınlığı (mm)"</string>
+  <string name="ui_e75b3f729f43" formatted="false">"Et kalınlığı (mm)"</string>
+  <string name="ui_69c0b81540bd" formatted="false">"Ağırlık"</string>
+  <string name="ui_47adf35d4345" formatted="false">"Birleştirme / düzlemsellik toleransı (mm)"</string>
+  <string name="ui_37619fc13053" formatted="false">"Beyaz"</string>
+  <string name="ui_a58ddf50c5ea" formatted="false">"Genişlik"</string>
+  <string name="ui_2e57c1b5da0b" formatted="false">"Genişlik (mm)"</string>
+  <string name="ui_8a751cd34485" formatted="false">"X genişliği (mm)"</string>
+  <string name="ui_13b7bfcac438" formatted="false">"Çalışıyor…"</string>
+  <string name="ui_4ca0a75c2b7f" formatted="false">"Çalışma alanı"</string>
+  <string name="ui_aefc2f5d68bf" formatted="false">"Çalışma alanı hazır"</string>
+  <string name="ui_66bb26002288" formatted="false">"Çalışma alanı açılamadı. Çökme raporunu kopyalamak için kurtarma ekranına dönün."</string>
+  <string name="ui_4337329c5887" formatted="false">"Dünya Z düzlemi (mm)"</string>
+  <string name="ui_8daa34bd2dff" formatted="false">"Dünya ekseni"</string>
+  <string name="ui_26f15614cab2" formatted="false">"X (mm)"</string>
+  <string name="ui_2186f223e3c8" formatted="false">"X yarıçapı (mm)"</string>
+  <string name="ui_1f48d503c02a" formatted="false">"XY kontrol noktaları · noktaları sürükleyin · Z / ağırlık için Nokta"</string>
+  <string name="ui_2d825843e49c" formatted="false">"XY çizimi · eklemek için dokunun, düzenlemek için sürükleyin · kıstırın / iki parmakla kaydırın"</string>
+  <string name="ui_59a3dfe477fe" formatted="false">"Y (mm)"</string>
+  <string name="ui_fd96870f3c87" formatted="false">"Y yarıçapı (mm)"</string>
+  <string name="ui_1d607f786bb3" formatted="false">"Z (mm)"</string>
+  <string name="ui_5e5de9014312" formatted="false">"Zebra · normal yönü çizgileri"</string>
+  <string name="ui_3cd3b258c914" formatted="false">"kontrol edilmedi (100.000\'den fazla üçgen)"</string>
+</resources>

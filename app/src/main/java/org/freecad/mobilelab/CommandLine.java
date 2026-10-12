@@ -9,7 +9,8 @@ final class CommandLine {
     static final Map<String,String> ALIASES=new HashMap<>(),CREATE=new HashMap<>();
     static {
         add("Help","Help [command] · show commands","?");
-        add("History","History · recent command input");
+        add("History","History · recent command input");add("Language","Language · interface language","dil","sprache");
+        String[][] local={{"kutu","Box"},{"küre","Sphere"},{"kure","Sphere"},{"silindir","Cylinder"},{"halka","Ring"},{"yardım","Help"},{"yardim","Help"},{"geri","Undo"},{"ileri","Redo"},{"aç","Open"},{"ac","Open"},{"kaydet","Save"},{"dışaaktar","Export"},{"disaaktar","Export"},{"hilfe","Help"},{"quader","Box"},{"kugel","Sphere"},{"zylinder","Cylinder"},{"speichern","Save"}};for(String[] alias:local)ALIASES.put(alias[0],alias[1]);
         primitive("Box","Box", "width depth height");primitive("Ring","Ring","innerDiameter wall bandWidth");
         primitive("Cylinder","Cylinder","radius height");primitive("Sphere","Sphere","radius");primitive("Torus","Torus","majorRadius tubeRadius");
         primitive("Circle","Circle","radius");primitive("Ellipse","Ellipse","xRadius yRadius");primitive("Rectangle","Rectangle","width depth");
@@ -38,7 +39,7 @@ final class CommandLine {
         for(String n:new String[]{"Fit","Top","Front","Right","Back","Bottom","Isometric","View","Create","Edit","Tools","Graph","Sketch","Open","Save","Export","Info","Analyze","Quality","Recovery","Tests","Objects","Gizmo"})add(n,n+" · open tool or view");
         ALIASES.put("ze","Fit");ALIASES.put("zoomextents","Fit");ALIASES.put("iso","Isometric");ALIASES.put("properties","Info");ALIASES.put("bezelsetting","Bezel");ALIASES.put("prongsetting","Prongs");
     }
-    static void add(String name,String usage,String...aliases){HELP.put(name,usage);ALIASES.put(name.toLowerCase(Locale.US),name);for(String a:aliases)ALIASES.put(a,name);}
+    static void add(String name,String usage,String...aliases){HELP.put(name,usage);ALIASES.put(name.toLowerCase(Locale.ROOT).replace("\u0307",""),name);for(String a:aliases)ALIASES.put(a,name);}
     static void primitive(String name,String type,String usage){CREATE.put(name,type);add(name,name+" "+usage+" · no arguments opens dimensions");}
     static final class Request {
         final String name;final List<String> args;
@@ -53,7 +54,7 @@ final class CommandLine {
         ArrayList<String> tokens=new ArrayList<>();StringBuilder token=new StringBuilder();boolean quoted=false,escape=false,started=false;
         for(char c:input.toCharArray()){if(c=='\n'||c=='\r'||c==';'||c==0)throw new IllegalArgumentException("Enter one command at a time");if(escape){token.append(c);started=true;escape=false;continue;}if(c=='\\'&&quoted){escape=true;continue;}if(c=='\"'){quoted=!quoted;started=true;continue;}if(!quoted&&(Character.isWhitespace(c)||c==',')){if(started){tokens.add(token.toString());token.setLength(0);started=false;}}else{token.append(c);started=true;}}
         if(quoted||escape)throw new IllegalArgumentException("Close the quoted value");if(started)tokens.add(token.toString());if(tokens.isEmpty())throw new IllegalArgumentException("Enter a command, or Help");if(tokens.size()>65)throw new IllegalArgumentException("Too many command arguments");
-        String raw=tokens.remove(0);if(raw.startsWith("_"))raw=raw.substring(1);String name=ALIASES.get(raw.toLowerCase(Locale.US));if(name==null)throw new IllegalArgumentException("Unknown command: "+raw+". Type Help.");return new Request(name,tokens);
+        String raw=tokens.remove(0);if(raw.startsWith("_"))raw=raw.substring(1);String name=ALIASES.get(raw.toLowerCase(Locale.ROOT).replace("\u0307",""));if(name==null)throw new IllegalArgumentException("Unknown command: "+raw+". Type Help.");return new Request(name,tokens);
     }
     static void count(Request r,int...allowed){for(int n:allowed)if(r.args.size()==n)return;throw new IllegalArgumentException(HELP.get(r.name));}
     static int integer(double x){if(x<1||x>Integer.MAX_VALUE||x!=Math.rint(x))throw new IllegalArgumentException("Expected a positive integer");return (int)x;}
@@ -112,5 +113,5 @@ final class CommandLine {
         else {count(r,1);kind=n.equals("Pipe")?"Pipe along curve":n.equals("OffsetCurve")?"Offset curve":n.equals("Offset")?"Offset shape":n.equals("Hollow")?"Hollow top":n.equals("Heal")?"Heal CAD":n;}
         int result=FeatureModel.model(kind,ids,p);for(int id:ids)NativeCad.visible(id,false);return result;
     }
-    static String help(String name){if(name!=null&&!name.isEmpty()){String canonical=ALIASES.get(name.toLowerCase(Locale.US));if(canonical==null)throw new IllegalArgumentException("Unknown command");return HELP.get(canonical);}StringBuilder b=new StringBuilder("Dimensions in mm. Select an object before editing. IDs appear on object chips.\nEnter repeats the previous command. Commands are local CAD actions.\n\n");for(String s:HELP.values())b.append(s).append('\n');return b.toString();}
+    static String help(String name){if(name!=null&&!name.isEmpty()){String canonical=ALIASES.get(name.toLowerCase(Locale.ROOT).replace("\u0307",""));if(canonical==null)throw new IllegalArgumentException("Unknown command");return HELP.get(canonical);}StringBuilder b=new StringBuilder("Dimensions in mm. Select an object before editing. IDs appear on object chips.\nEnter repeats the previous command. Commands are local CAD actions.\n\n");for(String s:HELP.values())b.append(s).append('\n');return b.toString();}
 }

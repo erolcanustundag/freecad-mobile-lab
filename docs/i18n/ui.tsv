@@ -1,0 +1,597 @@
+Language|Dil|Sprache
+Use phone language|Telefonun dilini kullan|Telefonsprache verwenden
+Could not save language preference|Dil tercihi kaydedilemedi|Spracheinstellung konnte nicht gespeichert werden
++ Create|+ Oluştur|+ Erstellen
+Create|Oluştur|Erstellen
+Edit|Düzenle|Bearbeiten
+Transform|Dönüştür|Transformieren
+Tools|Araçlar|Werkzeuge
+Run|Çalıştır|Ausführen
+Run command|Komutu çalıştır|Befehl ausführen
+Undo|Geri al|Rückgängig
+Redo|Yinele|Wiederholen
+Fit / view|Sığdır / görünüm|Einpassen / Ansicht
+Open|Aç|Öffnen
+Export|Dışa aktar|Exportieren
+Save|Kaydet|Speichern
+Cancel|İptal|Abbrechen
+Apply|Uygula|Anwenden
+Close|Kapat|Schließen
+OK|Tamam|OK
+New|Yeni|Neu
+Delete|Sil|Löschen
+Clear|Temizle|Leeren
+Help|Yardım|Hilfe
+Workspace|Çalışma alanı|Arbeitsbereich
+Save project (.fcml)|Projeyi kaydet (.fcml)|Projekt speichern (.fcml)
+New workspace|Yeni çalışma alanı|Neuer Arbeitsbereich
+New workspace?|Yeni çalışma alanı?|Neuer Arbeitsbereich?
+Run kernel tests|Çekirdek testlerini çalıştır|Kerntests ausführen
+About / licences|Hakkında / lisanslar|Info / Lizenzen
+Crash report / recovery|Çökme raporu / kurtarma|Absturzbericht / Wiederherstellung
+Offline guide|Çevrimdışı kılavuz|Offline-Anleitung
+Reference samples|Örnek modeller|Beispielmodelle
+Export recovery copy|Kurtarma kopyasını dışa aktar|Sicherungskopie exportieren
+FreeCAD document lab|FreeCAD belge laboratuvarı|FreeCAD-Dokumentlabor
+Open CAD workspace|CAD çalışma alanını aç|CAD-Arbeitsbereich öffnen
+Open saved workspace|Kayıtlı çalışma alanını aç|Gespeicherten Arbeitsbereich öffnen
+Start empty workspace|Boş çalışma alanıyla başla|Mit leerem Arbeitsbereich starten
+Start empty CAD workspace|Boş CAD çalışma alanıyla başla|Mit leerem CAD-Arbeitsbereich starten
+Try OpenGL renderer|OpenGL görüntülemeyi dene|OpenGL-Darstellung ausprobieren
+Copy crash report|Çökme raporunu kopyala|Absturzbericht kopieren
+Save crash report (.zip)|Çökme raporunu kaydet (.zip)|Absturzbericht speichern (.zip)
+Crash report copied|Çökme raporu kopyalandı|Absturzbericht kopiert
+Crash report saved|Çökme raporu kaydedildi|Absturzbericht gespeichert
+Report export|Rapor dışa aktarımı|Bericht exportieren
+Reading the previous session…|Önceki oturum okunuyor…|Vorherige Sitzung wird gelesen…
+Checking the previous session…|Önceki oturum kontrol ediliyor…|Vorherige Sitzung wird geprüft…
+Ready. Software 3D avoids OpenGL at startup.|Hazır. Yazılımsal 3B görüntüleme açılışta OpenGL kullanmaz.|Bereit. Software-3D verwendet beim Start kein OpenGL.
+A previous session crashed. Start an empty workspace with software 3D; the saved model will be kept as a recovery copy. Or copy the report below.|Önceki oturum çöktü. Yazılımsal 3B görüntüleme ile boş bir çalışma alanı açın; kayıtlı model kurtarma kopyası olarak korunur. Aşağıdaki raporu da kopyalayabilirsiniz.|Eine vorherige Sitzung ist abgestürzt. Öffnen Sie einen leeren Arbeitsbereich mit Software-3D; das gespeicherte Modell bleibt als Sicherung erhalten. Sie können auch den Bericht unten kopieren.
+Experimental native CAD · all dimensions in mm|Deneysel yerel CAD · tüm ölçüler mm|Experimentelles natives CAD · alle Maße in mm
+1 finger: orbit   ·   pinch: zoom   ·   2 fingers: pan|1 parmak: döndür   ·   kıstır: yakınlaştır   ·   2 parmak: kaydır|1 Finger: drehen   ·   Pinch: zoomen   ·   2 Finger: verschieben
+Loading native CAD engine…|Yerel CAD motoru yükleniyor…|Nativer CAD-Kern wird geladen…
+Command · Help, Box 20 10 4…|Komut · Yardim, Kutu 20 10 4…|Befehl · Hilfe, Quader 20 10 4…
+Command · Set Source.Width 2 cm|Komut · Set Source.Width 2 cm|Befehl · Set Source.Width 2 cm
+Command|Komut|Befehl
+Command help|Komut yardımı|Befehlshilfe
+Command reference|Komut başvurusu|Befehlsreferenz
+Recent commands|Son komutlar|Letzte Befehle
+History|Geçmiş|Verlauf
+Empty workspace · create or import a model|Boş çalışma alanı · model oluşturun veya içe aktarın|Leerer Arbeitsbereich · Modell erstellen oder importieren
+Opening workspace|Çalışma alanı açılıyor|Arbeitsbereich wird geöffnet
+Workspace ready|Çalışma alanı hazır|Arbeitsbereich bereit
+Operation failed|İşlem başarısız|Vorgang fehlgeschlagen
+CAD operation|CAD işlemi|CAD-Vorgang
+Open recovery screen|Kurtarma ekranını aç|Wiederherstellung öffnen
+Software 3D|Yazılımsal 3B|Software-3D
+Software 3D active|Yazılımsal 3B etkin|Software-3D aktiv
+Software 3D active after graphics failure|Grafik hatasından sonra yazılımsal 3B etkin|Software-3D nach Grafikfehler aktiv
+Switched to software 3D|Yazılımsal 3B görüntülemeye geçildi|Zu Software-3D gewechselt
+Workspace startup failed. Return to recovery to copy the crash report.|Çalışma alanı açılamadı. Çökme raporunu kopyalamak için kurtarma ekranına dönün.|Der Arbeitsbereich konnte nicht gestartet werden. Kehren Sie zur Wiederherstellung zurück, um den Absturzbericht zu kopieren.
+The current workspace will be cleared. Undo can recover it during this session.|Mevcut çalışma alanı temizlenecek. Bu oturumda Geri al ile kurtarabilirsiniz.|Der aktuelle Arbeitsbereich wird geleert. Rückgängig stellt ihn während dieser Sitzung wieder her.
+All measurements in millimetres|Tüm ölçüler milimetre cinsindedir|Alle Maße in Millimetern
+Create · millimetres|Oluştur · milimetre|Erstellen · Millimeter
+Basic solids|Temel katılar|Grundkörper
+Curves / profiles|Eğriler / profiller|Kurven / Profile
+Jewellery settings|Taş yuvaları|Steinfassungen
+Stone settings · actual CAD solids|Taş yuvaları · gerçek CAD katıları|Steinfassungen · echte CAD-Körper
+CAD objects|CAD nesneleri|CAD-Objekte
+CAD curve / profile|CAD eğrisi / profili|CAD-Kurve / Profil
+CAD surface / shell|CAD yüzeyi / kabuğu|CAD-Fläche / Schale
+Box|Kutu|Quader
+Ring|Yüzük|Ring
+Cylinder|Silindir|Zylinder
+Sphere|Küre|Kugel
+Torus|Torus|Torus
+Circle|Daire|Kreis
+Ellipse|Elips|Ellipse
+Rectangle|Dikdörtgen|Rechteck
+Helix|Helis|Helix
+Sketch pad|Çizim pedi|Skizzenblock
+Bezel setting|Sıvama taş yuvası|Zargenfassung
+Prong setting|Tırnaklı taş yuvası|Krappenfassung
+Gemstone cutter|Taş yuvası kesicisi|Steinsitz-Schneidkörper
+Subdivision form|Alt bölümlenmiş form|Unterteilungsform
+NURBS patch|NURBS yüzey parçası|NURBS-Flächenstück
+NURBS surface patch|NURBS yüzey parçası|NURBS-Flächenstück
+NURBS curve|NURBS eğrisi|NURBS-Kurve
+NURBS · weighted control points|NURBS · ağırlıklı kontrol noktaları|NURBS · gewichtete Kontrollpunkte
+Interpolated curve|Noktalardan geçen eğri|Interpolierte Kurve
+Interpolated curve · through points|Noktalardan geçen eğri|Interpolierte Kurve · durch Punkte
+Polyline|Çoklu çizgi|Polylinie
+Line|Çizgi|Linie
+Arc|Yay|Bogen
+Draw curve|Eğri çiz|Kurve zeichnen
+Draw XY sketch with snap grid|Yakalama ızgarasıyla XY çizimi yap|XY-Skizze mit Fangraster zeichnen
+Edit NURBS poles|NURBS kontrol noktalarını düzenle|NURBS-Kontrollpunkte bearbeiten
+Edit weighted poles|Ağırlıklı kontrol noktalarını düzenle|Gewichtete Kontrollpunkte bearbeiten
+Drag weighted poles in XY|Ağırlıklı kontrol noktalarını XY düzleminde sürükle|Gewichtete Kontrollpunkte in XY ziehen
+Curves and profiles|Eğriler ve profiller|Kurven und Profile
+Curves and history|Eğriler ve işlem geçmişi|Kurven und Verlauf
+Width (mm)|Genişlik (mm)|Breite (mm)
+Width X (mm)|X genişliği (mm)|Breite X (mm)
+Depth (mm)|Derinlik (mm)|Tiefe (mm)
+Depth Y (mm)|Y derinliği (mm)|Tiefe Y (mm)
+Height (mm)|Yükseklik (mm)|Höhe (mm)
+Radius (mm)|Yarıçap (mm)|Radius (mm)
+X radius (mm)|X yarıçapı (mm)|X-Radius (mm)
+Y radius (mm)|Y yarıçapı (mm)|Y-Radius (mm)
+Inner diameter (mm)|İç çap (mm)|Innendurchmesser (mm)
+Wall thickness (mm)|Et kalınlığı (mm)|Wandstärke (mm)
+Wall (mm)|Et kalınlığı (mm)|Wandstärke (mm)
+Band width / height (mm)|Yüzük kolu genişliği / yüksekliği (mm)|Ringbandbreite / Höhe (mm)
+Major radius (mm)|Ana yarıçap (mm)|Hauptradius (mm)
+Tube radius (mm)|Boru yarıçapı (mm)|Rohrradius (mm)
+Pitch per turn (mm)|Tur başına adım (mm)|Steigung pro Windung (mm)
+Turns · 0.1 to 20|Tur sayısı · 0.1 ile 20|Windungen · 0.1 bis 20
+Stone diameter (mm)|Taş çapı (mm)|Steindurchmesser (mm)
+Stone seat depth (mm)|Taş yatağı derinliği (mm)|Steinsitztiefe (mm)
+Prong diameter (mm)|Tırnak çapı (mm)|Krappendurchmesser (mm)
+Prongs · integer 3 to 12|Tırnak sayısı · 3 ile 12 arasında tam sayı|Krappen · ganze Zahl von 3 bis 12
+Pavilion depth (mm)|Pavilyon derinliği (mm)|Pavillontiefe (mm)
+Girdle / upper clearance height (mm)|Kemer / üst boşluk yüksekliği (mm)|Rundiste / obere Freiraumhöhe (mm)
+Gallery wall (mm)|Galeri et kalınlığı (mm)|Galeriewand (mm)
+Cage width (mm)|Kafes genişliği (mm)|Käfigbreite (mm)
+Cage depth (mm)|Kafes derinliği (mm)|Käfigtiefe (mm)
+Cage height (mm)|Kafes yüksekliği (mm)|Käfighöhe (mm)
+Control cage width (mm)|Kontrol kafesi genişliği (mm)|Kontrollkäfigbreite (mm)
+Control cage depth (mm)|Kontrol kafesi derinliği (mm)|Kontrollkäfigtiefe (mm)
+Centre control-point bulge (mm)|Merkez kontrol noktası kabarıklığı (mm)|Wölbung des mittleren Kontrollpunkts (mm)
+Catmull-Clark levels · integer 1 to 4|Catmull-Clark düzeyi · 1 ile 4 arasında tam sayı|Catmull-Clark-Stufen · ganze Zahl von 1 bis 4
+Top cage scale · 0.1 to 3|Üst kafes ölçeği · 0.1 ile 3|Oberer Käfigmaßstab · 0.1 bis 3
+Top cage twist (degrees)|Üst kafes burulması (derece)|Verdrehung des oberen Käfigs (Grad)
+Name|Ad|Name
+Label|Etiket|Bezeichnung
+Object|Nesne|Objekt
+Objects|Nesneler|Objekte
+Object name|Nesne adı|Objektname
+Object properties|Nesne özellikleri|Objekteigenschaften
+Selected properties|Seçili nesnenin özellikleri|Eigenschaften der Auswahl
+Name / layer / lock|Ad / katman / kilit|Name / Ebene / Sperre
+Layer|Katman|Ebene
+Layers|Katmanlar|Ebenen
+Layers / visibility / locks|Katmanlar / görünürlük / kilitler|Ebenen / Sichtbarkeit / Sperren
+Objects / layers|Nesneler / katmanlar|Objekte / Ebenen
+Objects and layers|Nesneler ve katmanlar|Objekte und Ebenen
+Search name, type, ID or layer|Ad, tür, kimlik veya katman ara|Nach Name, Typ, ID oder Ebene suchen
+Lock geometry|Geometriyi kilitle|Geometrie sperren
+Unlock geometry|Geometri kilidini kaldır|Geometrie entsperren
+Lock geometry edits and viewport selection|Geometri düzenlemesini ve görünümden seçimi kilitle|Geometriebearbeitung und Auswahl im Ansichtsfenster sperren
+Show all objects|Tüm nesneleri göster|Alle Objekte anzeigen
+Hide all objects|Tüm nesneleri gizle|Alle Objekte ausblenden
+Show|Göster|Anzeigen
+Hide|Gizle|Ausblenden
+Lock|Kilitle|Sperren
+Unlock|Kilidi kaldır|Entsperren
+Visibility|Görünürlük|Sichtbarkeit
+Selection|Seçim|Auswahl
+Selection filters / multiple|Seçim filtreleri / çoklu seçim|Auswahlfilter / Mehrfachauswahl
+Selection mode|Seçim modu|Auswahlmodus
+All objects|Tüm nesneler|Alle Objekte
+Solids only|Yalnızca katılar|Nur Körper
+Curves only|Yalnızca eğriler|Nur Kurven
+Surfaces only|Yalnızca yüzeyler|Nur Flächen
+Meshes only|Yalnızca ağlar|Nur Netze
+CAD faces|CAD yüzleri|CAD-Flächen
+CAD edges|CAD kenarları|CAD-Kanten
+CAD vertices|CAD köşeleri|CAD-Eckpunkte
+Enable multiple selection|Çoklu seçimi etkinleştir|Mehrfachauswahl aktivieren
+Disable multiple selection|Çoklu seçimi kapat|Mehrfachauswahl deaktivieren
+Choose multiple objects|Birden çok nesne seç|Mehrere Objekte auswählen
+Move multiple objects|Birden çok nesneyi taşı|Mehrere Objekte verschieben
+Hide multiple objects|Birden çok nesneyi gizle|Mehrere Objekte ausblenden
+Delete multiple objects|Birden çok nesneyi sil|Mehrere Objekte löschen
+Multiple objects|Birden çok nesne|Mehrere Objekte
+Multiple selection|Çoklu seçim|Mehrfachauswahl
+Select|Seç|Auswählen
+Select object|Nesne seç|Objekt auswählen
+Select model|Model seç|Modell auswählen
+Select an object|Bir nesne seçin|Ein Objekt auswählen
+Select an object first.|Önce bir nesne seçin.|Zuerst ein Objekt auswählen.
+Select a model|Bir model seçin|Ein Modell auswählen
+Select a model first.|Önce bir model seçin.|Zuerst ein Modell auswählen.
+Select a source object|Bir kaynak nesne seçin|Ein Quellobjekt auswählen
+Select an input object first.|Önce bir giriş nesnesi seçin.|Zuerst ein Eingabeobjekt auswählen.
+Select a CAD solid|Bir CAD katısı seçin|Einen CAD-Körper auswählen
+Create or import a model first.|Önce bir model oluşturun veya içe aktarın.|Zuerst ein Modell erstellen oder importieren.
+Create or import an object first|Önce bir nesne oluşturun veya içe aktarın|Zuerst ein Objekt erstellen oder importieren
+Create or select an object first.|Önce bir nesne oluşturun veya seçin.|Zuerst ein Objekt erstellen oder auswählen.
+Move|Taşı|Verschieben
+Move handles|Taşıma tutamaçları|Verschiebegriffe
+Move handle|Taşıma tutamacı|Verschiebegriff
+Numeric Move|Sayısal taşıma|Numerisch verschieben
+Transform selected model|Seçili modeli dönüştür|Ausgewähltes Modell transformieren
+Move selected objects by offset|Seçili nesneleri öteleyerek taşı|Ausgewählte Objekte um einen Versatz verschieben
+Delta X mm|X ötelemesi (mm)|Versatz X (mm)
+Delta Y mm|Y ötelemesi (mm)|Versatz Y (mm)
+Delta Z mm|Z ötelemesi (mm)|Versatz Z (mm)
+Position in millimetres|Milimetre cinsinden konum|Position in Millimetern
+Rotate|Döndür|Drehen
+Rotate about centre · degrees|Merkez etrafında döndür · derece|Um den Mittelpunkt drehen · Grad
+Uniform scale|Eş ölçekli büyütme / küçültme|Gleichmäßig skalieren
+Scale factor|Ölçek katsayısı|Skalierungsfaktor
+Duplicate|Kopyala|Duplizieren
+Duplicate · offset in mm|Kopyala · mm cinsinden öteleme|Duplizieren · Versatz in mm
+Mirror copy|Aynalanmış kopya|Gespiegelte Kopie
+Mirror copy across plane|Düzleme göre aynalanmış kopya|Kopie an einer Ebene spiegeln
+Linear array|Doğrusal çoğaltma|Lineare Anordnung
+Polar array|Dairesel çoğaltma|Polare Anordnung
+Array along curve|Eğri boyunca çoğaltma|Entlang einer Kurve anordnen
+Copies including original · 2 to 100|Asıl nesne dahil kopya sayısı · 2 ile 100|Kopien einschließlich Original · 2 bis 100
+Count · integer 2 to 10|Adet · 2 ile 10 arasında tam sayı|Anzahl · ganze Zahl von 2 bis 10
+Count · integer 2 to 100|Adet · 2 ile 100 arasında tam sayı|Anzahl · ganze Zahl von 2 bis 100
+Step X (mm)|X adımı (mm)|Schritt X (mm)
+Step Y (mm)|Y adımı (mm)|Schritt Y (mm)
+Step Z (mm)|Z adımı (mm)|Schritt Z (mm)
+Centre X|Merkez X|Mittelpunkt X
+Centre Y|Merkez Y|Mittelpunkt Y
+Centre Z|Merkez Z|Mittelpunkt Z
+Pivot X|Dönüş merkezi X|Drehpunkt X
+Pivot Y|Dönüş merkezi Y|Drehpunkt Y
+Pivot Z|Dönüş merkezi Z|Drehpunkt Z
+Axis X|Eksen X|Achse X
+Axis Y|Eksen Y|Achse Y
+Axis Z|Eksen Z|Achse Z
+World axis|Dünya ekseni|Weltachse
+Angle (degrees)|Açı (derece)|Winkel (Grad)
+Angle degrees|Açı (derece)|Winkel in Grad
+Plane point X|Düzlem noktası X|Ebenenpunkt X
+Plane point Y|Düzlem noktası Y|Ebenenpunkt Y
+Plane point Z|Düzlem noktası Z|Ebenenpunkt Z
+Normal X|Normal X|Normale X
+Normal Y|Normal Y|Normale Y
+Normal Z|Normal Z|Normale Z
+Booleans / fillet|Katı işlemleri / yuvarlatma|Boolesche Operationen / Abrunden
+Solid modelling|Katı modelleme|Volumenmodellierung
+Modelling tools|Modelleme araçları|Modellierwerkzeuge
+Union / fuse|Birleştir|Vereinigen
+Cut / subtract|Çıkar / kes|Ausschneiden / Subtrahieren
+Intersect|Kesişim|Schnittmenge
+Fillet all edges|Tüm kenarları yuvarlat|Alle Kanten abrunden
+Chamfer all edges|Tüm kenarlara pah kır|Alle Kanten fasen
+Hollow planar top|Düz üst yüzeyi boşalt|Körper an ebener Oberseite aushöhlen
+Offset CAD shape|CAD şeklini ötele|CAD-Form versetzen
+Heal CAD shape|CAD şeklini onar|CAD-Form reparieren
+First solid / body|İlk katı / gövde|Erster Körper
+Second solid / tool|İkinci katı / kesici|Zweiter Körper / Werkzeug
+Fillet radius|Yuvarlatma yarıçapı|Abrundungsradius
+Chamfer distance|Pah mesafesi|Fasenabstand
+Radius / distance / inward wall (mm)|Yarıçap / mesafe / içe et kalınlığı (mm)|Radius / Abstand / innere Wandstärke (mm)
+Maximum healing tolerance (mm)|En yüksek onarım toleransı (mm)|Maximale Reparaturtoleranz (mm)
+Selected-edge fillet|Seçili kenarı yuvarlat|Ausgewählte Kanten abrunden
+Selected-edge chamfer|Seçili kenara pah kır|Ausgewählte Kanten fasen
+Selected-face shell|Seçili yüzü kabuklaştır|Schale mit ausgewählten Flächen
+Feature history / curve / surface tools|İşlem geçmişi / eğri / yüzey araçları|Merkmalsverlauf / Kurven- / Flächenwerkzeuge
+Feature history|İşlem geçmişi|Merkmalsverlauf
+Feature parameters|İşlem parametreleri|Merkmalsparameter
+Feature parameters · mm / degrees|İşlem parametreleri · mm / derece|Merkmalsparameter · mm / Grad
+Edit numeric parameters|Sayısal parametreleri düzenle|Numerische Parameter bearbeiten
+Recompute feature|İşlemi yeniden hesapla|Merkmal neu berechnen
+Detach recipe; keep geometry|İşlem bağını kaldır; geometriyi koru|Rezept lösen; Geometrie behalten
+Edit weighted pole|Ağırlıklı kontrol noktasını düzenle|Gewichteten Kontrollpunkt bearbeiten
+Edit NURBS surface poles|NURBS yüzey kontrol noktalarını düzenle|NURBS-Flächenkontrollpunkte bearbeiten
+Cross-section / 2D drawing|Kesit / 2B çizim|Querschnitt / 2D-Zeichnung
+Closed profile to planar region|Kapalı profilden düzlemsel bölge|Geschlossenes Profil in ebene Fläche umwandeln
+Extrude|Ekstrüzyon|Extrudieren
+Revolve|Dönel şekil oluştur|Rotieren
+Loft profiles|Profiller arasında yüzey oluştur|Profile loften
+Sweep profile along rail|Profili yol boyunca süpür|Profil entlang einer Führung ziehen
+Pipe along curve|Eğri boyunca boru oluştur|Rohr entlang einer Kurve erstellen
+Trim curve|Eğriyi kırp|Kurve trimmen
+Offset planar curve|Düzlemsel eğriyi ötele|Ebene Kurve versetzen
+Join connected curves|Bağlı eğrileri birleştir|Verbundene Kurven vereinigen
+Project curve onto XY plane|Eğriyi XY düzlemine izdüşür|Kurve auf XY-Ebene projizieren
+Extend straight line|Düz çizgiyi uzat|Gerade verlängern
+Curve curvature report|Eğri eğrilik raporu|Kurvenkrümmungsbericht
+Rectangular UV patch trim|Dikdörtgen UV yüzey kırpma|Rechteckiges UV-Flächentrimmen
+Untrim NURBS patch|NURBS yüzey kırpmasını kaldır|NURBS-Fläche enttrimmen
+Sew surfaces|Yüzeyleri dik|Flächen vernähen
+Solidify closed shell|Kapalı kabuğu katılaştır|Geschlossene Schale in Körper umwandeln
+Topology indices|Topoloji indisleri|Topologieindizes
+Read topology|Topolojiyi oku|Topologie lesen
+Edit surface pole|Yüzey kontrol noktasını düzenle|Flächenkontrollpunkt bearbeiten
+NURBS pole · preserve knots / degree|NURBS kontrol noktası · düğümleri / dereceyi koru|NURBS-Kontrollpunkt · Knoten / Grad erhalten
+Solid · closed profiles|Katı · kapalı profiller|Körper · geschlossene Profile
+Surface · open or closed profiles|Yüzey · açık veya kapalı profiller|Fläche · offene oder geschlossene Profile
+Ruled (1) or smooth (0)|Doğrusal (1) veya yumuşak (0)|Regelfläche (1) oder glatt (0)
+Signed offset (mm)|İşaretli öteleme (mm)|Versatz mit Vorzeichen (mm)
+Tolerance (mm)|Tolerans (mm)|Toleranz (mm)
+Start parameter fraction (0 to 1)|Başlangıç parametresi (0 ile 1)|Startparameter (0 bis 1)
+End parameter fraction (0 to 1)|Bitiş parametresi (0 ile 1)|Endparameter (0 bis 1)
+Start extension (mm)|Başlangıç uzatması (mm)|Verlängerung am Anfang (mm)
+End extension (mm)|Bitiş uzatması (mm)|Verlängerung am Ende (mm)
+Target XY plane Z (mm)|Hedef XY düzleminin Z değeri (mm)|Z der Ziel-XY-Ebene (mm)
+U start fraction|U başlangıç oranı|U-Startanteil
+U end fraction|U bitiş oranı|U-Endanteil
+V start fraction|V başlangıç oranı|V-Startanteil
+V end fraction|V bitiş oranı|V-Endanteil
+Sewing tolerance (mm)|Yüzey dikme toleransı (mm)|Vernähtoleranz (mm)
+Dimensions|Ölçüler|Abmessungen
+Measurements|Ölçümler|Messungen
+Measure|Ölç|Messen
+Distance|Mesafe|Abstand
+Angle|Açı|Winkel
+Area|Alan|Fläche
+Volume|Hacim|Volumen
+Length|Uzunluk|Länge
+Width|Genişlik|Breite
+Calculator|Hesap makinesi|Rechner
+Document variables|Belge değişkenleri|Dokumentvariablen
+Variables|Değişkenler|Variablen
+Minimum geometric distance|En kısa geometrik mesafe|Minimaler geometrischer Abstand
+Distance between CAD objects|CAD nesneleri arasındaki mesafe|Abstand zwischen CAD-Objekten
+Align objects|Nesneleri hizala|Objekte ausrichten
+Align matching bounds|Sınırları eşleştirerek hizala|Begrenzungen passend ausrichten
+Fit selected|Seçilene sığdır|Auswahl einpassen
+Fit all visible|Görünenlerin tümüne sığdır|Alle sichtbaren Objekte einpassen
+Target object|Hedef nesne|Zielobjekt
+Source object|Kaynak nesne|Quellobjekt
+Minimum distance|En kısa mesafe|Minimaler Abstand
+Object colour · shaded display|Nesne rengi · gölgeli görüntüleme|Objektfarbe · schattierte Darstellung
+Gold|Altın|Gold
+Silver|Gümüş|Silber
+Rose gold|Pembe altın|Roségold
+Teal|Turkuaz|Türkis
+Blue|Mavi|Blau
+White|Beyaz|Weiß
+Rendering|Görüntüleme|Darstellung
+Rendering / clipping / PNG|Görüntüleme / kesit / PNG|Darstellung / Schnitt / PNG
+Shaded|Gölgeli|Schattiert
+Studio · metallic / roughness preview|Stüdyo · metaliklik / pürüzlülük önizlemesi|Studio · Metall- / Rauheitsvorschau
+Zebra · normal stripes|Zebra · normal yönü çizgileri|Zebra · Normalenstreifen
+Mesh wireframe|Ağ tel kafesi|Netzdrahtmodell
+Selected material|Seçili malzeme|Ausgewähltes Material
+Clip above world Z plane|Dünya Z düzlemi üstünü kes|Oberhalb der Welt-Z-Ebene abschneiden
+Disable clipping|Kesiti kapat|Schnitt deaktivieren
+PNG size / transparency|PNG boyutu / saydamlık|PNG-Größe / Transparenz
+Performance / display detail|Performans / görüntü ayrıntısı|Leistung / Darstellungsdetails
+Display detail · export keeps full quality|Görüntü ayrıntısı · dışa aktarım tam kaliteyi korur|Darstellungsdetails · Export behält volle Qualität
+Fast · 10,000 triangles|Hızlı · 10.000 üçgen|Schnell · 10.000 Dreiecke
+Balanced · 50,000 triangles|Dengeli · 50.000 üçgen|Ausgewogen · 50.000 Dreiecke
+Fine · 150,000 triangles|Ayrıntılı · 150.000 üçgen|Fein · 150.000 Dreiecke
+Automatic · software frame timing|Otomatik · yazılımsal kare süresi|Automatisch · Software-Bilddauer
+Display performance|Görüntüleme performansı|Darstellungsleistung
+Studio material · saved per object|Stüdyo malzemesi · nesne bazında kaydedilir|Studiomaterial · pro Objekt gespeichert
+Roughness · .04 polished to 1 matte|Pürüzlülük · .04 parlak ile 1 mat|Rauheit · .04 poliert bis 1 matt
+Metallic · 0 dielectric to 1 metal|Metaliklik · 0 yalıtkan ile 1 metal|Metallisch · 0 dielektrisch bis 1 metallisch
+World Z plane (mm)|Dünya Z düzlemi (mm)|Welt-Z-Ebene (mm)
+PNG export|PNG dışa aktarımı|PNG-Export
+Square side · 512 to 2048 pixels|Kare kenarı · 512 ile 2048 piksel|Quadratseite · 512 bis 2048 Pixel
+Transparent background · 1 yes / 0 no|Saydam arka plan · 1 evet / 0 hayır|Transparenter Hintergrund · 1 ja / 0 nein
+3D view|3B görünüm|3D-Ansicht
+View|Görünüm|Ansicht
+Navigation cube|Gezinme küpü|Navigationswürfel
+Top|Üst|Oben
+Bottom|Alt|Unten
+Front|Ön|Vorne
+Back|Arka|Hinten
+Left|Sol|Links
+Right|Sağ|Rechts
+Isometric|İzometrik|Isometrisch
+TOP|ÜST|OBEN
+BOTTOM|ALT|UNTEN
+FRONT|ÖN|VORNE
+BACK|ARKA|HINTEN
+LEFT|SOL|LINKS
+RIGHT|SAĞ|RECHTS
+Print prep|Baskı hazırlığı|Druckvorbereitung
+Print bed / orientation|Baskı tablası / yönlendirme|Druckbett / Ausrichtung
+Check bed envelope / axis permutations|Baskı hacmini / eksen seçeneklerini kontrol et|Bauraum / Achsenanordnungen prüfen
+Centre selected model on Z=0 bed|Seçili modeli Z=0 tablasında ortala|Ausgewähltes Modell auf Z=0-Druckbett zentrieren
+Rotate 90° about X|X etrafında 90° döndür|90° um X drehen
+Rotate 90° about Y|Y etrafında 90° döndür|90° um Y drehen
+Rotate 90° about Z|Z etrafında 90° döndür|90° um Z drehen
+Sampled CAD wall thickness|Örneklenmiş CAD et kalınlığı|Abgetastete CAD-Wandstärke
+Printer build envelope|Yazıcı baskı hacmi|Druckerbauraum
+Bed X (mm)|Tabla X (mm)|Druckbett X (mm)
+Bed Y (mm)|Tabla Y (mm)|Druckbett Y (mm)
+Build height Z (mm)|Baskı yüksekliği Z (mm)|Bauhöhe Z (mm)
+Clearance margin (mm)|Boşluk payı (mm)|Freiraum (mm)
+Thin-wall threshold (mm)|İnce et kalınlığı eşiği (mm)|Schwelle für dünne Wände (mm)
+Approximate thickness|Yaklaşık et kalınlığı|Ungefähre Wandstärke
+Fabrication report|Üretim raporu|Fertigungsbericht
+Fabrication / draft report|Üretim / kalıp açısı raporu|Fertigungs- / Entformungsbericht
+Minimum draft angle to +Z pull direction (degrees)|+Z çıkarma yönündeki en düşük kalıp açısı (derece)|Minimaler Entformungswinkel zur +Z-Richtung (Grad)
+Repair mesh winding / weld|Ağ yönlerini düzelt / köşeleri birleştir|Netzorientierung reparieren / verschweißen
+Fill planar mesh boundary holes|Düzlemsel ağ sınır deliklerini doldur|Ebene Netzrandlöcher füllen
+Planar hole repair|Düzlemsel delik onarımı|Reparatur ebener Löcher
+Fill planar holes|Düzlemsel delikleri doldur|Ebene Löcher füllen
+Welding / planarity tolerance (mm)|Birleştirme / düzlemsellik toleransı (mm)|Schweiß- / Ebenheitstoleranz (mm)
+Export · units millimetres|Dışa aktar · birim milimetre|Export · Einheiten in Millimetern
+Binary STL · visible geometry|İkili STL · görünür geometri|Binär-STL · sichtbare Geometrie
+STEP · visible CAD geometry|STEP · görünür CAD geometrisi|STEP · sichtbare CAD-Geometrie
+IGES · visible CAD geometry|IGES · görünür CAD geometrisi|IGES · sichtbare CAD-Geometrie
+OBJ · visible mesh|OBJ · görünür ağ|OBJ · sichtbares Netz
+BREP · visible CAD geometry|BREP · görünür CAD geometrisi|BREP · sichtbare CAD-Geometrie
+SVG · selected XY curve / section|SVG · seçili XY eğrisi / kesiti|SVG · ausgewählte XY-Kurve / Schnitt
+DXF · selected XY curve / section|DXF · seçili XY eğrisi / kesiti|DXF · ausgewählte XY-Kurve / Schnitt
+PNG · studio view|PNG · stüdyo görünümü|PNG · Studioansicht
+3MF · visible mesh / mm|3MF · görünür ağ / mm|3MF · sichtbares Netz / mm
+GLB · visible mesh / metres, Y up|GLB · görünür ağ / metre, Y yukarı|GLB · sichtbares Netz / Meter, Y nach oben
+Export mesh quality|Ağ dışa aktarım kalitesi|Netzexportqualität
+STL/OBJ tessellation quality|STL/OBJ üçgenleme kalitesi|STL/OBJ-Tessellierungsqualität
+Linear tolerance (mm) · 0.005 fine, 0.015 normal, 0.1 coarse|Doğrusal tolerans (mm) · 0.005 ince, 0.015 normal, 0.1 kaba|Lineare Toleranz (mm) · 0.005 fein, 0.015 normal, 0.1 grob
+Drawing sheet|Çizim sayfası|Zeichnungsblatt
+Dimensioned drawing sheet|Ölçülendirilmiş çizim sayfası|Bemaßtes Zeichnungsblatt
+Title · up to 100 characters|Başlık · en fazla 100 karakter|Titel · bis zu 100 Zeichen
+Notes · up to 200 characters|Notlar · en fazla 200 karakter|Anmerkungen · bis zu 200 Zeichen
+Save SVG|SVG kaydet|SVG speichern
+A4 SVG · overall width and height in mm. XY profile at Z=0. Print at 100%, no page fit.|A4 SVG · toplam genişlik ve yükseklik mm cinsindedir. XY profili Z=0 düzleminde olmalı. %100 ölçekte, sayfaya sığdırma kapalıyken yazdırın.|A4-SVG · Gesamtbreite und -höhe in mm. XY-Profil bei Z=0. Mit 100% ohne Seitenanpassung drucken.
+Select an XY curve or Section result at Z=0.|Z=0 düzleminde bir XY eğrisi veya Section sonucu seçin.|Eine XY-Kurve oder ein Section-Ergebnis bei Z=0 auswählen.
+Jewellery templates / presets|Takı şablonları / önayarlar|Schmuckvorlagen / Voreinstellungen
+Jewellery templates and saved parameters|Takı şablonları ve kayıtlı parametreler|Schmuckvorlagen und gespeicherte Parameter
+Save selected parameters|Seçili parametreleri kaydet|Ausgewählte Parameter speichern
+Save template parameters|Şablon parametrelerini kaydet|Vorlagenparameter speichern
+Preset name|Önayar adı|Name der Voreinstellung
+Save preset|Önayarı kaydet|Voreinstellung speichern
+Text solid for engraving|Gravür için metin katısı|Textkörper für Gravur
+Text for engraving|Gravür metni|Gravurtext
+Text size|Metin boyutu|Textgröße
+Visible letter height (mm)|Görünür harf yüksekliği (mm)|Sichtbare Buchstabenhöhe (mm)
+Solid depth (mm)|Katı derinliği (mm)|Körpertiefe (mm)
+Estimated mass|Tahmini kütle|Geschätzte Masse
+Material density (g/cm³) · enter your alloy's value|Malzeme yoğunluğu (g/cm³) · alaşımınızın değerini girin|Materialdichte (g/cm³) · Wert Ihrer Legierung eingeben
+Casting shrinkage allowance|Döküm çekme payı|Gussschrumpfungszugabe
+Expected linear shrinkage (%) · use your foundry value|Beklenen doğrusal çekme (%) · dökümhanenizin değerini kullanın|Erwartete lineare Schrumpfung (%) · Gießereiwert verwenden
+Casting allowance · enlarge the model|Döküm payı · modeli büyüt|Gusszugabe · Modell vergrößern
+Scale factor · 1 keeps size, 1.02 enlarges 2%|Ölçek katsayısı · 1 boyutu korur, 1.02 %2 büyütür|Skalierungsfaktor · 1 behält die Größe, 1.02 vergrößert um 2%
+Curve array|Eğri boyunca çoğaltma|Kurvenanordnung
+Rotate in XY to curve tangent (1 yes / 0 no)|XY düzleminde eğri teğetine döndür (1 evet / 0 hayır)|In XY zur Kurventangente drehen (1 ja / 0 nein)
+Reference samples · added to workspace|Örnek modeller · çalışma alanına eklenir|Beispielmodelle · zum Arbeitsbereich hinzufügen
+Getting started|Başlangıç|Erste Schritte
+Jewellery tutorial|Takı kılavuzu|Schmuckanleitung
+Graphs|Düğüm grafikleri|Knotengraphen
+Printing and files|Baskı ve dosyalar|Drucken und Dateien
+Recovery and project versions|Kurtarma ve proje sürümleri|Wiederherstellung und Projektversionen
+Candidate status|Sürüm durumu|Versionsstatus
+Precision tools|Hassas ölçüm araçları|Präzisionswerkzeuge
+Organisation tools|Düzenleme araçları|Organisationswerkzeuge
+Guide|Kılavuz|Anleitung
+Mobile spreadsheet|Mobil hesap tablosu|Mobile Tabelle
+Mobile spreadsheet / CSV|Mobil hesap tablosu / CSV|Mobile Tabelle / CSV
+Number, text, or =formula|Sayı, metin veya =formül|Zahl, Text oder =Formel
+Import CSV|CSV içe aktar|CSV importieren
+Export CSV|CSV dışa aktar|CSV exportieren
+Edit worksheet cell|Hücreyi düzenle|Tabellenzelle bearbeiten
+Parametric node graph|Parametrik düğüm grafiği|Parametrischer Knotengraph
+Node graph|Düğüm grafiği|Knotengraph
+Add component|Bileşen ekle|Komponente hinzufügen
+Edit / connect|Düzenle / bağla|Bearbeiten / Verbinden
+Evaluate|Hesapla|Auswerten
+Choose input|Giriş seç|Eingabe auswählen
+Show as graph output|Grafik çıktısı olarak göster|Als Graphausgabe anzeigen
+Group label (optional)|Grup etiketi (isteğe bağlı)|Gruppenbezeichnung (optional)
+Live apply after 450 ms · creates Undo checkpoints|450 ms sonra canlı uygula · Geri al kayıtları oluşturur|Nach 450 ms live anwenden · erstellt Rückgängig-Punkte
+Graph recipes|Grafik tarifleri|Graphrezepte
+Save recipe (.cadgraph)|Tarifi kaydet (.cadgraph)|Rezept speichern (.cadgraph)
+Open recipe|Tarif aç|Rezept öffnen
+One slider → numbered STL / recipe ZIP|Bir sürgü → numaralı STL / tarif ZIP|Ein Regler → nummerierte STL / Rezept-ZIP
+Batch variants|Toplu varyantlar|Variantenserie
+Number node ID|Sayı düğümü kimliği|ID des Zahlenknotens
+First value|İlk değer|Erster Wert
+Last value|Son değer|Letzter Wert
+New upstream document|Yeni FreeCAD belgesi|Neues FreeCAD-Dokument
+New macro|Yeni makro|Neues Makro
+Documents|Belgeler|Dokumente
+Property|Özellik|Eigenschaft
+Add property|Özellik ekle|Eigenschaft hinzufügen
+Set / formula|Değer / formül|Wert / Formel
+Save FCStd|FCStd kaydet|FCStd speichern
+Open FCStd|FCStd aç|FCStd öffnen
+Begin edit|Düzenlemeyi başlat|Bearbeitung starten
+Commit|Onayla|Bestätigen
+Cancel edit|Düzenlemeyi iptal et|Bearbeitung abbrechen
+Python|Python|Python
+Macros|Makrolar|Makros
+API|API|API
+Script feature|Betik özelliği|Skriptmerkmal
+Restart lab|Laboratuvarı yeniden başlat|Labor neu starten
+Recovery|Kurtarma|Wiederherstellung
+Restart document lab?|Belge laboratuvarı yeniden başlatılsın mı?|Dokumentlabor neu starten?
+Restart|Yeniden başlat|Neu starten
+Unsaved lab documents will close. Saved FCStd files and macros are kept. The CAD workspace stays in its separate process.|Kaydedilmemiş laboratuvar belgeleri kapanacak. Kayıtlı FCStd dosyaları ve makrolar korunur. CAD çalışma alanı ayrı sürecinde kalır.|Ungespeicherte Labordokumente werden geschlossen. Gespeicherte FCStd-Dateien und Makros bleiben erhalten. Der CAD-Arbeitsbereich bleibt in seinem separaten Prozess.
+Preparing private document runtime…|Özel belge çalışma ortamı hazırlanıyor…|Private Dokumentumgebung wird vorbereitet…
+Working…|Çalışıyor…|Wird bearbeitet…
+Ready · changes remain editable|Hazır · değişiklikler düzenlenebilir|Bereit · Änderungen bleiben bearbeitbar
+Transaction open · commit or cancel to finish|İşlem açık · bitirmek için onaylayın veya iptal edin|Transaktion offen · zum Abschließen bestätigen oder abbrechen
+Create a document, or open a supported FCStd metadata document.|Bir belge oluşturun veya desteklenen bir FCStd üstveri belgesi açın.|Ein Dokument erstellen oder ein unterstütztes FCStd-Metadatendokument öffnen.
+Document operation|Belge işlemi|Dokumentvorgang
+Feature|Özellik|Merkmal
+Group|Grup|Gruppe
+Linked instance|Bağlı örnek|Verknüpfte Instanz
+Variable set|Değişken kümesi|Variablensatz
+Remove object|Nesneyi kaldır|Objekt entfernen
+Add to group|Gruba ekle|Zur Gruppe hinzufügen
+Set link target|Bağlantı hedefini belirle|Verknüpfungsziel festlegen
+Group membership|Grup üyeliği|Gruppenzugehörigkeit
+Link object|Bağlantı nesnesi|Verknüpfungsobjekt
+Edit property|Özelliği düzenle|Eigenschaft bearbeiten
+Set value|Değeri belirle|Wert setzen
+Set expression|İfade belirle|Ausdruck setzen
+Clear expression|İfadeyi temizle|Ausdruck löschen
+Set property|Özelliği belirle|Eigenschaft setzen
+Expression|İfade|Ausdruck
+Value (e.g. 2 cm)|Değer (ör. 2 cm)|Wert (z. B. 2 cm)
+Expression (e.g. Source.Width * 2)|İfade (ör. Source.Width * 2)|Ausdruck (z. B. Source.Width * 2)
+Filename|Dosya adı|Dateiname
+Save native FCStd|Yerel FCStd kaydet|Natives FCStd speichern
+Import from files|Dosyalardan içe aktar|Aus Dateien importieren
+Open private saved file|Özel kayıtlı dosyayı aç|Private gespeicherte Datei öffnen
+Private document|Özel belge|Privates Dokument
+Close active document|Etkin belgeyi kapat|Aktives Dokument schließen
+Document commands|Belge komutları|Dokumentbefehle
+Python console · App / FreeCAD|Python konsolu · App / FreeCAD|Python-Konsole · App / FreeCAD
+Python macros|Python makroları|Python-Makros
+Open / edit macro|Makroyu aç / düzenle|Makro öffnen / bearbeiten
+Run macro|Makroyu çalıştır|Makro ausführen
+Record document commands|Belge komutlarını kaydet|Dokumentbefehle aufzeichnen
+Save recording|Komut kaydını kaydet|Aufzeichnung speichern
+Import Python file|Python dosyasını içe aktar|Python-Datei importieren
+Export Python file|Python dosyasını dışa aktar|Python-Datei exportieren
+Edit macro|Makroyu düzenle|Makro bearbeiten
+Available Python API|Kullanılabilir Python API|Verfügbare Python-API
+Scripted QuantityDriver|Betikli QuantityDriver|Skriptbasierter QuantityDriver
+Enter valid numbers|Geçerli sayılar girin|Gültige Zahlen eingeben
+Enter a finite number|Sonlu bir sayı girin|Eine endliche Zahl eingeben
+Enter a positive size.|Pozitif bir boyut girin.|Eine positive Größe eingeben.
+Enter 0.005 to 0.5 mm.|0.005 ile 0.5 mm arasında değer girin.|Einen Wert zwischen 0.005 und 0.5 mm eingeben.
+Enter 0 to 20 percent.|Yüzde 0 ile 20 arasında değer girin.|Einen Wert zwischen 0 und 20 Prozent eingeben.
+Enter one command at a time|Her seferinde bir komut girin|Jeweils einen Befehl eingeben
+Command is missing or too long|Komut eksik veya çok uzun|Befehl fehlt oder ist zu lang
+Enter a command, or Help|Bir komut veya Help girin|Einen Befehl oder Help eingeben
+Close the quoted value|Tırnak içindeki değeri kapatın|Den Wert in Anführungszeichen abschließen
+Numbers must be finite|Sayılar sonlu olmalıdır|Zahlen müssen endlich sein
+Object no longer exists|Nesne artık mevcut değil|Das Objekt existiert nicht mehr
+No recovery copy found|Kurtarma kopyası bulunamadı|Keine Sicherungskopie gefunden
+Cannot open destination|Hedef açılamadı|Ziel kann nicht geöffnet werden
+Cannot open input|Giriş açılamadı|Eingabe kann nicht geöffnet werden
+Cannot open output|Çıkış açılamadı|Ausgabe kann nicht geöffnet werden
+Cannot read graph|Grafik okunamadı|Graph konnte nicht gelesen werden
+Maximum 80 components|En fazla 80 bileşen|Maximal 80 Komponenten
+Add at least two points|En az iki nokta ekleyin|Mindestens zwei Punkte hinzufügen
+Closed curve needs three points|Kapalı eğri için üç nokta gerekir|Eine geschlossene Kurve benötigt drei Punkte
+Closed curve requires Polyline / Interpolated curve|Kapalı eğri için Polyline veya Interpolated curve seçin|Für eine geschlossene Kurve Polyline oder Interpolated curve auswählen
+Group label exceeds 80 characters|Grup etiketi 80 karakteri aşıyor|Gruppenbezeichnung überschreitet 80 Zeichen
+Transparency must be 0 or 1|Saydamlık değeri 0 veya 1 olmalıdır|Transparenz muss 0 oder 1 sein
+PNG export failed|PNG dışa aktarımı başarısız|PNG-Export fehlgeschlagen
+Enter 2 to 64 points|2 ile 64 arasında nokta girin|2 bis 64 Punkte eingeben
+Points must be finite|Nokta koordinatları sonlu olmalıdır|Punktkoordinaten müssen endlich sein
+Grid mm|Izgara (mm)|Raster (mm)
+Closed|Kapalı|Geschlossen
+Snap|Yakalama|Fangen
+Ortho|Dik yön|Orthogonal
+Point|Nokta|Punkt
+Weight|Ağırlık|Gewicht
+X mm|X (mm)|X (mm)
+Y mm|Y (mm)|Y (mm)
+Z mm|Z (mm)|Z (mm)
+Tap a pole first|Önce bir kontrol noktasına dokunun|Zuerst einen Kontrollpunkt antippen
+XY poles · drag points · Z / weight via Point|XY kontrol noktaları · noktaları sürükleyin · Z / ağırlık için Nokta|XY-Kontrollpunkte · Punkte ziehen · Z / Gewicht über Punkt
+XY sketch · tap to add, drag to edit · pinch / two fingers pan|XY çizimi · eklemek için dokunun, düzenlemek için sürükleyin · kıstırın / iki parmakla kaydırın|XY-Skizze · zum Hinzufügen tippen, zum Bearbeiten ziehen · Pinch / mit zwei Fingern verschieben
+Tap → Edit / connect|Dokun → Düzenle / bağla|Tippen → Bearbeiten / Verbinden
+Snap: poles, control-segment midpoints/intersections and grid. NURBS preview is rational; interpolation uses a through-point guide until Apply.|Yakalama: kontrol noktaları, kontrol parçalarının orta noktaları / kesişimleri ve ızgara. NURBS önizlemesi rasyoneldir; enterpolasyon Uygula seçilene kadar noktalardan geçen bir kılavuz kullanır.|Fangen: Kontrollpunkte, Mittelpunkte / Schnittpunkte der Kontrollsegmente und Raster. Die NURBS-Vorschau ist rational; die Interpolation verwendet bis Anwenden eine Führung durch die Punkte.
+Parametric graph · tap a node, then Edit / connect.\nTyped point/list/geometry ports. Number values update on Evaluate.|Parametrik grafik · bir düğüme dokunun, sonra Düzenle / bağla seçin.\nTürlü nokta / liste / geometri bağlantıları. Sayılar Hesapla ile güncellenir.|Parametrischer Graph · Knoten antippen, dann Bearbeiten / Verbinden.\nTypisierte Punkt- / Listen- / Geometrieanschlüsse. Zahlen werden mit Auswerten aktualisiert.
+A1:H32 · tap a cell to edit. Formulas start with = and can use cells or document variables. Geometry uses evaluated snapshots.|A1:H32 · düzenlemek için hücreye dokunun. Formüller = ile başlar; hücreleri veya belge değişkenlerini kullanabilir. Geometri hesaplanan anlık değerleri kullanır.|A1:H32 · zum Bearbeiten eine Zelle antippen. Formeln beginnen mit = und können Zellen oder Dokumentvariablen verwenden. Geometrie verwendet ausgewertete Momentaufnahmen.
+STL exceeds 2,000,000 triangles|STL 2.000.000 üçgen sınırını aşıyor|STL überschreitet 2.000.000 Dreiecke
+Align to object|Nesneye hizala|An Objekt ausrichten
+Analyze|Analiz et|Analysieren
+Centre|Merkez|Mitte
+Display detail|Görüntü ayrıntısı|Darstellungsdetails
+Edge / face indices|Kenar / yüz indisleri|Kanten- / Flächenindizes
+Edit / resize|Düzenle / yeniden boyutlandır|Bearbeiten / Größe ändern
+Edit graph|Grafiği düzenle|Graph bearbeiten
+Evaluate node graph|Düğüm grafiğini hesapla|Knotengraph auswerten
+Export batch of STL variants|STL varyantlarını toplu dışa aktar|STL-Variantenserie exportieren
+Max|En büyük|Maximum
+Min|En küçük|Minimum
+Numeric XYZ / weight rows|Sayısal XYZ / ağırlık satırları|Numerische XYZ- / Gewichtszeilen
+Object colour|Nesne rengi|Objektfarbe
+Resize to mm|Mm cinsinden boyutlandır|Größe in mm ändern
+Select result|Sonucu seç|Ergebnis auswählen
+Set longest side (mm)|En uzun kenarı belirle (mm)|Längste Seite festlegen (mm)
+unchecked (more than 100,000 triangles)|kontrol edilmedi (100.000'den fazla üçgen)|ungeprüft (mehr als 100.000 Dreiecke)
+Float|Ondalıklı sayı|Fließkommazahl
+Integer|Tam sayı|Ganzzahl
+String|Metin|Text
+Bool|Mantıksal değer|Boolescher Wert
+Link|Bağlantı|Verknüpfung
