@@ -1,0 +1,1063 @@
+{
+  "baseline": "FreeCAD 1.1.4",
+  "updated": "2026-10-11",
+  "batch_size": 4,
+  "completion_rule": "All four feature scopes implemented and tested before an engineering APK. Device parity stays pending until device evidence exists. Large feature scopes are subdivided into additional four-feature sub-batches; adding placeholders or menus does not count.",
+  "stable_1_0": "NOT_COMPLETE",
+  "batches": [
+    {
+      "id": "B01",
+      "area": "Precision access",
+      "features": [
+        {
+          "id": "B01-F1",
+          "scope": "Scalar expressions and saved variables",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        },
+        {
+          "id": "B01-F2",
+          "scope": "Object / CAD-distance / point-angle measurement",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        },
+        {
+          "id": "B01-F3",
+          "scope": "Arbitrary-axis pivot rotation and scaling",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        },
+        {
+          "id": "B01-F4",
+          "scope": "Interactive orientation cube",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        }
+      ],
+      "apk": "FreeCAD-Mobile-Lab-1.0-rc3-arm64.apk",
+      "evidence": {
+        "math_assertions": 11562,
+        "native_assertions": 38,
+        "command_assertions": 168,
+        "candidate_assertions": 59,
+        "baseline_assertions": 25694,
+        "dense_stl_triangles": 1441792,
+        "freeform_assertions": 459,
+        "android_runtime": "NOT_RUN"
+      }
+    },
+    {
+      "id": "B02",
+      "area": "Document organisation",
+      "features": [
+        {
+          "id": "B02-F1",
+          "scope": "Bounded spreadsheet editor and CSV exchange",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        },
+        {
+          "id": "B02-F2",
+          "scope": "Bounding-box object alignment",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        },
+        {
+          "id": "B02-F3",
+          "scope": "Fit selected object",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        },
+        {
+          "id": "B02-F4",
+          "scope": "Layer visibility / locking controls",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        }
+      ],
+      "apk": "FreeCAD-Mobile-Lab-1.0-rc4-arm64.apk",
+      "evidence": {
+        "organisation_assertions": 65,
+        "math_assertions": 11562,
+        "native_precision_assertions": 38,
+        "command_assertions": 180,
+        "candidate_assertions": 59,
+        "feature_assertions": 44,
+        "rendering_assertions": 4762,
+        "mobile_math_assertions": 517,
+        "baseline_assertions": 25694,
+        "dense_stl_triangles": 1441792,
+        "freeform_assertions": 459,
+        "android_runtime": "NOT_RUN",
+        "docs": [
+          "PARITY-B02.md",
+          "BATCH02-USER-GUIDE.md"
+        ]
+      }
+    },
+    {
+      "id": "B03",
+      "area": "Document core",
+      "features": [
+        {
+          "id": "B03-F1",
+          "scope": "Port FreeCAD Base/App dependency build",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        },
+        {
+          "id": "B03-F2",
+          "scope": "Native document/property/recompute adapter",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        },
+        {
+          "id": "B03-F3",
+          "scope": "Transactions, Undo/Redo and expression dependencies",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        },
+        {
+          "id": "B03-F4",
+          "scope": "Native FCStd read/write round-trip",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        }
+      ],
+      "apk": "FreeCAD-Mobile-Lab-1.0-rc5-arm64.apk",
+      "evidence": {
+        "upstream_version": "1.1.4",
+        "host_reference_assertions": 28,
+        "arm64_core": "Base/App/FreeCAD.so cross-build passed",
+        "arm64_libraries_verified": 92,
+        "verification": [
+          "16 KiB LOAD",
+          "loader-name closure",
+          "strong-symbol availability against provided libraries/API26"
+        ],
+        "android_runtime": "NOT_RUN",
+        "jni_adapter": "IMPLEMENTED_HOST_88_PASS",
+        "apk_contains_core": true,
+        "docs": [
+          "FREECAD-CORE-PORT.md",
+          "PARITY-B03.md",
+          "BATCH03-USER-GUIDE.md"
+        ],
+        "host_adapter_assertions": 88,
+        "apk_jni_libraries": 54,
+        "packaged_libraries_and_extensions": 123,
+        "python_asset_files": 820
+      },
+      "limitations": [
+        "App metadata document lab only; geometry workbench FCStd parity remains pending",
+        "Android Qt/Python initialization, UI, SAF and lifecycle NOT_RUN",
+        "Main fcml CAD graph remains separate; no automatic migration"
+      ]
+    },
+    {
+      "id": "B04",
+      "area": "Python runtime",
+      "features": [
+        {
+          "id": "B04-F1",
+          "scope": "Embedded CPython Android runtime",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        },
+        {
+          "id": "B04-F2",
+          "scope": "FreeCAD Python bindings",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        },
+        {
+          "id": "B04-F3",
+          "scope": "Python console and recorded macros",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        },
+        {
+          "id": "B04-F4",
+          "scope": "Scripted feature proxy restore/recompute",
+          "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+        }
+      ],
+      "apk": "FreeCAD-Mobile-Lab-1.0-rc6-arm64.apk",
+      "evidence": {
+        "cpython": "3.13.16 ARM64 built and packaged; isolated PyConfig startup implemented; Android execution NOT_RUN",
+        "android_runtime": "NOT_RUN",
+        "bindings": "Upstream App/Base bindings used by B03; remaining workbench and Gui bindings pending",
+        "foundation_apk": "FreeCAD-Mobile-Lab-1.0-rc5-arm64.apk",
+        "python_tooling_assertions": 62,
+        "adapter_regression_assertions": 88,
+        "packaged_libraries_and_extensions": 123,
+        "python_asset_files": 822,
+        "docs": [
+          "PARITY-B04.md",
+          "BATCH04-USER-GUIDE.md"
+        ]
+      },
+      "new_functional_tools": [
+        "Persistent Python console",
+        "Saved/recorded macro editor and file exchange",
+        "Portable QuantityDriver FeaturePython restore/recompute",
+        "Available App API browser"
+      ],
+      "limitations": [
+        "App/Base binding scope; other workbench/Gui bindings need module ports",
+        "Only packaged QuantityDriver and null proxy restoration; general addon proxies pending",
+        "Metadata proxy template, not Part geometry",
+        "Android execution NOT_RUN"
+      ]
+    },
+    {
+      "id": "B05",
+      "area": "Sketch geometry",
+      "features": [
+        {
+          "id": "B05-F1",
+          "scope": "General sketch entity model",
+          "status": "PENDING"
+        },
+        {
+          "id": "B05-F2",
+          "scope": "Line/arc/circle/ellipse editing",
+          "status": "PENDING"
+        },
+        {
+          "id": "B05-F3",
+          "scope": "B-splines and construction geometry",
+          "status": "PENDING"
+        },
+        {
+          "id": "B05-F4",
+          "scope": "Plane/face attachment and external references",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B06",
+      "area": "Sketch constraints",
+      "features": [
+        {
+          "id": "B06-F1",
+          "scope": "Coincident / horizontal / vertical / distance",
+          "status": "PENDING"
+        },
+        {
+          "id": "B06-F2",
+          "scope": "Tangent / perpendicular / parallel / angle",
+          "status": "PENDING"
+        },
+        {
+          "id": "B06-F3",
+          "scope": "Equal / symmetry / radius / diameter",
+          "status": "PENDING"
+        },
+        {
+          "id": "B06-F4",
+          "scope": "Solver diagnosis, DOF display and conflicting constraints",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B07",
+      "area": "Sketch workflows",
+      "features": [
+        {
+          "id": "B07-F1",
+          "scope": "Trim/extend/fillet and split geometry",
+          "status": "PENDING"
+        },
+        {
+          "id": "B07-F2",
+          "scope": "Sketch arrays / mirror / clone",
+          "status": "PENDING"
+        },
+        {
+          "id": "B07-F3",
+          "scope": "Projection/intersection and reference geometry",
+          "status": "PENDING"
+        },
+        {
+          "id": "B07-F4",
+          "scope": "Constraint editing, drag solving and saved sketches",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B08",
+      "area": "PartDesign foundation",
+      "features": [
+        {
+          "id": "B08-F1",
+          "scope": "Bodies, local coordinates, Tip and multiple bodies",
+          "status": "PENDING"
+        },
+        {
+          "id": "B08-F2",
+          "scope": "Datum planes/axes/points and attachment modes",
+          "status": "PENDING"
+        },
+        {
+          "id": "B08-F3",
+          "scope": "ShapeBinder/SubShapeBinder references",
+          "status": "PENDING"
+        },
+        {
+          "id": "B08-F4",
+          "scope": "Face-attached sketches and cumulative feature tree",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B09",
+      "area": "PartDesign solids",
+      "features": [
+        {
+          "id": "B09-F1",
+          "scope": "Full Pad/Pocket and extent options",
+          "status": "PENDING"
+        },
+        {
+          "id": "B09-F2",
+          "scope": "Revolution/Groove and additive/subtractive lofts",
+          "status": "PENDING"
+        },
+        {
+          "id": "B09-F3",
+          "scope": "Additive/subtractive pipe and helix",
+          "status": "PENDING"
+        },
+        {
+          "id": "B09-F4",
+          "scope": "Hole feature, taper and thread options",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B10",
+      "area": "PartDesign finishing",
+      "features": [
+        {
+          "id": "B10-F1",
+          "scope": "Selected fillet/chamfer/draft/thickness parity",
+          "status": "PENDING"
+        },
+        {
+          "id": "B10-F2",
+          "scope": "Associative linear/polar/mirror/scaled patterns",
+          "status": "PENDING"
+        },
+        {
+          "id": "B10-F3",
+          "scope": "MultiTransform, suppression and feature reordering",
+          "status": "PENDING"
+        },
+        {
+          "id": "B10-F4",
+          "scope": "Body Boolean/clone and cross-body workflows",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B11",
+      "area": "Part primitives and queries",
+      "features": [
+        {
+          "id": "B11-F1",
+          "scope": "All primitive families and parameter editing",
+          "status": "PENDING"
+        },
+        {
+          "id": "B11-F2",
+          "scope": "Compound/compsolid/fuse/cut/common parity",
+          "status": "PENDING"
+        },
+        {
+          "id": "B11-F3",
+          "scope": "Shape builder, explode and conversions",
+          "status": "PENDING"
+        },
+        {
+          "id": "B11-F4",
+          "scope": "Exact geometry validation/refine/tolerance tools",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B12",
+      "area": "Part advanced tools",
+      "features": [
+        {
+          "id": "B12-F1",
+          "scope": "Full extrude/revolve/loft/sweep options",
+          "status": "PENDING"
+        },
+        {
+          "id": "B12-F2",
+          "scope": "General offsets, shell and section tools",
+          "status": "PENDING"
+        },
+        {
+          "id": "B12-F3",
+          "scope": "Split/slice/fragments and Boolean pipelines",
+          "status": "PENDING"
+        },
+        {
+          "id": "B12-F4",
+          "scope": "Curve/surface domain operations and continuity",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B13",
+      "area": "Draft creation",
+      "features": [
+        {
+          "id": "B13-F1",
+          "scope": "Working planes and plane proxies",
+          "status": "PENDING"
+        },
+        {
+          "id": "B13-F2",
+          "scope": "Full line/polyline/arc/conic/B-spline geometry",
+          "status": "PENDING"
+        },
+        {
+          "id": "B13-F3",
+          "scope": "Text/shape-string/hatch/dimension objects",
+          "status": "PENDING"
+        },
+        {
+          "id": "B13-F4",
+          "scope": "Draft wires/faces and conversion tools",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B14",
+      "area": "Draft editing",
+      "features": [
+        {
+          "id": "B14-F1",
+          "scope": "Working-plane grid and complete snap modes",
+          "status": "PENDING"
+        },
+        {
+          "id": "B14-F2",
+          "scope": "Move/rotate/scale/offset/trim/stretch tools",
+          "status": "PENDING"
+        },
+        {
+          "id": "B14-F3",
+          "scope": "Associative arrays/clones/links and path arrays",
+          "status": "PENDING"
+        },
+        {
+          "id": "B14-F4",
+          "scope": "Draft style/layer overrides and editable annotations",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B15",
+      "area": "Spreadsheet/expressions parity",
+      "features": [
+        {
+          "id": "B15-F1",
+          "scope": "Full cells, aliases, units and formatting",
+          "status": "PENDING"
+        },
+        {
+          "id": "B15-F2",
+          "scope": "Model property references and dependencies",
+          "status": "PENDING"
+        },
+        {
+          "id": "B15-F3",
+          "scope": "VarSet/property-expression completion",
+          "status": "PENDING"
+        },
+        {
+          "id": "B15-F4",
+          "scope": "Cross-document formula references and CSV workflows",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B16",
+      "area": "Surface workbench",
+      "features": [
+        {
+          "id": "B16-F1",
+          "scope": "Boundary/filling surfaces with arbitrary loops",
+          "status": "PENDING"
+        },
+        {
+          "id": "B16-F2",
+          "scope": "Ruled/Gordon and supported surface construction",
+          "status": "PENDING"
+        },
+        {
+          "id": "B16-F3",
+          "scope": "Edge extension/curve-on-surface tools",
+          "status": "PENDING"
+        },
+        {
+          "id": "B16-F4",
+          "scope": "Pole/weight editing and continuity analysis",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B17",
+      "area": "Mesh and MeshPart",
+      "features": [
+        {
+          "id": "B17-F1",
+          "scope": "Full STL/OBJ/PLY/3MF mesh data model",
+          "status": "PENDING"
+        },
+        {
+          "id": "B17-F2",
+          "scope": "Evaluate/repair and self-intersection tools",
+          "status": "PENDING"
+        },
+        {
+          "id": "B17-F3",
+          "scope": "Decimate/refine/smooth/remesh workflows",
+          "status": "PENDING"
+        },
+        {
+          "id": "B17-F4",
+          "scope": "Mesh/CAD conversions and tessellation settings",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B18",
+      "area": "Points/reverse engineering/inspection",
+      "features": [
+        {
+          "id": "B18-F1",
+          "scope": "Point-cloud import/edit/section tools",
+          "status": "PENDING"
+        },
+        {
+          "id": "B18-F2",
+          "scope": "Supported curve/surface fitting workflows",
+          "status": "PENDING"
+        },
+        {
+          "id": "B18-F3",
+          "scope": "Deviation comparisons and inspection reports",
+          "status": "PENDING"
+        },
+        {
+          "id": "B18-F4",
+          "scope": "CAD/mesh/point-derived geometry validation",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B19",
+      "area": "Assembly foundation",
+      "features": [
+        {
+          "id": "B19-F1",
+          "scope": "Assembly containers, insertion and component links",
+          "status": "PENDING"
+        },
+        {
+          "id": "B19-F2",
+          "scope": "Grounding, placements and coordinate connectors",
+          "status": "PENDING"
+        },
+        {
+          "id": "B19-F3",
+          "scope": "Fixed/revolute/slider/ball joint families",
+          "status": "PENDING"
+        },
+        {
+          "id": "B19-F4",
+          "scope": "Constraint solve and conflict diagnosis",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B20",
+      "area": "Assembly completion",
+      "features": [
+        {
+          "id": "B20-F1",
+          "scope": "Remaining joints and motion limits",
+          "status": "PENDING"
+        },
+        {
+          "id": "B20-F2",
+          "scope": "Joint animation and simulation",
+          "status": "PENDING"
+        },
+        {
+          "id": "B20-F3",
+          "scope": "Bill of Materials and component metadata",
+          "status": "PENDING"
+        },
+        {
+          "id": "B20-F4",
+          "scope": "Cross-document assemblies and large-model instancing",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B21",
+      "area": "TechDraw layouts",
+      "features": [
+        {
+          "id": "B21-F1",
+          "scope": "Templates, editable title fields and page formats",
+          "status": "PENDING"
+        },
+        {
+          "id": "B21-F2",
+          "scope": "Projected multi-view / axonometric groups",
+          "status": "PENDING"
+        },
+        {
+          "id": "B21-F3",
+          "scope": "Sections / complex sections / detail / broken views",
+          "status": "PENDING"
+        },
+        {
+          "id": "B21-F4",
+          "scope": "Page layout, view alignment and printing",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B22",
+      "area": "TechDraw annotation",
+      "features": [
+        {
+          "id": "B22-F1",
+          "scope": "Linked linear/angular/radius/diameter dimensions",
+          "status": "PENDING"
+        },
+        {
+          "id": "B22-F2",
+          "scope": "Chain/coordinate/extent dimensions and repair",
+          "status": "PENDING"
+        },
+        {
+          "id": "B22-F3",
+          "scope": "Hatches, symbols, balloons, leaders and rich text",
+          "status": "PENDING"
+        },
+        {
+          "id": "B22-F4",
+          "scope": "SVG/DXF/PDF export and manufacturing notation",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B23",
+      "area": "CAM setup",
+      "features": [
+        {
+          "id": "B23-F1",
+          "scope": "Job/stock/fixture/work-coordinate model",
+          "status": "PENDING"
+        },
+        {
+          "id": "B23-F2",
+          "scope": "Toolbit library and cutting parameters",
+          "status": "PENDING"
+        },
+        {
+          "id": "B23-F3",
+          "scope": "Facing/profile/pocket/drilling operations",
+          "status": "PENDING"
+        },
+        {
+          "id": "B23-F4",
+          "scope": "Toolpath preview, ordering and collision review",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B24",
+      "area": "CAM complete workflow",
+      "features": [
+        {
+          "id": "B24-F1",
+          "scope": "Remaining machining and multi-pass operations",
+          "status": "PENDING"
+        },
+        {
+          "id": "B24-F2",
+          "scope": "Dressups, holding tabs and feed/speed handling",
+          "status": "PENDING"
+        },
+        {
+          "id": "B24-F3",
+          "scope": "Post-processors and G-code output",
+          "status": "PENDING"
+        },
+        {
+          "id": "B24-F4",
+          "scope": "Stock-removal simulation and reference machining checks",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B25",
+      "area": "FEM setup",
+      "features": [
+        {
+          "id": "B25-F1",
+          "scope": "Analysis containers and material assignment",
+          "status": "PENDING"
+        },
+        {
+          "id": "B25-F2",
+          "scope": "Loads, boundary conditions and mesh regions",
+          "status": "PENDING"
+        },
+        {
+          "id": "B25-F3",
+          "scope": "Gmsh/Netgen integration or verified alternative",
+          "status": "PENDING"
+        },
+        {
+          "id": "B25-F4",
+          "scope": "Solver export, execution and process isolation",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B26",
+      "area": "FEM results",
+      "features": [
+        {
+          "id": "B26-F1",
+          "scope": "Supported structural/thermal/electrostatic analyses",
+          "status": "PENDING"
+        },
+        {
+          "id": "B26-F2",
+          "scope": "Result field/unit handling and probes",
+          "status": "PENDING"
+        },
+        {
+          "id": "B26-F3",
+          "scope": "Deformation/contour/glyph views and animation",
+          "status": "PENDING"
+        },
+        {
+          "id": "B26-F4",
+          "scope": "Solver concordance and project/result persistence",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B27",
+      "area": "BIM structure",
+      "features": [
+        {
+          "id": "B27-F1",
+          "scope": "Project/site/building/storey spatial hierarchy",
+          "status": "PENDING"
+        },
+        {
+          "id": "B27-F2",
+          "scope": "Walls, columns, beams, slabs and structural objects",
+          "status": "PENDING"
+        },
+        {
+          "id": "B27-F3",
+          "scope": "Windows/doors/stairs/roof/reinforcement workflows",
+          "status": "PENDING"
+        },
+        {
+          "id": "B27-F4",
+          "scope": "BIM properties, classifications and quantities",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B28",
+      "area": "BIM interoperability",
+      "features": [
+        {
+          "id": "B28-F1",
+          "scope": "Native IFC import/export and editable mapping",
+          "status": "PENDING"
+        },
+        {
+          "id": "B28-F2",
+          "scope": "BIM section/elevation/plan views",
+          "status": "PENDING"
+        },
+        {
+          "id": "B28-F3",
+          "scope": "Site/sun/georeferencing tools",
+          "status": "PENDING"
+        },
+        {
+          "id": "B28-F4",
+          "scope": "Schedules, quantities and cross-document BIM links",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B29",
+      "area": "Material system",
+      "features": [
+        {
+          "id": "B29-F1",
+          "scope": "Material cards and material libraries",
+          "status": "PENDING"
+        },
+        {
+          "id": "B29-F2",
+          "scope": "Physical/appearance properties with unit handling",
+          "status": "PENDING"
+        },
+        {
+          "id": "B29-F3",
+          "scope": "Material assignment and reuse across workbenches",
+          "status": "PENDING"
+        },
+        {
+          "id": "B29-F4",
+          "scope": "Material file import/export and linked-property updates",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B30",
+      "area": "Additional bundled capabilities",
+      "features": [
+        {
+          "id": "B30-F1",
+          "scope": "OpenSCAD CSG import/export and history repair",
+          "status": "PENDING"
+        },
+        {
+          "id": "B30-F2",
+          "scope": "Robot trajectory/robot model workflows where supported",
+          "status": "PENDING"
+        },
+        {
+          "id": "B30-F3",
+          "scope": "IDF/Plot/Import and optional bundled integrations",
+          "status": "PENDING"
+        },
+        {
+          "id": "B30-F4",
+          "scope": "Inspection/ReverseEngineering/legacy optional module audit",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B31",
+      "area": "Std/UI parity",
+      "features": [
+        {
+          "id": "B31-F1",
+          "scope": "Document tree/property/task panels and search",
+          "status": "PENDING"
+        },
+        {
+          "id": "B31-F2",
+          "scope": "Selection clarification, filters and measure overlays",
+          "status": "PENDING"
+        },
+        {
+          "id": "B31-F3",
+          "scope": "Navigation/view/draw-style/transform preferences",
+          "status": "PENDING"
+        },
+        {
+          "id": "B31-F4",
+          "scope": "Images, annotations, groups, links and standard utilities",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B32",
+      "area": "Formats and metadata",
+      "features": [
+        {
+          "id": "B32-F1",
+          "scope": "Complete bundled format import/export matrix",
+          "status": "PENDING"
+        },
+        {
+          "id": "B32-F2",
+          "scope": "Assembly transforms, units, materials and names",
+          "status": "PENDING"
+        },
+        {
+          "id": "B32-F3",
+          "scope": "Loss reporting and unsupported-feature preservation",
+          "status": "PENDING"
+        },
+        {
+          "id": "B32-F4",
+          "scope": "Malformed-file and archive-isolation regression matrix",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B33",
+      "area": "Extension ecosystem",
+      "features": [
+        {
+          "id": "B33-F1",
+          "scope": "Addon Manager catalogue and dependency model",
+          "status": "PENDING"
+        },
+        {
+          "id": "B33-F2",
+          "scope": "Workbench Python command adapter",
+          "status": "PENDING"
+        },
+        {
+          "id": "B33-F3",
+          "scope": "Binary/Qt-dependent addon compatibility reporting",
+          "status": "PENDING"
+        },
+        {
+          "id": "B33-F4",
+          "scope": "Pinned addon fixture suite and update/rollback handling",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B34",
+      "area": "Rendering and device optimisation",
+      "features": [
+        {
+          "id": "B34-F1",
+          "scope": "Desktop-equivalent view modes and material shading",
+          "status": "PENDING"
+        },
+        {
+          "id": "B34-F2",
+          "scope": "Instancing/LOD/progressive tessellation and caches",
+          "status": "PENDING"
+        },
+        {
+          "id": "B34-F3",
+          "scope": "GPU context recovery, large meshes and measured budgets",
+          "status": "PENDING"
+        },
+        {
+          "id": "B34-F4",
+          "scope": "External Render-workbench adapter feasibility",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B35",
+      "area": "Accessibility and support",
+      "features": [
+        {
+          "id": "B35-F1",
+          "scope": "Touch/keyboard/stylus/tablet workflows",
+          "status": "PENDING"
+        },
+        {
+          "id": "B35-F2",
+          "scope": "Accessibility and localization",
+          "status": "PENDING"
+        },
+        {
+          "id": "B35-F3",
+          "scope": "Offline workbench help and sample projects",
+          "status": "PENDING"
+        },
+        {
+          "id": "B35-F4",
+          "scope": "Licences, source offers and upgrade/recovery support",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    },
+    {
+      "id": "B36",
+      "area": "Parity closure",
+      "features": [
+        {
+          "id": "B36-F1",
+          "scope": "Runtime command inventory vs static source reconciliation",
+          "status": "PENDING"
+        },
+        {
+          "id": "B36-F2",
+          "scope": "Desktop/native document and numeric reference matrix",
+          "status": "PENDING"
+        },
+        {
+          "id": "B36-F3",
+          "scope": "Android device/startup/lifecycle/SAF/upgrade matrix",
+          "status": "PENDING"
+        },
+        {
+          "id": "B36-F4",
+          "scope": "Close every command/capability gap or retain explicit pending status",
+          "status": "PENDING"
+        }
+      ],
+      "apk": null
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+package org.freecad.mobilelab;
+import org.json.*;
+final class PrintPrep {
+ static JSONObject check(JSONObject object,double[] bed,double margin)throws Exception{if(bed.length!=3||!Double.isFinite(margin)||margin<0||margin>100)throw new IllegalArgumentException("Invalid print margin");for(double d:bed)if(!Double.isFinite(d)||d<=2*margin||d>10000)throw new IllegalArgumentException("Bed dimensions must exceed twice the margin");JSONArray b=object.getJSONArray("bounds");int[][] orders={{0,1,2},{0,2,1},{1,0,2},{1,2,0},{2,0,1},{2,1,0}};JSONArray fits=new JSONArray();for(int[] a:orders){boolean ok=true;for(int i=0;i<3;i++)ok&=b.getDouble(a[i])+2*margin<=bed[i];if(ok)fits.put(new JSONArray(a));}return new JSONObject().put("currentFits",b.getDouble(0)+2*margin<=bed[0]&&b.getDouble(1)+2*margin<=bed[1]&&b.getDouble(2)+2*margin<=bed[2]).put("fittingAxisPermutations",fits);}
+ static void placeOnBed(int id)throws Exception{JSONArray objects=new JSONArray(NativeCad.objects());JSONObject o=null;for(int i=0;i<objects.length();i++)if(objects.getJSONObject(i).getInt("id")==id)o=objects.getJSONObject(i);if(o==null)throw new IllegalArgumentException("Select a model");JSONArray b=o.getJSONArray("bbox"),p=o.getJSONArray("xyz");FeatureModel.move(id,p.getDouble(0)-(b.getDouble(0)+b.getDouble(3))/2,p.getDouble(1)-(b.getDouble(1)+b.getDouble(4))/2,p.getDouble(2)-b.getDouble(2));}
+}

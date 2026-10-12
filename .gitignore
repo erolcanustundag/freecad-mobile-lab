@@ -1,0 +1,29 @@
+# Generated build output and downloaded toolchains
+.gradle/
+.idea/
+local.properties
+build/
+*-build/
+*-classes/
+host-test-deps/
+dist/
+__pycache__/
+*.pyc
+*.partial
+*.tmp
+# Native/runtime archives are checksum-pinned release assets.
+app/src/main/jniLibs/**/*.so
+app/libs/*.jar
+app/src/main/assets/core/python-home.zip
+vendor/occt/arm64-v8a/
+# Frozen header dependencies are restored from the public source release asset.
+vendor/boost/
+vendor/eigen/
+# Signing keys and private continuation/log files never enter Git history.
+*.keystore
+*.jks
+*.pem
+*.key
+docs/CONTINUE.md
+docs/*.txt
+docs/RELEASE-PREPARATION-PRIVATE.json

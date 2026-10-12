@@ -1,0 +1,10 @@
+JEWELLERY TUTORIAL
+Try ComfortRing 18 1.6 3 0.4. This creates an 18 mm inner diameter ring with a 1.6 mm wall and 3 mm band. Edit changes template dimensions. Rename "My comfort ring", Color 0.83 0.64 0.25, Material 0.25 0.85, Studio.
+
+Templates includes oval, rectangular and cushion bezels, oval prongs, comfort and signet rings, pendant frames and bangles. Dimensions are explicit; inspect the result with Info and Analyze before export. Samples inserts editable examples, including a signet seat and a plate with feature history.
+
+Text creates a solid from a system font outline. Position the text and use Cut to engrave or Union to emboss. Font availability and outline complexity vary by phone.
+
+Mass estimates weight from solid volume and the density you enter; it excludes stones, solder and process losses. Allowance makes a compensated copy and preserves the original. Calibrate casting percentage with your alloy and casting process.
+
+PrintPrep checks a bed envelope and places/orients the model. Thickness is a bounded sample report, not proof of minimum wall thickness everywhere. Export STL, STEP or other supported formats after checking geometry. Physical print/casting calibration remains a release gate.

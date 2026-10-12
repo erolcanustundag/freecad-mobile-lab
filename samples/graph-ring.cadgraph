@@ -1,0 +1,1 @@
+{"format":"MobileCADGraph","units":"mm","version":1,"graph":{"outputs":[4],"nodes":[{"kind":"Number","inputs":[],"id":1,"value":18},{"kind":"Number","inputs":[],"id":2,"value":1.6},{"kind":"Number","inputs":[],"id":3,"value":3},{"kind":"Ring","inputs":[1,2,3],"id":4}],"version":1}}

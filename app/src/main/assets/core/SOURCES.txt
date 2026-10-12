@@ -1,0 +1,4 @@
+FreeCAD 1.1.4 Base/App; Qt 6.8.3 headless Core/XML/Network/Concurrent; CPython 3.13.16.
+Frozen sources, checksums, build scripts and patches: native-cad/docs/FREECAD-ANDROID-TOOLCHAINS.json and scripts.
+This isolated document lab is experimental. Geometry workbenches and Android runtime parity remain pending.
+Source URLs and dependency notices: native-cad/docs/FREECAD-CORE-PORT.md and the dependency manifests.

@@ -1,0 +1,37 @@
+DOCUMENT ORGANISATION
+
+Spreadsheet opens a mobile worksheet, A1:H32. Tap a cell to enter text, a number, or a formula beginning with =. Formulas can reference cells and saved document variables. Errors display #ERR; tap the cell to correct its source. Import and export use UTF-8 CSV, at most 64 KiB. Import replaces the worksheet in one Undo step. Cells are saved in projects and autosave.
+
+Command examples:
+Cell A1 18
+Cell A2 =A1+2
+Cell B1 "Ring diameter"
+Cell B1 ""
+Set wall 1.6
+Cell A3 =A1+2*wall
+Ring =A1 wall 3
+SheetExport
+SheetImport
+SheetClear
+
+Existing geometry uses evaluated snapshots. Changing a cell does not automatically change a solid. This worksheet is a bounded mobile tool; native FreeCAD Spreadsheet objects, aliases, formatting and property bindings are still on the parity roadmap.
+
+ALIGNMENT
+Select a source object, then use Move / Align to object. Choose the reference, world axis and matching Min, Centre or Max bounds. Alignment translates the source and recomputes its custom feature dependants. Locked objects and alignment between related features are rejected.
+
+Align 1 2 X Centre
+Align 1 2 Z Min Max
+
+The final optional anchor is the reference bound. The default matches the source anchor. Object IDs appear in the object list. Bounds are world-axis bounding boxes, not centres of mass.
+
+VIEW AND LAYERS
+FitSelected centres and zooms the view on the selected object's bounds. Fit restores the full scene. Hidden objects are not made visible by fitting.
+
+Layers opens controls to show, hide, lock or unlock every object on a layer. Layer names are case sensitive. Quote names containing spaces. Locking protects geometry operations; visibility remains editable.
+
+LayerHide "Reference parts"
+LayerShow "Reference parts"
+LayerLock "Reference parts"
+LayerUnlock "Reference parts"
+
+Layer controls and alignment each use one Undo step. Undo and Redo restore the worksheet and saved variables alongside geometry. Save before experimenting with a large imported model.

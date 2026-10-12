@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "libicudata.so",
+    "source_sha256": "e16db72524389375acea2cd79071e1e9301ef77f0839001573d77ee51974afd8",
+    "apk_loader_sha256": "9d61f14d1e15465689dfde2f67ab1b97f7cbb90315c5c2c0f67e1bfbcac139c7",
+    "minimum_load_alignment": 16384,
+    "device_runtime": "NOT_RUN"
+  },
+  {
+    "filename": "libicui18n.so",
+    "source_sha256": "467ee4751e31beaef808ed371e5f580d5510bfac9452da54187c0bc1c39473b7",
+    "apk_loader_sha256": "37c139a752b6428b59b61b52459e5530dc903ef42d0177c34c8ba7b0d204dd2c",
+    "minimum_load_alignment": 16384,
+    "device_runtime": "NOT_RUN"
+  },
+  {
+    "filename": "libicuuc.so",
+    "source_sha256": "87a870a63865ff4fca38494e75e8130b50480039cefefb5e702f92c4cff0970e",
+    "apk_loader_sha256": "50461ab1e056cac8ec1f0cd1f4ace399aaefed5e0b9a1619ddfee45e69c2dd93",
+    "minimum_load_alignment": 16384,
+    "device_runtime": "NOT_RUN"
+  }
+]

@@ -1,0 +1,16 @@
+1.0 RELEASE CANDIDATE STATUS
+Version 1.0-rc7 is an engineering candidate, not a completed stable 1.0 release. It is signed with the retained public development key and supports ARM64 Android API 26–35.
+
+Implemented: native exact CAD/feature history, bounded meshes, jewellery templates, command bar, typed graph tools, software/GLES preview modes, project persistence, recovery launcher, sample models, offline help and A4 overall-dimension sheets.
+
+New precision and organisation tools: saved scalar variables, expressions, CAD/point/angle measurements, pivot transformations, navigation cube, bounded worksheet/CSV exchange, bounds alignment, fit selected and layer visibility/locking. See the Precision and Organisation guides for commands and limits.
+
+Open gates: reported phone crash reproduction/fix verification, physical startup/lifecycle/file-picker tests, supported-device/GPU/memory matrix, project-upgrade checks on Android, private production signing/update migration, independent dimensional checks and physical print/casting calibration. Remaining roadmap tools are listed in the source documentation.
+
+Host tests and static APK signature/alignment checks are evidence for their tested scope; they do not prove Android phone reliability. No full Rhino, Grasshopper or desktop FreeCAD parity is claimed. Public publication has not happened.
+
+The opt-in FreeCAD document lab (Workspace menu or recovery screen) embeds upstream App 1.1.4 and Python. It edits typed metadata properties, expressions, groups/links and native transactions, and saves/opens supported App-only FCStd documents. Native geometry workbenches, arbitrary addon proxy classes and Android runtime validation remain pending. Save your document before closing the process.
+
+Rc6 adds a Python console, saved/recorded Python macros, an App API browser and a portable QuantityDriver scripted metadata feature. Native Part/Gui workbench bindings and geometric proxy templates are still pending.
+
+RC7: Restart lab can recover a failed or stuck document process. Save before restarting. Android crash/lifecycle verification remains pending.

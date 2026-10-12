@@ -1,0 +1,16 @@
+--- a/Android/android-env.sh
++++ b/Android/android-env.sh
+@@ -28,7 +28,11 @@
+ ndk_version=27.3.13750724
+ 
+-ndk=$ANDROID_HOME/ndk/$ndk_version
+-if ! [ -e "$ndk/package.xml" ]; then
++# Allow a verified standalone toolchain; do not impersonate another SDK version.
++ndk=${ANDROID_NDK_ROOT:-$ANDROID_HOME/ndk/$ndk_version}
++if [ -n "${ANDROID_NDK_ROOT:-}" ] && ! [ -d "$ndk/toolchains/llvm/prebuilt" ]; then
++    fail "ANDROID_NDK_ROOT is not a valid standalone NDK"
++fi
++if [ -z "${ANDROID_NDK_ROOT:-}" ] && ! [ -e "$ndk/package.xml" ]; then
+     log "Installing NDK - this may take several minutes"
+     yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "ndk;$ndk_version"
+ fi

@@ -1,0 +1,8 @@
+PARAMETRIC GRAPHS
+Graph opens the local visual component editor. Components have typed ports for numbers, lists, points and CAD geometry. Connect inputs, choose geometry outputs, then Evaluate. There are 40 component kinds and a limit of 80 nodes.
+
+Samples includes a ring graph and a bezel pattern. Change a Number node to regenerate the pattern. Graph samples replace prior graph-owned outputs while preserving other workspace objects, subject to dependency guards.
+
+Live Apply is optional and debounced by 450 ms; it commits exact CAD results and can be expensive. Evaluation memoizes nodes only within one evaluation. Group labels organise components; they are not reusable subgraphs.
+
+GraphFiles saves/opens versioned .cadgraph recipes. Batch variants exports 2 to 10 single-output STL/recipe variants while preserving the live scene and Redo state. Lists and point series are bounded. No Grasshopper plug-ins or arbitrary code execution are provided.

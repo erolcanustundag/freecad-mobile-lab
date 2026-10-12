@@ -1,0 +1,10 @@
+--- a/cMake/FreeCAD_Helpers/SetupBoost.cmake
++++ b/cMake/FreeCAD_Helpers/SetupBoost.cmake
+@@ -10,4 +10,6 @@
+-    if(UNIX AND NOT APPLE)
++    # Android provides pthread functions in libc, without a libpthread DSO.
++    # Keep the Boost/Threads compiler flags, but do not append -lpthread.
++    if(UNIX AND NOT APPLE AND NOT ANDROID)
+         # Boost.Thread 1.67+ headers reference pthread_condattr_*
+         list(APPEND Boost_LIBRARIES pthread)
+     endif()

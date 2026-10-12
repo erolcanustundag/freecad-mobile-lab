@@ -1,0 +1,10 @@
+CURVES AND FEATURE HISTORY
+Line 0 0 0 10 0 0 creates an exact straight line. Arc 0 0 0 5 0 90 creates a quarter circle in XY. Polyline accepts XYZ triples, NURBSCurve accepts XYZW control poles and InterpCurve accepts XYZ through-points. Each command accepts 2 to 16 points/poles. Positive rational weights affect the curve shape.
+
+Example: NURBSCurve 0 0 0 1 5 8 0 2 10 0 0 1. Sketch opens touch XY drafting, weighted pole editing, local draft Undo and snapping. Snaps/intersections refer to draft points and straight control segments; this is not a general sketch constraint editor.
+
+Rectangle 20 12 then Extrude 3 creates an exact pad. Revolve uses an axis point, direction and angle. Loft joins 2 to 8 profiles; Sweep uses profile/rail IDs. FeatureHistory displays saved CAD operation recipes. Editing a hidden root regenerates its dependants, or rolls back and reports the failure. Detach converts a recipe output to a snapshot.
+
+Join, TrimCurve, ExtendLine, ProjectCurve, Region and selected-index Fillet/Chamfer/Shell extend exact CAD editing. Selected topology is guarded against changed edge/face numbering. TrimPatch supports rectangular UV intervals. SurfacePoints edits NURBS patch poles. General surface-loop trims, blends and touch surface handles remain pending.
+
+Native arrays and curve-array copies are snapshots rather than a persistent associative pattern feature. Limited subdivision forms do not provide a general SubD editor or exact SubD-to-NURBS conversion.

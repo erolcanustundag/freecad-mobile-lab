@@ -1,0 +1,91 @@
+#!/usr/bin/env python3
+"""Stage a 16 KiB upstream App runtime for the isolated document activity.
+
+Preserves the existing 31-library mobile renderer/kernel checkpoint. New
+dependencies and Python assets have their own content manifest.
+"""
+import hashlib
+import json
+from pathlib import Path
+import re
+import shutil
+import subprocess
+import zipfile
+
+ROOT=Path(__file__).resolve().parents[1]
+BASE=ROOT.parent
+NDK=BASE/'toolchains/android-ndk-r27c/toolchains/llvm/prebuilt/linux-x86_64/bin'
+READELF=NDK/'llvm-readelf'
+def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def dynamic(path):return subprocess.check_output([str(READELF),'-d',str(path)],text=True)
+def main():
+    libs=ROOT/'app/src/main/jniLibs/arm64-v8a'
+    baseline=json.loads((ROOT/'versions-prebuilt.json').read_text())['libraries']
+    for name,value in baseline.items():
+        if digest(libs/name)!=value:raise ValueError('Retained mobile library changed: '+name)
+    qt=BASE/'toolchains/qt/android-arm64-16k'
+    prefix=BASE/'toolchains/freecad-android-prefix'
+    python=BASE/'upstream/cpython-3.13.16/cross-build/aarch64-linux-android/prefix'
+    sources=list((BASE/'freecad-core-android/lib').glob('*.so'))
+    sources+=list((prefix/'lib').glob('*.so'))+list((qt/'lib').glob('*.so'))
+    sources+=list((python/'lib').glob('*.so'))
+    sources+=[ROOT/'core-bridge-android/libfreecad_document_bridge.so']
+    records={};originals={}
+    for source in sorted(sources):
+        sonames=re.findall(r'\(SONAME\).*?\[(.*?)\]',dynamic(source))
+        name=sonames[0] if sonames else source.name
+        if name=='FreeCAD.so':name='libFreeCADPython.so'
+        if not name.startswith('lib') or not name.endswith('.so'):raise ValueError('Invalid APK library name: '+name)
+        if name in baseline:raise ValueError('Core dependency collides with the retained kernel: '+name)
+        if name in originals:
+            if digest(source)!=originals[name]:raise ValueError('Conflicting dependency SONAME: '+name)
+            continue
+        originals[name]=digest(source)
+        destination=libs/name;shutil.copyfile(source,destination)
+        subprocess.run([str(NDK/'llvm-strip'),'--strip-unneeded',str(destination)],check=True)
+        # FreeCAD's Python entrypoint is registered with AppendInittab; give its
+        # Android filename a matching loader name and adjust the bridge's edge.
+        if name=='libFreeCADPython.so':
+            subprocess.run(['patchelf','--page-size','16384','--set-soname',name,str(destination)],check=True)
+        if name=='libfreecad_document_bridge.so':
+            subprocess.run(['patchelf','--page-size','16384','--replace-needed','FreeCAD.so','libFreeCADPython.so',str(destination)],check=True)
+        if 'RUNPATH' in dynamic(destination) or 'RPATH' in dynamic(destination):
+            subprocess.run(['patchelf','--page-size','16384','--remove-rpath',str(destination)],check=True)
+        records[name]=digest(destination)
+    required={'libFreeCADPython.so','libFreeCADApp.so','libFreeCADBase.so','libpython3.13.so',
+        'libQt6Core_arm64-v8a.so','libfreecad_document_bridge.so'}
+    if not required.issubset(records):raise ValueError('Incomplete core dependency set')
+    extras={p.name for p in libs.glob('*.so')}-set(baseline)-set(records)
+    if extras:raise ValueError('Untracked native libraries: '+str(extras))
+    assets=ROOT/'app/src/main/assets/core';assets.mkdir(parents=True,exist_ok=True)
+    standard=python/'lib/python3.13'
+    files=[p for p in standard.rglob('*') if p.is_file() and not {'__pycache__','test','tests','site-packages','ensurepip'}.intersection(p.relative_to(standard).parts) and p.suffix not in ('.pyc','.pyo')]
+    out=assets/'python-home.zip';runtime=[]
+    with zipfile.ZipFile(out,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
+        for path in sorted(files):
+            name='lib/python3.13/'+str(path.relative_to(standard))
+            z.write(path,name);runtime.append({'path':name,'size':path.stat().st_size,'sha256':digest(path)})
+        for script in sorted(assets.glob('mobile_*.py')):
+            name='scripts/'+script.name;z.write(script,name)
+            runtime.append({'path':name,'size':script.stat().st_size,'sha256':digest(script)})
+    with zipfile.ZipFile(out) as z:
+        if z.testzip() is not None:raise ValueError('Python asset CRC failure')
+        for item in runtime:
+            if hashlib.sha256(z.read(item['path'])).hexdigest()!=item['sha256']:raise ValueError('Python asset hash failure')
+    jars=ROOT/'app/libs';jars.mkdir(exist_ok=True)
+    shutil.copyfile(qt/'jar/Qt6Android.jar',jars/'Qt6Android.jar')
+    licenses=assets/'licenses';licenses.mkdir(exist_ok=True)
+    for path,name in ((BASE/'upstream/cpython-3.13.16/LICENSE','CPython-LICENSE.txt'),
+        (BASE/'upstream/qtbase-everywhere-src-6.8.3/LICENSES/LGPL-3.0-only.txt','Qt-LGPL-3.0.txt'),
+        (BASE/'upstream/FreeCAD-1.1.4/LICENSE','FreeCAD-LICENSE.txt')):
+        if path.is_file():shutil.copyfile(path,licenses/name)
+    (assets/'SOURCES.txt').write_text('FreeCAD 1.1.4 Base/App; Qt 6.8.3 headless Core/XML/Network/Concurrent; CPython 3.13.16.\n'
+        'Frozen sources, checksums, build scripts and patches: native-cad/docs/FREECAD-ANDROID-TOOLCHAINS.json and scripts.\n'
+        'This isolated document lab is experimental. Geometry workbenches and Android runtime parity remain pending.\n'
+        'Source URLs and dependency notices: native-cad/docs/FREECAD-CORE-PORT.md and the dependency manifests.\n')
+    report={'scope':'opt-in upstream App document lab; Android execution NOT_RUN',
+        'libraries':records,'original_library_hashes':originals,'python_assets':runtime,
+        'asset_zip_sha256':digest(out),'java_jar_sha256':digest(jars/'Qt6Android.jar')}
+    (ROOT/'docs/core-apk-inputs.json').write_text(json.dumps(report,indent=2)+'\n')
+    print('Staged',len(records),'additional ARM64 libraries,',len(runtime),'Python files; retained 31 mobile libraries unchanged')
+if __name__=='__main__':main()

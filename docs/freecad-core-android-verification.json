@@ -1,0 +1,1170 @@
+{
+  "status": "STATIC_PASS_DEVICE_NOT_RUN",
+  "android_execution": "NOT_RUN",
+  "jni_document_adapter": "NOT_IMPLEMENTED",
+  "release_apk_contains_core": false,
+  "python_entrypoint_packaging": "FreeCAD.so is a Python entrypoint; Android adapter must register/package it explicitly",
+  "library_count": 92,
+  "strong_symbol_closure": true,
+  "failures": [],
+  "libraries": [
+    {
+      "filename": "FreeCAD.so",
+      "soname": "FreeCAD.so",
+      "sha256": "904e755392e363cb96a27c5afe1117e8c50eb1e494cf08662c26df44f8a10e90",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libFreeCADApp.so",
+        "libFreeCADBase.so",
+        "libxerces-c-3.2.so",
+        "libz.so",
+        "libicuuc.so",
+        "libicui18n.so",
+        "libpython3.13.so",
+        "libboost_program_options.so",
+        "libboost_regex.so",
+        "libboost_thread.so",
+        "libboost_date_time.so",
+        "libfmt.so",
+        "libQt6Xml_arm64-v8a.so",
+        "libQt6Core_arm64-v8a.so",
+        "liblog.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libFreeCADApp.so",
+      "soname": "libFreeCADApp.so",
+      "sha256": "c76181a87961e06b509a208467d66146dc4646fe337b1b31d73eaad4cefd3a94",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libFreeCADBase.so",
+        "libboost_program_options.so",
+        "libboost_regex.so",
+        "libboost_thread.so",
+        "libboost_date_time.so",
+        "libfmt.so",
+        "libQt6Xml_arm64-v8a.so",
+        "libxerces-c-3.2.so",
+        "libz.so",
+        "libicuuc.so",
+        "libicui18n.so",
+        "libpython3.13.so",
+        "libQt6Core_arm64-v8a.so",
+        "liblog.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libFreeCADBase.so",
+      "soname": "libFreeCADBase.so",
+      "sha256": "ff7a515746951aaeac965dfc97998d9cd1d8db298bc207c974bc9b8b38515159",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libxerces-c-3.2.so",
+        "libboost_program_options.so",
+        "libboost_regex.so",
+        "libboost_thread.so",
+        "libboost_date_time.so",
+        "libz.so",
+        "libicuuc.so",
+        "libicui18n.so",
+        "libQt6Core_arm64-v8a.so",
+        "libfmt.so",
+        "libpython3.13.so",
+        "liblog.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libboost_date_time.so",
+      "soname": "libboost_date_time.so",
+      "sha256": "90e342e986a41fc8d0627b8069c54862af81521e6de948d6ec175039b792dc81",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libc++_shared.so",
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libboost_program_options.so",
+      "soname": "libboost_program_options.so",
+      "sha256": "f901e84cff351495e91d887876fa0ffb3da7eabe0d931c975fa70b7026213bcb",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libc++_shared.so",
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libboost_regex.so",
+      "soname": "libboost_regex.so",
+      "sha256": "f8dfdb3901aff56d391d31b733d94d9e99dc0ee250985a5c1ce827c0d0972aae",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libc++_shared.so",
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libboost_thread.so",
+      "soname": "libboost_thread.so",
+      "sha256": "8f1b96b9fe5f453c4b957cb1be46afe1a1ed8451ae28d1b0f117943372e91d46",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libc++_shared.so",
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libfmt.so",
+      "soname": "libfmt.so",
+      "sha256": "32897a4c35db73862f1a0385759e6da907031eed3bd5683ffebee9e75c998a2e",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libicudata.so",
+      "soname": "libicudata.so",
+      "sha256": "9d61f14d1e15465689dfde2f67ab1b97f7cbb90315c5c2c0f67e1bfbcac139c7",
+      "minimum_load_alignment": 16384,
+      "needed": []
+    },
+    {
+      "filename": "libicui18n.so",
+      "soname": "libicui18n.so",
+      "sha256": "37c139a752b6428b59b61b52459e5530dc903ef42d0177c34c8ba7b0d204dd2c",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libicuuc.so",
+        "libicudata.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libicuuc.so",
+      "soname": "libicuuc.so",
+      "sha256": "50461ab1e056cac8ec1f0cd1f4ace399aaefed5e0b9a1619ddfee45e69c2dd93",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libicudata.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libxerces-c-3.2.so",
+      "soname": "libxerces-c-3.2.so",
+      "sha256": "bbcd67259774f957587e2f4ee3c4b6b14d59fb032acc0ec51b8e5c4a91ace7ea",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libicuuc.so",
+        "libicudata.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libyaml-cpp.so",
+      "soname": "libyaml-cpp.so",
+      "sha256": "b73b2ad76b014fb5d4514fef0ebaed51c925be6b7ace37c10061d54405242132",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libQt6Concurrent_arm64-v8a.so",
+      "soname": "libQt6Concurrent_arm64-v8a.so",
+      "sha256": "2bf6fc6fc4fb6968f5c20adb361e601171e8b33fce7984e174cba53015508375",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libQt6Core_arm64-v8a.so",
+        "liblog.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libQt6Core_arm64-v8a.so",
+      "soname": "libQt6Core_arm64-v8a.so",
+      "sha256": "1cc91e4afcf197433ac87784ef622c9bf661b31b043e7af7a458dba5badd8317",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libdl.so",
+        "libz.so",
+        "liblog.so",
+        "libc++_shared.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libQt6Network_arm64-v8a.so",
+      "soname": "libQt6Network_arm64-v8a.so",
+      "sha256": "4cf6fb2e21a34be88eabf92867f7d8af10ab2b8439d94a092d3376583dc2a874",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libQt6Core_arm64-v8a.so",
+        "liblog.so",
+        "libz.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libQt6Xml_arm64-v8a.so",
+      "soname": "libQt6Xml_arm64-v8a.so",
+      "sha256": "4283ffc32a4f761aef32a86daf9922ecd8a4a7c42be578d55067a1d70861ed8f",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libQt6Core_arm64-v8a.so",
+        "liblog.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libcrypto.so",
+      "soname": "libcrypto_python.so",
+      "sha256": "298d0c4c824d238fea98d225df41e83ebf35a11cf291137c721dcbc1c04a3864",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libpython3.13.so",
+      "soname": "libpython3.13.so",
+      "sha256": "8dc1ab6db347ea3d853e44e7b41eccf2b8246efa5ecf1f53e03187d8a6e81018",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libdl.so",
+        "liblog.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libpython3.so",
+      "soname": "libpython3.so",
+      "sha256": "88423dbc0275e6e6790d129c83ae0db26bb5ff1fd3f84d322aad0108d6c7bf32",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libsqlite3.so",
+      "soname": "libsqlite3_python.so",
+      "sha256": "765c2ad327ea1487ff42c7c8910d21061a64955d84d06ec1cb45211b36372375",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libz.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libssl.so",
+      "soname": "libssl_python.so",
+      "sha256": "cf7d58babd5a019869e0bd7b900b7de012dc4044c2d3714e435f35a665e8c35a",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libcrypto_python.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_asyncio.cpython-313-aarch64-linux-android.so",
+      "soname": "_asyncio.cpython-313-aarch64-linux-android.so",
+      "sha256": "b0a23d3432a1bfcdbd832f559bc6657f311ef4468f8f5750c0a68461e908e8e3",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_bisect.cpython-313-aarch64-linux-android.so",
+      "soname": "_bisect.cpython-313-aarch64-linux-android.so",
+      "sha256": "400adbf0144a239b286835b8ee1c0a1c310f6a870b93a743558abc6f9978cdd3",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_blake2.cpython-313-aarch64-linux-android.so",
+      "soname": "_blake2.cpython-313-aarch64-linux-android.so",
+      "sha256": "50fa1b35be877185a1052d98522adcf4697a9b2d26a2a7615c4c12d73f52397d",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_bz2.cpython-313-aarch64-linux-android.so",
+      "soname": "_bz2.cpython-313-aarch64-linux-android.so",
+      "sha256": "368b0b40df27f6c031941d28ca69355478f71048b5d1bd26b27e064bda310b43",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_codecs_cn.cpython-313-aarch64-linux-android.so",
+      "soname": "_codecs_cn.cpython-313-aarch64-linux-android.so",
+      "sha256": "13d37cd70c5006009adbc4d4087cd071d7cd3ceb9bb79268cdd693031cfe337c",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_codecs_hk.cpython-313-aarch64-linux-android.so",
+      "soname": "_codecs_hk.cpython-313-aarch64-linux-android.so",
+      "sha256": "fab76a332442be73c79202f36deb53f176f53475a58d283ee5a6decc693c9b3a",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_codecs_iso2022.cpython-313-aarch64-linux-android.so",
+      "soname": "_codecs_iso2022.cpython-313-aarch64-linux-android.so",
+      "sha256": "a8462ef068c0a8347cb6dbf5bf47996c95a17c4b9e3991878b33cd29ca7122d7",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_codecs_jp.cpython-313-aarch64-linux-android.so",
+      "soname": "_codecs_jp.cpython-313-aarch64-linux-android.so",
+      "sha256": "c537db16ce51691843d95dec2790603c34961e8918ccd8cc8b10b2ecbc4b2076",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_codecs_kr.cpython-313-aarch64-linux-android.so",
+      "soname": "_codecs_kr.cpython-313-aarch64-linux-android.so",
+      "sha256": "7d8551069d289add9cee497bbbb67a18ebe2a0ffb6636c5dd4c141ac51b2cca0",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_codecs_tw.cpython-313-aarch64-linux-android.so",
+      "soname": "_codecs_tw.cpython-313-aarch64-linux-android.so",
+      "sha256": "d2aceb952a2cc7e9f28fefe0c448f562dbae53640552c4b50878ede0548c5f79",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_contextvars.cpython-313-aarch64-linux-android.so",
+      "soname": "_contextvars.cpython-313-aarch64-linux-android.so",
+      "sha256": "12eed425aba259c3f0f1eedddca57f2f0cb07141b9348bcd9a6768315875db53",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_csv.cpython-313-aarch64-linux-android.so",
+      "soname": "_csv.cpython-313-aarch64-linux-android.so",
+      "sha256": "cda1de229072d04975b3c939c3fdd20db96f56816c13de7dadafa5aa3e71c156",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_ctypes.cpython-313-aarch64-linux-android.so",
+      "soname": "_ctypes.cpython-313-aarch64-linux-android.so",
+      "sha256": "7a8f3105f4d87067e5ef2658a4026aee10cfcc97692df02206e4fabdb141fa9b",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libdl.so",
+        "libpython3.13.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_ctypes_test.cpython-313-aarch64-linux-android.so",
+      "soname": "_ctypes_test.cpython-313-aarch64-linux-android.so",
+      "sha256": "b1e9691987356046fe1b95cee8c68f35baa320959cb0ddc96b162af3fab7abc1",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_datetime.cpython-313-aarch64-linux-android.so",
+      "soname": "_datetime.cpython-313-aarch64-linux-android.so",
+      "sha256": "ba7e6d8ad6990ebd534f03f86b7676e346e61a81e9df4464da7d26fd4abe7a16",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_decimal.cpython-313-aarch64-linux-android.so",
+      "soname": "_decimal.cpython-313-aarch64-linux-android.so",
+      "sha256": "57c47f628684486f594fd33d238bded4e8df63c1eb2159a3634a69016d0936db",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_elementtree.cpython-313-aarch64-linux-android.so",
+      "soname": "_elementtree.cpython-313-aarch64-linux-android.so",
+      "sha256": "eb9c72ef335a11740d242b94f62cd2e44a1666e1b68c8d022f995cb695b3e295",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_hashlib.cpython-313-aarch64-linux-android.so",
+      "soname": "_hashlib.cpython-313-aarch64-linux-android.so",
+      "sha256": "6e6f6fcdeba2036caeca4239c2f5012dc541bc3d50c24e54346b265fa6e52281",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libcrypto_python.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_heapq.cpython-313-aarch64-linux-android.so",
+      "soname": "_heapq.cpython-313-aarch64-linux-android.so",
+      "sha256": "8a791f042950295e997c15e447ecdda2d3c1a595f179e2eabdf7612fcb1b41b4",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_interpchannels.cpython-313-aarch64-linux-android.so",
+      "soname": "_interpchannels.cpython-313-aarch64-linux-android.so",
+      "sha256": "26b36655d5701a33bae70ee2694a58c4d1910aeb73ab9c84afa261e520f28fa5",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_interpqueues.cpython-313-aarch64-linux-android.so",
+      "soname": "_interpqueues.cpython-313-aarch64-linux-android.so",
+      "sha256": "00107757f143ea88a36450eea4df5768c042f78f81cf78371dda41435aaaa110",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_interpreters.cpython-313-aarch64-linux-android.so",
+      "soname": "_interpreters.cpython-313-aarch64-linux-android.so",
+      "sha256": "833b2ca24c1100fa359ad049f946d8812245057690b0c588455a68d8138100c2",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_json.cpython-313-aarch64-linux-android.so",
+      "soname": "_json.cpython-313-aarch64-linux-android.so",
+      "sha256": "0a34451a066f9321912c75014a5a0783993702bb3b5473a1b4e91a22625aa4bb",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_lsprof.cpython-313-aarch64-linux-android.so",
+      "soname": "_lsprof.cpython-313-aarch64-linux-android.so",
+      "sha256": "da9ec101497ce18f64160a050a49f696f7be7d97396c8082be036ed2de87352e",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_lzma.cpython-313-aarch64-linux-android.so",
+      "soname": "_lzma.cpython-313-aarch64-linux-android.so",
+      "sha256": "9a96e3e923938da691ba6c3f687f6d52acd1acfedca9d750b8fe168d6e218c8f",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_md5.cpython-313-aarch64-linux-android.so",
+      "soname": "_md5.cpython-313-aarch64-linux-android.so",
+      "sha256": "5ab8243a60ef04158f0029c5cd49ee2ad07dbb146bb2af791f7b03b37f13cf63",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_multibytecodec.cpython-313-aarch64-linux-android.so",
+      "soname": "_multibytecodec.cpython-313-aarch64-linux-android.so",
+      "sha256": "93eabf982cb9b255f78b93477385c7d32839db8e476f289eaabc407c8530619f",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_opcode.cpython-313-aarch64-linux-android.so",
+      "soname": "_opcode.cpython-313-aarch64-linux-android.so",
+      "sha256": "2df4e8db2c83d67ac803cd0d3df00da143eb81d6c9f64024737b2c6b4d0e2b53",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_pickle.cpython-313-aarch64-linux-android.so",
+      "soname": "_pickle.cpython-313-aarch64-linux-android.so",
+      "sha256": "fecd8cdbacca31b65b2265dc5c93a46e72f72f22820392836552b1367cbedba8",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_posixsubprocess.cpython-313-aarch64-linux-android.so",
+      "soname": "_posixsubprocess.cpython-313-aarch64-linux-android.so",
+      "sha256": "ae4e3affa7d4699c3ee66e9836e741538b628ebece4db3f2602a92666177f80e",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_queue.cpython-313-aarch64-linux-android.so",
+      "soname": "_queue.cpython-313-aarch64-linux-android.so",
+      "sha256": "4a172117b462c7f5c33c31f3a4f68a22aa6714f50394441c89e910fcf0990278",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_random.cpython-313-aarch64-linux-android.so",
+      "soname": "_random.cpython-313-aarch64-linux-android.so",
+      "sha256": "37101b3cff30ae9fa539290834deed20f4340ca8ae9e96ba539f398231eb7252",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_sha1.cpython-313-aarch64-linux-android.so",
+      "soname": "_sha1.cpython-313-aarch64-linux-android.so",
+      "sha256": "dcc8418c09d8f2890de51d0f5aff6646e2d55fcf2add9ce525f3ebc9df9e03d9",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_sha2.cpython-313-aarch64-linux-android.so",
+      "soname": "_sha2.cpython-313-aarch64-linux-android.so",
+      "sha256": "26780ab2ecb9270182f6390ec26d8b665bf45de7dcd3b655e7c80b97266b3737",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_sha3.cpython-313-aarch64-linux-android.so",
+      "soname": "_sha3.cpython-313-aarch64-linux-android.so",
+      "sha256": "832393e2e2b50d98a15a503c9d541c4a4f267bfdec36a3c43508c8b857078de9",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_socket.cpython-313-aarch64-linux-android.so",
+      "soname": "_socket.cpython-313-aarch64-linux-android.so",
+      "sha256": "3aed43019d89272b20d44d11ddfc4950ec63b096f8b170c3a93b68be76805433",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_sqlite3.cpython-313-aarch64-linux-android.so",
+      "soname": "_sqlite3.cpython-313-aarch64-linux-android.so",
+      "sha256": "070982846410473b306e4cf4b2a3d20bed6f3ac33e208bd386aee26ac000f252",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libsqlite3_python.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_ssl.cpython-313-aarch64-linux-android.so",
+      "soname": "_ssl.cpython-313-aarch64-linux-android.so",
+      "sha256": "1a233b04d9148a53c3e5eb19d3f0db8f5fef2524229d4ca8b7952abf88e80995",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libssl_python.so",
+        "libcrypto_python.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_statistics.cpython-313-aarch64-linux-android.so",
+      "soname": "_statistics.cpython-313-aarch64-linux-android.so",
+      "sha256": "588d8a8ae3fbb180e8fcf353614e108644ab921df0f3bbc41c830d2b1299df5f",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_struct.cpython-313-aarch64-linux-android.so",
+      "soname": "_struct.cpython-313-aarch64-linux-android.so",
+      "sha256": "d5539aada1a7715ef29bee48ead2d39135e1e92514942301299eac5a7284c53f",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_testbuffer.cpython-313-aarch64-linux-android.so",
+      "soname": "_testbuffer.cpython-313-aarch64-linux-android.so",
+      "sha256": "32588bd4d7368ac1e46b206853eb1e104e1875fef5250cf8cafc7a847029ffe1",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_testcapi.cpython-313-aarch64-linux-android.so",
+      "soname": "_testcapi.cpython-313-aarch64-linux-android.so",
+      "sha256": "1cef4dc5f458477115bec9cf1cc8b7211818a0d28a15fb99338c2fd65665ae2d",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_testclinic.cpython-313-aarch64-linux-android.so",
+      "soname": "_testclinic.cpython-313-aarch64-linux-android.so",
+      "sha256": "586bf46ee74f79403739371cacb8c19ee17126a515bd67415bcd5fe61b262233",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_testclinic_limited.cpython-313-aarch64-linux-android.so",
+      "soname": "_testclinic_limited.cpython-313-aarch64-linux-android.so",
+      "sha256": "fe337b14bb968b7f7d6abd47833e344cda2dac42617465e99244c244353b7056",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_testexternalinspection.cpython-313-aarch64-linux-android.so",
+      "soname": "_testexternalinspection.cpython-313-aarch64-linux-android.so",
+      "sha256": "b5d58f3efd97082ff13e1759196ae600a8b93bdede9216c18470ce1cba0cae77",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_testimportmultiple.cpython-313-aarch64-linux-android.so",
+      "soname": "_testimportmultiple.cpython-313-aarch64-linux-android.so",
+      "sha256": "1146f1d6ba71c6f11c13e3331b0ec2bd7795189ad78de1137d1eada5536c5bc0",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_testinternalcapi.cpython-313-aarch64-linux-android.so",
+      "soname": "_testinternalcapi.cpython-313-aarch64-linux-android.so",
+      "sha256": "7f0fdc35530471e746bff3428459fd47bc9f22a55be3922ae15ac99985b1d3b0",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_testlimitedcapi.cpython-313-aarch64-linux-android.so",
+      "soname": "_testlimitedcapi.cpython-313-aarch64-linux-android.so",
+      "sha256": "2fdb64869ce48d17bc808bd56db46c1e1fcd8cb1d4b5b192b95b6e02bd9a61d4",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_testmultiphase.cpython-313-aarch64-linux-android.so",
+      "soname": "_testmultiphase.cpython-313-aarch64-linux-android.so",
+      "sha256": "6cd90e0ff5abaeeb1ced36a821f524a81b639e40e7778c9405bc9291f05ae6ad",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_testsinglephase.cpython-313-aarch64-linux-android.so",
+      "soname": "_testsinglephase.cpython-313-aarch64-linux-android.so",
+      "sha256": "d187f67bb49f1be82a99b258f93437a824feb8bffabcb5f73c28ccc20947e578",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_xxtestfuzz.cpython-313-aarch64-linux-android.so",
+      "soname": "_xxtestfuzz.cpython-313-aarch64-linux-android.so",
+      "sha256": "48efcd34128852ee7d418c1f75a6bbabc32be1615a9b849fed64c80c0b15ee59",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "_zoneinfo.cpython-313-aarch64-linux-android.so",
+      "soname": "_zoneinfo.cpython-313-aarch64-linux-android.so",
+      "sha256": "9502b362108869d47f35b6df7ef9d7211ba8637b2e5959bd02ebe6f8f8239955",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "array.cpython-313-aarch64-linux-android.so",
+      "soname": "array.cpython-313-aarch64-linux-android.so",
+      "sha256": "4cf3e13fc44e9ce5b3de497cf10fef1073051a5644b85b3a77d429374677746c",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "binascii.cpython-313-aarch64-linux-android.so",
+      "soname": "binascii.cpython-313-aarch64-linux-android.so",
+      "sha256": "127b4266671be37faf6f08aeb586482160486e91f9488daa141482268c0ce101",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libz.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "cmath.cpython-313-aarch64-linux-android.so",
+      "soname": "cmath.cpython-313-aarch64-linux-android.so",
+      "sha256": "04df93192b4e33d356c50e6933aa6040f015eec5db856f1410b400772fee79fe",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "fcntl.cpython-313-aarch64-linux-android.so",
+      "soname": "fcntl.cpython-313-aarch64-linux-android.so",
+      "sha256": "b5eff72309a54c494e355cdd78055ccebb2e53acf34fee95e6def9218b85adc3",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "grp.cpython-313-aarch64-linux-android.so",
+      "soname": "grp.cpython-313-aarch64-linux-android.so",
+      "sha256": "2914059873c748da3ad4c7f9f5f0c7716bb285d1d1ea5b30e68fee2b14b32e3b",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "math.cpython-313-aarch64-linux-android.so",
+      "soname": "math.cpython-313-aarch64-linux-android.so",
+      "sha256": "f84497583e597eba97a863248cc89e5cde027f16b2dc2f7c7a9ff8016fbea340",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "mmap.cpython-313-aarch64-linux-android.so",
+      "soname": "mmap.cpython-313-aarch64-linux-android.so",
+      "sha256": "26788d6a9199e878ec2f9e6876e1149e52785f2329f73f45e4a19efad8700d0d",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "pyexpat.cpython-313-aarch64-linux-android.so",
+      "soname": "pyexpat.cpython-313-aarch64-linux-android.so",
+      "sha256": "0356b034e722296784e99771823697105a650eb5d420b8c82683218b96cb6c0a",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "resource.cpython-313-aarch64-linux-android.so",
+      "soname": "resource.cpython-313-aarch64-linux-android.so",
+      "sha256": "9f5ec26b7d89944f2317a9fa89e3dd21518620f26a84e0ff0a0972671ad2b29e",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "select.cpython-313-aarch64-linux-android.so",
+      "soname": "select.cpython-313-aarch64-linux-android.so",
+      "sha256": "349a1f188913d57f1088d723b230b556ee9a607ce9c3656179f990d9d310b15a",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "syslog.cpython-313-aarch64-linux-android.so",
+      "soname": "syslog.cpython-313-aarch64-linux-android.so",
+      "sha256": "29d33dd3f51e1eb66dc12684bb44bee5a78787c06f06c7e3d44d46ac70f7ae9c",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "termios.cpython-313-aarch64-linux-android.so",
+      "soname": "termios.cpython-313-aarch64-linux-android.so",
+      "sha256": "d6b1bf59523037a0d60d60634cbfea41728536c7af6109f71ca3e0647f699048",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "unicodedata.cpython-313-aarch64-linux-android.so",
+      "soname": "unicodedata.cpython-313-aarch64-linux-android.so",
+      "sha256": "c0973e2a6cddcb585789dfdd495ed7d6390bfaf4ebc1abeb804cc983b4974daf",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "xxlimited.cpython-313-aarch64-linux-android.so",
+      "soname": "xxlimited.cpython-313-aarch64-linux-android.so",
+      "sha256": "de5bc7d50c1e6a9632da2f07161f5e2823aee1b76edcaf4c1f196e6ebc829898",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "xxlimited_35.cpython-313-aarch64-linux-android.so",
+      "soname": "xxlimited_35.cpython-313-aarch64-linux-android.so",
+      "sha256": "851e7b571d6bb0b91c6f9c325039d685b57201ddc89462f98954fd8208fe8b09",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "xxsubtype.cpython-313-aarch64-linux-android.so",
+      "soname": "xxsubtype.cpython-313-aarch64-linux-android.so",
+      "sha256": "7807b7bcd5ff1d8bfc0a81b34947f7db57f41831325d199c941b15d5221f396a",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "zlib.cpython-313-aarch64-linux-android.so",
+      "soname": "zlib.cpython-313-aarch64-linux-android.so",
+      "sha256": "7343b365e3da7125b6a234f51efb96931dec792f1f86e10a8999ab1ba802e04a",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libz.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "filename": "libc++_shared.so",
+      "soname": "libc++_shared.so",
+      "sha256": "4397241b4bd20a8e579bfb41d21107857e12985f6a01ca0c2a5f83380d1270b4",
+      "minimum_load_alignment": 16384,
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+// SPDX-License-Identifier: LGPL-2.1-or-later
+package org.freecad.mobilelab;
+import java.io.*;import java.nio.charset.StandardCharsets;import java.nio.file.Files;import java.util.zip.*;import org.json.*;
+final class RecipeFiles {
+ static byte[] bytes(String graph)throws Exception{ParametricGraph.validate(graph);JSONObject g=new JSONObject(graph);g.put("version",1);return new JSONObject().put("format","MobileCADGraph").put("version",1).put("units","mm").put("graph",g).toString().getBytes(StandardCharsets.UTF_8);}
+ static void write(File destination,String graph)throws Exception{byte[] b=bytes(graph);try(FileOutputStream out=new FileOutputStream(destination)){out.write(b);out.getFD().sync();}}
+ static String read(File file)throws Exception{if(file.length()>256000)throw new IOException("Recipe exceeds 256 KB");JSONObject o=new JSONObject(new String(Files.readAllBytes(file.toPath()),StandardCharsets.UTF_8));if(!o.optString("format").equals("MobileCADGraph")||o.optInt("version")!=1||!o.optString("units").equals("mm"))throw new IOException("Unsupported recipe format/version/units");String graph=o.getJSONObject("graph").toString();ParametricGraph.validate(graph);return graph;}
+ /** Called within a read-only engine transaction; each variant is rolled back before continuing. */
+ static void batch(File zipFile,File cache,String graph,int numberId,double first,double last,int count,double tolerance)throws Exception{
+  ParametricGraph.whole(count,2,10);if(new JSONObject(graph).getJSONArray("outputs").length()!=1)throw new IOException("Batch export currently needs one graph output");int[] oldOutputs=ParametricGraph.lastOutputs;File work=Files.createTempDirectory(cache.toPath(),"variants-").toFile();ArchiveIO.Budget budget=new ArchiveIO.Budget(ArchiveIO.MAX_TOTAL);
+  try(ZipOutputStream zip=new ZipOutputStream(new FileOutputStream(zipFile))){for(int i=0;i<count;i++){double value=first+(last-first)*i/(count-1);String variant=ParametricGraph.variant(graph,numberId,value);NativeCad.beginPreview();try{int id=ParametricGraph.evaluate(variant,ProjectStore.graphOutputIds);File stl=new File(work,"variant-"+(i+1)+".stl");NativeCad.writeWithTolerance(stl.getAbsolutePath(),"stl",id,tolerance);zip.putNextEntry(new ZipEntry(stl.getName()));try(InputStream in=new FileInputStream(stl)){ArchiveIO.copy(in,zip,ArchiveIO.MAX_SHAPE,budget);}zip.closeEntry();byte[] recipe=bytes(variant);budget.add(recipe.length);zip.putNextEntry(new ZipEntry("variant-"+(i+1)+".cadgraph"));zip.write(recipe);zip.closeEntry();stl.delete();}finally{NativeCad.endPreview();}}}finally{ParametricGraph.lastOutputs=oldOutputs;ArchiveIO.deleteTree(work);}
+ }
+}

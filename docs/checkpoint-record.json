@@ -1,0 +1,13 @@
+{
+  "version": "1.0-rc7",
+  "version_name": "1.0-rc7",
+  "version_code": 20,
+  "status": "engineering checkpoint; Android device gate pending",
+  "apk": "FreeCAD-Mobile-Lab-1.0-rc7-arm64.apk",
+  "size_bytes": 141322508,
+  "sha256": "4bd7c0d19031a8fd1feb46402795bf89bb408f4b8d2f2c1e07cd4e4960b60a84",
+  "engineering_changes": "Document-lab restart/recovery access; stale Python/runtime packaging guards and safe refresh; exact macro bound errors; dependency hash checks, source/notices, public packaging and publishing preparation. Six portable regressions pass; APK signatures/54-library loader closure/16KiB pass; Android runtime and GitHub publication pending.",
+  "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+  "signing": "retained public development identity",
+  "milestone_gate": "not complete until roadmap device/workflow criteria pass"
+}

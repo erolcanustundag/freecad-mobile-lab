@@ -1,0 +1,12 @@
+freecad_commit=e5fabddebb0dc54ecf324cedddd26e053e2a8488
+occt_tag=V7_9_2
+occt_commit=c5f20409c52bf8f658314d205a0e5d6f0be0969c
+eigen_version=3.4.0
+boost_version=1.87.0
+android_ndk=27.2.12479018
+android_api_min=26
+android_api_target=35
+android_build_tools=35.0.0
+jdk=17
+meshoptimizer_version=1.0
+meshoptimizer_commit=73583c335e541c139821d0de2bf5f12960a04941

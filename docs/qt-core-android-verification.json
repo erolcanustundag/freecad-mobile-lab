@@ -1,0 +1,25 @@
+{
+  "status": "CROSS_BUILD_STATIC_PASS_DEVICE_NOT_RUN",
+  "libraries": [
+    {
+      "filename": "libQt6Concurrent_arm64-v8a.so",
+      "minimum_load_alignment": 16384,
+      "aarch64": true
+    },
+    {
+      "filename": "libQt6Core_arm64-v8a.so",
+      "minimum_load_alignment": 16384,
+      "aarch64": true
+    },
+    {
+      "filename": "libQt6Network_arm64-v8a.so",
+      "minimum_load_alignment": 16384,
+      "aarch64": true
+    },
+    {
+      "filename": "libQt6Xml_arm64-v8a.so",
+      "minimum_load_alignment": 16384,
+      "aarch64": true
+    }
+  ]
+}

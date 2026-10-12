@@ -1,0 +1,43 @@
+{
+  "candidate": "1.0-rc7",
+  "version_code": 20,
+  "stable_1_0": "NOT_COMPLETE",
+  "android_runtime": "NOT_RUN",
+  "reported_phone_crash": "root cause not established; fix not verified",
+  "static_apk": "PASS: signed ARM64/API26-35, 54 JNI libraries, dependency-name closure and16KiB ZIP/ELF alignment",
+  "runtime_asset_packaging": "PASS: 6 portable regressions;822 Python CRC/hash/source matches;54 JNI library and Java input hashes",
+  "native_runtime": "UNCHANGED_FROM_RC6; prior host/strong-symbol evidence retained, target execution NOT_RUN",
+  "device_smoke_instrumentation": "COMPILED_ONLY",
+  "production_signing": "PENDING: prototype development certificate retained; production identity/update migration not verified",
+  "publication": "PENDING: repository/release creation absent from plugin; separate browser sign-in declined",
+  "pending": [
+    "reported phone and second device cold starts/lifecycle/SAF/process recreation",
+    "minimum/current Android, multiple GPU vendors, low-memory and4/16KiB environments",
+    "production signing and update migration",
+    "original Part, Sketcher, PartDesign and remaining workbench/module/format parity",
+    "independent CAD comparison and fabrication calibration"
+  ],
+  "historical_rc2_evidence": {
+    "candidate": "1.0-rc2",
+    "version_code": 15,
+    "stable_1_0": "NOT_COMPLETE",
+    "android_runtime": "NOT_RUN",
+    "reported_phone_crash": "root cause not established",
+    "static_apk": "PASS: signed ARM64/API26-35, 31 native libraries, dependency closure and 16 KiB ZIP/ELF alignment",
+    "schema_commands": "PASS: 25 portable assertions",
+    "production_signing_path": "PASS: 6 disposable-QA checks; actual production identity/update migration pending",
+    "host_native_regression": "PASS: rebuilt matching OCCT7.9.2/JNI baseline, dense STL, freeform and focused suites",
+    "device_smoke_instrumentation": "COMPILED_ONLY",
+    "pending": [
+      "reported phone and second device cold starts/lifecycle/SAF/process recreation",
+      "minimum/current Android, multiple GPU vendors, low-memory and 4/16 KiB environments",
+      "Android v1-v2 migration and prototype-production transition",
+      "independent CAD dimensions and physical print/casting calibration",
+      "remaining roadmap editing/freeform/graph/fabrication/render tools"
+    ],
+    "candidate_integration": "PASS: 59 assertions including project migration, pending export remap and A4 drawing/XML validation",
+    "independent_examples": "PASS: five watertight/winding STL checks, SVG XML/A4 and visual layout",
+    "source_apk_provenance": "PASS: build input digests and retained 0.9 ARM64 native binaries",
+    "repeat_packaging": "PASS: separately reproduced DEX/assets/native bytes identical; immutable original APK preserved"
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "version": "1.0-rc7",
+  "tag": "v1.0-rc7",
+  "title": "FreeCAD Mobile Lab 1.0-rc7 \u00b7 experimental Android candidate",
+  "milestone_gate": "NOT_COMPLETE",
+  "android_runtime": "NOT_RUN",
+  "publication": "REPOSITORY_CREATED_RELEASE_PENDING",
+  "assets": [
+    {
+      "name": "FreeCAD-Mobile-Lab-1.0-rc7-arm64.apk",
+      "kind": "apk",
+      "size_bytes": 141322508,
+      "sha256": "4bd7c0d19031a8fd1feb46402795bf89bb408f4b8d2f2c1e07cd4e4960b60a84"
+    },
+    {
+      "name": "FreeCAD-Mobile-Lab-1.0-rc7-native-runtime.zip",
+      "kind": "native-runtime",
+      "size_bytes": 56594506,
+      "sha256": "ee46ac7c237146980d1ab1aeca9fdb13af932423a31e57b7d12be149e34c0c38",
+      "files": [
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libFreeCADApp.so",
+          "size_bytes": 7351432,
+          "sha256": "9d1dea0acbf8a57de94e6011a294ae00ca3d3392399158b532b9b925801bfe93"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libFreeCADBase.so",
+          "size_bytes": 2777776,
+          "sha256": "e1628d27a63a7cb9e33b1e3564d16b9ff921a923168793973d06a0d6a86592e6"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libFreeCADPython.so",
+          "size_bytes": 54225,
+          "sha256": "9cf30016cf933dadb4b4d6539c55ffcf7c6cc4ebf7986a385c358bf127678862"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libQt6Concurrent_arm64-v8a.so",
+          "size_bytes": 43224,
+          "sha256": "c7c1b65bc93a279eebb821b481f1d6c2c5419743ba5082036501dd1a5ca39b8e"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libQt6Core_arm64-v8a.so",
+          "size_bytes": 6038440,
+          "sha256": "19ff054945c3480d3bfaa8c2937c6b8fde7d0a2880600a3e9cfcd1ea02bf6a85"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libQt6Network_arm64-v8a.so",
+          "size_bytes": 1574992,
+          "sha256": "655caf7e301840950dba2fc232491db0d60231f4ecb2b9150e426628abd7f16c"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libQt6Xml_arm64-v8a.so",
+          "size_bytes": 149520,
+          "sha256": "d779b1db12d6e3d2cc218e03d6eb8b4c5aee6b4a4d197b001352bf1544a1994b"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKBO.so",
+          "size_bytes": 2380584,
+          "sha256": "2c6ef1ece14e8a7e170f241059b026e51186ad2ea04258fbc99a45ace124f291"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKBRep.so",
+          "size_bytes": 1117384,
+          "sha256": "100d30a908caa2d052302a6e60972cb96916a9465aa9113d0c78ac1a9047a402"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKBool.so",
+          "size_bytes": 3712568,
+          "sha256": "712b85814e648a115980c202230f980fdd71a4c41f4e51a76c1d7e02015018a8"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKCAF.so",
+          "size_bytes": 621136,
+          "sha256": "d0da0a9af1c54c6f4435238d78fa3305b778e3ffd2a14520211d6d5ba3fa4d72"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKCDF.so",
+          "size_bytes": 379120,
+          "sha256": "2267d2ed57dae0b118caa3dc39e854f632bfed8597469a46bd58a386b6762d5c"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKDE.so",
+          "size_bytes": 152016,
+          "sha256": "dd2096e7681fa34deb6d5070c1e9efc7713fbb43b72452931415f7ecdd4d961b"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKDEIGES.so",
+          "size_bytes": 3969768,
+          "sha256": "089a00f0f179e8206a1041647e1c0c405e603c1cc9af9a9f6977f91e46ce3d18"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKDESTEP.so",
+          "size_bytes": 8310752,
+          "sha256": "654de7aef74249877ea4a770d7c9e3e25377472ec8e17df625af8906afbac07d"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKDESTL.so",
+          "size_bytes": 125600,
+          "sha256": "61b2bc59d81a3a05746f60278d7175eedaa244b751783ee9e926574a8241cd07"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKFillet.so",
+          "size_bytes": 2209992,
+          "sha256": "01cae88a255f578387d3828650922682721aa8230f65e068011e260c1741cc7c"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKG2d.so",
+          "size_bytes": 370856,
+          "sha256": "c082ff7ca137b3b7b78b8bcd990439d78775a02448b95ccf762a2025addeb801"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKG3d.so",
+          "size_bytes": 1057040,
+          "sha256": "d541fa10d8bcae08191f29b9df92b34769bfbbe52384ca9ea5ac2d44de16f16d"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKGeomAlgo.so",
+          "size_bytes": 4252576,
+          "sha256": "68ed211327b9e860e6d53982ff0d0ed17e00ea4d872a721411c192a5094dad64"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKGeomBase.so",
+          "size_bytes": 4585680,
+          "sha256": "18979fd7d8f00eb7b172b8ecc79b3d96ddd07b8dfd1233fab93b68aabdd9550f"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKHLR.so",
+          "size_bytes": 1035392,
+          "sha256": "b63c78692ca0bbf78fc0fc960ef0ea628220e055a4e8679a5ad350d2a564f1b1"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKLCAF.so",
+          "size_bytes": 973208,
+          "sha256": "1ac7ba0efbd58af746589e37125f908e082609ed35662e9b83ed463c49f42a52"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKMath.so",
+          "size_bytes": 1920520,
+          "sha256": "914146e04a948d854abb989c286c7b22cac3d6f6374d890448d5015d9ea00cc7"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKMesh.so",
+          "size_bytes": 1083264,
+          "sha256": "688af0ef07e2bbc0238b48a894edfaa4c4cc41461eb155d52505339a2e46be2a"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKOffset.so",
+          "size_bytes": 1948520,
+          "sha256": "a2dab53b946ac36dac3d5c1e05476f83b6d4d8bcb1dd256b371661b5a9258c9f"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKPrim.so",
+          "size_bytes": 379904,
+          "sha256": "b5986d825b7980c659d0e1c45f51e94dc9641c800585a3a14825b0922d9f365f"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKService.so",
+          "size_bytes": 1132256,
+          "sha256": "1c6a698a802422daebb200114b9f31a0d0f9cb461a41612c30b09827e02ebc3d"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKShHealing.so",
+          "size_bytes": 2635656,
+          "sha256": "12cd3356860e2e48cad471d108f0bdea0fa930864660ba83200a8bd81ffa5e35"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKTopAlgo.so",
+          "size_bytes": 2733928,
+          "sha256": "e89f4eee31c3b5a69a489eeeb2b95eacdc0c3ccd2ab2c8c17143fc9617965a7b"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKV3d.so",
+          "size_bytes": 3004952,
+          "sha256": "b7801d01359ac4bfcc93e8c2f6dadfb45225bb86092a7e60a07b4433ab4a8f89"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKVCAF.so",
+          "size_bytes": 268512,
+          "sha256": "fa42ce84721c5632ba522e6a2e22beaf43f2db211eae55cb15b850cd4f35643c"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKXCAF.so",
+          "size_bytes": 971416,
+          "sha256": "94111fe15c6837b3b9d57ecfa548982314fd55a93b200f9c2bc15cacb67be912"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKXSBase.so",
+          "size_bytes": 2087472,
+          "sha256": "959d50b75ec5fa2a899122e463bf038eb4a64be61e3f85a005686f31cf43a3a0"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libTKernel.so",
+          "size_bytes": 1917992,
+          "sha256": "c06e0307bcc1eec8f52d1af7999249c938f5a9d67f62156a462a7cf3cfbac7a1"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libboost_date_time.so",
+          "size_bytes": 3840,
+          "sha256": "4a7c20867a86b9ab93fc70ccf7edfd990834b61dfd240686fbece8f78b9e17e2"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libboost_program_options.so",
+          "size_bytes": 315040,
+          "sha256": "84b32bfe46d200af79c9008dc3fc0efd782a813d373f10f5976364fddee779b6"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libboost_regex.so",
+          "size_bytes": 304392,
+          "sha256": "594f9f32bb6dbb776feea68d43fc484e2f4abb821ffbeecf3f35ac4e9fbf20c9"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libboost_thread.so",
+          "size_bytes": 110784,
+          "sha256": "17ad556f3d34308c177989ace2087dcce50a4d7c7f60d030daac114b03b8eea2"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libc++_shared.so",
+          "size_bytes": 1292904,
+          "sha256": "4397241b4bd20a8e579bfb41d21107857e12985f6a01ca0c2a5f83380d1270b4"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libcad_mobile.so",
+          "size_bytes": 558048,
+          "sha256": "116f24a2816ff5336a4a31ad7005fdbab043d6954584a67c1866fff993f12ac5"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libcrypto_python.so",
+          "size_bytes": 4544648,
+          "sha256": "d14507e2801c0bcd445db67b7fdb59c22bcf8bd5605af6520648cb5f53357c3d"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libfmt.so",
+          "size_bytes": 142760,
+          "sha256": "094c3d3bbe93b43dd9dc211ea4c3d6481d17ddfbf7810286d436c0be97914f40"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libfreecad_document_bridge.so",
+          "size_bytes": 52865,
+          "sha256": "152ab732a5502ac2ac694aba1742904bb8b6b239a9b524efc207369f68659571"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libfreecad_sketcher.so",
+          "size_bytes": 590672,
+          "sha256": "b55291e78ec9c4dc200b83d75857be2317876fac23d2edf542f5d5ac7f4871cb"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libicudata.so",
+          "size_bytes": 30787096,
+          "sha256": "dccf51d84487d88905276970b04cb6bf48e87f92368e165730aea4bdf20312ed"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libicui18n.so",
+          "size_bytes": 4532008,
+          "sha256": "2d5c64b8a826d26292eca7c7efe4bf5b29305c5cf1ef07da80e4e3148c8e2108"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libicuuc.so",
+          "size_bytes": 2555480,
+          "sha256": "8967be000632edf9f3800614abbf3c9d90aaced3338cc139ece8b63832cc3147"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libpython3.13.so",
+          "size_bytes": 5416304,
+          "sha256": "d39eebfff3a93baa8a2b86aa1eebe6ffacccb63d16b475a067d0ad2d9eacb60f"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libpython3.so",
+          "size_bytes": 4048,
+          "sha256": "07db1913825cf15c79794a57370b34906d030b85d0a78424b18efeca54aea5bb"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libsqlite3_python.so",
+          "size_bytes": 1217400,
+          "sha256": "a4c8853a67649f75b1fc05d270a40353e344b2460d8d4f1644568cd132fc9a58"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libssl_python.so",
+          "size_bytes": 963384,
+          "sha256": "9b1de9f8538f6bd0e62aff027631b0b5c3f70816cc461b92499824141fa56612"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libxerces-c-3.2.so",
+          "size_bytes": 3673392,
+          "sha256": "5da06dead12305de5601cdc5d97dc39771f4f62618d3e046ece0f572aaacb5dc"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libyaml-cpp.so",
+          "size_bytes": 326304,
+          "sha256": "e161b5ff427b0cf5fa0e7ba0e72580336061488c7f79cd080fe13df8866ebd34"
+        },
+        {
+          "path": "app/libs/Qt6Android.jar",
+          "size_bytes": 154710,
+          "sha256": "b4b439629c5aa21db9a3b633d77182d0b25b1c381c391fc447e6104be394bb54"
+        },
+        {
+          "path": "app/src/main/assets/core/python-home.zip",
+          "size_bytes": 9635257,
+          "sha256": "f5fd0963106571ee070b0f609da2eacc00e9278ff82c3ec5f912699a0ac20145"
+        }
+      ]
+    },
+    {
+      "name": "FreeCAD-Mobile-Lab-1.0-rc7-corresponding-sources.zip",
+      "kind": "corresponding-source",
+      "size_bytes": 430414494,
+      "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51"
+    },
+    {
+      "name": "FreeCAD-Mobile-Lab-1.0-rc7-public-source.zip",
+      "kind": "application-source",
+      "size_bytes": 31613211,
+      "sha256": "35a7dd975490e2b22357487845492fecb44c9863b28d504456bf18ed573d37be"
+    }
+  ]
+}

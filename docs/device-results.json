@@ -1,0 +1,5 @@
+{
+  "android_runtime": "NOT_RUN",
+  "reason": "No Android debug bridge is available; no connected Android test executed",
+  "stable_1_0": "NOT_COMPLETE"
+}

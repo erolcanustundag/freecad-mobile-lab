@@ -1,0 +1,150 @@
+{
+  "scope": "upstream core build provenance; optional App runtime integrated since rc5",
+  "ndk": {
+    "version": "ndk;27.2.12479018",
+    "url": "https://dl.google.com/android/repository/android-ndk-r27c-linux.zip",
+    "size": 663987688,
+    "sha1": "090e8083a715fdb1a3e402d0763c388abb03fb4e",
+    "sha256": "59c2f6dc96743b5daf5d1626684640b20a6bd2b1d85b13156b90333741bad5cc",
+    "status": "DOWNLOADED_HASH_VERIFIED_EXTRACTED"
+  },
+  "cpython_source": {
+    "version": "3.13.16",
+    "url": "https://codeload.github.com/python/cpython/tar.gz/refs/tags/v3.13.16",
+    "sha256": "65f1e93669e9d545d692473762bb70662f399eb9091034328db423c6be80d6d7",
+    "status": "ARM64_CROSS_BUILT_DEVICE_NOT_RUN"
+  },
+  "qt_6_8_3": [
+    {
+      "name": "qtbase-Linux-RHEL_8_10-GCC-Linux-RHEL_8_10-X86_64.7z",
+      "url": "https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_683/qt6_683/qt.qt6.683.linux_gcc_64/6.8.3-0-202503201345qtbase-Linux-RHEL_8_10-GCC-Linux-RHEL_8_10-X86_64.7z",
+      "sha1": "ce7335772903412dc1f70a9d77e9b39d55e6e353",
+      "platform": "linux-x86_64",
+      "status": "HASH_VERIFIED_EXTRACTED",
+      "size": 25530313,
+      "sha256": "d8fe882cae71284a7ca906b70b42840376882fe96f22fce1ba5a7a70ceeec799"
+    },
+    {
+      "name": "qttools-Linux-RHEL_8_10-GCC-Linux-RHEL_8_10-X86_64.7z",
+      "url": "https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_683/qt6_683/qt.qt6.683.linux_gcc_64/6.8.3-0-202503201345qttools-Linux-RHEL_8_10-GCC-Linux-RHEL_8_10-X86_64.7z",
+      "sha1": "08552bfb32559d0c687bc04dc5cf703b09c5e8d0",
+      "platform": "linux-x86_64",
+      "status": "HASH_VERIFIED_EXTRACTED",
+      "size": 39419329,
+      "sha256": "a39477caa537743afb5575e5c65018a7d62e47ccf15a4e3444ecc43208ac1047"
+    },
+    {
+      "name": "qtbase-MacOS-MacOS_13-Clang-Android-Android_ANY-ARM64.7z",
+      "url": "https://download.qt.io/online/qtsdkrepository/all_os/android/qt6_683/qt6_683_arm64_v8a/qt.qt6.683.android_arm64_v8a/6.8.3-0-202503201334qtbase-MacOS-MacOS_13-Clang-Android-Android_ANY-ARM64.7z",
+      "sha1": "13613c32bbde4388db027029d454da583dccb1b3",
+      "platform": "android-arm64",
+      "status": "HASH_VERIFIED_EXTRACTED",
+      "size": 15489377,
+      "sha256": "83b195dc06e8543011c7a0abe4442789027bf110ba37d28dc2574d3401e537c1"
+    },
+    {
+      "name": "qttools-MacOS-MacOS_13-Clang-Android-Android_ANY-ARM64.7z",
+      "url": "https://download.qt.io/online/qtsdkrepository/all_os/android/qt6_683/qt6_683_arm64_v8a/qt.qt6.683.android_arm64_v8a/6.8.3-0-202503201334qttools-MacOS-MacOS_13-Clang-Android-Android_ANY-ARM64.7z",
+      "sha1": "1a93ac20835e1562640c0ca63fb1a83d7e9fe1bf",
+      "platform": "android-arm64",
+      "status": "HASH_VERIFIED_EXTRACTED",
+      "size": 3749630,
+      "sha256": "29d18aefd363b405f7f6ed7763d791bb309f31ea623118fee3565e6cbc61b285"
+    },
+    {
+      "name": "icu-linux-Rhel8.6-x86_64.7z",
+      "url": "https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_683/qt6_683/qt.qt6.683.linux_gcc_64/6.8.3-0-202503201345icu-linux-Rhel8.6-x86_64.7z",
+      "sha1": "8c52041c897e4de0bc663821afe2efb39f259aa7",
+      "sha256": "a2543496e1280c6fa348e0791def5026d5bde9e5749d9fc2244866ab0bee8aed",
+      "size": 9660623,
+      "platform": "linux-x86_64",
+      "status": "HASH_VERIFIED_EXTRACTED"
+    }
+  ],
+  "cpython_dependency_archives": [
+    {
+      "filename": "bzip2-1.0.8-3-aarch64-linux-android.tar.gz",
+      "size": 197400,
+      "sha256": "2385f46e173d525f079946957c007000a8ad11d8496ba66bae99129183d74bd9"
+    },
+    {
+      "filename": "libffi-3.4.4-3-aarch64-linux-android.tar.gz",
+      "size": 42455,
+      "sha256": "9f2c0255ce025c177d44db16174ad5158c7560efe3c7ef0c8c0c64b2196e6a9d"
+    },
+    {
+      "filename": "openssl-3.5.9-0-aarch64-linux-android.tar.gz",
+      "size": 6335516,
+      "sha256": "bf115f29963d577e20a1595dac13baec7ccd559bf8a05f37659ba6b735a8778b"
+    },
+    {
+      "filename": "sqlite-3.53.4-0-aarch64-linux-android.tar.gz",
+      "size": 1718864,
+      "sha256": "11dfa2e8360b3022fb5da98743273bee09559cb546bbd00398e1578fefb3b3db"
+    },
+    {
+      "filename": "xz-5.4.6-1-aarch64-linux-android.tar.gz",
+      "size": 651211,
+      "sha256": "320b76d45dc3499cf855e5310f875cba61c2608e4a98bb280cc4f1b8f189da1a"
+    }
+  ],
+  "qtbase_source": {
+    "url": "https://download.qt.io/archive/qt/6.8/6.8.3/submodules/qtbase-everywhere-src-6.8.3.tar.xz",
+    "sha256": "56001b905601bb9023d399f3ba780d7fa940f3e4861e496a7c490331f49e0b80",
+    "status": "ARM64_16K_CROSS_BUILD_STATIC_PASS_DEVICE_NOT_RUN"
+  },
+  "qt_prebuilt_android_alignment": "4 KiB LOAD; EXCLUDED_FROM_APK; source rebuild required",
+  "boost": {
+    "version": "1.87.0",
+    "url": "https://archives.boost.io/release/1.87.0/source/boost_1_87_0.tar.bz2",
+    "sha256": "af57be25cb4c4f4b413ed692fe378affb4352ea50fbe294a11ef548f4d527d89",
+    "status": "ARM64_16K_STATIC_PASS_DEVICE_NOT_RUN"
+  },
+  "cmake_dependencies": [
+    {
+      "name": "fmt",
+      "version": "11.1.4",
+      "url": "https://github.com/fmtlib/fmt/archive/refs/tags/11.1.4.zip",
+      "sha256": "7e85cbf6125a76daa0f83cd9240eff863d988aca68cd5f66c01ff7b59fa886b6",
+      "archive": "fmt-11.1.4.zip",
+      "source_directory": "fmt-11.1.4",
+      "status": "ARM64_CROSS_BUILT_OR_HEADERS_INSTALLED_DEVICE_NOT_RUN"
+    },
+    {
+      "name": "yaml-cpp",
+      "version": "0.8.0",
+      "url": "https://codeload.github.com/jbeder/yaml-cpp/tar.gz/refs/tags/0.8.0",
+      "sha256": "fbe74bbdcee21d656715688706da3c8becfd946d92cd44705cc6098bb23b3a16",
+      "archive": "yaml-cpp-0.8.0.tar.gz",
+      "source_directory": "yaml-cpp-0.8.0",
+      "status": "ARM64_CROSS_BUILT_OR_HEADERS_INSTALLED_DEVICE_NOT_RUN"
+    },
+    {
+      "name": "pybind11",
+      "version": "2.13.6",
+      "url": "https://codeload.github.com/pybind/pybind11/tar.gz/refs/tags/v2.13.6",
+      "sha256": "e08cb87f4773da97fa7b5f035de8763abc656d87d5773e62f6da0587d1f0ec20",
+      "archive": "pybind11-2.13.6.tar.gz",
+      "source_directory": "pybind11-2.13.6",
+      "status": "ARM64_CROSS_BUILT_OR_HEADERS_INSTALLED_DEVICE_NOT_RUN"
+    }
+  ],
+  "xerces": {
+    "version": "3.2.5",
+    "url": "https://archive.apache.org/dist/xerces/c/3/sources/xerces-c-3.2.5.tar.gz",
+    "sha256": "545cfcce6c4e755207bd1f27e319241e50e37c0c27250f11cda116018f1ef0f5",
+    "status": "ARM64_CROSS_BUILT_DEVICE_NOT_RUN"
+  },
+  "icu": {
+    "version": "74.2",
+    "url": "https://github.com/unicode-org/icu/releases/download/release-74-2/icu4c-74_2-src.tgz",
+    "sha512": "e6c7876c0f3d756f3a6969cad9a8909e535eeaac352f3a721338b9cbd56864bf7414469d29ec843462997815d2ca9d0dab06d38c37cdd4d8feb28ad04d8781b0",
+    "status": "ARM64_16K_LOADER_NAMES_NORMALISED_DEVICE_NOT_RUN"
+  },
+  "freecad_source": {
+    "version": "1.1.4",
+    "url": "https://codeload.github.com/FreeCAD/FreeCAD/tar.gz/refs/tags/1.1.4",
+    "sha256": "b95270a74a26dbdde331c6ff8e764289da6c77713e2b2d4e0c0041dfe1950f3f",
+    "status": "HOST_REFERENCE_PASS_ARM64_STATIC_PASS_JNI_NOT_IMPLEMENTED"
+  }
+}

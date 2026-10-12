@@ -1,0 +1,306 @@
+{
+  "scope": "Linux x86_64 host reference inputs, NOT Android APK inputs",
+  "snapshot": "Ubuntu noble snapshot 2026-08-28",
+  "packages": [
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/libg/libglvnd/libegl-dev_1.7.0-1build1_amd64.deb",
+      "filename": "libegl-dev_1.7.0-1build1_amd64.deb",
+      "size": 18204,
+      "sha512": "27ed322d5d07d236a56c498ca81da68d12bf75a2aa97a30fd67a2c7097028c24ee33ef35e5535895d8b9b041acf88b4be872731379ae48b5245f85ec395bc470"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/libg/libglvnd/libgl-dev_1.7.0-1build1_amd64.deb",
+      "filename": "libgl-dev_1.7.0-1build1_amd64.deb",
+      "size": 102444,
+      "sha512": "42f5ebb0e1fca0087eb0af479fe9966e4e88983c2194e5cbb9c25366f8749438d5b04e1c780f98c3d4f8e80923b2f76c00817559e6333914c044bb1289a790a0"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/libg/libglvnd/libglx-dev_1.7.0-1build1_amd64.deb",
+      "filename": "libglx-dev_1.7.0-1build1_amd64.deb",
+      "size": 14176,
+      "sha512": "de0b4c99616a2b07fd7fc06ee75d3c879409470cef8bf8783455b114ee04018b28ba9d025c16e13083e9413b69cb99d36b71ef5f052efef80720f8b6234a1029"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/libg/libglvnd/libopengl-dev_1.7.0-1build1_amd64.deb",
+      "filename": "libopengl-dev_1.7.0-1build1_amd64.deb",
+      "size": 3454,
+      "sha512": "52dd5cf7c0863e38fdee101a461e5da687705c274d9645975fdb0204202c1af863002bfe7b3f539d7bafccbb7b9020e65be583b0788d158893899bb4477e4e97"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/y/yaml-cpp/libyaml-cpp-dev_0.8.0%2bdfsg-6build1_amd64.deb",
+      "filename": "libyaml-cpp-dev_0.8.0+dfsg-6build1_amd64.deb",
+      "size": 187528,
+      "sha512": "1bc25d62274fdd9c87d64f915764887639453839b069a391cffa9e557f47688163e4412a3e0644bd51cdc314e000c88b44bd3c526a61b360304b88daf2796710"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/y/yaml-cpp/libyaml-cpp0.8_0.8.0%2bdfsg-6build1_amd64.deb",
+      "filename": "libyaml-cpp0.8_0.8.0+dfsg-6build1_amd64.deb",
+      "size": 115458,
+      "sha512": "b52ba97a82b69efc37c3991f32b858a4b0e232a127b3be0d510ae3a23e97815da813b89f4387512d31796b26e47e17847d91913f4bfda0fb4c7297348b04e03d"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/f/fmtlib/libfmt-dev_9.1.0%2bds1-2_amd64.deb",
+      "filename": "libfmt-dev_9.1.0+ds1-2_amd64.deb",
+      "size": 121674,
+      "sha512": "dfa4610ccda3b64e25685d9679c75f0a742e4377f92862fe0d3d781a823f4ff6682110d7a11e185902002aab1b150e7f1a66ea97cce731963cc85424647fef80"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/f/fmtlib/libfmt9_9.1.0%2bds1-2_amd64.deb",
+      "filename": "libfmt9_9.1.0+ds1-2_amd64.deb",
+      "size": 62960,
+      "sha512": "9f55c9dc109cd9ef0dc2191fc677a7e992e2d63bfb7f117458c872bcdb30b469ee64da9ac8d3f0aca0b4bc811c9428bee6f337d30e0681f81c20087d06347989"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/q/qtbase-opensource-src/libqt5concurrent5t64_5.15.13%2bdfsg-1ubuntu1_amd64.deb",
+      "filename": "libqt5concurrent5t64_5.15.13+dfsg-1ubuntu1_amd64.deb",
+      "size": 35676,
+      "sha512": "e559053a6871455bc0385ad4ea1b8b3fea8385f6f8c9fa1e17bb270bdd5965e8dea6e57c90fcf44b565ad2a1155f0642db3b4bdc4cdaf5e3035ad433dd8aa192"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/q/qtbase-opensource-src/libqt5core5t64_5.15.13%2bdfsg-1ubuntu1_amd64.deb",
+      "filename": "libqt5core5t64_5.15.13+dfsg-1ubuntu1_amd64.deb",
+      "size": 2010540,
+      "sha512": "78ab7d65714b6953735ad64a86a34299a1f968d16dfaef6c6616e2a3686f448943bb197a46a753c7e356d9547a72c81848b43ff9c7489c86d6b91ebf1016b695"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/q/qtbase-opensource-src/libqt5network5t64_5.15.13%2bdfsg-1ubuntu1_amd64.deb",
+      "filename": "libqt5network5t64_5.15.13+dfsg-1ubuntu1_amd64.deb",
+      "size": 722778,
+      "sha512": "394944a84cf82a88ec063584be658545f6351d5774bfbe66c303f14628df5a851316c962e0633e4848fa9eac1ea2039ee47f19a4c7e76464c8cc81e3e6948dcd"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/q/qtbase-opensource-src/libqt5xml5t64_5.15.13%2bdfsg-1ubuntu1_amd64.deb",
+      "filename": "libqt5xml5t64_5.15.13+dfsg-1ubuntu1_amd64.deb",
+      "size": 124102,
+      "sha512": "6f1098d3b7a228f42993dae5902df97465f0974d75c50b99c7156e04748fdfc6196c24ac640e8c1f93ac865d7d4fde88135bd9719907c02f55747c086e021e72"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/x/xerces-c/libxerces-c-dev_3.2.4%2bdebian-1.2ubuntu2_amd64.deb",
+      "filename": "libxerces-c-dev_3.2.4+debian-1.2ubuntu2_amd64.deb",
+      "size": 1814832,
+      "sha512": "75cbfc4a29200603633dfb0f1108a7d17c53ed8c147167c8efbacb9eca653e2408f4507ec66782ea1a0f3a1cd8f58d2b181e436146b8c3df4a45526e64a62c9a"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/x/xerces-c/libxerces-c3.2t64_3.2.4%2bdebian-1.2ubuntu2_amd64.deb",
+      "filename": "libxerces-c3.2t64_3.2.4+debian-1.2ubuntu2_amd64.deb",
+      "size": 919492,
+      "sha512": "f6b27f6890064b2f5fc4bf461981e8dadbb7ff449b26e61ef932a9b8bafef2949e4cff7e57d425b826f4be4d60351a53b6e9986d617e7b484a523481172b9432"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/p/pybind11/pybind11-dev_2.11.1-2_all.deb",
+      "filename": "pybind11-dev_2.11.1-2_all.deb",
+      "size": 158692,
+      "sha512": "3f6509db3d4170cbd098f564ec05cba140f78954265458f0c3bab3d3b9a41b135a9b716e13688e4aa1b1bff7916fc611b37a94fbb47648e889979685b123153f"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/q/qtbase-opensource-src/qt5-qmake-bin_5.15.13%2bdfsg-1ubuntu1_amd64.deb",
+      "filename": "qt5-qmake-bin_5.15.13+dfsg-1ubuntu1_amd64.deb",
+      "size": 1140026,
+      "sha512": "3c07e3b7a2f5b53d2646547eeeb6133ebaaac527c5e1e0b3d76c6a2a90bbcd6030f46ad972a895dcc1c203734b2ddf1a71ef4a75b13ca033b511263ec2966e2f"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/q/qtbase-opensource-src/qtbase5-dev_5.15.13%2bdfsg-1ubuntu1_amd64.deb",
+      "filename": "qtbase5-dev_5.15.13+dfsg-1ubuntu1_amd64.deb",
+      "size": 1125186,
+      "sha512": "008649a29b5bc020c1c4aee529faf3c6cb51148a911b99d1df2e3d8cc427dafaa6e785a7ff2d6c2f97ad7d12217b1b849790652c11353db8d2dbb54f619f9441"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/q/qtbase-opensource-src/qtbase5-dev-tools_5.15.13%2bdfsg-1ubuntu1_amd64.deb",
+      "filename": "qtbase5-dev-tools_5.15.13+dfsg-1ubuntu1_amd64.deb",
+      "size": 822720,
+      "sha512": "a4165369c7b732d4c27d9e936a0524b2515b123d7c76ff6e24ef5983cb7fa3d6be5cf7e8f22d96f77d53b334896c977567eb544df3808cc5cdd33912d8e52d76"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-atomic1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-atomic1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 235318,
+      "sha512": "4f4bea13471994510d32f05ab7e7a5b593f2353e6d86aadfe7c8f5c84c84e2bb0158ba2076851b67f9c6a03fcbbbfb703ae1f6b777ce3e988ec1e488946f62b8"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-atomic1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-atomic1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 240046,
+      "sha512": "bae736f623fcada590035b0ac1f09758d6668ac277684377c5e2820713412a2f25d300cfcd38bc94c053dfb289573ad52717519ca8e0f7c821fdf8a5b5105b95"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-chrono1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-chrono1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 246090,
+      "sha512": "5f6c54af97554872692ea746e86413d12a0e64c0c6846119d21770f8a9dc03235677fd98acf72982afbd18b13cba9b62160a06b2248224806977ca125471fd5e"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-chrono1.83.0t64_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-chrono1.83.0t64_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 244582,
+      "sha512": "6257272b83de5e10dd81b6540e56869352816eb520adfbf14bb7ca421fadbbd170b769eed3437692e84fbfa6cc9899f9cf4e41882d8f54cdc7d74c2a23badfe2"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-date-time1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-date-time1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 238844,
+      "sha512": "9856a1626e42f5124dea996ddf7e0a66fe9437bb7397cf6b2984d6fa16601875008cfc124f056c7f758f3d1d59b7ec1e6599c67b5d715d97030e8f4035534fe1"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-date-time1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-date-time1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 236104,
+      "sha512": "a7362d948ed44924571a4d8c61ff983f22039d4e5fa2dac186c260ec743b669ae10f4fdc540bd877321810081b9a0310215f0354200cee94c09500f8f42689e2"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-program-options1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-program-options1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 388288,
+      "sha512": "3f9845d27660c27c0638bd5b2075a7213272732d5e05320680d3f4e60cf18e729946583cc3e5107371e3526e0108a4d91f8db70bf3d448196d75d3969b401720"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-program-options1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-program-options1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 320510,
+      "sha512": "7c6f6c6a85f8b3b370db34d40ea53446541a764917961c190fa4595f430a77ae1937f8cc77ec4efd3a47f40aabf608d0edf5db3829784c5df3a864a385d2a978"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-regex1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-regex1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 354640,
+      "sha512": "ae0a2d3b91e1ad854b2af2ac486d88ff859fbdedf0cbd2797ac29f160414d36c74c018d2dbca2aab8bcf489744372317c94e1b7fe04def82d897446f26a1dc24"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-regex1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-regex1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 339538,
+      "sha512": "29e28ebc75547a6036864ca45be8cdb6a63099b1376718c2c0260a47e38c090e1fbeb06a8db354e3787b92761d24d7ee0ecf90f003a32701be756e70f0b323ea"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-serialization1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-serialization1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 387374,
+      "sha512": "33ded5b4f51a1ac5ea11d251980390bb8fbc3d22da8fae3b4fa7fcad6db2972c349fc53ac973bf07aed0a0511e0174fceeaa60d7fb5ad62119565badf88d6be6"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-serialization1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-serialization1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 341320,
+      "sha512": "07625a3d6c743a3fd86fd344363336a215f5ae1a87464964a5ccde95c2319d4666629ff2c4fe074d866992314f9e753b5d9aedb00184bf613f2c2aee5fd4e169"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-system1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-system1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 231032,
+      "sha512": "e3a0c33e6985b8b42aa1d8d8365804b36f36cf0f11582c73f52f756f8c76bc3b697e64c5385941684a65d7d99b6c83a476404b9032244b28647c239faae6c0a0"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-system1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-system1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 236232,
+      "sha512": "e428c7df75571bd9cdabc8a890e5298ddf269e920e306140e299aeea4e8f42eb7665cbe8260deb7cb027e55daab1a5e59ae4aedab2d3bd380b981a00ad724845"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-thread1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-thread1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 281636,
+      "sha512": "5d737ec8e00b8e0021b8fe63158e823d0758c2ad1c18d352d6a24d9790bd5a5b0b376eca46d4a0e486321cd8bebd9e4fab4dfdf8729cf54e49909643b72e5a7c"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost-thread1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost-thread1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 275806,
+      "sha512": "96c18e256fa5f577f5d407b9dfa00392d2c5bdbe70fc4ad52e304e1a61c5e8a7366eba3b1194502c6ca060a1347b9d0aac32290fcf5cda4626e28e462eaf44fd"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/b/boost1.83/libboost1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "filename": "libboost1.83-dev_1.83.0-2.1ubuntu3.2_amd64.deb",
+      "size": 10745362,
+      "sha512": "662937f0bb21159afe7bd79f200a6bda9d1c61c2308d69137292369c6a24c0e570dab25ed21a7df2f88e17e99fdc8970f35be04b2f818af7e4bbe87ad33a6ac8"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/f/freetype/libfreetype-dev_2.13.2%2bdfsg-1ubuntu0.1_amd64.deb",
+      "filename": "libfreetype-dev_2.13.2+dfsg-1ubuntu0.1_amd64.deb",
+      "size": 574694,
+      "sha512": "8f9e498be09807e5ace128b1ff79647e4ce8aea3664f38da6cf6f6b0dae194c0a394133f20f5d210215f417009787ccd011ab18327abc15797cd95306d8a9492"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/i/icu/libicu-dev_74.2-1ubuntu3.1_amd64.deb",
+      "filename": "libicu-dev_74.2-1ubuntu3.1_amd64.deb",
+      "size": 11892666,
+      "sha512": "964a22c83e23f947951156a7b9452500cc99f233b1d6ef4c33e78bcbb47f167a5790cc8ae6f1423fae9f38450ce4f4af9cdc06931f4befc388b03ed158ec9b80"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/i/icu/libicu74_74.2-1ubuntu3.1_amd64.deb",
+      "filename": "libicu74_74.2-1ubuntu3.1_amd64.deb",
+      "size": 10860078,
+      "sha512": "19944531f314fdb70bd4a3668e070b589690d969f01bba145a2067eacbfdfd6731a1414be06254ba7ee25d071144dada3a7356bea79d05be74175e7bac61a7ec"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/p/python3.12/libpython3.12-dev_3.12.3-1ubuntu0.16_amd64.deb",
+      "filename": "libpython3.12-dev_3.12.3-1ubuntu0.16_amd64.deb",
+      "size": 5683360,
+      "sha512": "77aa8c5fd1251458cbd910773e990499cb56cb0b075ca4621c06811e853922871851b5ac31b7a894904c754a5acdc4f4ba69dfca5adf63cd3e8c40883da45a81"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/p/python3.12/libpython3.12-minimal_3.12.3-1ubuntu0.16_amd64.deb",
+      "filename": "libpython3.12-minimal_3.12.3-1ubuntu0.16_amd64.deb",
+      "size": 838090,
+      "sha512": "f89eac3a6624a923f59b06d3fdea3e0d3808745384a91aadc03d22cfa1d781e1f6dafa5e59f3b3109b55a5f14467fc1b75f24fc64f89b54f45e01096337796fc"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/p/python3.12/libpython3.12-stdlib_3.12.3-1ubuntu0.16_amd64.deb",
+      "filename": "libpython3.12-stdlib_3.12.3-1ubuntu0.16_amd64.deb",
+      "size": 2069898,
+      "sha512": "5991d46a8a907a8d98dedf400ee0667c73a5000205ded9454ad0a2a31cc4be036e7242a95fe6d4a077149bedb31ee01e36111ba193b2d331c281b20285ed6b55"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/p/python3.12/libpython3.12t64_3.12.3-1ubuntu0.16_amd64.deb",
+      "filename": "libpython3.12t64_3.12.3-1ubuntu0.16_amd64.deb",
+      "size": 2339386,
+      "sha512": "62347210def74a71aeefec1d53fab0a71d04b3e9624e8c8286c374d6215cb02b185da007f99fcd9d723b6069e67cf174426b02516715c4232084ccf3006b583e"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/p/python3.12/python3.12_3.12.3-1ubuntu0.16_amd64.deb",
+      "filename": "python3.12_3.12.3-1ubuntu0.16_amd64.deb",
+      "size": 650728,
+      "sha512": "2a9a5d9da8ae8811236a30cb39a6e611ec4b62e77b8ff77d48652c6f198471f5130279aca48d1af500ef1828b2cd787dc36eccec0142034601749e05337eee88"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/p/python3.12/python3.12-minimal_3.12.3-1ubuntu0.16_amd64.deb",
+      "filename": "python3.12-minimal_3.12.3-1ubuntu0.16_amd64.deb",
+      "size": 2334704,
+      "sha512": "2151c155cc599f6d506407a934ab3fffae691b138e3185d4af0d1e4a4263f3a8ae5780852c9a1480a294cd758ff26a2b89a257a42e36994ae015b3b7d1f7a998"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/z/zlib/zlib1g-dev_1.3.dfsg-3.1ubuntu2.1_amd64.deb",
+      "filename": "zlib1g-dev_1%3a1.3.dfsg-3.1ubuntu2.1_amd64.deb",
+      "size": 894070,
+      "sha512": "483cd5aedd87112b64a424ffaabeacd06858b12fdead46c28c3e8bb78c27a7d784c9c8caf50eb7a004aec22070cab0c5f348445b6dbdde48a758bdb10bff4199"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/e/eigen3/libeigen3-dev_3.4.0-4build0.1_all.deb",
+      "filename": "libeigen3-dev_3.4.0-4build0.1_all.deb",
+      "size": 1056510,
+      "sha512": "2384b701acda91627f0abdb40db818d2b0740ecfd33166aed8f21581690b393cdd3ad5db3732dffdeff789fb613a2653d06ad48aa7f32e41244cff4b46492953"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/q/qtbase-opensource-src/qt5-qmake_5.15.13%2bdfsg-1ubuntu1_amd64.deb",
+      "filename": "qt5-qmake_5.15.13+dfsg-1ubuntu1_amd64.deb",
+      "size": 209396,
+      "sha512": "253885717aee5b14f0ce63027b4f1728fad8b87c9fac684a53853125fc17b12f15aed43660a42b40bbba8e2dac4e972ae9a103949a1133816118b5b7e2253a55"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/q/qttools-opensource-src/qttools5-dev_5.15.13-1_amd64.deb",
+      "filename": "qttools5-dev_5.15.13-1_amd64.deb",
+      "size": 204050,
+      "sha512": "d186a4c3eec869d8b70857667506b432f9de432e77795473db1c39c1021289e4f9845a884c14716be3468d5df0c710eef2d48c72c859998d8baec9c200caff50"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/q/qttools-opensource-src/qttools5-dev-tools_5.15.13-1_amd64.deb",
+      "filename": "qttools5-dev-tools_5.15.13-1_amd64.deb",
+      "size": 1115150,
+      "sha512": "2e326b21f0d6f3615019a360bf6b358865ed1c3c60edfbba378b18db54a678b77f0478d99f75366a106b78463c170708d4931e849b24772e0fec727a70852439"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/z/zlib/zlib1g_1.3.dfsg-3.1ubuntu2.1_amd64.deb",
+      "filename": "zlib1g_1%3a1.3.dfsg-3.1ubuntu2.1_amd64.deb",
+      "size": 62850,
+      "sha512": "7205bd51e6b2c1b379905c1948272cae21a254fe2d5607b1800a62bcc5256a9df0cd6794605b74ed5d00c1cc15469fb593caaa51402370021dd435a1c680a679"
+    }
+  ]
+}

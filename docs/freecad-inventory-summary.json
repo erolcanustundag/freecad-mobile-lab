@@ -1,0 +1,39 @@
+{
+  "literal_commands": 1106,
+  "dynamic_registration_sites": 791,
+  "by_module": {
+    "Assembly": 25,
+    "BIM": 136,
+    "CAM": 64,
+    "Cloud": 1,
+    "Draft": 84,
+    "Fem": 92,
+    "Import": 3,
+    "Inspection": 2,
+    "Material": 6,
+    "Measure": 1,
+    "Mesh": 36,
+    "MeshPart": 7,
+    "OpenSCAD": 15,
+    "Part": 75,
+    "PartDesign": 43,
+    "Points": 6,
+    "ReverseEngineering": 12,
+    "Robot": 15,
+    "Sketcher": 116,
+    "Spreadsheet": 15,
+    "Start": 1,
+    "Std/Core": 207,
+    "Surface": 7,
+    "TechDraw": 126,
+    "Test": 11
+  },
+  "source_archive_sha256": "b95270a74a26dbdde331c6ff8e764289da6c77713e2b2d4e0c0041dfe1950f3f",
+  "baseline": {
+    "tag": "1.1.4",
+    "release_url": "https://github.com/FreeCAD/FreeCAD/releases/tag/1.1.4",
+    "published_at": "2026-09-28T13:58:35Z",
+    "commit_short": "4fd3bf3",
+    "snapshot_date": "2026-10-11"
+  }
+}

@@ -1,0 +1,10 @@
+RECOVERY AND PROJECT VERSIONS
+The recovery launcher runs separately from the native CAD process, and software rendering is the default. If CAD fails, reopen the recovery screen and export the crash report and recovery copy. Device-level instant-crash cause remains unverified without a captured phone report.
+
+Project version 2 records writer version, minimum reader and OCCT kernel metadata. Version 1 files are migrated in memory on open; the chosen source file is not rewritten. On startup, a legacy version 1 autosave is backed up before autosave is upgraded. Workspace > Export recovery copy retrieves it. Version 2 projects cannot be opened by the old 0.9 APK.
+
+A corrupt autosave is preserved as a recovery copy. Starting empty preserves the previous autosave too. Opening a project or failing an operation uses engine transactions and rolls back CAD/recipe state. Export backups regularly; uninstalling removes app-private storage.
+
+Retained development signing permits prototype updates with the same signing identity. Production signing uses a separate private key; a different certificate does not provide a normal in-place prototype upgrade. Production migration and device tests remain pending.
+
+A pending selected-curve export is remapped to the restored project object after Activity recreation. If the selected object is missing after recovery, export reports an error and asks you to select again. Actual Android picker/process-recreation verification is still pending.

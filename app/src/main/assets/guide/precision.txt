@@ -1,0 +1,13 @@
+PRECISION TOOLS
+
+Try Set bore 18, then Ring bore 1.6 3. Variables lists the saved document variables. Set outer "bore+2*1.6" defines a dependent variable. Quote expressions containing spaces. Calc "sqrt(3^2+4^2)" returns 5.
+
+Arithmetic supports + - * / % ^, parentheses, abs/sqrt/sin/cos/tan/floor/ceil/round and pi/e. Length units mm/cm/m/in convert values; 90deg converts to radians for trig functions. These are scalar calculations, not dimensionally checked formulas. Commands evaluate values once; changing a variable does not regenerate existing geometry.
+
+Measure reports the selected object's bounds, volume, area and edge length. Measure 1 2 gives exact CAD minimum distance between different CAD objects. Distance 0 0 0 3 4 0 gives 5 mm. Angle 1 0 0 0 0 0 0 1 0 gives 90 degrees; the middle point is the vertex. CAD mesh minimum distance and persistent measurement annotations are not provided.
+
+RotateAround 0 0 0 0 0 1 90 rotates the selected geometry around the world origin and +Z axis. Supply any pivot XYZ and non-zero axis XYZ. ScaleAround 0 0 0 1.1 scales around the world origin. Without arguments these commands open exact numeric controls. Both commit one Undo step and update custom dependent features.
+
+Tap a visible navigation-cube face for its orthographic view. ISO returns to perspective; ViewCube opens all available views. Left is also a view command.
+
+Save fcml projects to keep variables. Older app candidates may ignore variable metadata while retaining saved geometry. The phone startup, touch and lifecycle release gates remain pending.

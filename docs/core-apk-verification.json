@@ -1,0 +1,1578 @@
+{
+  "version": "1.0-rc6",
+  "apk_sha256": "0149715a8452953fb311dc6d9f360b0a1b5db520cb9385d0a8472bb9ba4f0621",
+  "status": "STATIC_PASS",
+  "android_execution": "NOT_RUN",
+  "libraries_and_python_extensions": 123,
+  "strong_symbol_closure": true,
+  "native_loader_closure": true,
+  "minimum_alignment": 16384,
+  "python_asset_files": 822,
+  "libraries": [
+    {
+      "path": "lib/arm64-v8a/libFreeCADApp.so",
+      "alignment": 16384,
+      "needed": [
+        "libFreeCADBase.so",
+        "libboost_program_options.so",
+        "libboost_regex.so",
+        "libboost_thread.so",
+        "libboost_date_time.so",
+        "libfmt.so",
+        "libQt6Xml_arm64-v8a.so",
+        "libxerces-c-3.2.so",
+        "libz.so",
+        "libicuuc.so",
+        "libicui18n.so",
+        "libpython3.13.so",
+        "libQt6Core_arm64-v8a.so",
+        "liblog.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libFreeCADBase.so",
+      "alignment": 16384,
+      "needed": [
+        "libxerces-c-3.2.so",
+        "libboost_program_options.so",
+        "libboost_regex.so",
+        "libboost_thread.so",
+        "libboost_date_time.so",
+        "libz.so",
+        "libicuuc.so",
+        "libicui18n.so",
+        "libQt6Core_arm64-v8a.so",
+        "libfmt.so",
+        "libpython3.13.so",
+        "liblog.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libFreeCADPython.so",
+      "alignment": 16384,
+      "needed": [
+        "libFreeCADApp.so",
+        "libFreeCADBase.so",
+        "libxerces-c-3.2.so",
+        "libz.so",
+        "libicuuc.so",
+        "libicui18n.so",
+        "libpython3.13.so",
+        "libboost_program_options.so",
+        "libboost_regex.so",
+        "libboost_thread.so",
+        "libboost_date_time.so",
+        "libfmt.so",
+        "libQt6Xml_arm64-v8a.so",
+        "libQt6Core_arm64-v8a.so",
+        "liblog.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libQt6Concurrent_arm64-v8a.so",
+      "alignment": 16384,
+      "needed": [
+        "libQt6Core_arm64-v8a.so",
+        "liblog.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libQt6Core_arm64-v8a.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libdl.so",
+        "libz.so",
+        "liblog.so",
+        "libc++_shared.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libQt6Network_arm64-v8a.so",
+      "alignment": 16384,
+      "needed": [
+        "libQt6Core_arm64-v8a.so",
+        "liblog.so",
+        "libz.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libQt6Xml_arm64-v8a.so",
+      "alignment": 16384,
+      "needed": [
+        "libQt6Core_arm64-v8a.so",
+        "liblog.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKBO.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKPrim.so",
+        "libTKShHealing.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKBRep.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKBool.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKBO.so",
+        "libTKPrim.so",
+        "libTKShHealing.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKCAF.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKLCAF.so",
+        "libTKBO.so",
+        "libTKCDF.so",
+        "libTKPrim.so",
+        "libTKShHealing.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKCDF.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKDE.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKDEIGES.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKDE.so",
+        "libTKXSBase.so",
+        "libTKBool.so",
+        "libTKXCAF.so",
+        "libTKVCAF.so",
+        "libTKV3d.so",
+        "libTKService.so",
+        "libTKMesh.so",
+        "libTKHLR.so",
+        "libTKCAF.so",
+        "libTKLCAF.so",
+        "libTKCDF.so",
+        "libTKBO.so",
+        "libTKShHealing.so",
+        "libTKPrim.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKDESTEP.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKDE.so",
+        "libTKXCAF.so",
+        "libTKXSBase.so",
+        "libTKVCAF.so",
+        "libTKCAF.so",
+        "libTKLCAF.so",
+        "libTKCDF.so",
+        "libTKBO.so",
+        "libTKPrim.so",
+        "libTKV3d.so",
+        "libTKService.so",
+        "libTKMesh.so",
+        "libTKShHealing.so",
+        "libTKHLR.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKDESTL.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKDE.so",
+        "libTKXCAF.so",
+        "libTKVCAF.so",
+        "libTKV3d.so",
+        "libTKService.so",
+        "libTKMesh.so",
+        "libTKHLR.so",
+        "libTKCAF.so",
+        "libTKLCAF.so",
+        "libTKCDF.so",
+        "libTKBO.so",
+        "libTKShHealing.so",
+        "libTKPrim.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKFillet.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKBool.so",
+        "libTKBO.so",
+        "libTKShHealing.so",
+        "libTKPrim.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKG2d.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKG3d.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKGeomAlgo.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKGeomBase.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKHLR.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKLCAF.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKCDF.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKMath.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKMesh.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKShHealing.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKOffset.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKFillet.so",
+        "libTKBool.so",
+        "libTKBO.so",
+        "libTKShHealing.so",
+        "libTKPrim.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKPrim.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKService.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKShHealing.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKTopAlgo.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKV3d.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKService.so",
+        "libTKMesh.so",
+        "libTKHLR.so",
+        "libTKShHealing.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKVCAF.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKCAF.so",
+        "libTKV3d.so",
+        "libTKLCAF.so",
+        "libTKCDF.so",
+        "libTKBO.so",
+        "libTKPrim.so",
+        "libTKService.so",
+        "libTKMesh.so",
+        "libTKShHealing.so",
+        "libTKHLR.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKXCAF.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKVCAF.so",
+        "libTKV3d.so",
+        "libTKService.so",
+        "libTKMesh.so",
+        "libTKHLR.so",
+        "libTKCAF.so",
+        "libTKLCAF.so",
+        "libTKCDF.so",
+        "libTKBO.so",
+        "libTKShHealing.so",
+        "libTKPrim.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKXSBase.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libTKShHealing.so",
+        "libTKTopAlgo.so",
+        "libTKGeomAlgo.so",
+        "libTKBRep.so",
+        "libTKGeomBase.so",
+        "libTKG3d.so",
+        "libTKG2d.so",
+        "libTKMath.so",
+        "libTKernel.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libTKernel.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libc.so",
+        "liblog.so",
+        "libc++_shared.so",
+        "libdl.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libboost_date_time.so",
+      "alignment": 16384,
+      "needed": [
+        "libc++_shared.so",
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libboost_program_options.so",
+      "alignment": 16384,
+      "needed": [
+        "libc++_shared.so",
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libboost_regex.so",
+      "alignment": 16384,
+      "needed": [
+        "libc++_shared.so",
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libboost_thread.so",
+      "alignment": 16384,
+      "needed": [
+        "libc++_shared.so",
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libc++_shared.so",
+      "alignment": 16384,
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libcad_mobile.so",
+      "alignment": 16384,
+      "needed": [
+        "libfreecad_sketcher.so",
+        "libTKernel.so",
+        "libTKMath.so",
+        "libTKG2d.so",
+        "libTKG3d.so",
+        "libTKGeomBase.so",
+        "libTKBRep.so",
+        "libTKGeomAlgo.so",
+        "libTKTopAlgo.so",
+        "libTKPrim.so",
+        "libTKBO.so",
+        "libTKBool.so",
+        "libTKFillet.so",
+        "libTKOffset.so",
+        "libTKMesh.so",
+        "libTKDESTEP.so",
+        "libTKDESTL.so",
+        "libTKDEIGES.so",
+        "libTKShHealing.so",
+        "libTKXSBase.so",
+        "liblog.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libcrypto_python.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libfmt.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libfreecad_document_bridge.so",
+      "alignment": 16384,
+      "needed": [
+        "libFreeCADPython.so",
+        "libpython3.13.so",
+        "libQt6Core_arm64-v8a.so",
+        "liblog.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libfreecad_sketcher.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libicudata.so",
+      "alignment": 16384,
+      "needed": []
+    },
+    {
+      "path": "lib/arm64-v8a/libicui18n.so",
+      "alignment": 16384,
+      "needed": [
+        "libicuuc.so",
+        "libicudata.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libicuuc.so",
+      "alignment": 16384,
+      "needed": [
+        "libicudata.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libpython3.13.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libdl.so",
+        "liblog.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libpython3.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libsqlite3_python.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libz.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libssl_python.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libcrypto_python.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libxerces-c-3.2.so",
+      "alignment": 16384,
+      "needed": [
+        "libicuuc.so",
+        "libicudata.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libyaml-cpp.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libc++_shared.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_asyncio.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_bisect.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_blake2.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_bz2.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_codecs_cn.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_codecs_hk.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_codecs_iso2022.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_codecs_jp.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_codecs_kr.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_codecs_tw.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_contextvars.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_csv.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_ctypes.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libdl.so",
+        "libpython3.13.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_ctypes_test.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_datetime.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_decimal.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_elementtree.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_hashlib.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libcrypto_python.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_heapq.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_interpchannels.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_interpqueues.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_interpreters.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_json.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_lsprof.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_lzma.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_md5.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_multibytecodec.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_opcode.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_pickle.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_posixsubprocess.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_queue.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_random.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_sha1.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_sha2.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_sha3.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_socket.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_sqlite3.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libsqlite3_python.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_ssl.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libssl_python.so",
+        "libcrypto_python.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_statistics.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_struct.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_testbuffer.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_testcapi.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_testclinic.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_testclinic_limited.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_testexternalinspection.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_testimportmultiple.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_testinternalcapi.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_testlimitedcapi.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_testmultiphase.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_testsinglephase.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_xxtestfuzz.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/_zoneinfo.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/array.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/binascii.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libz.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/cmath.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/fcntl.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/grp.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/math.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/mmap.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/pyexpat.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/resource.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/select.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/syslog.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/termios.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/unicodedata.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/xxlimited.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/xxlimited_35.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/xxsubtype.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "path": "lib/python3.13/lib-dynload/zlib.cpython-313-aarch64-linux-android.so",
+      "alignment": 16384,
+      "needed": [
+        "libm.so",
+        "libz.so",
+        "libpython3.13.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    }
+  ]
+}

@@ -1,2 +1,68 @@
-# freecad-mobile-lab
-Independent experimental native CAD for ARM64 Android. Signed RC7 candidate; desktop FreeCAD parity and Android device validation remain incomplete.
+# FreeCAD Mobile Lab
+
+**Current candidate: 1.0-rc7 / Android version code 20.** Experimental native CAD for ARM64 Android 8+ (API26–35). **Stable 1.0 and full desktop FreeCAD parity are NOT COMPLETE.** This is an independent project, not an official FreeCAD Android release.
+
+The main workspace uses OCCT 7.9.2 and the upstream FreeCAD PlaneGCS solver. An optional document lab embeds upstream FreeCAD 1.1.4 Base/App, CPython3.13 and headless Qt6.8.3. Models stay on the device; the app requests no network permission.
+
+## Install and start
+
+The public repository is being populated and the RC7 prerelease is being uploaded; see [publication status](docs/PUBLICATION.md). APKs belong in Releases because they exceed GitHub's regular Git file-size limit. Candidates use a development certificate; production signing and update migration remain open gates.
+
+Software rendering is the default. The recovery screen can open an empty workspace, retain recovery copies, and export local crash reports. OpenGL is optional. The reported instant-start crash has **not** been reproduced or verified fixed on a phone. RC7 adds an explicit document-lab restart for failed initialization or stuck script/native calls; unsaved lab documents close when restarted.
+
+Try these commands in the CAD workspace:
+
+```
+Box 20 10 4
+Rename "My box"
+Fit
+Help
+```
+
+Save `.fcml` projects and export backups before uninstalling or downgrading. In the optional document lab, try `NewDoc Model`, `Add Source Feature`, `AddProperty Source Width Length`, and `Set Source.Width 2 cm`. Save native FCStd before closing that process.
+
+## Implemented scope
+
+| Area | Available |
+| --- | --- |
+| CAD workspace | Exact primitives, booleans, profiles, extrusion/revolve/loft/sweep, bounded NURBS/patch tools, feature recipes and Undo/Redo |
+| Access and organisation | Rhino-style commands, saved scalar variables, measurements, pivot transforms, view cube, bounded worksheet/CSV, alignment, fit selected and layers |
+| Fabrication and display | Jewellery templates, print envelope, sampled thickness, planar mesh repair, software/GLES preview, materials/clipping/PNG and limited A4 SVG |
+| Native document lab | Original App metadata documents, units, properties, expressions, transactions, groups/links and supported App-only FCStd |
+| Python lab | Console, saved/recorded macros, App API browser and one portable QuantityDriver FeaturePython template |
+
+The document lab is separate from the custom CAD recipe graph. It does **not** yet provide native Part, Sketcher, PartDesign, Assembly, TechDraw, CAM, FEM or BIM workbenches. Arbitrary FCStd and addon proxy classes are unsupported. Supported file formats and losses are documented in [FORMAT-LIMITS](docs/FORMAT-LIMITS.md). STL import is bounded to2,000,000 triangles/256MiB; display reduction preserves the stored source.
+
+The [roadmap](docs/ROADMAP.md) covers the frozen FreeCAD1.1.4 scope in36 broad batches. Large scopes require additional batches. The [ledger](docs/FREECAD-PARITY-BATCHES.json) separates engineering evidence from device validation. Four bounded feature batches have APK checkpoints; remaining workbench batches and device gates remain pending.
+
+## Build
+
+Required: Linux, Python3.12+, JDK17, Android SDK platform35/build-tools35.0.0. NDK27.2.12479018, CMake and Ninja are additionally needed for native source rebuilds. Git contains application/bridge/solver sources and dependency checksums. The full public source ZIP supplies the frozen Boost/Eigen header trees; the runtime ZIP supplies binaries; the corresponding-source ZIP supplies upstream sources and OCCT. All are prerelease assets.
+
+Use the native runtime release asset matching the release metadata. Verify its SHA256 and extract it at the repository root. It supplies54 ARM64 libraries, Qt6Android.jar and the embedded Python archive. No signing key is included in Git or public source archives. A new local development key is generated if needed; it differs from the certificate on the published prototype APK and cannot upgrade that installation in place.
+
+```bash
+export JAVA_HOME=/path/to/jdk17
+export ANDROID_SDK_ROOT=/path/to/android-sdk
+python3 scripts/bootstrap_release_runtime.py --bundle /path/to/native-runtime.zip
+python3 scripts/bootstrap_vendor_sources.py --bundle /path/to/FreeCAD-Mobile-Lab-1.0-rc7-public-source.zip
+python3 scripts/check_core_runtime_inputs.py
+# Choose a new development version before modifying sealed app inputs.
+python3 scripts/set_release.py 1.0-rc8 21 ''
+python3 scripts/build_apk.py --prebuilt --upstream-core
+python3 scripts/verify_apk.py
+```
+
+After editing mobile Python modules, run `scripts/refresh_python_assets.py`. The build now rejects source/archive drift before packaging. `--reproduce` requires unchanged sealed inputs and a local signing identity; signature equality with the published prototype is not promised.
+
+For full native rebuilds, read [CORE-PORT](docs/FREECAD-CORE-PORT.md), the source/toolchain manifest and the build scripts. The public corresponding-source archive includes frozen FreeCAD/Qt/Python/dependency sources, mobile OCCT/solver code and integration patches. Source fetching overwrites extracted upstream trees; apply the checked-in patches afterward. Modified libraries can be relinked and packaged with your own certificate. Export projects before replacing an installation signed with another certificate.
+
+## Verification and bugs
+
+Historical matching-host evidence includes25,694 CAD assertions, a1,441,792-triangle STL fixture,459 freeform checks,88 upstream JNI document checks and62 Python-tooling checks. RC7 adds packaging regressions against stale Python/JAR/native inputs. APK signatures, ARM64 dependency closure and16KiB alignment are checked independently.
+
+**No Android runtime/device pass is claimed.** Source CI checks syntax, release metadata and portable packaging regressions. Native runtime, gestures, file pickers, process recreation and crash reproduction require Android execution. See [DEVICE-TESTS](docs/DEVICE-TESTS.md) and [STATUS](docs/STATUS-1.0.md). Report bugs with APK version, phone/Android version, steps and a redacted recovery report.
+
+## Licences
+
+Application source is LGPL-2.1-or-later; each upstream component retains its own licence and notices. OCCT uses LGPL2.1 with its exception; FreeCAD is LGPL2.1-or-later; Qt includes LGPL3/GPL3 notices; CPython uses the PSF licence; Boost, Eigen, meshoptimizer and Python/native dependencies have their respective licences. See [THIRD-PARTY](docs/THIRD-PARTY.md), bundled notices, exact source archives and build/patch instructions. There is no affiliation with the FreeCAD or Rhino vendors.

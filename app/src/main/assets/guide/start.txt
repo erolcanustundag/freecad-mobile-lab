@@ -1,0 +1,12 @@
+GETTING STARTED
+All model dimensions are millimetres. The app uses the native OCCT 7.9.2 CAD kernel and the FreeCAD PlaneGCS solver.
+
+Type commands in the bar above the tools, then press Run or the keyboard action. Empty input repeats the last command. Help opens the command list, Help Box shows one command. Case, commas and the leading underscore are accepted.
+
+Try Box 20 10 4, Rename "My box", Move 0 0 0, Fit. Select by tapping geometry or an object chip. Object IDs appear on chips; Select 3 selects ID 3. Undo and Redo recover completed operations during this session.
+
+One finger orbits, pinch zooms, two fingers pan. Top, Front, Right and Isometric choose standard views. Objects searches names/layers/IDs; Selection sets object or topology filters. The primary selected object is highlighted. Multiple-selection controls affect the chosen set.
+
+Save exports a .fcml project. Autosave is private to the app; export a backup before uninstalling. Open imports supported files. Export opens the format chooser.
+
+Guide, Samples and Drawing are available from the command bar; Guide and Samples also appear in the Workspace menu.

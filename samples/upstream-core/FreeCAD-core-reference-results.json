@@ -1,0 +1,28 @@
+{
+  "runtime": "upstream host reference, not Android",
+  "version": [
+    "1",
+    "1",
+    "4",
+    "Unknown",
+    "Unknown",
+    "Unknown"
+  ],
+  "assertions": 28,
+  "fixture": "FreeCAD-1.1.4-core-reference.FCStd",
+  "saved_values_mm": {
+    "Dimensions.Width": 25.0,
+    "Driven.Width": 50.0,
+    "Driven.Height": 10.0
+  },
+  "post_restore_edit": {
+    "object": "Dimensions",
+    "property": "Width",
+    "value": "32 mm",
+    "expected_values_mm": {
+      "Driven.Width": 64.0,
+      "Driven.Height": 10.0
+    }
+  },
+  "android_adapter": "NOT_IMPLEMENTED"
+}

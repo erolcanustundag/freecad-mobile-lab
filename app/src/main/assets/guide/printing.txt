@@ -1,0 +1,12 @@
+PRINTING AND FILES
+STL/OBJ imports are bounded to 2,000,000 triangles; STL input up to 256 MiB. Viewport detail is separately bounded, so display reduction preserves full imported geometry for save/export. The old 200,000-triangle rejection is removed. Malformed or larger files still report a limit or format error.
+
+Formats: STEP, IGES and BREP exact geometry; STL/OBJ meshes; .fcml projects; restricted .FCStd saved Part geometry; sampled SVG/DXF curve output. DXF import accepts exact ASCII lines, arcs, circles and straight lightweight polylines with explicit supported units.
+
+3MF import supports up to 500,000 triangles in one untransformed object/build. GLB supports up to 2,000,000 triangles in one baked mesh/scene primitive; coordinate conversion uses metres and Y-up. Unsupported assemblies/transforms/extensions are rejected. .3dm, DWG, USD and full desktop FreeCAD document execution are not implemented.
+
+FillHoles creates a separate repaired mesh copy for simple planar boundary loops, up to 100,000 triangles, 512 boundary edges and 128 vertices per loop. Branched/non-manifold, inconsistent, non-planar or self-crossing boundary loops are rejected. Global mesh self-intersection checking and volumetric shrink-wrap remain pending.
+
+Drawing exports an A4 SVG for a selected XY curve or Section result at Z=0. It adds overall width/height dimensions, title and notes. Dimensions use CAD bounds; contours target 0.005 mm sampling, capped at 1,000 points per edge and 40,000 points total. Larger profiles scale down. Print at 100%, disable page fit. This is not a general dimension editor or multi-view sheet system.
+
+PNG exports 512 to 2048 pixels with optional transparency. Studio shading previews roughness/metallic; zebra shows normal stripes. Clipping hides pixels above a world-Z plane without a section cap. Environment maps, UV texture materials and shadows remain pending.

@@ -1,0 +1,52 @@
+cmake_minimum_required(VERSION 3.22)
+project(FreeCADMobileLab LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+get_filename_component(PROJECT_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../../../.." ABSOLUTE)
+set(VENDOR "${PROJECT_ROOT}/vendor")
+if(ANDROID)
+    set(OCCT_ANDROID_ROOT "${VENDOR}/occt/${ANDROID_ABI}" CACHE PATH "Matching Android OpenCASCADE installation")
+    set(OCCT "${OCCT_ANDROID_ROOT}")
+else()
+    set(OCCT_HOST_ROOT "${PROJECT_ROOT}/../occt-host" CACHE PATH "Matching host OpenCASCADE installation for JNI regression tests")
+    set(OCCT "${OCCT_HOST_ROOT}")
+    find_package(JNI REQUIRED)
+endif()
+add_library(freecad_sketcher SHARED
+    ${VENDOR}/freecad/planegcs/GCS.cpp
+    ${VENDOR}/freecad/planegcs/Constraints.cpp
+    ${VENDOR}/freecad/planegcs/Geo.cpp
+    ${VENDOR}/freecad/planegcs/SubSystem.cpp
+    ${VENDOR}/freecad/planegcs/qp_eq.cpp)
+target_include_directories(freecad_sketcher PUBLIC ${VENDOR}/freecad ${VENDOR}/freecad/planegcs ${VENDOR}/boost ${VENDOR}/eigen)
+target_compile_definitions(freecad_sketcher PRIVATE EIGEN_NO_DEBUG)
+target_compile_options(freecad_sketcher PRIVATE -O1)
+target_link_options(freecad_sketcher PRIVATE -Wl,-z,max-page-size=16384)
+option(BUILD_SKETCHER_ONLY "Build only the upstream FreeCAD solver" OFF)
+if(BUILD_SKETCHER_ONLY)
+    return()
+endif()
+if(NOT EXISTS "${OCCT}/include/opencascade/Standard.hxx")
+    message(FATAL_ERROR "Build OpenCASCADE 7.9.2 for the selected platform first; see README.md")
+endif()
+set(OCCT_NAMES TKernel TKMath TKG2d TKG3d TKGeomBase TKBRep TKGeomAlgo TKTopAlgo TKPrim TKBO TKBool TKFillet TKOffset TKMesh TKDESTEP TKDESTL TKDEIGES TKShHealing TKXSBase)
+foreach(name IN LISTS OCCT_NAMES)
+    add_library(${name} SHARED IMPORTED)
+    set_target_properties(${name} PROPERTIES IMPORTED_LOCATION "${OCCT}/lib/lib${name}.so")
+endforeach()
+add_library(mesh_preview STATIC
+    ${VENDOR}/meshoptimizer/src/allocator.cpp
+    ${VENDOR}/meshoptimizer/src/indexgenerator.cpp
+    ${VENDOR}/meshoptimizer/src/simplifier.cpp
+    ${VENDOR}/meshoptimizer/src/vfetchoptimizer.cpp)
+set_target_properties(mesh_preview PROPERTIES POSITION_INDEPENDENT_CODE ON)
+target_include_directories(mesh_preview PUBLIC ${VENDOR}/meshoptimizer/src)
+add_library(cad_mobile SHARED cad.cpp MeshPreview.cpp AdvancedTools.cpp JewelleryTools.cpp FeatureTools.cpp)
+target_include_directories(cad_mobile PRIVATE ${OCCT}/include/opencascade)
+target_link_libraries(cad_mobile PRIVATE mesh_preview freecad_sketcher ${OCCT_NAMES})
+if(ANDROID)
+    target_link_libraries(cad_mobile PRIVATE log)
+else()
+    target_include_directories(cad_mobile PRIVATE ${JNI_INCLUDE_DIRS})
+endif()
+target_link_options(cad_mobile PRIVATE -Wl,-z,max-page-size=16384)
