@@ -1,0 +1,7 @@
+KURTARMA
+
+Yazılımsal 3B görüntüleme varsayılandır. Başlangıç sorunu olursa kurtarma ekranından boş çalışma alanı açın; önceki kayıt kurtarma kopyası olarak saklanır. Çökme raporunu kopyalayabilir veya ZIP olarak kaydedebilirsiniz.
+
+Belge laboratuvarında Yardım, Kurtarma ve Laboratuvarı yeniden başlat seçenekleri işlem sürerken de kullanılabilir. Yeniden başlatma kaydedilmemiş laboratuvar belgelerini kapatır. Önce FCStd dosyalarınızı ve makrolarınızı kaydedin.
+
+Dil değişikliği yerel CAD sürecini yeniden başlatmaz. Sayılar ve teknik komutlar aynı sözdizimini kullanır. Kaldırma, sürüm düşürme veya imza değiştirme öncesinde projelerinizi yedekleyin.

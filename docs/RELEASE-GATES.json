@@ -1,15 +1,15 @@
 {
-  "candidate": "1.0",
-  "version_code": 21,
+  "candidate": "1.1",
+  "version_code": 22,
   "stable_1_0": "NOT_COMPLETE",
   "android_runtime": "USER_REPORTED_STARTUP",
   "reported_phone_crash": "User now reports startup works; crash root cause and broader workflows remain unverified",
-  "static_apk": "PASS: signed ARM64/minAPI26 target35, non-debuggable,54 JNI libraries, loader closure and16KiB ZIP/ELF alignment",
+  "static_apk": "PASS: non-debuggable minAPI26 target35;54 JNI libraries, v2/v3 matching certificate, loader closure and16KiB ELF/ZIP alignment",
   "runtime_asset_packaging": "PASS: 6 portable regressions;822 Python CRC/hash/source matches;54 JNI library and Java input hashes",
-  "native_runtime": "UNCHANGED_FROM_RC7; historical host/strong-symbol evidence retained, automated target execution NOT_RUN",
+  "native_runtime": "UNCHANGED_FROM_1_0; historical host evidence retained",
   "device_smoke_instrumentation": "COMPILED_ONLY",
   "production_signing": "Retained development certificate for RC7 updates; dedicated production identity/update migration pending",
-  "publication": "PASS: public v1.0 full release/latest, four asset sizes/SHA256 digests verified, source CI and release workflow successful; RC7 preserved; transport branch removed",
+  "publication": "PENDING_1_1_RELEASE",
   "pending": [
     "Phone details and structured cold-start/lifecycle/SAF/process recreation tests; second device",
     "minimum/current Android, multiple GPU vendors, low-memory and4/16KiB environments",
@@ -44,5 +44,6 @@
   "release_channel": "release",
   "stable_1_0_definition": "Original full desktop parity and broad device qualification milestone; NOT_COMPLETE",
   "automated_android_tests": "NOT_RUN",
-  "source_metadata": "PASS: syntax, bounded release scope, startup-report classification and unfinished parity"
+  "source_metadata": "PASS: syntax, bounded release scope, startup-report classification and unfinished parity",
+  "localization": "PASS:527 Java locale/command/Unicode-data assertions;3 portable resource regressions; physical switching/layout NOT_RUN"
 }

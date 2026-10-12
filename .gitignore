@@ -27,3 +27,5 @@ vendor/eigen/
 docs/CONTINUE.md
 docs/*.txt
 docs/RELEASE-PREPARATION-PRIVATE.json
+
+localization-test-classes/

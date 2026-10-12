@@ -1,0 +1,7 @@
+WIEDERHERSTELLUNG
+
+Software-3D ist die Voreinstellung. Bei Startproblemen öffnen Sie in der Wiederherstellung einen leeren Arbeitsbereich; der vorherige Stand bleibt als Sicherungskopie erhalten. Sie können den Absturzbericht kopieren oder als ZIP speichern.
+
+Im Dokumentlabor stehen Hilfe, Wiederherstellung und Labor neu starten auch während eines Vorgangs zur Verfügung. Ein Neustart schließt ungespeicherte Labordokumente. Speichern Sie zuvor FCStd-Dateien und Makros.
+
+Ein Sprachwechsel startet den nativen CAD-Prozess nicht neu. Zahlen und technische Befehle behalten ihre Syntax. Sichern Sie Projekte vor Deinstallation, Downgrade oder Zertifikatswechsel.

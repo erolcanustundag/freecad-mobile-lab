@@ -1,6 +1,6 @@
 # FreeCAD Mobile Lab — complete desktop parity roadmap
 
-Updated 12 October 2026. Product release: **1.0 / code21, current mobile feature set**. B01–B04 remain the completed bounded engineering scopes. The user reports startup works on their phone. **Full desktop parity and the original comprehensive stable-1.0 milestone are NOT COMPLETE.** Version 1.0 is the first public mobile feature release; it does not close that larger milestone. See RHINO-GAPS.md and RELEASE-SCOPE-1.0.md.
+Updated 12 October 2026. Product release: **1.1 / code22, current mobile feature set**. B01–B04 remain the completed bounded engineering scopes. The user reports startup works on their phone. **Full desktop parity and the original comprehensive stable-1.0 milestone are NOT COMPLETE.** Version 1.0 is the first public mobile feature release; it does not close that larger milestone. 1.1 adds Turkish/German UI, persistent locale choice, command aliases and recovery-role repair; it does not close a native workbench batch. See LANGUAGES.md, RHINO-GAPS.md and RELEASE-SCOPE-1.0.md.
 
 ## Baseline and scope
 

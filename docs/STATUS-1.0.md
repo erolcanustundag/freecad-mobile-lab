@@ -1,3 +1,7 @@
+# Current product1.1
+
+Language selection,597 Turkish/German core UI entries, localized quick guides, command aliases and busy document-lab recovery roles are added.527 locale/command/data assertions and3 resource checks pass. Phone layout/switching remains unverified. Native Part remains the prerequisite for original Sketcher/PartDesign scopes.
+
 # Product 1.0 and remaining qualification
 
 Product **1.0 / code21** releases the current mobile feature set. Full desktop parity and the original comprehensive stable-1.0 qualification milestone remain **NOT COMPLETE**. See RELEASE-SCOPE-1.0.md and RHINO-GAPS.md. Release packaging is non-debuggable and retains the RC7 development certificate for upgrades.

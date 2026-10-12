@@ -1,0 +1,7 @@
+TAKI ÇALIŞMASI
+
+Takı şablonlarından bir yüzük veya taş yuvası seçin. İç çapı, et kalınlığını ve taş ölçülerini mm cinsinden girin. Sistem yazı tipinden metin katısı oluşturup Cut ile oyabilir veya Union ile ekleyebilirsiniz.
+
+Mass hesabında kendi alaşımınızın yoğunluğunu g/cm³ olarak kullanın. Döküm çekme payını dökümhanenizin ölçülmüş değerine göre girin; tahminler üretim garantisi değildir.
+
+Baskı hazırlığı modelin tabla hacmine sığıp sığmadığını kontrol eder. Et kalınlığı raporu örneklenmiştir; küçük ayrıntıları kaçırabilir. Projeyi kaydedin, ardından STL veya STEP dışa aktarın. Görüntü ayrıntısı azaltılsa da özgün geometri dışa aktarımda korunur.

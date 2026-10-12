@@ -1,0 +1,15 @@
+ERSTE SCHRITTE
+
+Wählen Sie Sprache im Arbeitsbereichmenü. Automatisch verwendet die Telefonsprache. Modellnamen, Maße und gespeicherte Ausdrücke bleiben beim Sprachwechsel erhalten.
+
+Fügen Sie mit + Erstellen ein Modell hinzu. Mit einem Finger drehen, mit Pinch zoomen, mit zwei Fingern verschieben. Tippen Sie auf Würfelflächen für orthogonale Ansichten.
+
+Befehlsbeispiele:
+Quader 20 10 4
+Kugel 5
+Zylinder 3 10
+Move 10 0 0
+Hilfe
+Sprache
+
+Verwenden Sie einen Dezimalpunkt, z. B. 1.5. CAD-Maße sind in mm. Englische Befehle funktionieren in jeder Sprache. Rückgängig / Wiederholen stellt Bearbeitungen wieder her. Das .fcml-Projekt erhält den Merkmalsverlauf. Exportieren erzeugt Geometriedateien wie STEP oder STL.

@@ -1,0 +1,15 @@
+BAŞLANGIÇ
+
+Çalışma alanı menüsünden Dil seçin. Otomatik seçenek telefonun dilini kullanır. Model adı, ölçüler ve kayıtlı ifadeler dil değişince korunur.
+
++ Oluştur ile bir model ekleyin. Tek parmakla döndürün, kıstırarak yakınlaştırın, iki parmakla kaydırın. Küp yüzlerine dokunarak dik görünümlere geçin.
+
+Komut örnekleri:
+Kutu 20 10 4
+Küre 5
+Silindir 3 10
+Move 10 0 0
+Yardim
+Dil
+
+Komutlarda ondalık nokta kullanın; örneğin 1.5. Tüm CAD boyutları mm cinsindedir. İngilizce komutlar her dilde çalışır. Geri al / Yinele düzenlemeleri geri getirir. .fcml proje kaydı işlem geçmişini korur. Dışa aktar ile STEP veya STL gibi geometri dosyaları oluşturun.

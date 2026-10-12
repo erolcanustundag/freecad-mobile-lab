@@ -1,0 +1,7 @@
+SCHMUCK
+
+Wählen Sie eine Ring- oder Fassungs-Vorlage. Innendurchmesser, Wandstärke und Steinmaße werden in mm eingegeben. Ein Textkörper aus der Systemschrift kann mit Cut graviert oder mit Union hinzugefügt werden.
+
+Verwenden Sie für Mass die Dichte Ihrer Legierung in g/cm³. Geben Sie die Gussschrumpfung anhand gemessener Gießereiwerte ein; Schätzungen sind keine Fertigungsgarantie.
+
+Die Druckvorbereitung prüft den Bauraum. Die Wandstärkenprüfung verwendet Stichproben und kann kleine Details übersehen. Speichern Sie das Projekt und exportieren Sie STL oder STEP. Eine reduzierte Darstellungsqualität erhält die ursprüngliche Exportgeometrie.

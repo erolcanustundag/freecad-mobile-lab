@@ -1062,8 +1062,15 @@
   ],
   "stable_1_0_definition": "Original complete FreeCAD parity and broad device/workflow qualification milestone; not closed by product version 1.0",
   "product_release": {
-    "version": "1.0",
+    "version": "1.1",
     "scope": "current mobile feature set",
     "desktop_parity": "NOT_COMPLETE"
-  }
+  },
+  "mobile_updates": [
+    {
+      "version": "1.1",
+      "scope": "Turkish/German interface, persistent language choice, command aliases, recovery-role bug fix",
+      "counts_as_original_workbench_parity": false
+    }
+  ]
 }

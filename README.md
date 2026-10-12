@@ -1,12 +1,16 @@
 # FreeCAD Mobile Lab
 
-**Current release: 1.0 / Android version code 21, current mobile feature set.** Native CAD for ARM64 Android 8+ (min API26, target35). **Full desktop FreeCAD/Rhino parity and the original comprehensive qualification milestone are NOT COMPLETE.** This is an independent project, not an official FreeCAD Android release.
+**Current release: 1.1 / Android version code 22, current mobile feature set.** Native CAD for ARM64 Android 8+ (min API26, target35). **Full desktop FreeCAD/Rhino parity and the original comprehensive qualification milestone are NOT COMPLETE.** This is an independent project, not an official FreeCAD Android release.
 
 The main workspace uses OCCT 7.9.2 and the upstream FreeCAD PlaneGCS solver. An optional document lab embeds upstream FreeCAD 1.1.4 Base/App, CPython3.13 and headless Qt6.8.3. Models stay on the device; the app requests no network permission.
 
+## Languages
+
+English, Turkish and German core interface text is available. Use **Workspace → Language**, the recovery-screen Language button, or the `Language` / `Dil` / `Sprache` command. The choice applies without restarting the CAD kernel and persists across the separate processes. Automatic mode follows the phone language and falls back to English for unsupported languages. Model names, expressions, numeric storage and canonical command tokens keep their original values. Advanced kernel/Python diagnostics and untranslated technical reference text use English fallback.
+
 ## Install and start
 
-Download the [signed 1.0 APK](https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.0/FreeCAD-Mobile-Lab-1.0-arm64.apk) from the [1.0 release](https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.0). See [publication verification](docs/GITHUB-PUBLICATION.json). APKs belong in Releases because they exceed GitHub's regular Git file-size limit. The APK is not debuggable and retains the RC7 development certificate for compatible upgrades. A dedicated production signing identity and its migration remain future work.
+Download the [signed 1.1 APK](https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.1/FreeCAD-Mobile-Lab-1.1-arm64.apk) from the [1.1 release](https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.1). See [publication verification](docs/GITHUB-PUBLICATION.json). APKs belong in Releases because they exceed GitHub's regular Git file-size limit. The APK is not debuggable and retains the RC7 development certificate for compatible upgrades. A dedicated production signing identity and its migration remain future work.
 
 Software rendering is the default. The recovery screen can open an empty workspace, retain recovery copies, and export local crash reports. OpenGL is optional. On 12 October 2026, the user reported that the app works on their phone. This is one user-reported startup result; device details, broader workflows and independent crash diagnosis remain open. RC7 adds an explicit document-lab restart for failed initialization or stuck script/native calls; unsaved lab documents close when restarted.
 
@@ -47,10 +51,10 @@ Use the native runtime release asset matching the release metadata. Verify its S
 export JAVA_HOME=/path/to/jdk17
 export ANDROID_SDK_ROOT=/path/to/android-sdk
 python3 scripts/bootstrap_release_runtime.py --bundle /path/to/native-runtime.zip
-python3 scripts/bootstrap_vendor_sources.py --bundle /path/to/FreeCAD-Mobile-Lab-1.0-public-source.zip
+python3 scripts/bootstrap_vendor_sources.py --bundle /path/to/FreeCAD-Mobile-Lab-1.1-public-source.zip
 python3 scripts/check_core_runtime_inputs.py
 # Choose a new development version before modifying sealed app inputs.
-python3 scripts/set_release.py 1.0.1 22 ''
+python3 scripts/set_release.py 1.2-rc1 23 ''
 python3 scripts/build_apk.py --prebuilt --upstream-core
 python3 scripts/verify_apk.py
 ```

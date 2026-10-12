@@ -1,8 +1,8 @@
 {
-  "version": "1.0",
-  "version_name": "1.0",
-  "version_code": 21,
-  "status": "initial public mobile feature release; broader device qualification pending",
+  "version": "1.1",
+  "version_name": "1.1",
+  "version_code": 22,
   "channel": "release",
+  "status": "initial public mobile feature release; broader device qualification pending",
   "scope": "current mobile feature set"
 }
