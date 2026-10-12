@@ -9,8 +9,11 @@ import sys
 import time
 import traceback
 import FreeCAD as App
+import mobile_part
 
 scope = {"App": App, "FreeCAD": App, "__name__": "__mobile_console__"}
+if mobile_part.available():
+    scope["Part"] = mobile_part.Part
 console = {"output": "", "error": ""}
 api = None
 recording = False
@@ -92,9 +95,12 @@ def inspect(target):
     if not isinstance(target, str) or len(target) > 160:
         raise ValueError("Invalid API target")
     parts = target.split(".")
-    if parts[0] not in ("App", "FreeCAD") or any(not re.fullmatch(r"[A-Za-z][A-Za-z_0-9]*", p) for p in parts):
+    modules = {"App": App, "FreeCAD": App}
+    if mobile_part.available():
+        modules["Part"] = mobile_part.Part
+    if parts[0] not in modules or any(not re.fullmatch(r"[A-Za-z][A-Za-z_0-9]*", p) for p in parts):
         raise ValueError("Use an App API target such as App.Vector or App.Units")
-    value = App
+    value = modules[parts[0]]
     for name in parts[1:]:
         value = getattr(value, name)
     api = {"target": target, "doc": (getattr(value, "__doc__", None) or "")[:8192],

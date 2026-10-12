@@ -9,6 +9,7 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE=ROOT.parent
 p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--android',action='store_true')
+p.add_argument('--part',action='store_true',help='Link verified original Part/Materials from the isolated Part build')
 args=p.parse_args()
 env=dict(os.environ)
 command=['cmake','-S',str(ROOT/'app/src/main/cpp/upstream-core'),'-G','Ninja',
@@ -26,6 +27,8 @@ if args.android:
         '-DPython3_INCLUDE_DIR='+str(python/'include/python3.13'),
         '-DPython3_LIBRARY='+str(python/'lib/libpython3.13.so'),
         '-DFREECAD_CORE_LIBRARY='+str(BASE/'freecad-core-android/lib/FreeCAD.so')]
+    if args.part:
+        command+=['-DFREECAD_CORE_LIBRARY='+str(BASE/'freecad-part-android/lib/FreeCAD.so'),'-DFREECAD_PART_LIBRARY='+str(BASE/'freecad-part-android/Mod/Part/Part.so'),'-DFREECAD_MATERIALS_LIBRARY='+str(BASE/'freecad-part-android/Mod/Material/Materials.so')]
     env['LD_LIBRARY_PATH']=str(qthost/'lib')
 else:
     prefix=BASE/'toolchains/freecad-host-prefix/usr'
@@ -36,6 +39,8 @@ else:
         '-DPython3_LIBRARY='+str(python/'lib/libpython3.12.so.1.0'),
         '-DFREECAD_CORE_LIBRARY='+str(BASE/'freecad-core-host/lib/FreeCAD.so'),
         '-DJDK_ROOT='+str(Path(env.get('JAVA_HOME',BASE/'toolchains/jdk-system17')).resolve())]
+    if args.part:
+        command+=['-DFREECAD_CORE_LIBRARY='+str(BASE/'freecad-part-host/lib/FreeCAD.so'),'-DFREECAD_PART_LIBRARY='+str(BASE/'freecad-part-host/Mod/Part/Part.so'),'-DFREECAD_MATERIALS_LIBRARY='+str(BASE/'freecad-part-host/Mod/Material/Materials.so')]
 command+=['-B',str(build)]
 subprocess.run(command,check=True,env=env)
 subprocess.run(['cmake','--build',str(build),'--parallel','2'],check=True,env=env)

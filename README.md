@@ -4,6 +4,8 @@
 
 The main workspace uses OCCT 7.9.2 and the upstream FreeCAD PlaneGCS solver. An optional document lab embeds upstream FreeCAD 1.1.4 Base/App, CPython3.13 and headless Qt6.8.3. Models stay on the device; the app requests no network permission.
 
+Development candidate: **1.2-rc1 / code23**, original Part integration in progress; not yet a released APK. The verified public download remains1.1.
+
 ## Languages
 
 English, Turkish and German core interface text is available. Use **Workspace → Language**, the recovery-screen Language button, or the `Language` / `Dil` / `Sprache` command. The choice applies without restarting the CAD kernel and persists across the separate processes. Automatic mode follows the phone language and falls back to English for unsupported languages. Model names, expressions, numeric storage and canonical command tokens keep their original values. Advanced kernel/Python diagnostics and untranslated technical reference text use English fallback.

@@ -15,8 +15,11 @@ import xml.etree.ElementTree as ET
 import FreeCAD as App
 import mobile_features
 import mobile_python
+import mobile_part
 
 OBJECT_TYPES = {"App::FeaturePython", "App::DocumentObjectGroup", "App::Link", "App::VarSet"}
+if mobile_part.available():
+    OBJECT_TYPES.update(mobile_part.TYPES)
 PROPERTY_TYPES = {"App::PropertyLength", "App::PropertyAngle", "App::PropertyArea",
     "App::PropertyVolume", "App::PropertyFloat", "App::PropertyInteger",
     "App::PropertyString", "App::PropertyBool", "App::PropertyLink"}
@@ -82,7 +85,8 @@ def _value(obj, name):
 
 
 def snapshot():
-    result = {"version": App.Version()[:3], "scope": "App metadata; geometry workbenches pending",
+    result = {"version": App.Version()[:3], "scope": "App/Part bounded mobile adapter" if mobile_part.available() else "App metadata; geometry workbenches pending",
+        "part": mobile_part.available(),
         "documents": list(App.listDocuments()), "files": sorted(p.name for p in _root.iterdir()
             if p.is_file() and p.suffix.lower() == ".fcstd"),
         "transaction": _transaction, "document": None, "python": mobile_python.metadata()}
@@ -99,6 +103,9 @@ def snapshot():
             objects.append({"name": obj.Name, "label": obj.Label, "type": obj.TypeId,
                 "properties": props, "expressions": list(obj.ExpressionEngine),
                 "dependencies": [o.Name for o in obj.OutList], "state": list(obj.State)})
+            shape = mobile_part.summary(obj) if mobile_part.available() else None
+            if shape is not None:
+                objects[-1]["shape"] = shape
         result["document"] = {"name": d.Name, "label": d.Label, "objects": objects,
             "undo": d.UndoCount, "redo": d.RedoCount}
     return result
@@ -338,6 +345,17 @@ def execute(request):
         mobile_python.stop_recording(request["name"])
     elif action == "api":
         mobile_python.inspect(request.get("target", "App"))
+    elif action == "part_preview":
+        result = snapshot()
+        result["preview"] = mobile_part.mesh(_object(request["object"]),float(request.get("tolerance",0.2)))
+        return result
+    elif action == "part_export":
+        if _transaction:
+            raise ValueError("Finish the current transaction before exporting geometry")
+        _doc().recompute()
+        result = snapshot()
+        result["step_file"] = mobile_part.export_step(_object(request["object"]),_root,request["file"])
+        return result
     elif action != "state":
         raise ValueError("Unknown document operation")
     return snapshot()

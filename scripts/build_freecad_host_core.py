@@ -20,6 +20,7 @@ def main():
     p.add_argument('--python-root', type=Path, default=Path(sys.prefix))
     p.add_argument('--jobs', type=int, default=2)
     p.add_argument('--configure-only', action='store_true')
+    p.add_argument('--part',action='store_true',help='Build original Part/Materials in an isolated reference directory')
     args = p.parse_args()
     if args.jobs < 1 or args.jobs > 32:
         p.error('--jobs must be 1 to 32')
@@ -59,13 +60,15 @@ def main():
         '-DZLIB_LIBRARY_RELEASE='+str(prefix/'lib/x86_64-linux-gnu/libz.so'),
         '-DBoost_NO_BOOST_CMAKE=ON','-DBOOST_ROOT='+str(prefix)]
     cmake += ['-D'+name+'=OFF' for name in sorted(set(module_options))]
+    if args.part:
+        cmake += ['-DBUILD_PART=ON','-DBUILD_MATERIAL=ON','-DOCCT_CMAKE_FALLBACK=ON','-DOCC_INCLUDE_DIR='+str(occt/'include/opencascade'),'-DOCC_LIBRARY='+str(occt/'lib/libTKernel.so'),'-DOCC_LIBRARY_DIR='+str(occt/'lib')]
     env = dict(os.environ)
     libpath = ':'.join([str(python/'lib'),str(prefix/'lib/x86_64-linux-gnu'),str(occt/'lib')])
     env['LD_LIBRARY_PATH'] = libpath+(':'+env['LD_LIBRARY_PATH'] if env.get('LD_LIBRARY_PATH') else '')
     env['PATH'] = str(prefix/'lib/qt5/bin')+':'+env['PATH']
     subprocess.run(cmake, check=True, env=env)
     if not args.configure_only:
-        subprocess.run(['cmake','--build',str(build),'--target','FreeCADApp','FreeCADBase','FreeCADMainCmd','FreeCADMainPy','--parallel',str(args.jobs)],check=True,env=env)
+        subprocess.run(['cmake','--build',str(build),'--target','FreeCADApp','FreeCADBase','FreeCADMainCmd','FreeCADMainPy',*(['Materials','Part'] if args.part else []),'--parallel',str(args.jobs)],check=True,env=env)
     print('Host-only core', 'configured' if args.configure_only else 'built', 'at', build)
 
 if __name__ == '__main__':

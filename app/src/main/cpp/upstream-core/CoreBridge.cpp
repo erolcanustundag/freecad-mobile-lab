@@ -8,6 +8,10 @@
 #include <string>
 
 extern "C" PyObject* PyInit_FreeCAD();
+#ifdef FREECAD_MOBILE_HAS_PART
+extern "C" PyObject* PyInit_Materials();
+extern "C" PyObject* PyInit_Part();
+#endif
 namespace {
 std::mutex serial;
 PyObject* dispatcher = nullptr;
@@ -58,6 +62,11 @@ Java_org_freecad_mobilelab_CoreNative_initialize(JNIEnv* env,jclass,jstring home
         setenv("FREECAD_USER_DATA",documents.c_str(),1);
         setenv("FREECAD_USER_TEMP",(root+"/tmp").c_str(),1);
         if(PyImport_AppendInittab("FreeCAD",PyInit_FreeCAD)==-1) throw std::runtime_error("Cannot register FreeCAD Python module");
+#ifdef FREECAD_MOBILE_HAS_PART
+        if(PyImport_AppendInittab("Materials",PyInit_Materials)==-1 ||
+           PyImport_AppendInittab("Part",PyInit_Part)==-1)
+            throw std::runtime_error("Cannot register original Part/Materials modules");
+#endif
         PyConfig config;PyConfig_InitIsolatedConfig(&config);
         config.install_signal_handlers=0;config.write_bytecode=0;config.parse_argv=0;
         try {

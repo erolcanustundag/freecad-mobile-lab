@@ -113,7 +113,9 @@
   <string name="ui_51f3263e2e52" formatted="false">"Çökme raporu kopyalandı"</string>
   <string name="ui_d12b417f8416" formatted="false">"Çökme raporu kaydedildi"</string>
   <string name="ui_6e157c5da441" formatted="false">"Oluştur"</string>
+  <string name="ui_bc88394aaae1" formatted="false">"Bir belge oluşturun veya desteklenen bir özgün FCStd dosyasını açın."</string>
   <string name="ui_c11c2f8bcd8d" formatted="false">"Bir belge oluşturun veya desteklenen bir FCStd üstveri belgesi açın."</string>
+  <string name="ui_f0b296576b0a" formatted="false">"Özgün Part geometrisi oluştur"</string>
   <string name="ui_a0c75994670a" formatted="false">"Önce bir model oluşturun veya içe aktarın."</string>
   <string name="ui_6651e8ca2a57" formatted="false">"Önce bir nesne oluşturun veya içe aktarın"</string>
   <string name="ui_c65cbfecf121" formatted="false">"Önce bir nesne oluşturun veya seçin."</string>
@@ -189,6 +191,7 @@
   <string name="ui_c74982e3f0ae" formatted="false">"Deneysel yerel CAD · tüm ölçüler mm"</string>
   <string name="ui_f3e4fadb9e37" formatted="false">"Dışa aktar"</string>
   <string name="ui_5755f9ac0aa1" formatted="false">"CSV dışa aktar"</string>
+  <string name="ui_1a9533d2aa94" formatted="false">"Part STEP dışa aktarımı"</string>
   <string name="ui_209ea2571f9a" formatted="false">"Python dosyasını dışa aktar"</string>
   <string name="ui_b1336ed07450" formatted="false">"STL varyantlarını toplu dışa aktar"</string>
   <string name="ui_b7e9d2ee1028" formatted="false">"Ağ dışa aktarım kalitesi"</string>
@@ -314,6 +317,11 @@
   <string name="ui_5159e2ab8729" formatted="false">"NURBS · ağırlıklı kontrol noktaları"</string>
   <string name="ui_709a23220f2c" formatted="false">"Ad"</string>
   <string name="ui_cb04729f44c1" formatted="false">"Ad / katman / kilit"</string>
+  <string name="ui_45211683ce7b" formatted="false">"Yerel kutu"</string>
+  <string name="ui_129f379f9d3a" formatted="false">"Yerel koni"</string>
+  <string name="ui_6117755b333f" formatted="false">"Yerel silindir"</string>
+  <string name="ui_c2c2cc1eb77b" formatted="false">"Yerel küre"</string>
+  <string name="ui_850e15bfcf21" formatted="false">"Yerel torus"</string>
   <string name="ui_b3b46e64b67d" formatted="false">"Gezinme küpü"</string>
   <string name="ui_6403f2b7eb2a" formatted="false">"Yeni"</string>
   <string name="ui_0e06e5aa9fcd" formatted="false">"Yeni makro"</string>
@@ -357,6 +365,8 @@
   <string name="ui_34913ffea97c" formatted="false">"Çalışma alanı açılıyor"</string>
   <string name="ui_c4e6ed956953" formatted="false">"İşlem başarısız"</string>
   <string name="ui_ab3d9c6b9e83" formatted="false">"Düzenleme araçları"</string>
+  <string name="ui_6e349b44e371" formatted="false">"Özgün Part"</string>
+  <string name="ui_f88fb371ca4e" formatted="false">"Bu çalışma ortamında özgün Part kullanılamıyor"</string>
   <string name="ui_22569744952d" formatted="false">"Dik yön"</string>
   <string name="ui_eec92f96be86" formatted="false">"PNG dışa aktarımı"</string>
   <string name="ui_47f82a4ce2c0" formatted="false">"PNG dışa aktarımı başarısız"</string>
@@ -364,6 +374,8 @@
   <string name="ui_6c706fa8c763" formatted="false">"PNG · stüdyo görünümü"</string>
   <string name="ui_9750284506f8" formatted="false">"Parametrik grafik · bir düğüme dokunun, sonra Düzenle / bağla seçin.\nTürlü nokta / liste / geometri bağlantıları. Sayılar Hesapla ile güncellenir."</string>
   <string name="ui_fecceacb8e2d" formatted="false">"Parametrik düğüm grafiği"</string>
+  <string name="ui_85990c7b288a" formatted="false">"Part geometri önizlemesi"</string>
+  <string name="ui_6f9d5a6db41a" formatted="false">"Part önizlemesi"</string>
   <string name="ui_67b4d6aa8d08" formatted="false">"Pavilyon derinliği (mm)"</string>
   <string name="ui_ca787afd2cfc" formatted="false">"Performans / görüntü ayrıntısı"</string>
   <string name="ui_2dcff8cab2c4" formatted="false">"Eğri boyunca boru oluştur"</string>
@@ -383,6 +395,7 @@
   <string name="ui_e7ab1c56ca33" formatted="false">"Hassas ölçüm araçları"</string>
   <string name="ui_722d6c109308" formatted="false">"Özel belge çalışma ortamı hazırlanıyor…"</string>
   <string name="ui_eb39e1d78db8" formatted="false">"Önayar adı"</string>
+  <string name="ui_793c9c3fc481" formatted="false">"Önizleme toleransı (mm)"</string>
   <string name="ui_56a1dd1806ff" formatted="false">"Baskı tablası / yönlendirme"</string>
   <string name="ui_b21073d807ac" formatted="false">"Baskı hazırlığı"</string>
   <string name="ui_d956b27d4917" formatted="false">"Yazıcı baskı hacmi"</string>
@@ -563,6 +576,7 @@
   <string name="ui_79dc1391f805" formatted="false">"Geometri kilidini kaldır"</string>
   <string name="ui_6e217f978cea" formatted="false">"Kaydedilmemiş laboratuvar belgeleri kapanacak. Kayıtlı FCStd dosyaları ve makrolar korunur. CAD çalışma alanı ayrı sürecinde kalır."</string>
   <string name="ui_028679f571b4" formatted="false">"NURBS yüzey kırpmasını kaldır"</string>
+  <string name="ui_f9f4b89fd160" formatted="false">"Özgün App/Part 1.1.4 · katılar, özellikler, ifadeler ve işlemler"</string>
   <string name="ui_7dcb3f42d312" formatted="false">"Telefonun dilini kullan"</string>
   <string name="ui_cbd3f9386e07" formatted="false">"V bitiş oranı"</string>
   <string name="ui_8946abe055f7" formatted="false">"V başlangıç oranı"</string>

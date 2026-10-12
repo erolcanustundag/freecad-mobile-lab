@@ -29,3 +29,6 @@ docs/*.txt
 docs/RELEASE-PREPARATION-PRIVATE.json
 
 localization-test-classes/
+
+part-ui-check/
+samples/**/*.FCBak

@@ -595,3 +595,17 @@ Integer|Tam sayı|Ganzzahl
 String|Metin|Text
 Bool|Mantıksal değer|Boolescher Wert
 Link|Bağlantı|Verknüpfung
+Original Part|Özgün Part|Original-Part
+Original Part is not available in this runtime|Bu çalışma ortamında özgün Part kullanılamıyor|Original-Part ist in dieser Laufzeit nicht verfügbar
+Native box|Yerel kutu|Nativer Quader
+Native cylinder|Yerel silindir|Nativer Zylinder
+Native sphere|Yerel küre|Native Kugel
+Native cone|Yerel koni|Nativer Kegel
+Native torus|Yerel torus|Nativer Torus
+Create native Part geometry|Özgün Part geometrisi oluştur|Original-Part-Geometrie erstellen
+Part geometry preview|Part geometri önizlemesi|Part-Geometrievorschau
+Part preview|Part önizlemesi|Part-Vorschau
+Export Part STEP|Part STEP dışa aktarımı|Part-STEP exportieren
+Preview tolerance (mm)|Önizleme toleransı (mm)|Vorschautoleranz (mm)
+Upstream App/Part 1.1.4 · solids, properties, expressions and transactions|Özgün App/Part 1.1.4 · katılar, özellikler, ifadeler ve işlemler|Original App/Part 1.1.4 · Volumenkörper, Eigenschaften, Ausdrücke und Transaktionen
+Create a document or open a supported native FCStd file.|Bir belge oluşturun veya desteklenen bir özgün FCStd dosyasını açın.|Erstellen Sie ein Dokument oder öffnen Sie eine unterstützte native FCStd-Datei.

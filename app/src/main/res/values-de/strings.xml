@@ -113,7 +113,9 @@
   <string name="ui_51f3263e2e52" formatted="false">"Absturzbericht kopiert"</string>
   <string name="ui_d12b417f8416" formatted="false">"Absturzbericht gespeichert"</string>
   <string name="ui_6e157c5da441" formatted="false">"Erstellen"</string>
+  <string name="ui_bc88394aaae1" formatted="false">"Erstellen Sie ein Dokument oder öffnen Sie eine unterstützte native FCStd-Datei."</string>
   <string name="ui_c11c2f8bcd8d" formatted="false">"Ein Dokument erstellen oder ein unterstütztes FCStd-Metadatendokument öffnen."</string>
+  <string name="ui_f0b296576b0a" formatted="false">"Original-Part-Geometrie erstellen"</string>
   <string name="ui_a0c75994670a" formatted="false">"Zuerst ein Modell erstellen oder importieren."</string>
   <string name="ui_6651e8ca2a57" formatted="false">"Zuerst ein Objekt erstellen oder importieren"</string>
   <string name="ui_c65cbfecf121" formatted="false">"Zuerst ein Objekt erstellen oder auswählen."</string>
@@ -189,6 +191,7 @@
   <string name="ui_c74982e3f0ae" formatted="false">"Experimentelles natives CAD · alle Maße in mm"</string>
   <string name="ui_f3e4fadb9e37" formatted="false">"Exportieren"</string>
   <string name="ui_5755f9ac0aa1" formatted="false">"CSV exportieren"</string>
+  <string name="ui_1a9533d2aa94" formatted="false">"Part-STEP exportieren"</string>
   <string name="ui_209ea2571f9a" formatted="false">"Python-Datei exportieren"</string>
   <string name="ui_b1336ed07450" formatted="false">"STL-Variantenserie exportieren"</string>
   <string name="ui_b7e9d2ee1028" formatted="false">"Netzexportqualität"</string>
@@ -314,6 +317,11 @@
   <string name="ui_5159e2ab8729" formatted="false">"NURBS · gewichtete Kontrollpunkte"</string>
   <string name="ui_709a23220f2c" formatted="false">"Name"</string>
   <string name="ui_cb04729f44c1" formatted="false">"Name / Ebene / Sperre"</string>
+  <string name="ui_45211683ce7b" formatted="false">"Nativer Quader"</string>
+  <string name="ui_129f379f9d3a" formatted="false">"Nativer Kegel"</string>
+  <string name="ui_6117755b333f" formatted="false">"Nativer Zylinder"</string>
+  <string name="ui_c2c2cc1eb77b" formatted="false">"Native Kugel"</string>
+  <string name="ui_850e15bfcf21" formatted="false">"Nativer Torus"</string>
   <string name="ui_b3b46e64b67d" formatted="false">"Navigationswürfel"</string>
   <string name="ui_6403f2b7eb2a" formatted="false">"Neu"</string>
   <string name="ui_0e06e5aa9fcd" formatted="false">"Neues Makro"</string>
@@ -357,6 +365,8 @@
   <string name="ui_34913ffea97c" formatted="false">"Arbeitsbereich wird geöffnet"</string>
   <string name="ui_c4e6ed956953" formatted="false">"Vorgang fehlgeschlagen"</string>
   <string name="ui_ab3d9c6b9e83" formatted="false">"Organisationswerkzeuge"</string>
+  <string name="ui_6e349b44e371" formatted="false">"Original-Part"</string>
+  <string name="ui_f88fb371ca4e" formatted="false">"Original-Part ist in dieser Laufzeit nicht verfügbar"</string>
   <string name="ui_22569744952d" formatted="false">"Orthogonal"</string>
   <string name="ui_eec92f96be86" formatted="false">"PNG-Export"</string>
   <string name="ui_47f82a4ce2c0" formatted="false">"PNG-Export fehlgeschlagen"</string>
@@ -364,6 +374,8 @@
   <string name="ui_6c706fa8c763" formatted="false">"PNG · Studioansicht"</string>
   <string name="ui_9750284506f8" formatted="false">"Parametrischer Graph · Knoten antippen, dann Bearbeiten / Verbinden.\nTypisierte Punkt- / Listen- / Geometrieanschlüsse. Zahlen werden mit Auswerten aktualisiert."</string>
   <string name="ui_fecceacb8e2d" formatted="false">"Parametrischer Knotengraph"</string>
+  <string name="ui_85990c7b288a" formatted="false">"Part-Geometrievorschau"</string>
+  <string name="ui_6f9d5a6db41a" formatted="false">"Part-Vorschau"</string>
   <string name="ui_67b4d6aa8d08" formatted="false">"Pavillontiefe (mm)"</string>
   <string name="ui_ca787afd2cfc" formatted="false">"Leistung / Darstellungsdetails"</string>
   <string name="ui_2dcff8cab2c4" formatted="false">"Rohr entlang einer Kurve erstellen"</string>
@@ -383,6 +395,7 @@
   <string name="ui_e7ab1c56ca33" formatted="false">"Präzisionswerkzeuge"</string>
   <string name="ui_722d6c109308" formatted="false">"Private Dokumentumgebung wird vorbereitet…"</string>
   <string name="ui_eb39e1d78db8" formatted="false">"Name der Voreinstellung"</string>
+  <string name="ui_793c9c3fc481" formatted="false">"Vorschautoleranz (mm)"</string>
   <string name="ui_56a1dd1806ff" formatted="false">"Druckbett / Ausrichtung"</string>
   <string name="ui_b21073d807ac" formatted="false">"Druckvorbereitung"</string>
   <string name="ui_d956b27d4917" formatted="false">"Druckerbauraum"</string>
@@ -563,6 +576,7 @@
   <string name="ui_79dc1391f805" formatted="false">"Geometrie entsperren"</string>
   <string name="ui_6e217f978cea" formatted="false">"Ungespeicherte Labordokumente werden geschlossen. Gespeicherte FCStd-Dateien und Makros bleiben erhalten. Der CAD-Arbeitsbereich bleibt in seinem separaten Prozess."</string>
   <string name="ui_028679f571b4" formatted="false">"NURBS-Fläche enttrimmen"</string>
+  <string name="ui_f9f4b89fd160" formatted="false">"Original App/Part 1.1.4 · Volumenkörper, Eigenschaften, Ausdrücke und Transaktionen"</string>
   <string name="ui_7dcb3f42d312" formatted="false">"Telefonsprache verwenden"</string>
   <string name="ui_cbd3f9386e07" formatted="false">"V-Endanteil"</string>
   <string name="ui_8946abe055f7" formatted="false">"V-Startanteil"</string>

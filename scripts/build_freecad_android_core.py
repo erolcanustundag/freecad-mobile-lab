@@ -65,7 +65,7 @@ def main():
     if args.part:
         occ=args.occt_prefix.resolve()
         if not (occ/'lib/libTKFeat.so').is_file() or not (occ/'lib/libTKDEGLTF.so').is_file():p.error('Build the missing Part OCCT dependencies first')
-        command += ['-DBUILD_PART=ON','-DBUILD_MATERIAL=ON','-DOCC_LIBRARY='+str(occ/'lib/libTKernel.so'),'-DOCC_LIBRARY_DIR='+str(occ/'lib'),'-DCMAKE_MODULE_LINKER_FLAGS=-Wl,-z,max-page-size=16384']
+        command += ['-DBUILD_PART=ON','-DBUILD_MATERIAL=ON','-DOCC_INCLUDE_DIR='+str(occ/'include/opencascade'),'-DOCC_LIBRARY='+str(occ/'lib/libTKernel.so'),'-DOCC_LIBRARY_DIR='+str(occ/'lib'),'-DCMAKE_MODULE_LINKER_FLAGS=-Wl,-z,max-page-size=16384']
     env=dict(os.environ)
     env['LD_LIBRARY_PATH']=str(qthost/'lib')+(':'+env['LD_LIBRARY_PATH'] if env.get('LD_LIBRARY_PATH') else '')
     subprocess.run(command,check=True,env=env)
