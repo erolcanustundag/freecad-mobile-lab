@@ -9,7 +9,7 @@
   "native_runtime": "UNCHANGED_FROM_1_0; historical host evidence retained",
   "device_smoke_instrumentation": "COMPILED_ONLY",
   "production_signing": "Retained development certificate for RC7 updates; dedicated production identity/update migration pending",
-  "publication": "PENDING_1_1_RELEASE",
+  "publication": "PASS:1.1 full release/latest, four asset size/SHA256 digests verified; CI/release workflow successful",
   "pending": [
     "Phone details and structured cold-start/lifecycle/SAF/process recreation tests; second device",
     "minimum/current Android, multiple GPU vendors, low-memory and4/16KiB environments",

@@ -6,7 +6,7 @@
   "release_scope": "current mobile feature set",
   "milestone_gate": "NOT_COMPLETE",
   "android_runtime": "USER_REPORTED_STARTUP_PRIOR_RELEASE; localization NOT_RUN_ON_ANDROID",
-  "publication": "PENDING",
+  "publication": "PUBLISHED_FULL_FEATURE_RELEASE",
   "assets": [
     {
       "name": "FreeCAD-Mobile-Lab-1.1-arm64.apk",
@@ -314,5 +314,7 @@
       "size_bytes": 31714622,
       "sha256": "d50cabfed3700e52ff61888b296c189cd72284045cd6bbf5b9f8e41d62ee34bb"
     }
-  ]
+  ],
+  "repository_url": "https://github.com/erolcanustundag/freecad-mobile-lab",
+  "release_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.1"
 }
