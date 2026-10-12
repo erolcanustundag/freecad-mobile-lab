@@ -4,7 +4,7 @@ Product **1.0 / code21** releases the current mobile feature set. Full desktop p
 
 The user reported on 12 October 2026: "it works on my phone". This is one user-reported startup result with no phone/OS/APK details or structured workflow logs. Android automation has not run. Crash diagnosis, repeated lifecycle/SAF/process recreation, upgrade testing, device/GPU/memory/page-size coverage and manufacturing calibration remain open. The original instant-crash root cause is unknown.
 
-The 1.0 build changes version metadata, About text and packaging mode. Native binaries and mobile Python modules remain unchanged from RC7. The complete feature comparison and pending workbench batches are preserved. Static verification and release publication are recorded in RELEASE-GATES.json / GITHUB-PUBLICATION.json after completion.
+The 1.0 build changes version metadata, About text and packaging mode. Native binaries and mobile Python modules remain unchanged from RC7. The complete feature comparison and pending workbench batches are preserved. Static verification passed. Product1.0 is publicly published as the latest full GitHub release, with all four asset sizes/SHA256 digests verified and successful source CI/release workflow. RC7 is preserved and the temporary transport branch was removed. RELEASE-GATES.json / GITHUB-PUBLICATION.json record this evidence.
 
 ## Historical candidate evidence
 
