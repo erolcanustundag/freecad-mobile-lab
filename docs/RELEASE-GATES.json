@@ -9,7 +9,7 @@
   "native_runtime": "PASS: original Part/Materials/Sketcher ARM64 and host builds;955 Sketcher/269 Part/88 App/62 Python checks",
   "device_smoke_instrumentation": "COMPILED_ONLY",
   "production_signing": "Retained development certificate for RC7 updates; dedicated production identity/update migration pending",
-  "publication": "PENDING",
+  "publication": "PUBLISHED_VERIFIED",
   "pending": [
     "Physical Android candidate launch/lifecycle/SAF/recovery/language/geometry workflows and second device",
     "Android memory budgets and4/16KiB device execution",

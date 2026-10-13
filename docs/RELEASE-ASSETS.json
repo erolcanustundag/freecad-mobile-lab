@@ -7,7 +7,7 @@
   "milestone_gate": "NOT_COMPLETE",
   "android_runtime": "NOT_RUN",
   "historical_unversioned_startup_report": "USER_REPORTED_STARTUP",
-  "publication": "PENDING",
+  "publication": "PUBLISHED_VERIFIED",
   "assets": [
     {
       "name": "FreeCAD-Mobile-Lab-1.2-rc3-arm64.apk",
@@ -365,5 +365,7 @@
       "size_bytes": 31927721,
       "sha256": "148e464074e654c50cabbae0d40b5808f88e46117a9b2ddcf79617f6aaf21ccc"
     }
-  ]
+  ],
+  "release_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.2-rc3",
+  "source_commit": "baa0733eadd7d5569275a8b7177393603925cf59"
 }

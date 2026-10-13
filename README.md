@@ -6,6 +6,8 @@ The main workspace uses OCCT 7.9.2 and the upstream FreeCAD PlaneGCS solver. An 
 
 Engineering candidate: **1.2-rc3 / code26** adds original Part/Materials and Sketcher to the isolated document lab: native parametric solids/booleans and STEP exchange; sketch lines/circles/arcs/ellipses, rational B-splines/construction, native constraints/DOF/units, Undo/Redo, supported FCStd and sampled XY preview.955 real Sketcher JNI checks and269/88/62 Part/document/Python regressions pass. The signed APK has64 ARM64 JNI libraries plus69 Python extensions and16KiB/static loader verification. Android execution of this candidate remainsNOT_RUN. See [Sketch guide](docs/SKETCHER-USER-GUIDE.md), [Sketch evidence](docs/SKETCHER-PORT-PROGRESS.md) and [Part guide](docs/PART-USER-GUIDE.md). Latest full release remains1.1.
 
+[Download the signed1.2-rc3 candidate APK](https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc3/FreeCAD-Mobile-Lab-1.2-rc3-arm64.apk) or open the [candidate release](https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.2-rc3). The candidate is debuggable;1.1 remains the latest full release.
+
 ## Languages
 
 English, Turkish and German core interface text is available. Use **Workspace → Language**, the recovery-screen Language button, or the `Language` / `Dil` / `Sprache` command. The choice applies without restarting the CAD kernel and persists across the separate processes. Automatic mode follows the phone language and falls back to English for unsupported languages. Model names, expressions, numeric storage and canonical command tokens keep their original values. Advanced kernel/Python diagnostics and untranslated technical reference text use English fallback.
