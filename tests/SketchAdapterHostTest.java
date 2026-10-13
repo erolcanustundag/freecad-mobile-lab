@@ -12,7 +12,15 @@ public final class SketchAdapterHostTest {
     static void python(String code)throws Exception{JSONObject console=call(new JSONObject().put("op","python").put("code",code)).getJSONObject("python").getJSONObject("console");check(console.getString("error").isEmpty(),console.getString("error"));}
     static void dof(String name,int expected)throws Exception{JSONObject s=sketch(cmd("State"),name);check(s.getInt("dof")==expected,"DOF "+name+" expected "+expected+" got "+s);check(s.getJSONArray("conflicts").length()==0,"No solver conflict");check(s.getJSONArray("redundant").length()==0,"No redundant constraint");}
     public static void main(String[] args)throws Exception{
-        System.load(args[0]);CoreNative.initialize(args[1],args[2],args[1]);
+        Thread.setDefaultUncaughtExceptionHandler((thread,error)->{try{Path failure=Paths.get(args[2],"../../../../..","docs","sketcher-test-failure.txt").normalize();try(java.io.PrintWriter out=new java.io.PrintWriter(Files.newBufferedWriter(failure))){error.printStackTrace(out);}System.out.println("Sketch test failed after "+count+" checks: "+error);System.out.flush();}catch(Exception ignored){}System.exit(1);});
+        System.load(args[3]);SignalProbe.capture();System.load(args[0]);CoreNative.initialize(args[1],args[2],args[1]);
+        check(SignalProbe.preserved(),"Embedded FreeCAD must preserve JVM SIGSEGV handler, flags and mask");
+        java.util.Locale original=java.util.Locale.getDefault();
+        try{for(java.util.Locale locale:new java.util.Locale[]{java.util.Locale.US,new java.util.Locale("tr","TR"),java.util.Locale.GERMANY}){
+            java.util.Locale.setDefault(locale);
+            for(String alias:new String[]{"Sketch","ESKİZ","Skizze"})check(CoreCommandLine.parse(alias+" Profile").getJSONArray("edits").getJSONObject(0).getString("type").equals("Sketcher::SketchObject"),"Locale-stable sketch alias");
+            check(CoreCommandLine.parse("Set Profile.Label \"İnci yüzüğüm\"").getJSONArray("edits").getJSONObject(0).getString("value").equals("İnci yüzüğüm"),"Native command Unicode label preserved");
+        }}finally{java.util.Locale.setDefault(original);}
         JSONObject state=cmd("NewDoc SketchReference");check(state.getBoolean("sketcher"),"Original builtin Sketcher must load");
         cmd("Eskiz Profile");state=cmd("SketchLine Profile 0 0 30 0");check(sketch(state,"Profile").getInt("geometry_count")==1,"Native line creation");dof("Profile",4);
         cmd("Constraint Profile Horizontal 0");dof("Profile",3);cmd("Constraint Profile Distance 0 30");dof("Profile",2);
@@ -25,6 +33,7 @@ public final class SketchAdapterHostTest {
         state=cmd("SketchPreview Profile");JSONObject preview=state.getJSONObject("sketch_preview");JSONArray points=preview.getJSONArray("curves").getJSONObject(0).getJSONArray("points");check(points.length()==2,"Line display samples are bounded");check(Math.abs(points.getJSONArray(1).getDouble(0)-40)<1e-7,"Preview displays solved geometry");check(preview.getInt("dof")==0,"Preview shows native DOF");
         cmd("Sketch Curves");cmd("SketchCircle Curves 0 0 5");cmd("SketchArc Curves 20 0 10 0 180");cmd("SketchEllipse Curves 0 30 20 10");cmd("SketchSpline Curves 3 0,0;10,20;20,20;30,0 1,2,2,1");
         state=cmd("Construction Curves 3 true");check(sketch(state,"Curves").getJSONArray("geometry").getJSONObject(3).getBoolean("construction"),"Native construction flag");
+        bad("Set Curves.FullyConstrained true");bad("Set Curves._ExternalGeoVersion 999");
         python("s=App.ActiveDocument.Curves\nassert abs(s.Geometry[0].Radius-5)<1e-8\nassert abs(s.Geometry[1].length()-10*3.141592653589793)<1e-6\nassert abs(s.Geometry[2].MajorRadius-20)<1e-7\nassert abs(s.Geometry[2].MinorRadius-10)<1e-7\nassert s.Geometry[3].Degree==3\nassert s.Geometry[3].getWeights()==[1.0,2.0,2.0,1.0]\nassert s.getConstruction(3)");
         state=cmd("SketchPreview Curves");JSONArray curves=state.getJSONObject("sketch_preview").getJSONArray("curves");check(curves.length()==4,"All entity types preview");for(int i=0;i<curves.length();i++){JSONArray p=curves.getJSONObject(i).getJSONArray("points");check(p.length()==65,"Bounded curve sample count");for(int j=0;j<p.length();j++)check(Double.isFinite(p.getJSONArray(j).getDouble(0))&&Double.isFinite(p.getJSONArray(j).getDouble(1)),"Finite solved curve point");}
         check(curves.getJSONObject(3).getBoolean("construction"),"Construction preview flag");
@@ -54,6 +63,8 @@ public final class SketchAdapterHostTest {
         cmd("Api Sketcher.Constraint");check(cmd("State").getJSONObject("python").getJSONObject("api").getString("target").equals("Sketcher.Constraint"),"Original Sketcher API browser");
         Path destination=Paths.get(args[2],"../../../../..","samples","upstream-sketcher").normalize();Files.createDirectories(destination);Files.copy(Paths.get(args[1],"documents","Sketch.FCStd"),destination.resolve("Sketch.FCStd"),StandardCopyOption.REPLACE_EXISTING);
         Files.write(destination.resolve("preview.json"),cmd("SketchPreview Curves").getJSONObject("sketch_preview").toString(2).getBytes(java.nio.charset.StandardCharsets.UTF_8));
+        int objects=cmd("State").getJSONObject("document").getJSONArray("objects").length();for(int i=0;i<500;i++)cmd("State");check(cmd("State").getJSONObject("document").getJSONArray("objects").length()==objects,"Repeated JNI snapshots preserve the native document");check(SignalProbe.preserved(),"VM fault handler preserved after solver/restore/JIT stress");
+        Files.deleteIfExists(Paths.get(args[2],"../../../../..","docs","sketcher-test-failure.txt").normalize());
         System.out.println("PASS: "+count+" genuine original Sketcher JNI/solver/entity/FCStd assertions; Android execution NOT_RUN");System.out.flush();System.exit(0);
     }
 }

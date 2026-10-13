@@ -1,0 +1,52 @@
+{
+  "version": "1.2-rc2",
+  "version_code": 25,
+  "freecad": "1.1.4",
+  "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
+  "checks": {
+    "sketcher_jni_solver_geometry_fcstd": 955,
+    "part_jni_regressions": 269,
+    "metadata_jni_regressions": 88,
+    "python_tools_regressions": 62,
+    "language_command_fallback_unicode": 527,
+    "locale_resource_tests": 3,
+    "runtime_packaging_regressions": 8
+  },
+  "host": {
+    "system": "Linux x86_64",
+    "python": "3.12.14",
+    "qt": "5.15"
+  },
+  "android": {
+    "abi": "arm64-v8a",
+    "minimum_api": 26,
+    "python": "3.13.16",
+    "qt": "6.8.3",
+    "execution": "NOT_RUN"
+  },
+  "fault_handler": {
+    "before": "FAIL: original FreeCAD replaced the JVM SIGSEGV handler",
+    "after": "PASS: handler/flags/mask preserved before and after 500 repeated JNI snapshots",
+    "policy": "Explicit FREECAD_MOBILE_EMBEDDED CMake opt-in prevents desktop handler registration; standalone builds retain upstream behavior",
+    "phone_crash_cause": "NOT_ESTABLISHED"
+  },
+  "limits": {
+    "entities_per_sketch": 256,
+    "constraints_per_sketch": 256,
+    "spline_poles": 64,
+    "preview_points": 8192,
+    "coordinate_mm": 1000000
+  },
+  "fixtures": [
+    {
+      "path": "samples/upstream-sketcher/Sketch.FCStd",
+      "size": 12114,
+      "sha256": "0f06fabe6b81a3736b5bc8189bacc15e34f330673e186e0bbea3f054b1bb8024"
+    },
+    {
+      "path": "samples/upstream-sketcher/preview.json",
+      "size": 20678,
+      "sha256": "a5163545100c564bc7f74fecccb2822fa6b29dbb70985cef17e594e0b3ede761"
+    }
+  ]
+}

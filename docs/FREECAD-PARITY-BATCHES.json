@@ -1,6 +1,6 @@
 {
   "baseline": "FreeCAD 1.1.4",
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "batch_size": 4,
   "completion_rule": "All four feature scopes implemented and tested before an engineering APK. Device parity stays pending until device evidence exists. Large feature scopes are subdivided into additional four-feature sub-batches; adding placeholders or menus does not count.",
   "stable_1_0": "NOT_COMPLETE",
@@ -1104,5 +1104,35 @@
     "android_execution": "NOT_RUN",
     "version_code": 24,
     "evidence": "native-part-results.json and core-apk-verification.json"
+  },
+  "sketcher_prerequisite": {
+    "id": "P-SKETCHER",
+    "version": "1.2-rc2",
+    "version_code": 25,
+    "features": [
+      {
+        "id": "P-SKETCHER-F1",
+        "scope": "Original Sketcher entities, solver-aware point moves and deletion",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "id": "P-SKETCHER-F2",
+        "scope": "Rational B-splines and construction geometry",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "id": "P-SKETCHER-F3",
+        "scope": "Native constraints, datum units, DOF and atomic conflict rollback",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "id": "P-SKETCHER-F4",
+        "scope": "Supported native sketch FCStd save/restore and sampled XY preview",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      }
+    ],
+    "apk_status": "PENDING_FINAL_REPACKAGE",
+    "evidence": "native-sketcher-results.json",
+    "full_B05_B06_B07": "PENDING"
   }
 }

@@ -1,9 +1,17 @@
 # Native Sketcher checkpoint
 
-1.2-rc2 / code25 is in preparation. Original FreeCAD1.1.4 Sketcher App and PlaneGCS compile alongside genuine Part/Materials. BUILD_GUI stays off; the headless integration scopes the GUI-only SWIG/Pivy configuration check accordingly. No geometry or solver implementation is stubbed.
+1.2-rc2 / code25 integrates original FreeCAD1.1.4 Sketcher App and PlaneGCS alongside genuine Part/Materials. BUILD_GUI stays off; the GUI-only SWIG/Pivy check is scoped to GUI builds. Geometry and solver implementations remain upstream.
 
-Four bounded feature scopes: native entities/solver-aware point movement/deletion; rational B-splines and construction geometry; native constraints/dimensions/DOF with failed-edit rollback; supported Sketcher FCStd persistence and a sampled XY preview. Commands, numeric forms and English/Turkish/German guides are included.
+Four bounded scopes: lines/circles/arcs/ellipses and solver-aware movement/deletion; rational B-splines and construction; native constraints/dimensions/DOF with atomic rollback; supported native FCStd persistence and sampled XY preview. Commands, forms and English/Turkish/German guides are included.
 
-Host JNI validation and ARM64 APK verification are pending for this checkpoint. It must not be described as shipped or device-tested until the corresponding evidence is saved.
+Actual host checks pass:955 original Sketcher assertions,269 Part regressions,88 document regressions and62 Python-tooling regressions.527 portable locale/command checks,3 resource tests and8 runtime-packaging regressions pass. Tests compare solved dimensions, analytic arc length, rational weights, DOF, conflict rollback, Undo/Redo, Unicode FCStd restore and bounded preview data. See native-sketcher-results.json and real generated Sketch.FCStd/preview.json fixtures.
 
-B05/B06/B07 remain PENDING at their full roadmap scope. Face/plane attachment UI, external-reference editing, general sketch trim/fillet/array tools, spline pole handles, touch constraint editing and the desktop GUI remain pending. Native module availability is a prerequisite, not full workbench parity. PartDesign is next after the missing sketch workflows.
+Testing exposed a process defect: FreeCAD startup replaced the JVM SIGSEGV handler. A host JNI probe checks the actual handler, flags and mask. FREECAD_MOBILE_EMBEDDED now suppresses this desktop registration through an explicit CMake opt-in affecting Application.cpp; default standalone behavior is preserved. The probe passes at initialization and after500 repeated native snapshots under normal JVM execution. This does not establish the cause of earlier phone crashes.
+
+The adapter respects native hidden/read-only flags and protects internal properties. Edits use native transactions/solver calls. Conflicting or redundant constraints roll back. The API browser/console expose original Sketcher. Preview uses sampled local XY curves with pan/pinch/fit; it is not a touch editor or exact vector export.
+
+Bounds:256 entities/constraints per sketch;64 spline poles;degree1–5;8,192 preview points;coordinates within±1,000,000mm. Native parser/solver calls can allocate/block before adapter checks; device memory/runtime is unmeasured. FCStd types remain restricted App/Part/Sketcher and the packaged QuantityDriver proxy. Arbitrary addon/PartDesign/Gui documents are rejected.
+
+The candidate is repackaged after the fault-handler fix; final APK static verification is separate. Physical Android execution, UI layout/gestures, language switching, lifecycle/recovery and file pickers are NOT_RUN for this candidate.
+
+B05/B06/B07 remain PENDING at their full scope. Next are plane/face attachment and external references, richer sketch editing/diagnostics and PartDesign. Native module availability is a prerequisite, not full workbench parity.

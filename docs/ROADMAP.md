@@ -123,3 +123,10 @@ B01–B04 bounded scopes have signed APK checkpoints. B03 contains the real upst
 ## Original Part prerequisite checkpoint —1.2-rc1
 
 P-PART adds four bounded foundations before B05: original Part/Materials runtime; native parametric solids/expressions/transactions/linked booleans; whitelisted native Part FCStd and STEP shape exchange; bounded genuine tessellation in the software viewport.270 real host JNI geometry/format/preview checks,88 document regressions and62 Python-tool regressions pass. Required default materials/models are bundled after an actual feature-creation failure identified the missing data. The new ARM64 runtime is built and statically checked; physical Android execution remainsNOT_RUN. B05 and later broad workbench scopes stayPENDING. Next: original Sketcher module and the general entity/edit/attachment infrastructure, followed by native PartDesign.
+
+
+## Original Sketcher checkpoint —1.2-rc2
+
+P-SKETCHER adds four bounded feature scopes: native sketch entity edits and solver-aware movement/deletion; rational B-splines/construction; native constraints, dimension units, DOF and rollback; supported Sketcher FCStd persistence and sampled XY preview.955 genuine JNI assertions and269/88/62 Part/document/Python regressions pass. The embedded-runtime fault-handler defect is fixed with an explicit integration patch and a real VM handler probe. Turkish/German controls and guides extend1.1 localization. B05/B06/B07 remain PENDING for their complete scope; Android execution is NOT_RUN.
+
+Next four-feature sub-batch: explicit sketch plane placement; native face attachment with reference validation; external edge references; persistence/dependency/Undo-Redo validation for those attachments. Then expand trim/split/fillet and constraint editing before PartDesign. Publish a signed engineering APK after each validated four-feature subset, without marking entire broad batches complete from a module import.

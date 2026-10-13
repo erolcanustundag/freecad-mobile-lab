@@ -27,6 +27,8 @@ def main():
     if args.sketcher: args.part=True
     if not 1<=args.jobs<=16:p.error('--jobs must be 1 to 16')
     source,build,prefix,qt,qthost,ndk,cpython,occt=(v.resolve() for v in (args.source,args.build,args.prefix,args.qt,args.qt_host,args.ndk,args.cpython,args.occt_headers))
+    from patch_embedded_runtime import apply as embedded_patch
+    embedded_patch(source)
     if args.sketcher:
         from patch_headless_sketcher import apply
         apply(source)
@@ -55,7 +57,7 @@ def main():
         '-DQt6_DIR='+str(qt/'lib/cmake/Qt6'),
         '-DQt6LinguistTools_DIR='+str(qthost/'lib/cmake/Qt6LinguistTools'),
         '-DQt6CoreTools_DIR='+str(qthost/'lib/cmake/Qt6CoreTools'),
-        '-DBUILD_GUI=OFF','-DENABLE_DEVELOPER_TESTS=OFF','-DBUILD_FEM_VTK=OFF',
+        '-DBUILD_GUI=OFF','-DENABLE_DEVELOPER_TESTS=OFF','-DBUILD_FEM_VTK=OFF','-DFREECAD_MOBILE_EMBEDDED=ON',
         '-DFREECAD_USE_SMESH=OFF','-DBUILD_SMESH=OFF','-DFREECAD_USE_FREETYPE=OFF',
         '-DFREECAD_USE_EXTERNAL_E57FORMAT=ON','-DFREECAD_USE_EXTERNAL_FMT=ON',
         '-DBOOST_ROOT='+str(prefix),'-DBoost_NO_BOOST_CMAKE=ON',

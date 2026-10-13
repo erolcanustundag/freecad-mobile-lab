@@ -27,6 +27,8 @@ def main():
     if args.jobs < 1 or args.jobs > 32:
         p.error('--jobs must be 1 to 32')
     source, prefix, occt, build, python = (v.resolve() for v in (args.source,args.prefix,args.occt,args.build,args.python_root))
+    from patch_embedded_runtime import apply as embedded_patch
+    embedded_patch(source)
     if args.sketcher:
         from patch_headless_sketcher import apply
         apply(source)
@@ -55,7 +57,7 @@ def main():
     cmake = ['cmake','-S',str(source),'-B',str(build),'-G','Ninja',
         '-DCMAKE_BUILD_TYPE=Release','-DCMAKE_POLICY_VERSION_MINIMUM=3.5',
         '-DCMAKE_PREFIX_PATH='+str(prefix)+';'+str(occt),
-        '-DFREECAD_QT_VERSION=5','-DBUILD_GUI=OFF','-DBUILD_FEM_VTK=OFF',
+        '-DFREECAD_QT_VERSION=5','-DBUILD_GUI=OFF','-DBUILD_FEM_VTK=OFF','-DFREECAD_MOBILE_EMBEDDED=ON',
         '-DENABLE_DEVELOPER_TESTS=OFF','-DFREECAD_USE_SMESH=OFF','-DBUILD_SMESH=OFF',
         '-DFREECAD_USE_FREETYPE=OFF','-DFREECAD_USE_EXTERNAL_E57FORMAT=ON',
         '-DFREECAD_USE_EXTERNAL_FMT=ON','-DPython3_ROOT_DIR='+str(python),

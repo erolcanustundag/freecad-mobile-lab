@@ -88,6 +88,10 @@ def _value(obj, name):
     return str(value)
 
 
+def _editable(obj, name):
+    return name!="Label2" and not name.startswith("_") and not obj.getEditorMode(name)
+
+
 def snapshot():
     result = {"version": App.Version()[:3], "scope": "App/Part bounded mobile adapter" if mobile_part.available() else "App metadata; geometry workbenches pending",
         "part": mobile_part.available(),
@@ -104,7 +108,7 @@ def snapshot():
                 kind = obj.getTypeIdOfProperty(name)
                 if kind in PROPERTY_TYPES or name in ("Label", "Group", "LinkedObject"):
                     props.append({"name": name, "type": kind, "value": _value(obj, name),
-                        "editable": name == "Label" or kind in PROPERTY_TYPES and name not in ("Label2",)})
+                        "editable": (name == "Label" or kind in PROPERTY_TYPES) and _editable(obj,name)})
             objects.append({"name": obj.Name, "label": obj.Label, "type": obj.TypeId,
                 "properties": props, "expressions": list(obj.ExpressionEngine),
                 "dependencies": [o.Name for o in obj.OutList], "state": list(obj.State)})
@@ -151,7 +155,7 @@ def _edit(edit):
         if name not in obj.PropertiesList:
             raise ValueError("Property does not exist")
         kind = obj.getTypeIdOfProperty(name)
-        if kind not in PROPERTY_TYPES or name == "Label2":
+        if kind not in PROPERTY_TYPES or not _editable(obj,name):
             raise ValueError("Property is not editable in this adapter")
         value = edit.get("value")
         if kind == "App::PropertyLink":
@@ -185,7 +189,7 @@ def _edit(edit):
     elif action == "expression":
         obj = _object(edit["object"])
         name = _identifier(edit["property"])
-        if obj.getTypeIdOfProperty(name) not in PROPERTY_TYPES:
+        if obj.getTypeIdOfProperty(name) not in PROPERTY_TYPES or not _editable(obj,name):
             raise ValueError("Expression property is not editable")
         expr = _text(edit["expression"], 512)
         obj.setExpression(name, expr if expr else None)

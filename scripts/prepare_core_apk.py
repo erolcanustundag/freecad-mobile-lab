@@ -109,7 +109,7 @@ def main():
         'Source URLs and dependency notices: native-cad/docs/FREECAD-CORE-PORT.md and the dependency manifests.\n'+('Bundled original FreeCAD material/model resources retain their individual authors/licenses; default material data is GPL-2.0-or-later. Full GPL2 text is included in core/licenses/material-data-GPL-2.0.txt.\n' if args.part else ''))
     report={'scope':'opt-in upstream App/Part document lab; Android execution NOT_RUN' if args.part else 'opt-in upstream App document lab; Android execution NOT_RUN',
         'part':args.part,'sketcher':args.sketcher,'builtin_modules':(['FreeCAD','Materials','Part'] if args.part else ['FreeCAD'])+(['Sketcher'] if args.sketcher else []),
-        'build_inputs':{str(p.relative_to(ROOT)):digest(p) for p in [ROOT/'app/src/main/cpp/upstream-core/CoreBridge.cpp',ROOT/'app/src/main/cpp/upstream-core/CMakeLists.txt',ROOT/'scripts/build_freecad_android_core.py',ROOT/'scripts/build_part_occt.py',ROOT/'scripts/build_core_bridge.py']},
+        'build_inputs':{str(p.relative_to(ROOT)):digest(p) for p in [ROOT/'app/src/main/cpp/upstream-core/CoreBridge.cpp',ROOT/'app/src/main/cpp/upstream-core/CMakeLists.txt',ROOT/'scripts/build_freecad_android_core.py',ROOT/'scripts/build_part_occt.py',ROOT/'scripts/build_core_bridge.py',ROOT/'scripts/patch_embedded_runtime.py',ROOT/'scripts/patch_headless_sketcher.py']},
         'libraries':records,'original_library_hashes':originals,'python_assets':runtime,
         'asset_zip_sha256':digest(out),'java_jar_sha256':digest(jars/'Qt6Android.jar')}
     (ROOT/'docs/core-apk-inputs.json').write_text(json.dumps(report,indent=2)+'\n')

@@ -62,10 +62,10 @@ public final class CoreAdapterHostTest {
         near(call("{}"),"Driven","Width",64);
         call("{\"op\":\"begin\"}");bad("{\"op\":\"save\",\"file\":\"OpenTransaction.FCStd\"}");bad("{\"op\":\"undo\"}");call("{\"op\":\"commit\"}");bad("{\"op\":\"abort\"}");
         Path original=Paths.get(args[1],"documents","Adapter.FCStd");
-        changedFixture(original,original.resolveSibling("Unsupported.FCStd"),"App::FeaturePython","Sketcher::SketchObject");
+        changedFixture(original,original.resolveSibling("Unsupported.FCStd"),"App::FeaturePython","PartDesign::Body");
         bad("{\"op\":\"open\",\"file\":\"Unsupported.FCStd\"}");near(call("{}"),"Driven","Width",64);
         changedFixture(original,original.resolveSibling("Proxy.FCStd"),"bnVsbA==","e30=");bad("{\"op\":\"open\",\"file\":\"Proxy.FCStd\"}");
-        bad("{\"op\":\"save\",\"file\":\"../escape.FCStd\"}");bad("{\"op\":\"batch\",\"edits\":[{\"op\":\"add\",\"name\":\"UnsupportedSketch\",\"type\":\"Sketcher::SketchObject\"}]}");
+        bad("{\"op\":\"save\",\"file\":\"../escape.FCStd\"}");bad("{\"op\":\"batch\",\"edits\":[{\"op\":\"add\",\"name\":\"UnsupportedBody\",\"type\":\"PartDesign::Body\"}]}");
         bad("[]");bad("{\"op\":\"eval\",\"code\":\"print(1)\"}");
         state=call(CoreCommandLine.parse("Add Numeric Feature").toString());
         call(CoreCommandLine.parse("AddProperty Numeric Count Integer").toString());

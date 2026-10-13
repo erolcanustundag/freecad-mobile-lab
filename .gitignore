@@ -32,3 +32,6 @@ localization-test-classes/
 
 part-ui-check/
 samples/**/*.FCBak
+core-bridge-*/
+freecad-mobile-core-*/
+docs/*.ppm
