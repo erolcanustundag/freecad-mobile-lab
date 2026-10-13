@@ -2,7 +2,7 @@
   "repository": "https://github.com/erolcanustundag/freecad-mobile-lab",
   "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.2",
   "tag": "v1.2",
-  "status": "PENDING",
+  "status": "PUBLISHED_VERIFIED",
   "prerelease": false,
   "latest": true,
   "scope": "current mobile feature set",
@@ -148,5 +148,38 @@
     "localization": "665 reviewed TR/DE strings;527 locale checks and localized native sketch guides; device NOT_RUN"
   },
   "android_runtime": "NOT_RUN",
-  "private_development_keystore": "RETAINED_NOT_DELETED"
+  "private_development_keystore": "RETAINED_NOT_DELETED",
+  "draft": false,
+  "release_id": 411812613,
+  "source_commit": "0709ab785da623c29b8f43d79e461c49475667ee",
+  "release_workflow": 38419701251,
+  "source_checks": 38418542765,
+  "assets": [
+    {
+      "name": "FreeCAD-Mobile-Lab-1.2-arm64.apk",
+      "size_bytes": 160961461,
+      "sha256": "098960af916d1ac23c0b13c2a2c0d721b397239e726b39660caacad6245dc0ea",
+      "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2/FreeCAD-Mobile-Lab-1.2-arm64.apk"
+    },
+    {
+      "name": "FreeCAD-Mobile-Lab-1.2-corresponding-sources.zip",
+      "size_bytes": 430414494,
+      "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
+      "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2/FreeCAD-Mobile-Lab-1.2-corresponding-sources.zip"
+    },
+    {
+      "name": "FreeCAD-Mobile-Lab-1.2-native-runtime.zip",
+      "size_bytes": 61735595,
+      "sha256": "a5e36124ee74832dc275d308e36810286f3e60ec0d6829f3c1a81acc35cfc001",
+      "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2/FreeCAD-Mobile-Lab-1.2-native-runtime.zip"
+    },
+    {
+      "name": "FreeCAD-Mobile-Lab-1.2-public-source.zip",
+      "size_bytes": 31975501,
+      "sha256": "865bf34c834cbd372d73e6d29710d338e719507522000660cb9c188dea926f01",
+      "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2/FreeCAD-Mobile-Lab-1.2-public-source.zip"
+    }
+  ],
+  "temporary_transport_branch": "DELETED_VERIFIED",
+  "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.2"
 }
