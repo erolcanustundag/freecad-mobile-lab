@@ -430,5 +430,20 @@
     "android_runtime": "physical startup/lifecycle/SAF workflows pending",
     "signing": "retained public development identity",
     "milestone_gate": "not complete until roadmap device/workflow criteria pass"
+  },
+  {
+    "version": "1.12",
+    "version_name": "1.12",
+    "version_code": 38,
+    "channel": "release",
+    "status": "initial public mobile feature release; broader device qualification pending",
+    "scope": "current mobile feature set",
+    "apk": "FreeCAD-Mobile-Lab-1.12-arm64.apk",
+    "size_bytes": 161043459,
+    "sha256": "86972e051f42da3f5b9d58a2611c98321bb4dcf7d945c65140601bb9d3ba9470",
+    "engineering_changes": "1.12 four original Part scopes: prism, wedge, cylindrical helix/handedness and planar spiral, with parameter editing, native helical Sweep, immediate setter/FCStd guards and safe coupled settings.2324 genuine native JNI checks;269 Part/88 App/62 Python/3 locale/9 packaging PASS.711TR/DE entries/3guides.133ARM64 libraries/extensions/1076Python/16KiB/API26/signing PASS. Android1.12NOT_RUN/full parityNOT_COMPLETE.",
+    "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+    "signing": "retained public development identity",
+    "milestone_gate": "not complete until roadmap device/workflow criteria pass"
   }
 ]

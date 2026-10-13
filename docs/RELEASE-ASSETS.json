@@ -1,25 +1,25 @@
 {
-  "version": "1.11",
-  "tag": "v1.11",
-  "title": "FreeCAD Mobile Lab 1.11 \u00b7 native Android CAD",
+  "version": "1.12",
+  "tag": "v1.12",
+  "title": "FreeCAD Mobile Lab 1.12 \u00b7 native Android CAD",
   "prerelease": false,
   "release_scope": "current mobile feature set",
   "milestone_gate": "NOT_COMPLETE",
   "android_runtime": "USER_REPORTED_STARTUP",
   "historical_unversioned_startup_report": "USER_REPORTED_STARTUP",
-  "publication": "PUBLISHED_VERIFIED",
+  "publication": "PENDING",
   "assets": [
     {
-      "name": "FreeCAD-Mobile-Lab-1.11-arm64.apk",
+      "name": "FreeCAD-Mobile-Lab-1.12-arm64.apk",
       "kind": "apk",
-      "size_bytes": 161026997,
-      "sha256": "c2ff51aee2525c049254b0ca97a630e3987c417ed9d28600ebc5849fe90f7b35"
+      "size_bytes": 161043459,
+      "sha256": "86972e051f42da3f5b9d58a2611c98321bb4dcf7d945c65140601bb9d3ba9470"
     },
     {
-      "name": "FreeCAD-Mobile-Lab-1.11-native-runtime.zip",
+      "name": "FreeCAD-Mobile-Lab-1.12-native-runtime.zip",
       "kind": "native-runtime",
-      "size_bytes": 61744958,
-      "sha256": "00cecb8f7ecfb44abcc92bee1d401f94d6afa9d0cbb6691c3c30796b0b6440f4",
+      "size_bytes": 61746903,
+      "sha256": "166eea90fe8c2a942b8d9a8e433c4dc6928c60d13d0de0ea210112d2b76bfe12",
       "files": [
         {
           "path": "app/src/main/jniLibs/arm64-v8a/libFreeCADApp.so",
@@ -348,23 +348,22 @@
         },
         {
           "path": "app/src/main/assets/core/python-home.zip",
-          "size_bytes": 9881883,
-          "sha256": "f14bdfa0195bde533c7445a633de8d4e6f4c3b520fad7a5200800599bd3f41fd"
+          "size_bytes": 9884051,
+          "sha256": "be67f17fa5a8d66d9edc076d78bc5f2ce4f653f7e9c6afb1e8a1a1334aa5d426"
         }
       ]
     },
     {
-      "name": "FreeCAD-Mobile-Lab-1.11-corresponding-sources.zip",
+      "name": "FreeCAD-Mobile-Lab-1.12-corresponding-sources.zip",
       "kind": "corresponding-source",
       "size_bytes": 430414494,
       "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51"
     },
     {
-      "name": "FreeCAD-Mobile-Lab-1.11-public-source.zip",
+      "name": "FreeCAD-Mobile-Lab-1.12-public-source.zip",
       "kind": "application-source",
-      "size_bytes": 32337321,
-      "sha256": "a0e145d093361408d02c6b0287d850f739508075043a39a81f9fad5fe5a84313"
+      "size_bytes": 32421502,
+      "sha256": "bc14bb723f50ab315e5c5df5430298ff52ef23798b7f96b91e829b5497182c8e"
     }
-  ],
-  "release_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.11"
+  ]
 }

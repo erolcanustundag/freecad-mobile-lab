@@ -1,13 +1,13 @@
 {
-  "version": "1.11",
-  "apk_sha256": "c2ff51aee2525c049254b0ca97a630e3987c417ed9d28600ebc5849fe90f7b35",
+  "version": "1.12",
+  "apk_sha256": "86972e051f42da3f5b9d58a2611c98321bb4dcf7d945c65140601bb9d3ba9470",
   "status": "STATIC_PASS",
   "android_execution": "NOT_RUN",
   "libraries_and_python_extensions": 133,
   "strong_symbol_closure": true,
   "native_loader_closure": true,
   "minimum_alignment": 16384,
-  "python_asset_files": 1075,
+  "python_asset_files": 1076,
   "original_part_builtin_entrypoints": true,
   "original_sketcher_builtin_entrypoint": true,
   "libraries": [
