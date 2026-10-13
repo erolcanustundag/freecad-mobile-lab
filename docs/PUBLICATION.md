@@ -26,3 +26,6 @@ Verification after publishing must confirm public repository visibility, source 
 
 
 1.11/code37 full release verified: https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.11. Non-draft/non-prerelease/latest; all four asset sizes and SHA256 digests, exact source tag, sourceCI38477806571 and publisher38478296618 pass. Temporary public transport branch deletion independently404 verified; no keys used in Actions. First draft/tag check-order failure was corrected and publication resumed from the same draft. Android1.11 NOT_RUN; full FreeCAD/Rhino parity pending.
+
+
+1.12/code37 full release verified: https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.12. Non-draft/non-prerelease/latest; all four asset sizes and SHA256 digests, exact source tag, sourceCI38479338966 and publisher38479473008 pass. Temporary public transport branch deletion independently404 verified; no keys used in Actions. Draft target checked before publication; exact tag checked after publication. Android1.12 NOT_RUN; full FreeCAD/Rhino parity pending.

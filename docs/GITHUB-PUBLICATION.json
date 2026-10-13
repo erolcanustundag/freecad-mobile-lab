@@ -1,551 +1,607 @@
 {
   "repository": "https://github.com/erolcanustundag/freecad-mobile-lab",
-  "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.11",
-  "release_id": 412162847,
-  "tag": "v1.11",
+  "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.12",
+  "release_id": 412170072,
+  "tag": "v1.12",
   "status": "PUBLISHED_VERIFIED",
   "draft": false,
   "prerelease": false,
   "latest": true,
   "scope": "current mobile feature set",
-  "source_commit": "684b67c0d79fabfa488fbc54948e38c46b938fbb",
-  "source_tree": "4aeacd67387f07dd84c3d0b44dcdbda29dbfe260",
-  "source_ci": 38477806571,
-  "publication_workflow": 38478296618,
-  "transport_commit": "e66d7a8cea6e4cb997bb17615a094629ef36a757",
-  "first_transport_commit": "55fbe5a6da5938b7801592e4884fd708de25a600",
+  "source_commit": "cf413a612e2e8a3e9e92185ef2460d38227d53b5",
+  "source_tree": "800575d31c8ea4368d37152dc48c1ad10a8cfaba",
+  "source_ci": 38479338966,
+  "publication_workflow": 38479473008,
+  "transport_commit": "ee857b6b3df79eb84e09f1b67e2ac6142b6db339",
+  "first_transport_commit": "ee857b6b3df79eb84e09f1b67e2ac6142b6db339",
   "first_publication_attempt": {
-    "run": 38478046792,
-    "status": "failed",
-    "reason": "Tag does not materialize while release is draft; corrected check order before resuming same draft"
+    "run": 38479473008,
+    "status": "success"
   },
-  "transport_branch": "release-upload-1-11",
+  "transport_branch": "release-upload-1-12",
   "transport_branch_removed": "INDEPENDENT_HTTP404_VERIFIED",
   "assets": [
     {
-      "id": 638438237,
-      "name": "FreeCAD-Mobile-Lab-1.11-arm64.apk",
-      "size": 161026997,
-      "digest": "sha256:c2ff51aee2525c049254b0ca97a630e3987c417ed9d28600ebc5849fe90f7b35",
-      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.11/FreeCAD-Mobile-Lab-1.11-arm64.apk"
+      "id": 638461363,
+      "name": "FreeCAD-Mobile-Lab-1.12-arm64.apk",
+      "size": 161043459,
+      "digest": "sha256:86972e051f42da3f5b9d58a2611c98321bb4dcf7d945c65140601bb9d3ba9470",
+      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.12/FreeCAD-Mobile-Lab-1.12-arm64.apk"
     },
     {
-      "id": 638438570,
-      "name": "FreeCAD-Mobile-Lab-1.11-corresponding-sources.zip",
+      "id": 638461865,
+      "name": "FreeCAD-Mobile-Lab-1.12-corresponding-sources.zip",
       "size": 430414494,
       "digest": "sha256:1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
-      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.11/FreeCAD-Mobile-Lab-1.11-corresponding-sources.zip"
+      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.12/FreeCAD-Mobile-Lab-1.12-corresponding-sources.zip"
     },
     {
-      "id": 638438431,
-      "name": "FreeCAD-Mobile-Lab-1.11-native-runtime.zip",
-      "size": 61744958,
-      "digest": "sha256:00cecb8f7ecfb44abcc92bee1d401f94d6afa9d0cbb6691c3c30796b0b6440f4",
-      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.11/FreeCAD-Mobile-Lab-1.11-native-runtime.zip"
+      "id": 638461713,
+      "name": "FreeCAD-Mobile-Lab-1.12-native-runtime.zip",
+      "size": 61746903,
+      "digest": "sha256:166eea90fe8c2a942b8d9a8e433c4dc6928c60d13d0de0ea210112d2b76bfe12",
+      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.12/FreeCAD-Mobile-Lab-1.12-native-runtime.zip"
     },
     {
-      "id": 638439050,
-      "name": "FreeCAD-Mobile-Lab-1.11-public-source.zip",
-      "size": 32337321,
-      "digest": "sha256:a0e145d093361408d02c6b0287d850f739508075043a39a81f9fad5fe5a84313",
-      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.11/FreeCAD-Mobile-Lab-1.11-public-source.zip"
+      "id": 638462428,
+      "name": "FreeCAD-Mobile-Lab-1.12-public-source.zip",
+      "size": 32421502,
+      "digest": "sha256:bc14bb723f50ab315e5c5df5430298ff52ef23798b7f96b91e829b5497182c8e",
+      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.12/FreeCAD-Mobile-Lab-1.12-public-source.zip"
     }
   ],
   "private_key": "retained, never published or deleted",
-  "android_1_11_execution": "NOT_RUN",
+  "android_1_12_execution": "NOT_RUN",
   "desktop_parity": "NOT_COMPLETE",
   "previous_full_release": {
     "repository": "https://github.com/erolcanustundag/freecad-mobile-lab",
-    "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.10",
-    "release_id": 412107394,
-    "tag": "v1.10",
+    "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.11",
+    "release_id": 412162847,
+    "tag": "v1.11",
     "status": "PUBLISHED_VERIFIED",
+    "draft": false,
     "prerelease": false,
     "latest": true,
     "scope": "current mobile feature set",
+    "source_commit": "684b67c0d79fabfa488fbc54948e38c46b938fbb",
+    "source_tree": "4aeacd67387f07dd84c3d0b44dcdbda29dbfe260",
+    "source_ci": 38477806571,
+    "publication_workflow": 38478296618,
+    "transport_commit": "e66d7a8cea6e4cb997bb17615a094629ef36a757",
+    "first_transport_commit": "55fbe5a6da5938b7801592e4884fd708de25a600",
+    "first_publication_attempt": {
+      "run": 38478046792,
+      "status": "failed",
+      "reason": "Tag does not materialize while release is draft; corrected check order before resuming same draft"
+    },
+    "transport_branch": "release-upload-1-11",
+    "transport_branch_removed": "INDEPENDENT_HTTP404_VERIFIED",
+    "assets": [
+      {
+        "id": 638438237,
+        "name": "FreeCAD-Mobile-Lab-1.11-arm64.apk",
+        "size": 161026997,
+        "digest": "sha256:c2ff51aee2525c049254b0ca97a630e3987c417ed9d28600ebc5849fe90f7b35",
+        "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.11/FreeCAD-Mobile-Lab-1.11-arm64.apk"
+      },
+      {
+        "id": 638438570,
+        "name": "FreeCAD-Mobile-Lab-1.11-corresponding-sources.zip",
+        "size": 430414494,
+        "digest": "sha256:1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
+        "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.11/FreeCAD-Mobile-Lab-1.11-corresponding-sources.zip"
+      },
+      {
+        "id": 638438431,
+        "name": "FreeCAD-Mobile-Lab-1.11-native-runtime.zip",
+        "size": 61744958,
+        "digest": "sha256:00cecb8f7ecfb44abcc92bee1d401f94d6afa9d0cbb6691c3c30796b0b6440f4",
+        "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.11/FreeCAD-Mobile-Lab-1.11-native-runtime.zip"
+      },
+      {
+        "id": 638439050,
+        "name": "FreeCAD-Mobile-Lab-1.11-public-source.zip",
+        "size": 32337321,
+        "digest": "sha256:a0e145d093361408d02c6b0287d850f739508075043a39a81f9fad5fe5a84313",
+        "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.11/FreeCAD-Mobile-Lab-1.11-public-source.zip"
+      }
+    ],
+    "private_key": "retained, never published or deleted",
+    "android_1_11_execution": "NOT_RUN",
+    "desktop_parity": "NOT_COMPLETE",
     "previous_full_release": {
       "repository": "https://github.com/erolcanustundag/freecad-mobile-lab",
-      "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.9",
-      "release_id": 412085444,
-      "tag": "v1.9",
+      "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.10",
+      "release_id": 412107394,
+      "tag": "v1.10",
       "status": "PUBLISHED_VERIFIED",
       "prerelease": false,
       "latest": true,
       "scope": "current mobile feature set",
       "previous_full_release": {
         "repository": "https://github.com/erolcanustundag/freecad-mobile-lab",
-        "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.8",
-        "release_id": 412069737,
-        "tag": "v1.8",
+        "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.9",
+        "release_id": 412085444,
+        "tag": "v1.9",
         "status": "PUBLISHED_VERIFIED",
         "prerelease": false,
         "latest": true,
         "scope": "current mobile feature set",
         "previous_full_release": {
           "repository": "https://github.com/erolcanustundag/freecad-mobile-lab",
-          "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.7",
-          "tag": "v1.7",
+          "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.8",
+          "release_id": 412069737,
+          "tag": "v1.8",
           "status": "PUBLISHED_VERIFIED",
           "prerelease": false,
           "latest": true,
           "scope": "current mobile feature set",
           "previous_full_release": {
             "repository": "https://github.com/erolcanustundag/freecad-mobile-lab",
-            "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.4",
-            "tag": "v1.4",
+            "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.7",
+            "tag": "v1.7",
             "status": "PUBLISHED_VERIFIED",
             "prerelease": false,
             "latest": true,
             "scope": "current mobile feature set",
             "previous_full_release": {
               "repository": "https://github.com/erolcanustundag/freecad-mobile-lab",
-              "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.3",
-              "tag": "v1.3",
+              "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.4",
+              "tag": "v1.4",
               "status": "PUBLISHED_VERIFIED",
               "prerelease": false,
               "latest": true,
               "scope": "current mobile feature set",
               "previous_full_release": {
                 "repository": "https://github.com/erolcanustundag/freecad-mobile-lab",
-                "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.2",
-                "tag": "v1.2",
+                "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.3",
+                "tag": "v1.3",
                 "status": "PUBLISHED_VERIFIED",
                 "prerelease": false,
                 "latest": true,
                 "scope": "current mobile feature set",
-                "previous_candidate": {
+                "previous_full_release": {
                   "repository": "https://github.com/erolcanustundag/freecad-mobile-lab",
-                  "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.2-rc4",
-                  "tag": "v1.2-rc4",
+                  "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.2",
+                  "tag": "v1.2",
                   "status": "PUBLISHED_VERIFIED",
-                  "prerelease": true,
-                  "latest": false,
-                  "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.1",
-                  "scope": "four native sketch attachment/reference scopes",
+                  "prerelease": false,
+                  "latest": true,
+                  "scope": "current mobile feature set",
                   "previous_candidate": {
                     "repository": "https://github.com/erolcanustundag/freecad-mobile-lab",
-                    "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.2-rc3",
-                    "tag": "v1.2-rc3",
-                    "release_id": 411348279,
+                    "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.2-rc4",
+                    "tag": "v1.2-rc4",
+                    "status": "PUBLISHED_VERIFIED",
                     "prerelease": true,
-                    "draft": false,
                     "latest": false,
                     "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.1",
-                    "scope": "four bounded native Sketcher scopes and original Part prerequisite",
-                    "source_commit": "baa0733eadd7d5569275a8b7177393603925cf59",
-                    "release_workflow": 38356171171,
-                    "source_checks": 38355676639,
-                    "assets": [
-                      {
-                        "name": "FreeCAD-Mobile-Lab-1.2-rc3-arm64.apk",
-                        "size_bytes": 160961461,
-                        "sha256": "3ed0986f6496578543c08ecc5bda8ce72d5e2acf211b639784b624d195e69129",
-                        "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc3/FreeCAD-Mobile-Lab-1.2-rc3-arm64.apk"
-                      },
-                      {
-                        "name": "FreeCAD-Mobile-Lab-1.2-rc3-corresponding-sources.zip",
-                        "size_bytes": 430414494,
-                        "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
-                        "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc3/FreeCAD-Mobile-Lab-1.2-rc3-corresponding-sources.zip"
-                      },
-                      {
-                        "name": "FreeCAD-Mobile-Lab-1.2-rc3-native-runtime.zip",
-                        "size_bytes": 61733231,
-                        "sha256": "ab39e4a2ff3c64adaf66aeaa4ea3a26b3521cb67b289dba5b54cede5d3298b98",
-                        "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc3/FreeCAD-Mobile-Lab-1.2-rc3-native-runtime.zip"
-                      },
-                      {
-                        "name": "FreeCAD-Mobile-Lab-1.2-rc3-public-source.zip",
-                        "size_bytes": 31927721,
-                        "sha256": "148e464074e654c50cabbae0d40b5808f88e46117a9b2ddcf79617f6aaf21ccc",
-                        "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc3/FreeCAD-Mobile-Lab-1.2-rc3-public-source.zip"
-                      }
-                    ],
-                    "public_signing_keys": "EXCLUDED",
-                    "private_development_keystore": "RETAINED_NOT_DELETED",
-                    "android_runtime": "NOT_RUN",
-                    "historical_unversioned_startup_report": "USER_REPORTED_STARTUP",
-                    "automated_android_tests": "NOT_RUN",
-                    "stable_1_0": "NOT_COMPLETE",
-                    "localization": "657 Turkish/German UI strings;527 locale checks and native sketch guides; device NOT_RUN",
-                    "temporary_transport_branch": "DELETED_VERIFIED",
-                    "previous_full_release": {
+                    "scope": "four native sketch attachment/reference scopes",
+                    "previous_candidate": {
                       "repository": "https://github.com/erolcanustundag/freecad-mobile-lab",
-                      "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.1",
-                      "tag": "v1.1",
-                      "release_id": 411003203,
-                      "prerelease": false,
+                      "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.2-rc3",
+                      "tag": "v1.2-rc3",
+                      "release_id": 411348279,
+                      "prerelease": true,
                       "draft": false,
-                      "latest": true,
-                      "scope": "current mobile feature set",
-                      "source_commit": "32fb8fb7d247e182d48e68fa33235a25d8752fe9",
-                      "release_workflow": 38309686548,
-                      "source_checks": 38309686536,
+                      "latest": false,
+                      "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.1",
+                      "scope": "four bounded native Sketcher scopes and original Part prerequisite",
+                      "source_commit": "baa0733eadd7d5569275a8b7177393603925cf59",
+                      "release_workflow": 38356171171,
+                      "source_checks": 38355676639,
                       "assets": [
                         {
-                          "name": "FreeCAD-Mobile-Lab-1.1-arm64.apk",
-                          "size_bytes": 141552621,
-                          "sha256": "543274ea280d3a131f8e49a43cd4a5753e9a752a94296fa9dc342f593b641613",
-                          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.1/FreeCAD-Mobile-Lab-1.1-arm64.apk"
+                          "name": "FreeCAD-Mobile-Lab-1.2-rc3-arm64.apk",
+                          "size_bytes": 160961461,
+                          "sha256": "3ed0986f6496578543c08ecc5bda8ce72d5e2acf211b639784b624d195e69129",
+                          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc3/FreeCAD-Mobile-Lab-1.2-rc3-arm64.apk"
                         },
                         {
-                          "name": "FreeCAD-Mobile-Lab-1.1-native-runtime.zip",
-                          "size_bytes": 56594506,
-                          "sha256": "4298a00e66c5d14102e3c4a533280cd0437e4253b2d82f6c4d5c1c703f2ddc7e",
-                          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.1/FreeCAD-Mobile-Lab-1.1-native-runtime.zip"
-                        },
-                        {
-                          "name": "FreeCAD-Mobile-Lab-1.1-corresponding-sources.zip",
+                          "name": "FreeCAD-Mobile-Lab-1.2-rc3-corresponding-sources.zip",
                           "size_bytes": 430414494,
                           "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
-                          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.1/FreeCAD-Mobile-Lab-1.1-corresponding-sources.zip"
+                          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc3/FreeCAD-Mobile-Lab-1.2-rc3-corresponding-sources.zip"
                         },
                         {
-                          "name": "FreeCAD-Mobile-Lab-1.1-public-source.zip",
-                          "size_bytes": 31714622,
-                          "sha256": "d50cabfed3700e52ff61888b296c189cd72284045cd6bbf5b9f8e41d62ee34bb",
-                          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.1/FreeCAD-Mobile-Lab-1.1-public-source.zip"
+                          "name": "FreeCAD-Mobile-Lab-1.2-rc3-native-runtime.zip",
+                          "size_bytes": 61733231,
+                          "sha256": "ab39e4a2ff3c64adaf66aeaa4ea3a26b3521cb67b289dba5b54cede5d3298b98",
+                          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc3/FreeCAD-Mobile-Lab-1.2-rc3-native-runtime.zip"
+                        },
+                        {
+                          "name": "FreeCAD-Mobile-Lab-1.2-rc3-public-source.zip",
+                          "size_bytes": 31927721,
+                          "sha256": "148e464074e654c50cabbae0d40b5808f88e46117a9b2ddcf79617f6aaf21ccc",
+                          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc3/FreeCAD-Mobile-Lab-1.2-rc3-public-source.zip"
                         }
                       ],
                       "public_signing_keys": "EXCLUDED",
                       "private_development_keystore": "RETAINED_NOT_DELETED",
-                      "android_runtime": "USER_REPORTED_STARTUP",
+                      "android_runtime": "NOT_RUN",
+                      "historical_unversioned_startup_report": "USER_REPORTED_STARTUP",
                       "automated_android_tests": "NOT_RUN",
                       "stable_1_0": "NOT_COMPLETE",
-                      "stable_1_0_definition": "Original full desktop parity and comprehensive device qualification milestone",
-                      "previous_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.0",
-                      "localization": "597 Turkish/German core entries;527 locale/command assertions and3 resource tests; phone layout/switching NOT_RUN"
-                    }
+                      "localization": "657 Turkish/German UI strings;527 locale checks and native sketch guides; device NOT_RUN",
+                      "temporary_transport_branch": "DELETED_VERIFIED",
+                      "previous_full_release": {
+                        "repository": "https://github.com/erolcanustundag/freecad-mobile-lab",
+                        "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.1",
+                        "tag": "v1.1",
+                        "release_id": 411003203,
+                        "prerelease": false,
+                        "draft": false,
+                        "latest": true,
+                        "scope": "current mobile feature set",
+                        "source_commit": "32fb8fb7d247e182d48e68fa33235a25d8752fe9",
+                        "release_workflow": 38309686548,
+                        "source_checks": 38309686536,
+                        "assets": [
+                          {
+                            "name": "FreeCAD-Mobile-Lab-1.1-arm64.apk",
+                            "size_bytes": 141552621,
+                            "sha256": "543274ea280d3a131f8e49a43cd4a5753e9a752a94296fa9dc342f593b641613",
+                            "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.1/FreeCAD-Mobile-Lab-1.1-arm64.apk"
+                          },
+                          {
+                            "name": "FreeCAD-Mobile-Lab-1.1-native-runtime.zip",
+                            "size_bytes": 56594506,
+                            "sha256": "4298a00e66c5d14102e3c4a533280cd0437e4253b2d82f6c4d5c1c703f2ddc7e",
+                            "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.1/FreeCAD-Mobile-Lab-1.1-native-runtime.zip"
+                          },
+                          {
+                            "name": "FreeCAD-Mobile-Lab-1.1-corresponding-sources.zip",
+                            "size_bytes": 430414494,
+                            "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
+                            "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.1/FreeCAD-Mobile-Lab-1.1-corresponding-sources.zip"
+                          },
+                          {
+                            "name": "FreeCAD-Mobile-Lab-1.1-public-source.zip",
+                            "size_bytes": 31714622,
+                            "sha256": "d50cabfed3700e52ff61888b296c189cd72284045cd6bbf5b9f8e41d62ee34bb",
+                            "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.1/FreeCAD-Mobile-Lab-1.1-public-source.zip"
+                          }
+                        ],
+                        "public_signing_keys": "EXCLUDED",
+                        "private_development_keystore": "RETAINED_NOT_DELETED",
+                        "android_runtime": "USER_REPORTED_STARTUP",
+                        "automated_android_tests": "NOT_RUN",
+                        "stable_1_0": "NOT_COMPLETE",
+                        "stable_1_0_definition": "Original full desktop parity and comprehensive device qualification milestone",
+                        "previous_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.0",
+                        "localization": "597 Turkish/German core entries;527 locale/command assertions and3 resource tests; phone layout/switching NOT_RUN"
+                      }
+                    },
+                    "android_runtime": "NOT_RUN",
+                    "public_signing_keys": "EXCLUDED",
+                    "private_development_keystore": "RETAINED_NOT_DELETED",
+                    "draft": false,
+                    "release_id": 411389379,
+                    "source_commit": "ff5addfcd3b3752a842a31e363f50864c2492f41",
+                    "release_workflow": 38361122346,
+                    "source_checks": 38360868222,
+                    "assets": [
+                      {
+                        "name": "FreeCAD-Mobile-Lab-1.2-rc4-arm64.apk",
+                        "size_bytes": 160961461,
+                        "sha256": "6b0f2c6bd15bfbed0360ce175c7ddba03d13787aaf719da829cf52b5bcd7e011",
+                        "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc4/FreeCAD-Mobile-Lab-1.2-rc4-arm64.apk"
+                      },
+                      {
+                        "name": "FreeCAD-Mobile-Lab-1.2-rc4-corresponding-sources.zip",
+                        "size_bytes": 430414494,
+                        "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
+                        "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc4/FreeCAD-Mobile-Lab-1.2-rc4-corresponding-sources.zip"
+                      },
+                      {
+                        "name": "FreeCAD-Mobile-Lab-1.2-rc4-native-runtime.zip",
+                        "size_bytes": 61735150,
+                        "sha256": "08700841f75cf294ef5ed017d60eb48adf79e0a6584f855166af9d247d48ee92",
+                        "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc4/FreeCAD-Mobile-Lab-1.2-rc4-native-runtime.zip"
+                      },
+                      {
+                        "name": "FreeCAD-Mobile-Lab-1.2-rc4-public-source.zip",
+                        "size_bytes": 31954200,
+                        "sha256": "4b2b71afde0241bc8818de71c86822d90b4f5f5f4dcdb29e30ac545ea38b784b",
+                        "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc4/FreeCAD-Mobile-Lab-1.2-rc4-public-source.zip"
+                      }
+                    ],
+                    "temporary_transport_branch": "DELETED_VERIFIED",
+                    "localization": "665 reviewed TR/DE strings;527 locale checks and localized native sketch guides; device NOT_RUN"
                   },
                   "android_runtime": "NOT_RUN",
-                  "public_signing_keys": "EXCLUDED",
                   "private_development_keystore": "RETAINED_NOT_DELETED",
                   "draft": false,
-                  "release_id": 411389379,
-                  "source_commit": "ff5addfcd3b3752a842a31e363f50864c2492f41",
-                  "release_workflow": 38361122346,
-                  "source_checks": 38360868222,
+                  "release_id": 411812613,
+                  "source_commit": "0709ab785da623c29b8f43d79e461c49475667ee",
+                  "release_workflow": 38419701251,
+                  "source_checks": 38418542765,
                   "assets": [
                     {
-                      "name": "FreeCAD-Mobile-Lab-1.2-rc4-arm64.apk",
+                      "name": "FreeCAD-Mobile-Lab-1.2-arm64.apk",
                       "size_bytes": 160961461,
-                      "sha256": "6b0f2c6bd15bfbed0360ce175c7ddba03d13787aaf719da829cf52b5bcd7e011",
-                      "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc4/FreeCAD-Mobile-Lab-1.2-rc4-arm64.apk"
+                      "sha256": "098960af916d1ac23c0b13c2a2c0d721b397239e726b39660caacad6245dc0ea",
+                      "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2/FreeCAD-Mobile-Lab-1.2-arm64.apk"
                     },
                     {
-                      "name": "FreeCAD-Mobile-Lab-1.2-rc4-corresponding-sources.zip",
+                      "name": "FreeCAD-Mobile-Lab-1.2-corresponding-sources.zip",
                       "size_bytes": 430414494,
                       "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
-                      "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc4/FreeCAD-Mobile-Lab-1.2-rc4-corresponding-sources.zip"
+                      "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2/FreeCAD-Mobile-Lab-1.2-corresponding-sources.zip"
                     },
                     {
-                      "name": "FreeCAD-Mobile-Lab-1.2-rc4-native-runtime.zip",
-                      "size_bytes": 61735150,
-                      "sha256": "08700841f75cf294ef5ed017d60eb48adf79e0a6584f855166af9d247d48ee92",
-                      "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc4/FreeCAD-Mobile-Lab-1.2-rc4-native-runtime.zip"
+                      "name": "FreeCAD-Mobile-Lab-1.2-native-runtime.zip",
+                      "size_bytes": 61735595,
+                      "sha256": "a5e36124ee74832dc275d308e36810286f3e60ec0d6829f3c1a81acc35cfc001",
+                      "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2/FreeCAD-Mobile-Lab-1.2-native-runtime.zip"
                     },
                     {
-                      "name": "FreeCAD-Mobile-Lab-1.2-rc4-public-source.zip",
-                      "size_bytes": 31954200,
-                      "sha256": "4b2b71afde0241bc8818de71c86822d90b4f5f5f4dcdb29e30ac545ea38b784b",
-                      "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc4/FreeCAD-Mobile-Lab-1.2-rc4-public-source.zip"
+                      "name": "FreeCAD-Mobile-Lab-1.2-public-source.zip",
+                      "size_bytes": 31975501,
+                      "sha256": "865bf34c834cbd372d73e6d29710d338e719507522000660cb9c188dea926f01",
+                      "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2/FreeCAD-Mobile-Lab-1.2-public-source.zip"
                     }
                   ],
                   "temporary_transport_branch": "DELETED_VERIFIED",
-                  "localization": "665 reviewed TR/DE strings;527 locale checks and localized native sketch guides; device NOT_RUN"
+                  "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.2"
                 },
                 "android_runtime": "NOT_RUN",
                 "private_development_keystore": "RETAINED_NOT_DELETED",
+                "release_id": 411854749,
+                "release_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.3",
+                "source_commit": "cdff17d82f23a9126897201a32f7df47ae4bc16b",
+                "release_workflow": 38425885945,
+                "source_checks": 38424841120,
                 "draft": false,
-                "release_id": 411812613,
-                "source_commit": "0709ab785da623c29b8f43d79e461c49475667ee",
-                "release_workflow": 38419701251,
-                "source_checks": 38418542765,
                 "assets": [
                   {
-                    "name": "FreeCAD-Mobile-Lab-1.2-arm64.apk",
-                    "size_bytes": 160961461,
-                    "sha256": "098960af916d1ac23c0b13c2a2c0d721b397239e726b39660caacad6245dc0ea",
-                    "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2/FreeCAD-Mobile-Lab-1.2-arm64.apk"
+                    "id": 637508196,
+                    "name": "FreeCAD-Mobile-Lab-1.3-arm64.apk",
+                    "size_bytes": 160977845,
+                    "sha256": "c62137d8ef18db421110204ab3842e24cb5a4dadcbc7c9f61e7a5d0681dc11c0",
+                    "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.3/FreeCAD-Mobile-Lab-1.3-arm64.apk"
                   },
                   {
-                    "name": "FreeCAD-Mobile-Lab-1.2-corresponding-sources.zip",
+                    "id": 637508194,
+                    "name": "FreeCAD-Mobile-Lab-1.3-corresponding-sources.zip",
                     "size_bytes": 430414494,
                     "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
-                    "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2/FreeCAD-Mobile-Lab-1.2-corresponding-sources.zip"
+                    "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.3/FreeCAD-Mobile-Lab-1.3-corresponding-sources.zip"
                   },
                   {
-                    "name": "FreeCAD-Mobile-Lab-1.2-native-runtime.zip",
-                    "size_bytes": 61735595,
-                    "sha256": "a5e36124ee74832dc275d308e36810286f3e60ec0d6829f3c1a81acc35cfc001",
-                    "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2/FreeCAD-Mobile-Lab-1.2-native-runtime.zip"
+                    "id": 637508201,
+                    "name": "FreeCAD-Mobile-Lab-1.3-native-runtime.zip",
+                    "size_bytes": 61736922,
+                    "sha256": "50e0e3a8c500debfe69698701d7c762d3c212f0758b73547388a36570394dca4",
+                    "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.3/FreeCAD-Mobile-Lab-1.3-native-runtime.zip"
                   },
                   {
-                    "name": "FreeCAD-Mobile-Lab-1.2-public-source.zip",
-                    "size_bytes": 31975501,
-                    "sha256": "865bf34c834cbd372d73e6d29710d338e719507522000660cb9c188dea926f01",
-                    "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2/FreeCAD-Mobile-Lab-1.2-public-source.zip"
+                    "id": 637508197,
+                    "name": "FreeCAD-Mobile-Lab-1.3-public-source.zip",
+                    "size_bytes": 32031619,
+                    "sha256": "ee611b56b1c46606114386a18de7631b658b5e03086a20d8c888d6a4e7df4e13",
+                    "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.3/FreeCAD-Mobile-Lab-1.3-public-source.zip"
                   }
                 ],
                 "temporary_transport_branch": "DELETED_VERIFIED",
-                "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.2"
+                "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.3",
+                "public_signing_keys": "EXCLUDED",
+                "automated_android_tests": "NOT_RUN",
+                "stable_1_0": "NOT_COMPLETE",
+                "localization": "673 reviewed TR/DE strings;527 locale checks and native sketch guides; device NOT_RUN"
               },
               "android_runtime": "NOT_RUN",
               "private_development_keystore": "RETAINED_NOT_DELETED",
-              "release_id": 411854749,
-              "release_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.3",
-              "source_commit": "cdff17d82f23a9126897201a32f7df47ae4bc16b",
-              "release_workflow": 38425885945,
-              "source_checks": 38424841120,
+              "release_id": 411881834,
+              "release_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.4",
+              "source_commit": "40b64397ca9c5e85430463cc570a68f6f67c18a5",
+              "release_workflow": 38430079995,
+              "source_checks": 38428928909,
               "draft": false,
               "assets": [
                 {
-                  "id": 637508196,
-                  "name": "FreeCAD-Mobile-Lab-1.3-arm64.apk",
+                  "id": 637587002,
+                  "name": "FreeCAD-Mobile-Lab-1.4-arm64.apk",
                   "size_bytes": 160977845,
-                  "sha256": "c62137d8ef18db421110204ab3842e24cb5a4dadcbc7c9f61e7a5d0681dc11c0",
-                  "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.3/FreeCAD-Mobile-Lab-1.3-arm64.apk"
+                  "sha256": "c62c5168e1a7073f53d6e13645d6767d31902036663b9709b3baeb0e51c6d1d6",
+                  "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.4/FreeCAD-Mobile-Lab-1.4-arm64.apk"
                 },
                 {
-                  "id": 637508194,
-                  "name": "FreeCAD-Mobile-Lab-1.3-corresponding-sources.zip",
+                  "id": 637587001,
+                  "name": "FreeCAD-Mobile-Lab-1.4-corresponding-sources.zip",
                   "size_bytes": 430414494,
                   "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
-                  "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.3/FreeCAD-Mobile-Lab-1.3-corresponding-sources.zip"
+                  "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.4/FreeCAD-Mobile-Lab-1.4-corresponding-sources.zip"
                 },
                 {
-                  "id": 637508201,
-                  "name": "FreeCAD-Mobile-Lab-1.3-native-runtime.zip",
-                  "size_bytes": 61736922,
-                  "sha256": "50e0e3a8c500debfe69698701d7c762d3c212f0758b73547388a36570394dca4",
-                  "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.3/FreeCAD-Mobile-Lab-1.3-native-runtime.zip"
+                  "id": 637587004,
+                  "name": "FreeCAD-Mobile-Lab-1.4-native-runtime.zip",
+                  "size_bytes": 61737355,
+                  "sha256": "3d2b87b3ef34cc086ec6749eba6bb9120bd3bee7530ba6b84d3923209c9682f5",
+                  "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.4/FreeCAD-Mobile-Lab-1.4-native-runtime.zip"
                 },
                 {
-                  "id": 637508197,
-                  "name": "FreeCAD-Mobile-Lab-1.3-public-source.zip",
-                  "size_bytes": 32031619,
-                  "sha256": "ee611b56b1c46606114386a18de7631b658b5e03086a20d8c888d6a4e7df4e13",
-                  "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.3/FreeCAD-Mobile-Lab-1.3-public-source.zip"
+                  "id": 637587000,
+                  "name": "FreeCAD-Mobile-Lab-1.4-public-source.zip",
+                  "size_bytes": 32076877,
+                  "sha256": "045d30ff1c2e0e599b092ef5347d78e31859b49b960303d8f863ad6555a25b92",
+                  "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.4/FreeCAD-Mobile-Lab-1.4-public-source.zip"
                 }
               ],
               "temporary_transport_branch": "DELETED_VERIFIED",
-              "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.3",
+              "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.4",
               "public_signing_keys": "EXCLUDED",
               "automated_android_tests": "NOT_RUN",
               "stable_1_0": "NOT_COMPLETE",
-              "localization": "673 reviewed TR/DE strings;527 locale checks and native sketch guides; device NOT_RUN"
+              "localization": "677 reviewed TR/DE strings;527 locale checks and native sketch guides; device NOT_RUN"
             },
             "android_runtime": "NOT_RUN",
             "private_development_keystore": "RETAINED_NOT_DELETED",
-            "release_id": 411881834,
-            "release_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.4",
-            "source_commit": "40b64397ca9c5e85430463cc570a68f6f67c18a5",
-            "release_workflow": 38430079995,
-            "source_checks": 38428928909,
+            "release_id": 411939134,
+            "release_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.7",
+            "source_commit": "3542d65f4d3c3e695799a458db9d05992575909c",
+            "release_workflow": 38439402593,
+            "source_checks": 38438477238,
             "draft": false,
             "assets": [
               {
-                "id": 637587002,
-                "name": "FreeCAD-Mobile-Lab-1.4-arm64.apk",
-                "size_bytes": 160977845,
-                "sha256": "c62c5168e1a7073f53d6e13645d6767d31902036663b9709b3baeb0e51c6d1d6",
-                "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.4/FreeCAD-Mobile-Lab-1.4-arm64.apk"
+                "id": 637758043,
+                "name": "FreeCAD-Mobile-Lab-1.7-arm64.apk",
+                "size_bytes": 160994229,
+                "sha256": "86664dc745ba5e79eb10a16443935adf49e9a54a587df36eb94caa16931c3b07",
+                "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.7/FreeCAD-Mobile-Lab-1.7-arm64.apk"
               },
               {
-                "id": 637587001,
-                "name": "FreeCAD-Mobile-Lab-1.4-corresponding-sources.zip",
+                "id": 637758037,
+                "name": "FreeCAD-Mobile-Lab-1.7-corresponding-sources.zip",
                 "size_bytes": 430414494,
                 "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
-                "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.4/FreeCAD-Mobile-Lab-1.4-corresponding-sources.zip"
+                "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.7/FreeCAD-Mobile-Lab-1.7-corresponding-sources.zip"
               },
               {
-                "id": 637587004,
-                "name": "FreeCAD-Mobile-Lab-1.4-native-runtime.zip",
-                "size_bytes": 61737355,
-                "sha256": "3d2b87b3ef34cc086ec6749eba6bb9120bd3bee7530ba6b84d3923209c9682f5",
-                "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.4/FreeCAD-Mobile-Lab-1.4-native-runtime.zip"
+                "id": 637758041,
+                "name": "FreeCAD-Mobile-Lab-1.7-native-runtime.zip",
+                "size_bytes": 61740326,
+                "sha256": "10b155e0cbb8a613884fa0e39ed901779143460a59dd353f8de5775263dc0b77",
+                "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.7/FreeCAD-Mobile-Lab-1.7-native-runtime.zip"
               },
               {
-                "id": 637587000,
-                "name": "FreeCAD-Mobile-Lab-1.4-public-source.zip",
-                "size_bytes": 32076877,
-                "sha256": "045d30ff1c2e0e599b092ef5347d78e31859b49b960303d8f863ad6555a25b92",
-                "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.4/FreeCAD-Mobile-Lab-1.4-public-source.zip"
+                "id": 637758045,
+                "name": "FreeCAD-Mobile-Lab-1.7-public-source.zip",
+                "size_bytes": 32123649,
+                "sha256": "0c250c59e429b84ca3ccd6c618dcf3f8e482dd3ce279c60b607bfc6c7fe6efa4",
+                "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.7/FreeCAD-Mobile-Lab-1.7-public-source.zip"
               }
             ],
             "temporary_transport_branch": "DELETED_VERIFIED",
-            "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.4",
+            "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.7",
             "public_signing_keys": "EXCLUDED",
             "automated_android_tests": "NOT_RUN",
             "stable_1_0": "NOT_COMPLETE",
-            "localization": "677 reviewed TR/DE strings;527 locale checks and native sketch guides; device NOT_RUN"
+            "localization": "690 reviewedTR/DE strings and3 native guides;physical Android NOT_RUN"
           },
-          "android_runtime": "NOT_RUN",
-          "private_development_keystore": "RETAINED_NOT_DELETED",
-          "release_id": 411939134,
-          "release_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.7",
-          "source_commit": "3542d65f4d3c3e695799a458db9d05992575909c",
-          "release_workflow": 38439402593,
-          "source_checks": 38438477238,
-          "draft": false,
+          "source_commit": "3aaddf19f70ba409cc6353efe2d371e6d6acddae",
+          "source_tree": "901058623347e28328ac8c0c30ad42e7b646871d",
+          "source_ci_run": 38460565094,
+          "release_workflow_run": 38460971557,
           "assets": [
             {
-              "id": 637758043,
-              "name": "FreeCAD-Mobile-Lab-1.7-arm64.apk",
-              "size_bytes": 160994229,
-              "sha256": "86664dc745ba5e79eb10a16443935adf49e9a54a587df36eb94caa16931c3b07",
-              "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.7/FreeCAD-Mobile-Lab-1.7-arm64.apk"
+              "id": 638136073,
+              "name": "FreeCAD-Mobile-Lab-1.8-arm64.apk",
+              "size_bytes": 161010613,
+              "sha256": "1d0155127e606ec79b47bab3f63630576c8769cb85d3eba8085612e5d8156d68",
+              "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.8/FreeCAD-Mobile-Lab-1.8-arm64.apk"
             },
             {
-              "id": 637758037,
-              "name": "FreeCAD-Mobile-Lab-1.7-corresponding-sources.zip",
+              "id": 638136339,
+              "name": "FreeCAD-Mobile-Lab-1.8-native-runtime.zip",
+              "size_bytes": 61741469,
+              "sha256": "52e1740c3204ba1de2c26a73ae74cfb69c47f38bd0c043395002ae31a2df5dab",
+              "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.8/FreeCAD-Mobile-Lab-1.8-native-runtime.zip"
+            },
+            {
+              "id": 638136462,
+              "name": "FreeCAD-Mobile-Lab-1.8-corresponding-sources.zip",
               "size_bytes": 430414494,
               "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
-              "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.7/FreeCAD-Mobile-Lab-1.7-corresponding-sources.zip"
+              "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.8/FreeCAD-Mobile-Lab-1.8-corresponding-sources.zip"
             },
             {
-              "id": 637758041,
-              "name": "FreeCAD-Mobile-Lab-1.7-native-runtime.zip",
-              "size_bytes": 61740326,
-              "sha256": "10b155e0cbb8a613884fa0e39ed901779143460a59dd353f8de5775263dc0b77",
-              "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.7/FreeCAD-Mobile-Lab-1.7-native-runtime.zip"
-            },
-            {
-              "id": 637758045,
-              "name": "FreeCAD-Mobile-Lab-1.7-public-source.zip",
-              "size_bytes": 32123649,
-              "sha256": "0c250c59e429b84ca3ccd6c618dcf3f8e482dd3ce279c60b607bfc6c7fe6efa4",
-              "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.7/FreeCAD-Mobile-Lab-1.7-public-source.zip"
+              "id": 638137045,
+              "name": "FreeCAD-Mobile-Lab-1.8-public-source.zip",
+              "size_bytes": 32163808,
+              "sha256": "4a22e5bbb0f5a4543f5a4ad152632595816520aaf6042c90805fc9d10b589b89",
+              "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.8/FreeCAD-Mobile-Lab-1.8-public-source.zip"
             }
           ],
           "temporary_transport_branch": "DELETED_VERIFIED",
-          "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.7",
+          "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.8",
           "public_signing_keys": "EXCLUDED",
           "automated_android_tests": "NOT_RUN",
           "stable_1_0": "NOT_COMPLETE",
-          "localization": "690 reviewedTR/DE strings and3 native guides;physical Android NOT_RUN"
+          "localization": "695 reviewed TR/DE strings and3 native guides; physical Android NOT_RUN"
         },
-        "source_commit": "3aaddf19f70ba409cc6353efe2d371e6d6acddae",
-        "source_tree": "901058623347e28328ac8c0c30ad42e7b646871d",
-        "source_ci_run": 38460565094,
-        "release_workflow_run": 38460971557,
+        "source_commit": "01d0d5cbcebb8b3e9ca00c5e1d6a77e7662bdc6c",
+        "source_tree": "5bb2c94108bc2dfa20c90a4c892515baf6243d6e",
+        "source_ci_run": 38463404783,
+        "release_workflow_run": 38463632592,
         "assets": [
           {
-            "id": 638136073,
-            "name": "FreeCAD-Mobile-Lab-1.8-arm64.apk",
+            "id": 638182536,
+            "name": "FreeCAD-Mobile-Lab-1.9-arm64.apk",
             "size_bytes": 161010613,
-            "sha256": "1d0155127e606ec79b47bab3f63630576c8769cb85d3eba8085612e5d8156d68",
-            "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.8/FreeCAD-Mobile-Lab-1.8-arm64.apk"
+            "sha256": "19ae4fa8f373ae382ab481ed3cdd25bf0005820a332b1933d3949ef0234fba69",
+            "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.9/FreeCAD-Mobile-Lab-1.9-arm64.apk"
           },
           {
-            "id": 638136339,
-            "name": "FreeCAD-Mobile-Lab-1.8-native-runtime.zip",
-            "size_bytes": 61741469,
-            "sha256": "52e1740c3204ba1de2c26a73ae74cfb69c47f38bd0c043395002ae31a2df5dab",
-            "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.8/FreeCAD-Mobile-Lab-1.8-native-runtime.zip"
+            "id": 638182724,
+            "name": "FreeCAD-Mobile-Lab-1.9-native-runtime.zip",
+            "size_bytes": 61742731,
+            "sha256": "c62feaffb05b8fc5e491797c98e89caeeece092def41592172f480bafebfcec6",
+            "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.9/FreeCAD-Mobile-Lab-1.9-native-runtime.zip"
           },
           {
-            "id": 638136462,
-            "name": "FreeCAD-Mobile-Lab-1.8-corresponding-sources.zip",
+            "id": 638182818,
+            "name": "FreeCAD-Mobile-Lab-1.9-corresponding-sources.zip",
             "size_bytes": 430414494,
             "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
-            "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.8/FreeCAD-Mobile-Lab-1.8-corresponding-sources.zip"
+            "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.9/FreeCAD-Mobile-Lab-1.9-corresponding-sources.zip"
           },
           {
-            "id": 638137045,
-            "name": "FreeCAD-Mobile-Lab-1.8-public-source.zip",
-            "size_bytes": 32163808,
-            "sha256": "4a22e5bbb0f5a4543f5a4ad152632595816520aaf6042c90805fc9d10b589b89",
-            "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.8/FreeCAD-Mobile-Lab-1.8-public-source.zip"
+            "id": 638183588,
+            "name": "FreeCAD-Mobile-Lab-1.9-public-source.zip",
+            "size_bytes": 32212704,
+            "sha256": "3358f3a01ab98927bbfe6f437c44852ef95b01383dcb7af872037e7c2cc9f780",
+            "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.9/FreeCAD-Mobile-Lab-1.9-public-source.zip"
           }
         ],
         "temporary_transport_branch": "DELETED_VERIFIED",
-        "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.8",
+        "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.9",
         "public_signing_keys": "EXCLUDED",
         "automated_android_tests": "NOT_RUN",
         "stable_1_0": "NOT_COMPLETE",
-        "localization": "695 reviewed TR/DE strings and3 native guides; physical Android NOT_RUN"
+        "localization": "699 reviewed TR/DE strings and3 native guides; physical Android NOT_RUN"
       },
-      "source_commit": "01d0d5cbcebb8b3e9ca00c5e1d6a77e7662bdc6c",
-      "source_tree": "5bb2c94108bc2dfa20c90a4c892515baf6243d6e",
-      "source_ci_run": 38463404783,
-      "release_workflow_run": 38463632592,
+      "source_commit": "01885ae81bb64cdff645a3ec94f9a2bae382a006",
+      "source_tree": "67b87396e534de2619d7fe34186c903402cfa12a",
+      "source_ci_run": 38467208164,
+      "release_workflow_run": 38467431377,
       "assets": [
         {
-          "id": 638182536,
-          "name": "FreeCAD-Mobile-Lab-1.9-arm64.apk",
-          "size_bytes": 161010613,
-          "sha256": "19ae4fa8f373ae382ab481ed3cdd25bf0005820a332b1933d3949ef0234fba69",
-          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.9/FreeCAD-Mobile-Lab-1.9-arm64.apk"
+          "id": 638246986,
+          "name": "FreeCAD-Mobile-Lab-1.10-arm64.apk",
+          "size_bytes": 161026997,
+          "sha256": "e8b52880672e2527be71d945471b4e6cb915033b846a573a87d170d884d83ed3",
+          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.10/FreeCAD-Mobile-Lab-1.10-arm64.apk"
         },
         {
-          "id": 638182724,
-          "name": "FreeCAD-Mobile-Lab-1.9-native-runtime.zip",
-          "size_bytes": 61742731,
-          "sha256": "c62feaffb05b8fc5e491797c98e89caeeece092def41592172f480bafebfcec6",
-          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.9/FreeCAD-Mobile-Lab-1.9-native-runtime.zip"
+          "id": 638247293,
+          "name": "FreeCAD-Mobile-Lab-1.10-native-runtime.zip",
+          "size_bytes": 61743888,
+          "sha256": "1ef78cd20c777fc91ee1b0cc53b2eddb7959774e4c3994ea52cd1088dba48eda",
+          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.10/FreeCAD-Mobile-Lab-1.10-native-runtime.zip"
         },
         {
-          "id": 638182818,
-          "name": "FreeCAD-Mobile-Lab-1.9-corresponding-sources.zip",
+          "id": 638247413,
+          "name": "FreeCAD-Mobile-Lab-1.10-corresponding-sources.zip",
           "size_bytes": 430414494,
           "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
-          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.9/FreeCAD-Mobile-Lab-1.9-corresponding-sources.zip"
+          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.10/FreeCAD-Mobile-Lab-1.10-corresponding-sources.zip"
         },
         {
-          "id": 638183588,
-          "name": "FreeCAD-Mobile-Lab-1.9-public-source.zip",
-          "size_bytes": 32212704,
-          "sha256": "3358f3a01ab98927bbfe6f437c44852ef95b01383dcb7af872037e7c2cc9f780",
-          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.9/FreeCAD-Mobile-Lab-1.9-public-source.zip"
+          "id": 638247938,
+          "name": "FreeCAD-Mobile-Lab-1.10-public-source.zip",
+          "size_bytes": 32272021,
+          "sha256": "4fcca9e73ad8fcd80f59a943418731012f34861c6646484cede06a54b0beae63",
+          "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.10/FreeCAD-Mobile-Lab-1.10-public-source.zip"
         }
       ],
       "temporary_transport_branch": "DELETED_VERIFIED",
-      "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.9",
+      "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.10",
       "public_signing_keys": "EXCLUDED",
       "automated_android_tests": "NOT_RUN",
       "stable_1_0": "NOT_COMPLETE",
-      "localization": "699 reviewed TR/DE strings and3 native guides; physical Android NOT_RUN"
-    },
-    "source_commit": "01885ae81bb64cdff645a3ec94f9a2bae382a006",
-    "source_tree": "67b87396e534de2619d7fe34186c903402cfa12a",
-    "source_ci_run": 38467208164,
-    "release_workflow_run": 38467431377,
-    "assets": [
-      {
-        "id": 638246986,
-        "name": "FreeCAD-Mobile-Lab-1.10-arm64.apk",
-        "size_bytes": 161026997,
-        "sha256": "e8b52880672e2527be71d945471b4e6cb915033b846a573a87d170d884d83ed3",
-        "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.10/FreeCAD-Mobile-Lab-1.10-arm64.apk"
-      },
-      {
-        "id": 638247293,
-        "name": "FreeCAD-Mobile-Lab-1.10-native-runtime.zip",
-        "size_bytes": 61743888,
-        "sha256": "1ef78cd20c777fc91ee1b0cc53b2eddb7959774e4c3994ea52cd1088dba48eda",
-        "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.10/FreeCAD-Mobile-Lab-1.10-native-runtime.zip"
-      },
-      {
-        "id": 638247413,
-        "name": "FreeCAD-Mobile-Lab-1.10-corresponding-sources.zip",
-        "size_bytes": 430414494,
-        "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
-        "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.10/FreeCAD-Mobile-Lab-1.10-corresponding-sources.zip"
-      },
-      {
-        "id": 638247938,
-        "name": "FreeCAD-Mobile-Lab-1.10-public-source.zip",
-        "size_bytes": 32272021,
-        "sha256": "4fcca9e73ad8fcd80f59a943418731012f34861c6646484cede06a54b0beae63",
-        "download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.10/FreeCAD-Mobile-Lab-1.10-public-source.zip"
-      }
-    ],
-    "temporary_transport_branch": "DELETED_VERIFIED",
-    "latest_full_release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.10",
-    "public_signing_keys": "EXCLUDED",
-    "automated_android_tests": "NOT_RUN",
-    "stable_1_0": "NOT_COMPLETE",
-    "localization": "703 reviewed TR/DE strings and3 native guides; physical Android NOT_RUN"
+      "localization": "703 reviewed TR/DE strings and3 native guides; physical Android NOT_RUN"
+    }
   }
 }
