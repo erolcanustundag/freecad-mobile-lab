@@ -1185,5 +1185,29 @@
     ],
     "evidence": "docs/native-sketcher-results.json",
     "apk": "FreeCAD-Mobile-Lab-1.2-arm64.apk"
+  },
+  "sketch_pattern_prerequisite": {
+    "version": "1.3",
+    "version_code": 29,
+    "features": [
+      {
+        "name": "Native mirror copies",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Native rectangular arrays/spacing constraints",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Axis/point symmetry constraints",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Driving/reference measurement controls",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      }
+    ],
+    "evidence": "docs/native-sketcher-results.json",
+    "apk": "FreeCAD-Mobile-Lab-1.3-arm64.apk"
   }
 }

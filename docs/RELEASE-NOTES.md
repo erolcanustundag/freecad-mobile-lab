@@ -1,13 +1,17 @@
-# FreeCAD Mobile Lab1.2 — full mobile feature release
+# FreeCAD Mobile Lab1.3 — full mobile feature release
 
-Full GitHub release, Android code28, ARM64 Android8+, non-debuggable APK signed with the retained update certificate. Releases the current mobile feature set; full FreeCAD/Rhino parity and broader device qualification remain NOT_COMPLETE.
+Full/latest GitHub release, Android code29, signed ARM64 Android8+ APK, non-debuggable and compatible with the retained update certificate. Releases the current mobile feature set; full FreeCAD/Rhino parity and broader device qualification remain NOT_COMPLETE.
 
-Four new original Sketcher scopes in Document Lab: trim selected curve spans; line extension/shortening; connected-line corner fillets; curve splitting. Edits use original geometry/constraint algorithms, native transactions, Undo/Redo and FCStd. Invalid picks/radii/indices and failed multi-edits roll back. Preview shows actual solved curves. Driving dimensions remain authoritative during extension. Trim without intersections may delete the entire selected entity, matching upstream behavior.
+Four new original Sketcher scopes in Document Lab:
+- Native mirrored copies across X/Y or a current line, preserving construction flags and eligible constraints.
+- Rectangular arrays, optional native spacing construction geometry/constraints, editable spacing dimensions.
+- Axis or point-centred symmetry constraints with solver-aware point movement.
+- Driving/reference dimension controls, measured-value updates, visible mode/unit reporting and guarded datum edits.
 
-Includes all prior native App/Part/Sketcher subsets: primitives/booleans/STEP, rational curves/construction,11 constraint kinds/units/DOF, planar attachments/offsets and projected external references. Turkish/German menus and guides now contain669 reviewed UI entries each. Advanced diagnostics retain English fallback.
+EN/TR/DE forms, command input and localized guides cover these tools.673 reviewed Turkish/German strings each; technical diagnostics retain English fallback.
 
-Validation:1310 actual native Sketcher JNI checks, including geometry lengths/arc radius, constraint updates, errors, native history and save/reopen; Part/App/Python and localization regressions are recorded separately. APK signatures, retained certificate, native loader/API26 closure and16KiB ELF/ZIP checks are required before publication.
+1438 genuine native Sketcher JNI checks pass, including analytic coordinates/weights, grid spacing updates, native symmetry/DOF, reference measurement updates, errors/budget boundaries, multi-edit rollback, Undo/Redo and FCStd restoration. Part269/App88/Python62 regressions and portable locale/resources/packaging checks are recorded separately. APK signing, native133-library/extension closure and16KiB/API26 checks precede publication.
 
-Limits remain256 sketch entities/constraints,64 external edges/64 spline poles,8192 preview points and±1Mmm. Extension exposes line segments; fillets expose a common-endpoint pair of lines. Full constraint variants, curved-corner fillets, additional extension options, touch editing, PartDesign and remaining workbenches are pending. Native memory/runtime budgets on phones are not measured.
+Limits:256 sketch entities/constraints,64 external edges/64 spline poles,8192 preview points,±1Mmm; pattern selection1–32 internal entities and up to64 array cells. Conservative budgets reserve native helpers/constraints. Mirror creates copies; live point relations require Symmetric constraints. Array spacing is constrained only when requested; it does not create a persistent array feature tree or automatically share radii. Copies support the exposed bounded line/circle/arc/ellipse/spline types. Broader native pattern/constraint options, touch editing, PartDesign and full workbench parity remain pending.
 
-The user previously reported startup works on their phone; this is an unversioned report. Automated Android execution for1.2 is NOT_RUN. Physical launch/lifecycle/gestures/language/SAF and wider device coverage remain qualification work. Save/export projects before uninstalling/downgrading. Signing keys are excluded from Git, release assets and Actions.
+The user previously reported startup working, without a version/device log. Android execution/gestures/lifecycle/SAF/language/memory qualification for1.3 remains NOT_RUN. Save/export models before uninstalling/downgrading. Signing keys are excluded from public Git, assets and Actions.

@@ -138,3 +138,7 @@ Next four-feature sub-batch: explicit sketch plane placement; native face attach
 ###1.2 full mobile release — editing sub-batch
 
 Four native editing scopes are host-verified: trim, line extension/shortening, connected-line corner fillet and curve split. Full B05/B06/B07 remainPENDING at comprehensive/device scope. Next four scopes: native mirror, geometry array, symmetry constraints and reference/driving constraint controls, with native persistence/history checks.1.2 is a full GitHub/mobile feature release as requested, not a declaration of full desktop parity.
+
+###1.3 full mobile release — pattern/dimension sub-batch
+
+Four bounded native scopes are host-verified: mirror copies; rectangular arrays/optional spacing constraints; axis/point symmetry; driving/reference measurements.1438 Sketcher checks pass. Full B05/B06/B07 and device gates remainPENDING. Next four scopes: point-on-object constraints, horizontal/vertical coordinate dimensions, Block/fixed geometry, and active/inactive constraint controls, with native history/FCStd tests and another full release.

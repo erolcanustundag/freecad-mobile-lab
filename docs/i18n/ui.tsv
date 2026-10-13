@@ -667,3 +667,7 @@ Trim sketch curve|Eskiz eğrisini kırp|Skizzenkurve trimmen
 Extend sketch line|Eskiz çizgisini uzat|Skizzenlinie verlängern
 Fillet sketch corner|Eskiz köşesini yuvarla|Skizzenecke abrunden
 Split sketch curve|Eskiz eğrisini böl|Skizzenkurve teilen
+Mirror sketch geometry|Eskiz geometrisini aynala|Skizzengeometrie spiegeln
+Rectangular sketch array|Dikdörtgen eskiz dizisi|Rechteckige Skizzenanordnung
+Symmetry constraint|Simetri kısıtı|Symmetriebedingung
+Driving / reference dimension|Sürücü / referans ölçü|Steuerndes / Referenzmaß

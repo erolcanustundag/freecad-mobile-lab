@@ -168,6 +168,7 @@
   <string name="ui_37a4658d6cec" formatted="false">"XY-Skizze mit Fangraster zeichnen"</string>
   <string name="ui_93aba913bfbb" formatted="false">"Kurve zeichnen"</string>
   <string name="ui_a4d3311befbe" formatted="false">"Zeichnungsblatt"</string>
+  <string name="ui_a04cb2e5e2c5" formatted="false">"Steuerndes / Referenzmaß"</string>
   <string name="ui_972d57379db3" formatted="false">"Duplizieren"</string>
   <string name="ui_6cb15df59f82" formatted="false">"Duplizieren · Versatz in mm"</string>
   <string name="ui_6e444774c000" formatted="false">"Kanten- / Flächenindizes"</string>
@@ -320,6 +321,7 @@
   <string name="ui_897165b5f2b0" formatted="false">"Minimaler geometrischer Abstand"</string>
   <string name="ui_03fc6d3db034" formatted="false">"Gespiegelte Kopie"</string>
   <string name="ui_48065392c2e7" formatted="false">"Kopie an einer Ebene spiegeln"</string>
+  <string name="ui_892d7a64b2a3" formatted="false">"Skizzengeometrie spiegeln"</string>
   <string name="ui_dfd6ee0a3f47" formatted="false">"Mobile Tabelle"</string>
   <string name="ui_aca9f8f011ce" formatted="false">"Mobile Tabelle / CSV"</string>
   <string name="ui_14b2a2193940" formatted="false">"Modellierwerkzeuge"</string>
@@ -457,6 +459,7 @@
   <string name="ui_dd988f1ae6ae" formatted="false">"Wiederherstellung und Projektversionen"</string>
   <string name="ui_c158695a64ad" formatted="false">"Rechteck"</string>
   <string name="ui_da335870846f" formatted="false">"Rechteckiges UV-Flächentrimmen"</string>
+  <string name="ui_f79253c8dec0" formatted="false">"Rechteckige Skizzenanordnung"</string>
   <string name="ui_471b94d402d1" formatted="false">"Wiederholen"</string>
   <string name="ui_d00c1074c0b3" formatted="false">"Beispielmodelle"</string>
   <string name="ui_86f6ce133bd3" formatted="false">"Beispielmodelle · zum Arbeitsbereich hinzufügen"</string>
@@ -593,6 +596,7 @@
   <string name="ui_6b9c2e223136" formatted="false">"Nur Flächen"</string>
   <string name="ui_8c1998fcc55d" formatted="false">"Profil entlang einer Führung ziehen"</string>
   <string name="ui_06183458dae1" formatted="false">"Zu Software-3D gewechselt"</string>
+  <string name="ui_d028323f9ec6" formatted="false">"Symmetriebedingung"</string>
   <string name="ui_b48813fa0aec" formatted="false">"OBEN"</string>
   <string name="ui_5395dff4ff26" formatted="false">"Zuerst einen Kontrollpunkt antippen"</string>
   <string name="ui_834b595838a0" formatted="false">"Tippen → Bearbeiten / Verbinden"</string>

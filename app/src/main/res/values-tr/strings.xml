@@ -168,6 +168,7 @@
   <string name="ui_37a4658d6cec" formatted="false">"Yakalama ızgarasıyla XY çizimi yap"</string>
   <string name="ui_93aba913bfbb" formatted="false">"Eğri çiz"</string>
   <string name="ui_a4d3311befbe" formatted="false">"Çizim sayfası"</string>
+  <string name="ui_a04cb2e5e2c5" formatted="false">"Sürücü / referans ölçü"</string>
   <string name="ui_972d57379db3" formatted="false">"Kopyala"</string>
   <string name="ui_6cb15df59f82" formatted="false">"Kopyala · mm cinsinden öteleme"</string>
   <string name="ui_6e444774c000" formatted="false">"Kenar / yüz indisleri"</string>
@@ -320,6 +321,7 @@
   <string name="ui_897165b5f2b0" formatted="false">"En kısa geometrik mesafe"</string>
   <string name="ui_03fc6d3db034" formatted="false">"Aynalanmış kopya"</string>
   <string name="ui_48065392c2e7" formatted="false">"Düzleme göre aynalanmış kopya"</string>
+  <string name="ui_892d7a64b2a3" formatted="false">"Eskiz geometrisini aynala"</string>
   <string name="ui_dfd6ee0a3f47" formatted="false">"Mobil hesap tablosu"</string>
   <string name="ui_aca9f8f011ce" formatted="false">"Mobil hesap tablosu / CSV"</string>
   <string name="ui_14b2a2193940" formatted="false">"Modelleme araçları"</string>
@@ -457,6 +459,7 @@
   <string name="ui_dd988f1ae6ae" formatted="false">"Kurtarma ve proje sürümleri"</string>
   <string name="ui_c158695a64ad" formatted="false">"Dikdörtgen"</string>
   <string name="ui_da335870846f" formatted="false">"Dikdörtgen UV yüzey kırpma"</string>
+  <string name="ui_f79253c8dec0" formatted="false">"Dikdörtgen eskiz dizisi"</string>
   <string name="ui_471b94d402d1" formatted="false">"Yinele"</string>
   <string name="ui_d00c1074c0b3" formatted="false">"Örnek modeller"</string>
   <string name="ui_86f6ce133bd3" formatted="false">"Örnek modeller · çalışma alanına eklenir"</string>
@@ -593,6 +596,7 @@
   <string name="ui_6b9c2e223136" formatted="false">"Yalnızca yüzeyler"</string>
   <string name="ui_8c1998fcc55d" formatted="false">"Profili yol boyunca süpür"</string>
   <string name="ui_06183458dae1" formatted="false">"Yazılımsal 3B görüntülemeye geçildi"</string>
+  <string name="ui_d028323f9ec6" formatted="false">"Simetri kısıtı"</string>
   <string name="ui_b48813fa0aec" formatted="false">"ÜST"</string>
   <string name="ui_5395dff4ff26" formatted="false">"Önce bir kontrol noktasına dokunun"</string>
   <string name="ui_834b595838a0" formatted="false">"Dokun → Düzenle / bağla"</string>

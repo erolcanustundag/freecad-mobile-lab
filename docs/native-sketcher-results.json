@@ -1,10 +1,10 @@
 {
-  "version": "1.2",
-  "version_code": 28,
+  "version": "1.3",
+  "version_code": 29,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "checks": {
-    "sketcher_jni_solver_geometry_fcstd": 1310,
+    "sketcher_jni_solver_geometry_fcstd": 1438,
     "part_jni_regressions": 269,
     "metadata_jni_regressions": 88,
     "python_tools_regressions": 62,
@@ -36,13 +36,15 @@
     "spline_poles": 64,
     "preview_points": 8192,
     "coordinate_mm": 1000000,
-    "external_edges_per_sketch": 64
+    "external_edges_per_sketch": 64,
+    "pattern_source_entities": 32,
+    "array_cells": 64
   },
   "fixtures": [
     {
       "path": "samples/upstream-sketcher/Sketch.FCStd",
-      "size": 15655,
-      "sha256": "a3db16e8328abc2c56f8124f2235c06d37ea51be13e698dd85875433dca57281"
+      "size": 15653,
+      "sha256": "a5390ee69c6250744e284dc3be6c3a7fab7cf6c3093830d0dd439be0eae53afe"
     },
     {
       "path": "samples/upstream-sketcher/preview.json",
@@ -51,8 +53,8 @@
     },
     {
       "path": "samples/upstream-sketcher/Attachments.FCStd",
-      "size": 15620,
-      "sha256": "0b24fc3d5cccbb69b2e350c10f1c4a59fcf1b9bed7ee07081eb28e41727c6fc2"
+      "size": 15614,
+      "sha256": "41c6b80b65d69eb1a2872e64ff5306b03a698d33a88e1b0ccc2d59cd7cccff9b"
     },
     {
       "path": "samples/upstream-sketcher/attachment-preview.json",
@@ -61,8 +63,18 @@
     },
     {
       "path": "samples/upstream-sketcher/SketchTools.FCStd",
-      "size": 20594,
-      "sha256": "9c1b26d7cadce84286c7caa7d59a8bf6a02a3e4ee00fb1d3847e234420cc0258"
+      "size": 20592,
+      "sha256": "865ac8f2d45a064496baab19e25528500a2f029f198c229c54319ad051dee962"
+    },
+    {
+      "path": "samples/upstream-sketcher/PatternTools.FCStd",
+      "size": 32238,
+      "sha256": "910fbedb01e9e71c2db0e8acb2f4a17fb32c4500c365de1d6625c693dd188ca4"
+    },
+    {
+      "path": "samples/upstream-sketcher/ReferenceDimension.FCStd",
+      "size": 32238,
+      "sha256": "11c21d03c608ab910702386c93692519274d86a43e27ab3f62fcacc700a4c195"
     }
   ],
   "attachment_scopes": [
@@ -80,5 +92,11 @@
     "Native line extend/shorten",
     "Native connected-line fillet",
     "Native curve split"
+  ],
+  "pattern_scopes": [
+    "Native mirrored copies",
+    "Native rectangular arrays and optional spacing constraints",
+    "Axis/point symmetry constraints",
+    "Driving/reference dimensions"
   ]
 }

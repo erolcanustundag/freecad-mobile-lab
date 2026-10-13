@@ -12,6 +12,7 @@ except ImportError:
 MAX_GEOMETRY = 256
 MAX_CONSTRAINTS = 256
 MAX_EXTERNAL = 64
+DIMENSIONS = {"Distance","DistanceX","DistanceY","Radius","Diameter","Angle"}
 TYPES = {"Sketcher::SketchObject"}
 
 def available():
@@ -140,10 +141,72 @@ def solve(obj):
     if result!=0 or obj.ConflictingConstraints or obj.RedundantConstraints:
         raise ValueError("Sketch constraints conflict or are redundant; edit was rolled back")
 
+def selection(obj, values):
+    if not isinstance(values,list) or not 1<=len(values)<=32 or len(set(values))!=len(values):
+        raise ValueError("Select 1 to 32 unique internal geometry indices")
+    result=[index(v,obj.GeometryCount) for v in values]
+    allowed={"Part::GeomLineSegment","Part::GeomCircle","Part::GeomArcOfCircle","Part::GeomEllipse","Part::GeomBSplineCurve"}
+    for i in result:
+        g=obj.Geometry[i]
+        if g.TypeId not in allowed or (g.TypeId=="Part::GeomBSplineCurve" and g.NbPoles>64):
+            raise ValueError("Copy tools support bounded lines, circles, arcs, ellipses and 64-pole splines")
+    return result
+
+def curve_index(obj, value):
+    i=constraint_index(obj,value)
+    return obj.Geometry[i] if i>=0 else obj.ExternalGeo[-i-1]
+
+def point_ref(obj, entity, position):
+    entity=constraint_index(obj,entity)
+    if type(position) is not int or position not in (1,2,3):
+        raise ValueError("Endpoint positions must be 1, 2 or 3")
+    obj.getPoint(entity,position)
+    return entity,position
+
+def bounded_box_points(obj, ids):
+    for i in ids:
+        box=obj.Geometry[i].toShape().BoundBox
+        for x in (box.XMin,box.XMax):
+            for y in (box.YMin,box.YMax):yield App.Vector(number(x),number(y),0)
+
 def edit(obj, request):
     require(obj)
     operation=request["op"]
-    if operation=="sketch_plane":
+    if operation=="sketch_mirror":
+        ids=selection(obj,request["indices"]);axis=request["axis"]
+        g=curve_index(obj,axis)
+        if g.TypeId!="Part::GeomLineSegment" or g.length()<1e-7:
+            raise ValueError("Mirror axis must be a current sketch line or X/Y axis")
+        if obj.GeometryCount+len(ids)>MAX_GEOMETRY or obj.ConstraintCount*2>MAX_CONSTRAINTS:
+            raise ValueError("Mirror exceeds the geometry or constraint budget")
+        origin=g.StartPoint;direction=g.EndPoint-origin;direction.normalize()
+        for p in bounded_box_points(obj,ids):
+            reflected=origin+direction*((p-origin).dot(direction))*2-(p-origin)
+            number(reflected.x);number(reflected.y)
+        obj.addSymmetric(ids,axis,0)
+    elif operation=="sketch_array":
+        ids=selection(obj,request["indices"]);cols=request["columns"];rows=request["rows"]
+        if type(cols) is not int or type(rows) is not int or cols<1 or rows<1 or not 2<=cols*rows<=64:
+            raise ValueError("Use 2 to 64 total array cells with positive rows and columns")
+        step=point(request["step"]);ratio=number(request.get("ratio",1),1000);spacing=request.get("constrain_spacing",False)
+        if step.Length<1e-7 or ratio<=1e-7 or type(spacing) is not bool:
+            raise ValueError("Array spacing must be nonzero with a positive perpendicular scale")
+        copies=cols*rows-1
+        if obj.GeometryCount+copies*(len(ids)+(1 if spacing else 0))>MAX_GEOMETRY or obj.ConstraintCount*(copies+1)+(8*copies if spacing else 0)>MAX_CONSTRAINTS:
+            raise ValueError("Array exceeds the geometry or constraint budget")
+        for p in bounded_box_points(obj,ids):
+            for col in (0,cols-1):
+                for row in (0,rows-1):
+                    number(p.x+col*step.x+row*step.y*ratio)
+                    number(p.y+col*step.y-row*step.x*ratio)
+        # Upstream's first size argument follows the displacement (columns).
+        obj.addRectangularArray(ids,step,False,cols,rows,spacing,ratio)
+    elif operation=="sketch_driving":
+        constraint=index(request["index"],obj.ConstraintCount);value=request["value"]
+        if type(value) is not bool or obj.Constraints[constraint].Type not in DIMENSIONS:
+            raise ValueError("Driving/reference controls require a dimensional constraint and true or false")
+        obj.setDriving(constraint,value)
+    elif operation=="sketch_plane":
         if obj.MapMode!="Deactivated":raise ValueError("Detach the sketch before changing its free plane")
         rotations={"XY":App.Rotation(),"XZ":App.Rotation(App.Vector(1,0,0),90),
                    "YZ":App.Rotation(App.Vector(0,1,0),90)}
@@ -226,10 +289,18 @@ def edit(obj, request):
         kind=request["kind"];args=request.get("args")
         signatures={"Horizontal":1,"Vertical":1,"Coincident":4,"Parallel":2,
                     "Perpendicular":2,"Tangent":2,"Equal":2,"Distance":2,
-                    "Radius":2,"Diameter":2,"Angle":2}
-        if kind not in signatures or not isinstance(args,list) or len(args)!=signatures[kind]:
+                    "Radius":2,"Diameter":2,"Angle":2,"Symmetric":5}
+        if kind not in signatures or not isinstance(args,list) or (len(args)!=signatures[kind] and not (kind=="Symmetric" and len(args)==6)):
             raise ValueError("Unsupported constraint or argument count")
-        if kind=="Coincident":
+        if kind=="Symmetric":
+            first=point_ref(obj,args[0],args[1]);second=point_ref(obj,args[2],args[3])
+            if first==second:raise ValueError("Symmetry requires two different point references")
+            args=list(first)+list(second)+[constraint_index(obj,args[4])]
+            if len(request["args"])==6:
+                args=list(first)+list(second)+list(point_ref(obj,request["args"][4],request["args"][5]))
+            elif curve_index(obj,args[4]).TypeId!="Part::GeomLineSegment":
+                raise ValueError("Symmetry axis must be a sketch line")
+        elif kind=="Coincident":
             args=[constraint_index(obj,args[0]),args[1],constraint_index(obj,args[2]),args[3]]
             if any(type(p) is not int or p not in (1,2,3) for p in (args[1],args[3])):
                 raise ValueError("Endpoint positions must be 1, 2 or 3")
@@ -244,6 +315,8 @@ def edit(obj, request):
         obj.delConstraint(index(request["index"],obj.ConstraintCount))
     elif operation=="sketch_datum":
         constraint=index(request["index"],obj.ConstraintCount)
+        if not obj.getDriving(constraint):
+            raise ValueError("Reference dimensions follow geometry; make the dimension driving before editing its datum")
         value=request["value"]
         if not isinstance(value,str) or len(value)>128:raise ValueError("Use a dimension such as 30 mm or 45 deg")
         quantity=App.Units.Quantity(value)
@@ -271,7 +344,9 @@ def summary(obj):
             "support":[{"object":link.Name,"elements":list(names)} for link,names in obj.AttachmentSupport],
             "external":[{"reference_index":i,"geometry_index":-3-i,"object":link.Name,"elements":list(names)} for i,(link,names) in enumerate(obj.ExternalGeometry)],
             "geometry":[{"index":i,"type":g.TypeId,"construction":obj.getConstruction(i)} for i,g in enumerate(obj.Geometry)],
-            "constraints":[{"index":i,"type":c.Type,"value":float(c.Value)} for i,c in enumerate(obj.Constraints)]}
+            "constraints":[{"index":i,"type":c.Type,"value":float(c.Value),
+                            "driving":obj.getDriving(i) if c.Type in DIMENSIONS else None,
+                            "unit":"rad" if c.Type=="Angle" else "mm" if c.Type in DIMENSIONS else None} for i,c in enumerate(obj.Constraints)]}
 
 def preview(obj):
     require(obj)

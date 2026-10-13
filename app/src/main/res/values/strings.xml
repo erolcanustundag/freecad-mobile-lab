@@ -83,7 +83,10 @@
   <string name="ui_691d6ea15007" formatted="false">". Detach or delete the dependent feature first."</string>
   <string name="ui_7b9412a1d7de" formatted="false">". Export LINE/CIRCLE/ARC or straight LWPOLYLINE geometry."</string>
   <string name="ui_efb074ed9d56" formatted="false">". Type Help."</string>
+  <string name="ui_7877b52ee208" formatted="false">"0 3 2 10 0 1 false"</string>
   <string name="ui_e4beb417c20d" formatted="false">"0 30 mm"</string>
+  <string name="ui_31c945f26e8f" formatted="false">"0 Y"</string>
+  <string name="ui_94b3fd2797d7" formatted="false">"0 false"</string>
   <string name="ui_b5000dc0170c" formatted="false">"0 true"</string>
   <string name="ui_6f6a567d5569" formatted="false">"1 finger: orbit   ·   pinch: zoom   ·   2 fingers: pan"</string>
   <string name="ui_506cff3dfeb1" formatted="false">"18 mm comfort ring"</string>
@@ -153,6 +156,7 @@
   <string name="ui_c50db34b868b" formatted="false">"ArrayCurve · distribute copies on a curve"</string>
   <string name="ui_0639948033ad" formatted="false">"At most 64 document variables"</string>
   <string name="ui_0fad526e32cf" formatted="false">"At most 64 spline poles"</string>
+  <string name="ui_c952be0e936a" formatted="false">"At most32 source indices"</string>
   <string name="ui_7ed6da7e72d5" formatted="false">"Attach to planar face"</string>
   <string name="ui_2f0f329fa335" formatted="false">"Attachment offset"</string>
   <string name="ui_58b9ff3fe0e6" formatted="false">"Automatic · software frame timing"</string>
@@ -446,6 +450,8 @@
   <string name="ui_a4d3311befbe" formatted="false">"Drawing sheet"</string>
   <string name="ui_2ef65654c711" formatted="false">"Drawing title/notes contain an invalid XML character"</string>
   <string name="ui_ea28e064d267" formatted="false">"Drawing · A4 dimensioned SVG sheet"</string>
+  <string name="ui_5ff69e94e9e7" formatted="false">"Driving"</string>
+  <string name="ui_a04cb2e5e2c5" formatted="false">"Driving / reference dimension"</string>
   <string name="ui_972d57379db3" formatted="false">"Duplicate"</string>
   <string name="ui_8b28230e28ec" formatted="false">"Duplicate FCStd entries"</string>
   <string name="ui_eae29560e1e0" formatted="false">"Duplicate dx dy dz"</string>
@@ -853,6 +859,7 @@
   <string name="ui_03fc6d3db034" formatted="false">"Mirror copy"</string>
   <string name="ui_48065392c2e7" formatted="false">"Mirror copy across plane"</string>
   <string name="ui_ef4038389812" formatted="false">"Mirror pointX pointY pointZ normalX normalY normalZ"</string>
+  <string name="ui_892d7a64b2a3" formatted="false">"Mirror sketch geometry"</string>
   <string name="ui_5e2a63c36aac" formatted="false">"Missing closing parenthesis"</string>
   <string name="ui_fbab88ba15fd" formatted="false">"Missing component "</string>
   <string name="ui_1468442e0847" formatted="false">"Missing expression value"</string>
@@ -1115,6 +1122,7 @@
   <string name="ui_c158695a64ad" formatted="false">"Rectangle"</string>
   <string name="ui_fc22e39ad37e" formatted="false">"Rectangle bezel"</string>
   <string name="ui_da335870846f" formatted="false">"Rectangular UV patch trim"</string>
+  <string name="ui_f79253c8dec0" formatted="false">"Rectangular sketch array"</string>
   <string name="ui_471b94d402d1" formatted="false">"Redo"</string>
   <string name="ui_d00c1074c0b3" formatted="false">"Reference samples"</string>
   <string name="ui_86f6ce133bd3" formatted="false">"Reference samples · added to workspace"</string>
@@ -1301,7 +1309,7 @@
   <string name="ui_b7152342a267" formatted="false">"Size"</string>
   <string name="ui_32fd056d3d4b" formatted="false">"Sketch"</string>
   <string name="ui_1901b5459594" formatted="false">"Sketch B-spline"</string>
-  <string name="ui_dd764c3b7b6e" formatted="false">"Sketch Profile\nSketchLine Profile 0 0 30 0\nSketchCircle Profile 10 10 5\nSketchArc Profile 0 0 10 0 180\nSketchEllipse Profile 0 0 20 10\nSketchSpline Profile 3 0,0;10,20;20,20;30,0 [1,2,2,1]\nConstruction Profile 0 true\nConstraint Profile Horizontal 0\nConstraint Profile Coincident 0 1 -1 1\nConstraint Profile Distance 0 30\nDatum Profile 2 40 mm\nMovePoint Profile 0 2 40 0\nDeleteGeometry Profile 0\nDeleteConstraint Profile 0\nSketchPreview Profile\nSketchPlane Profile XZ 0 0 10\nSketchPlacement Profile 0 0 0 0 0 0\nSketchAttach Profile Solid Face6\nSketchOffset Profile 0 0 2 0 0 0\nSketchDetach Profile\nExternal Profile Solid Edge9\nConstraint Profile Coincident 0 1 -3 1\nDeleteExternal Profile 0\nSketchTrim Profile 0 5 0\nSketchExtend Profile 0 5 2\nSketchFillet Profile 0 1 8 0 10 2 2\nSketchSplit Profile 0 5 0\n\nGeometry/constraint indices start at 0. Constraint angles use degrees; dimensions use mm. Datum accepts units. Preview uses sketch-local XY coordinates. External projected edges use -3, -4, etc.; DeleteExternal uses reference indices 0, 1, etc. Placement/offset rotations use yaw pitch roll degrees. Detach preserves current world placement. Native solver edits, Undo/Redo and FCStd save/open are supported."</string>
+  <string name="ui_7686de29200d" formatted="false">"Sketch Profile\nSketchLine Profile 0 0 30 0\nSketchCircle Profile 10 10 5\nSketchArc Profile 0 0 10 0 180\nSketchEllipse Profile 0 0 20 10\nSketchSpline Profile 3 0,0;10,20;20,20;30,0 [1,2,2,1]\nConstruction Profile 0 true\nConstraint Profile Horizontal 0\nConstraint Profile Coincident 0 1 -1 1\nConstraint Profile Distance 0 30\nDatum Profile 2 40 mm\nMovePoint Profile 0 2 40 0\nDeleteGeometry Profile 0\nDeleteConstraint Profile 0\nSketchPreview Profile\nSketchPlane Profile XZ 0 0 10\nSketchPlacement Profile 0 0 0 0 0 0\nSketchAttach Profile Solid Face6\nSketchOffset Profile 0 0 2 0 0 0\nSketchDetach Profile\nExternal Profile Solid Edge9\nConstraint Profile Coincident 0 1 -3 1\nDeleteExternal Profile 0\nSketchTrim Profile 0 5 0\nSketchExtend Profile 0 5 2\nSketchFillet Profile 0 1 8 0 10 2 2\nSketchSplit Profile 0 5 0\nSketchMirror Profile 0,1 Y\nSketchArray Profile 0 3 2 10 0 1 false\nConstraint Profile Symmetric 0 1 0 2 -2\nConstraint Profile Symmetric 0 1 1 2 -1 1\nDriving Profile 0 false\n\nGeometry/constraint indices start at 0. Constraint angles use degrees; dimensions use mm. Datum accepts units. Preview uses sketch-local XY coordinates. External projected edges use -3, -4, etc.; DeleteExternal uses reference indices 0, 1, etc. Placement/offset rotations use yaw pitch roll degrees. Detach preserves current world placement. Native solver edits, Undo/Redo and FCStd save/open are supported."</string>
   <string name="ui_54960a0cbf8a" formatted="false">"Sketch arc"</string>
   <string name="ui_71d0880598e2" formatted="false">"Sketch circle"</string>
   <string name="ui_06359beba4bf" formatted="false">"Sketch command help"</string>
@@ -1318,6 +1326,8 @@
   <string name="ui_7dfcbad361c2" formatted="false">"Sketch-local XY · drag to pan · pinch to zoom · cyan construction curves"</string>
   <string name="ui_62bf6022cab6" formatted="false">"Sketch-local XY · drag to pan · pinch to zoom · cyan construction · magenta external edges"</string>
   <string name="ui_98e85eca1e52" formatted="false">"SketchArc"</string>
+  <string name="ui_549197ede452" formatted="false">"SketchArray"</string>
+  <string name="ui_85280d7d317f" formatted="false">"SketchArray SKETCH INDICES COLUMNS ROWS DX DY PERPSCALE [true|false]"</string>
   <string name="ui_9b135ee0e564" formatted="false">"SketchAttach"</string>
   <string name="ui_21b7ae6064c5" formatted="false">"SketchCircle"</string>
   <string name="ui_55d149894b2d" formatted="false">"SketchDetach"</string>
@@ -1325,6 +1335,7 @@
   <string name="ui_7917e1a96e81" formatted="false">"SketchExtend"</string>
   <string name="ui_50cbf2ae3714" formatted="false">"SketchFillet"</string>
   <string name="ui_70c08eeed40e" formatted="false">"SketchLine"</string>
+  <string name="ui_418a6b383578" formatted="false">"SketchMirror"</string>
   <string name="ui_4dea8b777488" formatted="false">"SketchOffset"</string>
   <string name="ui_d3150aa9f8b4" formatted="false">"SketchPad"</string>
   <string name="ui_8f5293b9a38c" formatted="false">"SketchPlacement"</string>
@@ -1398,6 +1409,10 @@
   <string name="ui_eeffba1bc4d9" formatted="false">"Sweep solid"</string>
   <string name="ui_d2cf80a4de9d" formatted="false">"Sweep surface"</string>
   <string name="ui_06183458dae1" formatted="false">"Switched to software 3D"</string>
+  <string name="ui_20dea5b40aa0" formatted="false">"Symmetric"</string>
+  <string name="ui_341814c9930f" formatted="false">"Symmetric 0 1 0 2 -2"</string>
+  <string name="ui_bddc176f66b8" formatted="false">"Symmetric uses two point pairs and an axis, or three point pairs"</string>
+  <string name="ui_d028323f9ec6" formatted="false">"Symmetry constraint"</string>
   <string name="ui_102b068eeea6" formatted="false">"System exit records unavailable: "</string>
   <string name="ui_b48813fa0aec" formatted="false">"TOP"</string>
   <string name="ui_7ef1446b5f4a" formatted="false">"Tangent"</string>
@@ -1533,6 +1548,7 @@
   <string name="ui_68f1fb85d13b" formatted="false">"Use a plain STEP filename"</string>
   <string name="ui_cc082228eb12" formatted="false">"Use a single-line title (100 characters) and notes (200 characters)"</string>
   <string name="ui_7dcb3f42d312" formatted="false">"Use phone language"</string>
+  <string name="ui_e38373766d86" formatted="false">"Use true or false"</string>
   <string name="ui_0a48601b91af" formatted="false">"Use x,y pole pairs"</string>
   <string name="ui_cbd3f9386e07" formatted="false">"V end fraction"</string>
   <string name="ui_95f4def2f451" formatted="false">"V fraction"</string>

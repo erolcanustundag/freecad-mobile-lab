@@ -11,3 +11,5 @@ The document-lab recovery roles use stable metadata and accept clicks while busy
 Validation: Java/APK compilation and portable locale/alias tests; physical language switching, font layout and process resumption still need Android testing.
 
 1.2-rc4 adds sketch plane/placement, planar attachment/offset/detach and external-reference tools/guides in EN/TR/DE. Reviewed Turkish/German UI catalogues now contain665 entries each;1,625 English fallback keys. Native technical errors still use English fallback. Device language/layout tests remainNOT_RUN.
+
+1.3 adds pattern/symmetry/reference controls and guides in EN/TR/DE;673 reviewed TR/DE strings each and1649 English fallback keys. Device language/layout qualification remains pending.
