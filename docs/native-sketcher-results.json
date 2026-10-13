@@ -1,10 +1,10 @@
 {
-  "version": "1.11",
-  "version_code": 37,
+  "version": "1.12",
+  "version_code": 38,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "checks": {
-    "sketcher_jni_solver_geometry_fcstd": 2224,
+    "sketcher_jni_solver_geometry_fcstd": 2324,
     "part_jni_regressions": 269,
     "metadata_jni_regressions": 88,
     "python_tools_regressions": 62,
@@ -43,8 +43,8 @@
   "fixtures": [
     {
       "path": "samples/upstream-sketcher/Sketch.FCStd",
-      "size": 15649,
-      "sha256": "0beb46d27c1b0190aa8f465084dae6a92ceb6547352d0b341f2b572ea9803cb1"
+      "size": 15650,
+      "sha256": "27c25fc3b562de4e124a92ed07decc3560cb9971c7352d73ff50a7cb7e4bef6f"
     },
     {
       "path": "samples/upstream-sketcher/preview.json",
@@ -54,7 +54,7 @@
     {
       "path": "samples/upstream-sketcher/Attachments.FCStd",
       "size": 15615,
-      "sha256": "8573da2d644bb301c6434f64a25c1ca45771f654aec896560d8b7ba080a75236"
+      "sha256": "456f6343b8e38a46a166d240fc8e3698ddab9002e82e65e1894a9eac9b2d91e9"
     },
     {
       "path": "samples/upstream-sketcher/attachment-preview.json",
@@ -63,58 +63,63 @@
     },
     {
       "path": "samples/upstream-sketcher/SketchTools.FCStd",
-      "size": 20590,
-      "sha256": "a328ba5e104f0a05250cb67e6cb0c067ca0ba426778ac5d87777943a76c0a81b"
+      "size": 20592,
+      "sha256": "ca2023c6c42e639aa869a160ef5eee417fdf0ba5fe5babd91272e5747d9e6101"
     },
     {
       "path": "samples/upstream-sketcher/PatternTools.FCStd",
-      "size": 32268,
-      "sha256": "4263d5b9452e99f3005799b06adb55ad0fa46162c98272068a00f37cd69348e7"
+      "size": 32247,
+      "sha256": "318d0cc46acedab8135faa3ddfc7410c65dcd657ad766601e6906c57a456a7aa"
     },
     {
       "path": "samples/upstream-sketcher/ReferenceDimension.FCStd",
-      "size": 32268,
-      "sha256": "baba53f8fa996d705e40e71f96898bb523e664a231d32de20496e4decadb1c7d"
+      "size": 32247,
+      "sha256": "04c28081b15f86aaf62b0699d7cb4922886e6f72466304bb494904c5491f907d"
     },
     {
       "path": "samples/upstream-sketcher/ConstraintTools.FCStd",
-      "size": 42529,
-      "sha256": "25aefbdbe4820306e9aaef911bd830f2395df2b8ae8d5d5421ccb565f63327cd"
+      "size": 42549,
+      "sha256": "95de3134f98c72e507e182d38ee987d4d6b512e5e98dfff06e7d8ffb16283117"
     },
     {
       "path": "samples/upstream-sketcher/NamedProfiles.FCStd",
       "size": 8636,
-      "sha256": "c3ec8c4e1105c885d12d92dba12220537243aecfb6a9d62baaf8b19dfa2e0e45"
+      "sha256": "cd2a4e044b719400fd1116cf945a1352b6f8dd32bf9ae4f98a4a0c74d6967a0e"
     },
     {
       "path": "samples/upstream-sketcher/SolidControls.FCStd",
-      "size": 10268,
-      "sha256": "3352ad048953dd81e78dd4a914191d0be30d9b64d6d42d05d2f70e32f57c96f2"
+      "size": 10266,
+      "sha256": "b0c5990ff83e4951e7bd7fe8ccfbfcf291f598b8832eaf3f35f683536b0cce5a"
     },
     {
       "path": "samples/upstream-sketcher/NativeFinishing.FCStd",
-      "size": 22766,
-      "sha256": "5f8df207353b80488b4c605e355f528489751596dccd739c3a6ea7d11d9d8a7a"
+      "size": 22768,
+      "sha256": "afefb5b4f4bbf6c5be9186cb95dacb2fe662a3771d81fc7c44ead73e45558ed6"
     },
     {
       "path": "samples/upstream-sketcher/SectionTools.FCStd",
-      "size": 29126,
-      "sha256": "329e1510b197a17daa005f0ad5426fcbbb812c8601a5b3cc0da1a72cc07fa0fb"
+      "size": 29123,
+      "sha256": "ec54f8b6348a22ff63c7879689e4381a93474ecf568a3cf72ceff98da3004737"
     },
     {
       "path": "samples/upstream-sketcher/SurfaceTools.FCStd",
-      "size": 46394,
-      "sha256": "968a695df82a51f61e78d112634b7e588f7c1e87c5b48ca52fb873e84e871d29"
+      "size": 46384,
+      "sha256": "c700824690e84a51e20e20d3bafdb0ff887f64f6654e91d20d0bca73b014d4f5"
     },
     {
       "path": "samples/upstream-sketcher/FabricationTools.FCStd",
-      "size": 57786,
-      "sha256": "2ec0d610024d82691f1f97ea58237377aa3ebe4881508ce6869e5492c6d97ffc"
+      "size": 57776,
+      "sha256": "1c39454a50b8474424aa262c58169ca79c16121962d16b0c88a3465cffa95cbd"
     },
     {
       "path": "samples/upstream-sketcher/PrimitiveTools.FCStd",
-      "size": 67782,
-      "sha256": "2f844384739ac14bfcc49a658d17c8872ce3af058753ac57966ca0b379852f8a"
+      "size": 67767,
+      "sha256": "2086c5dd2bc57528d2bf5b76b5aa66c08596df165f6231f66cbce38ec7dec3fb"
+    },
+    {
+      "path": "samples/upstream-sketcher/StockCurveTools.FCStd",
+      "size": 88622,
+      "sha256": "02846644c3ffed12f53858cbd836e53c10146b2568488a5073877336d0797e1f"
     }
   ],
   "attachment_scopes": [
@@ -214,6 +219,26 @@
     "volume_policy": "volume sums absolute integrals of closed component solids; oriented_volume_mm3 preserves signs. Compound overlaps count separately.",
     "guards": "Numeric polygon/dimension/offset edits guarded before native recompute; polygon side expressions unsupported; oversized saved polygon rejected before load.",
     "tests": "Native source updates, seam removal, oriented normals, component volumes, tiny/large input rejection, cycles/deletion, undo/redo, atomic batch rollback, FCStd and STEP",
+    "android": "NOT_RUN"
+  },
+  "stock_curve_tools": {
+    "types": [
+      "Part::Prism",
+      "Part::Wedge",
+      "Part::Helix",
+      "Part::Spiral"
+    ],
+    "limits": {
+      "prism_sides": [
+        3,
+        128
+      ],
+      "curve_turns": 16,
+      "coordinate_mm": 1000000
+    },
+    "native_curve_policy": "Original B-spline approximations and native numerical integrals retained; sampled display only. Helix one-turn segments, cylindrical/handedness; spiral nonnegative growth and positive radius/turns.",
+    "precompute": "Coupled guards before immediate onChanged setters; safe settings assignment order; FCStd curve/polygon preload guards; side/curve parameter expressions unsupported.",
+    "geometry_tests": "Analytic prism/wedge volumes; helix radius/length/endpoints/handedness; bounded poles; genuine helix Sweep; spiral endpoints; parent/history/rollback/FCStd/STEP",
     "android": "NOT_RUN"
   }
 }

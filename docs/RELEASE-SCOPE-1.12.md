@@ -1,0 +1,7 @@
+# Mobile release1.12/code38
+
+Four original Part scopes: regular polygon prism, tapered wedge, cylindrical helix and planar growing spiral. Commands, native parameter editing, placement, dependency protection, Undo/Redo and native FCStd persistence. Spatial wire paths can drive linked original Part Sweep. Main custom workspace remains separate from this isolated document lab.
+
+Limits: prism3–128 sides with positive radius/height. Wedge positive base spans and nonnegative top spans; Distance fields bounded. Helix up to16 turns with one-turn segments; cylindrical only and explicit handedness. Spiral up to16 turns, positive start radius and nonnegative growth. Scoped dimensionless rotation quantity edits; native B-spline curve approximations and numerical measurement errors retained/disclosed. Native onChanged can recompute immediately; coupled settings use a safe assignment order, and scalar edits/FCStd restore are checked before native computation. Curve parameter expressions unsupported.
+
+2324 reference JNI geometry/dependency/history/rollback/FCStd/STEP checks,269 Part/88 App/62 Python regressions,3 locale and9 packaging checks pass.711 reviewed Turkish/German entries and3 guides. Native Android binaries unchanged. Android1.12 launch/lifecycle/touch/SAF NOT_RUN. Full Part/PartDesign/Assembly/FreeCAD/Rhino parity NOT_COMPLETE. F-Droid NOT_SUBMITTED. Compatible private development signing key retained and excluded from public code/assets.

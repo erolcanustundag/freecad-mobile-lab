@@ -361,10 +361,12 @@
   <string name="ui_c932b089985d" formatted="false">"Native Kantenfase"</string>
   <string name="ui_4986bec31286" formatted="false">"Native Kantenverrundung"</string>
   <string name="ui_b3af5027c8b4" formatted="false">"Natives Ellipsoid"</string>
+  <string name="ui_e59ed0259cee" formatted="false">"Native Helix"</string>
   <string name="ui_55e081e59f06" formatted="false">"Originaler Schnitt"</string>
   <string name="ui_d3b5118746d9" formatted="false">"Natives verknüpftes Formaggregat"</string>
   <string name="ui_076b33cd0a39" formatted="false">"Native verknüpfte Verfeinerung"</string>
   <string name="ui_63820c66c59c" formatted="false">"Nativer planarer Versatz"</string>
+  <string name="ui_83b45dd30df6" formatted="false">"Natives Polygonprisma"</string>
   <string name="ui_552bb9b436d4" formatted="false">"Native Profilverbindung"</string>
   <string name="ui_fd05ef19d4f2" formatted="false">"Native Profilführung"</string>
   <string name="ui_683715f9cd2e" formatted="false">"Native Verfeinerungskopie"</string>
@@ -375,8 +377,10 @@
   <string name="ui_95917cac62a7" formatted="false">"Nativer Formschnitt"</string>
   <string name="ui_266b14b41bae" formatted="false">"Nativer Volumenkörperversatz"</string>
   <string name="ui_c2c2cc1eb77b" formatted="false">"Native Kugel"</string>
+  <string name="ui_5d6d243f6ba5" formatted="false">"Native Spirale"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Nativer Torus"</string>
   <string name="ui_7aaa9ab32d7f" formatted="false">"Originale Vereinigung"</string>
+  <string name="ui_72a680321ead" formatted="false">"Nativer Keil"</string>
   <string name="ui_b3b46e64b67d" formatted="false">"Navigationswürfel"</string>
   <string name="ui_6403f2b7eb2a" formatted="false">"Neu"</string>
   <string name="ui_0e06e5aa9fcd" formatted="false">"Neues Makro"</string>

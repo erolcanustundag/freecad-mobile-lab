@@ -1,6 +1,6 @@
 # FreeCAD Mobile Lab — complete desktop parity roadmap
 
-Updated 13 October 2026. Current native checkpoint: **1.11 / code37**. Product1.0 was the first public mobile feature release. B01–B04 and the bounded original Part/Sketcher sub-batches below have host evidence; broader workbench/device parity and the original comprehensive qualification milestone remain **NOT COMPLETE**. The user previously reported startup works on their phone; automated execution of1.11 isNOT_RUN. English, Turkish and German UI/guides are supported. See LANGUAGES.md, RHINO-GAPS.md and RELEASE-SCOPE-1.0.md.
+Updated 13 October 2026. Current native checkpoint: **1.12 / code38**. Product1.0 was the first public mobile feature release. B01–B04 and the bounded original Part/Sketcher sub-batches below have host evidence; broader workbench/device parity and the original comprehensive qualification milestone remain **NOT COMPLETE**. The user previously reported startup works on their phone; automated execution of1.12 isNOT_RUN. English, Turkish and German UI/guides are supported. See LANGUAGES.md, RHINO-GAPS.md and RELEASE-SCOPE-1.0.md.
 
 ## Baseline and scope
 
@@ -167,3 +167,6 @@ Finite planar section helpers, world-space wire previews, exact current face/edg
 
 ###1.11 — native primitives and orientation sub-batch
 2224 genuine checks cover original regular polygons (3–128 sides), ellipsoid XYZ semiaxes, linked Refine and linked Reverse. Geometry, dependent updates, world placement, orientation/positive component volume distinctions, numeric/preload bounds, history/rollback, FCStd and STEP are tested. Native ellipsoid integration has finite error and conservative BRep bounds; no ideal analytic measurement is substituted.707 reviewedTR/DE strings/3guides. Full Part/PartDesign/Assembly/device parity remains pending. Next: investigate original PartDesign dependencies and runtime types, while expanding bounded Part primitives according to actual native API proof.
+
+###1.12 — native stock and spatial curve sub-batch
+2324 genuine native checks cover prism, wedge, cylindrical handed helix and planar spiral; analytic/numerical geometry, immediate setter guards/safe coupled settings, dependent helical Sweep, native history/rollback/FCStd/STEP.711 reviewedTR/DE entries/3guides. Native binaries unchanged; Android1.12 and full Part/PartDesign/Assembly/device qualification pending. Next priority: actual original PartDesign host/ARM64 module prerequisite, Body/Tip semantics and linked Pad/Pocket fixtures, subject to native build/API proof.

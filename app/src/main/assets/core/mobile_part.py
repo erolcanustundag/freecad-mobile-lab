@@ -2,6 +2,7 @@
 """Bounded adapter to genuine upstream Part. Never substitutes mobile OCCT recipes."""
 import math
 import re
+import mobile_primitives
 from pathlib import Path
 try:
     import Part
@@ -10,6 +11,7 @@ except ImportError:
 
 TYPES = {"Part::Feature", "Part::Box", "Part::Cylinder", "Part::Sphere", "Part::Cone",
          "Part::Torus", "Part::Cut", "Part::Fuse", "Part::Common", "Part::Extrusion", "Part::Revolution", "Part::Fillet", "Part::Chamfer", "Part::Section", "Part::Plane", "Part::Loft", "Part::RuledSurface", "Part::Offset", "Part::Mirroring", "Part::Sweep", "Part::Thickness", "Part::Offset2D", "Part::Compound", "Part::RegularPolygon", "Part::Ellipsoid", "Part::Refine", "Part::Reverse"}
+TYPES.update(mobile_primitives.TYPES)
 
 def available():
     return Part is not None
@@ -112,6 +114,15 @@ def profile(source, require_constrained=False):
 
 def validate_document(doc):
     for obj in doc.Objects:
+        if obj.TypeId in mobile_primitives.TYPES:
+            mobile_primitives.validate(obj.TypeId,mobile_primitives.parameters(obj))
+            info=shape_info(obj)
+            if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]):raise ValueError("Primitive geometry must be valid and bounded")
+            if obj.TypeId in ("Part::Prism","Part::Wedge"):
+                if info["solids"]!=1 or info["volume"] is None or not 1e-9<info["volume"]<1e18:raise ValueError("Prism/wedge must produce one closed solid")
+            else:
+                if obj.Shape.Faces or len(obj.Shape.Wires)!=1 or len(obj.Shape.Edges)>64:raise ValueError("Helix/spiral must produce one bounded native wire")
+                for edge in obj.Shape.Edges:curve_budget(edge)
         if obj.TypeId in ("Part::RegularPolygon","Part::Ellipsoid","Part::Refine","Part::Reverse"):
             if obj.TypeId=="Part::RegularPolygon":
                 validate_edit(obj,"Polygon",obj.Polygon)
@@ -215,6 +226,7 @@ def shape_info(obj):
 
 def validate_edit(obj,name,value):
     """Precompute guards for the bounded native scalar tools, in mm/degrees."""
+    mobile_primitives.validate_edit(obj,name,value)
     if obj.TypeId=="Part::RegularPolygon" and name=="Polygon":
         if type(value) is not int or not 3<=value<=128:raise ValueError("Polygon needs3–128 integer sides")
     elif obj.TypeId=="Part::RegularPolygon" and name=="Circumradius":

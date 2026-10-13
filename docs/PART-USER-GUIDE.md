@@ -69,3 +69,9 @@ PartEllipsoid Oval 3 4 2 uses XYZ semiaxes in mm. Native property names map X=Ra
 PartLinkedRefine Solid Clean creates an original linked Part::Refine which recomputes when its source changes; PartRefine remains an independent snapshot.
 PartReverse Solid Reversed flips native orientation, including normals; it keeps world position and follows source edits. It does not repair mesh topology or convert open surfaces into solids. ShapeInfo volume is the sum of positive closed-component volumes; oriented_volume_mm3 keeps the signed native integral. Compounds aggregate overlapping components and are not Boolean unions. Open wires/surfaces report no enclosed volume.
 New tools are in Original Part in the isolated document lab, with command access, Undo/Redo and FCStd persistence. Android touch execution for this release is not yet automated.
+
+Native stock and spatial curves (1.12)
+PartPrism Stock 6 2 10 creates an original regular polygon prism (sides, circumradius, height in mm). Side edits3–128; positive dimensions, native Undo/Redo and placement.
+PartWedge Stock 10 10 10 2 8 2 8 uses base XYZ spans and top Xmin/Xmax/Zmin/Zmax in mm. At Y=0 it has the base rectangle; at Y=DY the top rectangle. Edit original Xmin/Ymin/Zmin/Xmax/Ymax/Zmax/X2min/X2max/Z2min/Z2max Distance properties.
+PartHelix Path 2 6 5 false uses pitch, height, radius and left-handed boolean. HelixSettings Path 3 6 5 true edits them together. Cylindrical only, up to16 turns, one-turn segments; original B-spline curves are retained and preview is sampled. Native path profiles can feed PartSweep.
+PartSpiral Scroll 3 2 3 uses start radius, nonnegative growth per turn and turns (up to16). SpiralSettings Scroll 3 1 3.5 or Set Scroll.Rotations 4. Turns are dimensionless; parameter expressions are unsupported for these curves. Native kernels approximate these curves with B-splines; measurements have numerical error. Stored curve parameters are checked before FCStd loading/recomputation.

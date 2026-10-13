@@ -16,6 +16,7 @@ import FreeCAD as App
 import mobile_features
 import mobile_python
 import mobile_part
+import mobile_primitives
 import mobile_sketch
 
 OBJECT_TYPES = {"App::FeaturePython", "App::DocumentObjectGroup", "App::Link", "App::VarSet"}
@@ -89,7 +90,7 @@ def _value(obj, name):
 
 
 def _supported_property(obj,name,kind):
-    return kind in PROPERTY_TYPES or kind=="App::PropertyQuantity" and obj.TypeId=="Part::Thickness" and name=="Value" or kind=="App::PropertyIntegerConstraint" and obj.TypeId=="Part::RegularPolygon" and name=="Polygon"
+    return kind in PROPERTY_TYPES or kind=="App::PropertyQuantity" and obj.TypeId=="Part::Thickness" and name=="Value" or kind=="App::PropertyIntegerConstraint" and obj.TypeId in ("Part::RegularPolygon","Part::Prism") and name=="Polygon" or kind=="App::PropertyQuantityConstraint" and obj.TypeId=="Part::Spiral" and name=="Rotations"
 
 
 def _editable(obj, name):
@@ -131,6 +132,36 @@ def _edit(edit):
     action = edit.get("op")
     if isinstance(action,str) and action.startswith("sketch_"):
         mobile_sketch.edit(_object(edit["object"]),edit)
+    elif action in ("part_prism","part_wedge","part_helix","part_spiral","helix_settings","spiral_settings"):
+        if action.endswith("settings"):
+            obj=_object(edit["object"])
+            if obj.TypeId!=("Part::Helix" if action=="helix_settings" else "Part::Spiral"):raise ValueError("Select the corresponding native curve")
+        else:
+            name=_identifier(edit["name"])
+            if _doc().getObject(name) is not None or len(_doc().Objects)>=1000:raise ValueError("Choose a new native feature name within the1000-object budget")
+        values=edit["values"]
+        if not isinstance(values,list):raise ValueError("Use a native primitive parameter list")
+        values=[mobile_sketch.number(v) for v in values]
+        if action=="part_prism":
+            sides=edit["sides"]
+            if len(values)!=2:raise ValueError("Use prism radius and height")
+            mobile_primitives.validate("Part::Prism",dict(Polygon=sides,Circumradius=values[0],Height=values[1]))
+            obj=_doc().addObject("Part::Prism",name);obj.Polygon=sides;obj.Circumradius=values[0];obj.Height=values[1]
+        elif action=="part_wedge":
+            if len(values)!=7:raise ValueError("Use wedge base XYZ spans and top X/Z ranges")
+            p=dict(zip(mobile_primitives.FIELDS["Part::Wedge"],[0,0,0,values[3],values[5],values[0],values[1],values[2],values[4],values[6]]));mobile_primitives.validate("Part::Wedge",p)
+            obj=_doc().addObject("Part::Wedge",name)
+            for k,v in p.items():setattr(obj,k,v)
+        elif action in ("part_helix","helix_settings"):
+            if len(values)!=3 or type(edit["left"]) is not bool:raise ValueError("Use pitch, height, radius and boolean handedness")
+            mobile_primitives.validate("Part::Helix",dict(Pitch=values[0],Height=values[1],Radius=values[2],Angle=0,SegmentLength=1))
+            if action=="part_helix":obj=_doc().addObject("Part::Helix",name)
+            mobile_primitives.helix_settings(obj,*values,edit["left"])
+        else:
+            if len(values)!=3:raise ValueError("Use spiral radius, growth per turn and turns")
+            mobile_primitives.validate("Part::Spiral",dict(Radius=values[0],Growth=values[1],Rotations=values[2],SegmentLength=1))
+            if action=="part_spiral":obj=_doc().addObject("Part::Spiral",name)
+            mobile_primitives.spiral_settings(obj,*values)
     elif action in ("part_polygon","part_ellipsoid","part_linked_refine","part_reverse"):
         name=_identifier(edit["name"])
         if _doc().getObject(name) is not None or len(_doc().Objects)>=1000:raise ValueError("Choose a new native feature name within the1000-object budget")
@@ -324,6 +355,10 @@ def _edit(edit):
         elif kind == "App::PropertyQuantity":
             q=App.Units.Quantity(str(value));value=float(q.Value if str(q.Unit)=="" else q.getValueAs("mm").Value)
             if not math.isfinite(value) or not 1e-7<abs(value)<=1000000:raise ValueError("Thickness needs a nonzero bounded length")
+        elif kind == "App::PropertyQuantityConstraint":
+            q=App.Units.Quantity(str(value))
+            if q.Unit!=App.Units.Quantity("1").Unit:raise ValueError("Spiral turns must be dimensionless")
+            value=float(q.Value)
         elif kind == "App::PropertyFloatConstraint":
             if obj.TypeId!="Part::Revolution" or name!="Angle":raise ValueError("This constrained scalar is read-only in the mobile adapter")
             q=App.Units.Quantity(str(value))
@@ -351,7 +386,8 @@ def _edit(edit):
     elif action == "expression":
         obj = _object(edit["object"])
         name = _identifier(edit["property"])
-        if obj.TypeId=="Part::RegularPolygon" and name=="Polygon":raise ValueError("Set polygon sides directly within3–128; side expressions are unsupported")
+        if obj.TypeId in ("Part::RegularPolygon","Part::Prism") and name=="Polygon":raise ValueError("Set polygon sides directly within3–128; side expressions are unsupported")
+        if obj.TypeId in ("Part::Helix","Part::Spiral") and name in mobile_primitives.FIELDS[obj.TypeId]:raise ValueError("Set bounded helix/spiral parameters directly; parameter expressions are unsupported")
         if not _supported_property(obj,name,obj.getTypeIdOfProperty(name)) or not _editable(obj,name):
             raise ValueError("Expression property is not editable")
         expr = _text(edit["expression"], 512)
@@ -405,13 +441,25 @@ def _validate_fcstd(path):
             raise ValueError("Workbenches not yet ported: " + ", ".join(str(t) for t in unsupported))
         # Upstream allows INT_MAX polygon sides. Reject oversized restoration
         # before loading/recomputing, rather than allocating that many edges.
-        polygons={o.get("name") for o in tree.findall("./Objects/Object") if o.get("type")=="Part::RegularPolygon"}
+        polygons={o.get("name") for o in tree.findall("./Objects/Object") if o.get("type") in ("Part::RegularPolygon","Part::Prism")}
         for data in tree.findall("./ObjectData/Object"):
             if data.get("name") not in polygons:continue
             p=data.find("./Properties/Property[@name='Polygon']/Integer")
             if p is None or not re.fullmatch(r"[0-9]{1,3}",p.get("value","")) or not 3<=int(p.get("value"))<=128:raise ValueError("Restored polygon needs3–128 sides")
             for expression in data.findall("./Properties/Property[@name='ExpressionEngine']//Expression"):
                 if expression.get("path")=="Polygon":raise ValueError("Restored polygon side expressions are unsupported")
+        curves={o.get("name"):o.get("type") for o in tree.findall("./Objects/Object") if o.get("type") in ("Part::Helix","Part::Spiral")}
+        for data in tree.findall("./ObjectData/Object"):
+            kind=curves.get(data.get("name"))
+            if not kind:continue
+            fields=mobile_primitives.FIELDS[kind];p={}
+            for n in fields:
+                value=data.find("./Properties/Property[@name='"+n+"']/Float")
+                if value is None:raise ValueError("Missing saved native curve parameter")
+                p[n]=float(value.get("value","nan"))
+            mobile_primitives.validate(kind,p)
+            for expression in data.findall("./Properties/Property[@name='ExpressionEngine']//Expression"):
+                if expression.get("path") in fields:raise ValueError("Saved native curve parameter expressions are unsupported")
         # Scripted proxies have a separate portability contract in B04. Do not
         # silently deserialize a proxy whose class/module is not in this port.
         for prop in tree.iter("Property"):
