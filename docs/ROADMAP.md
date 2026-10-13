@@ -155,3 +155,6 @@ Constraint naming, dimensional expression binding, read-only solver/reference in
 
 ###1.7 — native edge finishing sub-batch
 1839 native checks cover linked Part fillet/chamfer, native refinement snapshots and linked shape sections, analytic volumes, dependency updates, empty/error/batch rollback and FCStd. Full Part/PartDesign/device parity stays pending. Next four scopes: native planar-face section helper, wire preview for section results, measured face/edge selection inspection, and editing native finishing selections/radii with topology safeguards.
+
+###1.8 — native section and inspection sub-batch
+Finite planar section helpers, world-space wire previews, exact current face/edge inspection and fillet/chamfer selection/amount edits are implemented. Native analytic sections, helper bounds, history, rollback and FCStd are covered; full Part/PartDesign/device parity remains pending. Next four scopes: linked native loft, ruled surface, offset and shape mirror, subject to original API/geometry validation.

@@ -1,6 +1,7 @@
 <resources>
   <string name="ui_7850fb9418a1" formatted="false">"+ Erstellen"</string>
   <string name="ui_6f6a567d5569" formatted="false">"1 Finger: drehen   ·   Pinch: zoomen   ·   2 Finger: verschieben"</string>
+  <string name="ui_7df766516996" formatted="false">"Native 3D-Drahtvorschau"</string>
   <string name="ui_a6a68b452e5d" formatted="false">"3D-Ansicht"</string>
   <string name="ui_90e50b9b0537" formatted="false">"3MF · sichtbares Netz / mm"</string>
   <string name="ui_3533d09b0914" formatted="false">"Eine vorherige Sitzung ist abgestürzt. Öffnen Sie einen leeren Arbeitsbereich mit Software-3D; das gespeicherte Modell bleibt als Sicherung erhalten. Sie können auch den Bericht unten kopieren."</string>
@@ -166,6 +167,7 @@
   <string name="ui_1adff3072f22" formatted="false">"Dokumentvorgang"</string>
   <string name="ui_4214822e9b88" formatted="false">"Dokumentvariablen"</string>
   <string name="ui_687c82861c95" formatted="false">"Dokumente"</string>
+  <string name="ui_5ff067f4cc1d" formatted="false">"Ziehen zum Drehen · spreizen zum Zoomen · zwei Finger zum Verschieben"</string>
   <string name="ui_06790c4791eb" formatted="false">"Gewichtete Kontrollpunkte in XY ziehen"</string>
   <string name="ui_37a4658d6cec" formatted="false">"XY-Skizze mit Fangraster zeichnen"</string>
   <string name="ui_93aba913bfbb" formatted="false">"Kurve zeichnen"</string>
@@ -182,6 +184,7 @@
   <string name="ui_d2afb6142935" formatted="false">"Bedingungsmaß bearbeiten"</string>
   <string name="ui_b609016dca31" formatted="false">"Graph bearbeiten"</string>
   <string name="ui_a58957e071b0" formatted="false">"Makro bearbeiten"</string>
+  <string name="ui_4c6b1839c0ef" formatted="false">"Native Kantenbearbeitung ändern"</string>
   <string name="ui_9cc1ae872dd0" formatted="false">"Numerische Parameter bearbeiten"</string>
   <string name="ui_c568c20a08f3" formatted="false">"Eigenschaft bearbeiten"</string>
   <string name="ui_add2e9497fe8" formatted="false">"Flächenkontrollpunkt bearbeiten"</string>
@@ -278,6 +281,7 @@
   <string name="ui_24617dd70272" formatted="false">"Python-Datei importieren"</string>
   <string name="ui_f2331487b964" formatted="false">"Aus Dateien importieren"</string>
   <string name="ui_fcf425f09b31" formatted="false">"Innendurchmesser (mm)"</string>
+  <string name="ui_f93e60e895b2" formatted="false">"Native Fläche oder Kante prüfen"</string>
   <string name="ui_f8dfe69a6067" formatted="false">"Skizzenlöser prüfen"</string>
   <string name="ui_9edcffff4461" formatted="false">"Ganzzahl"</string>
   <string name="ui_f61b62753fb3" formatted="false">"Interpolierte Kurve"</string>
@@ -432,6 +436,7 @@
   <string name="ui_7941fe8c6d14" formatted="false">"Drehpunkt Y"</string>
   <string name="ui_f589ef1f2bb6" formatted="false">"Drehpunkt Z"</string>
   <string name="ui_1caac1724986" formatted="false">"Reparatur ebener Löcher"</string>
+  <string name="ui_acad70a03d51" formatted="false">"Planarer Schnitthelfer"</string>
   <string name="ui_2446f554c8a6" formatted="false">"Ebenenpunkt X"</string>
   <string name="ui_0aae9a49aace" formatted="false">"Ebenenpunkt Y"</string>
   <string name="ui_076c628bf59a" formatted="false">"Ebenenpunkt Z"</string>

@@ -1,6 +1,7 @@
 <resources>
   <string name="ui_7850fb9418a1" formatted="false">"+ Oluştur"</string>
   <string name="ui_6f6a567d5569" formatted="false">"1 parmak: döndür   ·   kıstır: yakınlaştır   ·   2 parmak: kaydır"</string>
+  <string name="ui_7df766516996" formatted="false">"3B yerel tel önizlemesi"</string>
   <string name="ui_a6a68b452e5d" formatted="false">"3B görünüm"</string>
   <string name="ui_90e50b9b0537" formatted="false">"3MF · görünür ağ / mm"</string>
   <string name="ui_3533d09b0914" formatted="false">"Önceki oturum çöktü. Yazılımsal 3B görüntüleme ile boş bir çalışma alanı açın; kayıtlı model kurtarma kopyası olarak korunur. Aşağıdaki raporu da kopyalayabilirsiniz."</string>
@@ -166,6 +167,7 @@
   <string name="ui_1adff3072f22" formatted="false">"Belge işlemi"</string>
   <string name="ui_4214822e9b88" formatted="false">"Belge değişkenleri"</string>
   <string name="ui_687c82861c95" formatted="false">"Belgeler"</string>
+  <string name="ui_5ff067f4cc1d" formatted="false">"Döndürmek için sürükleyin · yakınlaştırmak için sıkıştırın · iki parmakla kaydırın"</string>
   <string name="ui_06790c4791eb" formatted="false">"Ağırlıklı kontrol noktalarını XY düzleminde sürükle"</string>
   <string name="ui_37a4658d6cec" formatted="false">"Yakalama ızgarasıyla XY çizimi yap"</string>
   <string name="ui_93aba913bfbb" formatted="false">"Eğri çiz"</string>
@@ -182,6 +184,7 @@
   <string name="ui_d2afb6142935" formatted="false">"Kısıt ölçüsünü düzenle"</string>
   <string name="ui_b609016dca31" formatted="false">"Grafiği düzenle"</string>
   <string name="ui_a58957e071b0" formatted="false">"Makroyu düzenle"</string>
+  <string name="ui_4c6b1839c0ef" formatted="false">"Yerel kenar işlemi seçimini düzenle"</string>
   <string name="ui_9cc1ae872dd0" formatted="false">"Sayısal parametreleri düzenle"</string>
   <string name="ui_c568c20a08f3" formatted="false">"Özelliği düzenle"</string>
   <string name="ui_add2e9497fe8" formatted="false">"Yüzey kontrol noktasını düzenle"</string>
@@ -278,6 +281,7 @@
   <string name="ui_24617dd70272" formatted="false">"Python dosyasını içe aktar"</string>
   <string name="ui_f2331487b964" formatted="false">"Dosyalardan içe aktar"</string>
   <string name="ui_fcf425f09b31" formatted="false">"İç çap (mm)"</string>
+  <string name="ui_f93e60e895b2" formatted="false">"Yerel yüz veya kenarı incele"</string>
   <string name="ui_f8dfe69a6067" formatted="false">"Eskiz çözücüsünü incele"</string>
   <string name="ui_9edcffff4461" formatted="false">"Tam sayı"</string>
   <string name="ui_f61b62753fb3" formatted="false">"Noktalardan geçen eğri"</string>
@@ -432,6 +436,7 @@
   <string name="ui_7941fe8c6d14" formatted="false">"Dönüş merkezi Y"</string>
   <string name="ui_f589ef1f2bb6" formatted="false">"Dönüş merkezi Z"</string>
   <string name="ui_1caac1724986" formatted="false">"Düzlemsel delik onarımı"</string>
+  <string name="ui_acad70a03d51" formatted="false">"Düzlemsel kesit yardımcısı"</string>
   <string name="ui_2446f554c8a6" formatted="false">"Düzlem noktası X"</string>
   <string name="ui_0aae9a49aace" formatted="false">"Düzlem noktası Y"</string>
   <string name="ui_076c628bf59a" formatted="false">"Düzlem noktası Z"</string>

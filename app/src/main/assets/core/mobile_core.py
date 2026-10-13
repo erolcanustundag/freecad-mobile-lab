@@ -127,6 +127,26 @@ def _edit(edit):
     action = edit.get("op")
     if isinstance(action,str) and action.startswith("sketch_"):
         mobile_sketch.edit(_object(edit["object"]),edit)
+    elif action == "section_plane":
+        source=_object(edit["source"]);name=_identifier(edit["name"]);plane_name=_identifier(name+"_Plane")
+        info=mobile_part.shape_info(source)
+        if source.TypeId not in mobile_part.TYPES or not info["valid"]:raise ValueError("Choose valid native Part geometry")
+        if len(_doc().Objects)>998 or any(_doc().getObject(n) is not None for n in (name,plane_name)):raise ValueError("Choose new section and helper names within the1000-object budget")
+        center=edit["origin"];normal=edit["normal"];size=mobile_sketch.number(edit["size"])
+        if not isinstance(center,list) or not isinstance(normal,list) or len(center)!=3 or len(normal)!=3 or size<=1e-7:raise ValueError("Use world XYZ origin, nonzero normal and positive plane size")
+        center=App.Vector(*[mobile_sketch.number(v) for v in center]);normal=App.Vector(*[mobile_sketch.number(v) for v in normal])
+        if normal.Length<=1e-7:raise ValueError("Section plane normal must be nonzero")
+        normal.normalize();rotation=App.Rotation(App.Vector(0,0,1),normal)
+        plane=_doc().addObject("Part::Plane",plane_name);plane.Length=size;plane.Width=size
+        plane.Placement=App.Placement(center-rotation.multVec(App.Vector(size/2,size/2,0)),rotation)
+        obj=_doc().addObject("Part::Section",name);obj.Base=source;obj.Tool=plane
+    elif action == "finish_settings":
+        obj=_object(edit["object"])
+        if obj.TypeId not in ("Part::Fillet","Part::Chamfer"):raise ValueError("Select a native fillet or chamfer")
+        source=obj.Base;mobile_part.shape_info(source);ids=edit["edges"];amount=mobile_sketch.number(edit["amount"])
+        if not isinstance(ids,list) or not 1<=len(ids)<=32 or len(set(ids))!=len(ids) or any(type(i) is not int or not 1<=i<=len(source.Shape.Edges) for i in ids):raise ValueError("Use1–32 unique current edge numbers starting at1")
+        if amount<=1e-7:raise ValueError("Finishing amount must be positive")
+        obj.Edges=[(i,amount,amount) for i in ids]
     elif action == "part_finish":
         source=_object(edit["source"]);name=_identifier(edit["name"]);mode=edit["mode"]
         if source.TypeId not in mobile_part.TYPES or not hasattr(source,"Shape") or source.Shape.isNull():raise ValueError("Choose a supported nonempty native Part source")
@@ -470,6 +490,10 @@ def execute(request):
             _doc().abortTransaction()
             _doc().recompute()
             raise
+    elif action == "wire_preview":
+        result=snapshot();result["wire_preview"]=mobile_part.wire_preview(_object(request["object"]));return result
+    elif action == "element_info":
+        result=snapshot();result["element_inspection"]=mobile_part.element_info(_object(request["object"]),request["kind"],request["index"]);return result
     elif action == "shape_info":
         result=snapshot();result["shape_inspection"]=mobile_part.shape_info(_object(request["object"]));return result
     elif action == "sketch_inspect":

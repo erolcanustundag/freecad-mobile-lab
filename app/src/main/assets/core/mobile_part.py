@@ -8,7 +8,7 @@ except ImportError:
     Part = None
 
 TYPES = {"Part::Feature", "Part::Box", "Part::Cylinder", "Part::Sphere", "Part::Cone",
-         "Part::Torus", "Part::Cut", "Part::Fuse", "Part::Common", "Part::Extrusion", "Part::Revolution", "Part::Fillet", "Part::Chamfer", "Part::Section"}
+         "Part::Torus", "Part::Cut", "Part::Fuse", "Part::Common", "Part::Extrusion", "Part::Revolution", "Part::Fillet", "Part::Chamfer", "Part::Section", "Part::Plane"}
 
 def available():
     return Part is not None
@@ -104,6 +104,9 @@ def profile(source, require_constrained=False):
 
 def validate_document(doc):
     for obj in doc.Objects:
+        if obj.TypeId=="Part::Plane":
+            info=shape_info(obj)
+            if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]):raise ValueError("Native helper plane must be valid within±1,000,000mm")
         if obj.TypeId in ("Part::Fillet","Part::Chamfer","Part::Section"):
             if obj.TypeId=="Part::Section":sources=[obj.Base,obj.Tool]
             else:sources=[obj.Base]
@@ -131,4 +134,39 @@ def shape_info(obj):
     center=shape.Solids[0].CenterOfMass if len(shape.Solids)==1 else None
     result["solid_centroid_mm"]=[center.x,center.y,center.z] if center is not None else None
     if not all(math.isfinite(v) for v in [result["volume"],result["area"],result["boundary_edge_length_mm"],*result["bounds"],*(result["solid_centroid_mm"] or [])]):raise ValueError("Native measurements must be finite")
+    return result
+
+
+def wire_preview(obj):
+    shape_info(obj)
+    edges=obj.Shape.Edges
+    if len(edges)>128:raise ValueError("Wire preview is limited to128 edges")
+    curves=[];total=0
+    for i,edge in enumerate(edges):
+        if edge.Length<=1e-7:continue
+        count=2 if edge.Curve.TypeId=="Part::GeomLine" else 65
+        if total+count>8192:raise ValueError("Wire preview exceeds8192 points")
+        points=[[float(v) for v in point] for point in edge.discretize(Number=count)]
+        if any(not math.isfinite(v) or abs(v)>1000000 for point in points for v in point):raise ValueError("Wire preview must stay within±1,000,000mm")
+        total+=len(points);curves.append({"index":i+1,"points":points})
+    if not total:raise ValueError("Choose geometry with drawable native edges")
+    return {"object":obj.Name,"curves":curves,"point_count":total}
+
+
+def element_info(obj,kind,index):
+    shape_info(obj)
+    if kind not in ("edge","face") or type(index) is not int:raise ValueError("Use a current EdgeN or FaceN")
+    elements=obj.Shape.Edges if kind=="edge" else obj.Shape.Faces
+    if not 1<=index<=len(elements):raise ValueError("Native element number is outside the current shape")
+    part=elements[index-1];box=part.BoundBox
+    result={"object":obj.Name,"element":kind.title()+str(index),"bounds_mm":[box.XMin,box.YMin,box.ZMin,box.XMax,box.YMax,box.ZMax]}
+    if kind=="edge":
+        if part.Length<=1e-7:
+            point=list(part.Vertexes[0].Point) if part.Vertexes else None
+            result.update(below_preview_tolerance=True,curve_type=None,length_mm=float(part.Length),parameter_range=None,start_mm=point,end_mm=point)
+        else:
+            result.update(below_preview_tolerance=False,curve_type=part.Curve.TypeId,length_mm=float(part.Length),parameter_range=[part.FirstParameter,part.LastParameter],start_mm=list(part.valueAt(part.FirstParameter)),end_mm=list(part.valueAt(part.LastParameter)))
+    else:
+        u0,u1,v0,v1=part.ParameterRange;u=(u0+u1)/2;v=(v0+v1)/2
+        result.update(surface_type=part.Surface.TypeId,area_mm2=float(part.Area),area_centroid_mm=list(part.CenterOfMass),sample_point_mm=list(part.valueAt(u,v)),normal_at_sample=list(part.normalAt(u,v)),uv_sample=[u,v])
     return result

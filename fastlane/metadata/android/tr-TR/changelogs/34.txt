@@ -1,0 +1,1 @@
+Yerel düzlemsel kesitler, 3B tel önizlemesi, kesin yüz/kenar ölçümleri ve düzenlenebilir fillet/chamfer ayarları. Android cihaz doğrulaması sürüyor.

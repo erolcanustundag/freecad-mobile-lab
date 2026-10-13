@@ -1,0 +1,1 @@
+Native planare Schnitte, 3D-Drahtansicht, exakte Flächen-/Kantenmessung und editierbare Verrundung/Fase. Android-Geräteprüfung steht noch aus.

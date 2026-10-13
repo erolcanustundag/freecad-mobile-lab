@@ -24,7 +24,7 @@ if args.sketch_tests:
 subprocess.run([str(jdk/'bin/javac'),'--release','8','-cp',str(jsonjar),'-d',str(classes),
     str(ROOT/'app/src/main/java/org/freecad/mobilelab/CoreNative.java'),
     str(ROOT/'app/src/main/java/org/freecad/mobilelab/CoreCommandLine.java'),
-    str(ROOT/'tests'/(test+'.java')),*([str(ROOT/'tests/SignalProbe.java')] if args.sketch_tests else []),*([str(ROOT/'app/src/main/java/org/freecad/mobilelab'/(name+'.java')) for name in ('PartMesh','MeshFrame','SoftwareRasterizer','RenderSettings','StudioLighting')] if args.part_tests else [])],check=True,env=env)
+    str(ROOT/'tests'/(test+'.java')),*([str(ROOT/'tests/SignalProbe.java'),str(ROOT/'app/src/main/java/org/freecad/mobilelab/WireFrame.java')] if args.sketch_tests else []),*([str(ROOT/'app/src/main/java/org/freecad/mobilelab'/(name+'.java')) for name in ('PartMesh','MeshFrame','SoftwareRasterizer','RenderSettings','StudioLighting')] if args.part_tests else [])],check=True,env=env)
 with tempfile.TemporaryDirectory(prefix='freecad-mobile-core-',dir=ROOT) as temporary:
     home=Path(temporary)
     (home/'lib').mkdir();(home/'lib/python3.12').symlink_to(python/'lib/python3.12',target_is_directory=True)

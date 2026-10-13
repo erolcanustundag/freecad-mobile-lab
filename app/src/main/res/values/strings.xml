@@ -95,6 +95,7 @@
   <string name="ui_506cff3dfeb1" formatted="false">"18 mm comfort ring"</string>
   <string name="ui_8423a678e1b0" formatted="false">"180 0 0 0 0 1 0 false"</string>
   <string name="ui_12b17ac8c1be" formatted="false">"20 mm"</string>
+  <string name="ui_7df766516996" formatted="false">"3D native wire preview"</string>
   <string name="ui_a6a68b452e5d" formatted="false">"3D view"</string>
   <string name="ui_8d9dbed48ca3" formatted="false">"3MF XML requires bounded UTF-8 data"</string>
   <string name="ui_6e866a07ff0a" formatted="false">"3MF has too many parts"</string>
@@ -459,6 +460,7 @@
   <string name="ui_687c82861c95" formatted="false">"Documents"</string>
   <string name="ui_22b3f140feb2" formatted="false">"Drag a world axis. Release commits one Undo step. Use numeric Move for exact coordinates."</string>
   <string name="ui_d8dc1f1899ed" formatted="false">"Drag an axis · 20 px = 1 mm"</string>
+  <string name="ui_5ff067f4cc1d" formatted="false">"Drag to orbit · pinch to zoom · two fingers to pan"</string>
   <string name="ui_06790c4791eb" formatted="false">"Drag weighted poles in XY"</string>
   <string name="ui_37a4658d6cec" formatted="false">"Draw XY sketch with snap grid"</string>
   <string name="ui_93aba913bfbb" formatted="false">"Draw curve"</string>
@@ -487,6 +489,7 @@
   <string name="ui_d2afb6142935" formatted="false">"Edit constraint dimension"</string>
   <string name="ui_b609016dca31" formatted="false">"Edit graph"</string>
   <string name="ui_a58957e071b0" formatted="false">"Edit macro"</string>
+  <string name="ui_4c6b1839c0ef" formatted="false">"Edit native finishing selection"</string>
   <string name="ui_9cc1ae872dd0" formatted="false">"Edit numeric parameters"</string>
   <string name="ui_c568c20a08f3" formatted="false">"Edit property"</string>
   <string name="ui_add2e9497fe8" formatted="false">"Edit surface pole"</string>
@@ -495,6 +498,7 @@
   <string name="ui_68dba1d505ac" formatted="false">"Edit worksheet cell"</string>
   <string name="ui_dc3ac3d24fe3" formatted="false">"Editable circular loft"</string>
   <string name="ui_23c06b1eb12c" formatted="false">"Editable plate with hole"</string>
+  <string name="ui_00b2a1b24b88" formatted="false">"ElementInfo"</string>
   <string name="ui_8580e3175f4e" formatted="false">"Ellipse"</string>
   <string name="ui_415f8dedea1c" formatted="false">"Empty view"</string>
   <string name="ui_bd97ca585fa7" formatted="false">"Empty workspace · create or import a model"</string>
@@ -619,6 +623,7 @@
   <string name="ui_93d8ad5407cd" formatted="false">"FilletSelected"</string>
   <string name="ui_61b2ce1179d3" formatted="false">"FilletSelected radius edgeIndex [edgeIndex ...]"</string>
   <string name="ui_3d3195acfd27" formatted="false">"Fine · 150,000 triangles"</string>
+  <string name="ui_41553c4eb589" formatted="false">"FinishSettings"</string>
   <string name="ui_ebb5cdcc120b" formatted="false">"First solid / body"</string>
   <string name="ui_f94e25075b34" formatted="false">"First value"</string>
   <string name="ui_dab564d8093c" formatted="false">"Fit"</string>
@@ -727,6 +732,7 @@
   <string name="ui_c568d584a221" formatted="false">"Input "</string>
   <string name="ui_b2d508a70498" formatted="false">"Inputs: "</string>
   <string name="ui_7538a7abe8ba" formatted="false">"Insert sample"</string>
+  <string name="ui_f93e60e895b2" formatted="false">"Inspect native face or edge"</string>
   <string name="ui_f8dfe69a6067" formatted="false">"Inspect sketch solver"</string>
   <string name="ui_5f97f8775628" formatted="false">"Instance"</string>
   <string name="ui_9edcffff4461" formatted="false">"Integer"</string>
@@ -1070,6 +1076,7 @@
   <string name="ui_1b53c949c731" formatted="false">"Planar hole must have 3 to 128 boundary vertices"</string>
   <string name="ui_1caac1724986" formatted="false">"Planar hole repair"</string>
   <string name="ui_53961e51b798" formatted="false">"Planar region"</string>
+  <string name="ui_acad70a03d51" formatted="false">"Planar section helper"</string>
   <string name="ui_2446f554c8a6" formatted="false">"Plane point X"</string>
   <string name="ui_0aae9a49aace" formatted="false">"Plane point Y"</string>
   <string name="ui_076c628bf59a" formatted="false">"Plane point Z"</string>
@@ -1275,6 +1282,7 @@
   <string name="ui_d4f1dc7e77fd" formatted="false">"Second solid / tool"</string>
   <string name="ui_f2c6b564bd81" formatted="false">"Section"</string>
   <string name="ui_e72675a4999d" formatted="false">"Section z · flatten horizontal section to XY"</string>
+  <string name="ui_ea9edca6917c" formatted="false">"SectionPlane"</string>
   <string name="ui_8598222918d3" formatted="false">"Select"</string>
   <string name="ui_3975d731f5d2" formatted="false">"Select a CAD solid"</string>
   <string name="ui_9eea858822f8" formatted="false">"Select a model"</string>
@@ -1354,7 +1362,7 @@
   <string name="ui_b7152342a267" formatted="false">"Size"</string>
   <string name="ui_32fd056d3d4b" formatted="false">"Sketch"</string>
   <string name="ui_1901b5459594" formatted="false">"Sketch B-spline"</string>
-  <string name="ui_c4e88091247f" formatted="false">"Sketch Profile\nSketchLine Profile 0 0 30 0\nSketchCircle Profile 10 10 5\nSketchArc Profile 0 0 10 0 180\nSketchEllipse Profile 0 0 20 10\nSketchSpline Profile 3 0,0;10,20;20,20;30,0 [1,2,2,1]\nConstruction Profile 0 true\nConstraint Profile Horizontal 0\nConstraint Profile Coincident 0 1 -1 1\nConstraint Profile Distance 0 30\nDatum Profile 2 40 mm\nMovePoint Profile 0 2 40 0\nDeleteGeometry Profile 0\nDeleteConstraint Profile 0\nSketchPreview Profile\nSketchPlane Profile XZ 0 0 10\nSketchPlacement Profile 0 0 0 0 0 0\nSketchAttach Profile Solid Face6\nSketchOffset Profile 0 0 2 0 0 0\nSketchDetach Profile\nExternal Profile Solid Edge9\nConstraint Profile Coincident 0 1 -3 1\nDeleteExternal Profile 0\nSketchTrim Profile 0 5 0\nSketchExtend Profile 0 5 2\nSketchFillet Profile 0 1 8 0 10 2 2\nSketchSplit Profile 0 5 0\nSketchMirror Profile 0,1 Y\nSketchArray Profile 0 3 2 10 0 1 false\nConstraint Profile Symmetric 0 1 0 2 -2\nConstraint Profile Symmetric 0 1 1 2 -1 1\nDriving Profile 2 false\nConstraint Profile PointOnObject 0 1 -1\nConstraint Profile DistanceX 0 20\nConstraint Profile DistanceY 0 1 -5\nConstraint Profile DistanceX 0 1 1 2 30\nConstraint Profile Block 0\nActive Profile 0 false\nConstraintName Profile 2 Width\nConstraintExpression Profile 2 Source.Width * 2\nSketchInfo Profile\nSketchExtrude Profile Extruded 10\nSketchRevolve Profile Revolved 360 0 0 0 0 1 0\nExtrusionSettings Extruded 10 5 false false\nRevolutionSettings Revolved 180 0 0 0 0 1 0 true\nPartPlacement Extruded 0 0 10 0 0 0\nShapeInfo Extruded\nPartFillet Solid Rounded 1,2 1\nPartChamfer Solid Beveled 1 1\nPartRefine Solid Refined\nPartSection Solid Tool Section\n\nGeometry/constraint indices start at 0. Constraint angles use degrees; dimensions use mm. Datum accepts units. Preview uses sketch-local XY coordinates. External projected edges use -3, -4, etc.; DeleteExternal uses reference indices 0, 1, etc. Placement/offset rotations use yaw pitch roll degrees. Detach preserves current world placement. Native solver edits, Undo/Redo and FCStd save/open are supported."</string>
+  <string name="ui_dc5eebf6dfcb" formatted="false">"Sketch Profile\nSketchLine Profile 0 0 30 0\nSketchCircle Profile 10 10 5\nSketchArc Profile 0 0 10 0 180\nSketchEllipse Profile 0 0 20 10\nSketchSpline Profile 3 0,0;10,20;20,20;30,0 [1,2,2,1]\nConstruction Profile 0 true\nConstraint Profile Horizontal 0\nConstraint Profile Coincident 0 1 -1 1\nConstraint Profile Distance 0 30\nDatum Profile 2 40 mm\nMovePoint Profile 0 2 40 0\nDeleteGeometry Profile 0\nDeleteConstraint Profile 0\nSketchPreview Profile\nSketchPlane Profile XZ 0 0 10\nSketchPlacement Profile 0 0 0 0 0 0\nSketchAttach Profile Solid Face6\nSketchOffset Profile 0 0 2 0 0 0\nSketchDetach Profile\nExternal Profile Solid Edge9\nConstraint Profile Coincident 0 1 -3 1\nDeleteExternal Profile 0\nSketchTrim Profile 0 5 0\nSketchExtend Profile 0 5 2\nSketchFillet Profile 0 1 8 0 10 2 2\nSketchSplit Profile 0 5 0\nSketchMirror Profile 0,1 Y\nSketchArray Profile 0 3 2 10 0 1 false\nConstraint Profile Symmetric 0 1 0 2 -2\nConstraint Profile Symmetric 0 1 1 2 -1 1\nDriving Profile 2 false\nConstraint Profile PointOnObject 0 1 -1\nConstraint Profile DistanceX 0 20\nConstraint Profile DistanceY 0 1 -5\nConstraint Profile DistanceX 0 1 1 2 30\nConstraint Profile Block 0\nActive Profile 0 false\nConstraintName Profile 2 Width\nConstraintExpression Profile 2 Source.Width * 2\nSketchInfo Profile\nSketchExtrude Profile Extruded 10\nSketchRevolve Profile Revolved 360 0 0 0 0 1 0\nExtrusionSettings Extruded 10 5 false false\nRevolutionSettings Revolved 180 0 0 0 0 1 0 true\nPartPlacement Extruded 0 0 10 0 0 0\nShapeInfo Extruded\nPartFillet Solid Rounded 1,2 1\nPartChamfer Solid Beveled 1 1\nPartRefine Solid Refined\nPartSection Solid Tool Section\nSectionPlane Solid Slice 0 0 5 0 0 1 100\nWirePreview Slice\nElementInfo Solid Face1\nFinishSettings Rounded 1 2\n\nGeometry/constraint indices start at 0. Constraint angles use degrees; dimensions use mm. Datum accepts units. Preview uses sketch-local XY coordinates. External projected edges use -3, -4, etc.; DeleteExternal uses reference indices 0, 1, etc. Placement/offset rotations use yaw pitch roll degrees. Detach preserves current world placement. Native solver edits, Undo/Redo and FCStd save/open are supported."</string>
   <string name="ui_54960a0cbf8a" formatted="false">"Sketch arc"</string>
   <string name="ui_71d0880598e2" formatted="false">"Sketch circle"</string>
   <string name="ui_06359beba4bf" formatted="false">"Sketch command help"</string>
@@ -1394,6 +1402,7 @@
   <string name="ui_c369ddbeefc1" formatted="false">"SketchSpline SKETCH DEGREE x,y;x,y;... [w,w,...]"</string>
   <string name="ui_a39c26b1827a" formatted="false">"SketchSplit"</string>
   <string name="ui_050f01575101" formatted="false">"SketchTrim"</string>
+  <string name="ui_1fcaef3f2bc0" formatted="false">"Slice 0 0 5 0 0 1 100"</string>
   <string name="ui_455673bbb8a0" formatted="false">"Snap"</string>
   <string name="ui_fb9da43b6bb0" formatted="false">"Snap: poles, control-segment midpoints/intersections and grid. NURBS preview is rational; interpolation uses a through-point guide until Apply."</string>
   <string name="ui_bd390a2685ec" formatted="false">"Software 3D"</string>
@@ -1594,12 +1603,16 @@
   <string name="ui_893974481948" formatted="false">"Upstream document operation"</string>
   <string name="ui_2ac5d627cb40" formatted="false">"Use Object.Property"</string>
   <string name="ui_05f362e29902" formatted="false">"Use Source.Property"</string>
+  <string name="ui_164021fae306" formatted="false">"Use a current EdgeN or FaceN"</string>
+  <string name="ui_65cd787faf21" formatted="false">"Use a finite camera and positive viewport"</string>
   <string name="ui_79ae0a58fc2e" formatted="false">"Use a plain .py filename"</string>
   <string name="ui_68f1fb85d13b" formatted="false">"Use a plain STEP filename"</string>
   <string name="ui_cc082228eb12" formatted="false">"Use a single-line title (100 characters) and notes (200 characters)"</string>
   <string name="ui_7dcb3f42d312" formatted="false">"Use phone language"</string>
   <string name="ui_e38373766d86" formatted="false">"Use true or false"</string>
+  <string name="ui_ac9ccbb2f709" formatted="false">"Use world XYZ points"</string>
   <string name="ui_0a48601b91af" formatted="false">"Use x,y pole pairs"</string>
+  <string name="ui_c7b454341449" formatted="false">"Use1–128 native edges"</string>
   <string name="ui_cbd3f9386e07" formatted="false">"V end fraction"</string>
   <string name="ui_95f4def2f451" formatted="false">"V fraction"</string>
   <string name="ui_8946abe055f7" formatted="false">"V start fraction"</string>
@@ -1631,6 +1644,9 @@
   <string name="ui_2e57c1b5da0b" formatted="false">"Width (mm)"</string>
   <string name="ui_8a751cd34485" formatted="false">"Width X (mm)"</string>
   <string name="ui_9a1352414e0e" formatted="false">"Width X: %.4f mm\nDepth Y: %.4f mm\nHeight Z: %.4f mm\n"</string>
+  <string name="ui_3b694a72e728" formatted="false">"Wire preview exceeds its edge/point limits"</string>
+  <string name="ui_f277bde93d79" formatted="false">"Wire preview must stay within±1,000,000mm"</string>
+  <string name="ui_4c764691608d" formatted="false">"WirePreview"</string>
   <string name="ui_a5be156d0e86" formatted="false">"Wireframe"</string>
   <string name="ui_13b7bfcac438" formatted="false">"Working…"</string>
   <string name="ui_5f0bc277d08c" formatted="false">"Worksheet addresses must be uppercase"</string>

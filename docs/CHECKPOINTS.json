@@ -370,5 +370,20 @@
     "android_runtime": "physical startup/lifecycle/SAF workflows pending",
     "signing": "retained public development identity",
     "milestone_gate": "not complete until roadmap device/workflow criteria pass"
+  },
+  {
+    "version": "1.8",
+    "version_name": "1.8",
+    "version_code": 34,
+    "channel": "release",
+    "status": "initial public mobile feature release; broader device qualification pending",
+    "scope": "current mobile feature set",
+    "apk": "FreeCAD-Mobile-Lab-1.8-arm64.apk",
+    "size_bytes": 161010613,
+    "sha256": "1d0155127e606ec79b47bab3f63630576c8769cb85d3eba8085612e5d8156d68",
+    "engineering_changes": "Four bounded native scopes: finite planar section helpers, world-space wire previews, exact current face/edge inspection and fillet/chamfer selection/amount edits.1903 genuine native checks plus269Part/88App/62Python regressions and3locale/9packaging tests pass.695TR/DE strings/3guides. Native binaries unchanged; non-debuggable retained certificate, API26/16KiB closure. Physical Android1.8 NOT_RUN; full FreeCAD/Rhino/device parity NOT_COMPLETE.",
+    "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+    "signing": "retained public development identity",
+    "milestone_gate": "not complete until roadmap device/workflow criteria pass"
   }
 ]

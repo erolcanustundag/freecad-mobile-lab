@@ -1,10 +1,10 @@
 {
-  "version": "1.7",
-  "version_code": 33,
+  "version": "1.8",
+  "version_code": 34,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "checks": {
-    "sketcher_jni_solver_geometry_fcstd": 1839,
+    "sketcher_jni_solver_geometry_fcstd": 1903,
     "part_jni_regressions": 269,
     "metadata_jni_regressions": 88,
     "python_tools_regressions": 62,
@@ -43,8 +43,8 @@
   "fixtures": [
     {
       "path": "samples/upstream-sketcher/Sketch.FCStd",
-      "size": 15679,
-      "sha256": "c531c192aa2471002674b66b3be0c1ba11ef8388ef584b8593901eb1cd0e2f75"
+      "size": 15665,
+      "sha256": "114514a71fb0a196baf663c7088bab81890132af2cbeea29cb744c858e1ef387"
     },
     {
       "path": "samples/upstream-sketcher/preview.json",
@@ -53,8 +53,8 @@
     },
     {
       "path": "samples/upstream-sketcher/Attachments.FCStd",
-      "size": 15646,
-      "sha256": "1d9921216534f178ed53d33cf82ef25fb0bb76de06827f167a341f8b5229c608"
+      "size": 15630,
+      "sha256": "fdcfe73060d8799d60a47738298266292103d0dfeab05fa9d17d8b81d4c8e1d2"
     },
     {
       "path": "samples/upstream-sketcher/attachment-preview.json",
@@ -63,38 +63,43 @@
     },
     {
       "path": "samples/upstream-sketcher/SketchTools.FCStd",
-      "size": 20619,
-      "sha256": "2a13eef7e30b72782307ee5f91d7d28ad39e2ebbb0de70736cea1fe193c0f6ea"
+      "size": 20603,
+      "sha256": "240b0143432f3681b257c981917a9b487b5f889c912b0cafbbd3adf36b3e31f6"
     },
     {
       "path": "samples/upstream-sketcher/PatternTools.FCStd",
-      "size": 32258,
-      "sha256": "039f8b6b54131f3cf0bc112071c83772ea83ba2edf235f8c7720e4b16cb23b06"
+      "size": 32242,
+      "sha256": "4c8ca23a7b70e544ff999f81525d5c531a212187566e55e5a6d305aff9f5ad09"
     },
     {
       "path": "samples/upstream-sketcher/ReferenceDimension.FCStd",
-      "size": 32256,
-      "sha256": "200f79856d88009a8a7fdd30df2dcbba696ec3098daf4ead0ca1041194d72759"
+      "size": 32241,
+      "sha256": "3299a8cfea7d90f4e4e8ffe93cdd504bdd90055b7d7e8026d217e24f20457d90"
     },
     {
       "path": "samples/upstream-sketcher/ConstraintTools.FCStd",
-      "size": 42558,
-      "sha256": "a3159b493c6b4c9c50680ddb775384b637ddddc2fba9d66d9c1cb2a32a65c76d"
+      "size": 42542,
+      "sha256": "171288afee6ceed0173bb113cd4ed5b649b26a60c514a73d7465ca03b7ca4719"
     },
     {
       "path": "samples/upstream-sketcher/NamedProfiles.FCStd",
-      "size": 8640,
-      "sha256": "5921491a56285f8bf1f354ce12e2fde874c58e950b983c2366af8b294b0268af"
+      "size": 8636,
+      "sha256": "dc036d9b9cddee8dec6125ea7d62f66b11e97467c2e4e0f3c69ccf39c0be5cd1"
     },
     {
       "path": "samples/upstream-sketcher/SolidControls.FCStd",
-      "size": 10273,
-      "sha256": "5f6471b4b6c5b6b67b1a52bc5df5580bf63e758146735624e6c0a2f3eb01779e"
+      "size": 10269,
+      "sha256": "db087fffec11a0e9a63c2a2d9d8990382c3e995309b988bdbdfbe01c2cc56704"
     },
     {
       "path": "samples/upstream-sketcher/NativeFinishing.FCStd",
-      "size": 22780,
-      "sha256": "eeecc5f6c1591182b5b173ef18fc716ec871adbeba7377917d7fe95fa6cf70f5"
+      "size": 22767,
+      "sha256": "4d5eb03949259d7fc4837afbb4e5db4da701c7a58e3da9516d02ce5e1c0e2ca4"
+    },
+    {
+      "path": "samples/upstream-sketcher/SectionTools.FCStd",
+      "size": 29128,
+      "sha256": "c53fb9f540303af46e3bf21aa9afc7df82dc20b1bc8dd830fa51016af7d51160"
     }
   ],
   "attachment_scopes": [
@@ -146,5 +151,14 @@
     "Linked native Part equal-distance chamfer",
     "Native refinement snapshot with explicit provenance label",
     "Linked native shape intersection sections"
-  ]
+  ],
+  "section_tools": {
+    "native_helper": "Part::Plane Length/Width/Placement; native linked Part::Section Base/Tool",
+    "analytic_geometry": "Box XY/YZ sections and circular cylinder section; actual edge lengths/area/outward box face normal",
+    "world_wire_preview": "Bounded actual native edge discretization; double XYZ fit/projection near\u00b11Mmm, tiny geometry and malformed input rejection;128edges/8192points",
+    "finishing_edits": "Native Edges tuples, analytic radius/distance volume, Undo/Redo/FCStd",
+    "rollback": "Empty sections, zero normal, negative size, duplicate/helper names, bounds, invalid edges/types/amounts and dependency deletion",
+    "android_gestures": "IMPLEMENTED_NOT_RUN",
+    "topology_references": "Current1-based indices; no general stable topological naming claim"
+  }
 }

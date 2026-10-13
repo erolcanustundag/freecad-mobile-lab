@@ -17,5 +17,5 @@ RepoType: git
 Repo: https://github.com/erolcanustundag/freecad-mobile-lab.git
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: '1.7'
-CurrentVersionCode: 33
+CurrentVersion: '1.8'
+CurrentVersionCode: 34

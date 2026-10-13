@@ -1,0 +1,1 @@
+Native planar sections, 3D wire viewer, exact face/edge measurements and editable fillet/chamfer settings. Turkish/German support. Android device qualification remains pending.
