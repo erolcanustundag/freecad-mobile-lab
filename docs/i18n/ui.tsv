@@ -632,3 +632,26 @@ Create a document before importing STEP|STEP içe aktarmadan önce bir belge olu
 Cannot open STEP input|STEP girdisi açılamıyor|Die STEP-Eingabe kann nicht geöffnet werden
 STEP input exceeds 128 MiB|STEP girdisi 128 MiB sınırını aşıyor|Die STEP-Eingabe überschreitet 128 MiB
 STEP import did not produce valid Part geometry|STEP içe aktarma geçerli Part geometrisi oluşturmadı|Der STEP-Import hat keine gültige Part-Geometrie erzeugt
+Original Sketcher|Özgün Sketcher|Originaler Sketcher
+Original Sketcher is not available in this runtime|Özgün Sketcher bu sürümde kullanılamıyor|Originaler Sketcher ist in dieser Laufzeit nicht verfügbar
+New native sketch|Yeni yerel eskiz|Neue native Skizze
+Sketch line|Eskiz çizgisi|Skizzenlinie
+Sketch circle|Eskiz çemberi|Skizzenkreis
+Sketch arc|Eskiz yayı|Skizzenbogen
+Sketch ellipse|Eskiz elipsi|Skizzenellipse
+Sketch B-spline|Eskiz B-spline eğrisi|Skizzen-B-Spline
+Construction geometry|Yardımcı geometri|Konstruktionsgeometrie
+Add sketch constraint|Eskiz kısıtı ekle|Skizzenbedingung hinzufügen
+Edit constraint dimension|Kısıt ölçüsünü düzenle|Bedingungsmaß bearbeiten
+Move sketch point|Eskiz noktasını taşı|Skizzenpunkt verschieben
+Delete sketch geometry|Eskiz geometrisini sil|Skizzengeometrie löschen
+Delete sketch constraint|Eskiz kısıtını sil|Skizzenbedingung löschen
+Sketch preview|Eskiz önizlemesi|Skizzenvorschau
+Sketch command help|Eskiz komut yardımı|Skizzenbefehl-Hilfe
+Sketch object|Eskiz nesnesi|Skizzenobjekt
+Command arguments|Komut parametreleri|Befehlsargumente
+Sketch solver|Eskiz çözücüsü|Skizzenlöser
+Degrees of freedom|Serbestlik derecesi|Freiheitsgrade
+Sketch-local XY · drag to pan · pinch to zoom · cyan construction curves|Eskizin XY düzlemi · sürükle: kaydır · kıstır: yakınlaştır · turkuaz: yardımcı eğriler|Lokale Skizzenebene XY · Ziehen: Verschieben · Pinch: Zoom · Türkis: Konstruktionskurven
+Upstream App/Part/Sketcher 1.1.4 · solids, sketches and native constraints|Özgün App/Part/Sketcher 1.1.4 · katılar, eskizler ve yerel kısıtlar|Originales App/Part/Sketcher 1.1.4 · Volumenkörper, Skizzen und native Bedingungen
+Sketch guide|Eskiz rehberi|Skizzenanleitung

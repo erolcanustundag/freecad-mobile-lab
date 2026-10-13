@@ -56,7 +56,7 @@ def main():
         for record in records:
             assert not (set(record['needed'])-provided-SYSTEM),record
         if manifest.get('part'):
-            assert manifest['builtin_modules']==['FreeCAD','Materials','Part']
+            assert manifest['builtin_modules']==['FreeCAD','Materials','Part']+(['Sketcher'] if manifest.get('sketcher') else [])
             expected={'libFreeCADPart.so','libFreeCADMaterials.so'}
             assert expected.issubset(provided)
             assert {'PyInit_Part','PyInit_Materials'}.issubset(exports),'Genuine builtin entrypoints are missing'
@@ -64,6 +64,14 @@ def main():
             assert expected.issubset(set(bridge['needed'])),'Part/Materials must be linked by the bridge'
             assert {'PyInit_Part','PyInit_Materials'}.issubset(required[bridge['path']]),'Builtin registration must reference the real entrypoints'
             assert 'scripts/mobile_part.py' in {x['path'] for x in manifest['python_assets']}
+        if manifest.get('sketcher'):
+            assert manifest.get('part'),'Original Sketcher requires Part'
+            assert 'libFreeCADOriginalSketcher.so' in provided
+            assert 'PyInit_Sketcher' in exports
+            bridge=next(x for x in records if x['path']=='lib/arm64-v8a/libfreecad_document_bridge.so')
+            assert 'libFreeCADOriginalSketcher.so' in bridge['needed']
+            assert 'PyInit_Sketcher' in required[bridge['path']]
+            assert 'scripts/mobile_sketch.py' in {x['path'] for x in manifest['python_assets']}
         missing={name:sorted(values-exports) for name,values in required.items() if values-exports}
         assert not missing,missing
         dex=z.read('classes.dex')
@@ -74,7 +82,7 @@ def main():
     report={'version':release['version'],'apk_sha256':hashlib.sha256(apk.read_bytes()).hexdigest(),
         'status':'STATIC_PASS','android_execution':'NOT_RUN','libraries_and_python_extensions':len(records),
         'strong_symbol_closure':True,'native_loader_closure':True,'minimum_alignment':16384,
-        'python_asset_files':len(manifest['python_assets']),'original_part_builtin_entrypoints':bool(manifest.get('part')),'libraries':records}
+        'python_asset_files':len(manifest['python_assets']),'original_part_builtin_entrypoints':bool(manifest.get('part')),'original_sketcher_builtin_entrypoint':bool(manifest.get('sketcher')),'libraries':records}
     (ROOT/'docs/core-apk-verification.json').write_text(json.dumps(report,indent=2)+'\n')
     print('PASS:',len(records),'packaged ARM64 libraries/extensions, 16 KiB alignment, API26 strong-symbol/loader closure;',len(manifest['python_assets']),'Python files verified. Android execution NOT_RUN')
 if __name__=='__main__':main()

@@ -22,7 +22,9 @@ def dynamic(path):return subprocess.check_output([str(READELF),'-d',str(path)],t
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--part',action='store_true',help='Stage the verified original Part/Materials runtime and its seven OCCT dependencies')
+    parser.add_argument('--sketcher',action='store_true',help='Stage genuine Sketcher and solver; implies --part')
     args=parser.parse_args()
+    if args.sketcher:args.part=True
     libs=ROOT/'app/src/main/jniLibs/arm64-v8a'
     baseline=json.loads((ROOT/'versions-prebuilt.json').read_text())['libraries']
     for name,value in baseline.items():
@@ -37,6 +39,9 @@ def main():
         sources += [BASE/'toolchains/occt-part-android/lib'/('lib'+name+'.so') for name in ('TKFeat','TKExpress','TKBin','TKBinL','TKMeshVS','TKRWMesh','TKDEGLTF')]
     renamed={'FreeCAD.so':'libFreeCADPython.so'}
     if args.part: renamed.update({'Part.so':'libFreeCADPart.so','Materials.so':'libFreeCADMaterials.so'})
+    if args.sketcher:
+        sources += [core/'Mod/Sketcher/Sketcher.so']
+        renamed['Sketcher.so']='libFreeCADOriginalSketcher.so'
     sources+=list((prefix/'lib').glob('*.so'))+list((qt/'lib').glob('*.so'))
     sources+=list((python/'lib').glob('*.so'))
     sources+=[ROOT/'core-bridge-android/libfreecad_document_bridge.so']
@@ -67,6 +72,7 @@ def main():
     required={'libFreeCADPython.so','libFreeCADApp.so','libFreeCADBase.so','libpython3.13.so',
         'libQt6Core_arm64-v8a.so','libfreecad_document_bridge.so'}
     if args.part: required.update({'libFreeCADPart.so','libFreeCADMaterials.so','libTKFeat.so','libTKExpress.so','libTKBin.so','libTKBinL.so','libTKMeshVS.so','libTKRWMesh.so','libTKDEGLTF.so'})
+    if args.sketcher:required.add('libFreeCADOriginalSketcher.so')
     if not required.issubset(records):raise ValueError('Incomplete core dependency set')
     extras={p.name for p in libs.glob('*.so')}-set(baseline)-set(records)
     if extras:raise ValueError('Untracked native libraries: '+str(extras))
@@ -97,12 +103,12 @@ def main():
         (BASE/'upstream/qtbase-everywhere-src-6.8.3/LICENSES/LGPL-3.0-only.txt','Qt-LGPL-3.0.txt'),
         (BASE/'upstream/FreeCAD-1.1.4/LICENSE','FreeCAD-LICENSE.txt')):
         if path.is_file():shutil.copyfile(path,licenses/name)
-    (assets/'SOURCES.txt').write_text(('FreeCAD 1.1.4 Base/App/Part/Materials; ' if args.part else 'FreeCAD 1.1.4 Base/App; ')+ ' Qt 6.8.3 headless Core/XML/Network/Concurrent; CPython 3.13.16.\n'
+    (assets/'SOURCES.txt').write_text(('FreeCAD 1.1.4 Base/App/Part/Materials/Sketcher; ' if args.sketcher else 'FreeCAD 1.1.4 Base/App/Part/Materials; ' if args.part else 'FreeCAD 1.1.4 Base/App; ')+ ' Qt 6.8.3 headless Core/XML/Network/Concurrent; CPython 3.13.16.\n'
         'Frozen sources, checksums, build scripts and patches: native-cad/docs/FREECAD-ANDROID-TOOLCHAINS.json and scripts.\n'
-        'This isolated document lab is experimental. Only the documented bounded Part adapter is included; other workbenches and Android runtime parity remain pending.\n'
+        'This isolated document lab is experimental. Only the documented bounded Part/Sketcher adapters are included; other workbenches and Android runtime parity remain pending.\n'
         'Source URLs and dependency notices: native-cad/docs/FREECAD-CORE-PORT.md and the dependency manifests.\n'+('Bundled original FreeCAD material/model resources retain their individual authors/licenses; default material data is GPL-2.0-or-later. Full GPL2 text is included in core/licenses/material-data-GPL-2.0.txt.\n' if args.part else ''))
     report={'scope':'opt-in upstream App/Part document lab; Android execution NOT_RUN' if args.part else 'opt-in upstream App document lab; Android execution NOT_RUN',
-        'part':args.part,'builtin_modules':['FreeCAD','Materials','Part'] if args.part else ['FreeCAD'],
+        'part':args.part,'sketcher':args.sketcher,'builtin_modules':(['FreeCAD','Materials','Part'] if args.part else ['FreeCAD'])+(['Sketcher'] if args.sketcher else []),
         'build_inputs':{str(p.relative_to(ROOT)):digest(p) for p in [ROOT/'app/src/main/cpp/upstream-core/CoreBridge.cpp',ROOT/'app/src/main/cpp/upstream-core/CMakeLists.txt',ROOT/'scripts/build_freecad_android_core.py',ROOT/'scripts/build_part_occt.py',ROOT/'scripts/build_core_bridge.py']},
         'libraries':records,'original_library_hashes':originals,'python_assets':runtime,
         'asset_zip_sha256':digest(out),'java_jar_sha256':digest(jars/'Qt6Android.jar')}

@@ -1,0 +1,25 @@
+ORIGINAL FREECAD SKETCHER
+
+Open the Document Lab from the recovery screen. Select New to create a document, then Original Sketcher → New native sketch. Use the form or the command bar. Coordinates and constraint lengths below use millimetres. Geometry and constraint indices start at 0.
+
+Try this exact sequence:
+NewDoc SketchModel
+Sketch Profile
+SketchLine Profile 0 0 30 0
+Constraint Profile Horizontal 0
+Constraint Profile Distance 0 30
+Constraint Profile Coincident 0 1 -1 1
+SketchPreview Profile
+Save SketchModel.FCStd
+
+The line now has zero degrees of freedom (DOF). Change its length with Datum Profile 1 40 mm. Undo and Redo use FreeCAD transactions. -1,1 references the sketch origin; point 1 is a line's start, 2 its end and 3 a circle's centre.
+
+SketchCircle, SketchArc, SketchEllipse and SketchSpline add original geometry. A spline example is SketchSpline Curves 3 0,0;10,20;20,20;30,0 1,2,2,1 after creating Sketch Curves. Last values are optional positive rational weights.
+
+Construction Profile 0 true makes an entity construction-only. MovePoint uses the native solver. DeleteGeometry and DeleteConstraint use current zero-based indices; deletion may renumber remaining entities and remove dependent constraints. Check the displayed entity list afterward.
+
+Constraint kinds: Horizontal, Vertical, Coincident, Parallel, Perpendicular, Tangent, Equal, Distance, Radius, Diameter, Angle. Angle creation uses degrees; Datum accepts explicit units such as 30 deg or 2 cm. Conflicting/redundant edits are rejected and rolled back. The Python console can inspect the original Sketcher API.
+
+SketchPreview displays sampled local XY curves. Drag to pan, pinch to zoom, Fit to reset. Gold is regular geometry, cyan is construction geometry. This view is a preview; edit via forms/commands. It is not a touch constraint editor.
+
+Save FCStd before closing. Export it through the file picker for backup. Supported Sketcher/Part/App types can reopen in the native lab. Arbitrary desktop documents, face/plane attachment workflows, external geometry editing, trim/fillet, spline pole handles, PartDesign and other workbench UI remain pending. Limits: 256 entities/constraints per sketch, 64 spline poles, 8,192 display points. Android execution of this candidate is pending.

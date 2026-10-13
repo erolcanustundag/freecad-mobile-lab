@@ -21,10 +21,15 @@ def main():
     p.add_argument('--jobs',type=int,default=3)
     p.add_argument('--configure-only',action='store_true')
     p.add_argument('--part',action='store_true',help='Build original Part/Materials after missing OCCT dependencies are available; does not stage an APK')
+    p.add_argument('--sketcher',action='store_true',help='Build the original Sketcher module and solver; implies --part')
     p.add_argument('--occt-prefix',type=Path,default=ROOT.parent/'toolchains/occt-part-android')
     args=p.parse_args()
+    if args.sketcher: args.part=True
     if not 1<=args.jobs<=16:p.error('--jobs must be 1 to 16')
     source,build,prefix,qt,qthost,ndk,cpython,occt=(v.resolve() for v in (args.source,args.build,args.prefix,args.qt,args.qt_host,args.ndk,args.cpython,args.occt_headers))
+    if args.sketcher:
+        from patch_headless_sketcher import apply
+        apply(source)
     py=cpython/'cross-build/aarch64-linux-android/prefix'
     if not (py/'lib/libpython3.13.so').is_file():p.error('Build the CPython Android prefix first')
     if 'Xml LinguistTools)' not in (source/'cMake/FreeCAD_Helpers/SetupQt.cmake').read_text():p.error('Apply the headless translation patch first')
@@ -66,12 +71,13 @@ def main():
         occ=args.occt_prefix.resolve()
         if not (occ/'lib/libTKFeat.so').is_file() or not (occ/'lib/libTKDEGLTF.so').is_file():p.error('Build the missing Part OCCT dependencies first')
         command += ['-DBUILD_PART=ON','-DBUILD_MATERIAL=ON','-DOCC_INCLUDE_DIR='+str(occ/'include/opencascade'),'-DOCC_LIBRARY='+str(occ/'lib/libTKernel.so'),'-DOCC_LIBRARY_DIR='+str(occ/'lib'),'-DCMAKE_MODULE_LINKER_FLAGS=-Wl,-z,max-page-size=16384']
+    if args.sketcher: command += ['-DBUILD_SKETCHER=ON']
     env=dict(os.environ)
     env['LD_LIBRARY_PATH']=str(qthost/'lib')+(':'+env['LD_LIBRARY_PATH'] if env.get('LD_LIBRARY_PATH') else '')
     subprocess.run(command,check=True,env=env)
     if not args.configure_only:
         subprocess.run(['cmake','--build',str(build),'--target','FreeCADBase','FreeCADApp','FreeCADMainPy',*(['Materials','Part'] if args.part else []),
-            '--parallel',str(args.jobs)],check=True,env=env)
+            *(['Sketcher'] if args.sketcher else []),'--parallel',str(args.jobs)],check=True,env=env)
     print('Upstream Android core', 'configured' if args.configure_only else 'cross-built',
         'at',build,'(JNI/Android runtime verification NOT_RUN)')
 

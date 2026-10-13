@@ -11,6 +11,7 @@
   <string name="ui_0e2465fe2eda" formatted="false">"En az iki nokta ekleyin"</string>
   <string name="ui_8ea9062f548b" formatted="false">"Bileşen ekle"</string>
   <string name="ui_e864aa24d43c" formatted="false">"Özellik ekle"</string>
+  <string name="ui_d0cd458818a0" formatted="false">"Eskiz kısıtı ekle"</string>
   <string name="ui_4f5edc11fcbd" formatted="false">"Gruba ekle"</string>
   <string name="ui_aa5a3afa1cfa" formatted="false">"Sınırları eşleştirerek hizala"</string>
   <string name="ui_49662530d12a" formatted="false">"Nesneleri hizala"</string>
@@ -98,12 +99,14 @@
   <string name="ui_c0c30e800020" formatted="false">"Kapalı eğri için Polyline veya Interpolated curve seçin"</string>
   <string name="ui_ada0d773b0af" formatted="false">"Kapalı profilden düzlemsel bölge"</string>
   <string name="ui_8901895fb1b1" formatted="false">"Komut"</string>
+  <string name="ui_51dcb8ea0dc7" formatted="false">"Komut parametreleri"</string>
   <string name="ui_1a28b29f4f7b" formatted="false">"Komut yardımı"</string>
   <string name="ui_0039381a0b2a" formatted="false">"Komut eksik veya çok uzun"</string>
   <string name="ui_f0cab561b2d1" formatted="false">"Komut başvurusu"</string>
   <string name="ui_6966e21c630a" formatted="false">"Komut · Yardim, Kutu 20 10 4…"</string>
   <string name="ui_717354ee1f25" formatted="false">"Komut · Set Source.Width 2 cm"</string>
   <string name="ui_1a1873ab51c7" formatted="false">"Onayla"</string>
+  <string name="ui_13001b46e1c1" formatted="false">"Yardımcı geometri"</string>
   <string name="ui_a783eca8c9cd" formatted="false">"Kontrol kafesi derinliği (mm)"</string>
   <string name="ui_71386f1843fe" formatted="false">"Kontrol kafesi genişliği (mm)"</string>
   <string name="ui_ea75a51b0189" formatted="false">"Asıl nesne dahil kopya sayısı · 2 ile 100"</string>
@@ -133,8 +136,11 @@
   <string name="ui_bfb6fdce937b" formatted="false">"Çıkar / kes"</string>
   <string name="ui_817b354dc01a" formatted="false">"Silindir"</string>
   <string name="ui_15d5b7c8fd92" formatted="false">"DXF · seçili XY eğrisi / kesiti"</string>
+  <string name="ui_c569a6d930b8" formatted="false">"Serbestlik derecesi"</string>
   <string name="ui_f6fdbe48dc54" formatted="false">"Sil"</string>
   <string name="ui_7700294c798b" formatted="false">"Birden çok nesneyi sil"</string>
+  <string name="ui_dc0f4d794a15" formatted="false">"Eskiz kısıtını sil"</string>
+  <string name="ui_e9e5fb807d84" formatted="false">"Eskiz geometrisini sil"</string>
   <string name="ui_b9054d38bdc5" formatted="false">"X ötelemesi (mm)"</string>
   <string name="ui_609872d33573" formatted="false">"Y ötelemesi (mm)"</string>
   <string name="ui_934b7522dfb3" formatted="false">"Z ötelemesi (mm)"</string>
@@ -166,6 +172,7 @@
   <string name="ui_13ee5bbafe07" formatted="false">"Düzenle / yeniden boyutlandır"</string>
   <string name="ui_2e8b683e11d1" formatted="false">"NURBS kontrol noktalarını düzenle"</string>
   <string name="ui_cedd93294b9d" formatted="false">"NURBS yüzey kontrol noktalarını düzenle"</string>
+  <string name="ui_d2afb6142935" formatted="false">"Kısıt ölçüsünü düzenle"</string>
   <string name="ui_b609016dca31" formatted="false">"Grafiği düzenle"</string>
   <string name="ui_a58957e071b0" formatted="false">"Makroyu düzenle"</string>
   <string name="ui_9cc1ae872dd0" formatted="false">"Sayısal parametreleri düzenle"</string>
@@ -314,6 +321,7 @@
   <string name="ui_dd749481385c" formatted="false">"Taşıma tutamaçları"</string>
   <string name="ui_5a7ad0f3c06e" formatted="false">"Birden çok nesneyi taşı"</string>
   <string name="ui_8118fbf12f48" formatted="false">"Seçili nesneleri öteleyerek taşı"</string>
+  <string name="ui_d646a0a1ea8d" formatted="false">"Eskiz noktasını taşı"</string>
   <string name="ui_17815ac4e761" formatted="false">"Birden çok nesne"</string>
   <string name="ui_8f5af0d89485" formatted="false">"Çoklu seçim"</string>
   <string name="ui_4435fd3cd5df" formatted="false">"NURBS eğrisi"</string>
@@ -335,6 +343,7 @@
   <string name="ui_b3b46e64b67d" formatted="false">"Gezinme küpü"</string>
   <string name="ui_6403f2b7eb2a" formatted="false">"Yeni"</string>
   <string name="ui_0e06e5aa9fcd" formatted="false">"Yeni makro"</string>
+  <string name="ui_5407cb0fda0b" formatted="false">"Yeni yerel eskiz"</string>
   <string name="ui_5f757ccd0da4" formatted="false">"Yeni FreeCAD belgesi"</string>
   <string name="ui_b21b860f611d" formatted="false">"Yeni çalışma alanı"</string>
   <string name="ui_a72564d6e4b4" formatted="false">"Yeni çalışma alanı?"</string>
@@ -378,6 +387,8 @@
   <string name="ui_6e349b44e371" formatted="false">"Özgün Part"</string>
   <string name="ui_f88fb371ca4e" formatted="false">"Bu çalışma ortamında özgün Part kullanılamıyor"</string>
   <string name="ui_c4044bf8f2d4" formatted="false">"Özgün Part modülü bu çalışma ortamında kullanılamıyor"</string>
+  <string name="ui_b7772221139e" formatted="false">"Özgün Sketcher"</string>
+  <string name="ui_d5b0dacfb9f5" formatted="false">"Özgün Sketcher bu sürümde kullanılamıyor"</string>
   <string name="ui_22569744952d" formatted="false">"Dik yön"</string>
   <string name="ui_eec92f96be86" formatted="false">"PNG dışa aktarımı"</string>
   <string name="ui_47f82a4ce2c0" formatted="false">"PNG dışa aktarımı başarısız"</string>
@@ -528,7 +539,18 @@
   <string name="ui_646877551855" formatted="false">"Grafik çıktısı olarak göster"</string>
   <string name="ui_8f01b2d4b6dc" formatted="false">"İşaretli öteleme (mm)"</string>
   <string name="ui_8697f432058b" formatted="false">"Gümüş"</string>
+  <string name="ui_1901b5459594" formatted="false">"Eskiz B-spline eğrisi"</string>
+  <string name="ui_54960a0cbf8a" formatted="false">"Eskiz yayı"</string>
+  <string name="ui_71d0880598e2" formatted="false">"Eskiz çemberi"</string>
+  <string name="ui_06359beba4bf" formatted="false">"Eskiz komut yardımı"</string>
+  <string name="ui_205d5e8826a6" formatted="false">"Eskiz elipsi"</string>
+  <string name="ui_f0cf5d478e66" formatted="false">"Eskiz rehberi"</string>
+  <string name="ui_3b281e4dee6e" formatted="false">"Eskiz çizgisi"</string>
+  <string name="ui_8fdab3017915" formatted="false">"Eskiz nesnesi"</string>
   <string name="ui_3594732ca359" formatted="false">"Çizim pedi"</string>
+  <string name="ui_bafe1c42e16c" formatted="false">"Eskiz önizlemesi"</string>
+  <string name="ui_fa7a849fe1c1" formatted="false">"Eskiz çözücüsü"</string>
+  <string name="ui_7dfcbad361c2" formatted="false">"Eskizin XY düzlemi · sürükle: kaydır · kıstır: yakınlaştır · turkuaz: yardımcı eğriler"</string>
   <string name="ui_455673bbb8a0" formatted="false">"Yakalama"</string>
   <string name="ui_fb9da43b6bb0" formatted="false">"Yakalama: kontrol noktaları, kontrol parçalarının orta noktaları / kesişimleri ve ızgara. NURBS önizlemesi rasyoneldir; enterpolasyon Uygula seçilene kadar noktalardan geçen bir kılavuz kullanır."</string>
   <string name="ui_bd390a2685ec" formatted="false">"Yazılımsal 3B"</string>
@@ -599,6 +621,7 @@
   <string name="ui_6e217f978cea" formatted="false">"Kaydedilmemiş laboratuvar belgeleri kapanacak. Kayıtlı FCStd dosyaları ve makrolar korunur. CAD çalışma alanı ayrı sürecinde kalır."</string>
   <string name="ui_028679f571b4" formatted="false">"NURBS yüzey kırpmasını kaldır"</string>
   <string name="ui_f9f4b89fd160" formatted="false">"Özgün App/Part 1.1.4 · katılar, özellikler, ifadeler ve işlemler"</string>
+  <string name="ui_83ee1bec0e9f" formatted="false">"Özgün App/Part/Sketcher 1.1.4 · katılar, eskizler ve yerel kısıtlar"</string>
   <string name="ui_68f1fb85d13b" formatted="false">"Yalnızca STEP dosya adını girin"</string>
   <string name="ui_7dcb3f42d312" formatted="false">"Telefonun dilini kullan"</string>
   <string name="ui_cbd3f9386e07" formatted="false">"V bitiş oranı"</string>

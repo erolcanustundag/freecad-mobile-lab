@@ -1,0 +1,10 @@
+--- a/cMake/FreeCAD_Helpers/SetupSwig.cmake
++++ b/cMake/FreeCAD_Helpers/SetupSwig.cmake
+@@ -8,7 +8,7 @@
+ unset(SWIG_VERSION CACHE)
+ unset(SWIG_FOUND CACHE)
+ 
+-if(BUILD_SKETCHER)
++if(BUILD_SKETCHER AND BUILD_GUI)
+     # SWIG is required for sketcher WB (use QUIET to provide custom error message)
+     find_package(SWIG QUIET)

@@ -10,6 +10,9 @@ def digest(data):return hashlib.sha256(data).hexdigest()
 def check(root=ROOT):
     manifest=json.loads((root/'docs/core-apk-inputs.json').read_text())
     assets=root/'app/src/main/assets/core'
+    if manifest.get('sketcher'):
+        if not manifest.get('part') or manifest.get('builtin_modules')!=['FreeCAD','Materials','Part','Sketcher'] or 'libFreeCADOriginalSketcher.so' not in manifest['libraries']:
+            raise ValueError('Original Sketcher runtime registration/library is incomplete')
     data=(assets/'python-home.zip').read_bytes()
     if digest(data)!=manifest['asset_zip_sha256']:raise ValueError('Embedded Python archive changed; refresh the runtime manifest')
     entries={item['path']:item for item in manifest['python_assets']}

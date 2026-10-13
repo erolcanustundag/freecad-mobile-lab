@@ -4,7 +4,7 @@
 
 The main workspace uses OCCT 7.9.2 and the upstream FreeCAD PlaneGCS solver. An optional document lab embeds upstream FreeCAD 1.1.4 Base/App, CPython3.13 and headless Qt6.8.3. Models stay on the device; the app requests no network permission.
 
-Engineering candidate: **1.2-rc1 / code24** adds original Part/Materials to the isolated document lab: parametric solids/booleans, native dimensional expressions and transactions, whitelisted native FCStd, STEP shape import/export and bounded genuine geometry preview.270 real host JNI geometry/format/preview checks and88/62 existing document/Python regressions pass. Physical Android execution of the new Part runtime remains pending. See [Part guide](docs/PART-USER-GUIDE.md) and [Part evidence](docs/PART-PORT-PROGRESS.md). The latest full release remains1.1.
+Engineering candidate in preparation: **1.2-rc2 / code25** adds the original Sketcher module and native geometry/constraints to the Part prerequisite. The unpublished rc1 binary was lost during workspace cleanup; its source and historical verification remain preserved. The replacement is rebuilt and tested before a new signed APK is published. The latest full release remains1.1. See [Part guide](docs/PART-USER-GUIDE.md) and [Sketcher progress](docs/SKETCHER-PORT-PROGRESS.md).
 
 ## Languages
 
@@ -37,7 +37,7 @@ Save `.fcml` projects and export backups before uninstalling or downgrading. In 
 | Native document lab | Original App metadata documents, units, properties, expressions, transactions, groups/links and supported App-only FCStd |
 | Python lab | Console, saved/recorded macros, App API browser and one portable QuantityDriver FeaturePython template |
 
-The document lab is separate from the custom CAD recipe graph. The1.2 candidate includes the bounded native Part adapter described above; the complete Part workbench UI remains pending. It does **not** yet provide native Sketcher, PartDesign, Assembly, TechDraw, CAM, FEM or BIM workbenches. Arbitrary FCStd and addon proxy classes are unsupported. Supported file formats and losses are documented in [FORMAT-LIMITS](docs/FORMAT-LIMITS.md). STL import is bounded to2,000,000 triangles/256MiB; display reduction preserves the stored source.
+The document lab is separate from the custom CAD recipe graph. The1.2 candidate includes the bounded native Part adapter described above; the complete Part workbench UI remains pending. Original Sketcher integration is in progress. It does **not** yet provide PartDesign, Assembly, TechDraw, CAM, FEM or BIM workbenches. Arbitrary FCStd and addon proxy classes are unsupported. Supported file formats and losses are documented in [FORMAT-LIMITS](docs/FORMAT-LIMITS.md). STL import is bounded to2,000,000 triangles/256MiB; display reduction preserves the stored source.
 
 The [roadmap](docs/ROADMAP.md) covers the frozen FreeCAD1.1.4 scope in36 broad batches. Large scopes require additional batches. The [ledger](docs/FREECAD-PARITY-BATCHES.json) separates engineering evidence from device validation. Four bounded feature batches have APK checkpoints; remaining workbench batches and device gates remain pending.
 
@@ -56,7 +56,7 @@ python3 scripts/bootstrap_release_runtime.py --bundle /path/to/native-runtime.zi
 python3 scripts/bootstrap_vendor_sources.py --bundle /path/to/FreeCAD-Mobile-Lab-1.1-public-source.zip
 python3 scripts/check_core_runtime_inputs.py
 # Choose a new development version before modifying sealed app inputs.
-python3 scripts/set_release.py 1.2-rc1 23 ''
+python3 scripts/set_release.py 1.2-rc3 26 ''
 python3 scripts/build_apk.py --prebuilt --upstream-core
 python3 scripts/verify_apk.py
 ```

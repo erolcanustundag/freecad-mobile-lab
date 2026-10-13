@@ -1,0 +1,25 @@
+ÖZGÜN FREECAD SKETCHER
+
+Kurtarma ekranından Belge Laboratuvarı'nı açın. Yeni ile belge oluşturun; Özgün Sketcher → Yeni yerel eskiz seçin. Formları veya komut satırını kullanabilirsiniz. Koordinatlar ve aşağıdaki uzunluklar milimetredir. Geometri ve kısıt numaraları 0'dan başlar.
+
+Şu komutları sırayla deneyin:
+NewDoc SketchModel
+Eskiz Profile
+SketchLine Profile 0 0 30 0
+Constraint Profile Horizontal 0
+Constraint Profile Distance 0 30
+Constraint Profile Coincident 0 1 -1 1
+SketchPreview Profile
+Save SketchModel.FCStd
+
+Çizginin serbestlik derecesi (DOF) artık sıfırdır. Uzunluğu Datum Profile 1 40 mm ile değiştirin. Geri al ve Yinele, FreeCAD işlemlerini kullanır. -1,1 eskizin başlangıç noktasını belirtir. Nokta 1 çizginin başı, 2 sonu, 3 çember merkezidir.
+
+SketchCircle, SketchArc, SketchEllipse ve SketchSpline özgün geometri ekler. Sketch Curves ardından örnek eğri: SketchSpline Curves 3 0,0;10,20;20,20;30,0 1,2,2,1. Sondaki değerler isteğe bağlı pozitif rasyonel ağırlıklardır.
+
+Construction Profile 0 true geometriyi yardımcı yapar. MovePoint yerel çözücüyü kullanır. DeleteGeometry ve DeleteConstraint mevcut numaralarla siler; kalan numaralar değişebilir ve bağlı kısıtlar silinebilir. İşlemden sonra nesne listesini kontrol edin.
+
+Kısıtlar: Horizontal (yatay), Vertical (dikey), Coincident (çakışık), Parallel (paralel), Perpendicular (dik), Tangent (teğet), Equal (eşit), Distance (uzunluk), Radius (yarıçap), Diameter (çap), Angle (açı). Angle komutunda derece kullanın. Datum, 30 deg veya 2 cm gibi birimleri kabul eder. Çelişen veya gereksiz kısıtlar reddedilir; işlem geri alınır. Komut adları tüm dillerde aynıdır.
+
+Önizleme eskizin yerel XY eğrilerini gösterir. Sürükleme kaydırır; kıstırma yakınlaştırır; Sığdır görünümü sıfırlar. Normal eğriler altın, yardımcı eğriler turkuazdır. Düzenlemeyi form veya komutla yapın; dokunarak kısıt düzenleme henüz yoktur.
+
+Kapatmadan önce FCStd kaydedin; yedek için dosya seçiciyle dışa aktarın. Desteklenen Sketcher/Part/App nesneleri tekrar açılır. Genel masaüstü belgeleri, yüzey/düzlem bağlama, dış geometri düzenleme, kırpma/radyüs, eğri kutup tutamaçları ve PartDesign henüz tamamlanmadı. Eskiz başına 256 geometri/kısıt, eğri başına 64 kutup, önizlemede 8.192 nokta sınırı vardır. Bu adayın Android çalıştırma testleri bekliyor.

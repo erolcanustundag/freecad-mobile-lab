@@ -1,0 +1,25 @@
+ORIGINALER FREECAD SKETCHER
+
+Öffnen Sie das Dokumentlabor über den Wiederherstellungsbildschirm. Mit Neu erstellen Sie ein Dokument, dann Originaler Sketcher → Neue native Skizze. Formulare oder Befehlszeile bearbeiten die Skizze. Koordinaten und Längen verwenden Millimeter. Geometrie- und Bedingungsindizes beginnen bei 0.
+
+Probieren Sie diese Folge:
+NewDoc SketchModel
+Skizze Profile
+SketchLine Profile 0 0 30 0
+Constraint Profile Horizontal 0
+Constraint Profile Distance 0 30
+Constraint Profile Coincident 0 1 -1 1
+SketchPreview Profile
+Save SketchModel.FCStd
+
+Die Linie hat nun null Freiheitsgrade (DOF). Datum Profile 1 40 mm ändert ihre Länge. Rückgängig/Wiederholen verwenden FreeCAD-Transaktionen. -1,1 bezeichnet den Ursprung; Punkt 1 den Linienanfang, 2 das Ende und 3 den Kreismittelpunkt.
+
+SketchCircle, SketchArc, SketchEllipse und SketchSpline erzeugen Originalgeometrie. Nach Sketch Curves: SketchSpline Curves 3 0,0;10,20;20,20;30,0 1,2,2,1. Die letzten Werte sind optionale positive rationale Gewichte.
+
+Construction Profile 0 true macht eine Geometrie zur Konstruktion. MovePoint verwendet den nativen Löser. DeleteGeometry und DeleteConstraint verwenden aktuelle Indizes. Löschen kann verbleibende Geometrien neu nummerieren und abhängige Bedingungen entfernen. Prüfen Sie danach die Liste.
+
+Bedingungen: Horizontal, Vertical, Coincident, Parallel, Perpendicular, Tangent, Equal, Distance, Radius, Diameter, Angle. Angle verwendet Grad; Datum akzeptiert Einheiten wie 30 deg oder 2 cm. Widersprüchliche oder redundante Änderungen werden zurückgerollt. Befehlsnamen bleiben sprachunabhängig.
+
+Die Vorschau zeigt abgetastete Kurven in der lokalen XY-Ebene. Ziehen verschiebt, Pinch zoomt, Einpassen setzt zurück. Gold bedeutet normale Geometrie, Türkis Konstruktionsgeometrie. Bearbeiten erfolgt über Formulare/Befehle; die Vorschau ist kein Touch-Bedingungseditor.
+
+Vor dem Schließen FCStd speichern und über die Dateiauswahl sichern. Unterstützte Sketcher/Part/App-Typen können erneut geöffnet werden. Allgemeine Desktop-Dokumente, Flächen-/Ebenenanbindung, externe Geometrie, Trimmen/Abrunden, Spline-Griffe und PartDesign bleiben offen. Grenzen: 256 Geometrien/Bedingungen je Skizze, 64 Spline-Pole, 8.192 Vorschaupunkte. Android-Ausführung dieses Kandidaten bleibt ungeprüft.

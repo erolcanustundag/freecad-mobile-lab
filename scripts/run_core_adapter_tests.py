@@ -7,9 +7,10 @@ import tempfile
 import argparse
 
 ROOT=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('--python-tools',action='store_true');p.add_argument('--part',action='store_true');p.add_argument('--part-tests',action='store_true');args=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--python-tools',action='store_true');p.add_argument('--part',action='store_true');p.add_argument('--part-tests',action='store_true');p.add_argument('--sketch-tests',action='store_true');args=p.parse_args()
 if args.part_tests: args.part=True
-test='PartAdapterHostTest' if args.part_tests else 'PythonToolsHostTest' if args.python_tools else 'CoreAdapterHostTest'
+if args.sketch_tests:args.part=True
+test='SketchAdapterHostTest' if args.sketch_tests else 'PartAdapterHostTest' if args.part_tests else 'PythonToolsHostTest' if args.python_tools else 'CoreAdapterHostTest'
 BASE=ROOT.parent
 env=dict(os.environ)
 jdk=Path(env.get('JAVA_HOME',BASE/'toolchains/jdk-system17')).resolve()

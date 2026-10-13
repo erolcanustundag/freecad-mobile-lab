@@ -16,10 +16,13 @@ import FreeCAD as App
 import mobile_features
 import mobile_python
 import mobile_part
+import mobile_sketch
 
 OBJECT_TYPES = {"App::FeaturePython", "App::DocumentObjectGroup", "App::Link", "App::VarSet"}
 if mobile_part.available():
     OBJECT_TYPES.update(mobile_part.TYPES)
+if mobile_sketch.available():
+    OBJECT_TYPES.update(mobile_sketch.TYPES)
 PROPERTY_TYPES = {"App::PropertyLength", "App::PropertyAngle", "App::PropertyArea",
     "App::PropertyVolume", "App::PropertyFloat", "App::PropertyInteger",
     "App::PropertyString", "App::PropertyBool", "App::PropertyLink"}
@@ -88,6 +91,7 @@ def _value(obj, name):
 def snapshot():
     result = {"version": App.Version()[:3], "scope": "App/Part bounded mobile adapter" if mobile_part.available() else "App metadata; geometry workbenches pending",
         "part": mobile_part.available(),
+        "sketcher": mobile_sketch.available(),
         "documents": list(App.listDocuments()), "files": sorted(p.name for p in _root.iterdir()
             if p.is_file() and p.suffix.lower() == ".fcstd"),
         "transaction": _transaction, "document": None, "python": mobile_python.metadata()}
@@ -107,6 +111,9 @@ def snapshot():
             shape = mobile_part.summary(obj) if mobile_part.available() else None
             if shape is not None:
                 objects[-1]["shape"] = shape
+            sketch=mobile_sketch.summary(obj) if mobile_sketch.available() else None
+            if sketch is not None:
+                objects[-1]["sketch"] = sketch
         result["document"] = {"name": d.Name, "label": d.Label, "objects": objects,
             "undo": d.UndoCount, "redo": d.RedoCount}
     return result
@@ -114,7 +121,9 @@ def snapshot():
 
 def _edit(edit):
     action = edit.get("op")
-    if action == "add":
+    if isinstance(action,str) and action.startswith("sketch_"):
+        mobile_sketch.edit(_object(edit["object"]),edit)
+    elif action == "add":
         kind = edit.get("type", "App::FeaturePython")
         if kind not in OBJECT_TYPES:
             raise ValueError("Object type is not ported: " + str(kind))
@@ -365,6 +374,10 @@ def execute(request):
             _doc().abortTransaction()
             _doc().recompute()
             raise
+    elif action == "sketch_preview":
+        result=snapshot()
+        result["sketch_preview"]=mobile_sketch.preview(_object(request["object"]))
+        return result
     elif action == "part_preview":
         result = snapshot()
         result["preview"] = mobile_part.mesh(_object(request["object"]),float(request.get("tolerance",0.2)))

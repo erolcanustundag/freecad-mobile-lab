@@ -1,5 +1,5 @@
 <resources>
-  <string name="ui_efab949e8156" formatted="false">"\n\nPython print(App.Version())\nRunMacro MyMacro.py\nApi App.Vector\nProxy Scaled Source.Width 2\n\nPython console, saved macros, command recording and the portable QuantityDriver proxy are available from the buttons. Python tracing has a two-second budget; native calls may take longer. The API browser covers available App/Base bindings. The native Part API is available when the Original Part runtime is loaded. Arbitrary addon proxy classes and Gui bindings remain pending.\n\nOnly whitelisted Part primitives/features/booleans and App metadata documents can be restored here. Sketcher, PartDesign and other workbench documents remain pending."</string>
+  <string name="ui_cc0dfa4179eb" formatted="false">"\n\nPython print(App.Version())\nRunMacro MyMacro.py\nApi App.Vector\nProxy Scaled Source.Width 2\n\nPython console, saved macros, command recording and the portable QuantityDriver proxy are available from the buttons. Python tracing has a two-second budget; native calls may take longer. The API browser covers available App/Base bindings. The native Part API is available when the Original Part runtime is loaded. Arbitrary addon proxy classes and Gui bindings remain pending.\n\nOnly whitelisted Part primitives/features/booleans and App metadata documents can be restored here. Native Sketcher sketches are now supported. PartDesign and other workbench documents remain pending."</string>
   <string name="ui_c9c40500c6bb" formatted="false">"\n\nUse Measure id1 id2 for exact CAD minimum distance; Distance XYZ XYZ; Angle XYZ XYZ XYZ. Mesh distance is not supported."</string>
   <string name="ui_dec0dce734eb" formatted="false">"\n0=X, 1=Y, 2=Z. This checks the bounding box; supports, adhesion and process settings are separate."</string>
   <string name="ui_65fe7eb37744" formatted="false">"\nABIs: "</string>
@@ -83,6 +83,8 @@
   <string name="ui_691d6ea15007" formatted="false">". Detach or delete the dependent feature first."</string>
   <string name="ui_7b9412a1d7de" formatted="false">". Export LINE/CIRCLE/ARC or straight LWPOLYLINE geometry."</string>
   <string name="ui_efb074ed9d56" formatted="false">". Type Help."</string>
+  <string name="ui_e4beb417c20d" formatted="false">"0 30 mm"</string>
+  <string name="ui_b5000dc0170c" formatted="false">"0 true"</string>
   <string name="ui_6f6a567d5569" formatted="false">"1 finger: orbit   ·   pinch: zoom   ·   2 fingers: pan"</string>
   <string name="ui_506cff3dfeb1" formatted="false">"18 mm comfort ring"</string>
   <string name="ui_12b17ac8c1be" formatted="false">"20 mm"</string>
@@ -118,6 +120,7 @@
   <string name="ui_0e2465fe2eda" formatted="false">"Add at least two points"</string>
   <string name="ui_8ea9062f548b" formatted="false">"Add component"</string>
   <string name="ui_e864aa24d43c" formatted="false">"Add property"</string>
+  <string name="ui_d0cd458818a0" formatted="false">"Add sketch constraint"</string>
   <string name="ui_4f5edc11fcbd" formatted="false">"Add to group"</string>
   <string name="ui_c83b0ec2d98a" formatted="false">"Align"</string>
   <string name="ui_aa5a3afa1cfa" formatted="false">"Align matching bounds"</string>
@@ -149,6 +152,7 @@
   <string name="ui_1fd06cf283cd" formatted="false">"ArrayCurve"</string>
   <string name="ui_c50db34b868b" formatted="false">"ArrayCurve · distribute copies on a curve"</string>
   <string name="ui_0639948033ad" formatted="false">"At most 64 document variables"</string>
+  <string name="ui_0fad526e32cf" formatted="false">"At most 64 spline poles"</string>
   <string name="ui_58b9ff3fe0e6" formatted="false">"Automatic · software frame timing"</string>
   <string name="ui_ff6ad92011f3" formatted="false">"Autosave"</string>
   <string name="ui_d74b6cfbbd9f" formatted="false">"Available Python API"</string>
@@ -167,6 +171,7 @@
   <string name="ui_c10df8d19608" formatted="false">"BREP curve"</string>
   <string name="ui_b305ef8b7b7f" formatted="false">"BREP solid"</string>
   <string name="ui_337a1344ed75" formatted="false">"BREP · visible CAD geometry"</string>
+  <string name="ui_c7b668d99b49" formatted="false">"BSpline"</string>
   <string name="ui_b52b36b7269f" formatted="false">"Back"</string>
   <string name="ui_8c4491933899" formatted="false">"Bail outer radius"</string>
   <string name="ui_815e51e1c9ba" formatted="false">"Bake 3MF components before import"</string>
@@ -296,11 +301,13 @@
   <string name="ui_c0c30e800020" formatted="false">"Closed curve requires Polyline / Interpolated curve"</string>
   <string name="ui_477c3b1b4510" formatted="false">"Closed profile"</string>
   <string name="ui_ada0d773b0af" formatted="false">"Closed profile to planar region"</string>
+  <string name="ui_9216f2e077e6" formatted="false">"Coincident"</string>
   <string name="ui_1d0c8304baed" formatted="false">"Color"</string>
   <string name="ui_890126c1c2f8" formatted="false">"Color red green blue · each 0 to 1"</string>
   <string name="ui_f28563a477a9" formatted="false">"Colour"</string>
   <string name="ui_142b5940284b" formatted="false">"Comfort ring"</string>
   <string name="ui_8901895fb1b1" formatted="false">"Command"</string>
+  <string name="ui_51dcb8ea0dc7" formatted="false">"Command arguments"</string>
   <string name="ui_949bfcc948b8" formatted="false">"Command exceeds 4,096 characters"</string>
   <string name="ui_1a28b29f4f7b" formatted="false">"Command help"</string>
   <string name="ui_0039381a0b2a" formatted="false">"Command is missing or too long"</string>
@@ -310,6 +317,11 @@
   <string name="ui_0ca5450f81f6" formatted="false">"Command: "</string>
   <string name="ui_1a1873ab51c7" formatted="false">"Commit"</string>
   <string name="ui_3b258fe3d277" formatted="false">"Connect every input on "</string>
+  <string name="ui_cdd87b7907fb" formatted="false">"Constraint"</string>
+  <string name="ui_4ea93f5b4e48" formatted="false">"Constraint SKETCH KIND ARGUMENTS"</string>
+  <string name="ui_da33e1b7e0c4" formatted="false">"Construction"</string>
+  <string name="ui_eee268b604a9" formatted="false">"Construction SKETCH INDEX true|false"</string>
+  <string name="ui_13001b46e1c1" formatted="false">"Construction geometry"</string>
   <string name="ui_968df9b11bbe" formatted="false">"Contours target 0.005 mm (capped) · print at 100%, no page fit"</string>
   <string name="ui_a783eca8c9cd" formatted="false">"Control cage depth (mm)"</string>
   <string name="ui_71386f1843fe" formatted="false">"Control cage width (mm)"</string>
@@ -373,13 +385,20 @@
   <string name="ui_8eebb1c21abf" formatted="false">"DXF needs declared inch/foot/mm/cm/m $INSUNITS; unitless drawings are ambiguous"</string>
   <string name="ui_4e6e948d70ab" formatted="false">"DXF polyline vertex missing Y"</string>
   <string name="ui_15d5b7c8fd92" formatted="false">"DXF · selected XY curve / section"</string>
+  <string name="ui_df5c3008c765" formatted="false">"Datum"</string>
+  <string name="ui_32967c58749f" formatted="false">"Datum SKETCH INDEX VALUE [UNIT]"</string>
   <string name="ui_808d7dca8a74" formatted="false">"Default"</string>
   <string name="ui_07ded793232a" formatted="false">"Degenerate boundary loop"</string>
   <string name="ui_ae4caa6b19e2" formatted="false">"Degenerate triangles must be repaired first"</string>
+  <string name="ui_c569a6d930b8" formatted="false">"Degrees of freedom"</string>
   <string name="ui_f6fdbe48dc54" formatted="false">"Delete"</string>
   <string name="ui_d0f24e267e66" formatted="false">"Delete multiple"</string>
   <string name="ui_7700294c798b" formatted="false">"Delete multiple objects"</string>
+  <string name="ui_dc0f4d794a15" formatted="false">"Delete sketch constraint"</string>
+  <string name="ui_e9e5fb807d84" formatted="false">"Delete sketch geometry"</string>
   <string name="ui_024a119d4986" formatted="false">"Delete · selected object"</string>
+  <string name="ui_9cf21530092a" formatted="false">"DeleteConstraint"</string>
+  <string name="ui_3ae45bcbcc9e" formatted="false">"DeleteGeometry"</string>
   <string name="ui_b9054d38bdc5" formatted="false">"Delta X mm"</string>
   <string name="ui_609872d33573" formatted="false">"Delta Y mm"</string>
   <string name="ui_934b7522dfb3" formatted="false">"Delta Z mm"</string>
@@ -392,6 +411,7 @@
   <string name="ui_d71a5056f84c" formatted="false">"Detach recipe; keep geometry"</string>
   <string name="ui_ba297950288d" formatted="false">"Detach · keep selected geometry as a snapshot"</string>
   <string name="ui_a6a7709266d3" formatted="false">"Deutsch"</string>
+  <string name="ui_8314fd7f3668" formatted="false">"Diameter"</string>
   <string name="ui_b4748fa72923" formatted="false">"Dimensioned drawing sheet"</string>
   <string name="ui_9f4ca9ec0871" formatted="false">"Dimensions"</string>
   <string name="ui_f8d108dfb868" formatted="false">"Dimensions in mm. Select an object before editing. IDs appear on object chips.\nEnter repeats the previous command. Commands are local CAD actions.\n\n"</string>
@@ -436,6 +456,7 @@
   <string name="ui_13ee5bbafe07" formatted="false">"Edit / resize"</string>
   <string name="ui_2e8b683e11d1" formatted="false">"Edit NURBS poles"</string>
   <string name="ui_cedd93294b9d" formatted="false">"Edit NURBS surface poles"</string>
+  <string name="ui_d2afb6142935" formatted="false">"Edit constraint dimension"</string>
   <string name="ui_b609016dca31" formatted="false">"Edit graph"</string>
   <string name="ui_a58957e071b0" formatted="false">"Edit macro"</string>
   <string name="ui_9cc1ae872dd0" formatted="false">"Edit numeric parameters"</string>
@@ -469,6 +490,7 @@
   <string name="ui_aef9ab20a555" formatted="false">"Enter radius/wall plus 1 to 15 indices"</string>
   <string name="ui_99c29caf99a6" formatted="false">"Enter valid numbers"</string>
   <string name="ui_6d0b521074ed" formatted="false">"Envelope check"</string>
+  <string name="ui_a472ce8d19d1" formatted="false">"Equal"</string>
   <string name="ui_8e43a889e201" formatted="false">"Estimated mass"</string>
   <string name="ui_d7132581b3dc" formatted="false">"Evaluate"</string>
   <string name="ui_65d488482f90" formatted="false">"Evaluate a graph first"</string>
@@ -643,6 +665,8 @@
   <string name="ui_e886724cafe9" formatted="false">"Hollow planar top"</string>
   <string name="ui_b9483c52724d" formatted="false">"Hollow top"</string>
   <string name="ui_20b28ea3f2da" formatted="false">"Hollow wall"</string>
+  <string name="ui_4f57a1ce99e6" formatted="false">"Horizontal"</string>
+  <string name="ui_03bf1c60b835" formatted="false">"Horizontal 0"</string>
   <string name="ui_21319cf91018" formatted="false">"IGES solid"</string>
   <string name="ui_d81caee8ffee" formatted="false">"IGES · visible CAD geometry"</string>
   <string name="ui_4f325d995b6d" formatted="false">"ISO"</string>
@@ -683,6 +707,7 @@
   <string name="ui_568cd6d2b52f" formatted="false">"Invalid GLB vertex stride"</string>
   <string name="ui_a9b3fb5cf200" formatted="false">"Invalid NURBS preview"</string>
   <string name="ui_4d512eb532ce" formatted="false">"Invalid STL or interchange triangle limit exceeded ("</string>
+  <string name="ui_5876aa03463a" formatted="false">"Invalid XY point"</string>
   <string name="ui_13ca71235fc7" formatted="false">"Invalid boundary loop"</string>
   <string name="ui_5ca43416fa99" formatted="false">"Invalid casting references"</string>
   <string name="ui_d4d164c75753" formatted="false">"Invalid cell control character"</string>
@@ -713,6 +738,7 @@
   <string name="ui_43bd1cf7f398" formatted="false">"Invalid rendering settings"</string>
   <string name="ui_8bf9f720eb2d" formatted="false">"Invalid runtime archive"</string>
   <string name="ui_c307d68f5ef1" formatted="false">"Invalid runtime path"</string>
+  <string name="ui_50578648b7ae" formatted="false">"Invalid sketch coordinate"</string>
   <string name="ui_f3da329a563e" formatted="false">"Invalid sketch snapping values"</string>
   <string name="ui_eac8e9e46016" formatted="false">"Invalid software viewport size"</string>
   <string name="ui_59dab1a97617" formatted="false">"Invalid variable name"</string>
@@ -843,7 +869,9 @@
   <string name="ui_d2f251ff5fa4" formatted="false">"Move multiple"</string>
   <string name="ui_5a7ad0f3c06e" formatted="false">"Move multiple objects"</string>
   <string name="ui_8118fbf12f48" formatted="false">"Move selected objects by offset"</string>
+  <string name="ui_d646a0a1ea8d" formatted="false">"Move sketch point"</string>
   <string name="ui_f4f905422802" formatted="false">"Move x y z · absolute position"</string>
+  <string name="ui_52631a9edb57" formatted="false">"MovePoint"</string>
   <string name="ui_17815ac4e761" formatted="false">"Multiple objects"</string>
   <string name="ui_8f5af0d89485" formatted="false">"Multiple selection"</string>
   <string name="ui_b20a305f06f0" formatted="false">"Multiply"</string>
@@ -871,6 +899,7 @@
   <string name="ui_611857bc810e" formatted="false">"Navigation cube. Tap a visible face for its view, or ISO for perspective."</string>
   <string name="ui_6403f2b7eb2a" formatted="false">"New"</string>
   <string name="ui_0e06e5aa9fcd" formatted="false">"New macro"</string>
+  <string name="ui_5407cb0fda0b" formatted="false">"New native sketch"</string>
   <string name="ui_5f757ccd0da4" formatted="false">"New upstream document"</string>
   <string name="ui_b21b860f611d" formatted="false">"New workspace"</string>
   <string name="ui_a72564d6e4b4" formatted="false">"New workspace?"</string>
@@ -944,6 +973,8 @@
   <string name="ui_f88fb371ca4e" formatted="false">"Original Part is not available in this runtime"</string>
   <string name="ui_c4044bf8f2d4" formatted="false">"Original Part module is not available in this runtime"</string>
   <string name="ui_d182bf94dfd9" formatted="false">"Original STL: %,d triangles\nSaving and STL export retain the original mesh. The display may be simplified."</string>
+  <string name="ui_b7772221139e" formatted="false">"Original Sketcher"</string>
+  <string name="ui_d5b0dacfb9f5" formatted="false">"Original Sketcher is not available in this runtime"</string>
   <string name="ui_22569744952d" formatted="false">"Ortho"</string>
   <string name="ui_4ad54f254de6" formatted="false">"Outer height"</string>
   <string name="ui_6e54fadf061c" formatted="false">"Outer width"</string>
@@ -957,6 +988,7 @@
   <string name="ui_7fc60152f68c" formatted="false">"PNGOptions"</string>
   <string name="ui_d0b03143efff" formatted="false">"POSITION"</string>
   <string name="ui_f852b509bbae" formatted="false">"Pad height Z (mm)"</string>
+  <string name="ui_afc129571bf0" formatted="false">"Parallel"</string>
   <string name="ui_a62da49e936f" formatted="false">"Parameter "</string>
   <string name="ui_c78ba7c727d5" formatted="false">"Parameter fraction"</string>
   <string name="ui_9750284506f8" formatted="false">"Parametric graph · tap a node, then Edit / connect.\nTyped point/list/geometry ports. Number values update on Evaluate."</string>
@@ -975,6 +1007,7 @@
   <string name="ui_7db58cff8134" formatted="false">"Pendant frame"</string>
   <string name="ui_63c904559993" formatted="false">"Performance"</string>
   <string name="ui_ca787afd2cfc" formatted="false">"Performance / display detail"</string>
+  <string name="ui_83ba3ad2f8dd" formatted="false">"Perpendicular"</string>
   <string name="ui_00dae071c082" formatted="false">"Pipe"</string>
   <string name="ui_2dcff8cab2c4" formatted="false">"Pipe along curve"</string>
   <string name="ui_289c50531d08" formatted="false">"Pipe radius"</string>
@@ -1258,9 +1291,28 @@
   <string name="ui_579f3dfe8b29" formatted="false">"Single curve"</string>
   <string name="ui_b7152342a267" formatted="false">"Size"</string>
   <string name="ui_32fd056d3d4b" formatted="false">"Sketch"</string>
+  <string name="ui_1901b5459594" formatted="false">"Sketch B-spline"</string>
+  <string name="ui_25d9ac78b203" formatted="false">"Sketch Profile\nSketchLine Profile 0 0 30 0\nSketchCircle Profile 10 10 5\nSketchArc Profile 0 0 10 0 180\nSketchEllipse Profile 0 0 20 10\nSketchSpline Profile 3 0,0;10,20;20,20;30,0 [1,2,2,1]\nConstruction Profile 0 true\nConstraint Profile Horizontal 0\nConstraint Profile Coincident 0 1 -1 1\nConstraint Profile Distance 0 30\nDatum Profile 2 40 mm\nMovePoint Profile 0 2 40 0\nDeleteGeometry Profile 0\nDeleteConstraint Profile 0\nSketchPreview Profile\n\nGeometry/constraint indices start at 0. Constraint angles use degrees; dimensions use mm. Datum accepts units. Preview uses sketch-local XY coordinates. Native solver edits, Undo/Redo and FCStd save/open are supported."</string>
+  <string name="ui_54960a0cbf8a" formatted="false">"Sketch arc"</string>
+  <string name="ui_71d0880598e2" formatted="false">"Sketch circle"</string>
+  <string name="ui_06359beba4bf" formatted="false">"Sketch command help"</string>
+  <string name="ui_205d5e8826a6" formatted="false">"Sketch ellipse"</string>
   <string name="ui_87d8e53ec2e8" formatted="false">"Sketch exceeds 10,000 mm"</string>
+  <string name="ui_f0cf5d478e66" formatted="false">"Sketch guide"</string>
+  <string name="ui_3b281e4dee6e" formatted="false">"Sketch line"</string>
+  <string name="ui_8fdab3017915" formatted="false">"Sketch object"</string>
   <string name="ui_3594732ca359" formatted="false">"Sketch pad"</string>
+  <string name="ui_bafe1c42e16c" formatted="false">"Sketch preview"</string>
+  <string name="ui_fa7a849fe1c1" formatted="false">"Sketch solver"</string>
+  <string name="ui_7dfcbad361c2" formatted="false">"Sketch-local XY · drag to pan · pinch to zoom · cyan construction curves"</string>
+  <string name="ui_98e85eca1e52" formatted="false">"SketchArc"</string>
+  <string name="ui_21b7ae6064c5" formatted="false">"SketchCircle"</string>
+  <string name="ui_e8dcbe891037" formatted="false">"SketchEllipse"</string>
+  <string name="ui_70c08eeed40e" formatted="false">"SketchLine"</string>
   <string name="ui_d3150aa9f8b4" formatted="false">"SketchPad"</string>
+  <string name="ui_3085875c6af9" formatted="false">"SketchPreview"</string>
+  <string name="ui_51690843411d" formatted="false">"SketchSpline"</string>
+  <string name="ui_c369ddbeefc1" formatted="false">"SketchSpline SKETCH DEGREE x,y;x,y;... [w,w,...]"</string>
   <string name="ui_455673bbb8a0" formatted="false">"Snap"</string>
   <string name="ui_fb9da43b6bb0" formatted="false">"Snap: poles, control-segment midpoints/intersections and grid. NURBS preview is rational; interpolation uses a through-point guide until Apply."</string>
   <string name="ui_bd390a2685ec" formatted="false">"Software 3D"</string>
@@ -1324,6 +1376,7 @@
   <string name="ui_06183458dae1" formatted="false">"Switched to software 3D"</string>
   <string name="ui_102b068eeea6" formatted="false">"System exit records unavailable: "</string>
   <string name="ui_b48813fa0aec" formatted="false">"TOP"</string>
+  <string name="ui_7ef1446b5f4a" formatted="false">"Tangent"</string>
   <string name="ui_5395dff4ff26" formatted="false">"Tap a pole first"</string>
   <string name="ui_834b595838a0" formatted="false">"Tap → Edit / connect"</string>
   <string name="ui_61ad50a9b918" formatted="false">"Target"</string>
@@ -1363,6 +1416,8 @@
   <string name="ui_6375dd0b2851" formatted="false">"Too many cells"</string>
   <string name="ui_fb13b05e6426" formatted="false">"Too many command arguments"</string>
   <string name="ui_43178144a7b7" formatted="false">"Too many native trace fields"</string>
+  <string name="ui_def540ba3bcd" formatted="false">"Too many sketch curves"</string>
+  <string name="ui_2d465e81f217" formatted="false">"Too many sketch preview points"</string>
   <string name="ui_b3369896e837" formatted="false">"Too much point data"</string>
   <string name="ui_9a830c714bb2" formatted="false">"Tool"</string>
   <string name="ui_7c205b45bfb9" formatted="false">"Tool object"</string>
@@ -1432,6 +1487,7 @@
   <string name="ui_8f760eb1f92a" formatted="false">"Unsupported FCStd XML encoding or DTD"</string>
   <string name="ui_a216c622d618" formatted="false">"Unsupported Part boolean"</string>
   <string name="ui_d1ac7d505ac6" formatted="false">"Unsupported graph version"</string>
+  <string name="ui_49a789ec5ffa" formatted="false">"Unsupported native constraint kind"</string>
   <string name="ui_4e8b11ce8306" formatted="false">"Unsupported native trace wire type"</string>
   <string name="ui_f57ba192f21d" formatted="false">"Unsupported project format, version, or units"</string>
   <string name="ui_751f16f25401" formatted="false">"Unsupported project reader or geometry kernel"</string>
@@ -1443,6 +1499,7 @@
   <string name="ui_2d7749ad8168" formatted="false">"Unused angle"</string>
   <string name="ui_6a195ab24b1f" formatted="false">"Upper profile"</string>
   <string name="ui_f9f4b89fd160" formatted="false">"Upstream App/Part 1.1.4 · solids, properties, expressions and transactions"</string>
+  <string name="ui_83ee1bec0e9f" formatted="false">"Upstream App/Part/Sketcher 1.1.4 · solids, sketches and native constraints"</string>
   <string name="ui_3874f457f5c4" formatted="false">"Upstream document lab UI created"</string>
   <string name="ui_893974481948" formatted="false">"Upstream document operation"</string>
   <string name="ui_2ac5d627cb40" formatted="false">"Use Object.Property"</string>
@@ -1451,6 +1508,7 @@
   <string name="ui_68f1fb85d13b" formatted="false">"Use a plain STEP filename"</string>
   <string name="ui_cc082228eb12" formatted="false">"Use a single-line title (100 characters) and notes (200 characters)"</string>
   <string name="ui_7dcb3f42d312" formatted="false">"Use phone language"</string>
+  <string name="ui_0a48601b91af" formatted="false">"Use x,y pole pairs"</string>
   <string name="ui_cbd3f9386e07" formatted="false">"V end fraction"</string>
   <string name="ui_95f4def2f451" formatted="false">"V fraction"</string>
   <string name="ui_8946abe055f7" formatted="false">"V start fraction"</string>
@@ -1462,6 +1520,7 @@
   <string name="ui_ac018db1f7b0" formatted="false">"Variables"</string>
   <string name="ui_d147e822713d" formatted="false">"Variables · saved scalar expressions"</string>
   <string name="ui_b242a403874e" formatted="false">"Vertex welding tolerance (mm) · maximum 100,000 triangles"</string>
+  <string name="ui_4b937cc841d8" formatted="false">"Vertical"</string>
   <string name="ui_69bd4ef9fbd0" formatted="false">"View"</string>
   <string name="ui_e5ce5bf06fa4" formatted="false">"ViewCube"</string>
   <string name="ui_64bfd2743c3a" formatted="false">"ViewCube · choose an orthographic or ISO view"</string>
