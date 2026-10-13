@@ -71,3 +71,7 @@ SketchArray Rings 0 3 2 10 0 1 false creates3 columns and2 rows: columns follow 
 Constraint Profile Symmetric 0 1 1 1 -2 links two points about the Y axis. Use5 arguments (two geometry/point pairs and an axis) or6 (three point pairs, the last being the centre). X/Y axes are -1/-2; origin is -1,1.
 Driving Profile 1 false makes a dimensional constraint a reference measurement; its value follows solved geometry. Driving Profile 1 true restores a driving dimension. Reference datums cannot be edited directly. The report shows driving flags and raw units (mm or radians).
 Select1–32 unique internal indices, up to64 array cells, within256 entities/constraints and±1Mmm. Budget checks include spacing helpers and conservative constraint reserves. Copy tools accept current line/circle/arc/ellipse/64-pole spline entities. New commands use sketch-local XY. Undo/Redo, atomic errors and FCStd preserve native results.
+
+## Native constraint tools in1.4
+
+PointOnObject binds a current point to another curve, axis or external projected edge. DistanceX/Y accepts signed line displacement, point-to-origin or two-point forms. Block fixes supported internal geometry; duplicate fixes are rejected. Active toggles a constraint without deleting it and its flag is distinct from driving/reference. Native solver errors roll back. See the three bundled native-sketcher guides for exact command forms, singular orientation limits and inactive dimension behavior.1613 genuine host checks and the ConstraintTools.FCStd fixture cover persistence/history; Android execution remains NOT_RUN.

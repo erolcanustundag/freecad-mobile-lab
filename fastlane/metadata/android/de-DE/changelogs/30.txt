@@ -1,0 +1,1 @@
+Neue Punkt-auf-Kurve-Bedingungen, vorzeichenbehaftete horizontale/vertikale Maße, fixierte Geometrie und aktive/inaktive Bedingungen. Verbesserte Prüfung doppelter Bedingungen und lokalisierte Anleitungen.

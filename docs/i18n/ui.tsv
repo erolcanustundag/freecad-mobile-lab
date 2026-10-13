@@ -671,3 +671,7 @@ Mirror sketch geometry|Eskiz geometrisini aynala|Skizzengeometrie spiegeln
 Rectangular sketch array|Dikdörtgen eskiz dizisi|Rechteckige Skizzenanordnung
 Symmetry constraint|Simetri kısıtı|Symmetriebedingung
 Driving / reference dimension|Sürücü / referans ölçü|Steuerndes / Referenzmaß
+Point on curve|Noktayı eğriye bağla|Punkt auf Kurve
+Horizontal / vertical dimension|Yatay / dikey ölçü|Horizontales / vertikales Maß
+Fix sketch geometry|Eskiz geometrisini sabitle|Skizzengeometrie fixieren
+Active / inactive constraint|Etkin / devre dışı kısıt|Aktive / inaktive Bedingung

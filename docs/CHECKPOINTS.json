@@ -310,5 +310,20 @@
     "android_runtime": "physical startup/lifecycle/SAF workflows pending",
     "signing": "retained public development identity",
     "milestone_gate": "not complete until roadmap device/workflow criteria pass"
+  },
+  {
+    "version": "1.4",
+    "version_name": "1.4",
+    "version_code": 30,
+    "channel": "release",
+    "status": "initial public mobile feature release; broader device qualification pending",
+    "scope": "current mobile feature set",
+    "apk": "FreeCAD-Mobile-Lab-1.4-arm64.apk",
+    "size_bytes": 160977845,
+    "sha256": "c62c5168e1a7073f53d6e13645d6767d31902036663b9709b3baeb0e51c6d1d6",
+    "engineering_changes": "Four native constraint scopes: PointOnObject, signed DistanceX/Y, Block/fixed geometry and active/inactive constraints;1613 Sketcher/269 Part/88 App/62 Python checks plus527 locale/3 resource/9 packaging pass. Duplicate Block guard, native activation rollback/history/FCStd;677 TR/DE strings/localized guides. Non-debuggable signed64 JNI+69 extensions/API26/16KiB checks pass; Android execution/full parity pending.",
+    "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+    "signing": "retained public development identity",
+    "milestone_gate": "not complete until roadmap device/workflow criteria pass"
   }
 ]

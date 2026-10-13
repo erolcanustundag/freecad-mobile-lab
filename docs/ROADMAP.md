@@ -142,3 +142,7 @@ Four native editing scopes are host-verified: trim, line extension/shortening, c
 ###1.3 full mobile release — pattern/dimension sub-batch
 
 Four bounded native scopes are host-verified: mirror copies; rectangular arrays/optional spacing constraints; axis/point symmetry; driving/reference measurements.1438 Sketcher checks pass. Full B05/B06/B07 and device gates remainPENDING. Next four scopes: point-on-object constraints, horizontal/vertical coordinate dimensions, Block/fixed geometry, and active/inactive constraint controls, with native history/FCStd tests and another full release.
+
+### 1.4 full mobile release — native constraint sub-batch
+
+Four bounded native scopes are host-verified: PointOnObject, signed DistanceX/Y forms, Block/fixed geometry and active/inactive constraints. 1613 Sketcher checks pass; full B05/B06/B07 and device gates remain PENDING. Next four scopes: constraint names, dimensional expression binding, solver constraint/DOF inspection, and fully constrained profile handoff to original Part extrusion/revolve with native history/FCStd fixtures. F-Droid clean source-build integration remains a separate pending distribution task.

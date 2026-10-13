@@ -1,0 +1,1 @@
+Noktayı eğriye bağlama, işaretli yatay/dikey ölçüler, geometri sabitleme ve etkin/devre dışı kısıtlar eklendi. Yinelenen kısıt kontrolü ve yerelleştirilmiş kılavuzlar iyileştirildi.

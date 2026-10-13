@@ -1,17 +1,34 @@
-# FreeCAD Mobile Lab1.3 — full mobile feature release
+# FreeCAD Mobile Lab 1.4 — full mobile feature release
 
-Full/latest GitHub release, Android code29, signed ARM64 Android8+ APK, non-debuggable and compatible with the retained update certificate. Releases the current mobile feature set; full FreeCAD/Rhino parity and broader device qualification remain NOT_COMPLETE.
+Full/latest GitHub release, Android code30, signed ARM64 Android8+ APK,
+non-debuggable and compatible with the retained update certificate. Releases
+current mobile features; full FreeCAD/Rhino parity and broader device
+qualification remain NOT_COMPLETE.
 
-Four new original Sketcher scopes in Document Lab:
-- Native mirrored copies across X/Y or a current line, preserving construction flags and eligible constraints.
-- Rectangular arrays, optional native spacing construction geometry/constraints, editable spacing dimensions.
-- Axis or point-centred symmetry constraints with solver-aware point movement.
-- Driving/reference dimension controls, measured-value updates, visible mode/unit reporting and guarded datum edits.
+Four new native Sketcher scopes in Document Lab:
+- Point-on-object constraints for current points and other curves, axes or projected external edges.
+- Signed horizontal/vertical dimensions: line displacement, point-to-origin and point-pair forms; unit-aware datum edits and reference measurements.
+- Block constraints fixing supported internal geometry, including rational B-splines; duplicate Block requests rejected explicitly.
+- Active/inactive constraint controls, independently visible from driving/reference mode; activation conflicts roll back without changing history.
 
-EN/TR/DE forms, command input and localized guides cover these tools.673 reviewed Turkish/German strings each; technical diagnostics retain English fallback.
+Forms, command input and localized EN/TR/DE guides cover all four tools.
+677 reviewed Turkish/German UI strings each. Technical diagnostics retain
+English fallback. F-Droid descriptions and unsigned packaging preparation are
+retained; official F-Droid submission and clean native build integration remain pending.
 
-1438 genuine native Sketcher JNI checks pass, including analytic coordinates/weights, grid spacing updates, native symmetry/DOF, reference measurement updates, errors/budget boundaries, multi-edit rollback, Undo/Redo and FCStd restoration. Part269/App88/Python62 regressions and portable locale/resources/packaging checks are recorded separately. APK signing, native133-library/extension closure and16KiB/API26 checks precede publication.
+1613 genuine native Sketcher JNI checks pass, including analytic point/curve
+relationships, signed coordinates, inactive datums, reference updates, Block
+DOF, activation errors, atomic rollback, Undo/Redo and FCStd restoration.
+Part269/App88/Python62 regressions, locale527, resource3 and packaging9 checks
+also pass. Signing, native dependency/API26 closure and16KiB alignment are
+verified before publication. Physical Android1.4 execution is NOT_RUN.
 
-Limits:256 sketch entities/constraints,64 external edges/64 spline poles,8192 preview points,±1Mmm; pattern selection1–32 internal entities and up to64 array cells. Conservative budgets reserve native helpers/constraints. Mirror creates copies; live point relations require Symmetric constraints. Array spacing is constrained only when requested; it does not create a persistent array feature tree or automatically share radii. Copies support the exposed bounded line/circle/arc/ellipse/spline types. Broader native pattern/constraint options, touch editing, PartDesign and full workbench parity remain pending.
-
-The user previously reported startup working, without a version/device log. Android execution/gestures/lifecycle/SAF/language/memory qualification for1.3 remains NOT_RUN. Save/export models before uninstalling/downgrading. Signing keys are excluded from public Git, assets and Actions.
+Limits remain256 sketch entities/constraints,64 external edges/64 spline
+poles,8192 preview points and±1Mmm values. Point-on-object uses native curve
+semantics, not clamped segment parameters. Block reactivation fixes current
+geometry, not an earlier stored pose. Native solver singularities can reject
+large orientation changes from an exactly perpendicular line; disable conflicting
+conditions and move an endpoint slightly before retrying. Inactive dimension
+datums are applied only on successful activation. Touch editing and full
+workbench semantics remain pending. Save/export important models before
+changing installations. Private signing keys are excluded from public assets.

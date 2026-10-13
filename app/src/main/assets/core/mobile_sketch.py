@@ -201,6 +201,10 @@ def edit(obj, request):
                     number(p.y+col*step.y-row*step.x*ratio)
         # Upstream's first size argument follows the displacement (columns).
         obj.addRectangularArray(ids,step,False,cols,rows,spacing,ratio)
+    elif operation=="sketch_active":
+        constraint=index(request["index"],obj.ConstraintCount);value=request["value"]
+        if type(value) is not bool:raise ValueError("Constraint active state must be true or false")
+        obj.setActive(constraint,value)
     elif operation=="sketch_driving":
         constraint=index(request["index"],obj.ConstraintCount);value=request["value"]
         if type(value) is not bool or obj.Constraints[constraint].Type not in DIMENSIONS:
@@ -289,10 +293,31 @@ def edit(obj, request):
         kind=request["kind"];args=request.get("args")
         signatures={"Horizontal":1,"Vertical":1,"Coincident":4,"Parallel":2,
                     "Perpendicular":2,"Tangent":2,"Equal":2,"Distance":2,
-                    "Radius":2,"Diameter":2,"Angle":2,"Symmetric":5}
-        if kind not in signatures or not isinstance(args,list) or (len(args)!=signatures[kind] and not (kind=="Symmetric" and len(args)==6)):
+                    "Radius":2,"Diameter":2,"Angle":2,"Symmetric":5,"PointOnObject":3,"Block":1,"DistanceX":2,"DistanceY":2}
+        if kind not in signatures or not isinstance(args,list) or (len(args)!=signatures[kind] and not (kind=="Symmetric" and len(args)==6) and not (kind in ("DistanceX","DistanceY") and len(args) in (3,5))):
             raise ValueError("Unsupported constraint or argument count")
-        if kind=="Symmetric":
+        if kind=="PointOnObject":
+            source=point_ref(obj,args[0],args[1]);target=constraint_index(obj,args[2])
+            if source[0]==target:raise ValueError("Point-on-object requires a different target curve")
+            curve_index(obj,target).toShape()
+            args=list(source)+[target]
+        elif kind=="Block":
+            args=[selection(obj,args)[0]]
+            if any(c.Type=="Block" and c.First==args[0] for c in obj.Constraints):
+                raise ValueError("This entity already has a Block constraint; reactivate it instead")
+        elif kind in ("DistanceX","DistanceY"):
+            value=number(args[-1])
+            if len(args)==2:
+                entity=index(args[0],obj.GeometryCount)
+                if obj.Geometry[entity].TypeId!="Part::GeomLineSegment":raise ValueError("Two-argument coordinate dimensions require a line")
+                args=[entity,value]
+            elif len(args)==3:
+                args=list(point_ref(obj,args[0],args[1]))+[value]
+            else:
+                first=point_ref(obj,args[0],args[1]);second=point_ref(obj,args[2],args[3])
+                if first==second:raise ValueError("Coordinate dimensions require two different points")
+                args=list(first)+list(second)+[value]
+        elif kind=="Symmetric":
             first=point_ref(obj,args[0],args[1]);second=point_ref(obj,args[2],args[3])
             if first==second:raise ValueError("Symmetry requires two different point references")
             args=list(first)+list(second)+[constraint_index(obj,args[4])]
@@ -346,6 +371,7 @@ def summary(obj):
             "geometry":[{"index":i,"type":g.TypeId,"construction":obj.getConstruction(i)} for i,g in enumerate(obj.Geometry)],
             "constraints":[{"index":i,"type":c.Type,"value":float(c.Value),
                             "driving":obj.getDriving(i) if c.Type in DIMENSIONS else None,
+                            "active":obj.getActive(i),
                             "unit":"rad" if c.Type=="Angle" else "mm" if c.Type in DIMENSIONS else None} for i,c in enumerate(obj.Constraints)]}
 
 def preview(obj):

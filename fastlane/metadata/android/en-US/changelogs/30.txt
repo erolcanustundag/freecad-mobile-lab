@@ -1,0 +1,1 @@
+Adds point-on-object constraints, signed horizontal/vertical dimensions, Block/fixed geometry and active/inactive constraints. Improved duplicate-constraint handling and localized guides.

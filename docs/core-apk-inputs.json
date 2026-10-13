@@ -4205,8 +4205,8 @@
     },
     {
       "path": "scripts/mobile_sketch.py",
-      "size": 21077,
-      "sha256": "c0a42cec62fbbb0688a3b5f81fd3c629dce3c5eb99b3e78b99c78fbe0189653f"
+      "size": 22795,
+      "sha256": "9c2820cb61e7f4d43d8bf1918f1104b24f0ab3e8be1572fbefcec5c0e0e90102"
     },
     {
       "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Aluminum.FCMat",
@@ -5464,6 +5464,6 @@
       "sha256": "4108f1173295667598d68c2d422fd0b8205296466d7a6cc840e733ab7c2e4a44"
     }
   ],
-  "asset_zip_sha256": "9dace5ec6e94f5d08285994882882f9420ee45f47271298f7f0bd2fa23c62b39",
+  "asset_zip_sha256": "589bd8518d3b37592fdd042060cd7e8363060037ea03ce629049b6d9db3b318c",
   "java_jar_sha256": "b4b439629c5aa21db9a3b633d77182d0b25b1c381c391fc447e6104be394bb54"
 }

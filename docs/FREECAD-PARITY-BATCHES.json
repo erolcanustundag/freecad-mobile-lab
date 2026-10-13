@@ -1062,7 +1062,7 @@
   ],
   "stable_1_0_definition": "Original complete FreeCAD parity and broad device/workflow qualification milestone; not closed by product version 1.0",
   "product_release": {
-    "version": "1.1",
+    "version": "1.4",
     "scope": "current mobile feature set",
     "desktop_parity": "NOT_COMPLETE"
   },
@@ -1209,5 +1209,29 @@
     ],
     "evidence": "docs/native-sketcher-results.json",
     "apk": "FreeCAD-Mobile-Lab-1.3-arm64.apk"
+  },
+  "sketch_constraint_prerequisite": {
+    "version": "1.4",
+    "version_code": 30,
+    "features": [
+      {
+        "name": "Point-on-object constraints",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Signed horizontal/vertical dimensions",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Block/fixed geometry",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Active/inactive constraint controls",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      }
+    ],
+    "evidence": "docs/native-sketcher-results.json",
+    "apk": "FreeCAD-Mobile-Lab-1.4-arm64.apk"
   }
 }

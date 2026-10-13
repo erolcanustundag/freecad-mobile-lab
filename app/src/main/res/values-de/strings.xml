@@ -8,6 +8,7 @@
   <string name="ui_2881e0f06668" formatted="false">"A4-SVG · Gesamtbreite und -höhe in mm. XY-Profil bei Z=0. Mit 100% ohne Seitenanpassung drucken."</string>
   <string name="ui_d93d10ff0fbe" formatted="false">"API"</string>
   <string name="ui_78fc30b263a3" formatted="false">"Info / Lizenzen"</string>
+  <string name="ui_1a72b986253d" formatted="false">"Aktive / inaktive Bedingung"</string>
   <string name="ui_0e2465fe2eda" formatted="false">"Mindestens zwei Punkte hinzufügen"</string>
   <string name="ui_8ea9062f548b" formatted="false">"Komponente hinzufügen"</string>
   <string name="ui_e864aa24d43c" formatted="false">"Eigenschaft hinzufügen"</string>
@@ -240,6 +241,7 @@
   <string name="ui_e0c6bc5b780d" formatted="false">"Einpassen / Ansicht"</string>
   <string name="ui_c02484cb2ff4" formatted="false">"Alle sichtbaren Objekte einpassen"</string>
   <string name="ui_231d301768c6" formatted="false">"Auswahl einpassen"</string>
+  <string name="ui_15996cfdc876" formatted="false">"Skizzengeometrie fixieren"</string>
   <string name="ui_64435fd82de7" formatted="false">"Fließkommazahl"</string>
   <string name="ui_7b7ef2314d09" formatted="false">"FreeCAD-Dokumentlabor"</string>
   <string name="ui_dd19f9887573" formatted="false">"Vorne"</string>
@@ -266,6 +268,7 @@
   <string name="ui_f1769e281b55" formatted="false">"Mehrere Objekte ausblenden"</string>
   <string name="ui_90ccd6497400" formatted="false">"Verlauf"</string>
   <string name="ui_e886724cafe9" formatted="false">"Körper an ebener Oberseite aushöhlen"</string>
+  <string name="ui_8007fbe3ae5a" formatted="false">"Horizontales / vertikales Maß"</string>
   <string name="ui_d81caee8ffee" formatted="false">"IGES · sichtbare CAD-Geometrie"</string>
   <string name="ui_eeec98db23d7" formatted="false">"CSV importieren"</string>
   <string name="ui_bff2e66d868c" formatted="false">"Part-STEP importieren"</string>
@@ -423,6 +426,7 @@
   <string name="ui_0aae9a49aace" formatted="false">"Ebenenpunkt Y"</string>
   <string name="ui_076c628bf59a" formatted="false">"Ebenenpunkt Z"</string>
   <string name="ui_f79a28423ed1" formatted="false">"Punkt"</string>
+  <string name="ui_b9c6681958b1" formatted="false">"Punkt auf Kurve"</string>
   <string name="ui_2725a26b9f78" formatted="false">"Punktkoordinaten müssen endlich sein"</string>
   <string name="ui_d3467ec940ec" formatted="false">"Polare Anordnung"</string>
   <string name="ui_dd0c89e0c5bb" formatted="false">"Polylinie"</string>
