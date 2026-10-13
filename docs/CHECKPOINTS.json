@@ -415,5 +415,20 @@
     "android_runtime": "physical startup/lifecycle/SAF workflows pending",
     "signing": "retained public development identity",
     "milestone_gate": "not complete until roadmap device/workflow criteria pass"
+  },
+  {
+    "version": "1.11",
+    "version_name": "1.11",
+    "version_code": 37,
+    "channel": "release",
+    "status": "initial public mobile feature release; broader device qualification pending",
+    "scope": "current mobile feature set",
+    "apk": "FreeCAD-Mobile-Lab-1.11-arm64.apk",
+    "size_bytes": 161026997,
+    "sha256": "c2ff51aee2525c049254b0ca97a630e3987c417ed9d28600ebc5849fe90f7b35",
+    "engineering_changes": "1.11 four original Part scopes: regular polygon, ellipsoid XYZ semiaxes, linked refinement and linked orientation reversal; precompute scalar/restored-polygon bounds and temporary APK-asset exclusions. 2224 actual native checks,269 Part/88 App/62 Python/3 locale/9 packaging regressions pass.707 Turkish/German entries and3guides. Signed compatible non-debuggable APK; native closure/16KiB verified. Physical Android1.11 NOT_RUN/full desktop parity NOT_COMPLETE.",
+    "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+    "signing": "retained public development identity",
+    "milestone_gate": "not complete until roadmap device/workflow criteria pass"
   }
 ]

@@ -6,6 +6,8 @@ Four new original Part scopes: regular polygon, ellipsoid, linked refinement, an
 
 Polygon sides3–128; XYZ ellipsoid semiaxes positive and bounded. Native Radius3=0 retains upstream legacy Y=X. Only full ellipsoids supported. Original BRep conservative bounds and finite volume integration are documented. LinkedRefine follows parent edits; old PartRefine is a labelled snapshot. Reverse flips orientation without changing material size. ShapeInfo volume sums absolute closed-solid integrals; oriented_volume_mm3 reports signed integral. Compound is aggregation, not Boolean union. Inward shell checks use positive component volume consistently; native reversed-source shell fallback is rejected.
 
+APK staging also excludes temporary archives and partial downloads.
+
 Numeric native dimensions and offsets are bounded before recompute; polygon side expressions unsupported and oversized stored polygons rejected before load. Expressions/complex native kernels do not have a global hard CPU/memory guarantee.
 
 Compatible development signing identity retained and excluded from public source/assets. F-Droid remains NOT_SUBMITTED; clean reproducible source-build admission and broader device qualification are pending.

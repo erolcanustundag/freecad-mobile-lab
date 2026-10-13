@@ -29,7 +29,7 @@ def run(*args):
     subprocess.run([str(a) for a in args], check=True, cwd=ROOT)
 
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
-def source_input(path):return path.is_file() and '.rsync-tmp' not in path.parts and '__pycache__' not in path.parts and path.suffix not in ('.pyc','.pyo')
+def source_input(path):return path.is_file() and '.rsync-tmp' not in path.parts and '__pycache__' not in path.parts and path.suffix not in ('.pyc','.pyo','.tmp','.partial') and not path.name.endswith('.tmp.zip')
 def stage_assets(source,destination):
     shutil.rmtree(destination,ignore_errors=True)
     destination.mkdir(parents=True,exist_ok=True)

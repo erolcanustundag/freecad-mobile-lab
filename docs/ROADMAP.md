@@ -1,6 +1,6 @@
 # FreeCAD Mobile Lab — complete desktop parity roadmap
 
-Updated 14 October 2026. Current native checkpoint: **1.11 / code37**. Product1.0 was the first public mobile feature release. B01–B04 and the bounded original Part/Sketcher sub-batches below have host evidence; broader workbench/device parity and the original comprehensive qualification milestone remain **NOT COMPLETE**. The user previously reported startup works on their phone; automated execution of1.11 isNOT_RUN. English, Turkish and German UI/guides are supported. See LANGUAGES.md, RHINO-GAPS.md and RELEASE-SCOPE-1.0.md.
+Updated 13 October 2026. Current native checkpoint: **1.11 / code37**. Product1.0 was the first public mobile feature release. B01–B04 and the bounded original Part/Sketcher sub-batches below have host evidence; broader workbench/device parity and the original comprehensive qualification milestone remain **NOT COMPLETE**. The user previously reported startup works on their phone; automated execution of1.11 isNOT_RUN. English, Turkish and German UI/guides are supported. See LANGUAGES.md, RHINO-GAPS.md and RELEASE-SCOPE-1.0.md.
 
 ## Baseline and scope
 

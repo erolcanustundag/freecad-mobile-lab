@@ -11,6 +11,7 @@ __pycache__/
 *.pyc
 *.partial
 *.tmp
+*.tmp.zip
 # Native/runtime archives are checksum-pinned release assets.
 app/src/main/jniLibs/**/*.so
 app/libs/*.jar

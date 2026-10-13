@@ -27,6 +27,7 @@ class RuntimePackaging(unittest.TestCase):
         build_spec=importlib.util.spec_from_file_location('apk_build',ROOT/'scripts/build_apk.py');build=importlib.util.module_from_spec(build_spec);build_spec.loader.exec_module(build)
         (self.assets/'__pycache__').mkdir();(self.assets/'__pycache__/mobile_core.cpython-312.pyc').write_bytes(b'cache')
         (self.assets/'orphan.pyc').write_bytes(b'cache');(self.assets/'old.pyo').write_bytes(b'cache')
+        (self.assets/'python-home.tmp.zip').write_bytes(b'incomplete archive');(self.assets/'download.partial').write_bytes(b'incomplete download')
         destination=self.root/'staged';destination.mkdir();(destination/'stale.txt').write_text('old')
         build.stage_assets(self.assets,destination)
         self.assertEqual((destination/'mobile_core.py').read_bytes(),(self.assets/'mobile_core.py').read_bytes())
