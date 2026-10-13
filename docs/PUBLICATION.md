@@ -1,5 +1,8 @@
 # GitHub publication
 
+Current full release: **1.4/code30**, https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.4 . Non-draft, non-prerelease and latest; four assets and exact source/tag independently verified. Publication workflow38430079995 and sourceCI38428928909 passed; its temporary transport branch was deleted. Physical Android1.4 execution and full workbench parity remain pending. Earlier publication records below are historical.
+
+
 Product1.0 publication status: **PUBLISHED_FULL_FEATURE_RELEASE**. Signed1.0 release: https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.0 . It is non-draft, non-prerelease and latest; all four asset sizes/SHA256 digests match. Source CI and release workflow passed; the temporary transport branch was removed. The already verified RC7 publication remains **PUBLISHED_EXPERIMENTAL_PRERELEASE**. Public repository: https://github.com/erolcanustundag/freecad-mobile-lab . Signed RC7 prerelease: https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.0-rc7 . All four original asset sizes/SHA256 values match GitHub’s recorded digests. Source checks and the release workflow passed; the temporary transport branch was removed. Android runtime and full FreeCAD parity remain incomplete.
 
 The intended public repository is `freecad-mobile-lab` under the authenticated owner's account. Do not reuse an unrelated repository. Candidate releases must be marked prerelease. Product1.0 is a full release of the current mobile feature set; the earlier complete-FreeCAD-parity/qualification milestone remains NOT_COMPLETE. Its manifest explicitly sets prerelease=false.
