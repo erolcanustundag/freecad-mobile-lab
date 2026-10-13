@@ -385,5 +385,20 @@
     "android_runtime": "physical startup/lifecycle/SAF workflows pending",
     "signing": "retained public development identity",
     "milestone_gate": "not complete until roadmap device/workflow criteria pass"
+  },
+  {
+    "version": "1.9",
+    "version_name": "1.9",
+    "version_code": 35,
+    "channel": "release",
+    "status": "initial public mobile feature release; broader device qualification pending",
+    "scope": "current mobile feature set",
+    "apk": "FreeCAD-Mobile-Lab-1.9-arm64.apk",
+    "size_bytes": 161010613,
+    "sha256": "19ae4fa8f373ae382ab481ed3cdd25bf0005820a332b1933d3949ef0234fba69",
+    "engineering_changes": "Four bounded original Part scopes: linked lofts, current-edge ruled surfaces, intersection-join solid offsets and world-plane native mirrors. Fixed open-surface volume reporting.2017 genuine native checks plus269Part/88App/62Python/527locale/3resources/9packaging pass.699TR/DE strings/3guides. Native binaries unchanged; signed non-debuggable compatible development identity, API26/16KiB closure. Android1.9 execution NOT_RUN, full FreeCAD/Rhino/PartDesign/device parity NOT_COMPLETE.",
+    "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+    "signing": "retained public development identity",
+    "milestone_gate": "not complete until roadmap device/workflow criteria pass"
   }
 ]
