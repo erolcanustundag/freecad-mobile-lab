@@ -693,3 +693,7 @@ Planar section helper|Düzlemsel kesit yardımcısı|Planarer Schnitthelfer
 Inspect native face or edge|Yerel yüz veya kenarı incele|Native Fläche oder Kante prüfen
 Edit native finishing selection|Yerel kenar işlemi seçimini düzenle|Native Kantenbearbeitung ändern
 Drag to orbit · pinch to zoom · two fingers to pan|Döndürmek için sürükleyin · yakınlaştırmak için sıkıştırın · iki parmakla kaydırın|Ziehen zum Drehen · spreizen zum Zoomen · zwei Finger zum Verschieben
+Native profile loft|Yerel profil geçişi|Native Profilverbindung
+Native ruled surface|Yerel doğrusal geçiş yüzeyi|Native Regelfläche
+Native solid offset|Yerel katı ofseti|Nativer Volumenkörperversatz
+Native shape mirror|Yerel şekil aynalama|Native Formspiegelung

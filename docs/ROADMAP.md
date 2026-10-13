@@ -158,3 +158,6 @@ Constraint naming, dimensional expression binding, read-only solver/reference in
 
 ###1.8 — native section and inspection sub-batch
 Finite planar section helpers, world-space wire previews, exact current face/edge inspection and fillet/chamfer selection/amount edits are implemented. Native analytic sections, helper bounds, history, rollback and FCStd are covered; full Part/PartDesign/device parity remains pending. Next four scopes: linked native loft, ruled surface, offset and shape mirror, subject to original API/geometry validation.
+
+###1.9 — native loft/surface sub-batch
+2017 genuine native checks cover linked loft, ruled surface, solid offset and world-plane mirroring; analytic geometry, original references/source updates, limits, rollback, Undo/Redo, FCStd and STEP. Closed-solid volume reporting fixes misleading open-surface integrals.699 reviewedTR/DE strings and3guides. Full Part/PartDesign/workbench/device parity stays pending. Next batch: native sweep, selected-face thickness,2D offset and linked multi-shape compound, with actual upstream geometry/history tests before another APK.

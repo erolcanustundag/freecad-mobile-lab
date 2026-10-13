@@ -127,6 +127,31 @@ def _edit(edit):
     action = edit.get("op")
     if isinstance(action,str) and action.startswith("sketch_"):
         mobile_sketch.edit(_object(edit["object"]),edit)
+    elif action in ("part_loft","part_ruled","part_offset","part_mirror"):
+        name=_identifier(edit["name"])
+        if _doc().getObject(name) is not None or len(_doc().Objects)>=1000:raise ValueError("Choose a new native feature name within the1000-object budget")
+        if action=="part_loft":
+            names=edit["sections"];solid=edit["solid"];ruled=edit["ruled"]
+            if not isinstance(names,list) or not 2<=len(names)<=16 or any(not isinstance(n,str) for n in names) or len(set(names))!=len(names) or type(solid) is not bool or type(ruled) is not bool:raise ValueError("Use2–16 unique profile names and boolean solid/ruled modes")
+            sources=[mobile_part.wire_profile(_object(n),solid) for n in names]
+            obj=_doc().addObject("Part::Loft",name);obj.Sections=sources;obj.Solid=solid;obj.Ruled=ruled;obj.Closed=False
+        elif action=="part_ruled":
+            first=mobile_part.edge_source(_object(edit["first"]),edit["first_edge"]);second=mobile_part.edge_source(_object(edit["second"]),edit["second_edge"])
+            if first==second and edit["first_edge"]==edit["second_edge"]:raise ValueError("Choose two different native edges")
+            obj=_doc().addObject("Part::RuledSurface",name);obj.Curve1=(first,[edit["first_edge"]]);obj.Curve2=(second,[edit["second_edge"]])
+        else:
+            source=_object(edit["source"]);info=mobile_part.shape_info(source)
+            if source.TypeId not in mobile_part.TYPES|mobile_sketch.TYPES or not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]):raise ValueError("Choose valid bounded native Part geometry")
+            if action=="part_offset":
+                amount=mobile_sketch.number(edit["amount"])
+                if len(source.Shape.Solids)!=1 or abs(amount)<=1e-7:raise ValueError("Use a nonzero offset on one native solid")
+                obj=_doc().addObject("Part::Offset",name);obj.Source=source;obj.Value=amount;obj.Join="Intersection"
+            else:
+                origin=edit["origin"];normal=edit["normal"]
+                if not isinstance(origin,list) or not isinstance(normal,list) or len(origin)!=3 or len(normal)!=3:raise ValueError("Use world XYZ mirror origin and normal")
+                origin=App.Vector(*[mobile_sketch.number(v) for v in origin]);normal=App.Vector(*[mobile_sketch.number(v) for v in normal])
+                if normal.Length<=1e-7:raise ValueError("Mirror normal must be nonzero")
+                normal.normalize();obj=_doc().addObject("Part::Mirroring",name);obj.Source=source;obj.Base=origin;obj.Normal=normal
     elif action == "section_plane":
         source=_object(edit["source"]);name=_identifier(edit["name"]);plane_name=_identifier(name+"_Plane")
         info=mobile_part.shape_info(source)
@@ -219,8 +244,8 @@ def _edit(edit):
         obj.Label = _text(edit.get("label", name), 256)
     elif action == "remove":
         target=_object(edit["object"])
-        if any(o.TypeId in mobile_sketch.TYPES|{"Part::Extrusion","Part::Revolution","Part::Fillet","Part::Chamfer","Part::Section"} for o in target.InList):
-            raise ValueError("Detach sketches and remove their external references before deleting the source")
+        if any(o.TypeId in mobile_sketch.TYPES|mobile_part.TYPES for o in target.InList):
+            raise ValueError("Remove dependent native features and sketch references before deleting the source")
         _doc().removeObject(target.Name)
     elif action == "property":
         obj = _object(edit["object"])

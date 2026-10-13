@@ -361,8 +361,12 @@
   <string name="ui_c932b089985d" formatted="false">"Yerel kenar pahı"</string>
   <string name="ui_4986bec31286" formatted="false">"Yerel kenar yuvarlama"</string>
   <string name="ui_55e081e59f06" formatted="false">"Özgün kesişim"</string>
+  <string name="ui_552bb9b436d4" formatted="false">"Yerel profil geçişi"</string>
   <string name="ui_683715f9cd2e" formatted="false">"Yerel iyileştirme anlık kopyası"</string>
+  <string name="ui_7f91ba85c7df" formatted="false">"Yerel doğrusal geçiş yüzeyi"</string>
+  <string name="ui_97791f0b9ded" formatted="false">"Yerel şekil aynalama"</string>
   <string name="ui_95917cac62a7" formatted="false">"Yerel şekil kesiti"</string>
+  <string name="ui_266b14b41bae" formatted="false">"Yerel katı ofseti"</string>
   <string name="ui_c2c2cc1eb77b" formatted="false">"Yerel küre"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Yerel torus"</string>
   <string name="ui_7aaa9ab32d7f" formatted="false">"Özgün birleşim"</string>

@@ -361,8 +361,12 @@
   <string name="ui_c932b089985d" formatted="false">"Native Kantenfase"</string>
   <string name="ui_4986bec31286" formatted="false">"Native Kantenverrundung"</string>
   <string name="ui_55e081e59f06" formatted="false">"Originaler Schnitt"</string>
+  <string name="ui_552bb9b436d4" formatted="false">"Native Profilverbindung"</string>
   <string name="ui_683715f9cd2e" formatted="false">"Native Verfeinerungskopie"</string>
+  <string name="ui_7f91ba85c7df" formatted="false">"Native Regelfläche"</string>
+  <string name="ui_97791f0b9ded" formatted="false">"Native Formspiegelung"</string>
   <string name="ui_95917cac62a7" formatted="false">"Nativer Formschnitt"</string>
+  <string name="ui_266b14b41bae" formatted="false">"Nativer Volumenkörperversatz"</string>
   <string name="ui_c2c2cc1eb77b" formatted="false">"Native Kugel"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Nativer Torus"</string>
   <string name="ui_7aaa9ab32d7f" formatted="false">"Originale Vereinigung"</string>

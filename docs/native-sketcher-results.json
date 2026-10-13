@@ -1,10 +1,10 @@
 {
-  "version": "1.8",
-  "version_code": 34,
+  "version": "1.9",
+  "version_code": 35,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "checks": {
-    "sketcher_jni_solver_geometry_fcstd": 1903,
+    "sketcher_jni_solver_geometry_fcstd": 2017,
     "part_jni_regressions": 269,
     "metadata_jni_regressions": 88,
     "python_tools_regressions": 62,
@@ -43,8 +43,8 @@
   "fixtures": [
     {
       "path": "samples/upstream-sketcher/Sketch.FCStd",
-      "size": 15665,
-      "sha256": "114514a71fb0a196baf663c7088bab81890132af2cbeea29cb744c858e1ef387"
+      "size": 15651,
+      "sha256": "1c6b8f9bb4b95a42675632ced6e984ab7a2c415afbeda5416445f581cfe877ae"
     },
     {
       "path": "samples/upstream-sketcher/preview.json",
@@ -53,8 +53,8 @@
     },
     {
       "path": "samples/upstream-sketcher/Attachments.FCStd",
-      "size": 15630,
-      "sha256": "fdcfe73060d8799d60a47738298266292103d0dfeab05fa9d17d8b81d4c8e1d2"
+      "size": 15615,
+      "sha256": "d41cd96412be5d8ff36d3e47c53af527a0baac6dce35b018418ab455ccfd05fe"
     },
     {
       "path": "samples/upstream-sketcher/attachment-preview.json",
@@ -63,43 +63,48 @@
     },
     {
       "path": "samples/upstream-sketcher/SketchTools.FCStd",
-      "size": 20603,
-      "sha256": "240b0143432f3681b257c981917a9b487b5f889c912b0cafbbd3adf36b3e31f6"
+      "size": 20592,
+      "sha256": "e2fd4de9eebbc878522e353035561e75ea5db9a22d3858994fdf188f940ffb61"
     },
     {
       "path": "samples/upstream-sketcher/PatternTools.FCStd",
-      "size": 32242,
-      "sha256": "4c8ca23a7b70e544ff999f81525d5c531a212187566e55e5a6d305aff9f5ad09"
+      "size": 32261,
+      "sha256": "0cc557cd7f39652eb56e9adde18c82d4e25a4084945a2184094cdd6bc01a9127"
     },
     {
       "path": "samples/upstream-sketcher/ReferenceDimension.FCStd",
-      "size": 32241,
-      "sha256": "3299a8cfea7d90f4e4e8ffe93cdd504bdd90055b7d7e8026d217e24f20457d90"
+      "size": 32261,
+      "sha256": "56b753426e8d615c134cf215658c191a76e78f405224bd3eb0bb650f45e72444"
     },
     {
       "path": "samples/upstream-sketcher/ConstraintTools.FCStd",
-      "size": 42542,
-      "sha256": "171288afee6ceed0173bb113cd4ed5b649b26a60c514a73d7465ca03b7ca4719"
+      "size": 42556,
+      "sha256": "0cdbfaf4a09a05613d037a9559cad9731529e2a8b2beccac5592b1fd4698b993"
     },
     {
       "path": "samples/upstream-sketcher/NamedProfiles.FCStd",
-      "size": 8636,
-      "sha256": "dc036d9b9cddee8dec6125ea7d62f66b11e97467c2e4e0f3c69ccf39c0be5cd1"
+      "size": 8635,
+      "sha256": "a08fdcf4c2f9723d4d9084ba8a519802eb8e9a301b14e087f70d250fe716165d"
     },
     {
       "path": "samples/upstream-sketcher/SolidControls.FCStd",
-      "size": 10269,
-      "sha256": "db087fffec11a0e9a63c2a2d9d8990382c3e995309b988bdbdfbe01c2cc56704"
+      "size": 10267,
+      "sha256": "4981f2ccbef132aef3654dbc2677674ea2fd900e4f276925bdb2f2ab048d6eff"
     },
     {
       "path": "samples/upstream-sketcher/NativeFinishing.FCStd",
       "size": 22767,
-      "sha256": "4d5eb03949259d7fc4837afbb4e5db4da701c7a58e3da9516d02ce5e1c0e2ca4"
+      "sha256": "e6312c6a13f02ef8bba35d08a9989cd58b753ca997cdea752792859c09f0386c"
     },
     {
       "path": "samples/upstream-sketcher/SectionTools.FCStd",
-      "size": 29128,
-      "sha256": "c53fb9f540303af46e3bf21aa9afc7df82dc20b1bc8dd830fa51016af7d51160"
+      "size": 29123,
+      "sha256": "f9d5347cfc4b6c82ae7380f74e1ae577ea5a59d64b5ceaf37cfaf7f9ceb90d0f"
+    },
+    {
+      "path": "samples/upstream-sketcher/SurfaceTools.FCStd",
+      "size": 46391,
+      "sha256": "c624498a3f78d7202d9aedd2fd421f72a48afbc6e8147fdb439a2d62d0ed224a"
     }
   ],
   "attachment_scopes": [
@@ -160,5 +165,14 @@
     "rollback": "Empty sections, zero normal, negative size, duplicate/helper names, bounds, invalid edges/types/amounts and dependency deletion",
     "android_gestures": "IMPLEMENTED_NOT_RUN",
     "topology_references": "Current1-based indices; no general stable topological naming claim"
+  },
+  "native_surface_features": {
+    "loft": "Original Part::Loft Sections/Solid/Ruled;2\u201316 unique wire profiles, closed for solid,256edges/64BSplinepoles; Closed mode rejected",
+    "ruled_surface": "Original Part::RuledSurface Curve1/Curve2 single current LinkSub EdgeN; nonzero bounded curves",
+    "offset": "Original Part::Offset Source/Value/Intersection join; nonzero mm amount and one closed solid result",
+    "mirror": "Original Part::Mirroring Source/Base/Normal; normalized world normal, linked solid/wire/surface",
+    "checks": "Analytic frustum volume and straight ruled area, open-volume null, box offsets, arbitrary world-plane and source placement reflection, links/source edits/cycles/deletion, collapsed geometry, dense-spline budget, atomic rollback/history/FCStd/STEP",
+    "open_surface_volume": "Closed-solid sum only; no open-face volume integral reported",
+    "android": "NOT_RUN"
   }
 }

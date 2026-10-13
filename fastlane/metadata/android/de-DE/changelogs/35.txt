@@ -1,0 +1,1 @@
+Native verknüpfte Lofts, Regelflächen, Körperversatz und Ebenenspiegelung. Offene Flächen zeigen kein eingeschlossenes Volumen. Android-Prüfung steht aus.

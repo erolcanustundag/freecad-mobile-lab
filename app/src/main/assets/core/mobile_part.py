@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: LGPL-2.1-or-later
 """Bounded adapter to genuine upstream Part. Never substitutes mobile OCCT recipes."""
 import math
+import re
 from pathlib import Path
 try:
     import Part
@@ -8,7 +9,7 @@ except ImportError:
     Part = None
 
 TYPES = {"Part::Feature", "Part::Box", "Part::Cylinder", "Part::Sphere", "Part::Cone",
-         "Part::Torus", "Part::Cut", "Part::Fuse", "Part::Common", "Part::Extrusion", "Part::Revolution", "Part::Fillet", "Part::Chamfer", "Part::Section", "Part::Plane"}
+         "Part::Torus", "Part::Cut", "Part::Fuse", "Part::Common", "Part::Extrusion", "Part::Revolution", "Part::Fillet", "Part::Chamfer", "Part::Section", "Part::Plane", "Part::Loft", "Part::RuledSurface", "Part::Offset", "Part::Mirroring"}
 
 def available():
     return Part is not None
@@ -41,7 +42,9 @@ def summary(obj):
     if shape.isNull():
         return {"null": True, "valid": False}
     box = shape.BoundBox
-    return {"null": False, "valid": shape.isValid(), "volume": float(shape.Volume),
+    solids=shape.Solids
+    volume=float(sum(s.Volume for s in solids)) if solids and all(s.isClosed() for s in solids) else None
+    return {"null": False, "valid": shape.isValid(), "volume": volume,
             "area": float(shape.Area), "edges": len(shape.Edges), "faces": len(shape.Faces),
             "solids": len(shape.Solids), "bounds": [box.XMin,box.YMin,box.ZMin,box.XMax,box.YMax,box.ZMax]}
 
@@ -104,6 +107,26 @@ def profile(source, require_constrained=False):
 
 def validate_document(doc):
     for obj in doc.Objects:
+        if obj.TypeId in ("Part::Loft","Part::RuledSurface","Part::Offset","Part::Mirroring"):
+            if obj.TypeId=="Part::Loft":
+                sources=list(obj.Sections)
+                if not 2<=len(sources)<=16 or len(set(sources))!=len(sources) or obj.Closed:raise ValueError("Use2–16 unique sections for an open-ended loft")
+                for source in sources:wire_profile(source,bool(obj.Solid))
+            elif obj.TypeId=="Part::RuledSurface":
+                sources=[]
+                for link in (obj.Curve1,obj.Curve2):
+                    if not isinstance(link,tuple) or len(link)!=2 or len(link[1])!=1:raise ValueError("Ruled surfaces require two single native edge references")
+                    edge_source(link[0],link[1][0]);sources.append(link[0])
+            else:
+                sources=[obj.Source]
+                if obj.Source is None:raise ValueError("Native source link must exist")
+                if obj.TypeId=="Part::Offset" and (abs(obj.Value)<=1e-7 or abs(obj.Value)>1000000 or not math.isfinite(obj.Value) or len(obj.Source.Shape.Solids)!=1):raise ValueError("Use a finite nonzero offset on one source solid")
+                if obj.TypeId=="Part::Mirroring" and (obj.Normal.Length<=1e-7 or any(not math.isfinite(v) or abs(v)>1000000 for v in [*obj.Base,*obj.Normal])):raise ValueError("Use a bounded nonzero mirror plane")
+            if any(source is None or source.TypeId not in TYPES|{"Sketcher::SketchObject"} or source==obj or source in obj.InListRecursive for source in sources):raise ValueError("Native feature sources must exist without dependency cycles")
+            info=shape_info(obj)
+            if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]):raise ValueError("Native surface/solid result must be valid and bounded")
+            if (obj.TypeId=="Part::Offset" or obj.TypeId=="Part::Loft" and obj.Solid) and (info["solids"]!=1 or info["volume"] is None or not 1e-9<info["volume"]<1e18):raise ValueError("Native solid feature must create one bounded closed solid")
+            if obj.TypeId=="Part::RuledSurface" and not obj.Shape.Faces:raise ValueError("Ruled surface must produce faces")
         if obj.TypeId=="Part::Plane":
             info=shape_info(obj)
             if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]):raise ValueError("Native helper plane must be valid within±1,000,000mm")
@@ -133,8 +156,29 @@ def shape_info(obj):
     result.update(type=shape.ShapeType,closed=bool(shape.isClosed()),boundary_edge_length_mm=float(sum(edge.Length for edge in shape.Edges)),units={"bounds":"mm","volume":"mm³","area":"mm²","boundary_edge_length_mm":"mm"})
     center=shape.Solids[0].CenterOfMass if len(shape.Solids)==1 else None
     result["solid_centroid_mm"]=[center.x,center.y,center.z] if center is not None else None
-    if not all(math.isfinite(v) for v in [result["volume"],result["area"],result["boundary_edge_length_mm"],*result["bounds"],*(result["solid_centroid_mm"] or [])]):raise ValueError("Native measurements must be finite")
+    if not all(math.isfinite(v) for v in [*([] if result["volume"] is None else [result["volume"]]),result["area"],result["boundary_edge_length_mm"],*result["bounds"],*(result["solid_centroid_mm"] or [])]):raise ValueError("Native measurements must be finite")
     return result
+
+
+def wire_profile(obj,closed=False):
+    if obj is None or obj.TypeId not in TYPES|{"Sketcher::SketchObject"}:raise ValueError("Choose supported native wire geometry")
+    info=shape_info(obj);shape=obj.Shape
+    if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]) or shape.Faces or len(shape.Wires)!=1 or len(shape.Edges)>256 or closed and not shape.Wires[0].isClosed():raise ValueError("Choose one valid bounded wire; solid lofts require closed profiles")
+    for edge in shape.Edges:curve_budget(edge)
+    return obj
+
+
+def edge_source(obj,element):
+    if obj is None or obj.TypeId not in TYPES|{"Sketcher::SketchObject"}:raise ValueError("Choose supported native edge geometry")
+    info=shape_info(obj);match=re.fullmatch(r"Edge([1-9][0-9]{0,5})",element) if isinstance(element,str) else None
+    if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]) or not match or not 1<=int(match.group(1))<=len(obj.Shape.Edges):raise ValueError("Choose a current native EdgeN within the source")
+    if obj.Shape.Edges[int(match.group(1))-1].Length<=1e-7:raise ValueError("Choose a nonzero edge for a ruled surface")
+    curve_budget(obj.Shape.Edges[int(match.group(1))-1])
+    return obj
+
+
+def curve_budget(edge):
+    if edge.Length<=1e-7 or getattr(edge.Curve,"NbPoles",0)>64:raise ValueError("Use nonzero native profile/ruled curves with at most64 spline poles")
 
 
 def wire_preview(obj):

@@ -1,0 +1,1 @@
+Yerel bağlantılı loft, doğrusal yüzey, katı ofseti ve düzlemde aynalama. Açık yüzeylerde kapalı hacim gösterilmez. Android doğrulaması sürüyor.

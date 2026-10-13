@@ -1,0 +1,1 @@
+Native linked lofts, ruled surfaces, solid offsets and world-plane mirrors. Open surfaces no longer report enclosed volume. EN/TR/DE guides; Android qualification remains pending.
