@@ -1,7 +1,7 @@
 {
-  "version": "1.2-rc1",
-  "tag": "v1.2-rc1",
-  "title": "FreeCAD Mobile Lab 1.2-rc1 \u00b7 experimental Android candidate",
+  "version": "1.2-rc3",
+  "tag": "v1.2-rc3",
+  "title": "FreeCAD Mobile Lab 1.2-rc3 \u00b7 experimental Android candidate",
   "prerelease": true,
   "release_scope": "engineering candidate",
   "milestone_gate": "NOT_COMPLETE",
@@ -10,31 +10,36 @@
   "publication": "PENDING",
   "assets": [
     {
-      "name": "FreeCAD-Mobile-Lab-1.2-rc1-arm64.apk",
+      "name": "FreeCAD-Mobile-Lab-1.2-rc3-arm64.apk",
       "kind": "apk",
-      "size_bytes": 156455852,
-      "sha256": "c44626f022bf73c89f0c824ee58e4c04bac93a93091d4681990d72f8e48c07ca"
+      "size_bytes": 160961461,
+      "sha256": "3ed0986f6496578543c08ecc5bda8ce72d5e2acf211b639784b624d195e69129"
     },
     {
-      "name": "FreeCAD-Mobile-Lab-1.2-rc1-native-runtime.zip",
+      "name": "FreeCAD-Mobile-Lab-1.2-rc3-native-runtime.zip",
       "kind": "native-runtime",
-      "size_bytes": 60691294,
-      "sha256": "4e71d96d19d9ce44d1b33587465d68ea1997fb2a67bc763c102fdb337a63eeac",
+      "size_bytes": 61733231,
+      "sha256": "ab39e4a2ff3c64adaf66aeaa4ea3a26b3521cb67b289dba5b54cede5d3298b98",
       "files": [
         {
           "path": "app/src/main/jniLibs/arm64-v8a/libFreeCADApp.so",
-          "size_bytes": 7350920,
-          "sha256": "fef2bd53df0efcbd288ff5fe682575d8206a25bc5587d66c25c7b085cd0cd592"
+          "size_bytes": 7350808,
+          "sha256": "cb2b3084e8a39c8bc842fd6741f1b1c4c04a461176ee4bf0ab17c6acdba869cd"
         },
         {
           "path": "app/src/main/jniLibs/arm64-v8a/libFreeCADBase.so",
           "size_bytes": 2777696,
-          "sha256": "c7fcb9a7be72ff5789e5d4e0e76e396ebeffebabe16d82ac8334f9b21b72113c"
+          "sha256": "c3a6c40f6fea529a5aa4301c029d55854756809f46eb2fb36f9ccd27af4bba6f"
         },
         {
           "path": "app/src/main/jniLibs/arm64-v8a/libFreeCADMaterials.so",
           "size_bytes": 1563145,
           "sha256": "0b7d941b1dc0304a41c9372ade89df67e4f0332a7eff76272dc3b7d4ac82786b"
+        },
+        {
+          "path": "app/src/main/jniLibs/arm64-v8a/libFreeCADOriginalSketcher.so",
+          "size_bytes": 4473873,
+          "sha256": "f508c86e128d5f5fa461720d296b36772f6efebc9fd760f32b720181ac9a6782"
         },
         {
           "path": "app/src/main/jniLibs/arm64-v8a/libFreeCADPart.so",
@@ -283,8 +288,8 @@
         },
         {
           "path": "app/src/main/jniLibs/arm64-v8a/libfreecad_document_bridge.so",
-          "size_bytes": 85537,
-          "sha256": "4da52fee648d9c3591c2a14b65713431c5daf86ba257ff441f51ad1543603ef2"
+          "size_bytes": 101977,
+          "sha256": "28bc70df462ba53c61171b245ce0799a691b4c648e6c6b08086799449d217f75"
         },
         {
           "path": "app/src/main/jniLibs/arm64-v8a/libfreecad_sketcher.so",
@@ -343,22 +348,22 @@
         },
         {
           "path": "app/src/main/assets/core/python-home.zip",
-          "size_bytes": 9867249,
-          "sha256": "6586ae2077fe8461c54870967c9e109233effde422d90f25bc8706d44f1e9cb9"
+          "size_bytes": 9870199,
+          "sha256": "4d51b68ba93cf36b93450e725b777f2e355ad3d0e5fda5b4589ec1e6eca0a37c"
         }
       ]
     },
     {
-      "name": "FreeCAD-Mobile-Lab-1.2-rc1-corresponding-sources.zip",
+      "name": "FreeCAD-Mobile-Lab-1.2-rc3-corresponding-sources.zip",
       "kind": "corresponding-source",
       "size_bytes": 430414494,
       "sha256": "1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51"
     },
     {
-      "name": "FreeCAD-Mobile-Lab-1.2-rc1-public-source.zip",
+      "name": "FreeCAD-Mobile-Lab-1.2-rc3-public-source.zip",
       "kind": "application-source",
-      "size_bytes": 32363177,
-      "sha256": "dce39a61c09d3db47e435efd748454eba3f4f21b1447d7b46865727210d624d4"
+      "size_bytes": 31927721,
+      "sha256": "148e464074e654c50cabbae0d40b5808f88e46117a9b2ddcf79617f6aaf21ccc"
     }
   ]
 }

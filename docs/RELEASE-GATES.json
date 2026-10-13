@@ -1,12 +1,12 @@
 {
-  "candidate": "1.2-rc1",
-  "version_code": 24,
+  "candidate": "1.2-rc3",
+  "version_code": 26,
   "stable_1_0": "NOT_COMPLETE",
   "android_runtime": "NOT_RUN",
   "reported_phone_crash": "User now reports startup works; crash root cause and broader workflows remain unverified",
-  "static_apk": "PASS:63 ARM64 JNI libraries plus69 Python extensions, v2/v3 certificate, loader/strong-symbol closure and16KiB ELF/ZIP alignment",
-  "runtime_asset_packaging": "PASS:7 regressions;1074 hashed/CRC/source-matched runtime files including251 original material/model resources",
-  "native_runtime": "PASS: original Android/host Part/Materials and JNI bridge;270 Part plus88/62 regressions",
+  "static_apk": "PASS:64 ARM64 JNI libraries plus69 Python extensions, v2/v3 retained certificate, API26 closure and16KiB ELF/ZIP",
+  "runtime_asset_packaging": "PASS:9 packaging tests;1075 hashed/CRC/source-matched runtime files including251 original material/model resources",
+  "native_runtime": "PASS: original Part/Materials/Sketcher ARM64 and host builds;955 Sketcher/269 Part/88 App/62 Python checks",
   "device_smoke_instrumentation": "COMPILED_ONLY",
   "production_signing": "Retained development certificate for RC7 updates; dedicated production identity/update migration pending",
   "publication": "PENDING",
@@ -14,7 +14,7 @@
     "Physical Android candidate launch/lifecycle/SAF/recovery/language/geometry workflows and second device",
     "Android memory budgets and4/16KiB device execution",
     "Production signing and update migration",
-    "Full Part UI/semantics, original Sketcher/PartDesign and remaining workbench/module/format parity",
+    "Full Part UI/semantics, full Sketcher/PartDesign and remaining workbench/module/format parity",
     "Independent fabrication calibration"
   ],
   "historical_rc2_evidence": {
@@ -40,10 +40,10 @@
     "source_apk_provenance": "PASS: build input digests and retained 0.9 ARM64 native binaries",
     "repeat_packaging": "PASS: separately reproduced DEX/assets/native bytes identical; immutable original APK preserved"
   },
-  "release_scope": "four bounded original Part prerequisites",
+  "release_scope": "four bounded native Sketcher scopes plus original Part prerequisite",
   "release_channel": "candidate",
   "stable_1_0_definition": "Original full desktop parity and broad device qualification milestone; NOT_COMPLETE",
   "automated_android_tests": "NOT_RUN",
   "source_metadata": "PASS: syntax, bounded release scope, startup-report classification and unfinished parity",
-  "localization": "PASS:527 locale/command/Unicode checks;634 Turkish/German entries and3 resource regressions; device NOT_RUN"
+  "localization": "PASS:527 locale/command checks;657 Turkish/German entries, three localized native sketch guides and3 resource tests; device NOT_RUN"
 }

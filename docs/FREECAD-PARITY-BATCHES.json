@@ -1103,12 +1103,13 @@
     ],
     "android_execution": "NOT_RUN",
     "version_code": 24,
-    "evidence": "native-part-results.json and core-apk-verification.json"
+    "evidence": "native-part-results.json and core-apk-verification.json",
+    "replacement_apk": "FreeCAD-Mobile-Lab-1.2-rc3-arm64.apk"
   },
   "sketcher_prerequisite": {
     "id": "P-SKETCHER",
-    "version": "1.2-rc2",
-    "version_code": 25,
+    "version": "1.2-rc3",
+    "version_code": 26,
     "features": [
       {
         "id": "P-SKETCHER-F1",
@@ -1131,8 +1132,9 @@
         "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
       }
     ],
-    "apk_status": "PENDING_FINAL_REPACKAGE",
+    "apk_status": "SIGNED_STATIC_VERIFIED_ANDROID_PENDING",
     "evidence": "native-sketcher-results.json",
-    "full_B05_B06_B07": "PENDING"
+    "full_B05_B06_B07": "PENDING",
+    "apk": "FreeCAD-Mobile-Lab-1.2-rc3-arm64.apk"
   }
 }

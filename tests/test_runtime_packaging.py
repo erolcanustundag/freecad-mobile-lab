@@ -23,6 +23,15 @@ class RuntimePackaging(unittest.TestCase):
         (self.root/'docs').mkdir();(self.root/'docs/core-apk-inputs.json').write_text(json.dumps(manifest))
     def tearDown(self):self.temp.cleanup()
     def test_valid_boundary(self):self.assertEqual(module.check(self.root),1)
+    def test_apk_staging_excludes_generated_python_caches(self):
+        build_spec=importlib.util.spec_from_file_location('apk_build',ROOT/'scripts/build_apk.py');build=importlib.util.module_from_spec(build_spec);build_spec.loader.exec_module(build)
+        (self.assets/'__pycache__').mkdir();(self.assets/'__pycache__/mobile_core.cpython-312.pyc').write_bytes(b'cache')
+        (self.assets/'orphan.pyc').write_bytes(b'cache');(self.assets/'old.pyo').write_bytes(b'cache')
+        destination=self.root/'staged';destination.mkdir();(destination/'stale.txt').write_text('old')
+        build.stage_assets(self.assets,destination)
+        self.assertEqual((destination/'mobile_core.py').read_bytes(),(self.assets/'mobile_core.py').read_bytes())
+        self.assertEqual((destination/'python-home.zip').read_bytes(),(self.assets/'python-home.zip').read_bytes())
+        self.assertEqual({str(p.relative_to(destination)) for p in destination.rglob('*') if p.is_file()},{'mobile_core.py','python-home.zip'})
     def test_source_update_requires_repacking(self):
         (self.assets/'mobile_core.py').write_text('print("new")\n')
         with self.assertRaisesRegex(ValueError,'module is stale'):module.check(self.root)

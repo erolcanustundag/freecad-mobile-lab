@@ -233,6 +233,38 @@
     "engineering_changes": "Original Part/Materials builtin runtime; native parametric solids/linked booleans/expressions/transactions; whitelisted Part FCStd and STEP import/export; bounded genuine geometry/software preview. Fixed native feature creation by bundling251 upstream material/model resources.634 Turkish/German entries.270 Part,88 document,62 Python host checks;63 JNI/132 total ARM64 library checks; Android execution NOT_RUN.",
     "android_runtime": "physical startup/lifecycle/SAF workflows pending",
     "signing": "retained public development identity",
+    "milestone_gate": "not complete until roadmap device/workflow criteria pass",
+    "publication": "NOT_PUBLISHED",
+    "binary_availability": "Lost before persistence during workspace cleanup; superseded by1.2-rc2, source/evidence retained"
+  },
+  {
+    "version": "1.2-rc2",
+    "version_name": "1.2-rc2",
+    "version_code": 25,
+    "channel": "candidate",
+    "status": "engineering checkpoint; Android device gate pending",
+    "apk": "FreeCAD-Mobile-Lab-1.2-rc2-arm64.apk",
+    "size_bytes": 160978338,
+    "sha256": "0eaff0f797bf9aa3d1098154b16d4e80143d3ee1d353556ada24cad0f219f2d2",
+    "engineering_changes": "Four bounded original Sketcher scopes: native entities/movement/deletion; rational splines/construction; native constraints/units/DOF/rollback; supported Sketcher FCStd and sampled XY preview.955 real Sketcher JNI checks,269 Part/88 App/62 Python regressions,527 locale checks,3 resource/8 packaging tests pass.64 ARM64 JNI libraries+69 extensions,1075 runtime files, retained v2/v3 signing and16KiB/API26 closure verified. Embedded host VM fault-handler policy fixed/probed.657 Turkish/German strings and localized sketch guides. Physical Android execution NOT_RUN; full B05/B06/B07 and workbench parity PENDING.",
+    "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+    "signing": "retained public development identity",
+    "milestone_gate": "not complete until roadmap device/workflow criteria pass",
+    "publication": "NOT_PUBLISHED",
+    "superseded": "1.2-rc3 excludes generated Python cache files after source/APK audit; no user download"
+  },
+  {
+    "version": "1.2-rc3",
+    "version_name": "1.2-rc3",
+    "version_code": 26,
+    "channel": "candidate",
+    "status": "engineering checkpoint; Android device gate pending",
+    "apk": "FreeCAD-Mobile-Lab-1.2-rc3-arm64.apk",
+    "size_bytes": 160961461,
+    "sha256": "3ed0986f6496578543c08ecc5bda8ce72d5e2acf211b639784b624d195e69129",
+    "engineering_changes": "Four bounded native Sketcher scopes: entity editing/movement/deletion; rational B-splines/construction; constraints/units/DOF/rollback; native FCStd plus sampled XY preview.955 Sketcher/269 Part/88 App/62 Python checks,527 locale checks,3 resource/9 packaging tests pass.64 JNI libraries+69 Python extensions,1075 runtime files,v2/v3 retained signing,16KiB/API26 closure verified. VM fault-handler policy protected/probed.657 Turkish/German strings and localized sketch guides. Generated Python caches excluded by source staging and APK regression. Android executionNOT_RUN; full B05/B06/B07/workbench parityPENDING.",
+    "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+    "signing": "retained public development identity",
     "milestone_gate": "not complete until roadmap device/workflow criteria pass"
   }
 ]

@@ -11,16 +11,18 @@
   "build_inputs": {
     "app/src/main/cpp/upstream-core/CoreBridge.cpp": "5820d78ee0cc55b85d4ec870c1eb781294cb59358052eb09d08f6c0e632f903a",
     "app/src/main/cpp/upstream-core/CMakeLists.txt": "04530c11a46a33aba1f50c7746faeb2f83e4b1e9d2349e9ebe83604da659efd3",
-    "scripts/build_freecad_android_core.py": "2e035bf827f766db7032e831fc613320b3dbab4a51b924bfff437676e0d2a0de",
+    "scripts/build_freecad_android_core.py": "ee78845fff30be8e6bce42aaf6919e4323880e0ad79b7ca4abee2b559c869484",
     "scripts/build_part_occt.py": "190b3cae8b386e374d4c69e3b12e5bc2c5beec650e02461ce2ac20e3c2dc668a",
-    "scripts/build_core_bridge.py": "89389715f95e4875307c0c4159103a61a8774f4132cb3587406e87e50634d59f"
+    "scripts/build_core_bridge.py": "89389715f95e4875307c0c4159103a61a8774f4132cb3587406e87e50634d59f",
+    "scripts/patch_embedded_runtime.py": "bfd10feff45a35487112783edfa3527d03c552dce5430cdebb5337b653ae6afc",
+    "scripts/patch_headless_sketcher.py": "2ade922575e4d69602454d9a6308e2a943020af73e3b020cb367cd32f67095ac"
   },
   "libraries": {
     "libFreeCADMaterials.so": "0b7d941b1dc0304a41c9372ade89df67e4f0332a7eff76272dc3b7d4ac82786b",
     "libFreeCADPart.so": "8df12e85f976fc4879cb50415e0ca39223747d6a231abf57644636e4e19733c7",
     "libFreeCADOriginalSketcher.so": "f508c86e128d5f5fa461720d296b36772f6efebc9fd760f32b720181ac9a6782",
     "libFreeCADPython.so": "210a0f6c87f7872e5bd347725d7fa92bb9860575107719ba7b2990e52fcf184d",
-    "libFreeCADApp.so": "e2f6fccb55cce96b0364503ad008307a0107ac5c2e27ec9874153570bb1b171e",
+    "libFreeCADApp.so": "cb2b3084e8a39c8bc842fd6741f1b1c4c04a461176ee4bf0ab17c6acdba869cd",
     "libFreeCADBase.so": "c3a6c40f6fea529a5aa4301c029d55854756809f46eb2fb36f9ccd27af4bba6f",
     "libfreecad_document_bridge.so": "28bc70df462ba53c61171b245ce0799a691b4c648e6c6b08086799449d217f75",
     "libboost_date_time.so": "4a7c20867a86b9ab93fc70ccf7edfd990834b61dfd240686fbece8f78b9e17e2",
@@ -55,7 +57,7 @@
     "libFreeCADPart.so": "33e5be06f95f3266f7623808361aab04bae0d4cb59e4fa5265542db1c83fa339",
     "libFreeCADOriginalSketcher.so": "65fb1aebdd814ff9fe40bc583140671df468f264a312cb8e3702cc97749c2fe6",
     "libFreeCADPython.so": "4f02863c6adc8f892139515db2e3adcb7a4be135c4c2e3b273ae977db87daf35",
-    "libFreeCADApp.so": "c71c258d62954470004f846c512ad3794da9eac7ec7413f1119f2d0bb2046f22",
+    "libFreeCADApp.so": "01cfcc5dd949035ed098349bd27a6c993eed26c664df9712261e5c93c66a8a36",
     "libFreeCADBase.so": "050ef59bcc2ae266fd6b03af72a5874219ad6b4bf3a6d19b9338f7e883ed3dca",
     "libfreecad_document_bridge.so": "fc369c99dc1d8126c4625ce7e275b806bc453da264046c0942fe0d221afe1064",
     "libboost_date_time.so": "90e342e986a41fc8d0627b8069c54862af81521e6de948d6ec175039b792dc81",
@@ -4183,8 +4185,8 @@
     },
     {
       "path": "scripts/mobile_core.py",
-      "size": 18165,
-      "sha256": "5ccec8698cddc97d84e943afc2bd53c4516745492f835073626bd94c9130bde2"
+      "size": 18312,
+      "sha256": "0f0a8aa2089fd5dbdc168731b80ae205689b3999f958206f97f8276beaac96c5"
     },
     {
       "path": "scripts/mobile_features.py",
@@ -5462,6 +5464,6 @@
       "sha256": "4108f1173295667598d68c2d422fd0b8205296466d7a6cc840e733ab7c2e4a44"
     }
   ],
-  "asset_zip_sha256": "c54c25f755d3825247a8c6153102b086aacf0b39044adcc4aefa6413808d9c1f",
+  "asset_zip_sha256": "4d51b68ba93cf36b93450e725b777f2e355ad3d0e5fda5b4589ec1e6eca0a37c",
   "java_jar_sha256": "b4b439629c5aa21db9a3b633d77182d0b25b1c381c391fc447e6104be394bb54"
 }

@@ -53,6 +53,7 @@ assert hashlib.sha256(certificate).hexdigest() in signatures, 'APK signing ident
 run(TOOLS/'zipalign','-c','-P','16','4',APK)
 with zipfile.ZipFile(APK) as z, tempfile.TemporaryDirectory(prefix='cad-apk-check-') as tmp:
     assert z.testzip() is None
+    assert not any('__pycache__' in Path(n).parts or n.endswith(('.pyc','.pyo')) for n in z.namelist()), 'Generated Python caches must not be packaged'
     names = [n for n in z.namelist() if n.startswith('lib/') and n.endswith('.so')]
     core='CoreDocumentActivity' in tree
     core_inputs=json.loads((ROOT/'docs/core-apk-inputs.json').read_text()) if core else None

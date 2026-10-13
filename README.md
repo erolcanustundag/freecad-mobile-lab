@@ -4,7 +4,7 @@
 
 The main workspace uses OCCT 7.9.2 and the upstream FreeCAD PlaneGCS solver. An optional document lab embeds upstream FreeCAD 1.1.4 Base/App, CPython3.13 and headless Qt6.8.3. Models stay on the device; the app requests no network permission.
 
-Engineering candidate in preparation: **1.2-rc2 / code25** adds the original Sketcher module and native geometry/constraints to the Part prerequisite. The unpublished rc1 binary was lost during workspace cleanup; its source and historical verification remain preserved. The replacement is rebuilt and tested before a new signed APK is published. The latest full release remains1.1. See [Part guide](docs/PART-USER-GUIDE.md) and [Sketcher progress](docs/SKETCHER-PORT-PROGRESS.md).
+Engineering candidate: **1.2-rc3 / code26** adds original Part/Materials and Sketcher to the isolated document lab: native parametric solids/booleans and STEP exchange; sketch lines/circles/arcs/ellipses, rational B-splines/construction, native constraints/DOF/units, Undo/Redo, supported FCStd and sampled XY preview.955 real Sketcher JNI checks and269/88/62 Part/document/Python regressions pass. The signed APK has64 ARM64 JNI libraries plus69 Python extensions and16KiB/static loader verification. Android execution of this candidate remainsNOT_RUN. See [Sketch guide](docs/SKETCHER-USER-GUIDE.md), [Sketch evidence](docs/SKETCHER-PORT-PROGRESS.md) and [Part guide](docs/PART-USER-GUIDE.md). Latest full release remains1.1.
 
 ## Languages
 
@@ -37,7 +37,7 @@ Save `.fcml` projects and export backups before uninstalling or downgrading. In 
 | Native document lab | Original App metadata documents, units, properties, expressions, transactions, groups/links and supported App-only FCStd |
 | Python lab | Console, saved/recorded macros, App API browser and one portable QuantityDriver FeaturePython template |
 
-The document lab is separate from the custom CAD recipe graph. The1.2 candidate includes the bounded native Part adapter described above; the complete Part workbench UI remains pending. Original Sketcher integration is in progress. It does **not** yet provide PartDesign, Assembly, TechDraw, CAM, FEM or BIM workbenches. Arbitrary FCStd and addon proxy classes are unsupported. Supported file formats and losses are documented in [FORMAT-LIMITS](docs/FORMAT-LIMITS.md). STL import is bounded to2,000,000 triangles/256MiB; display reduction preserves the stored source.
+The document lab is separate from the custom CAD recipe graph. The1.2 candidate includes the bounded native Part adapter described above; the complete Part workbench UI remains pending. The candidate includes the bounded original Sketcher adapter; its full workbench UI remains pending. It does **not** yet provide PartDesign, Assembly, TechDraw, CAM, FEM or BIM workbenches. Arbitrary FCStd and addon proxy classes are unsupported. Supported file formats and losses are documented in [FORMAT-LIMITS](docs/FORMAT-LIMITS.md). STL import is bounded to2,000,000 triangles/256MiB; display reduction preserves the stored source.
 
 The [roadmap](docs/ROADMAP.md) covers the frozen FreeCAD1.1.4 scope in36 broad batches. Large scopes require additional batches. The [ledger](docs/FREECAD-PARITY-BATCHES.json) separates engineering evidence from device validation. Four bounded feature batches have APK checkpoints; remaining workbench batches and device gates remain pending.
 
@@ -47,7 +47,7 @@ See [1.0 scope](docs/RELEASE-SCOPE-1.0.md) and [Rhino/FreeCAD gaps](docs/RHINO-G
 
 Required: Linux, Python3.12+, JDK17, Android SDK platform35/build-tools35.0.0. NDK27.2.12479018, CMake and Ninja are additionally needed for native source rebuilds. Git contains application/bridge/solver sources and dependency checksums. The full public source ZIP supplies the frozen Boost/Eigen header trees; the runtime ZIP supplies binaries; the corresponding-source ZIP supplies upstream sources and OCCT. All are release assets.
 
-Use the native runtime release asset matching the release metadata. Verify its SHA256 and extract it at the repository root. It supplies54 ARM64 libraries, Qt6Android.jar and the embedded Python archive. No signing key is included in Git or public source archives. A new local development key is generated if needed; it differs from the certificate on the published prototype APK and cannot upgrade that installation in place.
+Use the native runtime release asset matching the release metadata. Verify its SHA256 and extract it at the repository root. The1.1 asset supplies54 ARM64 libraries; the1.2-rc3 asset supplies64. Both include Qt6Android.jar and the embedded Python archive. No signing key is included in Git or public source archives. A new local development key is generated if needed; it differs from the certificate on the published prototype APK and cannot upgrade that installation in place.
 
 ```bash
 export JAVA_HOME=/path/to/jdk17

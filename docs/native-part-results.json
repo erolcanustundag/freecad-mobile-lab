@@ -1,16 +1,16 @@
 {
-  "version": "1.2-rc1",
-  "version_code": 24,
+  "version": "1.2-rc3",
+  "version_code": 26,
   "freecad": "1.1.4",
   "occt": "7.9.2",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "checks": {
-    "part_jni_geometry_fcstd_step_preview": 270,
+    "part_jni_geometry_fcstd_step_preview": 269,
     "metadata_jni_regressions": 88,
     "python_tools_regressions": 62,
     "language_command_fallback_unicode": 527,
     "locale_resource_tests": 3,
-    "runtime_packaging_regressions": 7
+    "runtime_packaging_regressions": 9
   },
   "host": {
     "system": "Linux x86_64",
@@ -27,19 +27,20 @@
   "bug_fixed": "Part feature creation required original default material/model resources;251 unchanged files now bundled with native library paths",
   "fixtures": [
     {
-      "path": "samples/upstream-part/Part.FCStd",
-      "size": 3496,
-      "sha256": "b0e88100b931c3b8a2076decfa667ffd2f719256d8afd580c32255cab9dc3eca"
+      "path": "samples/upstream-part/Boolean.FCStd",
+      "size": 12015,
+      "sha256": "efeea1492374f71c3fb2bffc1064d255c5a4f0afe39310452989a52391a340d6"
     },
     {
-      "path": "samples/upstream-part/Boolean.FCStd",
-      "size": 12040,
-      "sha256": "90d047d673102c20f30b1f2843b1749941e657e7c9ada182573b379e1ea9af70"
+      "path": "samples/upstream-part/Part.FCStd",
+      "size": 3473,
+      "sha256": "1542f4bb6af4a25eb3c399ef95f7a4b0bbefac557609e57ca89c24af7ae54399"
     },
     {
       "path": "samples/upstream-part/Reference.step",
       "size": 6845,
-      "sha256": "bc08b72c7a53cf6ce355ce0c251a6ec451fbe548dd1ad4a74ca0c61670d45e40"
+      "sha256": "381b2b9d8728e511c5deff67cb7dca7a9cf565a8201f1e367af1fefcbb0b8f12"
     }
-  ]
+  ],
+  "historical_rc1_assertions": 270
 }

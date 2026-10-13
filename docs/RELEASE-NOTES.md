@@ -1,18 +1,25 @@
-# FreeCAD Mobile Lab1.2-rc1
+# FreeCAD Mobile Lab1.2-rc3 — original Sketcher candidate
 
-Signed ARM64 Android8+ engineering candidate, minAPI26/target35, code24. The original full desktop FreeCAD/Rhino parity milestone remains NOT_COMPLETE.1.1 remains the latest full release.
+Signed ARM64 Android8+ engineering candidate, code26. Latest full release remains1.1. This is an independent project; full FreeCAD/Rhino desktop parity and device qualification remain NOT_COMPLETE.
 
-Four Part prerequisite scopes connect genuine FreeCAD1.1.4 Part/Materials to the isolated document lab:
+Four new bounded modeling scopes in the isolated Document Lab:
+- Original Sketcher lines/circles/arcs/ellipses with native solver movement and deletion.
+- Rational B-splines and construction geometry.
+- Eleven native constraint kinds, unit-aware datum editing, DOF and atomic conflict/redundancy rollback.
+- Supported Sketcher FCStd save/open and sampled local XY preview with pan/pinch/fit.
 
-1. Original Part/Materials builtin runtime with seven additional real OCCT7.9.2 toolkits.
-2. Native Box/Cylinder/Sphere/Cone/Torus, editable dimensions, dimensional expressions, native transactions, Undo/Redo and linked Cut/Fuse/Common objects.
-3. Whitelisted native Part FCStd save/open and original STEP shape import/export. Import supports native transaction Undo/Redo; STEP exchanges shape geometry rather than the complete document/history/materials.
-4. Genuine Part tessellation in the software viewport, bounded to30,000 preview triangles and0.05–2mm tolerance; saved BRep geometry stays exact.
+Includes the previously verified original Part/Materials prerequisite: parametric primitives, expressions, linked booleans, STEP shape import/export and genuine tessellation. The unpublished rc1 APK was lost during workspace cleanup; its source/evidence remain preserved, and this replacement is rebuilt/tested/signed independently.
 
-Use Workspace → Document lab → New → Original Part. Quick commands include Add Solid Box, Set Solid.Length 30 mm, Cut Result Solid Tool, Preview Result 0.2, ImportStep Imported Model.step and ExportStep Result Model.step. The original Part API is available in the lab Python console/browser. The main mobile CAD recipe workspace remains independent.
+Turkish/German controls now include657 reviewed strings each and a native sketch guide. English fallback remains available. Sketch/Eskiz/Skizze creation aliases work; command names/geometry data remain canonical. Read the in-app Sketch guide or docs/SKETCHER-USER-GUIDE.md.
 
-English/Turkish/German support continues, now with634 reviewed Turkish/German entries, including Part/STEP menus and common errors. Use Workspace → Language → Türkçe or Dil in the main workspace. Canonical properties, APIs, numeric storage and model names remain intact. Advanced technical output can use English fallback.
+A host integration defect replaced the JVM SIGSEGV handler during FreeCAD initialization. The explicit embedded-build policy preserves VM handlers; a real JNI probe passes before/after500 repeated snapshots. Native hidden/read-only/internal properties are protected. These checks do not establish the cause of earlier phone crashes.
 
-Static verification passes63 packaged ARM64 native libraries plus69 Python extensions, API26 loader/strong-symbol availability, real Part/Materials entrypoints,16KiB ELF/ZIP alignment,823 Python asset hashes and retained-certificate v2/v3 signatures. The desktop reference passes270 real JNI/FCStd/STEP/parametric geometry and preview assertions. A missing-default-material failure was fixed by packaging251 unchanged upstream material/model resources and configuring their native module-library paths. Physical Android startup, language switching, geometry workflows, lifecycle and file-picker tests for this candidate remain NOT_RUN.
+Validation:955 genuine Sketcher JNI/solver/geometry/FCStd assertions;269 Part,88 document and62 Python regressions;527 locale/command checks;3 resource and9 packaging tests. The APK passes retained-certificate v2/v3 signing,64 JNI libraries plus69 Python extensions,16KiB ZIP/ELF alignment and API26 strong-symbol/loader closure.1,075 runtime files are CRC/hash/source checked.
 
-FCStd restoration supports documented App metadata/proxy types and Part::Feature/Box/Cylinder/Sphere/Cone/Torus/Cut/Fuse/Common only. Native Sketcher, PartDesign, Gui and other workbench/addon objects remain pending. Native material/model resources are bundled; a full material editor and complete Part task/UI semantics remain pending. Optional RapidJSON/FreeType support is disabled in this headless build; no new native GLTF or font-curve support is claimed. Native import/tessellation can allocate memory before display bounds are checked; Android memory budgets remain unmeasured. The retained development signing key stays private and was not deleted or published.
+Limits:256 sketch entities/constraints;64 spline poles;8,192 preview points;coordinates within±1,000,000mm. Native work can allocate/block before adapter bounds. Preview is sampled local XY, with numeric forms/commands for editing. Attachments/external-reference UI, broader constraint variants, trim/fillet, spline handles, PartDesign and other workbenches remain pending. Arbitrary desktop/addon FCStd documents are unsupported. STEP exchanges shape geometry without modeling history/assemblies/materials.
+
+Android execution of this candidate is NOT_RUN. Phone startup, language/gestures, lifecycle/recovery, file pickers, memory budgets and broader device coverage require testing. The candidate is debuggable and uses the retained development identity for compatible updates; no signing key is supplied in public Git/assets. Save/export projects before uninstalling or downgrading.
+
+Four public assets: signed APK, matching native runtime, application source, and frozen corresponding upstream sources. SHA256 values are in docs/RELEASE-ASSETS.json. Publication is verified independently after upload.
+
+APK packaging stages source assets only; generated Python cache files are excluded and explicitly rejected by verification.1.2-rc2 was never published and is superseded by1.2-rc3.

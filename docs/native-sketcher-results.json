@@ -1,6 +1,6 @@
 {
-  "version": "1.2-rc2",
-  "version_code": 25,
+  "version": "1.2-rc3",
+  "version_code": 26,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "checks": {
@@ -10,7 +10,7 @@
     "python_tools_regressions": 62,
     "language_command_fallback_unicode": 527,
     "locale_resource_tests": 3,
-    "runtime_packaging_regressions": 8
+    "runtime_packaging_regressions": 9
   },
   "host": {
     "system": "Linux x86_64",

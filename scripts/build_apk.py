@@ -29,10 +29,17 @@ def run(*args):
     subprocess.run([str(a) for a in args], check=True, cwd=ROOT)
 
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def source_input(path):return path.is_file() and '.rsync-tmp' not in path.parts and '__pycache__' not in path.parts and path.suffix not in ('.pyc','.pyo')
+def stage_assets(source,destination):
+    shutil.rmtree(destination,ignore_errors=True)
+    destination.mkdir(parents=True,exist_ok=True)
+    for path in sorted(source.rglob('*')):
+        if source_input(path):
+            target=destination/path.relative_to(source);target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(path,target)
 def input_snapshot():
     paths=[ROOT/'release.json',ROOT/'app/src/main/AndroidManifest.xml']
     for folder in ('java','res','assets','jniLibs'):
-        paths.extend(p for p in (ROOT/'app/src/main'/folder).rglob('*') if p.is_file() and '.rsync-tmp' not in p.parts)
+        paths.extend(p for p in (ROOT/'app/src/main'/folder).rglob('*') if source_input(p))
     paths.extend((ROOT/'app/libs').glob('*.jar'))
     return {str(p.relative_to(ROOT)):digest(p) for p in sorted(paths)}
 def main():
@@ -82,6 +89,7 @@ def main():
         for lib in libs.glob('*.so'):
             run(strip, '--strip-unneeded', lib)
     frozen=input_snapshot()
+    stage_assets(ROOT/'app/src/main/assets',BUILD/'assets')
     if args.reproduce or args.production and sealed:
         record=json.loads((ROOT/'docs/apk-inputs.json').read_text())
         if frozen!=record['inputs']:raise SystemExit('Recorded checkpoint inputs changed; select a new version')
@@ -94,7 +102,7 @@ def main():
     command=[TOOLS/'aapt2','link','-I',ANDROID_JAR,'--manifest',BUILD/'AndroidManifest.xml',
              '--min-sdk-version','26','--target-sdk-version','35','--version-code',str(RELEASE['version_code']),
              '--version-name',RELEASE['version_name'],'--java',BUILD/'gen',
-             '-A',ROOT/'app/src/main/assets','-o',BUILD/'resources.apk']
+             '-A',BUILD/'assets','-o',BUILD/'resources.apk']
     # Release packaging and signing identity are separate decisions. Retain the
     # prototype certificate for upgrades without exposing a debuggable release.
     debuggable=not args.production and RELEASE.get('channel','candidate')!='release'

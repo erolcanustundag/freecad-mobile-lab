@@ -16,14 +16,14 @@ for platform in (('host','android') if args.platform=='all' else (args.platform,
     files += [core/'Mod/Part/Part.so',core/'Mod/Material/Materials.so']
     if args.sketcher:files.append(core/'Mod/Sketcher/Sketcher.so')
     files += [p for p in (core/'src').rglob('*') if p.is_file() and p.suffix in ('.h','.hpp','.hxx')]
-    for name in ('core-apk-inputs.json','core-apk-verification.json','native-part-results.json'):
+    for name in ('core-apk-inputs.json','core-apk-verification.json','native-part-results.json',*(['native-sketcher-results.json'] if args.sketcher else [])):
         if (ROOT/'docs'/name).is_file():files.append(ROOT/'docs'/name)
     if any(not p.is_file() for p in files):raise ValueError('Complete the original '+platform+' Part build first')
     out=ROOT/'dist'/('FreeCAD-Mobile-Lab-'+('sketcher' if args.sketcher else 'part')+'-build-'+platform+'.zip');out.parent.mkdir(exist_ok=True);temporary=out.with_suffix('.tmp.zip');records=[]
     with zipfile.ZipFile(temporary,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=5) as z:
         for path in sorted(set(files)):
             name='FreeCADMobileLab/'+str(path.relative_to(BASE));data=path.read_bytes();info=zipfile.ZipInfo(name);info.create_system=3;info.external_attr=(0o100000|(path.stat().st_mode&0o777))<<16;info.compress_type=zipfile.ZIP_DEFLATED;z.writestr(info,data);records.append(dict(path=name,size=len(data),sha256=hashlib.sha256(data).hexdigest()))
-        z.writestr('PART-CHECKPOINT.json',json.dumps(dict(platform=platform,scope='Genuine original Part build dependencies/output, not an Android installer',android_execution='NOT_RUN',files=records),indent=2))
+        z.writestr('PART-CHECKPOINT.json',json.dumps(dict(platform=platform,scope='Genuine original Part/Sketcher build dependencies/output, not an Android installer' if args.sketcher else 'Genuine original Part build dependencies/output, not an Android installer',modules=['Part','Materials']+(['Sketcher'] if args.sketcher else []),android_execution='NOT_RUN',files=records),indent=2))
     with zipfile.ZipFile(temporary) as z:
         assert z.testzip() is None
         for item in records:assert hashlib.sha256(z.read(item['path'])).hexdigest()==item['sha256']
