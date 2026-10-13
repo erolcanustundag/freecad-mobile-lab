@@ -127,6 +127,26 @@ def _edit(edit):
     action = edit.get("op")
     if isinstance(action,str) and action.startswith("sketch_"):
         mobile_sketch.edit(_object(edit["object"]),edit)
+    elif action == "part_finish":
+        source=_object(edit["source"]);name=_identifier(edit["name"]);mode=edit["mode"]
+        if source.TypeId not in mobile_part.TYPES or not hasattr(source,"Shape") or source.Shape.isNull():raise ValueError("Choose a supported nonempty native Part source")
+        if _doc().getObject(name) is not None or len(_doc().Objects)>=1000:raise ValueError("Choose a new name within the1000-object budget")
+        info=mobile_part.shape_info(source)
+        if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]):raise ValueError("Finishing sources must be valid and bounded")
+        if mode in ("fillet","chamfer"):
+            ids=edit["edges"];amount=mobile_sketch.number(edit["amount"])
+            if not isinstance(ids,list) or not 1<=len(ids)<=32 or len(set(ids))!=len(ids) or any(type(i) is not int or not 1<=i<=len(source.Shape.Edges) for i in ids):raise ValueError("Use1–32 unique current edge numbers starting at1")
+            if amount<=1e-7 or len(source.Shape.Solids)!=1:raise ValueError("Use a positive edge radius/distance on one solid")
+            obj=_doc().addObject("Part::Fillet" if mode=="fillet" else "Part::Chamfer",name);obj.Base=source;obj.Edges=[(i,amount,amount) for i in ids]
+        elif mode=="refine":
+            shape=source.Shape.removeSplitter()
+            if shape.isNull() or not shape.isValid() or len(shape.Faces)>2000:raise ValueError("Refinement must produce valid bounded geometry")
+            obj=_doc().addObject("Part::Feature",name);obj.Shape=shape;obj.addProperty("App::PropertyString","MobileOperation","Mobile");obj.MobileOperation="Refinement snapshot from "+source.Name;obj.setEditorMode("MobileOperation",1)
+        elif mode=="section":
+            tool=_object(edit["tool"])
+            if tool==source or tool.TypeId not in mobile_part.TYPES or tool.Shape.isNull():raise ValueError("Choose a different native Part tool")
+            obj=_doc().addObject("Part::Section",name);obj.Base=source;obj.Tool=tool
+        else:raise ValueError("Use fillet, chamfer, refine or section")
     elif action == "extrusion_settings":
         obj=_object(edit["object"])
         if obj.TypeId!="Part::Extrusion":raise ValueError("Select a native Part extrusion")
@@ -179,7 +199,7 @@ def _edit(edit):
         obj.Label = _text(edit.get("label", name), 256)
     elif action == "remove":
         target=_object(edit["object"])
-        if any(o.TypeId in mobile_sketch.TYPES|{"Part::Extrusion","Part::Revolution"} for o in target.InList):
+        if any(o.TypeId in mobile_sketch.TYPES|{"Part::Extrusion","Part::Revolution","Part::Fillet","Part::Chamfer","Part::Section"} for o in target.InList):
             raise ValueError("Detach sketches and remove their external references before deleting the source")
         _doc().removeObject(target.Name)
     elif action == "property":

@@ -354,7 +354,11 @@
   <string name="ui_129f379f9d3a" formatted="false">"Yerel koni"</string>
   <string name="ui_c62b92752d38" formatted="false">"Özgün çıkarma"</string>
   <string name="ui_6117755b333f" formatted="false">"Yerel silindir"</string>
+  <string name="ui_c932b089985d" formatted="false">"Yerel kenar pahı"</string>
+  <string name="ui_4986bec31286" formatted="false">"Yerel kenar yuvarlama"</string>
   <string name="ui_55e081e59f06" formatted="false">"Özgün kesişim"</string>
+  <string name="ui_683715f9cd2e" formatted="false">"Yerel iyileştirme anlık kopyası"</string>
+  <string name="ui_95917cac62a7" formatted="false">"Yerel şekil kesiti"</string>
   <string name="ui_c2c2cc1eb77b" formatted="false">"Yerel küre"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Yerel torus"</string>
   <string name="ui_7aaa9ab32d7f" formatted="false">"Özgün birleşim"</string>

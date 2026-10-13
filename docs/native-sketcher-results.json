@@ -1,10 +1,10 @@
 {
-  "version": "1.6",
-  "version_code": 32,
+  "version": "1.7",
+  "version_code": 33,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "checks": {
-    "sketcher_jni_solver_geometry_fcstd": 1785,
+    "sketcher_jni_solver_geometry_fcstd": 1839,
     "part_jni_regressions": 269,
     "metadata_jni_regressions": 88,
     "python_tools_regressions": 62,
@@ -43,8 +43,8 @@
   "fixtures": [
     {
       "path": "samples/upstream-sketcher/Sketch.FCStd",
-      "size": 15666,
-      "sha256": "939929cd42fb99647ad64a9cf29466adacddeb422bf41fd18da32a22490e93d4"
+      "size": 15679,
+      "sha256": "c531c192aa2471002674b66b3be0c1ba11ef8388ef584b8593901eb1cd0e2f75"
     },
     {
       "path": "samples/upstream-sketcher/preview.json",
@@ -53,8 +53,8 @@
     },
     {
       "path": "samples/upstream-sketcher/Attachments.FCStd",
-      "size": 15632,
-      "sha256": "29ab16e8426095efcec320ffea8ef6249254f24daaa3c0954c70f12b5c5c95f7"
+      "size": 15646,
+      "sha256": "1d9921216534f178ed53d33cf82ef25fb0bb76de06827f167a341f8b5229c608"
     },
     {
       "path": "samples/upstream-sketcher/attachment-preview.json",
@@ -63,33 +63,38 @@
     },
     {
       "path": "samples/upstream-sketcher/SketchTools.FCStd",
-      "size": 20603,
-      "sha256": "16fdc757afc502db8258004e7395d9acec27402b4ff143dbae1332c545a7ad25"
+      "size": 20619,
+      "sha256": "2a13eef7e30b72782307ee5f91d7d28ad39e2ebbb0de70736cea1fe193c0f6ea"
     },
     {
       "path": "samples/upstream-sketcher/PatternTools.FCStd",
-      "size": 32279,
-      "sha256": "497682159afeffa9e4f5c704477e8feeba9a7b6d28f83700cc12944eb6c5b635"
+      "size": 32258,
+      "sha256": "039f8b6b54131f3cf0bc112071c83772ea83ba2edf235f8c7720e4b16cb23b06"
     },
     {
       "path": "samples/upstream-sketcher/ReferenceDimension.FCStd",
-      "size": 32278,
-      "sha256": "68d873e896b0a6d5447cbc099594871865530827502a93dcf0f73da04f7f401b"
+      "size": 32256,
+      "sha256": "200f79856d88009a8a7fdd30df2dcbba696ec3098daf4ead0ca1041194d72759"
     },
     {
       "path": "samples/upstream-sketcher/ConstraintTools.FCStd",
-      "size": 42559,
-      "sha256": "15fbffa78a7d98bafadbdedde0be9a10a8797346411eb78345d5ed9be7c7f2df"
+      "size": 42558,
+      "sha256": "a3159b493c6b4c9c50680ddb775384b637ddddc2fba9d66d9c1cb2a32a65c76d"
     },
     {
       "path": "samples/upstream-sketcher/NamedProfiles.FCStd",
-      "size": 8639,
-      "sha256": "5c482e8401e48f74789d85aa787b623eb41fc2112a771147b32e551e923c36fc"
+      "size": 8640,
+      "sha256": "5921491a56285f8bf1f354ce12e2fde874c58e950b983c2366af8b294b0268af"
     },
     {
       "path": "samples/upstream-sketcher/SolidControls.FCStd",
-      "size": 10269,
-      "sha256": "1e6aee5bf4f19becda2beae7d60c6c252e85de7f4779d9faea36b395205e75d1"
+      "size": 10273,
+      "sha256": "5f6471b4b6c5b6b67b1a52bc5df5580bf63e758146735624e6c0a2f3eb01779e"
+    },
+    {
+      "path": "samples/upstream-sketcher/NativeFinishing.FCStd",
+      "size": 22780,
+      "sha256": "eeecc5f6c1591182b5b173ef18fc716ec871adbeba7377917d7fe95fa6cf70f5"
     }
   ],
   "attachment_scopes": [
@@ -102,7 +107,8 @@
     "Reject native open reuse of already-open file before validation, preserving previous document",
     "Validate supported attachment and external references after native recompute; reject cyclic/missing/duplicate/collapsed references atomically",
     "Duplicate native Block constraints are not always marked redundant; reject before mutation",
-    "Sum unique native Edges for boundary length instead of repeated shared-edge aggregate"
+    "Sum unique native Edges for boundary length instead of repeated shared-edge aggregate",
+    "Resolve sole Solid centroid within Compound instead of calling unavailable Compound.CenterOfMass"
   ],
   "editing_scopes": [
     "Native trim",
@@ -134,5 +140,11 @@
     "Native revolution world axis/angle/symmetry settings",
     "Native Part placement with bounds validation",
     "Read-only exact solid volume/area/unique edge lengths/centroid"
+  ],
+  "finishing_scopes": [
+    "Linked native Part fillet with current edge selection",
+    "Linked native Part equal-distance chamfer",
+    "Native refinement snapshot with explicit provenance label",
+    "Linked native shape intersection sections"
   ]
 }

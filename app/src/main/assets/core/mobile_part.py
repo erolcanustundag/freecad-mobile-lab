@@ -8,7 +8,7 @@ except ImportError:
     Part = None
 
 TYPES = {"Part::Feature", "Part::Box", "Part::Cylinder", "Part::Sphere", "Part::Cone",
-         "Part::Torus", "Part::Cut", "Part::Fuse", "Part::Common", "Part::Extrusion", "Part::Revolution"}
+         "Part::Torus", "Part::Cut", "Part::Fuse", "Part::Common", "Part::Extrusion", "Part::Revolution", "Part::Fillet", "Part::Chamfer", "Part::Section"}
 
 def available():
     return Part is not None
@@ -104,6 +104,13 @@ def profile(source, require_constrained=False):
 
 def validate_document(doc):
     for obj in doc.Objects:
+        if obj.TypeId in ("Part::Fillet","Part::Chamfer","Part::Section"):
+            if obj.TypeId=="Part::Section":sources=[obj.Base,obj.Tool]
+            else:sources=[obj.Base]
+            if any(source is None or source.TypeId not in TYPES|{"Sketcher::SketchObject"} or source==obj or source in obj.InListRecursive for source in sources):raise ValueError("Native operation sources must exist without dependency cycles")
+            info=shape_info(obj)
+            if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]):raise ValueError("Native finishing result must be valid and bounded")
+            if obj.TypeId!="Part::Section" and info["solids"]!=1:raise ValueError("Edge finishing requires one resulting solid")
         if obj.TypeId not in ("Part::Extrusion","Part::Revolution"):continue
         profile(obj.Base if obj.TypeId=="Part::Extrusion" else obj.Source)
         shape=obj.Shape
@@ -121,7 +128,7 @@ def shape_info(obj):
     if len(shape.Faces)>2000 or len(shape.Edges)>10000:raise ValueError("Shape inspection limit is2000 faces/10000 edges")
     result=summary(obj)
     result.update(type=shape.ShapeType,closed=bool(shape.isClosed()),boundary_edge_length_mm=float(sum(edge.Length for edge in shape.Edges)),units={"bounds":"mm","volume":"mm³","area":"mm²","boundary_edge_length_mm":"mm"})
-    center=shape.CenterOfMass if len(shape.Solids)==1 else None
+    center=shape.Solids[0].CenterOfMass if len(shape.Solids)==1 else None
     result["solid_centroid_mm"]=[center.x,center.y,center.z] if center is not None else None
     if not all(math.isfinite(v) for v in [result["volume"],result["area"],result["boundary_edge_length_mm"],*result["bounds"],*(result["solid_centroid_mm"] or [])]):raise ValueError("Native measurements must be finite")
     return result

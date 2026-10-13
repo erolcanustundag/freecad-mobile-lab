@@ -684,3 +684,7 @@ Extrusion extent modes|Uzatma boyut modları|Extrusionsausdehnungen
 Revolution axis and extent|Döndürme ekseni ve açısı|Rotationsachse und Winkel
 Native Part placement|Yerel Part yerleşimi|Native Part-Platzierung
 Exact native shape measurements|Kesin yerel şekil ölçümleri|Exakte native Formmessungen
+Native edge fillet|Yerel kenar yuvarlama|Native Kantenverrundung
+Native edge chamfer|Yerel kenar pahı|Native Kantenfase
+Native refinement snapshot|Yerel iyileştirme anlık kopyası|Native Verfeinerungskopie
+Native shape section|Yerel şekil kesiti|Nativer Formschnitt

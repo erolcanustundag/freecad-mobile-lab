@@ -28,18 +28,18 @@
   "fixtures": [
     {
       "path": "samples/upstream-part/Boolean.FCStd",
-      "size": 12039,
-      "sha256": "36807bc9b0ff4c57587986854938e941e030f6f12ce53788cf1c187e0de84729"
+      "size": 12045,
+      "sha256": "d26829e43dcea2c67c6dc261f2a46c5f7311a381980a4cf425a4b981ac5b7fcd"
     },
     {
       "path": "samples/upstream-part/Part.FCStd",
-      "size": 3495,
-      "sha256": "95ddb2798188a07a72c62bd769ed6b7c96be73003a7ae8c20c7095bb18bca96f"
+      "size": 3493,
+      "sha256": "1bed08e780d4f20b79398f12735d5f3edae16786c4a3312ec9a734206257c687"
     },
     {
       "path": "samples/upstream-part/Reference.step",
       "size": 6845,
-      "sha256": "9760e331fc3c66f9c844ecf763275aa04fbb4ac9fc9968065772197f3395651f"
+      "sha256": "8b9f5549a9685aec519c5c7c6a67dba346eddfc9f9aa819edc78ee59f89e0f9a"
     }
   ],
   "historical_rc1_assertions": 270

@@ -152,3 +152,6 @@ Constraint naming, dimensional expression binding, read-only solver/reference in
 
 ###1.6 — native solid control sub-batch
 1785 native Sketcher/profile/solid checks pass, covering exact volume/area/unique edge lengths/centroids, native extent modes, plane-normal dependency, placement, history and FCStd. Full workbench/device gates stay pending. Next four: selected-edge native fillet, chamfer, refinement and solid-to-surface section tools with topology/reference fixtures.
+
+###1.7 — native edge finishing sub-batch
+1839 native checks cover linked Part fillet/chamfer, native refinement snapshots and linked shape sections, analytic volumes, dependency updates, empty/error/batch rollback and FCStd. Full Part/PartDesign/device parity stays pending. Next four scopes: native planar-face section helper, wire preview for section results, measured face/edge selection inspection, and editing native finishing selections/radii with topology safeguards.

@@ -1,0 +1,1 @@
+Bağlantılı yerel yuvarlama/pah, iyileştirme kopyaları ve şekil kesitleri eklendi. Adlı ölçüler, ifadeler, uzatma/döndürme, katı kontrolleri ve kesin ölçümler içerir. Bileşik katı merkezi incelemesi düzeltildi.

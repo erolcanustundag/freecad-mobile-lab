@@ -1062,7 +1062,7 @@
   ],
   "stable_1_0_definition": "Original complete FreeCAD parity and broad device/workflow qualification milestone; not closed by product version 1.0",
   "product_release": {
-    "version": "1.6",
+    "version": "1.7",
     "scope": "current mobile feature set",
     "desktop_parity": "NOT_COMPLETE"
   },
@@ -1281,5 +1281,29 @@
     ],
     "evidence": "docs/native-sketcher-results.json",
     "apk": "FreeCAD-Mobile-Lab-1.6-arm64.apk"
+  },
+  "finishing_prerequisite": {
+    "version": "1.7",
+    "version_code": 33,
+    "features": [
+      {
+        "name": "Native linked edge fillet",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Native linked equal-distance chamfer",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Native refinement snapshot",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Native linked shape sections",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      }
+    ],
+    "evidence": "docs/native-sketcher-results.json",
+    "apk": "FreeCAD-Mobile-Lab-1.7-arm64.apk"
   }
 }
