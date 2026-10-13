@@ -1233,5 +1233,29 @@
     ],
     "evidence": "docs/native-sketcher-results.json",
     "apk": "FreeCAD-Mobile-Lab-1.4-arm64.apk"
+  },
+  "sketch_profile_prerequisite": {
+    "version": "1.5",
+    "version_code": 31,
+    "features": [
+      {
+        "name": "Constraint naming",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Dimensional expressions",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Solver/reference inspection",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Native linked sketch extrusion/revolution",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      }
+    ],
+    "evidence": "docs/native-sketcher-results.json",
+    "apk": "FreeCAD-Mobile-Lab-1.5-arm64.apk"
   }
 }

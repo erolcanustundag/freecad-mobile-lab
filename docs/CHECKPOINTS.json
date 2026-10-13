@@ -325,5 +325,20 @@
     "android_runtime": "physical startup/lifecycle/SAF workflows pending",
     "signing": "retained public development identity",
     "milestone_gate": "not complete until roadmap device/workflow criteria pass"
+  },
+  {
+    "version": "1.5",
+    "version_name": "1.5",
+    "version_code": 31,
+    "channel": "release",
+    "status": "initial public mobile feature release; broader device qualification pending",
+    "scope": "current mobile feature set",
+    "apk": "FreeCAD-Mobile-Lab-1.5-arm64.apk",
+    "size_bytes": 160994229,
+    "sha256": "a79ca9c1a3312c5a43af546448fff21f120d03da9c465ef6660f8bf6dcc8acf2",
+    "engineering_changes": "Native naming/expressions/inspection/profile solids;1717 Sketcher/269 Part/88 App/62 Python plus3 resource/9 packaging checks pass;682 TR/DE strings; actual extrusion/revolution analytic/STEP/FCStd/dependency/rollback fixtures. Non-debuggable compatible signed APK; physical Android and full parity pending.",
+    "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+    "signing": "retained public development identity",
+    "milestone_gate": "not complete until roadmap device/workflow criteria pass"
   }
 ]

@@ -24,7 +24,7 @@ if mobile_part.available():
 if mobile_sketch.available():
     OBJECT_TYPES.update(mobile_sketch.TYPES)
 PROPERTY_TYPES = {"App::PropertyLength", "App::PropertyAngle", "App::PropertyArea",
-    "App::PropertyVolume", "App::PropertyFloat", "App::PropertyInteger",
+    "App::PropertyVolume", "App::PropertyDistance", "App::PropertyFloatConstraint", "App::PropertyFloat", "App::PropertyInteger",
     "App::PropertyString", "App::PropertyBool", "App::PropertyLink"}
 _root = None
 _document = None
@@ -127,6 +127,22 @@ def _edit(edit):
     action = edit.get("op")
     if isinstance(action,str) and action.startswith("sketch_"):
         mobile_sketch.edit(_object(edit["object"]),edit)
+    elif action == "profile_solid":
+        source=mobile_part.profile(_object(edit["source"]),True)
+        name=_identifier(edit["name"])
+        if _doc().getObject(name) is not None or len(_doc().Objects)>=1000:raise ValueError("Choose a new object name within the1000-object budget")
+        mode=edit["mode"]
+        if mode not in ("extrude","revolve"):raise ValueError("Use extrude or revolve")
+        amount=mobile_sketch.number(edit["amount"],360 if mode=="revolve" else 1000000)
+        if amount<=1e-7:raise ValueError("Profile amount must be positive")
+        if mode=="extrude":
+            obj=_doc().addObject("Part::Extrusion",name);obj.Base=source;obj.Dir=source.Placement.Rotation.multVec(App.Vector(0,0,1));obj.LengthFwd=amount;obj.DirMode="Normal";obj.Solid=True
+        else:
+            origin=edit["origin"];axis=edit["axis"]
+            if not isinstance(origin,list) or not isinstance(axis,list) or len(origin)!=3 or len(axis)!=3:raise ValueError("Provide world XYZ origin and axis vectors")
+            origin=App.Vector(*[mobile_sketch.number(v) for v in origin]);axis=App.Vector(*[mobile_sketch.number(v) for v in axis])
+            if axis.Length<1e-7:raise ValueError("Revolution axis must be nonzero")
+            axis.normalize();obj=_doc().addObject("Part::Revolution",name);obj.Source=source;obj.Base=origin;obj.Axis=axis;obj.Angle=amount;obj.Solid=True
     elif action == "add":
         kind = edit.get("type", "App::FeaturePython")
         if kind not in OBJECT_TYPES:
@@ -140,7 +156,7 @@ def _edit(edit):
         obj.Label = _text(edit.get("label", name), 256)
     elif action == "remove":
         target=_object(edit["object"])
-        if any(o.TypeId in mobile_sketch.TYPES for o in target.InList):
+        if any(o.TypeId in mobile_sketch.TYPES|{"Part::Extrusion","Part::Revolution"} for o in target.InList):
             raise ValueError("Detach sketches and remove their external references before deleting the source")
         _doc().removeObject(target.Name)
     elif action == "property":
@@ -175,6 +191,11 @@ def _edit(edit):
                 value = int(value)
             if type(value) is not int or not -2147483648 <= value <= 2147483647:
                 raise ValueError("Integer outside the supported range")
+        elif kind == "App::PropertyFloatConstraint":
+            if obj.TypeId!="Part::Revolution" or name!="Angle":raise ValueError("This constrained scalar is read-only in the mobile adapter")
+            q=App.Units.Quantity(str(value))
+            value=float(q.Value if str(q.Unit)=="" else q.getValueAs("deg").Value)
+            if not math.isfinite(value) or not 1e-7<value<=360:raise ValueError("Revolution angle must be greater than0 and at most360 degrees")
         elif kind == "App::PropertyFloat":
             value = float(value)
             if not math.isfinite(value):
@@ -291,6 +312,7 @@ def execute(request):
             _doc().recompute()
             try:
                 mobile_sketch.validate_document(_doc())
+                mobile_part.validate_document(_doc())
                 if any("Invalid" in o.State for o in _doc().Objects):
                     raise ValueError("Document recompute failed; transaction was rolled back")
             except Exception:
@@ -313,6 +335,7 @@ def execute(request):
                 _edit(edit)
             _doc().recompute()
             mobile_sketch.validate_document(_doc())
+            mobile_part.validate_document(_doc())
             if any("Invalid" in o.State for o in _doc().Objects):
                 raise ValueError("Recompute failed; check expressions and object references")
             if owned:
@@ -328,14 +351,17 @@ def execute(request):
         getattr(_doc(), action)()
         _doc().recompute()
         mobile_sketch.validate_document(_doc())
+        mobile_part.validate_document(_doc())
     elif action == "recompute":
         _doc().recompute()
         mobile_sketch.validate_document(_doc())
+        mobile_part.validate_document(_doc())
     elif action == "save":
         if _transaction:
             raise ValueError("Finish the current transaction first")
         _doc().recompute()
         mobile_sketch.validate_document(_doc())
+        mobile_part.validate_document(_doc())
         if any("Invalid" in o.State for o in _doc().Objects):
             raise ValueError("Document has failed features")
         _doc().saveAs(str(_file(request["file"])))
@@ -353,6 +379,7 @@ def execute(request):
             restored.UndoMode = 1
             restored.recompute()
             mobile_sketch.validate_document(restored)
+            mobile_part.validate_document(restored)
         except Exception:
             App.closeDocument(restored.Name)
             if _document is not None:App.setActiveDocument(_document.Name)
@@ -400,6 +427,8 @@ def execute(request):
             _doc().abortTransaction()
             _doc().recompute()
             raise
+    elif action == "sketch_inspect":
+        result=snapshot();obj=_object(request["object"]);mobile_sketch.require(obj);result["sketch_inspection"]=mobile_sketch.summary(obj);return result
     elif action == "sketch_preview":
         result=snapshot()
         result["sketch_preview"]=mobile_sketch.preview(_object(request["object"]))

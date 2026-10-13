@@ -146,3 +146,6 @@ Four bounded native scopes are host-verified: mirror copies; rectangular arrays/
 ### 1.4 full mobile release — native constraint sub-batch
 
 Four bounded native scopes are host-verified: PointOnObject, signed DistanceX/Y forms, Block/fixed geometry and active/inactive constraints. 1613 Sketcher checks pass; full B05/B06/B07 and device gates remain PENDING. Next four scopes: constraint names, dimensional expression binding, solver constraint/DOF inspection, and fully constrained profile handoff to original Part extrusion/revolve with native history/FCStd fixtures. F-Droid clean source-build integration remains a separate pending distribution task.
+
+###1.5 checkpoint — native profile sub-batch
+Constraint naming, dimensional expression binding, read-only solver/reference inspection and linked original Part extrusion/revolution are host-verified with1717 checks. Native PartDesign/full-workbench/device gates stay pending. Next: extrusion extent modes, revolution axis/extent editing, native placement and exact shape measurements with solid fixtures.

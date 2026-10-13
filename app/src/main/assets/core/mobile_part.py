@@ -8,7 +8,7 @@ except ImportError:
     Part = None
 
 TYPES = {"Part::Feature", "Part::Box", "Part::Cylinder", "Part::Sphere", "Part::Cone",
-         "Part::Torus", "Part::Cut", "Part::Fuse", "Part::Common"}
+         "Part::Torus", "Part::Cut", "Part::Fuse", "Part::Common", "Part::Extrusion", "Part::Revolution"}
 
 def available():
     return Part is not None
@@ -91,3 +91,24 @@ def read_step(root, name):
     if shape.isNull() or not shape.isValid():
         raise ValueError("STEP import did not produce valid Part geometry")
     return shape
+
+
+def profile(source, require_constrained=False):
+    if source is None or source.TypeId!="Sketcher::SketchObject":raise ValueError("Choose a native sketch profile")
+    if require_constrained and source.DoF!=0:raise ValueError("Fully constrain the sketch before creating a solid")
+    shape=source.Shape
+    if shape.isNull() or len(shape.Wires)!=1 or not shape.Wires[0].isClosed() or not shape.isValid():
+        raise ValueError("This profile tool requires one valid closed sketch wire")
+    if len(shape.Edges)>256:raise ValueError("Profile exceeds256 edges")
+    return source
+
+def validate_document(doc):
+    for obj in doc.Objects:
+        if obj.TypeId not in ("Part::Extrusion","Part::Revolution"):continue
+        profile(obj.Base if obj.TypeId=="Part::Extrusion" else obj.Source)
+        shape=obj.Shape
+        if shape.isNull() or not shape.isValid() or len(shape.Solids)!=1 or len(shape.Faces)>2000 or not 1e-9<shape.Volume<1e18:
+            raise ValueError("Profile operation must create one valid bounded solid")
+        box=shape.BoundBox
+        if any(not math.isfinite(v) or abs(v)>1000000 for v in (box.XMin,box.YMin,box.ZMin,box.XMax,box.YMax,box.ZMax)):
+            raise ValueError("Profile solid bounds must stay within±1,000,000mm")

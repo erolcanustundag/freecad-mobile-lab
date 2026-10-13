@@ -169,10 +169,29 @@ def bounded_box_points(obj, ids):
         for x in (box.XMin,box.XMax):
             for y in (box.YMin,box.YMax):yield App.Vector(number(x),number(y),0)
 
+def dimension_expression(obj, constraint):
+    name=obj.Constraints[constraint].Name
+    paths={"Constraints["+str(constraint)+"]","Constraints."+name,"Constraints.<<"+name+">>"}
+    return next((expression for path,expression in obj.ExpressionEngine if str(path).lstrip(".") in paths),None)
+
 def edit(obj, request):
     require(obj)
     operation=request["op"]
-    if operation=="sketch_mirror":
+    if operation=="sketch_name":
+        constraint=index(request["index"],obj.ConstraintCount);name=request["name"]
+        if not isinstance(name,str) or len(name)>64 or (name and not name.isidentifier()):
+            raise ValueError("Use an identifier up to64 characters, or an empty name to clear")
+        if name and any(c.Name==name and i!=constraint for i,c in enumerate(obj.Constraints)):
+            raise ValueError("Constraint names must be unique in this sketch")
+        obj.renameConstraint(constraint,name)
+    elif operation=="sketch_expression":
+        constraint=index(request["index"],obj.ConstraintCount);expression=request["expression"]
+        if obj.Constraints[constraint].Type not in DIMENSIONS or not obj.getDriving(constraint) or not obj.getActive(constraint):
+            raise ValueError("Expression targets must be active driving dimensions")
+        if not isinstance(expression,str) or len(expression)>512 or chr(0) in expression:
+            raise ValueError("Use an expression up to512 characters, or empty text to clear")
+        obj.setExpression("Constraints["+str(constraint)+"]",expression or None)
+    elif operation=="sketch_mirror":
         ids=selection(obj,request["indices"]);axis=request["axis"]
         g=curve_index(obj,axis)
         if g.TypeId!="Part::GeomLineSegment" or g.length()<1e-7:
@@ -340,6 +359,8 @@ def edit(obj, request):
         obj.delConstraint(index(request["index"],obj.ConstraintCount))
     elif operation=="sketch_datum":
         constraint=index(request["index"],obj.ConstraintCount)
+        if dimension_expression(obj,constraint):
+            raise ValueError("Clear the dimension expression before editing its datum")
         if not obj.getDriving(constraint):
             raise ValueError("Reference dimensions follow geometry; make the dimension driving before editing its datum")
         value=request["value"]
@@ -362,14 +383,16 @@ def summary(obj):
     if obj.TypeId!="Sketcher::SketchObject":return None
     require(obj)
     return {"geometry_count":obj.GeometryCount,"constraint_count":obj.ConstraintCount,
-            "dof":obj.DoF,"conflicts":list(obj.ConflictingConstraints),
+            "dof":obj.DoF,"fully_constrained":bool(obj.FullyConstrained),"conflicts":list(obj.ConflictingConstraints),
             "redundant":list(obj.RedundantConstraints),
             "placement":placement_summary(obj.Placement),"map_mode":str(obj.MapMode),
             "attachment_offset":placement_summary(obj.AttachmentOffset),
             "support":[{"object":link.Name,"elements":list(names)} for link,names in obj.AttachmentSupport],
             "external":[{"reference_index":i,"geometry_index":-3-i,"object":link.Name,"elements":list(names)} for i,(link,names) in enumerate(obj.ExternalGeometry)],
             "geometry":[{"index":i,"type":g.TypeId,"construction":obj.getConstruction(i)} for i,g in enumerate(obj.Geometry)],
-            "constraints":[{"index":i,"type":c.Type,"value":float(c.Value),
+            "constraints":[{"index":i,"name":c.Name,"type":c.Type,"value":float(c.Value),
+                            "references":[{"geometry":entity,"position":position} for entity,position in [(c.First,c.FirstPos),(c.Second,c.SecondPos),(c.Third,c.ThirdPos)] if -len(obj.ExternalGeo)<=entity<obj.GeometryCount],
+                            "expression":dimension_expression(obj,i) if c.Type in DIMENSIONS else None,
                             "driving":obj.getDriving(i) if c.Type in DIMENSIONS else None,
                             "active":obj.getActive(i),
                             "unit":"rad" if c.Type=="Angle" else "mm" if c.Type in DIMENSIONS else None} for i,c in enumerate(obj.Constraints)]}

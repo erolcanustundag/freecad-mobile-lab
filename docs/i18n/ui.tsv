@@ -675,3 +675,8 @@ Point on curve|Noktayı eğriye bağla|Punkt auf Kurve
 Horizontal / vertical dimension|Yatay / dikey ölçü|Horizontales / vertikales Maß
 Fix sketch geometry|Eskiz geometrisini sabitle|Skizzengeometrie fixieren
 Active / inactive constraint|Etkin / devre dışı kısıt|Aktive / inaktive Bedingung
+Name sketch constraint|Eskiz kısıtını adlandır|Skizzenbedingung benennen
+Constraint expression|Kısıt ifadesi|Bedingungsausdruck
+Inspect sketch solver|Eskiz çözücüsünü incele|Skizzenlöser prüfen
+Sketch to solid|Eskizden katı oluştur|Skizze zu Volumenkörper
+Revolve sketch profile|Eskiz profilini döndür|Skizzenprofil rotieren

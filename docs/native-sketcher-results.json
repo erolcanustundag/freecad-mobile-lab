@@ -1,10 +1,10 @@
 {
-  "version": "1.4",
-  "version_code": 30,
+  "version": "1.5",
+  "version_code": 31,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "checks": {
-    "sketcher_jni_solver_geometry_fcstd": 1613,
+    "sketcher_jni_solver_geometry_fcstd": 1717,
     "part_jni_regressions": 269,
     "metadata_jni_regressions": 88,
     "python_tools_regressions": 62,
@@ -43,18 +43,18 @@
   "fixtures": [
     {
       "path": "samples/upstream-sketcher/Sketch.FCStd",
-      "size": 15664,
-      "sha256": "8d13b792571ec9f7e75bfb9ad246733ac7168065d428c5487a236f30756ee6f9"
+      "size": 15677,
+      "sha256": "26501d4a3388ba6f44a80ba5983da90bcaac0d4d8114bde035715fe0c7779bc8"
     },
     {
       "path": "samples/upstream-sketcher/preview.json",
-      "size": 20938,
-      "sha256": "eccc1754ab6a3bd92a79f51e0e9929da1129c8801e3a86d799228abab35c35d8"
+      "size": 4942,
+      "sha256": "448d42eac1c141ca97debfd388c3e0df1c9a5888e2c7a5bc5dc6ee11117975c1"
     },
     {
       "path": "samples/upstream-sketcher/Attachments.FCStd",
-      "size": 15632,
-      "sha256": "7baf17e3fe53d6733e3e23310985e1a986d052df1264b418b3a75f68c526c9e6"
+      "size": 15641,
+      "sha256": "5576dca79ae5ff5bb0298243dccba05a8fc73847a6ed54573db5d90e16c6d3d8"
     },
     {
       "path": "samples/upstream-sketcher/attachment-preview.json",
@@ -63,23 +63,28 @@
     },
     {
       "path": "samples/upstream-sketcher/SketchTools.FCStd",
-      "size": 20604,
-      "sha256": "cdd7e8325fd3125b6dd964fb31a1677ae23a63a22bd06974402f136ad9849b2c"
+      "size": 20615,
+      "sha256": "2cfb81bb02a0bc838d6b625519630adf7cd3d71da27f6d7166e427d58d144c7c"
     },
     {
       "path": "samples/upstream-sketcher/PatternTools.FCStd",
-      "size": 32249,
-      "sha256": "dbbcbcb5c993821d5179de58ec642ae37ed06382740e688e235b732c1cb04ac2"
+      "size": 32283,
+      "sha256": "e95f2510f38ea86754cdbbc87894396c84eb88db8a924bcb2dd3bc8518a40ead"
     },
     {
       "path": "samples/upstream-sketcher/ReferenceDimension.FCStd",
-      "size": 32249,
-      "sha256": "eaaab80bbbcfb96bd386f78c11e17c6589b47dd6805290448a0ee9d95ddbdefe"
+      "size": 32282,
+      "sha256": "81e4936be41345c252fea7080ee4ef96a7ed637d04cd6768ce89dd6ea5e6ab8c"
     },
     {
       "path": "samples/upstream-sketcher/ConstraintTools.FCStd",
-      "size": 42552,
-      "sha256": "3282990438f79eadda85495abb9913c5163161a19e15d46186df772bc743d149"
+      "size": 42547,
+      "sha256": "e7eaaaea23d30079d32133304deb2666ca69837dcd94283a769cd518f6f3cb9d"
+    },
+    {
+      "path": "samples/upstream-sketcher/NamedProfiles.FCStd",
+      "size": 8636,
+      "sha256": "d02c2177221857154e6318197552ad80b4513188582e811c4dc4a15312ea5251"
     }
   ],
   "attachment_scopes": [
@@ -111,5 +116,11 @@
     "Native Block with duplicate guard and bounded spline support",
     "Active/inactive constraints, independent state, safe activation rollback/Undo/FCStd"
   ],
-  "native_solver_limit": "Large changes from a precisely perpendicular line can fail singular native solves; rollback and documented retry workflow"
+  "native_solver_limit": "Large changes from a precisely perpendicular line can fail singular native solves; rollback and documented retry workflow",
+  "profile_scopes": [
+    "Native constraint names with Unicode/uniqueness/clear",
+    "Native dimensional expressions, dependency recompute and safe datum guard",
+    "Read-only solver/constraint/reference inspection",
+    "Linked original Part extrusion/revolution from fully constrained single-wire profiles"
+  ]
 }
