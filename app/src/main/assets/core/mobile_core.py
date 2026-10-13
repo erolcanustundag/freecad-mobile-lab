@@ -89,7 +89,7 @@ def _value(obj, name):
 
 
 def _supported_property(obj,name,kind):
-    return kind in PROPERTY_TYPES or kind=="App::PropertyQuantity" and obj.TypeId=="Part::Thickness" and name=="Value"
+    return kind in PROPERTY_TYPES or kind=="App::PropertyQuantity" and obj.TypeId=="Part::Thickness" and name=="Value" or kind=="App::PropertyIntegerConstraint" and obj.TypeId=="Part::RegularPolygon" and name=="Polygon"
 
 
 def _editable(obj, name):
@@ -131,6 +131,22 @@ def _edit(edit):
     action = edit.get("op")
     if isinstance(action,str) and action.startswith("sketch_"):
         mobile_sketch.edit(_object(edit["object"]),edit)
+    elif action in ("part_polygon","part_ellipsoid","part_linked_refine","part_reverse"):
+        name=_identifier(edit["name"])
+        if _doc().getObject(name) is not None or len(_doc().Objects)>=1000:raise ValueError("Choose a new native feature name within the1000-object budget")
+        if action=="part_polygon":
+            sides=edit["sides"];radius=mobile_sketch.number(edit["radius"])
+            if type(sides) is not int or not 3<=sides<=128 or radius<=1e-7:raise ValueError("Use3–128 integer sides and a positive circumradius")
+            obj=_doc().addObject("Part::RegularPolygon",name);obj.Polygon=sides;obj.Circumradius=radius
+        elif action=="part_ellipsoid":
+            radii=edit["radii"]
+            if not isinstance(radii,list) or len(radii)!=3:raise ValueError("Use positive ellipsoid XYZ semiaxes")
+            radii=[mobile_sketch.number(v) for v in radii]
+            if min(radii)<=1e-7:raise ValueError("Ellipsoid semiaxes must be positive")
+            obj=_doc().addObject("Part::Ellipsoid",name);obj.Radius2,obj.Radius3,obj.Radius1=radii
+        else:
+            source=mobile_part.bounded_source(_object(edit["source"]))
+            obj=_doc().addObject("Part::Refine" if action=="part_linked_refine" else "Part::Reverse",name);obj.Source=source
     elif action in ("part_sweep","part_thickness","part_offset2d","part_compound"):
         name=_identifier(edit["name"])
         if _doc().getObject(name) is not None or len(_doc().Objects)>=1000:raise ValueError("Choose a new native feature name within the1000-object budget")
@@ -300,7 +316,7 @@ def _edit(edit):
                 value = value.lower() == "true"
             if not isinstance(value, bool):
                 raise ValueError("Boolean property needs true or false")
-        elif kind == "App::PropertyInteger":
+        elif kind in ("App::PropertyInteger","App::PropertyIntegerConstraint"):
             if isinstance(value, str) and re.fullmatch(r"-?\d{1,11}", value):
                 value = int(value)
             if type(value) is not int or not -2147483648 <= value <= 2147483647:
@@ -317,10 +333,15 @@ def _edit(edit):
             value = float(value)
             if not math.isfinite(value):
                 raise ValueError("Use a finite floating-point value")
+        elif obj.TypeId in mobile_part.TYPES and kind in ("App::PropertyLength","App::PropertyDistance","App::PropertyAngle"):
+            unit="deg" if kind=="App::PropertyAngle" else "mm"
+            q=App.Units.Quantity(str(value));value=float(q.Value if str(q.Unit)=="" else q.getValueAs(unit).Value)
+            if not math.isfinite(value) or abs(value)>1000000:raise ValueError("Native dimensions must be finite and within±1,000,000")
         elif isinstance(value, str):
             value = _text(value, 512)
         elif type(value) not in (int, float) or not math.isfinite(value):
             raise ValueError("Use a finite number or a unit expression")
+        mobile_part.validate_edit(obj,name,value)
         setattr(obj, name, value)
         actual = getattr(obj, name)
         if hasattr(actual, "Value"):
@@ -330,6 +351,7 @@ def _edit(edit):
     elif action == "expression":
         obj = _object(edit["object"])
         name = _identifier(edit["property"])
+        if obj.TypeId=="Part::RegularPolygon" and name=="Polygon":raise ValueError("Set polygon sides directly within3–128; side expressions are unsupported")
         if not _supported_property(obj,name,obj.getTypeIdOfProperty(name)) or not _editable(obj,name):
             raise ValueError("Expression property is not editable")
         expr = _text(edit["expression"], 512)
@@ -381,6 +403,15 @@ def _validate_fcstd(path):
             if o.get("type") not in OBJECT_TYPES})
         if unsupported:
             raise ValueError("Workbenches not yet ported: " + ", ".join(str(t) for t in unsupported))
+        # Upstream allows INT_MAX polygon sides. Reject oversized restoration
+        # before loading/recomputing, rather than allocating that many edges.
+        polygons={o.get("name") for o in tree.findall("./Objects/Object") if o.get("type")=="Part::RegularPolygon"}
+        for data in tree.findall("./ObjectData/Object"):
+            if data.get("name") not in polygons:continue
+            p=data.find("./Properties/Property[@name='Polygon']/Integer")
+            if p is None or not re.fullmatch(r"[0-9]{1,3}",p.get("value","")) or not 3<=int(p.get("value"))<=128:raise ValueError("Restored polygon needs3–128 sides")
+            for expression in data.findall("./Properties/Property[@name='ExpressionEngine']//Expression"):
+                if expression.get("path")=="Polygon":raise ValueError("Restored polygon side expressions are unsupported")
         # Scripted proxies have a separate portability contract in B04. Do not
         # silently deserialize a proxy whose class/module is not in this port.
         for prop in tree.iter("Property"):

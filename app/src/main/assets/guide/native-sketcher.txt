@@ -87,3 +87,10 @@ PartCompound Assembly Solid,Hollow combines2–32 unique supported native source
 Profile/path curves remain limited to256 edges/64 spline poles. All shapes use±1Mmm/2000faces/10000edges budgets. Selections use current native indices; full topology-reference stability remains unfinished. Native computation can allocate/time out before result inspection; Android touch/lifecycle/memory qualification remains NOT_RUN. Save native FCStd before Recovery/Restart.
 
 Inward thickness rejects unchanged full-solid results; native validity alone does not prove a cavity was created.
+
+Original Part primitives and orientation (1.11)
+PartPolygon Hexagon 6 10 creates an XY closed wire with 6 sides and 10 mm circumradius. Set Hexagon.Polygon 8 or Set Hexagon.Circumradius 2 cm; side counts are bounded to 3–128 and side expressions are unsupported. WirePreview displays the wire; native Loft/Sweep can consume it.
+PartEllipsoid Oval 3 4 2 uses XYZ semiaxes in mm. Native property names map X=Radius2, Y=Radius3, Z=Radius1. Radius3=0 is the original legacy Y=X fallback. This tool supports full closed ellipsoids only. BRep bounds may be conservative; native volume is a numerical integral with finite error, not an analytic formula.
+PartLinkedRefine Solid Clean creates an original linked Part::Refine which recomputes when its source changes; PartRefine remains an independent snapshot.
+PartReverse Solid Reversed flips native orientation, including normals; it keeps world position and follows source edits. It does not repair mesh topology or convert open surfaces into solids. ShapeInfo volume is the sum of positive closed-component volumes; oriented_volume_mm3 keeps the signed native integral. Compounds aggregate overlapping components and are not Boolean unions. Open wires/surfaces report no enclosed volume.
+New tools are in Original Part in the isolated document lab, with command access, Undo/Redo and FCStd persistence. Android touch execution for this release is not yet automated.

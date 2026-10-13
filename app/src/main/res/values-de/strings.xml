@@ -360,12 +360,15 @@
   <string name="ui_6117755b333f" formatted="false">"Nativer Zylinder"</string>
   <string name="ui_c932b089985d" formatted="false">"Native Kantenfase"</string>
   <string name="ui_4986bec31286" formatted="false">"Native Kantenverrundung"</string>
+  <string name="ui_b3af5027c8b4" formatted="false">"Natives Ellipsoid"</string>
   <string name="ui_55e081e59f06" formatted="false">"Originaler Schnitt"</string>
   <string name="ui_d3b5118746d9" formatted="false">"Natives verknüpftes Formaggregat"</string>
+  <string name="ui_076b33cd0a39" formatted="false">"Native verknüpfte Verfeinerung"</string>
   <string name="ui_63820c66c59c" formatted="false">"Nativer planarer Versatz"</string>
   <string name="ui_552bb9b436d4" formatted="false">"Native Profilverbindung"</string>
   <string name="ui_fd05ef19d4f2" formatted="false">"Native Profilführung"</string>
   <string name="ui_683715f9cd2e" formatted="false">"Native Verfeinerungskopie"</string>
+  <string name="ui_6b53676e5571" formatted="false">"Natives regelmäßiges Polygon"</string>
   <string name="ui_7f91ba85c7df" formatted="false">"Native Regelfläche"</string>
   <string name="ui_eae6bf5c635f" formatted="false">"Native Dicke mit Flächenauswahl"</string>
   <string name="ui_97791f0b9ded" formatted="false">"Native Formspiegelung"</string>
@@ -500,6 +503,7 @@
   <string name="ui_2d9ae7d5429e" formatted="false">"Dokumentlabor neu starten?"</string>
   <string name="ui_0479c883ff33" formatted="false">"Labor neu starten"</string>
   <string name="ui_103525d44650" formatted="false">"Ergebnisname"</string>
+  <string name="ui_276936ce567e" formatted="false">"Native Orientierung umkehren"</string>
   <string name="ui_94310c174d79" formatted="false">"Rotationsachse und Winkel"</string>
   <string name="ui_c3a8355746ba" formatted="false">"Rotieren"</string>
   <string name="ui_717348fb5216" formatted="false">"Skizzenprofil rotieren"</string>

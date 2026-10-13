@@ -9,7 +9,7 @@ except ImportError:
     Part = None
 
 TYPES = {"Part::Feature", "Part::Box", "Part::Cylinder", "Part::Sphere", "Part::Cone",
-         "Part::Torus", "Part::Cut", "Part::Fuse", "Part::Common", "Part::Extrusion", "Part::Revolution", "Part::Fillet", "Part::Chamfer", "Part::Section", "Part::Plane", "Part::Loft", "Part::RuledSurface", "Part::Offset", "Part::Mirroring", "Part::Sweep", "Part::Thickness", "Part::Offset2D", "Part::Compound"}
+         "Part::Torus", "Part::Cut", "Part::Fuse", "Part::Common", "Part::Extrusion", "Part::Revolution", "Part::Fillet", "Part::Chamfer", "Part::Section", "Part::Plane", "Part::Loft", "Part::RuledSurface", "Part::Offset", "Part::Mirroring", "Part::Sweep", "Part::Thickness", "Part::Offset2D", "Part::Compound", "Part::RegularPolygon", "Part::Ellipsoid", "Part::Refine", "Part::Reverse"}
 
 def available():
     return Part is not None
@@ -43,8 +43,13 @@ def summary(obj):
         return {"null": True, "valid": False}
     box = shape.BoundBox
     solids=shape.Solids
-    volume=float(sum(s.Volume for s in solids)) if solids and all(s.isClosed() for s in solids) else None
+    closed=bool(solids) and all(s.isClosed() for s in solids)
+    # Volume is a signed orientation integral upstream. A reversed closed solid
+    # still occupies the same physical space; compounds aggregate, not union.
+    volume=float(sum(abs(s.Volume) for s in solids)) if closed else None
+    oriented=float(sum(s.Volume for s in solids)) if closed else None
     return {"null": False, "valid": shape.isValid(), "volume": volume,
+            "oriented_volume_mm3": oriented,
             "area": float(shape.Area), "edges": len(shape.Edges), "faces": len(shape.Faces),
             "solids": len(shape.Solids), "bounds": [box.XMin,box.YMin,box.ZMin,box.XMax,box.YMax,box.ZMax]}
 
@@ -107,6 +112,20 @@ def profile(source, require_constrained=False):
 
 def validate_document(doc):
     for obj in doc.Objects:
+        if obj.TypeId in ("Part::RegularPolygon","Part::Ellipsoid","Part::Refine","Part::Reverse"):
+            if obj.TypeId=="Part::RegularPolygon":
+                validate_edit(obj,"Polygon",obj.Polygon)
+                validate_edit(obj,"Circumradius",obj.Circumradius.Value)
+            elif obj.TypeId=="Part::Ellipsoid":
+                for name in ("Radius1","Radius2","Radius3","Angle1","Angle2","Angle3"):
+                    validate_edit(obj,name,getattr(obj,name).Value)
+            else:
+                source=bounded_source(obj.Source)
+                if source==obj or source in obj.InListRecursive:raise ValueError("Native feature sources must exist without dependency cycles")
+            info=shape_info(obj)
+            if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]):raise ValueError("Native primitive/refine/reverse result must be valid and bounded")
+            if obj.TypeId=="Part::RegularPolygon" and (obj.Shape.Faces or len(obj.Shape.Wires)!=1 or not obj.Shape.Wires[0].isClosed() or len(obj.Shape.Edges)!=obj.Polygon):raise ValueError("Polygon must produce one closed native wire")
+            if obj.TypeId=="Part::Ellipsoid" and (info["solids"]!=1 or info["volume"] is None or not 1e-9<info["volume"]<1e18):raise ValueError("Ellipsoid must produce one bounded closed solid")
         if obj.TypeId in ("Part::Sweep","Part::Thickness","Part::Offset2D","Part::Compound"):
             if obj.TypeId=="Part::Sweep":
                 sources=list(obj.Sections)
@@ -140,7 +159,7 @@ def validate_document(doc):
             info=shape_info(obj)
             if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]):raise ValueError("Native sweep/shell/offset/compound result must be valid and bounded")
             if (obj.TypeId=="Part::Thickness" or obj.TypeId=="Part::Sweep" and obj.Solid) and (info["solids"]!=1 or info["volume"] is None or not 1e-9<info["volume"]<1e18):raise ValueError("Native solid feature must produce one bounded closed solid")
-            if obj.TypeId=="Part::Thickness" and value<0 and info["volume"]>=source.Shape.Solids[0].Volume-1e-9:raise ValueError("Inward thickness must remove a cavity; unchanged or collapsed solids are rejected")
+            if obj.TypeId=="Part::Thickness" and value<0 and info["volume"]>=abs(source.Shape.Solids[0].Volume)-1e-9:raise ValueError("Inward thickness must remove a cavity; unchanged or collapsed solids are rejected")
         if obj.TypeId in ("Part::Loft","Part::RuledSurface","Part::Offset","Part::Mirroring"):
             if obj.TypeId=="Part::Loft":
                 sources=list(obj.Sections)
@@ -187,11 +206,25 @@ def shape_info(obj):
     shape=obj.Shape
     if len(shape.Faces)>2000 or len(shape.Edges)>10000:raise ValueError("Shape inspection limit is2000 faces/10000 edges")
     result=summary(obj)
-    result.update(type=shape.ShapeType,closed=bool(shape.isClosed()),boundary_edge_length_mm=float(sum(edge.Length for edge in shape.Edges)),units={"bounds":"mm","volume":"mm³","area":"mm²","boundary_edge_length_mm":"mm"})
+    result.update(type=shape.ShapeType,closed=bool(shape.isClosed()),boundary_edge_length_mm=float(sum(edge.Length for edge in shape.Edges)),units={"bounds":"mm","volume":"mm³","oriented_volume_mm3":"mm³","area":"mm²","boundary_edge_length_mm":"mm"})
     center=shape.Solids[0].CenterOfMass if len(shape.Solids)==1 else None
     result["solid_centroid_mm"]=[center.x,center.y,center.z] if center is not None else None
-    if not all(math.isfinite(v) for v in [*([] if result["volume"] is None else [result["volume"]]),result["area"],result["boundary_edge_length_mm"],*result["bounds"],*(result["solid_centroid_mm"] or [])]):raise ValueError("Native measurements must be finite")
+    if not all(math.isfinite(v) for v in [*([] if result["volume"] is None else [result["volume"],result["oriented_volume_mm3"]]),result["area"],result["boundary_edge_length_mm"],*result["bounds"],*(result["solid_centroid_mm"] or [])]):raise ValueError("Native measurements must be finite")
     return result
+
+
+def validate_edit(obj,name,value):
+    """Precompute guards for the bounded native scalar tools, in mm/degrees."""
+    if obj.TypeId=="Part::RegularPolygon" and name=="Polygon":
+        if type(value) is not int or not 3<=value<=128:raise ValueError("Polygon needs3–128 integer sides")
+    elif obj.TypeId=="Part::RegularPolygon" and name=="Circumradius":
+        if not math.isfinite(value) or not 1e-7<value<=1000000:raise ValueError("Polygon circumradius must be a positive bounded length")
+    elif obj.TypeId=="Part::Ellipsoid":
+        if name in ("Radius1","Radius2","Radius3"):
+            if not math.isfinite(value) or not (name=="Radius3" and value==0 or 1e-7<value<=1000000):raise ValueError("Ellipsoid radii must be positive bounded lengths; native Radius3=0 uses Radius2")
+        elif name in ("Angle1","Angle2","Angle3") and value!={"Angle1":-90,"Angle2":90,"Angle3":360}[name]:raise ValueError("This ellipsoid tool supports full solids only")
+    elif obj.TypeId in ("Part::Offset","Part::Offset2D") and name=="Value":
+        if not math.isfinite(value) or not 1e-7<abs(value)<=1000000:raise ValueError("Offset needs a finite nonzero bounded amount")
 
 
 def wire_profile(obj,closed=False):
