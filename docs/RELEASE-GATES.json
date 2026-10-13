@@ -9,7 +9,7 @@
   "native_runtime": "PASS: original Part/Materials/Sketcher ARM64 and host builds;1236 Sketcher/269 Part/88 App/62 Python checks",
   "device_smoke_instrumentation": "COMPILED_ONLY",
   "production_signing": "Retained development certificate for RC7 updates; dedicated production identity/update migration pending",
-  "publication": "PENDING",
+  "publication": "PUBLISHED_VERIFIED",
   "pending": [
     "Physical Android candidate launch/lifecycle/SAF/recovery/language/geometry workflows and second device",
     "Android memory budgets and4/16KiB device execution",
@@ -45,5 +45,8 @@
   "stable_1_0_definition": "Original full desktop parity and broad device qualification milestone; NOT_COMPLETE",
   "automated_android_tests": "NOT_RUN",
   "source_metadata": "PASS: syntax, bounded release scope, startup-report classification and unfinished parity",
-  "localization": "PASS:527 locale/command checks;665 Turkish/German entries, three localized native sketch guides and3 resource tests; device NOT_RUN"
+  "localization": "PASS:527 locale/command checks;665 Turkish/German entries, three localized native sketch guides and3 resource tests; device NOT_RUN",
+  "source_apk_provenance": "PASS:459 sealed APK/source/runtime inputs exactmatch; allfour remote asset sizes/digests verified",
+  "release_workflow": 38361122346,
+  "source_checks": 38360868222
 }

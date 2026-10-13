@@ -7,7 +7,7 @@
   "milestone_gate": "NOT_COMPLETE",
   "android_runtime": "NOT_RUN",
   "historical_unversioned_startup_report": "USER_REPORTED_STARTUP",
-  "publication": "PENDING",
+  "publication": "PUBLISHED_VERIFIED",
   "assets": [
     {
       "name": "FreeCAD-Mobile-Lab-1.2-rc4-arm64.apk",
@@ -365,5 +365,10 @@
       "size_bytes": 31954200,
       "sha256": "4b2b71afde0241bc8818de71c86822d90b4f5f5f4dcdb29e30ac545ea38b784b"
     }
-  ]
+  ],
+  "release_id": 411389379,
+  "source_commit": "ff5addfcd3b3752a842a31e363f50864c2492f41",
+  "workflow_run": 38361122346,
+  "source_checks": 38360868222,
+  "latest_full_release": "v1.1"
 }
