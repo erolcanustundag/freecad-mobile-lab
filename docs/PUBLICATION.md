@@ -1,5 +1,8 @@
 # GitHub publication
 
+Current full release: **1.7/code33**, https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.7 . Non-draft, non-prerelease and latest; four assets and exact source/tag independently verified. Publication38439402593/sourceCI38438477238passed;temporary transport branch deleted. Intermediate1.5/code31 and1.6/code32 signed APKs are saved checkpoints; final1.7combines their changes. Physical Android1.7andfull workbench parity remain pending. Earlier records below are historical.
+
+
 Current full release: **1.4/code30**, https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.4 . Non-draft, non-prerelease and latest; four assets and exact source/tag independently verified. Publication workflow38430079995 and sourceCI38428928909 passed; its temporary transport branch was deleted. Physical Android1.4 execution and full workbench parity remain pending. Earlier publication records below are historical.
 
 
