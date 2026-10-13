@@ -1,0 +1,1 @@
+Adds mirrored sketch copies, rectangular arrays, symmetry constraints and driving/reference dimensions. Localized English, Turkish and German tool guides.

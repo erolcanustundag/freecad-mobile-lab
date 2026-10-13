@@ -1,0 +1,3 @@
+ARM64 Android 8 ve üzeri için bağımsız CAD uygulaması. Model oluşturma ve düzenleme, desteklenen biçimlerde içe/dışa aktarma ve hızlı araç erişimi için komut girişi sunar. Document Lab; sınırlı FreeCAD Part ve Sketcher işlemleri, aynalanmış kopyalar, dikdörtgen diziler, simetri kısıtları, sürücü/referans ölçüler ve FCStd kaydetme içerir. İngilizce, Türkçe ve Almanca arayüzler mevcuttur.
+
+Resmî FreeCAD veya Rhino uygulaması değildir. Masaüstü çalışma tezgâhlarının tamamını içermez. Geometri ve bellek sınırları vardır. Kurulum değiştirmeden önce önemli modellerinizi kaydedip dışa aktarın.

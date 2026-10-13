@@ -43,7 +43,8 @@ def input_snapshot():
     paths.extend((ROOT/'app/libs').glob('*.jar'))
     return {str(p.relative_to(ROOT)):digest(p) for p in sorted(paths)}
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--prebuilt',action='store_true',help='Reuse the verified packaged ARM64 libraries without an NDK build');parser.add_argument('--reproduce',action='store_true');parser.add_argument('--production',action='store_true');parser.add_argument('--upstream-core',action='store_true',help='Include the separately verified upstream document runtime');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--prebuilt',action='store_true',help='Reuse the verified packaged ARM64 libraries without an NDK build');parser.add_argument('--reproduce',action='store_true');parser.add_argument('--production',action='store_true');parser.add_argument('--upstream-core',action='store_true',help='Include the separately verified upstream document runtime');parser.add_argument('--unsigned',action='store_true',help='Produce an aligned APK without creating or accessing a signing key');args=parser.parse_args()
+    if args.unsigned and (args.production or args.reproduce):raise SystemExit('Unsigned mode cannot be combined with production or reproduce')
     if args.production and args.reproduce:raise SystemExit('Select production or reproduce, not both')
     if args.upstream_core:
         from check_core_runtime_inputs import check
@@ -61,7 +62,7 @@ def main():
     records_path=ROOT/'docs/CHECKPOINTS.json'
     sealed=records_path.exists() and any(x['version']==RELEASE['version'] for x in json.loads(records_path.read_text()))
     if args.reproduce and not sealed:raise SystemExit('Reproduce requires a recorded checkpoint')
-    if sealed and not args.reproduce and not args.production:
+    if sealed and not args.reproduce and not args.production and not args.unsigned:
         raise SystemExit('This APK version is a recorded checkpoint. Select a new version before building.')
     # Keep the signing identity, but never package classes/resources from an old build.
     for name in ('compiled', 'classes', 'gen', 'dex'):
@@ -105,7 +106,7 @@ def main():
              '-A',BUILD/'assets','-o',BUILD/'resources.apk']
     # Release packaging and signing identity are separate decisions. Retain the
     # prototype certificate for upgrades without exposing a debuggable release.
-    debuggable=not args.production and RELEASE.get('channel','candidate')!='release'
+    debuggable=not (args.production or args.unsigned) and RELEASE.get('channel','candidate')!='release'
     if debuggable:command.append('--debug-mode')
     command.extend(flats)
     run(*command)
@@ -124,6 +125,13 @@ def main():
             apk.write(lib,f'lib/arm64-v8a/{lib.name}',compress_type=zipfile.ZIP_STORED)
     aligned=BUILD/'aligned.apk'
     run(TOOLS/'zipalign','-P','16','-f','4',unsigned,aligned)
+    if args.unsigned:
+        if input_snapshot()!=frozen:raise SystemExit('Build inputs changed while packaging')
+        apk=OUT/('FreeCAD-Mobile-Lab-'+RELEASE['version']+'-unsigned-arm64.apk')
+        shutil.copy2(aligned,apk)
+        run(TOOLS/'zipalign','-c','-P','16','4',apk)
+        print(f'Unsigned APK: {apk}')
+        return
     if not key.exists():
         run(JDK/'bin/keytool','-genkeypair','-keystore',key,'-storepass','android','-keypass','android','-alias','androiddebugkey','-dname','CN=FreeCAD Mobile Lab Development,O=Independent Prototype,C=TR','-keyalg','RSA','-keysize','2048','-validity','10000')
     if input_snapshot()!=frozen:raise SystemExit('Build inputs changed while packaging')

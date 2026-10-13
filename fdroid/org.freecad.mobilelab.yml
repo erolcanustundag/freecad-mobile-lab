@@ -1,0 +1,21 @@
+# Preparation draft: intentionally disabled until a clean source build passes.
+Disabled: Native dependencies and Qt JAR need a verified clean source-build recipe
+Categories:
+  - Graphics
+License: LGPL-2.1-or-later
+SourceCode: https://github.com/erolcanustundag/freecad-mobile-lab
+IssueTracker: https://github.com/erolcanustundag/freecad-mobile-lab/issues
+Changelog: https://github.com/erolcanustundag/freecad-mobile-lab/releases
+Name: FreeCAD Mobile Lab
+Summary: Native CAD, sketch constraints and 3D modelling on Android
+Description: |-
+  Independent native CAD for ARM64 Android 8 and newer, with command input,
+  supported import/export formats and bounded native Part and Sketcher tools.
+  Includes English, Turkish and German interfaces. Not an official FreeCAD or
+  Rhino application; complete desktop workbench parity remains unfinished.
+RepoType: git
+Repo: https://github.com/erolcanustundag/freecad-mobile-lab.git
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.3'
+CurrentVersionCode: 29

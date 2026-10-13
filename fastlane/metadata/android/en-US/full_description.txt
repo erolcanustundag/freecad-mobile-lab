@@ -1,0 +1,3 @@
+Independent native CAD for ARM64 Android 8 and newer. Create and edit models, import/export supported formats, and use the command input for quick tool access. Document Lab includes bounded native FreeCAD Part and Sketcher operations, mirrored copies, rectangular arrays, symmetry constraints, driving/reference dimensions and FCStd persistence. English, Turkish and German interfaces are available.
+
+This is an independent project, not an official FreeCAD or Rhino application. Full desktop workbench parity is not implemented. Native modelling has explicit geometry and memory limits. Save and export important models before changing installations.

@@ -1,0 +1,3 @@
+Unabhängige CAD-Anwendung für ARM64-Geräte ab Android 8. Modelle erstellen und bearbeiten, unterstützte Formate importieren/exportieren und Werkzeuge über die Befehlseingabe aufrufen. Document Lab bietet begrenzte native FreeCAD-Part- und Sketcher-Funktionen, gespiegelte Kopien, rechteckige Anordnungen, Symmetriebedingungen, steuernde und Referenzmaße sowie FCStd-Dateien. Englisch, Türkisch und Deutsch sind verfügbar.
+
+Keine offizielle FreeCAD- oder Rhino-Anwendung. Nicht alle Desktop-Arbeitsbereiche sind umgesetzt. Geometrie und Speicher sind begrenzt. Wichtige Modelle vor einem Installationswechsel speichern und exportieren.
