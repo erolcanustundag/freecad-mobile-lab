@@ -27,6 +27,8 @@
   <string name="ui_853a983f6b8a" formatted="false">"Yay"</string>
   <string name="ui_2745debaa64a" formatted="false">"Alan"</string>
   <string name="ui_4130069ee1c1" formatted="false">"Eğri boyunca çoğaltma"</string>
+  <string name="ui_7ed6da7e72d5" formatted="false">"Düzlemsel yüze bağla"</string>
+  <string name="ui_2f0f329fa335" formatted="false">"Bağlama ofseti"</string>
   <string name="ui_58b9ff3fe0e6" formatted="false">"Otomatik · yazılımsal kare süresi"</string>
   <string name="ui_d74b6cfbbd9f" formatted="false">"Kullanılabilir Python API"</string>
   <string name="ui_1df6251b4693" formatted="false">"Eksen X"</string>
@@ -138,6 +140,7 @@
   <string name="ui_15d5b7c8fd92" formatted="false">"DXF · seçili XY eğrisi / kesiti"</string>
   <string name="ui_c569a6d930b8" formatted="false">"Serbestlik derecesi"</string>
   <string name="ui_f6fdbe48dc54" formatted="false">"Sil"</string>
+  <string name="ui_6dafafe1c5fb" formatted="false">"Dış referansı sil"</string>
   <string name="ui_7700294c798b" formatted="false">"Birden çok nesneyi sil"</string>
   <string name="ui_dc0f4d794a15" formatted="false">"Eskiz kısıtını sil"</string>
   <string name="ui_e9e5fb807d84" formatted="false">"Eskiz geometrisini sil"</string>
@@ -147,6 +150,7 @@
   <string name="ui_64b365fa3ee1" formatted="false">"Derinlik (mm)"</string>
   <string name="ui_1d97595f7723" formatted="false">"Y derinliği (mm)"</string>
   <string name="ui_d71a5056f84c" formatted="false">"İşlem bağını kaldır; geometriyi koru"</string>
+  <string name="ui_e627cbc7fb85" formatted="false">"Eskiz bağlantısını kaldır"</string>
   <string name="ui_b4748fa72923" formatted="false">"Ölçülendirilmiş çizim sayfası"</string>
   <string name="ui_9f4ca9ec0871" formatted="false">"Ölçüler"</string>
   <string name="ui_6cc62d64e2d0" formatted="false">"Kesiti kapat"</string>
@@ -211,6 +215,7 @@
   <string name="ui_97b695b9b9cf" formatted="false">"İfade"</string>
   <string name="ui_6f26fb48d63c" formatted="false">"İfade (ör. Source.Width * 2)"</string>
   <string name="ui_bfa59f13f3da" formatted="false">"Düz çizgiyi uzat"</string>
+  <string name="ui_d5b286d6f872" formatted="false">"Dış kenar referansı"</string>
   <string name="ui_33272d4ea2f5" formatted="false">"Ekstrüzyon"</string>
   <string name="ui_bf753d1d7540" formatted="false">"ÖN"</string>
   <string name="ui_0c63436993af" formatted="false">"Üretim / kalıp açısı raporu"</string>
@@ -548,9 +553,12 @@
   <string name="ui_3b281e4dee6e" formatted="false">"Eskiz çizgisi"</string>
   <string name="ui_8fdab3017915" formatted="false">"Eskiz nesnesi"</string>
   <string name="ui_3594732ca359" formatted="false">"Çizim pedi"</string>
+  <string name="ui_e0ca4e6ea91e" formatted="false">"Eskiz yerleşimi"</string>
+  <string name="ui_b27023739f18" formatted="false">"Eskiz düzlemi"</string>
   <string name="ui_bafe1c42e16c" formatted="false">"Eskiz önizlemesi"</string>
   <string name="ui_fa7a849fe1c1" formatted="false">"Eskiz çözücüsü"</string>
   <string name="ui_7dfcbad361c2" formatted="false">"Eskizin XY düzlemi · sürükle: kaydır · kıstır: yakınlaştır · turkuaz: yardımcı eğriler"</string>
+  <string name="ui_62bf6022cab6" formatted="false">"Eskiz yerel XY · kaydırmak için sürükleyin · yakınlaştırmak için sıkıştırın · camgöbeği yardımcı · eflatun dış kenarlar"</string>
   <string name="ui_455673bbb8a0" formatted="false">"Yakalama"</string>
   <string name="ui_fb9da43b6bb0" formatted="false">"Yakalama: kontrol noktaları, kontrol parçalarının orta noktaları / kesişimleri ve ızgara. NURBS önizlemesi rasyoneldir; enterpolasyon Uygula seçilene kadar noktalardan geçen bir kılavuz kullanır."</string>
   <string name="ui_bd390a2685ec" formatted="false">"Yazılımsal 3B"</string>

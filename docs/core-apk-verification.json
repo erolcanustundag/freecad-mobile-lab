@@ -1,6 +1,6 @@
 {
-  "version": "1.2-rc3",
-  "apk_sha256": "3ed0986f6496578543c08ecc5bda8ce72d5e2acf211b639784b624d195e69129",
+  "version": "1.2-rc4",
+  "apk_sha256": "6b0f2c6bd15bfbed0360ce175c7ddba03d13787aaf719da829cf52b5bcd7e011",
   "status": "STATIC_PASS",
   "android_execution": "NOT_RUN",
   "libraries_and_python_extensions": 133,

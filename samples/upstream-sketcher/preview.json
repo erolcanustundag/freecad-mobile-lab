@@ -1,6 +1,7 @@
 {
   "curves": [
     {
+      "external": false,
       "index": 0,
       "construction": false,
       "points": [
@@ -267,6 +268,7 @@
       ]
     },
     {
+      "external": false,
       "index": 1,
       "construction": false,
       "points": [
@@ -533,6 +535,7 @@
       ]
     },
     {
+      "external": false,
       "index": 2,
       "construction": false,
       "points": [
@@ -799,6 +802,7 @@
       ]
     },
     {
+      "external": false,
       "index": 3,
       "construction": true,
       "points": [
@@ -1067,5 +1071,19 @@
   ],
   "coordinates": "sketch-local XY mm",
   "dof": 24,
-  "object": "Curves"
+  "placement": {
+    "xyz_mm": [
+      0,
+      0,
+      0
+    ],
+    "quaternion": [
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "object": "Curves",
+  "map_mode": "Deactivated"
 }

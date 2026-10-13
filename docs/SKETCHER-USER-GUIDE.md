@@ -29,4 +29,26 @@ This line has zero DOF. Undo/Redo reverses the datum edit. Indices start at0; -1
 
 Create Sketch Curves first. Constraints: Horizontal/Vertical (entity), Coincident (entity/point/entity/point), Parallel/Perpendicular/Tangent/Equal (two entities), Distance/Radius/Diameter/Angle (entity/value). Lengths use mm and angles degrees; Datum accepts units. Conflicting/redundant edits roll back.
 
-Preview uses sampled local XY; gold is regular geometry, cyan construction. Drag/pinch/fit changes the view. Edit via forms/commands; touch constraint editing and spline handles remain pending. Save FCStd and export it through the file picker before closing. See SKETCHER-PORT-PROGRESS.md for bounds, pending features and device evidence.
+Preview uses sampled local XY; gold is regular geometry, cyan construction and magenta external edges. Drag/pinch/fit changes the view. Edit via forms/commands; touch constraint editing and spline handles remain pending. Save FCStd and export it through the file picker before closing. See SKETCHER-PORT-PROGRESS.md for bounds, pending features and device evidence.
+
+## Plane and reference workflows
+
+```
+NewDoc AttachmentModel
+Add Solid Box
+Sketch Attached
+SketchLine Attached 0 0 10 0
+SketchAttach Attached Solid Face6
+SketchOffset Attached 0 0 2 0 0 0
+External Attached Solid Edge9
+Constraint Attached Coincident 0 1 -3 1
+Constraint Attached Coincident 0 2 -3 2
+Set Solid.Length 25 mm
+Set Solid.Height 20 mm
+SketchPreview Attached
+Save AttachmentModel.FCStd
+```
+
+The line follows the projected edge length; the sketch stays2mm above the top face. The first external solver index is-3, then-4, etc. `DeleteExternal Attached 0` uses reference index0 and removes dependent constraints; Undo restores both. `SketchDetach Attached` retains current world placement; Undo restores support. Detach and remove external references before deleting the source. Duplicate/missing/cyclic/collapsed references and invalid recomputes roll back. FCStd preserves native support/external links.
+
+For a free sketch, `SketchPlane Attached XZ 0 0 10` selects XY/XZ/YZ and an XYZ origin in mm; `SketchPlacement Attached 0 0 10 0 0 0` uses XYZ then yaw/pitch/roll degrees. Placement changes require detachment. `SketchOffset` uses the same six values in the attached local coordinates. Preview remains local XY even on rotated or attached sketches. Up to64 projected edges are exposed. Only single planar FlatFace attachment is supported; full attachment modes, intersection/defining external variants and cross-document references remain pending. Inspect face/edge references after major topology changes.

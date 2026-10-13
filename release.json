@@ -1,7 +1,7 @@
 {
-  "version": "1.2-rc3",
-  "version_name": "1.2-rc3",
-  "version_code": 26,
+  "version": "1.2-rc4",
+  "version_name": "1.2-rc4",
+  "version_code": 27,
   "channel": "candidate",
   "status": "engineering checkpoint; Android device gate pending"
 }

@@ -1,0 +1,51 @@
+{
+  "curves": [
+    {
+      "external": false,
+      "index": 0,
+      "construction": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          25,
+          0
+        ]
+      ]
+    },
+    {
+      "external": true,
+      "index": -3,
+      "construction": true,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          25,
+          0
+        ]
+      ]
+    }
+  ],
+  "coordinates": "sketch-local XY mm",
+  "dof": 0,
+  "placement": {
+    "xyz_mm": [
+      0,
+      0,
+      22
+    ],
+    "quaternion": [
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "object": "Attached",
+  "map_mode": "FlatFace"
+}

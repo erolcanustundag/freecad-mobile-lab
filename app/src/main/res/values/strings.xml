@@ -153,6 +153,8 @@
   <string name="ui_c50db34b868b" formatted="false">"ArrayCurve · distribute copies on a curve"</string>
   <string name="ui_0639948033ad" formatted="false">"At most 64 document variables"</string>
   <string name="ui_0fad526e32cf" formatted="false">"At most 64 spline poles"</string>
+  <string name="ui_7ed6da7e72d5" formatted="false">"Attach to planar face"</string>
+  <string name="ui_2f0f329fa335" formatted="false">"Attachment offset"</string>
   <string name="ui_58b9ff3fe0e6" formatted="false">"Automatic · software frame timing"</string>
   <string name="ui_ff6ad92011f3" formatted="false">"Autosave"</string>
   <string name="ui_d74b6cfbbd9f" formatted="false">"Available Python API"</string>
@@ -392,12 +394,14 @@
   <string name="ui_ae4caa6b19e2" formatted="false">"Degenerate triangles must be repaired first"</string>
   <string name="ui_c569a6d930b8" formatted="false">"Degrees of freedom"</string>
   <string name="ui_f6fdbe48dc54" formatted="false">"Delete"</string>
+  <string name="ui_6dafafe1c5fb" formatted="false">"Delete external reference"</string>
   <string name="ui_d0f24e267e66" formatted="false">"Delete multiple"</string>
   <string name="ui_7700294c798b" formatted="false">"Delete multiple objects"</string>
   <string name="ui_dc0f4d794a15" formatted="false">"Delete sketch constraint"</string>
   <string name="ui_e9e5fb807d84" formatted="false">"Delete sketch geometry"</string>
   <string name="ui_024a119d4986" formatted="false">"Delete · selected object"</string>
   <string name="ui_9cf21530092a" formatted="false">"DeleteConstraint"</string>
+  <string name="ui_be312eafe1af" formatted="false">"DeleteExternal"</string>
   <string name="ui_3ae45bcbcc9e" formatted="false">"DeleteGeometry"</string>
   <string name="ui_b9054d38bdc5" formatted="false">"Delta X mm"</string>
   <string name="ui_609872d33573" formatted="false">"Delta Y mm"</string>
@@ -409,6 +413,7 @@
   <string name="ui_3a095fef14a4" formatted="false">"Detach"</string>
   <string name="ui_43cd70a06454" formatted="false">"Detach feature"</string>
   <string name="ui_d71a5056f84c" formatted="false">"Detach recipe; keep geometry"</string>
+  <string name="ui_e627cbc7fb85" formatted="false">"Detach sketch"</string>
   <string name="ui_ba297950288d" formatted="false">"Detach · keep selected geometry as a snapshot"</string>
   <string name="ui_a6a7709266d3" formatted="false">"Deutsch"</string>
   <string name="ui_8314fd7f3668" formatted="false">"Diameter"</string>
@@ -525,6 +530,8 @@
   <string name="ui_bfa59f13f3da" formatted="false">"Extend straight line"</string>
   <string name="ui_344956bf56ed" formatted="false">"ExtendLine"</string>
   <string name="ui_785cf64a82dd" formatted="false">"ExtendLine startLength endLength"</string>
+  <string name="ui_8d10c693b773" formatted="false">"External"</string>
+  <string name="ui_d5b286d6f872" formatted="false">"External edge reference"</string>
   <string name="ui_e586bececcf9" formatted="false">"External entities unsupported"</string>
   <string name="ui_33272d4ea2f5" formatted="false">"Extrude"</string>
   <string name="ui_ef29723d9159" formatted="false">"Extrude "</string>
@@ -1292,7 +1299,7 @@
   <string name="ui_b7152342a267" formatted="false">"Size"</string>
   <string name="ui_32fd056d3d4b" formatted="false">"Sketch"</string>
   <string name="ui_1901b5459594" formatted="false">"Sketch B-spline"</string>
-  <string name="ui_25d9ac78b203" formatted="false">"Sketch Profile\nSketchLine Profile 0 0 30 0\nSketchCircle Profile 10 10 5\nSketchArc Profile 0 0 10 0 180\nSketchEllipse Profile 0 0 20 10\nSketchSpline Profile 3 0,0;10,20;20,20;30,0 [1,2,2,1]\nConstruction Profile 0 true\nConstraint Profile Horizontal 0\nConstraint Profile Coincident 0 1 -1 1\nConstraint Profile Distance 0 30\nDatum Profile 2 40 mm\nMovePoint Profile 0 2 40 0\nDeleteGeometry Profile 0\nDeleteConstraint Profile 0\nSketchPreview Profile\n\nGeometry/constraint indices start at 0. Constraint angles use degrees; dimensions use mm. Datum accepts units. Preview uses sketch-local XY coordinates. Native solver edits, Undo/Redo and FCStd save/open are supported."</string>
+  <string name="ui_b37369a32a3d" formatted="false">"Sketch Profile\nSketchLine Profile 0 0 30 0\nSketchCircle Profile 10 10 5\nSketchArc Profile 0 0 10 0 180\nSketchEllipse Profile 0 0 20 10\nSketchSpline Profile 3 0,0;10,20;20,20;30,0 [1,2,2,1]\nConstruction Profile 0 true\nConstraint Profile Horizontal 0\nConstraint Profile Coincident 0 1 -1 1\nConstraint Profile Distance 0 30\nDatum Profile 2 40 mm\nMovePoint Profile 0 2 40 0\nDeleteGeometry Profile 0\nDeleteConstraint Profile 0\nSketchPreview Profile\nSketchPlane Profile XZ 0 0 10\nSketchPlacement Profile 0 0 0 0 0 0\nSketchAttach Profile Solid Face6\nSketchOffset Profile 0 0 2 0 0 0\nSketchDetach Profile\nExternal Profile Solid Edge9\nConstraint Profile Coincident 0 1 -3 1\nDeleteExternal Profile 0\n\nGeometry/constraint indices start at 0. Constraint angles use degrees; dimensions use mm. Datum accepts units. Preview uses sketch-local XY coordinates. External projected edges use -3, -4, etc.; DeleteExternal uses reference indices 0, 1, etc. Placement/offset rotations use yaw pitch roll degrees. Detach preserves current world placement. Native solver edits, Undo/Redo and FCStd save/open are supported."</string>
   <string name="ui_54960a0cbf8a" formatted="false">"Sketch arc"</string>
   <string name="ui_71d0880598e2" formatted="false">"Sketch circle"</string>
   <string name="ui_06359beba4bf" formatted="false">"Sketch command help"</string>
@@ -1302,14 +1309,22 @@
   <string name="ui_3b281e4dee6e" formatted="false">"Sketch line"</string>
   <string name="ui_8fdab3017915" formatted="false">"Sketch object"</string>
   <string name="ui_3594732ca359" formatted="false">"Sketch pad"</string>
+  <string name="ui_e0ca4e6ea91e" formatted="false">"Sketch placement"</string>
+  <string name="ui_b27023739f18" formatted="false">"Sketch plane"</string>
   <string name="ui_bafe1c42e16c" formatted="false">"Sketch preview"</string>
   <string name="ui_fa7a849fe1c1" formatted="false">"Sketch solver"</string>
   <string name="ui_7dfcbad361c2" formatted="false">"Sketch-local XY · drag to pan · pinch to zoom · cyan construction curves"</string>
+  <string name="ui_62bf6022cab6" formatted="false">"Sketch-local XY · drag to pan · pinch to zoom · cyan construction · magenta external edges"</string>
   <string name="ui_98e85eca1e52" formatted="false">"SketchArc"</string>
+  <string name="ui_9b135ee0e564" formatted="false">"SketchAttach"</string>
   <string name="ui_21b7ae6064c5" formatted="false">"SketchCircle"</string>
+  <string name="ui_55d149894b2d" formatted="false">"SketchDetach"</string>
   <string name="ui_e8dcbe891037" formatted="false">"SketchEllipse"</string>
   <string name="ui_70c08eeed40e" formatted="false">"SketchLine"</string>
+  <string name="ui_4dea8b777488" formatted="false">"SketchOffset"</string>
   <string name="ui_d3150aa9f8b4" formatted="false">"SketchPad"</string>
+  <string name="ui_8f5293b9a38c" formatted="false">"SketchPlacement"</string>
+  <string name="ui_4bee4d0c9cf7" formatted="false">"SketchPlane"</string>
   <string name="ui_3085875c6af9" formatted="false">"SketchPreview"</string>
   <string name="ui_51690843411d" formatted="false">"SketchSpline"</string>
   <string name="ui_c369ddbeefc1" formatted="false">"SketchSpline SKETCH DEGREE x,y;x,y;... [w,w,...]"</string>
@@ -1318,6 +1333,8 @@
   <string name="ui_bd390a2685ec" formatted="false">"Software 3D"</string>
   <string name="ui_e1c6f64d47b0" formatted="false">"Software 3D active"</string>
   <string name="ui_a6b985574468" formatted="false">"Software 3D active after graphics failure"</string>
+  <string name="ui_be829e31a1a1" formatted="false">"Solid Edge9"</string>
+  <string name="ui_aafa7fd396ca" formatted="false">"Solid Face6"</string>
   <string name="ui_b04a353cab8c" formatted="false">"Solid depth (mm)"</string>
   <string name="ui_f0f6fc83bc0c" formatted="false">"Solid modelling"</string>
   <string name="ui_fbef370bb7ff" formatted="false">"Solid volume: %.4f mm³"</string>
@@ -1561,6 +1578,7 @@
   <string name="ui_2186f223e3c8" formatted="false">"X radius (mm)"</string>
   <string name="ui_09527dcc1ac5" formatted="false">"X step"</string>
   <string name="ui_67bd96db317b" formatted="false">"X vector (mm)"</string>
+  <string name="ui_06a717db9f59" formatted="false">"XY 0 0 0"</string>
   <string name="ui_1f48d503c02a" formatted="false">"XY poles · drag points · Z / weight via Point"</string>
   <string name="ui_2d825843e49c" formatted="false">"XY sketch · tap to add, drag to edit · pinch / two fingers pan"</string>
   <string name="ui_7f5a68f0039c" formatted="false">"XY tangent orientation (0/1)"</string>

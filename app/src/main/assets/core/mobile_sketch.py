@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: LGPL-2.1-or-later
 """Bounded edits to original FreeCAD Sketcher; geometry/solve stay upstream."""
 import math
+import re
 import FreeCAD as App
 import mobile_part
 try:
@@ -10,6 +11,7 @@ except ImportError:
 
 MAX_GEOMETRY = 256
 MAX_CONSTRAINTS = 256
+MAX_EXTERNAL = 64
 TYPES = {"Sketcher::SketchObject"}
 
 def available():
@@ -22,6 +24,60 @@ def require(obj):
         raise ValueError("Select a native Sketcher sketch")
     if obj.GeometryCount > MAX_GEOMETRY or obj.ConstraintCount > MAX_CONSTRAINTS:
         raise ValueError("Mobile sketch limit is 256 entities and 256 constraints")
+    if len(obj.ExternalGeometry)>MAX_EXTERNAL or len(obj.ExternalGeo)>MAX_EXTERNAL+2:
+        raise ValueError("Mobile sketch limit is 64 external edges")
+
+def reference(obj, source_name, element, kind):
+    source=obj.Document.getObject(source_name) if isinstance(source_name,str) else None
+    if source is None or source==obj or source in obj.InListRecursive:
+        raise ValueError("Sketch reference is missing, self-referential or cyclic")
+    if source.TypeId not in mobile_part.TYPES|TYPES or not hasattr(source,"Shape"):
+        raise ValueError("Select a supported native Part or Sketcher reference")
+    if not isinstance(element,str) or not re.fullmatch(kind+r"[1-9][0-9]{0,5}",element):
+        raise ValueError("Use a current numbered Face or Edge reference")
+    shape=source.Shape
+    if shape.isNull() or "Invalid" in source.State:
+        raise ValueError("Sketch reference has no valid native shape")
+    elements=shape.Faces if kind=="Face" else shape.Edges
+    n=int(element[len(kind):])-1
+    if n>=len(elements):raise ValueError("Referenced face or edge does not exist")
+    selected=elements[n]
+    if kind=="Face" and selected.Surface.TypeId!="Part::GeomPlane":
+        raise ValueError("FlatFace attachment requires a planar face")
+    return source
+
+def placement(values):
+    if not isinstance(values,list) or len(values)!=6:
+        raise ValueError("Use X Y Z in mm and yaw pitch roll in degrees")
+    xyz=[number(v) for v in values[:3]]
+    angles=[number(v,36000) for v in values[3:]]
+    return App.Placement(App.Vector(*xyz),App.Rotation(*angles))
+
+def validate(obj):
+    require(obj)
+    if obj.MapMode not in ("Deactivated","FlatFace"):
+        raise ValueError("This mobile adapter supports free planes and FlatFace attachment")
+    if obj.MapMode=="FlatFace":
+        links=obj.AttachmentSupport
+        if len(links)!=1 or len(links[0][1])!=1:
+            raise ValueError("FlatFace requires one current planar face")
+        reference(obj,links[0][0].Name,links[0][1][0],"Face")
+    for source,elements in obj.ExternalGeometry:
+        if source is None or len(elements)!=1:raise ValueError("External edge reference is missing")
+        reference(obj,source.Name,elements[0],"Edge")
+    if len(obj.ExternalGeo)!=len(obj.ExternalGeometry)+2:
+        raise ValueError("External edge projection failed; edit was rolled back")
+    if any(g.toShape().ShapeType!="Edge" for g in obj.ExternalGeo[2:]):
+        raise ValueError("External edge collapses in this sketch plane; choose another edge or plane")
+    for value in (obj.Placement.Base.x,obj.Placement.Base.y,obj.Placement.Base.z):number(value)
+    if "Invalid" in obj.State:raise ValueError("Sketch recompute failed; edit was rolled back")
+
+def validate_document(doc):
+    for obj in doc.Objects:
+        if obj.TypeId in TYPES:validate(obj)
+
+def placement_summary(value):
+    return {"xyz_mm":[value.Base.x,value.Base.y,value.Base.z],"quaternion":list(value.Rotation.Q)}
 
 def number(value, limit=1000000):
     if isinstance(value, bool):
@@ -87,7 +143,38 @@ def solve(obj):
 def edit(obj, request):
     require(obj)
     operation=request["op"]
-    if operation=="sketch_geometry":
+    if operation=="sketch_plane":
+        if obj.MapMode!="Deactivated":raise ValueError("Detach the sketch before changing its free plane")
+        rotations={"XY":App.Rotation(),"XZ":App.Rotation(App.Vector(1,0,0),90),
+                   "YZ":App.Rotation(App.Vector(0,1,0),90)}
+        plane=request.get("plane");origin=request.get("origin")
+        if plane not in rotations or not isinstance(origin,list) or len(origin)!=3:
+            raise ValueError("Use XY, XZ or YZ and an XYZ origin in millimetres")
+        obj.Placement=App.Placement(App.Vector(*[number(v) for v in origin]),rotations[plane])
+    elif operation=="sketch_placement":
+        if obj.MapMode!="Deactivated":raise ValueError("Detach the sketch before changing its free plane")
+        obj.Placement=placement(request["values"])
+    elif operation=="sketch_attach":
+        source=reference(obj,request.get("source"),request.get("element"),"Face")
+        obj.AttachmentSupport=[(source,[request["element"]])]
+        obj.AttachmentOffset=App.Placement()
+        obj.MapMode="FlatFace"
+    elif operation=="sketch_offset":
+        if obj.MapMode!="FlatFace":raise ValueError("Attach the sketch before setting an attachment offset")
+        obj.AttachmentOffset=placement(request["values"])
+    elif operation=="sketch_detach":
+        world=obj.Placement
+        obj.MapMode="Deactivated";obj.AttachmentSupport=[];obj.AttachmentOffset=App.Placement()
+        obj.Placement=world
+    elif operation=="sketch_external":
+        if len(obj.ExternalGeometry)>=MAX_EXTERNAL:raise ValueError("Sketch supports at most 64 external edges")
+        source=reference(obj,request.get("source"),request.get("element"),"Edge")
+        if any(link==source and request["element"] in names for link,names in obj.ExternalGeometry):
+            raise ValueError("This external edge is already referenced")
+        obj.addExternal(source.Name,request["element"],False,False)
+    elif operation=="sketch_delete_external":
+        obj.delExternal(index(request["index"],len(obj.ExternalGeometry)))
+    elif operation=="sketch_geometry":
         if obj.GeometryCount>=MAX_GEOMETRY:raise ValueError("Sketch supports at most 256 entities")
         construction=request.get("construction",False)
         if type(construction) is not bool:raise ValueError("Construction must be true or false")
@@ -111,7 +198,7 @@ def edit(obj, request):
         if kind not in signatures or not isinstance(args,list) or len(args)!=signatures[kind]:
             raise ValueError("Unsupported constraint or argument count")
         if kind=="Coincident":
-            args=[index(args[0],obj.GeometryCount,True),args[1],index(args[2],obj.GeometryCount,True),args[3]]
+            args=[constraint_index(obj,args[0]),args[1],constraint_index(obj,args[2]),args[3]]
             if any(type(p) is not int or p not in (1,2,3) for p in (args[1],args[3])):
                 raise ValueError("Endpoint positions must be 1, 2 or 3")
         elif kind in ("Distance","Radius","Diameter","Angle"):
@@ -119,7 +206,7 @@ def edit(obj, request):
             if kind!="Angle" and value<=1e-7:raise ValueError("Constraint length must be positive")
             args=[index(args[0],obj.GeometryCount),math.radians(value) if kind=="Angle" else value]
         else:
-            args=[index(i,obj.GeometryCount,True) for i in args]
+            args=[constraint_index(obj,i) for i in args]
         obj.addConstraint(Sketcher.Constraint(kind,*args))
     elif operation=="sketch_delete_constraint":
         obj.delConstraint(index(request["index"],obj.ConstraintCount))
@@ -132,7 +219,14 @@ def edit(obj, request):
         obj.setDatum(constraint,quantity)
     else:
         raise ValueError("Unknown sketch edit")
+    obj.Document.recompute()
+    validate(obj)
     solve(obj)
+
+def constraint_index(obj, value):
+    if type(value) is not int or not -len(obj.ExternalGeo)<=value<obj.GeometryCount:
+        raise ValueError("Sketch constraint index is outside the current internal/external geometry")
+    return value
 
 def summary(obj):
     if obj.TypeId!="Sketcher::SketchObject":return None
@@ -140,18 +234,25 @@ def summary(obj):
     return {"geometry_count":obj.GeometryCount,"constraint_count":obj.ConstraintCount,
             "dof":obj.DoF,"conflicts":list(obj.ConflictingConstraints),
             "redundant":list(obj.RedundantConstraints),
+            "placement":placement_summary(obj.Placement),"map_mode":str(obj.MapMode),
+            "attachment_offset":placement_summary(obj.AttachmentOffset),
+            "support":[{"object":link.Name,"elements":list(names)} for link,names in obj.AttachmentSupport],
+            "external":[{"reference_index":i,"geometry_index":-3-i,"object":link.Name,"elements":list(names)} for i,(link,names) in enumerate(obj.ExternalGeometry)],
             "geometry":[{"index":i,"type":g.TypeId,"construction":obj.getConstruction(i)} for i,g in enumerate(obj.Geometry)],
             "constraints":[{"index":i,"type":c.Type,"value":float(c.Value)} for i,c in enumerate(obj.Constraints)]}
 
 def preview(obj):
     require(obj)
     curves=[];count=0
-    for i,g in enumerate(obj.Geometry):
+    geometries=[(i,g,obj.getConstruction(i),False) for i,g in enumerate(obj.Geometry)]
+    geometries += [(-i-1,g,True,True) for i,g in enumerate(obj.ExternalGeo) if i>=2]
+    for i,g,construction,external in geometries:
         shape=g.toShape()
         # Fixed sample count bounds allocation even for an enormous spline.
         points=shape.discretize(Number=2 if g.TypeId=="Part::GeomLineSegment" else 65)
         count+=len(points)
         if count>8192:raise ValueError("Sketch preview exceeds 8,192 points")
-        curves.append({"index":i,"construction":obj.getConstruction(i),
+        curves.append({"index":i,"construction":construction,"external":external,
                        "points":[[number(p.x),number(p.y)] for p in points]})
-    return {"object":obj.Name,"dof":obj.DoF,"curves":curves,"coordinates":"sketch-local XY mm"}
+    return {"object":obj.Name,"dof":obj.DoF,"curves":curves,"coordinates":"sketch-local XY mm",
+            "placement":placement_summary(obj.Placement),"map_mode":str(obj.MapMode)}

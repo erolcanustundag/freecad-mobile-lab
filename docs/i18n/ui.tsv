@@ -655,3 +655,11 @@ Degrees of freedom|Serbestlik derecesi|Freiheitsgrade
 Sketch-local XY · drag to pan · pinch to zoom · cyan construction curves|Eskizin XY düzlemi · sürükle: kaydır · kıstır: yakınlaştır · turkuaz: yardımcı eğriler|Lokale Skizzenebene XY · Ziehen: Verschieben · Pinch: Zoom · Türkis: Konstruktionskurven
 Upstream App/Part/Sketcher 1.1.4 · solids, sketches and native constraints|Özgün App/Part/Sketcher 1.1.4 · katılar, eskizler ve yerel kısıtlar|Originales App/Part/Sketcher 1.1.4 · Volumenkörper, Skizzen und native Bedingungen
 Sketch guide|Eskiz rehberi|Skizzenanleitung
+Sketch plane|Eskiz düzlemi|Skizzenebene
+Sketch placement|Eskiz yerleşimi|Skizzenplatzierung
+Attach to planar face|Düzlemsel yüze bağla|An ebene Fläche anheften
+Attachment offset|Bağlama ofseti|Anheftungsversatz
+Detach sketch|Eskiz bağlantısını kaldır|Skizze lösen
+External edge reference|Dış kenar referansı|Externe Kantenreferenz
+Delete external reference|Dış referansı sil|Externe Referenz löschen
+Sketch-local XY · drag to pan · pinch to zoom · cyan construction · magenta external edges|Eskiz yerel XY · kaydırmak için sürükleyin · yakınlaştırmak için sıkıştırın · camgöbeği yardımcı · eflatun dış kenarlar|Skizzenlokales XY · ziehen zum Verschieben · spreizen zum Zoomen · cyan für Hilfsgeometrie · magenta für externe Kanten

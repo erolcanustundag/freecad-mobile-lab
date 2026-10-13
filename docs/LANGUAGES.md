@@ -9,3 +9,5 @@ UI text uses Android values/values-tr/values-de string resources. docs/i18n/ui.t
 The document-lab recovery roles use stable metadata and accept clicks while busy. They no longer depend on displayed English button text. Sketch curve kinds are selected by stable indices while labels are localized.
 
 Validation: Java/APK compilation and portable locale/alias tests; physical language switching, font layout and process resumption still need Android testing.
+
+1.2-rc4 adds sketch plane/placement, planar attachment/offset/detach and external-reference tools/guides in EN/TR/DE. Reviewed Turkish/German UI catalogues now contain665 entries each;1,625 English fallback keys. Native technical errors still use English fallback. Device language/layout tests remainNOT_RUN.

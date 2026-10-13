@@ -77,12 +77,12 @@ public final class CoreDocumentActivity extends LocalizedActivity {
     private void sketchGuide(){try(InputStream in=getAssets().open(L10n.guide(this,"native-sketcher"));ByteArrayOutputStream out=new ByteArrayOutputStream()){copy(in,out,128000);TextView text=text("",14);text.setText(new String(out.toByteArray(),java.nio.charset.StandardCharsets.UTF_8));text.setTextIsSelectable(true);text.setPadding(20,16,20,16);ScrollView scroll=new ScrollView(this);scroll.addView(text);new UiDialog(this).setTitle("Sketch guide").setView(scroll).setPositiveButton("Close",null).show();}catch(Exception e){error(e);}}
     private void sketchMenu(){
         if(state==null||!state.optBoolean("sketcher")){error(new IOException(L10n.text(this,"Original Sketcher is not available in this runtime")));return;}
-        String[] labels={"New native sketch","Sketch line","Sketch circle","Sketch arc","Sketch ellipse","Sketch B-spline","Construction geometry","Add sketch constraint","Edit constraint dimension","Move sketch point","Delete sketch geometry","Delete sketch constraint","Sketch preview","Sketch command help"};
-        String[] commands={"Sketch","SketchLine","SketchCircle","SketchArc","SketchEllipse","SketchSpline","Construction","Constraint","Datum","MovePoint","DeleteGeometry","DeleteConstraint","SketchPreview"};
-        String[] arguments={"","0 0 30 0","10 10 5","0 0 10 0 180","0 0 20 10","3 0,0;10,20;20,20;30,0","0 true","Horizontal 0","0 30 mm","0 2 40 0","0","0",""};
+        String[] labels={"New native sketch","Sketch line","Sketch circle","Sketch arc","Sketch ellipse","Sketch B-spline","Construction geometry","Add sketch constraint","Edit constraint dimension","Move sketch point","Delete sketch geometry","Delete sketch constraint","Sketch preview","Sketch plane","Sketch placement","Attach to planar face","Attachment offset","Detach sketch","External edge reference","Delete external reference","Sketch command help"};
+        String[] commands={"Sketch","SketchLine","SketchCircle","SketchArc","SketchEllipse","SketchSpline","Construction","Constraint","Datum","MovePoint","DeleteGeometry","DeleteConstraint","SketchPreview","SketchPlane","SketchPlacement","SketchAttach","SketchOffset","SketchDetach","External","DeleteExternal"};
+        String[] arguments={"","0 0 30 0","10 10 5","0 0 10 0 180","0 0 20 10","3 0,0;10,20;20,20;30,0","0 true","Horizontal 0","0 30 mm","0 2 40 0","0","0","","XY 0 0 0","0 0 0 0 0 0","Solid Face6","0 0 2 0 0 0","","Solid Edge9","0"};
         new UiDialog(this).setTitle("Original Sketcher").setItems(L10n.labels(this,labels),(d,w)->{
-            if(w==13){new UiDialog(this).setTitle("Sketch command help").setMessage(CoreCommandLine.SKETCH_HELP).setPositiveButton("OK",null).show();return;}
-            String[] fields=w==0||w==12?new String[]{"Sketch object"}:new String[]{"Sketch object","Command arguments"};
+            if(w==commands.length){new UiDialog(this).setTitle("Sketch command help").setMessage(CoreCommandLine.SKETCH_HELP).setPositiveButton("OK",null).show();return;}
+            String[] fields=w==0||w==12||w==17?new String[]{"Sketch object"}:new String[]{"Sketch object","Command arguments"};
             String[] defaults=fields.length==1?new String[]{firstSketch()}:new String[]{firstSketch(),arguments[w]};
             fields(labels[w],fields,defaults,v->job(()->request(CoreCommandLine.parse(commands[w]+" "+v[0]+(v.length==2?" "+v[1]:"")))));
         }).show();

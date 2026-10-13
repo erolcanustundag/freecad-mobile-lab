@@ -20,6 +20,15 @@ Construction Profile 0 true geometriyi yardımcı yapar. MovePoint yerel çözü
 
 Kısıtlar: Horizontal (yatay), Vertical (dikey), Coincident (çakışık), Parallel (paralel), Perpendicular (dik), Tangent (teğet), Equal (eşit), Distance (uzunluk), Radius (yarıçap), Diameter (çap), Angle (açı). Angle komutunda derece kullanın. Datum, 30 deg veya 2 cm gibi birimleri kabul eder. Çelişen veya gereksiz kısıtlar reddedilir; işlem geri alınır. Komut adları tüm dillerde aynıdır.
 
-Önizleme eskizin yerel XY eğrilerini gösterir. Sürükleme kaydırır; kıstırma yakınlaştırır; Sığdır görünümü sıfırlar. Normal eğriler altın, yardımcı eğriler turkuazdır. Düzenlemeyi form veya komutla yapın; dokunarak kısıt düzenleme henüz yoktur.
+Önizleme eskizin yerel XY eğrilerini gösterir. Sürükleme kaydırır; kıstırma yakınlaştırır; Sığdır görünümü sıfırlar. Normal eğriler altın, yardımcı eğriler turkuaz, dış kenarlar eflatundur. Düzenlemeyi form veya komutla yapın; dokunarak kısıt düzenleme henüz yoktur.
 
-Kapatmadan önce FCStd kaydedin; yedek için dosya seçiciyle dışa aktarın. Desteklenen Sketcher/Part/App nesneleri tekrar açılır. Genel masaüstü belgeleri, yüzey/düzlem bağlama, dış geometri düzenleme, kırpma/radyüs, eğri kutup tutamaçları ve PartDesign henüz tamamlanmadı. Eskiz başına 256 geometri/kısıt, eğri başına 64 kutup, önizlemede 8.192 nokta sınırı vardır. Bu adayın Android çalıştırma testleri bekliyor.
+Kapatmadan önce FCStd kaydedin; yedek için dosya seçiciyle dışa aktarın. Desteklenen Sketcher/Part/App nesneleri tekrar açılır. Genel masaüstü belgeleri, kırpma/radyüs, eğri kutup tutamaçları ve PartDesign henüz tamamlanmadı. Eskiz başına 256 geometri/kısıt, eğri başına 64 kutup, önizlemede 8.192 nokta sınırı vardır. Bu adayın Android çalıştırma testleri bekliyor.
+
+DÜZLEM, YÜZE BAĞLAMA VE DIŞ KENARLAR
+SketchPlane Profile XZ 0 0 10: XY/XZ/YZ düzlemini ve başlangıcı seçer. SketchPlacement Profile 0 0 10 0 0 0: XYZ (mm), yaw/pitch/roll (derece). Yüze bağlı eskiz için önce SketchDetach gerekir.
+
+Örnek: Add Solid Box; Sketch Attached; SketchLine Attached 0 0 10 0; SketchAttach Attached Solid Face6. Bunları ayrı komutlar olarak girin. SketchOffset Attached 0 0 2 0 0 0 yüze göre 2 mm ofset ekler. Solid.Height değişince eskiz bağlı kalır. SketchDetach Attached dünya konumunu korur; Geri al bağlantıyı geri getirir. Yalnızca tek düzlemsel yüz desteklenir.
+
+External Attached Solid Edge9 yerel düzleme yansıtılmış dış kenar ekler. İlk dış geometri -3, sonraki -4 vb. Kısıt örnekleri: Constraint Attached Coincident 0 1 -3 1 ve Constraint Attached Coincident 0 2 -3 2. Solid.Length değişince çizgi yerel çözücüyle güncellenir. DeleteExternal Attached 0 ilk referansı ve bağlı kısıtlarını siler; Geri al geri getirir. Kaydet/aç yerel bağımlılıkları korur.
+
+Eskiz başına en çok 64 dış kenar. Eksik/döngüsel/aynı referans, düzleme yansıtıldığında noktaya dönüşen kenar ve geçersiz model değişiklikleri geri alınır. Kaynak nesneyi silmeden önce yüz bağlantısını kaldırın ve dış referanslarını silin. Yüz/kenar numaraları güncel yerel listelerden alınır; topolojiyi kökten değiştirdikten sonra kontrol edin. Kesişim/defining dış geometri, çoklu bağlama kipleri ve tüm topolojik adlandırma iş akışları henüz yoktur.

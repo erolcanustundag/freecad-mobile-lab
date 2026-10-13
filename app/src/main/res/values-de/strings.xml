@@ -27,6 +27,8 @@
   <string name="ui_853a983f6b8a" formatted="false">"Bogen"</string>
   <string name="ui_2745debaa64a" formatted="false">"Fläche"</string>
   <string name="ui_4130069ee1c1" formatted="false">"Entlang einer Kurve anordnen"</string>
+  <string name="ui_7ed6da7e72d5" formatted="false">"An ebene Fläche anheften"</string>
+  <string name="ui_2f0f329fa335" formatted="false">"Anheftungsversatz"</string>
   <string name="ui_58b9ff3fe0e6" formatted="false">"Automatisch · Software-Bilddauer"</string>
   <string name="ui_d74b6cfbbd9f" formatted="false">"Verfügbare Python-API"</string>
   <string name="ui_1df6251b4693" formatted="false">"Achse X"</string>
@@ -138,6 +140,7 @@
   <string name="ui_15d5b7c8fd92" formatted="false">"DXF · ausgewählte XY-Kurve / Schnitt"</string>
   <string name="ui_c569a6d930b8" formatted="false">"Freiheitsgrade"</string>
   <string name="ui_f6fdbe48dc54" formatted="false">"Löschen"</string>
+  <string name="ui_6dafafe1c5fb" formatted="false">"Externe Referenz löschen"</string>
   <string name="ui_7700294c798b" formatted="false">"Mehrere Objekte löschen"</string>
   <string name="ui_dc0f4d794a15" formatted="false">"Skizzenbedingung löschen"</string>
   <string name="ui_e9e5fb807d84" formatted="false">"Skizzengeometrie löschen"</string>
@@ -147,6 +150,7 @@
   <string name="ui_64b365fa3ee1" formatted="false">"Tiefe (mm)"</string>
   <string name="ui_1d97595f7723" formatted="false">"Tiefe Y (mm)"</string>
   <string name="ui_d71a5056f84c" formatted="false">"Rezept lösen; Geometrie behalten"</string>
+  <string name="ui_e627cbc7fb85" formatted="false">"Skizze lösen"</string>
   <string name="ui_b4748fa72923" formatted="false">"Bemaßtes Zeichnungsblatt"</string>
   <string name="ui_9f4ca9ec0871" formatted="false">"Abmessungen"</string>
   <string name="ui_6cc62d64e2d0" formatted="false">"Schnitt deaktivieren"</string>
@@ -211,6 +215,7 @@
   <string name="ui_97b695b9b9cf" formatted="false">"Ausdruck"</string>
   <string name="ui_6f26fb48d63c" formatted="false">"Ausdruck (z. B. Source.Width * 2)"</string>
   <string name="ui_bfa59f13f3da" formatted="false">"Gerade verlängern"</string>
+  <string name="ui_d5b286d6f872" formatted="false">"Externe Kantenreferenz"</string>
   <string name="ui_33272d4ea2f5" formatted="false">"Extrudieren"</string>
   <string name="ui_bf753d1d7540" formatted="false">"VORNE"</string>
   <string name="ui_0c63436993af" formatted="false">"Fertigungs- / Entformungsbericht"</string>
@@ -548,9 +553,12 @@
   <string name="ui_3b281e4dee6e" formatted="false">"Skizzenlinie"</string>
   <string name="ui_8fdab3017915" formatted="false">"Skizzenobjekt"</string>
   <string name="ui_3594732ca359" formatted="false">"Skizzenblock"</string>
+  <string name="ui_e0ca4e6ea91e" formatted="false">"Skizzenplatzierung"</string>
+  <string name="ui_b27023739f18" formatted="false">"Skizzenebene"</string>
   <string name="ui_bafe1c42e16c" formatted="false">"Skizzenvorschau"</string>
   <string name="ui_fa7a849fe1c1" formatted="false">"Skizzenlöser"</string>
   <string name="ui_7dfcbad361c2" formatted="false">"Lokale Skizzenebene XY · Ziehen: Verschieben · Pinch: Zoom · Türkis: Konstruktionskurven"</string>
+  <string name="ui_62bf6022cab6" formatted="false">"Skizzenlokales XY · ziehen zum Verschieben · spreizen zum Zoomen · cyan für Hilfsgeometrie · magenta für externe Kanten"</string>
   <string name="ui_455673bbb8a0" formatted="false">"Fangen"</string>
   <string name="ui_fb9da43b6bb0" formatted="false">"Fangen: Kontrollpunkte, Mittelpunkte / Schnittpunkte der Kontrollsegmente und Raster. Die NURBS-Vorschau ist rational; die Interpolation verwendet bis Anwenden eine Führung durch die Punkte."</string>
   <string name="ui_bd390a2685ec" formatted="false">"Software-3D"</string>

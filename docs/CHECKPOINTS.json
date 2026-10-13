@@ -266,5 +266,19 @@
     "android_runtime": "physical startup/lifecycle/SAF workflows pending",
     "signing": "retained public development identity",
     "milestone_gate": "not complete until roadmap device/workflow criteria pass"
+  },
+  {
+    "version": "1.2-rc4",
+    "version_name": "1.2-rc4",
+    "version_code": 27,
+    "channel": "candidate",
+    "status": "engineering checkpoint; Android device gate pending",
+    "apk": "FreeCAD-Mobile-Lab-1.2-rc4-arm64.apk",
+    "size_bytes": 160961461,
+    "sha256": "6b0f2c6bd15bfbed0360ce175c7ddba03d13787aaf719da829cf52b5bcd7e011",
+    "engineering_changes": "Four native sketch attachment/reference scopes: plane/arbitrary placement; planar face support/offset/detach; projected external edges and solver constraints; reference-safe FCStd/dependency/history.1236 Sketcher/269 Part/88 App/62 Python checks;527 locale checks;665 reviewed TR/DE strings. Android execution pending.",
+    "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+    "signing": "retained public development identity",
+    "milestone_gate": "not complete until roadmap device/workflow criteria pass"
   }
 ]

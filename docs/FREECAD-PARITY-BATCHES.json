@@ -1136,5 +1136,30 @@
     "evidence": "native-sketcher-results.json",
     "full_B05_B06_B07": "PENDING",
     "apk": "FreeCAD-Mobile-Lab-1.2-rc3-arm64.apk"
+  },
+  "sketch_attachment_prerequisite": {
+    "version": "1.2-rc4",
+    "version_code": 27,
+    "scope": "Four bounded native attachment/reference scopes; full B05/B06/B07 remain pending",
+    "features": [
+      {
+        "name": "Explicit sketch planes and arbitrary placement",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Single planar face attachment, offsets and world-preserving detach",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Native projected external edges and solver constraints",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Reference-safe persistence, dependency updates and native history",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      }
+    ],
+    "evidence": "docs/native-sketcher-results.json",
+    "apk": "FreeCAD-Mobile-Lab-1.2-rc4-arm64.apk"
   }
 }

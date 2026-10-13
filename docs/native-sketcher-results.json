@@ -1,10 +1,10 @@
 {
-  "version": "1.2-rc3",
-  "version_code": 26,
+  "version": "1.2-rc4",
+  "version_code": 27,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "checks": {
-    "sketcher_jni_solver_geometry_fcstd": 955,
+    "sketcher_jni_solver_geometry_fcstd": 1236,
     "part_jni_regressions": 269,
     "metadata_jni_regressions": 88,
     "python_tools_regressions": 62,
@@ -35,18 +35,39 @@
     "constraints_per_sketch": 256,
     "spline_poles": 64,
     "preview_points": 8192,
-    "coordinate_mm": 1000000
+    "coordinate_mm": 1000000,
+    "external_edges_per_sketch": 64
   },
   "fixtures": [
     {
       "path": "samples/upstream-sketcher/Sketch.FCStd",
-      "size": 12114,
-      "sha256": "0f06fabe6b81a3736b5bc8189bacc15e34f330673e186e0bbea3f054b1bb8024"
+      "size": 15661,
+      "sha256": "eed7a5698fd9ecbb43c86c88522e65bcac5af1ca7d32fb9cbd47b9824c209019"
     },
     {
       "path": "samples/upstream-sketcher/preview.json",
-      "size": 20678,
-      "sha256": "a5163545100c564bc7f74fecccb2822fa6b29dbb70985cef17e594e0b3ede761"
+      "size": 20939,
+      "sha256": "56c65f33c1789c481d81dc1c4ae8784aaddc84767d617bd6a2167a47cf1edd19"
+    },
+    {
+      "path": "samples/upstream-sketcher/Attachments.FCStd",
+      "size": 15628,
+      "sha256": "1ff133ad219550d24e54f8799af8f3285204c82097e29cf0d44c59aa56270c2f"
+    },
+    {
+      "path": "samples/upstream-sketcher/attachment-preview.json",
+      "size": 659,
+      "sha256": "f3c8f1302fb1fd419735e6cf47587a0cf881d6889b5eab93993fcb9d49d81f25"
     }
+  ],
+  "attachment_scopes": [
+    "XY/XZ/YZ and arbitrary placement",
+    "Single planar FlatFace with offset/detach",
+    "Original projected external edges and negative-index constraints",
+    "Reference-safe FCStd/updates/UndoRedo/rollback"
+  ],
+  "bugs_fixed": [
+    "Reject native open reuse of already-open file before validation, preserving previous document",
+    "Validate supported attachment and external references after native recompute; reject cyclic/missing/duplicate/collapsed references atomically"
   ]
 }

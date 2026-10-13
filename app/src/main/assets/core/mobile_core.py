@@ -139,7 +139,10 @@ def _edit(edit):
         obj = _doc().addObject(kind, name)
         obj.Label = _text(edit.get("label", name), 256)
     elif action == "remove":
-        _doc().removeObject(_object(edit["object"]).Name)
+        target=_object(edit["object"])
+        if any(o.TypeId in mobile_sketch.TYPES for o in target.InList):
+            raise ValueError("Detach sketches and remove their external references before deleting the source")
+        _doc().removeObject(target.Name)
     elif action == "property":
         obj = _object(edit["object"])
         name = _identifier(edit["name"])
@@ -286,6 +289,13 @@ def execute(request):
             raise ValueError("No transaction is open")
         if action == "commit":
             _doc().recompute()
+            try:
+                mobile_sketch.validate_document(_doc())
+                if any("Invalid" in o.State for o in _doc().Objects):
+                    raise ValueError("Document recompute failed; transaction was rolled back")
+            except Exception:
+                _doc().abortTransaction();_doc().recompute();_transaction=False
+                raise
             _doc().commitTransaction()
         else:
             _doc().abortTransaction()
@@ -302,6 +312,7 @@ def execute(request):
             for edit in edits:
                 _edit(edit)
             _doc().recompute()
+            mobile_sketch.validate_document(_doc())
             if any("Invalid" in o.State for o in _doc().Objects):
                 raise ValueError("Recompute failed; check expressions and object references")
             if owned:
@@ -316,12 +327,15 @@ def execute(request):
             raise ValueError("Finish the current transaction first")
         getattr(_doc(), action)()
         _doc().recompute()
+        mobile_sketch.validate_document(_doc())
     elif action == "recompute":
         _doc().recompute()
+        mobile_sketch.validate_document(_doc())
     elif action == "save":
         if _transaction:
             raise ValueError("Finish the current transaction first")
         _doc().recompute()
+        mobile_sketch.validate_document(_doc())
         if any("Invalid" in o.State for o in _doc().Objects):
             raise ValueError("Document has failed features")
         _doc().saveAs(str(_file(request["file"])))
@@ -331,10 +345,18 @@ def execute(request):
         if len(App.listDocuments()) >= 8:
             raise ValueError("Close a document before opening another")
         path = _file(request["file"])
+        if any(d.FileName and Path(d.FileName).resolve()==path for d in App.listDocuments().values()):
+            raise ValueError("This document file is already open; close it before reopening")
         _validate_fcstd(path)
         restored = App.openDocument(str(path))
-        restored.UndoMode = 1
-        restored.recompute()
+        try:
+            restored.UndoMode = 1
+            restored.recompute()
+            mobile_sketch.validate_document(restored)
+        except Exception:
+            App.closeDocument(restored.Name)
+            if _document is not None:App.setActiveDocument(_document.Name)
+            raise
         _document = restored
     elif action in ("python", "macro_run"):
         if _transaction:

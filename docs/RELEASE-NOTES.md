@@ -1,25 +1,17 @@
-# FreeCAD Mobile Lab1.2-rc3 — original Sketcher candidate
+# FreeCAD Mobile Lab1.2-rc4 — sketch attachments and references
 
-Signed ARM64 Android8+ engineering candidate, code26. Latest full release remains1.1. This is an independent project; full FreeCAD/Rhino desktop parity and device qualification remain NOT_COMPLETE.
+Signed ARM64 Android8+ engineering candidate, code27. Latest full release remains1.1. Full FreeCAD/Rhino parity and device qualification are NOT_COMPLETE.
 
-Four new bounded modeling scopes in the isolated Document Lab:
-- Original Sketcher lines/circles/arcs/ellipses with native solver movement and deletion.
-- Rational B-splines and construction geometry.
-- Eleven native constraint kinds, unit-aware datum editing, DOF and atomic conflict/redundancy rollback.
-- Supported Sketcher FCStd save/open and sampled local XY preview with pan/pinch/fit.
+Four new bounded native Document Lab scopes:
+- Explicit XY/XZ/YZ sketch planes and arbitrary world placement.
+- Planar FlatFace support, local attachment offsets and detach preserving world placement.
+- Original projected external edges, negative-index solver constraints and distinct preview styling.
+- Native reference/dependency persistence, Undo/Redo and atomic validation. Source dimensional edits update attached sketches and constrained geometry. Invalid/cyclic/duplicate/collapsed references roll back; referenced sources require detachment/reference removal before deletion. Failed unsupported FCStd restoration retains the previous document. Already-open files are rejected explicitly.
 
-Includes the previously verified original Part/Materials prerequisite: parametric primitives, expressions, linked booleans, STEP shape import/export and genuine tessellation. The unpublished rc1 APK was lost during workspace cleanup; its source/evidence remain preserved, and this replacement is rebuilt/tested/signed independently.
+Includes previous original Part/Materials/Sketcher scopes: primitives/booleans/STEP, rational curves/construction,11 native constraint kinds, units/DOF and FCStd/preview. English/Turkish/German forms and guides cover new tools;665 reviewed TR/DE UI entries each. Advanced diagnostics retain English fallback.
 
-Turkish/German controls now include657 reviewed strings each and a native sketch guide. English fallback remains available. Sketch/Eskiz/Skizze creation aliases work; command names/geometry data remain canonical. Read the in-app Sketch guide or docs/SKETCHER-USER-GUIDE.md.
+Validation:1236 genuine native Sketcher JNI checks including analytic geometry, reference updates, save/reopen, history, rollback and the64-reference boundary;269 Part,88 App and62 Python regressions;527 locale checks;3 resource and9 packaging tests. Retained VM fault-handler integration and cache-free packaging remain verified. Signing/static16KiB/API26 checks are recorded separately in release gates.
 
-A host integration defect replaced the JVM SIGSEGV handler during FreeCAD initialization. The explicit embedded-build policy preserves VM handlers; a real JNI probe passes before/after500 repeated snapshots. Native hidden/read-only/internal properties are protected. These checks do not establish the cause of earlier phone crashes.
+Bounds:256 sketch entities/constraints;64 external edges;64 spline poles;8,192 preview points;±1,000,000mm. Single planar FlatFace/projected edges only. Other attachment modes, defining/intersection external geometry, cross-document references, trim/extend/fillet/split, touch constraint editing, PartDesign and remaining workbenches are pending. Preview is sampled local XY. Full topology-edit qualification and Android memory budgets are pending.
 
-Validation:955 genuine Sketcher JNI/solver/geometry/FCStd assertions;269 Part,88 document and62 Python regressions;527 locale/command checks;3 resource and9 packaging tests. The APK passes retained-certificate v2/v3 signing,64 JNI libraries plus69 Python extensions,16KiB ZIP/ELF alignment and API26 strong-symbol/loader closure.1,075 runtime files are CRC/hash/source checked.
-
-Limits:256 sketch entities/constraints;64 spline poles;8,192 preview points;coordinates within±1,000,000mm. Native work can allocate/block before adapter bounds. Preview is sampled local XY, with numeric forms/commands for editing. Attachments/external-reference UI, broader constraint variants, trim/fillet, spline handles, PartDesign and other workbenches remain pending. Arbitrary desktop/addon FCStd documents are unsupported. STEP exchanges shape geometry without modeling history/assemblies/materials.
-
-Android execution of this candidate is NOT_RUN. Phone startup, language/gestures, lifecycle/recovery, file pickers, memory budgets and broader device coverage require testing. The candidate is debuggable and uses the retained development identity for compatible updates; no signing key is supplied in public Git/assets. Save/export projects before uninstalling or downgrading.
-
-Four public assets: signed APK, matching native runtime, application source, and frozen corresponding upstream sources. SHA256 values are in docs/RELEASE-ASSETS.json. Publication is verified independently after upload.
-
-APK packaging stages source assets only; generated Python cache files are excluded and explicitly rejected by verification.1.2-rc2 was never published and is superseded by1.2-rc3.
+Android execution is NOT_RUN for this candidate. Physical launch, gestures, language, lifecycle/recovery and file-picker tests remain required. Candidate is debuggable, signed with the retained development identity for compatible updates. Keys are excluded from public assets/Git/Actions. Save/export projects before uninstalling or downgrading. Four public assets: signed APK, matching runtime, application source and frozen corresponding upstream sources.
