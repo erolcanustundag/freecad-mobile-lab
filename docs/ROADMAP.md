@@ -161,3 +161,6 @@ Finite planar section helpers, world-space wire previews, exact current face/edg
 
 ###1.9 — native loft/surface sub-batch
 2017 genuine native checks cover linked loft, ruled surface, solid offset and world-plane mirroring; analytic geometry, original references/source updates, limits, rollback, Undo/Redo, FCStd and STEP. Closed-solid volume reporting fixes misleading open-surface integrals.699 reviewedTR/DE strings and3guides. Full Part/PartDesign/workbench/device parity stays pending. Next batch: native sweep, selected-face thickness,2D offset and linked multi-shape compound, with actual upstream geometry/history tests before another APK.
+
+###1.10 — native fabrication sub-batch
+2114 genuine native checks cover linked sweeps, selected-face wall thickness and scoped length quantities/expressions, planar2D offsets and linked compounds. Native kernel false-hollowing fallback is rejected; open-surface/mixed compound volume reporting is corrected.703TR/DE reviewed strings and3 guides. Full Part/PartDesign/Assembly/device parity remains pending. Next bounded Part scopes: regular polygon primitive, ellipsoid primitive, linked refinement and linked reverse-orientation with persistent geometry/history checks.

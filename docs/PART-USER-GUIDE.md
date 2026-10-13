@@ -1,4 +1,4 @@
-# Original Part document lab — 1.9
+# Original Part document lab — 1.10
 
 The current mobile feature set connects the original FreeCAD1.1.4 Part/Materials modules to the isolated document lab. It is separate from the main mobile CAD recipe workspace. Android execution and broader desktop parity remain pending.
 
@@ -52,3 +52,13 @@ PartMirror Solid Mirrored 0 0 0 1 0 0 mirrors about a world plane given by origi
 Undo/Redo, native FCStd and STEP preserve supported outputs; profiles/sources cannot be deleted while their dependants remain. Shapes stay within±1Mmm/2000faces/10000edges. Native algorithms can allocate or take time before result limits are checked; Android memory/lifecycle performance remains unmeasured. ShapeInfo and document reports return null volume for shapes without closed solids: open-face volume integrals are not enclosed volume. Full desktop Part/PartDesign/Rhino parity remains incomplete.
 
 Loft/ruled BSpline inputs are limited to64 poles per selected curve.
+
+## Native fabrication features
+
+
+SWEEP, THICKNESS, PLANAR OFFSET AND COMPOUND (1.10)
+PartSweep Swept Profile Path true false creates a linked native Part sweep: result, profile name(s), whole single-wire path, solid flag, Frenet flag. Use1–8 unique comma-separated single-wire profiles, closed for solids; the path must be a different object. Set up the profile and path in their intended world placements, typically with the profile normal aligned to the initial path tangent. Native geometry failure rolls back; the default transition is Right corner. Source geometry/dimensions remain native dependencies. This is Part sweep modelling, not PartDesign AdditivePipe.
+PartThickness Solid Hollow 6 -1 removes current Face6 and creates a1mm inward wall. Use1–16 unique1-based face numbers, retaining at least one face. Signed amounts are mm; negative inward/positive outward follow native offset semantics. Result must be one valid closed solid. Set Hollow.Value -0.2 cm accepts length units; Expression Hollow.Value -Solid.Width / 8 binds a native length expression. Clear with an empty quoted expression before direct editing. Only this native Thickness.Value gains the scoped quantity-property editor. Shape failures, unit mismatch, zero or collapse roll back. Join is Intersection.
+PartOffset2D Profile Outline 1 offsets one closed planar wire or one planar face by1mm using intersection joins and no fill. Negative values offset inward. Source/result stay planar and bounded; nonplanar/open wire and collapsed results reject. Set Outline.Value -1 changes the mm amount. Wire-only results use WirePreview; planar faces also support the triangle preview. This is not the full desktop2D offset mode/filled-band tool.
+PartCompound Assembly Solid,Hollow combines2–32 unique supported native source shapes with live links. It keeps separate geometry; it does not fuse overlaps or create an Assembly workbench constraint system. ShapeInfo volume is the sum of its closed component solids, so overlapping material is counted separately. Open faces/wires contribute no volume; multiple solids have no single reported centroid. Source edits, Undo/Redo, FCStd and STEP work with native outputs.
+Profile/path curves remain limited to256 edges/64 spline poles. All shapes use±1Mmm/2000faces/10000edges budgets. Selections use current native indices; full topology-reference stability remains unfinished. Native computation can allocate/time out before result inspection; Android touch/lifecycle/memory qualification remains NOT_RUN. Save native FCStd before Recovery/Restart.

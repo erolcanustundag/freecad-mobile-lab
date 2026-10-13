@@ -23,9 +23,11 @@
   <string name="ui_706e917230a8" formatted="false">"\n[report truncated; export the ZIP for native traces]"</string>
   <string name="ui_a0007aec3b21" formatted="false">" (guest)"</string>
   <string name="ui_68d7a9284b35" formatted="false">" / API "</string>
+  <string name="ui_887cb110e392" formatted="false">" Hollow 6 -1"</string>
   <string name="ui_8449f50facd4" formatted="false">" L "</string>
   <string name="ui_59034c2ecc6e" formatted="false">" Mirrored 0 0 0 1 0 0"</string>
   <string name="ui_4f30b3802f20" formatted="false">" Offset 1"</string>
+  <string name="ui_24b385c615d9" formatted="false">" Outline 1"</string>
   <string name="ui_4a980110005e" formatted="false">" V"</string>
   <string name="ui_29316f8bccc2" formatted="false">" [build "</string>
   <string name="ui_c97694a1acd8" formatted="false">" area "</string>
@@ -163,6 +165,7 @@
   <string name="ui_482ff1de15b6" formatted="false">"Array count stepX stepY stepZ"</string>
   <string name="ui_1fd06cf283cd" formatted="false">"ArrayCurve"</string>
   <string name="ui_c50db34b868b" formatted="false">"ArrayCurve · distribute copies on a curve"</string>
+  <string name="ui_189a6f4acfdf" formatted="false">"Assembly Source,Tool"</string>
   <string name="ui_0639948033ad" formatted="false">"At most 64 document variables"</string>
   <string name="ui_0fad526e32cf" formatted="false">"At most 64 spline poles"</string>
   <string name="ui_c952be0e936a" formatted="false">"At most32 source indices"</string>
@@ -945,9 +948,13 @@
   <string name="ui_c932b089985d" formatted="false">"Native edge chamfer"</string>
   <string name="ui_4986bec31286" formatted="false">"Native edge fillet"</string>
   <string name="ui_55e081e59f06" formatted="false">"Native intersection"</string>
+  <string name="ui_d3b5118746d9" formatted="false">"Native linked compound"</string>
+  <string name="ui_63820c66c59c" formatted="false">"Native planar offset"</string>
   <string name="ui_552bb9b436d4" formatted="false">"Native profile loft"</string>
+  <string name="ui_fd05ef19d4f2" formatted="false">"Native profile sweep"</string>
   <string name="ui_683715f9cd2e" formatted="false">"Native refinement snapshot"</string>
   <string name="ui_7f91ba85c7df" formatted="false">"Native ruled surface"</string>
+  <string name="ui_eae6bf5c635f" formatted="false">"Native selected-face thickness"</string>
   <string name="ui_97791f0b9ded" formatted="false">"Native shape mirror"</string>
   <string name="ui_95917cac62a7" formatted="false">"Native shape section"</string>
   <string name="ui_d87971ad1308" formatted="false">"Native signal "</string>
@@ -1062,6 +1069,7 @@
   <string name="ui_5ab3a1c2ca42" formatted="false">"Part preview exceeds 30,000 triangles; increase tolerance"</string>
   <string name="ui_ae6fdd8e95d3" formatted="false">"Part preview requires faces or solids, not wire-only geometry"</string>
   <string name="ui_42cc41b708f9" formatted="false">"PartChamfer"</string>
+  <string name="ui_34794d13d133" formatted="false">"PartCompound"</string>
   <string name="ui_ad36e0eb298a" formatted="false">"PartFillet"</string>
   <string name="ui_4cc396667a13" formatted="false">"PartLoft"</string>
   <string name="ui_70ae970a6751" formatted="false">"PartMirror"</string>
@@ -1070,6 +1078,8 @@
   <string name="ui_0fc36ddaa79f" formatted="false">"PartRefine"</string>
   <string name="ui_830b2f49d616" formatted="false">"PartRuled"</string>
   <string name="ui_88bab754828b" formatted="false">"PartSection"</string>
+  <string name="ui_929035c1f690" formatted="false">"PartSweep"</string>
+  <string name="ui_12b358eec8d3" formatted="false">"PartThickness"</string>
   <string name="ui_190aa842474f" formatted="false">"Patch"</string>
   <string name="ui_1fff6a31661b" formatted="false">"Pattern"</string>
   <string name="ui_67b4d6aa8d08" formatted="false">"Pavilion depth (mm)"</string>
@@ -1374,7 +1384,7 @@
   <string name="ui_b7152342a267" formatted="false">"Size"</string>
   <string name="ui_32fd056d3d4b" formatted="false">"Sketch"</string>
   <string name="ui_1901b5459594" formatted="false">"Sketch B-spline"</string>
-  <string name="ui_da749ed94ab4" formatted="false">"Sketch Profile\nSketchLine Profile 0 0 30 0\nSketchCircle Profile 10 10 5\nSketchArc Profile 0 0 10 0 180\nSketchEllipse Profile 0 0 20 10\nSketchSpline Profile 3 0,0;10,20;20,20;30,0 [1,2,2,1]\nConstruction Profile 0 true\nConstraint Profile Horizontal 0\nConstraint Profile Coincident 0 1 -1 1\nConstraint Profile Distance 0 30\nDatum Profile 2 40 mm\nMovePoint Profile 0 2 40 0\nDeleteGeometry Profile 0\nDeleteConstraint Profile 0\nSketchPreview Profile\nSketchPlane Profile XZ 0 0 10\nSketchPlacement Profile 0 0 0 0 0 0\nSketchAttach Profile Solid Face6\nSketchOffset Profile 0 0 2 0 0 0\nSketchDetach Profile\nExternal Profile Solid Edge9\nConstraint Profile Coincident 0 1 -3 1\nDeleteExternal Profile 0\nSketchTrim Profile 0 5 0\nSketchExtend Profile 0 5 2\nSketchFillet Profile 0 1 8 0 10 2 2\nSketchSplit Profile 0 5 0\nSketchMirror Profile 0,1 Y\nSketchArray Profile 0 3 2 10 0 1 false\nConstraint Profile Symmetric 0 1 0 2 -2\nConstraint Profile Symmetric 0 1 1 2 -1 1\nDriving Profile 2 false\nConstraint Profile PointOnObject 0 1 -1\nConstraint Profile DistanceX 0 20\nConstraint Profile DistanceY 0 1 -5\nConstraint Profile DistanceX 0 1 1 2 30\nConstraint Profile Block 0\nActive Profile 0 false\nConstraintName Profile 2 Width\nConstraintExpression Profile 2 Source.Width * 2\nSketchInfo Profile\nSketchExtrude Profile Extruded 10\nSketchRevolve Profile Revolved 360 0 0 0 0 1 0\nExtrusionSettings Extruded 10 5 false false\nRevolutionSettings Revolved 180 0 0 0 0 1 0 true\nPartPlacement Extruded 0 0 10 0 0 0\nShapeInfo Extruded\nPartFillet Solid Rounded 1,2 1\nPartChamfer Solid Beveled 1 1\nPartRefine Solid Refined\nPartSection Solid Tool Section\nSectionPlane Solid Slice 0 0 5 0 0 1 100\nWirePreview Slice\nElementInfo Solid Face1\nFinishSettings Rounded 1 2\nPartLoft Loft Profile,Top true false\nPartRuled Surface Lower Edge1 Upper Edge1\nPartOffset Solid Offset 1\nPartMirror Solid Mirrored 0 0 0 1 0 0\n\nGeometry/constraint indices start at 0. Constraint angles use degrees; dimensions use mm. Datum accepts units. Preview uses sketch-local XY coordinates. External projected edges use -3, -4, etc.; DeleteExternal uses reference indices 0, 1, etc. Placement/offset rotations use yaw pitch roll degrees. Detach preserves current world placement. Native solver edits, Undo/Redo and FCStd save/open are supported."</string>
+  <string name="ui_b850fb013cf0" formatted="false">"Sketch Profile\nSketchLine Profile 0 0 30 0\nSketchCircle Profile 10 10 5\nSketchArc Profile 0 0 10 0 180\nSketchEllipse Profile 0 0 20 10\nSketchSpline Profile 3 0,0;10,20;20,20;30,0 [1,2,2,1]\nConstruction Profile 0 true\nConstraint Profile Horizontal 0\nConstraint Profile Coincident 0 1 -1 1\nConstraint Profile Distance 0 30\nDatum Profile 2 40 mm\nMovePoint Profile 0 2 40 0\nDeleteGeometry Profile 0\nDeleteConstraint Profile 0\nSketchPreview Profile\nSketchPlane Profile XZ 0 0 10\nSketchPlacement Profile 0 0 0 0 0 0\nSketchAttach Profile Solid Face6\nSketchOffset Profile 0 0 2 0 0 0\nSketchDetach Profile\nExternal Profile Solid Edge9\nConstraint Profile Coincident 0 1 -3 1\nDeleteExternal Profile 0\nSketchTrim Profile 0 5 0\nSketchExtend Profile 0 5 2\nSketchFillet Profile 0 1 8 0 10 2 2\nSketchSplit Profile 0 5 0\nSketchMirror Profile 0,1 Y\nSketchArray Profile 0 3 2 10 0 1 false\nConstraint Profile Symmetric 0 1 0 2 -2\nConstraint Profile Symmetric 0 1 1 2 -1 1\nDriving Profile 2 false\nConstraint Profile PointOnObject 0 1 -1\nConstraint Profile DistanceX 0 20\nConstraint Profile DistanceY 0 1 -5\nConstraint Profile DistanceX 0 1 1 2 30\nConstraint Profile Block 0\nActive Profile 0 false\nConstraintName Profile 2 Width\nConstraintExpression Profile 2 Source.Width * 2\nSketchInfo Profile\nSketchExtrude Profile Extruded 10\nSketchRevolve Profile Revolved 360 0 0 0 0 1 0\nExtrusionSettings Extruded 10 5 false false\nRevolutionSettings Revolved 180 0 0 0 0 1 0 true\nPartPlacement Extruded 0 0 10 0 0 0\nShapeInfo Extruded\nPartFillet Solid Rounded 1,2 1\nPartChamfer Solid Beveled 1 1\nPartRefine Solid Refined\nPartSection Solid Tool Section\nSectionPlane Solid Slice 0 0 5 0 0 1 100\nWirePreview Slice\nElementInfo Solid Face1\nFinishSettings Rounded 1 2\nPartLoft Loft Profile,Top true false\nPartRuled Surface Lower Edge1 Upper Edge1\nPartOffset Solid Offset 1\nPartMirror Solid Mirrored 0 0 0 1 0 0\nPartSweep Swept Profile Path true false\nPartThickness Solid Hollow 6 -1\nPartOffset2D Profile Outline 1\nPartCompound Assembly Solid,Hollow\n\nGeometry/constraint indices start at 0. Constraint angles use degrees; dimensions use mm. Datum accepts units. Preview uses sketch-local XY coordinates. External projected edges use -3, -4, etc.; DeleteExternal uses reference indices 0, 1, etc. Placement/offset rotations use yaw pitch roll degrees. Detach preserves current world placement. Native solver edits, Undo/Redo and FCStd save/open are supported."</string>
   <string name="ui_54960a0cbf8a" formatted="false">"Sketch arc"</string>
   <string name="ui_71d0880598e2" formatted="false">"Sketch circle"</string>
   <string name="ui_06359beba4bf" formatted="false">"Sketch command help"</string>
@@ -1479,6 +1489,7 @@
   <string name="ui_aff9f193dc21" formatted="false">"Sweep profileId railId"</string>
   <string name="ui_eeffba1bc4d9" formatted="false">"Sweep solid"</string>
   <string name="ui_d2cf80a4de9d" formatted="false">"Sweep surface"</string>
+  <string name="ui_ffbb2280d4ab" formatted="false">"Swept Profile Path true false"</string>
   <string name="ui_06183458dae1" formatted="false">"Switched to software 3D"</string>
   <string name="ui_20dea5b40aa0" formatted="false">"Symmetric"</string>
   <string name="ui_341814c9930f" formatted="false">"Symmetric 0 1 0 2 -2"</string>

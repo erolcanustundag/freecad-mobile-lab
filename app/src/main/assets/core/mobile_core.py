@@ -88,6 +88,10 @@ def _value(obj, name):
     return str(value)
 
 
+def _supported_property(obj,name,kind):
+    return kind in PROPERTY_TYPES or kind=="App::PropertyQuantity" and obj.TypeId=="Part::Thickness" and name=="Value"
+
+
 def _editable(obj, name):
     return name!="Label2" and not name.startswith("_") and not obj.getEditorMode(name)
 
@@ -106,9 +110,9 @@ def snapshot():
             props = []
             for name in obj.PropertiesList:
                 kind = obj.getTypeIdOfProperty(name)
-                if kind in PROPERTY_TYPES or name in ("Label", "Group", "LinkedObject"):
+                if _supported_property(obj,name,kind) or name in ("Label", "Group", "LinkedObject"):
                     props.append({"name": name, "type": kind, "value": _value(obj, name),
-                        "editable": (name == "Label" or kind in PROPERTY_TYPES) and _editable(obj,name)})
+                        "editable": (name == "Label" or _supported_property(obj,name,kind)) and _editable(obj,name)})
             objects.append({"name": obj.Name, "label": obj.Label, "type": obj.TypeId,
                 "properties": props, "expressions": list(obj.ExpressionEngine),
                 "dependencies": [o.Name for o in obj.OutList], "state": list(obj.State)})
@@ -127,6 +131,28 @@ def _edit(edit):
     action = edit.get("op")
     if isinstance(action,str) and action.startswith("sketch_"):
         mobile_sketch.edit(_object(edit["object"]),edit)
+    elif action in ("part_sweep","part_thickness","part_offset2d","part_compound"):
+        name=_identifier(edit["name"])
+        if _doc().getObject(name) is not None or len(_doc().Objects)>=1000:raise ValueError("Choose a new native feature name within the1000-object budget")
+        if action=="part_sweep":
+            names=edit["sections"];solid=edit["solid"];frenet=edit["frenet"]
+            if not isinstance(names,list) or not 1<=len(names)<=8 or any(not isinstance(n,str) for n in names) or len(set(names))!=len(names) or type(solid) is not bool or type(frenet) is not bool:raise ValueError("Use1–8 unique wire profiles and boolean solid/Frenet modes")
+            sources=[mobile_part.wire_profile(_object(n),solid) for n in names];spine=mobile_part.wire_profile(_object(edit["spine"]))
+            if spine in sources:raise ValueError("Sweep path must differ from its profiles")
+            obj=_doc().addObject("Part::Sweep",name);obj.Sections=sources;obj.Spine=(spine,[]);obj.Solid=solid;obj.Frenet=frenet;obj.Transition="Right corner"
+        elif action=="part_thickness":
+            source=_object(edit["source"]);mobile_part.solid_source(source);ids=mobile_part.face_selection(source,edit["faces"]);amount=mobile_sketch.number(edit["amount"])
+            if abs(amount)<=1e-7:raise ValueError("Thickness must be nonzero")
+            obj=_doc().addObject("Part::Thickness",name);obj.Faces=(source,["Face"+str(i) for i in ids]);obj.Value=amount;obj.Join="Intersection"
+        elif action=="part_offset2d":
+            source=mobile_part.planar_profile(_object(edit["source"]));amount=mobile_sketch.number(edit["amount"])
+            if abs(amount)<=1e-7:raise ValueError("Planar offset must be nonzero")
+            obj=_doc().addObject("Part::Offset2D",name);obj.Source=source;obj.Value=amount;obj.Join="Intersection";obj.Fill=False
+        else:
+            names=edit["sources"]
+            if not isinstance(names,list) or not 2<=len(names)<=32 or any(not isinstance(n,str) for n in names) or len(set(names))!=len(names):raise ValueError("Use2–32 unique native shape names")
+            sources=[mobile_part.bounded_source(_object(n)) for n in names]
+            obj=_doc().addObject("Part::Compound",name);obj.Links=sources
     elif action in ("part_loft","part_ruled","part_offset","part_mirror"):
         name=_identifier(edit["name"])
         if _doc().getObject(name) is not None or len(_doc().Objects)>=1000:raise ValueError("Choose a new native feature name within the1000-object budget")
@@ -262,7 +288,7 @@ def _edit(edit):
         if name not in obj.PropertiesList:
             raise ValueError("Property does not exist")
         kind = obj.getTypeIdOfProperty(name)
-        if kind not in PROPERTY_TYPES or not _editable(obj,name):
+        if not _supported_property(obj,name,kind) or not _editable(obj,name):
             raise ValueError("Property is not editable in this adapter")
         value = edit.get("value")
         if kind == "App::PropertyLink":
@@ -279,6 +305,9 @@ def _edit(edit):
                 value = int(value)
             if type(value) is not int or not -2147483648 <= value <= 2147483647:
                 raise ValueError("Integer outside the supported range")
+        elif kind == "App::PropertyQuantity":
+            q=App.Units.Quantity(str(value));value=float(q.Value if str(q.Unit)=="" else q.getValueAs("mm").Value)
+            if not math.isfinite(value) or not 1e-7<abs(value)<=1000000:raise ValueError("Thickness needs a nonzero bounded length")
         elif kind == "App::PropertyFloatConstraint":
             if obj.TypeId!="Part::Revolution" or name!="Angle":raise ValueError("This constrained scalar is read-only in the mobile adapter")
             q=App.Units.Quantity(str(value))
@@ -301,7 +330,7 @@ def _edit(edit):
     elif action == "expression":
         obj = _object(edit["object"])
         name = _identifier(edit["property"])
-        if obj.getTypeIdOfProperty(name) not in PROPERTY_TYPES or not _editable(obj,name):
+        if not _supported_property(obj,name,obj.getTypeIdOfProperty(name)) or not _editable(obj,name):
             raise ValueError("Expression property is not editable")
         expr = _text(edit["expression"], 512)
         obj.setExpression(name, expr if expr else None)

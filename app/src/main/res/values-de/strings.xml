@@ -361,9 +361,13 @@
   <string name="ui_c932b089985d" formatted="false">"Native Kantenfase"</string>
   <string name="ui_4986bec31286" formatted="false">"Native Kantenverrundung"</string>
   <string name="ui_55e081e59f06" formatted="false">"Originaler Schnitt"</string>
+  <string name="ui_d3b5118746d9" formatted="false">"Natives verknüpftes Formaggregat"</string>
+  <string name="ui_63820c66c59c" formatted="false">"Nativer planarer Versatz"</string>
   <string name="ui_552bb9b436d4" formatted="false">"Native Profilverbindung"</string>
+  <string name="ui_fd05ef19d4f2" formatted="false">"Native Profilführung"</string>
   <string name="ui_683715f9cd2e" formatted="false">"Native Verfeinerungskopie"</string>
   <string name="ui_7f91ba85c7df" formatted="false">"Native Regelfläche"</string>
+  <string name="ui_eae6bf5c635f" formatted="false">"Native Dicke mit Flächenauswahl"</string>
   <string name="ui_97791f0b9ded" formatted="false">"Native Formspiegelung"</string>
   <string name="ui_95917cac62a7" formatted="false">"Nativer Formschnitt"</string>
   <string name="ui_266b14b41bae" formatted="false">"Nativer Volumenkörperversatz"</string>

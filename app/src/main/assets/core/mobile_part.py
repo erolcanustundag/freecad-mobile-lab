@@ -9,7 +9,7 @@ except ImportError:
     Part = None
 
 TYPES = {"Part::Feature", "Part::Box", "Part::Cylinder", "Part::Sphere", "Part::Cone",
-         "Part::Torus", "Part::Cut", "Part::Fuse", "Part::Common", "Part::Extrusion", "Part::Revolution", "Part::Fillet", "Part::Chamfer", "Part::Section", "Part::Plane", "Part::Loft", "Part::RuledSurface", "Part::Offset", "Part::Mirroring"}
+         "Part::Torus", "Part::Cut", "Part::Fuse", "Part::Common", "Part::Extrusion", "Part::Revolution", "Part::Fillet", "Part::Chamfer", "Part::Section", "Part::Plane", "Part::Loft", "Part::RuledSurface", "Part::Offset", "Part::Mirroring", "Part::Sweep", "Part::Thickness", "Part::Offset2D", "Part::Compound"}
 
 def available():
     return Part is not None
@@ -107,6 +107,40 @@ def profile(source, require_constrained=False):
 
 def validate_document(doc):
     for obj in doc.Objects:
+        if obj.TypeId in ("Part::Sweep","Part::Thickness","Part::Offset2D","Part::Compound"):
+            if obj.TypeId=="Part::Sweep":
+                sources=list(obj.Sections)
+                if not 1<=len(sources)<=8 or len(set(sources))!=len(sources):raise ValueError("Sweep needs1–8 unique profiles")
+                for source in sources:wire_profile(source,bool(obj.Solid))
+                link=obj.Spine
+                if not isinstance(link,tuple) or len(link)!=2 or link[1]:raise ValueError("Use one whole native wire as sweep path")
+                spine=wire_profile(link[0])
+                if spine in sources:raise ValueError("Sweep path must differ from its profiles")
+                sources.append(spine)
+            elif obj.TypeId=="Part::Thickness":
+                source,names=obj.Faces
+                solid_source(source)
+                ids=[]
+                for name in names:
+                    match=re.fullmatch(r"Face([1-9][0-9]{0,5})",name)
+                    if not match:raise ValueError("Use current native FaceN selections")
+                    ids.append(int(match.group(1)))
+                face_selection(source,ids);sources=[source]
+                value=float(obj.Value.Value)
+                if not math.isfinite(value) or not 1e-7<abs(value)<=1000000:raise ValueError("Use finite nonzero bounded thickness")
+            elif obj.TypeId=="Part::Offset2D":
+                sources=[planar_profile(obj.Source)]
+                if not math.isfinite(obj.Value) or not 1e-7<abs(obj.Value)<=1000000:raise ValueError("Use finite nonzero bounded planar offset")
+                planar_profile(obj)
+            else:
+                sources=list(obj.Links)
+                if not 2<=len(sources)<=32 or len(set(sources))!=len(sources):raise ValueError("Compound needs2–32 unique source shapes")
+                for source in sources:bounded_source(source)
+            if any(source is None or source==obj or source in obj.InListRecursive for source in sources):raise ValueError("Native feature sources must exist without dependency cycles")
+            info=shape_info(obj)
+            if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]):raise ValueError("Native sweep/shell/offset/compound result must be valid and bounded")
+            if (obj.TypeId=="Part::Thickness" or obj.TypeId=="Part::Sweep" and obj.Solid) and (info["solids"]!=1 or info["volume"] is None or not 1e-9<info["volume"]<1e18):raise ValueError("Native solid feature must produce one bounded closed solid")
+            if obj.TypeId=="Part::Thickness" and value<0 and info["volume"]>=source.Shape.Solids[0].Volume-1e-9:raise ValueError("Inward thickness must remove a cavity; unchanged or collapsed solids are rejected")
         if obj.TypeId in ("Part::Loft","Part::RuledSurface","Part::Offset","Part::Mirroring"):
             if obj.TypeId=="Part::Loft":
                 sources=list(obj.Sections)
@@ -214,3 +248,28 @@ def element_info(obj,kind,index):
         u0,u1,v0,v1=part.ParameterRange;u=(u0+u1)/2;v=(v0+v1)/2
         result.update(surface_type=part.Surface.TypeId,area_mm2=float(part.Area),area_centroid_mm=list(part.CenterOfMass),sample_point_mm=list(part.valueAt(u,v)),normal_at_sample=list(part.normalAt(u,v)),uv_sample=[u,v])
     return result
+
+
+def bounded_source(obj):
+    if obj is None or obj.TypeId not in TYPES|{"Sketcher::SketchObject"}:raise ValueError("Choose supported native geometry")
+    info=shape_info(obj)
+    if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]):raise ValueError("Source geometry must be valid and bounded")
+    return obj
+
+
+def solid_source(obj):
+    bounded_source(obj)
+    if len(obj.Shape.Solids)!=1 or not obj.Shape.Solids[0].isClosed():raise ValueError("Choose one closed native solid")
+    return obj
+
+
+def face_selection(obj,ids):
+    if not isinstance(ids,list) or not 1<=len(ids)<=16 or len(set(ids))!=len(ids) or any(type(i) is not int or not 1<=i<=len(obj.Shape.Faces) for i in ids) or len(ids)==len(obj.Shape.Faces):raise ValueError("Remove1–16 unique current faces while retaining at least one face")
+    return ids
+
+
+def planar_profile(obj):
+    bounded_source(obj);shape=obj.Shape
+    if shape.Solids or len(shape.Faces)>1 or len(shape.Wires)!=1 or not shape.Wires[0].isClosed() or len(shape.Edges)>256 or shape.findPlane() is None:raise ValueError("Use one closed planar wire or single planar face within256 edges")
+    for edge in shape.Edges:curve_budget(edge)
+    return obj

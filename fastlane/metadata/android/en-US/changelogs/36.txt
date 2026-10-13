@@ -1,0 +1,1 @@
+Native linked sweeps, selected-face wall thickness with length units, planar2D offsets and linked compounds. EN/TR/DE guides. Android qualification remains pending.

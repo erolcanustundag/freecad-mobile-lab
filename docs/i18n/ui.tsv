@@ -697,3 +697,7 @@ Native profile loft|Yerel profil geçişi|Native Profilverbindung
 Native ruled surface|Yerel doğrusal geçiş yüzeyi|Native Regelfläche
 Native solid offset|Yerel katı ofseti|Nativer Volumenkörperversatz
 Native shape mirror|Yerel şekil aynalama|Native Formspiegelung
+Native profile sweep|Yerel profil süpürme|Native Profilführung
+Native selected-face thickness|Yerel seçili yüz kalınlığı|Native Dicke mit Flächenauswahl
+Native planar offset|Yerel düzlemsel ofset|Nativer planarer Versatz
+Native linked compound|Yerel bağlantılı bileşik şekil|Natives verknüpftes Formaggregat

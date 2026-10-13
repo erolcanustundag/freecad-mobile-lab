@@ -1,10 +1,10 @@
 {
-  "version": "1.9",
-  "version_code": 35,
+  "version": "1.10",
+  "version_code": 36,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "checks": {
-    "sketcher_jni_solver_geometry_fcstd": 2017,
+    "sketcher_jni_solver_geometry_fcstd": 2114,
     "part_jni_regressions": 269,
     "metadata_jni_regressions": 88,
     "python_tools_regressions": 62,
@@ -43,8 +43,8 @@
   "fixtures": [
     {
       "path": "samples/upstream-sketcher/Sketch.FCStd",
-      "size": 15651,
-      "sha256": "1c6b8f9bb4b95a42675632ced6e984ab7a2c415afbeda5416445f581cfe877ae"
+      "size": 15676,
+      "sha256": "2604c73725b8e5f5c133c7fa9597123dfb6bcb68fd23bb28fc8df35db65ca3af"
     },
     {
       "path": "samples/upstream-sketcher/preview.json",
@@ -53,8 +53,8 @@
     },
     {
       "path": "samples/upstream-sketcher/Attachments.FCStd",
-      "size": 15615,
-      "sha256": "d41cd96412be5d8ff36d3e47c53af527a0baac6dce35b018418ab455ccfd05fe"
+      "size": 15640,
+      "sha256": "d431d625cb4abc73a6edd9b1ff41d992cf5f25c94eb7db14817088f271ded59a"
     },
     {
       "path": "samples/upstream-sketcher/attachment-preview.json",
@@ -63,48 +63,53 @@
     },
     {
       "path": "samples/upstream-sketcher/SketchTools.FCStd",
-      "size": 20592,
-      "sha256": "e2fd4de9eebbc878522e353035561e75ea5db9a22d3858994fdf188f940ffb61"
+      "size": 20617,
+      "sha256": "f1c8af5f14189e6a3a5ceab960b57ae3f4ab6b19a8ccab6c69fd7354a6f027c8"
     },
     {
       "path": "samples/upstream-sketcher/PatternTools.FCStd",
-      "size": 32261,
-      "sha256": "0cc557cd7f39652eb56e9adde18c82d4e25a4084945a2184094cdd6bc01a9127"
+      "size": 32273,
+      "sha256": "e3f597dccdf310126697a1c440b12bd67899ddf4057b934a530212a109c23d3a"
     },
     {
       "path": "samples/upstream-sketcher/ReferenceDimension.FCStd",
-      "size": 32261,
-      "sha256": "56b753426e8d615c134cf215658c191a76e78f405224bd3eb0bb650f45e72444"
+      "size": 32272,
+      "sha256": "6d10b5e8d5f5726ba4bfd6980f6735055d66cdd3affe8c7efa7b4384a5a0a80e"
     },
     {
       "path": "samples/upstream-sketcher/ConstraintTools.FCStd",
-      "size": 42556,
-      "sha256": "0cdbfaf4a09a05613d037a9559cad9731529e2a8b2beccac5592b1fd4698b993"
+      "size": 42537,
+      "sha256": "a10f6973fef7e4eedcd90d9036d8b67c3ce0f14fd76aa8f97fe76acddf16201c"
     },
     {
       "path": "samples/upstream-sketcher/NamedProfiles.FCStd",
-      "size": 8635,
-      "sha256": "a08fdcf4c2f9723d4d9084ba8a519802eb8e9a301b14e087f70d250fe716165d"
+      "size": 8640,
+      "sha256": "45baf8a8afa706debf8995a98cf44f493d91d50cfb3ad423c85f40a0d99c11b7"
     },
     {
       "path": "samples/upstream-sketcher/SolidControls.FCStd",
-      "size": 10267,
-      "sha256": "4981f2ccbef132aef3654dbc2677674ea2fd900e4f276925bdb2f2ab048d6eff"
+      "size": 10271,
+      "sha256": "d162ffe047d2103d6bd464ea24e9d5f160d04941d63cd226ddfb4af8ada1e91b"
     },
     {
       "path": "samples/upstream-sketcher/NativeFinishing.FCStd",
       "size": 22767,
-      "sha256": "e6312c6a13f02ef8bba35d08a9989cd58b753ca997cdea752792859c09f0386c"
+      "sha256": "4845e18f9e17acc5bb609565c4e3d6a6f3e909851b5207606d8e028c4841bfd4"
     },
     {
       "path": "samples/upstream-sketcher/SectionTools.FCStd",
-      "size": 29123,
-      "sha256": "f9d5347cfc4b6c82ae7380f74e1ae577ea5a59d64b5ceaf37cfaf7f9ceb90d0f"
+      "size": 29122,
+      "sha256": "261deee46b18cc41b6e3bcf2ac62a0164a409728a5096ba9cde9992b94e4a227"
     },
     {
       "path": "samples/upstream-sketcher/SurfaceTools.FCStd",
-      "size": 46391,
-      "sha256": "c624498a3f78d7202d9aedd2fd421f72a48afbc6e8147fdb439a2d62d0ed224a"
+      "size": 46379,
+      "sha256": "5fde168fc4dff4c41272ec33dceceaed77029638946e49f4dfff23d7b82fe56b"
+    },
+    {
+      "path": "samples/upstream-sketcher/FabricationTools.FCStd",
+      "size": 57769,
+      "sha256": "bc81a8fe59bbe3fef85dbf095ef534dad18a4819bebd31d3dadacf2377cf1e57"
     }
   ],
   "attachment_scopes": [
@@ -173,6 +178,15 @@
     "mirror": "Original Part::Mirroring Source/Base/Normal; normalized world normal, linked solid/wire/surface",
     "checks": "Analytic frustum volume and straight ruled area, open-volume null, box offsets, arbitrary world-plane and source placement reflection, links/source edits/cycles/deletion, collapsed geometry, dense-spline budget, atomic rollback/history/FCStd/STEP",
     "open_surface_volume": "Closed-solid sum only; no open-face volume integral reported",
+    "android": "NOT_RUN"
+  },
+  "native_fabrication_features": {
+    "sweep": "Original Part::Sweep Sections1\u20138/whole single-wire Spine/Solid/Frenet, Right corner transition",
+    "thickness": "Original Part::Thickness Faces LinkSub1\u201316 current selections/Value PropertyQuantity; signed mm, scoped length-unit editing and native expressions",
+    "planar_offset": "Original Part::Offset2D Source/Value/Intersection join/no fill; one closed planar wire or single planar face",
+    "compound": "Original Part::Compound Links2\u201332 unique shapes; aggregation, no Boolean union",
+    "checks": "Analytic swept cylinder, source dimensions; box wall volume/unit conversion/expression updates; wire/face planar offset length/area/collapse/nonplanarity; mixed/open-face compound closed-solid sums; dependencies/budgets/errors/rollback/UndoRedo/FCStd/STEP",
+    "kernel_guard": "Original excessive inward thickness can return a valid unchanged full solid; reject non-removing inward results and roll back",
     "android": "NOT_RUN"
   }
 }

@@ -1,0 +1,1 @@
+Yerel bağlantılı süpürme, birimli seçili yüz kalınlığı, düzlemsel2B ofset ve bağlantılı bileşik şekiller. Android doğrulaması sürüyor.

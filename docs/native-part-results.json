@@ -1,6 +1,6 @@
 {
-  "version": "1.9",
-  "version_code": 35,
+  "version": "1.10",
+  "version_code": 36,
   "freecad": "1.1.4",
   "occt": "7.9.2",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
@@ -28,18 +28,18 @@
   "fixtures": [
     {
       "path": "samples/upstream-part/Boolean.FCStd",
-      "size": 12039,
-      "sha256": "ca9bd508d8a0a169bceac2979391c3bfffddede5d863125835f96930dc01877e"
+      "size": 12037,
+      "sha256": "af6200724216bd1540361136e62f8e1bf0ba4759799911b9adda2a7bbfb24bd9"
     },
     {
       "path": "samples/upstream-part/Part.FCStd",
-      "size": 3493,
-      "sha256": "f13a7abf9412ab292e8ecf05e6a13ed51d1e6e2bbc93af3b21fa1ba291d1ac39"
+      "size": 3492,
+      "sha256": "95c5ccc5ad1e10ea525ff56f35bd124af58a382ea98658edfd698272f1ea349f"
     },
     {
       "path": "samples/upstream-part/Reference.step",
       "size": 6845,
-      "sha256": "47bfff88fda122298943ac908bbdbc1fd06e1021b20987ae1bb676e19daf4230"
+      "sha256": "9a3754818b2e3f0506d89ae491f1c7c8ee42e3af2b3b45b86337b69dfec92767"
     }
   ],
   "historical_rc1_assertions": 270
