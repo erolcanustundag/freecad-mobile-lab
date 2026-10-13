@@ -1,10 +1,10 @@
 {
-  "version": "1.2-rc4",
-  "version_code": 27,
+  "version": "1.2",
+  "version_code": 28,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "checks": {
-    "sketcher_jni_solver_geometry_fcstd": 1236,
+    "sketcher_jni_solver_geometry_fcstd": 1310,
     "part_jni_regressions": 269,
     "metadata_jni_regressions": 88,
     "python_tools_regressions": 62,
@@ -41,23 +41,28 @@
   "fixtures": [
     {
       "path": "samples/upstream-sketcher/Sketch.FCStd",
-      "size": 15661,
-      "sha256": "eed7a5698fd9ecbb43c86c88522e65bcac5af1ca7d32fb9cbd47b9824c209019"
+      "size": 15655,
+      "sha256": "a3db16e8328abc2c56f8124f2235c06d37ea51be13e698dd85875433dca57281"
     },
     {
       "path": "samples/upstream-sketcher/preview.json",
-      "size": 20939,
-      "sha256": "56c65f33c1789c481d81dc1c4ae8784aaddc84767d617bd6a2167a47cf1edd19"
+      "size": 20938,
+      "sha256": "eccc1754ab6a3bd92a79f51e0e9929da1129c8801e3a86d799228abab35c35d8"
     },
     {
       "path": "samples/upstream-sketcher/Attachments.FCStd",
-      "size": 15628,
-      "sha256": "1ff133ad219550d24e54f8799af8f3285204c82097e29cf0d44c59aa56270c2f"
+      "size": 15620,
+      "sha256": "0b24fc3d5cccbb69b2e350c10f1c4a59fcf1b9bed7ee07081eb28e41727c6fc2"
     },
     {
       "path": "samples/upstream-sketcher/attachment-preview.json",
       "size": 659,
       "sha256": "f3c8f1302fb1fd419735e6cf47587a0cf881d6889b5eab93993fcb9d49d81f25"
+    },
+    {
+      "path": "samples/upstream-sketcher/SketchTools.FCStd",
+      "size": 20594,
+      "sha256": "9c1b26d7cadce84286c7caa7d59a8bf6a02a3e4ee00fb1d3847e234420cc0258"
     }
   ],
   "attachment_scopes": [
@@ -69,5 +74,11 @@
   "bugs_fixed": [
     "Reject native open reuse of already-open file before validation, preserving previous document",
     "Validate supported attachment and external references after native recompute; reject cyclic/missing/duplicate/collapsed references atomically"
+  ],
+  "editing_scopes": [
+    "Native trim",
+    "Native line extend/shorten",
+    "Native connected-line fillet",
+    "Native curve split"
   ]
 }

@@ -1070,7 +1070,7 @@
     }
   ],
   "coordinates": "sketch-local XY mm",
-  "dof": 24,
+  "dof": 0,
   "placement": {
     "xyz_mm": [
       0,

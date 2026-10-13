@@ -1161,5 +1161,29 @@
     ],
     "evidence": "docs/native-sketcher-results.json",
     "apk": "FreeCAD-Mobile-Lab-1.2-rc4-arm64.apk"
+  },
+  "sketch_editing_prerequisite": {
+    "version": "1.2",
+    "version_code": 28,
+    "features": [
+      {
+        "name": "Trim picked native spans",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Extend/shorten native lines",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Fillet connected native line corners",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Split curves with native constraint/history updates",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      }
+    ],
+    "evidence": "docs/native-sketcher-results.json",
+    "apk": "FreeCAD-Mobile-Lab-1.2-arm64.apk"
   }
 }

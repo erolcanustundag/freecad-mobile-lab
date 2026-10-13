@@ -663,3 +663,7 @@ Detach sketch|Eskiz bağlantısını kaldır|Skizze lösen
 External edge reference|Dış kenar referansı|Externe Kantenreferenz
 Delete external reference|Dış referansı sil|Externe Referenz löschen
 Sketch-local XY · drag to pan · pinch to zoom · cyan construction · magenta external edges|Eskiz yerel XY · kaydırmak için sürükleyin · yakınlaştırmak için sıkıştırın · camgöbeği yardımcı · eflatun dış kenarlar|Skizzenlokales XY · ziehen zum Verschieben · spreizen zum Zoomen · cyan für Hilfsgeometrie · magenta für externe Kanten
+Trim sketch curve|Eskiz eğrisini kırp|Skizzenkurve trimmen
+Extend sketch line|Eskiz çizgisini uzat|Skizzenlinie verlängern
+Fillet sketch corner|Eskiz köşesini yuvarla|Skizzenecke abrunden
+Split sketch curve|Eskiz eğrisini böl|Skizzenkurve teilen

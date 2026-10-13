@@ -214,6 +214,7 @@
   <string name="ui_c934f0c6efba" formatted="false">"Export · Einheiten in Millimetern"</string>
   <string name="ui_97b695b9b9cf" formatted="false">"Ausdruck"</string>
   <string name="ui_6f26fb48d63c" formatted="false">"Ausdruck (z. B. Source.Width * 2)"</string>
+  <string name="ui_40efda60ef0e" formatted="false">"Skizzenlinie verlängern"</string>
   <string name="ui_bfa59f13f3da" formatted="false">"Gerade verlängern"</string>
   <string name="ui_d5b286d6f872" formatted="false">"Externe Kantenreferenz"</string>
   <string name="ui_33272d4ea2f5" formatted="false">"Extrudieren"</string>
@@ -231,6 +232,7 @@
   <string name="ui_11b329023c07" formatted="false">"Ebene Netzrandlöcher füllen"</string>
   <string name="ui_d00513833e48" formatted="false">"Alle Kanten abrunden"</string>
   <string name="ui_7633fb1c78b4" formatted="false">"Abrundungsradius"</string>
+  <string name="ui_cdc8d57e4b37" formatted="false">"Skizzenecke abrunden"</string>
   <string name="ui_3d3195acfd27" formatted="false">"Fein · 150.000 Dreiecke"</string>
   <string name="ui_ebb5cdcc120b" formatted="false">"Erster Körper"</string>
   <string name="ui_f94e25075b34" formatted="false">"Erster Wert"</string>
@@ -571,6 +573,7 @@
   <string name="ui_a8bf8702d77d" formatted="false">"Nur Körper"</string>
   <string name="ui_54ba4f63254d" formatted="false">"Quellobjekt"</string>
   <string name="ui_0446c388357c" formatted="false">"Kugel"</string>
+  <string name="ui_d2e53076a72b" formatted="false">"Skizzenkurve teilen"</string>
   <string name="ui_74086ab9cda8" formatted="false">"Quadratseite · 512 bis 2048 Pixel"</string>
   <string name="ui_23f05b92724b" formatted="false">"Mit leerem CAD-Arbeitsbereich starten"</string>
   <string name="ui_77bb6b444f7d" formatted="false">"Mit leerem Arbeitsbereich starten"</string>
@@ -616,6 +619,7 @@
   <string name="ui_b4ebb5c52358" formatted="false">"Transparenz muss 0 oder 1 sein"</string>
   <string name="ui_922c3af533a4" formatted="false">"Transparenter Hintergrund · 1 ja / 0 nein"</string>
   <string name="ui_e13428fa3dba" formatted="false">"Kurve trimmen"</string>
+  <string name="ui_ce3cff3659b6" formatted="false">"Skizzenkurve trimmen"</string>
   <string name="ui_a953639a616e" formatted="false">"OpenGL-Darstellung ausprobieren"</string>
   <string name="ui_a5d13a93df36" formatted="false">"Rohrradius (mm)"</string>
   <string name="ui_917ac1cf92b5" formatted="false">"Windungen · 0.1 bis 20"</string>

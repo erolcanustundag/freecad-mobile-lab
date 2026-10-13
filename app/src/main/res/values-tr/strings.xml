@@ -214,6 +214,7 @@
   <string name="ui_c934f0c6efba" formatted="false">"Dışa aktar · birim milimetre"</string>
   <string name="ui_97b695b9b9cf" formatted="false">"İfade"</string>
   <string name="ui_6f26fb48d63c" formatted="false">"İfade (ör. Source.Width * 2)"</string>
+  <string name="ui_40efda60ef0e" formatted="false">"Eskiz çizgisini uzat"</string>
   <string name="ui_bfa59f13f3da" formatted="false">"Düz çizgiyi uzat"</string>
   <string name="ui_d5b286d6f872" formatted="false">"Dış kenar referansı"</string>
   <string name="ui_33272d4ea2f5" formatted="false">"Ekstrüzyon"</string>
@@ -231,6 +232,7 @@
   <string name="ui_11b329023c07" formatted="false">"Düzlemsel ağ sınır deliklerini doldur"</string>
   <string name="ui_d00513833e48" formatted="false">"Tüm kenarları yuvarlat"</string>
   <string name="ui_7633fb1c78b4" formatted="false">"Yuvarlatma yarıçapı"</string>
+  <string name="ui_cdc8d57e4b37" formatted="false">"Eskiz köşesini yuvarla"</string>
   <string name="ui_3d3195acfd27" formatted="false">"Ayrıntılı · 150.000 üçgen"</string>
   <string name="ui_ebb5cdcc120b" formatted="false">"İlk katı / gövde"</string>
   <string name="ui_f94e25075b34" formatted="false">"İlk değer"</string>
@@ -571,6 +573,7 @@
   <string name="ui_a8bf8702d77d" formatted="false">"Yalnızca katılar"</string>
   <string name="ui_54ba4f63254d" formatted="false">"Kaynak nesne"</string>
   <string name="ui_0446c388357c" formatted="false">"Küre"</string>
+  <string name="ui_d2e53076a72b" formatted="false">"Eskiz eğrisini böl"</string>
   <string name="ui_74086ab9cda8" formatted="false">"Kare kenarı · 512 ile 2048 piksel"</string>
   <string name="ui_23f05b92724b" formatted="false">"Boş CAD çalışma alanıyla başla"</string>
   <string name="ui_77bb6b444f7d" formatted="false">"Boş çalışma alanıyla başla"</string>
@@ -616,6 +619,7 @@
   <string name="ui_b4ebb5c52358" formatted="false">"Saydamlık değeri 0 veya 1 olmalıdır"</string>
   <string name="ui_922c3af533a4" formatted="false">"Saydam arka plan · 1 evet / 0 hayır"</string>
   <string name="ui_e13428fa3dba" formatted="false">"Eğriyi kırp"</string>
+  <string name="ui_ce3cff3659b6" formatted="false">"Eskiz eğrisini kırp"</string>
   <string name="ui_a953639a616e" formatted="false">"OpenGL görüntülemeyi dene"</string>
   <string name="ui_a5d13a93df36" formatted="false">"Boru yarıçapı (mm)"</string>
   <string name="ui_917ac1cf92b5" formatted="false">"Tur sayısı · 0.1 ile 20"</string>

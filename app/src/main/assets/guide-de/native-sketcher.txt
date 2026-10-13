@@ -22,7 +22,7 @@ Bedingungen: Horizontal, Vertical, Coincident, Parallel, Perpendicular, Tangent,
 
 Die Vorschau zeigt abgetastete Kurven in der lokalen XY-Ebene. Ziehen verschiebt, Pinch zoomt, Einpassen setzt zurück. Gold bedeutet normale Geometrie, Türkis Konstruktionsgeometrie. Bearbeiten erfolgt über Formulare/Befehle; die Vorschau ist kein Touch-Bedingungseditor.
 
-Vor dem Schließen FCStd speichern und über die Dateiauswahl sichern. Unterstützte Sketcher/Part/App-Typen können erneut geöffnet werden. Allgemeine Desktop-Dokumente, Trimmen/Abrunden, Spline-Griffe und PartDesign bleiben offen. Grenzen: 256 Geometrien/Bedingungen je Skizze, 64 Spline-Pole, 8.192 Vorschaupunkte. Android-Ausführung dieses Kandidaten bleibt ungeprüft.
+Vor dem Schließen FCStd speichern und über die Dateiauswahl sichern. Unterstützte Sketcher/Part/App-Typen können erneut geöffnet werden. Allgemeine Desktop-Dokumente, vollständige Trimm-/Abrundungsabläufe, Spline-Griffe und PartDesign bleiben offen. Grenzen: 256 Geometrien/Bedingungen je Skizze, 64 Spline-Pole, 8.192 Vorschaupunkte. Android-Ausführung dieses Kandidaten bleibt ungeprüft.
 
 EBENEN, ANHEFTUNG UND EXTERNE KANTEN
 SketchPlane Profile XZ 0 0 10 setzt XY/XZ/YZ und Ursprung. SketchPlacement Profile 0 0 10 0 0 0 setzt XYZ in mm und Gier/Nick/Roll in Grad. Eine angeheftete Skizze zuerst mit SketchDetach lösen.
@@ -32,3 +32,9 @@ Add Solid Box, Sketch Attached, SketchLine Attached 0 0 10 0 und SketchAttach At
 External Attached Solid Edge9 projiziert eine native Kante. Geometrieindizes beginnen bei -3, -4 usw. Constraint Attached Coincident 0 1 -3 1 und Constraint Attached Coincident 0 2 -3 2 binden die Endpunkte. Änderungen an Solid.Length aktualisieren die Linie. DeleteExternal Attached 0 löscht die erste Referenz und abhängige Bedingungen. Rückgängig/Wiederholen sowie FCStd erhalten native Abhängigkeiten. Externe Kanten sind magenta.
 
 Maximal 64 externe Kanten. Fehlende, doppelte, zyklische oder zu Punkten kollabierende Referenzen und ungültige Änderungen werden zurückgerollt. Vor dem Löschen einer Quelle Anheftungen lösen und externe Referenzen entfernen. Aktuelle Flächen-/Kantennummern nach größeren Topologieänderungen prüfen. Schnitt-/Definitionsgeometrie, weitere Anheftungsmodi und vollständige Topologieabläufe sind noch offen.
+
+NATIVES TRIMMEN / VERLÄNGERN / ABRUNDEN / TEILEN
+SketchTrim Cut 0 10 0 entfernt das gewählte Stück zwischen Schnittpunkten. Ohne Schnittpunkte kann das native Trimmen die ganze Geometrie entfernen. Punkte verwenden skizzenlokales XY und müssen auf der aktuellen Kurve liegen.
+SketchExtend Line 0 5 2 verlängert Endpunkt2 um5mm; -2 verkürzt um2mm. Endpunkte sind1/2. Nur Liniensegmente sind verfügbar. Maßbedingungen bleiben maßgeblich; der Solver kann die ursprüngliche Länge beibehalten.
+Für Linien (0,0)-(20,0) und (20,0)-(20,20): SketchFillet Corner 0 1 18 0 20 2 2 erzeugt einen tangentialen2mm-Bogen und trimmt beide Linien. Zwei Linien mit gemeinsamem Endpunkt wählen; Punkte müssen auf ihnen liegen und der Radius kleiner als beide Längen sein.
+SketchSplit Line 0 7 0 teilt am Punkt auf der Kurve und aktualisiert native Bedingungen. Indizes können sich ändern: Ergebnisliste prüfen. Rückgängig/Wiederholen und FCStd erhalten die Ergebnisse. Fehler rollen zurück. Weitere Kurvenabrundungen, Verlängerungsvarianten und Touch-Bearbeitung bleiben offen.

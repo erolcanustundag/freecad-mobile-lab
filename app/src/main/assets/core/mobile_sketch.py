@@ -174,6 +174,38 @@ def edit(obj, request):
         obj.addExternal(source.Name,request["element"],False,False)
     elif operation=="sketch_delete_external":
         obj.delExternal(index(request["index"],len(obj.ExternalGeometry)))
+    elif operation in ("sketch_trim","sketch_split"):
+        entity=index(request["index"],obj.GeometryCount)
+        pick=point(request["point"])
+        shape=obj.Geometry[entity].toShape()
+        if shape.distToShape(mobile_part.Part.Vertex(pick))[0]>1e-6:
+            raise ValueError("Pick a point on the current sketch curve")
+        getattr(obj,"trim" if operation=="sketch_trim" else "split")(entity,pick)
+    elif operation=="sketch_extend":
+        entity=index(request["index"],obj.GeometryCount);position=request["position"]
+        if type(position) is not int or position not in (1,2):
+            raise ValueError("Line endpoint must be 1 or 2")
+        curve=obj.Geometry[entity];amount=number(request["amount"])
+        if curve.TypeId!="Part::GeomLineSegment":
+            raise ValueError("This extend tool supports native line segments")
+        if abs(amount)<1e-7 or curve.length()+amount<=1e-7:
+            raise ValueError("Extension must preserve a positive line length")
+        obj.extend(entity,amount,position)
+    elif operation=="sketch_fillet":
+        first=index(request["first"],obj.GeometryCount);second=index(request["second"],obj.GeometryCount)
+        if first==second:raise ValueError("Choose two different lines")
+        a,b=obj.Geometry[first],obj.Geometry[second];radius=number(request["radius"])
+        if a.TypeId!="Part::GeomLineSegment" or b.TypeId!="Part::GeomLineSegment":
+            raise ValueError("This fillet tool supports two native line segments")
+        if not 1e-7<radius<min(a.length(),b.length()):
+            raise ValueError("Fillet radius must be positive and smaller than both lines")
+        if min((u-v).Length for u in (a.StartPoint,a.EndPoint) for v in (b.StartPoint,b.EndPoint))>1e-7:
+            raise ValueError("Choose lines meeting at a common endpoint")
+        picks=[point(request["first_point"]),point(request["second_point"])]
+        for curve,pick in zip((a,b),picks):
+            if curve.toShape().distToShape(mobile_part.Part.Vertex(pick))[0]>1e-6:
+                raise ValueError("Pick points on both current lines")
+        obj.fillet(first,second,picks[0],picks[1],radius,True,False,False)
     elif operation=="sketch_geometry":
         if obj.GeometryCount>=MAX_GEOMETRY:raise ValueError("Sketch supports at most 256 entities")
         construction=request.get("construction",False)

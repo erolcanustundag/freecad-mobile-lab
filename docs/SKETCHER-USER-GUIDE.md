@@ -52,3 +52,12 @@ Save AttachmentModel.FCStd
 The line follows the projected edge length; the sketch stays2mm above the top face. The first external solver index is-3, then-4, etc. `DeleteExternal Attached 0` uses reference index0 and removes dependent constraints; Undo restores both. `SketchDetach Attached` retains current world placement; Undo restores support. Detach and remove external references before deleting the source. Duplicate/missing/cyclic/collapsed references and invalid recomputes roll back. FCStd preserves native support/external links.
 
 For a free sketch, `SketchPlane Attached XZ 0 0 10` selects XY/XZ/YZ and an XYZ origin in mm; `SketchPlacement Attached 0 0 10 0 0 0` uses XYZ then yaw/pitch/roll degrees. Placement changes require detachment. `SketchOffset` uses the same six values in the attached local coordinates. Preview remains local XY even on rotated or attached sketches. Up to64 projected edges are exposed. Only single planar FlatFace attachment is supported; full attachment modes, intersection/defining external variants and cross-document references remain pending. Inspect face/edge references after major topology changes.
+
+## Native editing tools
+
+
+NATIVE TRIM / EXTEND / FILLET / SPLIT
+SketchTrim Cut 0 10 0 removes the picked span between intersections. With no intersections, original trim can remove the entire entity. Picks use sketch-local XY and must lie on the current curve.
+SketchExtend Line 0 5 2 extends endpoint2 by5mm; -2 shortens by2mm. Endpoints are1/2. This tool exposes line segments only. Driving dimensions remain authoritative; the solver may preserve their original length.
+For lines (0,0)-(20,0) and (20,0)-(20,20): SketchFillet Corner 0 1 18 0 20 2 2 creates a2mm tangent arc and trims both lines. Only a common-endpoint pair of lines is exposed; picks must be on them and radius smaller than both lengths.
+SketchSplit Line 0 7 0 splits at a point on the curve, preserving native constraint updates. Geometry/constraint indices can change: inspect the resulting list. Undo/Redo and FCStd preserve native results. Errors roll back. Broader curved-corner fillets, extension variants and touch editing remain pending.

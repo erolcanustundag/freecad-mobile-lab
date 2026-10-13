@@ -527,6 +527,7 @@
   <string name="ui_e6a7d9920235" formatted="false">"Expression result must be finite and within +/- 1e12"</string>
   <string name="ui_03dc992a6408" formatted="false">"Expressions: "</string>
   <string name="ui_b23e77444e96" formatted="false">"Extend line"</string>
+  <string name="ui_40efda60ef0e" formatted="false">"Extend sketch line"</string>
   <string name="ui_bfa59f13f3da" formatted="false">"Extend straight line"</string>
   <string name="ui_344956bf56ed" formatted="false">"ExtendLine"</string>
   <string name="ui_785cf64a82dd" formatted="false">"ExtendLine startLength endLength"</string>
@@ -586,6 +587,7 @@
   <string name="ui_b2e3fa17a7f1" formatted="false">"Fillet"</string>
   <string name="ui_d00513833e48" formatted="false">"Fillet all edges"</string>
   <string name="ui_7633fb1c78b4" formatted="false">"Fillet radius"</string>
+  <string name="ui_cdc8d57e4b37" formatted="false">"Fillet sketch corner"</string>
   <string name="ui_b0f08c22c3e5" formatted="false">"Fillet · selected solid"</string>
   <string name="ui_93d8ad5407cd" formatted="false">"FilletSelected"</string>
   <string name="ui_61b2ce1179d3" formatted="false">"FilletSelected radius edgeIndex [edgeIndex ...]"</string>
@@ -1299,7 +1301,7 @@
   <string name="ui_b7152342a267" formatted="false">"Size"</string>
   <string name="ui_32fd056d3d4b" formatted="false">"Sketch"</string>
   <string name="ui_1901b5459594" formatted="false">"Sketch B-spline"</string>
-  <string name="ui_b37369a32a3d" formatted="false">"Sketch Profile\nSketchLine Profile 0 0 30 0\nSketchCircle Profile 10 10 5\nSketchArc Profile 0 0 10 0 180\nSketchEllipse Profile 0 0 20 10\nSketchSpline Profile 3 0,0;10,20;20,20;30,0 [1,2,2,1]\nConstruction Profile 0 true\nConstraint Profile Horizontal 0\nConstraint Profile Coincident 0 1 -1 1\nConstraint Profile Distance 0 30\nDatum Profile 2 40 mm\nMovePoint Profile 0 2 40 0\nDeleteGeometry Profile 0\nDeleteConstraint Profile 0\nSketchPreview Profile\nSketchPlane Profile XZ 0 0 10\nSketchPlacement Profile 0 0 0 0 0 0\nSketchAttach Profile Solid Face6\nSketchOffset Profile 0 0 2 0 0 0\nSketchDetach Profile\nExternal Profile Solid Edge9\nConstraint Profile Coincident 0 1 -3 1\nDeleteExternal Profile 0\n\nGeometry/constraint indices start at 0. Constraint angles use degrees; dimensions use mm. Datum accepts units. Preview uses sketch-local XY coordinates. External projected edges use -3, -4, etc.; DeleteExternal uses reference indices 0, 1, etc. Placement/offset rotations use yaw pitch roll degrees. Detach preserves current world placement. Native solver edits, Undo/Redo and FCStd save/open are supported."</string>
+  <string name="ui_dd764c3b7b6e" formatted="false">"Sketch Profile\nSketchLine Profile 0 0 30 0\nSketchCircle Profile 10 10 5\nSketchArc Profile 0 0 10 0 180\nSketchEllipse Profile 0 0 20 10\nSketchSpline Profile 3 0,0;10,20;20,20;30,0 [1,2,2,1]\nConstruction Profile 0 true\nConstraint Profile Horizontal 0\nConstraint Profile Coincident 0 1 -1 1\nConstraint Profile Distance 0 30\nDatum Profile 2 40 mm\nMovePoint Profile 0 2 40 0\nDeleteGeometry Profile 0\nDeleteConstraint Profile 0\nSketchPreview Profile\nSketchPlane Profile XZ 0 0 10\nSketchPlacement Profile 0 0 0 0 0 0\nSketchAttach Profile Solid Face6\nSketchOffset Profile 0 0 2 0 0 0\nSketchDetach Profile\nExternal Profile Solid Edge9\nConstraint Profile Coincident 0 1 -3 1\nDeleteExternal Profile 0\nSketchTrim Profile 0 5 0\nSketchExtend Profile 0 5 2\nSketchFillet Profile 0 1 8 0 10 2 2\nSketchSplit Profile 0 5 0\n\nGeometry/constraint indices start at 0. Constraint angles use degrees; dimensions use mm. Datum accepts units. Preview uses sketch-local XY coordinates. External projected edges use -3, -4, etc.; DeleteExternal uses reference indices 0, 1, etc. Placement/offset rotations use yaw pitch roll degrees. Detach preserves current world placement. Native solver edits, Undo/Redo and FCStd save/open are supported."</string>
   <string name="ui_54960a0cbf8a" formatted="false">"Sketch arc"</string>
   <string name="ui_71d0880598e2" formatted="false">"Sketch circle"</string>
   <string name="ui_06359beba4bf" formatted="false">"Sketch command help"</string>
@@ -1320,6 +1322,8 @@
   <string name="ui_21b7ae6064c5" formatted="false">"SketchCircle"</string>
   <string name="ui_55d149894b2d" formatted="false">"SketchDetach"</string>
   <string name="ui_e8dcbe891037" formatted="false">"SketchEllipse"</string>
+  <string name="ui_7917e1a96e81" formatted="false">"SketchExtend"</string>
+  <string name="ui_50cbf2ae3714" formatted="false">"SketchFillet"</string>
   <string name="ui_70c08eeed40e" formatted="false">"SketchLine"</string>
   <string name="ui_4dea8b777488" formatted="false">"SketchOffset"</string>
   <string name="ui_d3150aa9f8b4" formatted="false">"SketchPad"</string>
@@ -1328,6 +1332,8 @@
   <string name="ui_3085875c6af9" formatted="false">"SketchPreview"</string>
   <string name="ui_51690843411d" formatted="false">"SketchSpline"</string>
   <string name="ui_c369ddbeefc1" formatted="false">"SketchSpline SKETCH DEGREE x,y;x,y;... [w,w,...]"</string>
+  <string name="ui_a39c26b1827a" formatted="false">"SketchSplit"</string>
+  <string name="ui_050f01575101" formatted="false">"SketchTrim"</string>
   <string name="ui_455673bbb8a0" formatted="false">"Snap"</string>
   <string name="ui_fb9da43b6bb0" formatted="false">"Snap: poles, control-segment midpoints/intersections and grid. NURBS preview is rational; interpolation uses a through-point guide until Apply."</string>
   <string name="ui_bd390a2685ec" formatted="false">"Software 3D"</string>
@@ -1347,6 +1353,7 @@
   <string name="ui_a8bf8702d77d" formatted="false">"Solids only"</string>
   <string name="ui_54ba4f63254d" formatted="false">"Source object"</string>
   <string name="ui_0446c388357c" formatted="false">"Sphere"</string>
+  <string name="ui_d2e53076a72b" formatted="false">"Split sketch curve"</string>
   <string name="ui_cc6fdf1b0963" formatted="false">"Spreadsheet"</string>
   <string name="ui_e0aa5daff7ba" formatted="false">"Spreadsheet · mobile A1:H32 grid and CSV"</string>
   <string name="ui_74086ab9cda8" formatted="false">"Square side · 512 to 2048 pixels"</string>
@@ -1456,6 +1463,7 @@
   <string name="ui_922c3af533a4" formatted="false">"Transparent background · 1 yes / 0 no"</string>
   <string name="ui_e13428fa3dba" formatted="false">"Trim curve"</string>
   <string name="ui_51a86eeb5fe0" formatted="false">"Trim patch"</string>
+  <string name="ui_ce3cff3659b6" formatted="false">"Trim sketch curve"</string>
   <string name="ui_2de1eaeead84" formatted="false">"TrimCurve"</string>
   <string name="ui_037732964f1a" formatted="false">"TrimCurve startFraction endFraction"</string>
   <string name="ui_0754ae68b057" formatted="false">"TrimPatch"</string>

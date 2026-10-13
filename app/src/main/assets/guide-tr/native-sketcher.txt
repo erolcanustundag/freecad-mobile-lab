@@ -22,7 +22,7 @@ Kısıtlar: Horizontal (yatay), Vertical (dikey), Coincident (çakışık), Para
 
 Önizleme eskizin yerel XY eğrilerini gösterir. Sürükleme kaydırır; kıstırma yakınlaştırır; Sığdır görünümü sıfırlar. Normal eğriler altın, yardımcı eğriler turkuaz, dış kenarlar eflatundur. Düzenlemeyi form veya komutla yapın; dokunarak kısıt düzenleme henüz yoktur.
 
-Kapatmadan önce FCStd kaydedin; yedek için dosya seçiciyle dışa aktarın. Desteklenen Sketcher/Part/App nesneleri tekrar açılır. Genel masaüstü belgeleri, kırpma/radyüs, eğri kutup tutamaçları ve PartDesign henüz tamamlanmadı. Eskiz başına 256 geometri/kısıt, eğri başına 64 kutup, önizlemede 8.192 nokta sınırı vardır. Bu adayın Android çalıştırma testleri bekliyor.
+Kapatmadan önce FCStd kaydedin; yedek için dosya seçiciyle dışa aktarın. Desteklenen Sketcher/Part/App nesneleri tekrar açılır. Genel masaüstü belgeleri, tüm kırpma/radyüs seçenekleri, eğri kutup tutamaçları ve PartDesign henüz tamamlanmadı. Eskiz başına 256 geometri/kısıt, eğri başına 64 kutup, önizlemede 8.192 nokta sınırı vardır. Bu adayın Android çalıştırma testleri bekliyor.
 
 DÜZLEM, YÜZE BAĞLAMA VE DIŞ KENARLAR
 SketchPlane Profile XZ 0 0 10: XY/XZ/YZ düzlemini ve başlangıcı seçer. SketchPlacement Profile 0 0 10 0 0 0: XYZ (mm), yaw/pitch/roll (derece). Yüze bağlı eskiz için önce SketchDetach gerekir.
@@ -32,3 +32,9 @@ SketchPlane Profile XZ 0 0 10: XY/XZ/YZ düzlemini ve başlangıcı seçer. Sket
 External Attached Solid Edge9 yerel düzleme yansıtılmış dış kenar ekler. İlk dış geometri -3, sonraki -4 vb. Kısıt örnekleri: Constraint Attached Coincident 0 1 -3 1 ve Constraint Attached Coincident 0 2 -3 2. Solid.Length değişince çizgi yerel çözücüyle güncellenir. DeleteExternal Attached 0 ilk referansı ve bağlı kısıtlarını siler; Geri al geri getirir. Kaydet/aç yerel bağımlılıkları korur.
 
 Eskiz başına en çok 64 dış kenar. Eksik/döngüsel/aynı referans, düzleme yansıtıldığında noktaya dönüşen kenar ve geçersiz model değişiklikleri geri alınır. Kaynak nesneyi silmeden önce yüz bağlantısını kaldırın ve dış referanslarını silin. Yüz/kenar numaraları güncel yerel listelerden alınır; topolojiyi kökten değiştirdikten sonra kontrol edin. Kesişim/defining dış geometri, çoklu bağlama kipleri ve tüm topolojik adlandırma iş akışları henüz yoktur.
+
+YEREL KIRP / UZAT / YUVARLA / BÖL
+SketchTrim Cut 0 10 0 kesişimler arasındaki seçilen parçayı kaldırır. Kesişim yoksa özgün kırpma tüm geometriyi silebilir. Noktalar eskizin yerel XY düzleminde mevcut eğri üzerinde olmalıdır.
+SketchExtend Line 0 5 2 ikinci ucu5mm uzatır; -2 değeri2mm kısaltır. Uçlar1/2'dir; yalnız çizgi parçaları desteklenir. Ölçü kısıtları geçerliliğini korur; çözücü eski uzunluğu koruyabilir.
+(0,0)-(20,0) ve (20,0)-(20,20) çizgileri için SketchFillet Corner 0 1 18 0 20 2 2 komutu2mm teğet yay oluşturup iki çizgiyi kırpar. Ortak uçta birleşen iki çizgi seçin; noktalar çizgiler üzerinde, yarıçap iki uzunluktan küçük olmalıdır.
+SketchSplit Line 0 7 0 mevcut eğri üzerindeki noktadan böler ve yerel kısıtları günceller. Geometri/kısıt numaraları değişebilir: işlemden sonra listeyi kontrol edin. Geri al/Yinele ve FCStd sonuçları korur. Hatalı işlemler geri alınır. Eğri köşelerinin yuvarlanması, diğer uzatma seçenekleri ve dokunarak düzenleme henüz tamamlanmadı.

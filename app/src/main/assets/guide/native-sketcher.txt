@@ -22,7 +22,7 @@ Constraint kinds: Horizontal, Vertical, Coincident, Parallel, Perpendicular, Tan
 
 SketchPreview displays sampled local XY curves. Drag to pan, pinch to zoom, Fit to reset. Gold is regular geometry, cyan is construction geometry, magenta is external reference geometry. This view is a preview; edit via forms/commands. It is not a touch constraint editor.
 
-Save FCStd before closing. Export it through the file picker for backup. Supported Sketcher/Part/App types can reopen in the native lab. Arbitrary desktop documents, trim/fillet, spline pole handles, PartDesign and other workbench UI remain pending. Limits: 256 entities/constraints per sketch, 64 spline poles, 8,192 display points. Android execution of this candidate is pending.
+Save FCStd before closing. Export it through the file picker for backup. Supported Sketcher/Part/App types can reopen in the native lab. Arbitrary desktop documents, full trim/fillet workflows, spline pole handles, PartDesign and other workbench UI remain pending. Limits: 256 entities/constraints per sketch, 64 spline poles, 8,192 display points. Android execution of this candidate is pending.
 
 PLANES, FACE ATTACHMENT AND EXTERNAL EDGES
 SketchPlane Profile XZ 0 0 10 selects XY/XZ/YZ and XYZ origin in mm. SketchPlacement Profile 0 0 10 0 0 0 uses XYZ mm then yaw/pitch/roll degrees. Detach a face-attached sketch before changing its free placement.
@@ -32,3 +32,9 @@ Enter individually: Add Solid Box; Sketch Attached; SketchLine Attached 0 0 10 0
 External Attached Solid Edge9 adds an upstream projected edge. Its solver index is -3, then -4, etc. Constraint Attached Coincident 0 1 -3 1 and Constraint Attached Coincident 0 2 -3 2 link endpoints; changing Solid.Length updates the line. DeleteExternal Attached 0 deletes reference zero and its dependent constraints. Undo/Redo and FCStd preserve native dependencies. External preview edges are magenta.
 
 Up to 64 external edges. Missing, cyclic, duplicate or collapsed projections and invalid changes roll back. Detach supports/remove external references before deleting a source. Face/Edge numbers refer to current native lists; inspect references after major topology edits. Intersection/defining external geometry, other attachment modes and full topology workflows remain pending.
+
+NATIVE TRIM / EXTEND / FILLET / SPLIT
+SketchTrim Cut 0 10 0 removes the picked span between intersections. With no intersections, original trim can remove the entire entity. Picks use sketch-local XY and must lie on the current curve.
+SketchExtend Line 0 5 2 extends endpoint2 by5mm; -2 shortens by2mm. Endpoints are1/2. This tool exposes line segments only. Driving dimensions remain authoritative; the solver may preserve their original length.
+For lines (0,0)-(20,0) and (20,0)-(20,20): SketchFillet Corner 0 1 18 0 20 2 2 creates a2mm tangent arc and trims both lines. Only a common-endpoint pair of lines is exposed; picks must be on them and radius smaller than both lengths.
+SketchSplit Line 0 7 0 splits at a point on the curve, preserving native constraint updates. Geometry/constraint indices can change: inspect the resulting list. Undo/Redo and FCStd preserve native results. Errors roll back. Broader curved-corner fillets, extension variants and touch editing remain pending.

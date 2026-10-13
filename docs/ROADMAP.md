@@ -134,3 +134,7 @@ Next four-feature sub-batch: explicit sketch plane placement; native face attach
 ###13 October2026 — attachment/reference sub-batch
 
 1.2-rc4/code27 builds on published1.2-rc3. Four additional bounded native scopes are engineering-verified on the host: sketch planes/arbitrary placement; single planar face attachment/offset/detach; original projected external edges/constraints; dependency-safe FCStd and native history.1236 Sketcher checks cover the actual APIs and64-reference boundary. Android execution remainsNOT_RUN; full B05/B06/B07 stayPENDING. Next four scopes are original trim, extend, fillet and split workflows with geometry/constraint/reference/history fixtures. No PartDesign or full workbench parity is claimed.
+
+###1.2 full mobile release — editing sub-batch
+
+Four native editing scopes are host-verified: trim, line extension/shortening, connected-line corner fillet and curve split. Full B05/B06/B07 remainPENDING at comprehensive/device scope. Next four scopes: native mirror, geometry array, symmetry constraints and reference/driving constraint controls, with native persistence/history checks.1.2 is a full GitHub/mobile feature release as requested, not a declaration of full desktop parity.

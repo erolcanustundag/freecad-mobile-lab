@@ -1,12 +1,12 @@
 # FreeCAD Mobile Lab
 
-**Current release: 1.1 / Android version code 22, current mobile feature set.** Native CAD for ARM64 Android 8+ (min API26, target35). **Full desktop FreeCAD/Rhino parity and the original comprehensive qualification milestone are NOT COMPLETE.** This is an independent project, not an official FreeCAD Android release.
+**Current release: 1.2 / Android version code 28, current mobile feature set.** Native CAD for ARM64 Android 8+ (min API26, target35). **Full desktop FreeCAD/Rhino parity and the original comprehensive qualification milestone are NOT COMPLETE.** This is an independent project, not an official FreeCAD Android release.
 
 The main workspace uses OCCT 7.9.2 and the upstream FreeCAD PlaneGCS solver. An optional document lab embeds upstream FreeCAD 1.1.4 Base/App, CPython3.13 and headless Qt6.8.3. Models stay on the device; the app requests no network permission.
 
-Engineering candidate: **1.2-rc4 / code27** adds original Part/Materials and Sketcher to the isolated document lab: native parametric solids/booleans and STEP exchange; sketch lines/circles/arcs/ellipses, rational B-splines/construction, native constraints/DOF/units, Undo/Redo, supported FCStd and sampled XY preview. This checkpoint adds free sketch planes/arbitrary placement, planar face attachment/offset/detach, projected external edges with solver constraints, and reference-safe persistence/history.1236 real Sketcher JNI checks and269/88/62 Part/document/Python regressions pass. The signed APK has64 ARM64 JNI libraries plus69 Python extensions and16KiB/static loader verification. Android execution of this candidate remainsNOT_RUN. See [Sketch guide](docs/SKETCHER-USER-GUIDE.md), [Sketch evidence](docs/SKETCHER-PORT-PROGRESS.md) and [Part guide](docs/PART-USER-GUIDE.md). Latest full release remains1.1.
+Engineering candidate: **1.2-rc4 / code27** adds original Part/Materials and Sketcher to the isolated document lab: native parametric solids/booleans and STEP exchange; sketch lines/circles/arcs/ellipses, rational B-splines/construction, native constraints/DOF/units, Undo/Redo, supported FCStd and sampled XY preview. This checkpoint adds free sketch planes/arbitrary placement, planar face attachment/offset/detach, projected external edges with solver constraints, and reference-safe persistence/history.1236 real Sketcher JNI checks and269/88/62 Part/document/Python regressions pass. The signed APK has64 ARM64 JNI libraries plus69 Python extensions and16KiB/static loader verification. Android execution of this candidate remainsNOT_RUN. See [Sketch guide](docs/SKETCHER-USER-GUIDE.md), [Sketch evidence](docs/SKETCHER-PORT-PROGRESS.md) and [Part guide](docs/PART-USER-GUIDE.md). The current full release1.2 includes these native scopes.
 
-[Download the signed1.2-rc4 candidate APK](https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc4/FreeCAD-Mobile-Lab-1.2-rc4-arm64.apk) or open the [candidate release](https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.2-rc4). The candidate is debuggable;1.1 remains the latest full release.
+[Download the signed1.2-rc4 candidate APK](https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2-rc4/FreeCAD-Mobile-Lab-1.2-rc4-arm64.apk) or open the [candidate release](https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.2-rc4). The candidate is debuggable;1.2 is the current full release.
 
 ## Languages
 
@@ -14,7 +14,7 @@ English, Turkish and German core interface text is available. Use **Workspace â†
 
 ## Install and start
 
-Download the [signed 1.1 APK](https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.1/FreeCAD-Mobile-Lab-1.1-arm64.apk) from the [1.1 release](https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.1). See [publication verification](docs/GITHUB-PUBLICATION.json). APKs belong in Releases because they exceed GitHub's regular Git file-size limit. The APK is not debuggable and retains the RC7 development certificate for compatible upgrades. A dedicated production signing identity and its migration remain future work.
+Download the [signed1.2 APK](https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.2/FreeCAD-Mobile-Lab-1.2-arm64.apk) from the [1.2 full release](https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.2). See [publication verification](docs/GITHUB-PUBLICATION.json). APKs belong in Releases because they exceed GitHub's regular Git file-size limit. The APK is not debuggable and retains the RC7 development certificate for compatible upgrades. A dedicated production signing identity and its migration remain future work.
 
 Software rendering is the default. The recovery screen can open an empty workspace, retain recovery copies, and export local crash reports. OpenGL is optional. On 12 October 2026, the user reported that the app works on their phone. This is one user-reported startup result; device details, broader workflows and independent crash diagnosis remain open. RC7 adds an explicit document-lab restart for failed initialization or stuck script/native calls; unsaved lab documents close when restarted.
 
@@ -49,7 +49,7 @@ See [1.0 scope](docs/RELEASE-SCOPE-1.0.md) and [Rhino/FreeCAD gaps](docs/RHINO-G
 
 Required: Linux, Python3.12+, JDK17, Android SDK platform35/build-tools35.0.0. NDK27.2.12479018, CMake and Ninja are additionally needed for native source rebuilds. Git contains application/bridge/solver sources and dependency checksums. The full public source ZIP supplies the frozen Boost/Eigen header trees; the runtime ZIP supplies binaries; the corresponding-source ZIP supplies upstream sources and OCCT. All are release assets.
 
-Use the native runtime release asset matching the release metadata. Verify its SHA256 and extract it at the repository root. The1.1 asset supplies54 ARM64 libraries; the1.2-rc4 asset supplies64. Both include Qt6Android.jar and the embedded Python archive. No signing key is included in Git or public source archives. A new local development key is generated if needed; it differs from the certificate on the published prototype APK and cannot upgrade that installation in place.
+Use the native runtime release asset matching the release metadata. Verify its SHA256 and extract it at the repository root. The1.1 asset supplies54 ARM64 libraries; the1.2 asset supplies64. Both include Qt6Android.jar and the embedded Python archive. No signing key is included in Git or public source archives. A new local development key is generated if needed; it differs from the certificate on the published prototype APK and cannot upgrade that installation in place.
 
 ```bash
 export JAVA_HOME=/path/to/jdk17
@@ -58,7 +58,7 @@ python3 scripts/bootstrap_release_runtime.py --bundle /path/to/native-runtime.zi
 python3 scripts/bootstrap_vendor_sources.py --bundle /path/to/FreeCAD-Mobile-Lab-1.1-public-source.zip
 python3 scripts/check_core_runtime_inputs.py
 # Choose a new development version before modifying sealed app inputs.
-python3 scripts/set_release.py 1.2-rc4 27 ''
+python3 scripts/set_release.py 1.2 28 '' --channel release
 python3 scripts/build_apk.py --prebuilt --upstream-core
 python3 scripts/verify_apk.py
 ```
@@ -76,3 +76,5 @@ Historical matching-host evidence includes25,694 CAD assertions, a1,441,792-tria
 ## Licences
 
 Application source is LGPL-2.1-or-later; each upstream component retains its own licence and notices. OCCT uses LGPL2.1 with its exception; FreeCAD is LGPL2.1-or-later; Qt includes LGPL3/GPL3 notices; CPython uses the PSF licence; Boost, Eigen, meshoptimizer and Python/native dependencies have their respective licences. See [THIRD-PARTY](docs/THIRD-PARTY.md), bundled notices, exact source archives and build/patch instructions. There is no affiliation with the FreeCAD or Rhino vendors.
+
+1.2/code28 adds original Sketcher trim, line extend/shorten, connected-line corner fillet and curve split. Native constraint updates, rollback, Undo/Redo and FCStd are covered by1,310 Sketcher checks. Full GitHub release, non-debuggable APK, retained update certificate. Device qualification and full desktop parity remain pending. Turkish/German controls and guides include669 reviewed entries each.
