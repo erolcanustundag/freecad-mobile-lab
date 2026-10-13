@@ -1,0 +1,60 @@
+{
+  "status": "HOST_MODULE_BUILD_AND_NATIVE_API_PROTOTYPE_PASS_ANDROID_NOT_IMPLEMENTED",
+  "freecad": "1.1.4",
+  "host": {
+    "abi": "Linux x86_64",
+    "python": "3.12.14",
+    "qt": "5.15",
+    "occt": "7.9.2",
+    "build": "freecad-partdesign-host",
+    "targets": [
+      "PartDesign",
+      "PartDesignScripts",
+      "PartDesignHole",
+      "Part",
+      "Materials",
+      "Sketcher",
+      "FreeCADApp",
+      "FreeCADBase",
+      "FreeCADMainPy"
+    ]
+  },
+  "module": {
+    "python_entry": "PyInit__PartDesign",
+    "wrapper": "PartDesign/__init__.py imports _PartDesign",
+    "initializer_imports": [
+      "Part",
+      "Sketcher"
+    ]
+  },
+  "native_prototype": {
+    "body_type": "PartDesign::Body",
+    "origin_type": "App::Origin",
+    "origin_children": {
+      "X_Axis": "App::Line",
+      "Y_Axis": "App::Line",
+      "Z_Axis": "App::Line",
+      "XY_Plane": "App::Plane",
+      "XZ_Plane": "App::Plane",
+      "YZ_Plane": "App::Plane",
+      "Origin001": "App::Point"
+    },
+    "profile_link": "App::PropertyLinkSub",
+    "pad_side_type": "One side",
+    "pad_type": "Length",
+    "pad_volume_mm3": 999.9999999999998,
+    "pocket_volume_mm3": 974.8672587712816,
+    "analytic": "10x10x10 box minus radius2mm cylinder2mm deep",
+    "assertions": "Native geometry, Tip/BaseFeature/ownership, parent dimensional change, Pocket depth Undo/Redo, Body.Shape/Tip agreement and FCStd restore",
+    "body_allow_compound": "native default true; do not assume old single-solid defaults"
+  },
+  "fixture": {
+    "path": "samples/upstream-partdesign/Prototype.FCStd",
+    "size": 12126,
+    "sha256": "f49e4661a2ee860d82a2a9d684ba5266e693767fa0033686ce7782c3272043de"
+  },
+  "android": "NOT_BUILT_NOT_PACKAGED_NOT_RUN",
+  "app_adapter": "NOT_IMPLEMENTED",
+  "apk_release": "1.12 remains unchanged; PartDesign is not present in the APK",
+  "dependency_fix": "occt-part-host supplemental7 libraries needed actual same-version base/exchange libs from occt-host in link search prefix; symlinked genuine libraries, no stubs"
+}

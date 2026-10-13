@@ -21,8 +21,10 @@ def main():
     p.add_argument('--jobs', type=int, default=2)
     p.add_argument('--configure-only', action='store_true')
     p.add_argument('--part',action='store_true',help='Build original Part/Materials in an isolated reference directory')
+    p.add_argument('--partdesign',action='store_true',help='Build original headless PartDesign reference; implies --sketcher/part, not an Android APK')
     p.add_argument('--sketcher',action='store_true',help='Build original Sketcher/solver; implies --part')
     args = p.parse_args()
+    if args.partdesign:args.sketcher=True
     if args.sketcher: args.part=True
     if args.jobs < 1 or args.jobs > 32:
         p.error('--jobs must be 1 to 32')
@@ -70,13 +72,14 @@ def main():
     if args.part:
         cmake += ['-DBUILD_PART=ON','-DBUILD_MATERIAL=ON','-DOCCT_CMAKE_FALLBACK=ON','-DOCC_INCLUDE_DIR='+str(occt/'include/opencascade'),'-DOCC_LIBRARY='+str(occt/'lib/libTKernel.so'),'-DOCC_LIBRARY_DIR='+str(occt/'lib')]
     if args.sketcher: cmake += ['-DBUILD_SKETCHER=ON']
+    if args.partdesign:cmake += ['-DBUILD_PART_DESIGN=ON']
     env = dict(os.environ)
     libpath = ':'.join([str(python/'lib'),str(prefix/'lib/x86_64-linux-gnu'),str(occt/'lib')])
     env['LD_LIBRARY_PATH'] = libpath+(':'+env['LD_LIBRARY_PATH'] if env.get('LD_LIBRARY_PATH') else '')
     env['PATH'] = str(prefix/'lib/qt5/bin')+':'+env['PATH']
     subprocess.run(cmake, check=True, env=env)
     if not args.configure_only:
-        subprocess.run(['cmake','--build',str(build),'--target','FreeCADApp','FreeCADBase','FreeCADMainCmd','FreeCADMainPy',*(['Materials','Part'] if args.part else []),*(['Sketcher'] if args.sketcher else []),'--parallel',str(args.jobs)],check=True,env=env)
+        subprocess.run(['cmake','--build',str(build),'--target','FreeCADApp','FreeCADBase','FreeCADMainCmd','FreeCADMainPy',*(['Materials','Part'] if args.part else []),*(['Sketcher'] if args.sketcher else []),*(['PartDesign','PartDesignScripts','PartDesignHole'] if args.partdesign else []),'--parallel',str(args.jobs)],check=True,env=env)
     print('Host-only core', 'configured' if args.configure_only else 'built', 'at', build)
 
 if __name__ == '__main__':
