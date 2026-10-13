@@ -7,7 +7,7 @@
   "milestone_gate": "NOT_COMPLETE",
   "android_runtime": "USER_REPORTED_STARTUP",
   "historical_unversioned_startup_report": "USER_REPORTED_STARTUP",
-  "publication": "PENDING",
+  "publication": "PUBLISHED_VERIFIED",
   "assets": [
     {
       "name": "FreeCAD-Mobile-Lab-1.8-arm64.apk",
@@ -365,5 +365,8 @@
       "size_bytes": 32163808,
       "sha256": "4a22e5bbb0f5a4543f5a4ad152632595816520aaf6042c90805fc9d10b589b89"
     }
-  ]
+  ],
+  "release_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.8",
+  "source_commit": "3aaddf19f70ba409cc6353efe2d371e6d6acddae",
+  "source_tree": "901058623347e28328ac8c0c30ad42e7b646871d"
 }

@@ -1,0 +1,7 @@
+# Next native batch1.9/code35
+
+Select a new version; preserve sealed1.8 APK inputs. Four scopes: native linked Part::Loft between2–16 bounded single-wire profiles, Part::RuledSurface between current native EdgeN selections, Part::Offset of one solid with intersection join and finite nonzero amount, Part::Mirroring about a normalized finite world plane. The frozen1.1.4 PartFeatures.cpp, FeatureOffset.cpp and FeatureMirroring.cpp plus native runtime confirm original property types.
+
+Validate original BRep results, parent dependencies/cycles/deletion, source updates, errors and transactional rollback, Undo/Redo, FCStd and STEP; test analytic circle-frustum loft volume, straight-edge ruled area, box offset volumes and reflection bounds/centroids. Display volume only for closed solids; native open-face volume integrals are not enclosed volume. Use current edge indices without claiming full stable topological naming. New helper result types need whitelisting, restore and persistent validation. Keep source/reference budgets, coordinate±1Mmm,2000faces/10000edges and feature-specific bounds.
+
+Add EN/TR/DE guides/UI, actual host tests, then a signed code35 APK checkpoint. Full desktop Part/PartDesign/workbench/device parity stays pending. Android execution NOT_RUN until independently tested. Full GitHub release channel; no privatekey/CONTINUE in public Git/assets/Actions. Git-backed source stays Git; save APK/private continuation after this four-scope batch.
