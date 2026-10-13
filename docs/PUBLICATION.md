@@ -23,3 +23,6 @@ The CLI helper is for initial repository creation: it creates a new public sourc
 Signing keys, private continuation files, downloaded toolchains, compiled outputs and large runtime binaries are excluded from Git. Runtime libraries belong in the prerelease asset, restored with `scripts/bootstrap_release_runtime.py`; corresponding source accompanies the binary. Keep the original private checkpoint separately when continuing development.
 
 Verification after publishing must confirm public repository visibility, source commit/CI, release channel, every asset name/size/digest and actual download URLs. Do not describe publication as complete from local preparation alone.
+
+
+1.11/code37 full release verified: https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.11. Non-draft/non-prerelease/latest; all four asset sizes and SHA256 digests, exact source tag, sourceCI38477806571 and publisher38478296618 pass. Temporary public transport branch deletion independently404 verified; no keys used in Actions. First draft/tag check-order failure was corrected and publication resumed from the same draft. Android1.11 NOT_RUN; full FreeCAD/Rhino parity pending.
