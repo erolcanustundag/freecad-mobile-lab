@@ -1,10 +1,10 @@
 {
-  "version": "1.5",
-  "version_code": 31,
+  "version": "1.6",
+  "version_code": 32,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "checks": {
-    "sketcher_jni_solver_geometry_fcstd": 1717,
+    "sketcher_jni_solver_geometry_fcstd": 1785,
     "part_jni_regressions": 269,
     "metadata_jni_regressions": 88,
     "python_tools_regressions": 62,
@@ -43,18 +43,18 @@
   "fixtures": [
     {
       "path": "samples/upstream-sketcher/Sketch.FCStd",
-      "size": 15677,
-      "sha256": "26501d4a3388ba6f44a80ba5983da90bcaac0d4d8114bde035715fe0c7779bc8"
+      "size": 15666,
+      "sha256": "939929cd42fb99647ad64a9cf29466adacddeb422bf41fd18da32a22490e93d4"
     },
     {
       "path": "samples/upstream-sketcher/preview.json",
-      "size": 4942,
-      "sha256": "448d42eac1c141ca97debfd388c3e0df1c9a5888e2c7a5bc5dc6ee11117975c1"
+      "size": 4926,
+      "sha256": "a908093bf43c88929f0b7e85a007abf4eada2db281930dd2435d6e1a94f35cba"
     },
     {
       "path": "samples/upstream-sketcher/Attachments.FCStd",
-      "size": 15641,
-      "sha256": "5576dca79ae5ff5bb0298243dccba05a8fc73847a6ed54573db5d90e16c6d3d8"
+      "size": 15632,
+      "sha256": "29ab16e8426095efcec320ffea8ef6249254f24daaa3c0954c70f12b5c5c95f7"
     },
     {
       "path": "samples/upstream-sketcher/attachment-preview.json",
@@ -63,28 +63,33 @@
     },
     {
       "path": "samples/upstream-sketcher/SketchTools.FCStd",
-      "size": 20615,
-      "sha256": "2cfb81bb02a0bc838d6b625519630adf7cd3d71da27f6d7166e427d58d144c7c"
+      "size": 20603,
+      "sha256": "16fdc757afc502db8258004e7395d9acec27402b4ff143dbae1332c545a7ad25"
     },
     {
       "path": "samples/upstream-sketcher/PatternTools.FCStd",
-      "size": 32283,
-      "sha256": "e95f2510f38ea86754cdbbc87894396c84eb88db8a924bcb2dd3bc8518a40ead"
+      "size": 32279,
+      "sha256": "497682159afeffa9e4f5c704477e8feeba9a7b6d28f83700cc12944eb6c5b635"
     },
     {
       "path": "samples/upstream-sketcher/ReferenceDimension.FCStd",
-      "size": 32282,
-      "sha256": "81e4936be41345c252fea7080ee4ef96a7ed637d04cd6768ce89dd6ea5e6ab8c"
+      "size": 32278,
+      "sha256": "68d873e896b0a6d5447cbc099594871865530827502a93dcf0f73da04f7f401b"
     },
     {
       "path": "samples/upstream-sketcher/ConstraintTools.FCStd",
-      "size": 42547,
-      "sha256": "e7eaaaea23d30079d32133304deb2666ca69837dcd94283a769cd518f6f3cb9d"
+      "size": 42559,
+      "sha256": "15fbffa78a7d98bafadbdedde0be9a10a8797346411eb78345d5ed9be7c7f2df"
     },
     {
       "path": "samples/upstream-sketcher/NamedProfiles.FCStd",
-      "size": 8636,
-      "sha256": "d02c2177221857154e6318197552ad80b4513188582e811c4dc4a15312ea5251"
+      "size": 8639,
+      "sha256": "5c482e8401e48f74789d85aa787b623eb41fc2112a771147b32e551e923c36fc"
+    },
+    {
+      "path": "samples/upstream-sketcher/SolidControls.FCStd",
+      "size": 10269,
+      "sha256": "1e6aee5bf4f19becda2beae7d60c6c252e85de7f4779d9faea36b395205e75d1"
     }
   ],
   "attachment_scopes": [
@@ -96,7 +101,8 @@
   "bugs_fixed": [
     "Reject native open reuse of already-open file before validation, preserving previous document",
     "Validate supported attachment and external references after native recompute; reject cyclic/missing/duplicate/collapsed references atomically",
-    "Duplicate native Block constraints are not always marked redundant; reject before mutation"
+    "Duplicate native Block constraints are not always marked redundant; reject before mutation",
+    "Sum unique native Edges for boundary length instead of repeated shared-edge aggregate"
   ],
   "editing_scopes": [
     "Native trim",
@@ -122,5 +128,11 @@
     "Native dimensional expressions, dependency recompute and safe datum guard",
     "Read-only solver/constraint/reference inspection",
     "Linked original Part extrusion/revolution from fully constrained single-wire profiles"
+  ],
+  "solid_controls": [
+    "Native forward/reverse/symmetric/reversed extrusion settings",
+    "Native revolution world axis/angle/symmetry settings",
+    "Native Part placement with bounds validation",
+    "Read-only exact solid volume/area/unique edge lengths/centroid"
   ]
 }

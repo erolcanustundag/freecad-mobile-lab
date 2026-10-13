@@ -204,6 +204,7 @@
   <string name="ui_8e43a889e201" formatted="false">"Tahmini kütle"</string>
   <string name="ui_d7132581b3dc" formatted="false">"Hesapla"</string>
   <string name="ui_ebdc276d51c3" formatted="false">"Düğüm grafiğini hesapla"</string>
+  <string name="ui_e2cb63aa3f5e" formatted="false">"Kesin yerel şekil ölçümleri"</string>
   <string name="ui_9a451eaf4ae1" formatted="false">"Beklenen doğrusal çekme (%) · dökümhanenizin değerini kullanın"</string>
   <string name="ui_c74982e3f0ae" formatted="false">"Deneysel yerel CAD · tüm ölçüler mm"</string>
   <string name="ui_f3e4fadb9e37" formatted="false">"Dışa aktar"</string>
@@ -221,6 +222,7 @@
   <string name="ui_bfa59f13f3da" formatted="false">"Düz çizgiyi uzat"</string>
   <string name="ui_d5b286d6f872" formatted="false">"Dış kenar referansı"</string>
   <string name="ui_33272d4ea2f5" formatted="false">"Ekstrüzyon"</string>
+  <string name="ui_2522b424af88" formatted="false">"Uzatma boyut modları"</string>
   <string name="ui_bf753d1d7540" formatted="false">"ÖN"</string>
   <string name="ui_0c63436993af" formatted="false">"Üretim / kalıp açısı raporu"</string>
   <string name="ui_2fa0d8e94fe5" formatted="false">"Üretim raporu"</string>
@@ -347,6 +349,7 @@
   <string name="ui_cb04729f44c1" formatted="false">"Ad / katman / kilit"</string>
   <string name="ui_ed387f007e09" formatted="false">"Eskiz kısıtını adlandır"</string>
   <string name="ui_4862367a4934" formatted="false">"Özgün Part katı işlemi"</string>
+  <string name="ui_871cb729cd33" formatted="false">"Yerel Part yerleşimi"</string>
   <string name="ui_45211683ce7b" formatted="false">"Yerel kutu"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Yerel koni"</string>
   <string name="ui_c62b92752d38" formatted="false">"Özgün çıkarma"</string>
@@ -480,6 +483,7 @@
   <string name="ui_2d9ae7d5429e" formatted="false">"Belge laboratuvarı yeniden başlatılsın mı?"</string>
   <string name="ui_0479c883ff33" formatted="false">"Laboratuvarı yeniden başlat"</string>
   <string name="ui_103525d44650" formatted="false">"Sonuç adı"</string>
+  <string name="ui_94310c174d79" formatted="false">"Döndürme ekseni ve açısı"</string>
   <string name="ui_c3a8355746ba" formatted="false">"Dönel şekil oluştur"</string>
   <string name="ui_717348fb5216" formatted="false">"Eskiz profilini döndür"</string>
   <string name="ui_954daa8b0033" formatted="false">"Sağ"</string>

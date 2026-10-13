@@ -1062,7 +1062,7 @@
   ],
   "stable_1_0_definition": "Original complete FreeCAD parity and broad device/workflow qualification milestone; not closed by product version 1.0",
   "product_release": {
-    "version": "1.4",
+    "version": "1.6",
     "scope": "current mobile feature set",
     "desktop_parity": "NOT_COMPLETE"
   },
@@ -1257,5 +1257,29 @@
     ],
     "evidence": "docs/native-sketcher-results.json",
     "apk": "FreeCAD-Mobile-Lab-1.5-arm64.apk"
+  },
+  "solid_controls_prerequisite": {
+    "version": "1.6",
+    "version_code": 32,
+    "features": [
+      {
+        "name": "Extrusion extent modes",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Revolution axis/extent modes",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Native Part placement",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      },
+      {
+        "name": "Exact native shape inspection",
+        "status": "ENGINEERING_VERIFIED_DEVICE_PENDING"
+      }
+    ],
+    "evidence": "docs/native-sketcher-results.json",
+    "apk": "FreeCAD-Mobile-Lab-1.6-arm64.apk"
   }
 }

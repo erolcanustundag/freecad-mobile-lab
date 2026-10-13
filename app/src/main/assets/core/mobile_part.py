@@ -112,3 +112,16 @@ def validate_document(doc):
         box=shape.BoundBox
         if any(not math.isfinite(v) or abs(v)>1000000 for v in (box.XMin,box.YMin,box.ZMin,box.XMax,box.YMax,box.ZMax)):
             raise ValueError("Profile solid bounds must stay within±1,000,000mm")
+
+
+def shape_info(obj):
+    require()
+    if not hasattr(obj,"Shape") or obj.Shape.isNull():raise ValueError("Choose nonempty native Part geometry")
+    shape=obj.Shape
+    if len(shape.Faces)>2000 or len(shape.Edges)>10000:raise ValueError("Shape inspection limit is2000 faces/10000 edges")
+    result=summary(obj)
+    result.update(type=shape.ShapeType,closed=bool(shape.isClosed()),boundary_edge_length_mm=float(sum(edge.Length for edge in shape.Edges)),units={"bounds":"mm","volume":"mm³","area":"mm²","boundary_edge_length_mm":"mm"})
+    center=shape.CenterOfMass if len(shape.Solids)==1 else None
+    result["solid_centroid_mm"]=[center.x,center.y,center.z] if center is not None else None
+    if not all(math.isfinite(v) for v in [result["volume"],result["area"],result["boundary_edge_length_mm"],*result["bounds"],*(result["solid_centroid_mm"] or [])]):raise ValueError("Native measurements must be finite")
+    return result

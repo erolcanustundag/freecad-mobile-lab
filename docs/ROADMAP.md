@@ -149,3 +149,6 @@ Four bounded native scopes are host-verified: PointOnObject, signed DistanceX/Y 
 
 ###1.5 checkpoint — native profile sub-batch
 Constraint naming, dimensional expression binding, read-only solver/reference inspection and linked original Part extrusion/revolution are host-verified with1717 checks. Native PartDesign/full-workbench/device gates stay pending. Next: extrusion extent modes, revolution axis/extent editing, native placement and exact shape measurements with solid fixtures.
+
+###1.6 — native solid control sub-batch
+1785 native Sketcher/profile/solid checks pass, covering exact volume/area/unique edge lengths/centroids, native extent modes, plane-normal dependency, placement, history and FCStd. Full workbench/device gates stay pending. Next four: selected-edge native fillet, chamfer, refinement and solid-to-surface section tools with topology/reference fixtures.

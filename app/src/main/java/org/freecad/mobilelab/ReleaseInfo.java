@@ -1,2 +1,2 @@
 package org.freecad.mobilelab;
-final class ReleaseInfo { static final String VERSION="1.5"; static final int CODE=31; }
+final class ReleaseInfo { static final String VERSION="1.6"; static final int CODE=32; }

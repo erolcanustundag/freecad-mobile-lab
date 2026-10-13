@@ -127,6 +127,29 @@ def _edit(edit):
     action = edit.get("op")
     if isinstance(action,str) and action.startswith("sketch_"):
         mobile_sketch.edit(_object(edit["object"]),edit)
+    elif action == "extrusion_settings":
+        obj=_object(edit["object"])
+        if obj.TypeId!="Part::Extrusion":raise ValueError("Select a native Part extrusion")
+        fwd=mobile_sketch.number(edit["forward"]);rev=mobile_sketch.number(edit["reverse"])
+        symmetric=edit["symmetric"];reversed_=edit["reversed"]
+        if min(fwd,rev)<0 or type(symmetric) is not bool or type(reversed_) is not bool or (fwd if symmetric else fwd+rev)<=1e-7:raise ValueError("Use nonnegative extents with positive total depth and boolean modes")
+        obj.LengthFwd=fwd;obj.LengthRev=rev;obj.Symmetric=symmetric;obj.Reversed=reversed_
+    elif action == "revolution_settings":
+        obj=_object(edit["object"])
+        if obj.TypeId!="Part::Revolution":raise ValueError("Select a native Part revolution")
+        angle=mobile_sketch.number(edit["angle"],360);symmetric=edit["symmetric"]
+        if angle<=1e-7 or type(symmetric) is not bool:raise ValueError("Use positive angle up to360 degrees and boolean symmetry")
+        origin=edit["origin"];axis=edit["axis"]
+        if not isinstance(origin,list) or not isinstance(axis,list) or len(origin)!=3 or len(axis)!=3:raise ValueError("Use world XYZ axis origin and direction")
+        origin=App.Vector(*[mobile_sketch.number(v) for v in origin]);axis=App.Vector(*[mobile_sketch.number(v) for v in axis])
+        if axis.Length<1e-7:raise ValueError("Revolution axis must be nonzero")
+        axis.normalize();obj.Base=origin;obj.Axis=axis;obj.Angle=angle;obj.Symmetric=symmetric
+    elif action == "part_placement":
+        obj=_object(edit["object"])
+        if obj.TypeId not in mobile_part.TYPES:raise ValueError("Choose a supported native Part object")
+        obj.Placement=mobile_sketch.placement(edit["values"])
+        _doc().recompute();info=mobile_part.shape_info(obj)
+        if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]):raise ValueError("Placement must preserve valid geometry within±1,000,000mm")
     elif action == "profile_solid":
         source=mobile_part.profile(_object(edit["source"]),True)
         name=_identifier(edit["name"])
@@ -427,6 +450,8 @@ def execute(request):
             _doc().abortTransaction()
             _doc().recompute()
             raise
+    elif action == "shape_info":
+        result=snapshot();result["shape_inspection"]=mobile_part.shape_info(_object(request["object"]));return result
     elif action == "sketch_inspect":
         result=snapshot();obj=_object(request["object"]);mobile_sketch.require(obj);result["sketch_inspection"]=mobile_sketch.summary(obj);return result
     elif action == "sketch_preview":

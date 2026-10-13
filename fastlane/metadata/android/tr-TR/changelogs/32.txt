@@ -1,0 +1,1 @@
+Adlandırılmış eskiz kısıtları, ölçü ifadeleri, çözücü inceleme, bağlantılı uzatma/döndürme katıları, boyut/eksen kontrolleri, Part yerleşimi ve kesin geometrik ölçümler.

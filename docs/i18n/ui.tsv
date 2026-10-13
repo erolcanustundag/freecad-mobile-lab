@@ -680,3 +680,7 @@ Constraint expression|Kısıt ifadesi|Bedingungsausdruck
 Inspect sketch solver|Eskiz çözücüsünü incele|Skizzenlöser prüfen
 Sketch to solid|Eskizden katı oluştur|Skizze zu Volumenkörper
 Revolve sketch profile|Eskiz profilini döndür|Skizzenprofil rotieren
+Extrusion extent modes|Uzatma boyut modları|Extrusionsausdehnungen
+Revolution axis and extent|Döndürme ekseni ve açısı|Rotationsachse und Winkel
+Native Part placement|Yerel Part yerleşimi|Native Part-Platzierung
+Exact native shape measurements|Kesin yerel şekil ölçümleri|Exakte native Formmessungen
