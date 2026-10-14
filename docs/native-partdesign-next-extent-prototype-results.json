@@ -1,0 +1,106 @@
+{
+  "PadFace": {
+    "type": "PartDesign::Pad",
+    "mode": "UpToFace",
+    "side": "One side",
+    "reversed": false,
+    "status": "Valid",
+    "volume": 1015.7079632679488,
+    "bounds": [
+      0.0,
+      10.0
+    ],
+    "valid": true,
+    "properties": {
+      "Type2": "'Length'",
+      "Length2": "10.0 mm",
+      "TaperAngle": "0.0 deg",
+      "Offset": "0.0 mm",
+      "AlongSketchNormal": "True",
+      "UseCustomVector": "False",
+      "Midplane": "False",
+      "UpToFace": "(<PartDesign::Pad>, ['Face6'])",
+      "UpToFace2": "None",
+      "ReferenceAxis": "None"
+    }
+  },
+  "PadLast": {
+    "type": "PartDesign::Pad",
+    "mode": "UpToLast",
+    "side": "One side",
+    "reversed": false,
+    "status": "Valid",
+    "volume": 1015.7079632679488,
+    "bounds": [
+      0.0,
+      10.0
+    ],
+    "valid": true,
+    "properties": {
+      "Type2": "'Length'",
+      "Length2": "10.0 mm",
+      "TaperAngle": "0.0 deg",
+      "Offset": "0.0 mm",
+      "AlongSketchNormal": "True",
+      "UseCustomVector": "False",
+      "Midplane": "False",
+      "UpToFace": "None",
+      "UpToFace2": "None",
+      "ReferenceAxis": "None"
+    }
+  },
+  "PocketFirst": {
+    "type": "PartDesign::Pocket",
+    "mode": "UpToFirst",
+    "side": "One side",
+    "reversed": false,
+    "status": "Valid",
+    "volume": 974.8672587712815,
+    "bounds": [
+      0.0,
+      10.0
+    ],
+    "valid": true,
+    "properties": {
+      "Type2": "'Length'",
+      "Length2": "5.0 mm",
+      "TaperAngle": "0.0 deg",
+      "Offset": "0.0 mm",
+      "AlongSketchNormal": "True",
+      "UseCustomVector": "False",
+      "Midplane": "False",
+      "UpToFace": "None",
+      "UpToFace2": "None",
+      "ReferenceAxis": "None"
+    }
+  },
+  "TwoSided": {
+    "type": "PartDesign::Pad",
+    "mode": "Length",
+    "side": "Two sides",
+    "reversed": false,
+    "status": "Valid",
+    "volume": 999.9999999999998,
+    "bounds": [
+      -6.0,
+      4.0
+    ],
+    "valid": true,
+    "properties": {
+      "Type2": "'Length'",
+      "Length2": "6.0 mm",
+      "TaperAngle": "0.0 deg",
+      "Offset": "0.0 mm",
+      "AlongSketchNormal": "True",
+      "UseCustomVector": "False",
+      "Midplane": "False",
+      "UpToFace": "None",
+      "UpToFace2": "None",
+      "ReferenceAxis": "None"
+    }
+  },
+  "status": "HOST_NATIVE_API_PROBE_PASS_MOBILE_PENDING",
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "android_execution": "NOT_RUN",
+  "freecad": "1.1.4"
+}

@@ -1,15 +1,15 @@
-# FreeCAD Mobile Lab 1.16
+# FreeCAD Mobile Lab 1.17
 
-Full release of the current mobile feature set, Android code42. Signed non-debuggable ARM64 APK retains the compatible update certificate. Comprehensive FreeCAD/Rhino and device qualification remain incomplete.
+Full release of the current mobile feature set, Android code43. Signed non-debuggable ARM64 APK retains the compatible update certificate. Comprehensive FreeCAD/Rhino and device qualification remain incomplete.
 
-Four original PartDesign pattern tools:
-- Mirrored about an owned original Body XY/XZ/YZ plane.
-- Forward LinearPattern with one total extent along an original Body X/Y/Z axis.
-- Forward PolarPattern with a bounded total angle about an original Body axis.
-- Scaled pattern growing about the native additive source centre of mass.
+Four original PartDesign extrusion scopes:
+- Reversed direction for length Pad and Pocket.
+- Symmetric Pad/Pocket using half the total length on each side.
+- Native ThroughAll Pocket in either cut direction.
+- Native UpToFace Pocket linked to one preceding-solid planar face.
 
-Commands BodyMirror, BodyLinear, BodyPolar and BodyScaled, touch forms and EN/TR/DE guides are included. Patterns transform one last owned Pad/Revolution/AdditiveLoft in original Features mode. Counts2–16, growth factors greater than1 up to4 and source complexity are checked before native generation/restoration. Copies must remain one connected solid. Native source updates, owned Tip/history/removal, rollback, FCStd and STEP are tested.
+Pad/Pocket commands accept optional forward/reverse/symmetric. PocketThrough and PocketFace commands, touch forms and EN/TR/DE guides are included. Stopping faces must be parallel to the sketch and ahead in the cut direction. Native ownership/history/source updates, both cut directions, body placement, Undo/Redo, leaf deletion, atomic rollback, FCStd and STEP are qualified. Through/face modes have no editable Length. Fixed the legacy saved-file guard that conflicted with the new extent modes; pre-restoration mode/second-side/taper/offset/vector/reference guards reject unsupported and foreign/cyclic selections.
 
-796real PartDesignJNI checks;2324Sketcher,269Part,88App,62Python regressions;527locale,3resource,10packaging checks.751reviewed TR/DE entries/4localized guides. The large Sketcher run initially timed out under concurrent work and completed on isolated retry; progress markers are retained. The actual APK passes65JNI/69Python ARM64 libraries/extensions,1078Python assets,16KiB/API26 loader/strong-symbol closure, v2/v3 signatures and compatible certificate. Physical Android1.16 execution NOT_RUN.
+1,149real PartDesignJNI checks;2,324Sketcher,269Part,88App,62Python regressions;527locale,3resource,10packaging checks.757reviewed TR/DE entries/4localized guides. Malformed fixture generation uses bounded console calls with the unchanged two-second Python tracing limit. The actual APK passes65JNI/69Python ARM64 libraries/extensions,1078Python assets,16KiB/API26 loader/strong-symbol closure, v2/v3 signatures and compatible certificate. Physical Android1.17 execution NOT_RUN.
 
-Limits: one supported owned additive source up to64faces/256edges; explicit whole Body origin references; forward extent modes; one linear direction;2–16 occurrences including original; scale growth>1≤4. Multi-source, subtractive/dress-up/pattern sources, arbitrary directions, spacing/second directions, general MultiTransform and other modes remain pending. Full Gui/workbench/Assembly/Rhino/device qualification and arbitrary addon FCStd remain pending. F-Droid NOT_SUBMITTED. Private signing key/continuation excluded from public assets.
+Limits: one connected solid, whole owned unused profiles, positive lengths up to1,000,000mm; zero taper/offset, sketch-normal directions, one side or symmetric total length. Pocket stopping uses one current FaceN on the preceding owned solid; topology-changing edits can invalidate named references and are rejected. Two independent sides, curved/external stopping faces, other stopping/Pad modes, arbitrary axes, full patterns/dress-up/PartDesign/Gui/workbench/Assembly/Rhino/addon qualification remain pending. F-Droid NOT_SUBMITTED. Private signing key/continuation excluded from public assets.

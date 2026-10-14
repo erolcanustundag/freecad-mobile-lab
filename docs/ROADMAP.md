@@ -190,3 +190,7 @@ Four genuine workflows: fillet, equal chamfer, planar Z draft and inward skin th
 ### 1.16 — original Body pattern subset
 
 Four original scopes: Mirrored, LinearPattern, PolarPattern and Scaled.796realJNI checks and2324/269/88/62 regressions pass; analytic unions, axes/planes/centres, units/count/scalar/preload guards, source/history/rollback, FCStd/STEP and disconnected cases.751TR/DE entries/4guides. Fullworkbench/Gui/Assembly/Rhino/device gates remain pending; Android1.16 NOT_RUN. Next native extent/attachment proof, NEXT-BATCH-1.17.md.
+
+##1.17 original native extrusion extents
+
+Four bounded native scopes implemented: reversed direction for Pad/Pocket, symmetric total-length Pad/Pocket, original ThroughAll Pocket and original UpToFace Pocket on one preceding-solid planar face parallel to the sketch plane and ahead in the cut direction. Native ownership/history, source and body placement, single solid/material removal, rollback and FCStd/STEP; pre-restoration mode/taper/offset/vector/second-side/reference guards reject unsupported/foreign/cyclic selections. Fixed conflicting legacy FCStd validator.1149 realJNI and2324/269/88/62/527/3/10 regressions PASS; EN/TR/DE757entries/4guides. PhysicalAndroid1.17NOT_RUN/fullGui/workbench/Assembly/RhinoNOT_COMPLETE/F-DroidNOT_SUBMITTED. Full publication tracked in GITHUB-PUBLICATION.json; next native extent proofs pass with mobile integration pending.
