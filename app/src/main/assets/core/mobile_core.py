@@ -18,12 +18,16 @@ import mobile_python
 import mobile_part
 import mobile_primitives
 import mobile_sketch
+import mobile_partdesign
 
 OBJECT_TYPES = {"App::FeaturePython", "App::DocumentObjectGroup", "App::Link", "App::VarSet"}
 if mobile_part.available():
     OBJECT_TYPES.update(mobile_part.TYPES)
 if mobile_sketch.available():
     OBJECT_TYPES.update(mobile_sketch.TYPES)
+if mobile_partdesign.available():
+    OBJECT_TYPES.update(mobile_partdesign.TYPES | mobile_partdesign.FRAMES)
+    mobile_part.TYPES.update(mobile_partdesign.TYPES)
 PROPERTY_TYPES = {"App::PropertyLength", "App::PropertyAngle", "App::PropertyArea",
     "App::PropertyVolume", "App::PropertyDistance", "App::PropertyFloatConstraint", "App::PropertyFloat", "App::PropertyInteger",
     "App::PropertyString", "App::PropertyBool", "App::PropertyLink"}
@@ -94,13 +98,14 @@ def _supported_property(obj,name,kind):
 
 
 def _editable(obj, name):
-    return name!="Label2" and not name.startswith("_") and not obj.getEditorMode(name)
+    return mobile_partdesign.editable(obj,name) and name!="Label2" and not name.startswith("_") and not obj.getEditorMode(name)
 
 
 def snapshot():
     result = {"version": App.Version()[:3], "scope": "App/Part bounded mobile adapter" if mobile_part.available() else "App metadata; geometry workbenches pending",
         "part": mobile_part.available(),
         "sketcher": mobile_sketch.available(),
+        "partdesign": mobile_partdesign.available(),
         "documents": list(App.listDocuments()), "files": sorted(p.name for p in _root.iterdir()
             if p.is_file() and p.suffix.lower() == ".fcstd"),
         "transaction": _transaction, "document": None, "python": mobile_python.metadata()}
@@ -120,6 +125,8 @@ def snapshot():
             shape = mobile_part.summary(obj) if mobile_part.available() else None
             if shape is not None:
                 objects[-1]["shape"] = shape
+            body=mobile_partdesign.summary(obj) if mobile_partdesign.available() else None
+            if body is not None:objects[-1]["body"]=body
             sketch=mobile_sketch.summary(obj) if mobile_sketch.available() else None
             if sketch is not None:
                 objects[-1]["sketch"] = sketch
@@ -130,7 +137,9 @@ def snapshot():
 
 def _edit(edit):
     action = edit.get("op")
-    if isinstance(action,str) and action.startswith("sketch_"):
+    if isinstance(action,str) and action.startswith("body_"):
+        mobile_partdesign.edit(_doc(),edit,_object,_identifier)
+    elif isinstance(action,str) and action.startswith("sketch_"):
         mobile_sketch.edit(_object(edit["object"]),edit)
     elif action in ("part_prism","part_wedge","part_helix","part_spiral","helix_settings","spiral_settings"):
         if action.endswith("settings"):
@@ -306,6 +315,7 @@ def _edit(edit):
             axis.normalize();obj=_doc().addObject("Part::Revolution",name);obj.Source=source;obj.Base=origin;obj.Axis=axis;obj.Angle=amount;obj.Solid=True
     elif action == "add":
         kind = edit.get("type", "App::FeaturePython")
+        if kind in mobile_partdesign.TYPES | mobile_partdesign.FRAMES:raise ValueError("Create native Body objects and features with the Body tools")
         if kind not in OBJECT_TYPES:
             raise ValueError("Object type is not ported: " + str(kind))
         if len(_doc().Objects) >= 1000:
@@ -317,6 +327,7 @@ def _edit(edit):
         obj.Label = _text(edit.get("label", name), 256)
     elif action == "remove":
         target=_object(edit["object"])
+        if mobile_partdesign.available() and mobile_partdesign.protected(target):raise ValueError("Use Body tools for owned features; origin frames cannot be removed directly")
         if any(o.TypeId in mobile_sketch.TYPES|mobile_part.TYPES for o in target.InList):
             raise ValueError("Remove dependent native features and sketch references before deleting the source")
         _doc().removeObject(target.Name)
@@ -376,6 +387,7 @@ def _edit(edit):
             value = _text(value, 512)
         elif type(value) not in (int, float) or not math.isfinite(value):
             raise ValueError("Use a finite number or a unit expression")
+        mobile_partdesign.validate_edit(obj,name,value)
         mobile_part.validate_edit(obj,name,value)
         setattr(obj, name, value)
         actual = getattr(obj, name)
@@ -386,6 +398,7 @@ def _edit(edit):
     elif action == "expression":
         obj = _object(edit["object"])
         name = _identifier(edit["property"])
+        if obj.TypeId in mobile_partdesign.TYPES | mobile_partdesign.FRAMES:raise ValueError("Use bounded Body feature dimensions directly; PartDesign expressions remain pending")
         if obj.TypeId in ("Part::RegularPolygon","Part::Prism") and name=="Polygon":raise ValueError("Set polygon sides directly within3–128; side expressions are unsupported")
         if obj.TypeId in ("Part::Helix","Part::Spiral") and name in mobile_primitives.FIELDS[obj.TypeId]:raise ValueError("Set bounded helix/spiral parameters directly; parameter expressions are unsupported")
         if not _supported_property(obj,name,obj.getTypeIdOfProperty(name)) or not _editable(obj,name):
@@ -509,6 +522,7 @@ def execute(request):
             try:
                 mobile_sketch.validate_document(_doc())
                 mobile_part.validate_document(_doc())
+                mobile_partdesign.validate_document(_doc())
                 if any("Invalid" in o.State for o in _doc().Objects):
                     raise ValueError("Document recompute failed; transaction was rolled back")
             except Exception:
@@ -532,6 +546,7 @@ def execute(request):
             _doc().recompute()
             mobile_sketch.validate_document(_doc())
             mobile_part.validate_document(_doc())
+            mobile_partdesign.validate_document(_doc())
             if any("Invalid" in o.State for o in _doc().Objects):
                 raise ValueError("Recompute failed; check expressions and object references")
             if owned:
@@ -548,16 +563,19 @@ def execute(request):
         _doc().recompute()
         mobile_sketch.validate_document(_doc())
         mobile_part.validate_document(_doc())
+        mobile_partdesign.validate_document(_doc())
     elif action == "recompute":
         _doc().recompute()
         mobile_sketch.validate_document(_doc())
         mobile_part.validate_document(_doc())
+        mobile_partdesign.validate_document(_doc())
     elif action == "save":
         if _transaction:
             raise ValueError("Finish the current transaction first")
         _doc().recompute()
         mobile_sketch.validate_document(_doc())
         mobile_part.validate_document(_doc())
+        mobile_partdesign.validate_document(_doc())
         if any("Invalid" in o.State for o in _doc().Objects):
             raise ValueError("Document has failed features")
         _doc().saveAs(str(_file(request["file"])))
@@ -576,6 +594,7 @@ def execute(request):
             restored.recompute()
             mobile_sketch.validate_document(restored)
             mobile_part.validate_document(restored)
+            mobile_partdesign.validate_document(restored)
         except Exception:
             App.closeDocument(restored.Name)
             if _document is not None:App.setActiveDocument(_document.Name)
@@ -629,6 +648,8 @@ def execute(request):
         result=snapshot();result["element_inspection"]=mobile_part.element_info(_object(request["object"]),request["kind"],request["index"]);return result
     elif action == "shape_info":
         result=snapshot();result["shape_inspection"]=mobile_part.shape_info(_object(request["object"]));return result
+    elif action == "body_info":
+        result=snapshot();result["body_inspection"]=mobile_partdesign.summary(mobile_partdesign.body(_object(request["object"])));return result
     elif action == "sketch_inspect":
         result=snapshot();obj=_object(request["object"]);mobile_sketch.require(obj);result["sketch_inspection"]=mobile_sketch.summary(obj);return result
     elif action == "sketch_preview":

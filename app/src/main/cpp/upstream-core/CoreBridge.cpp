@@ -15,6 +15,9 @@ extern "C" PyObject* PyInit_Part();
 #ifdef FREECAD_MOBILE_HAS_SKETCHER
 extern "C" PyObject* PyInit_Sketcher();
 #endif
+#ifdef FREECAD_MOBILE_HAS_PARTDESIGN
+extern "C" PyObject* PyInit__PartDesign();
+#endif
 namespace {
 std::mutex serial;
 PyObject* dispatcher = nullptr;
@@ -73,6 +76,10 @@ Java_org_freecad_mobilelab_CoreNative_initialize(JNIEnv* env,jclass,jstring home
 #ifdef FREECAD_MOBILE_HAS_SKETCHER
         if(PyImport_AppendInittab("Sketcher",PyInit_Sketcher)==-1)
             throw std::runtime_error("Cannot register original Sketcher module");
+#endif
+#ifdef FREECAD_MOBILE_HAS_PARTDESIGN
+        if(PyImport_AppendInittab("_PartDesign",PyInit__PartDesign)==-1)
+            throw std::runtime_error("Cannot register original PartDesign module");
 #endif
         PyConfig config;PyConfig_InitIsolatedConfig(&config);
         config.install_signal_handlers=0;config.write_bytecode=0;config.parse_argv=0;

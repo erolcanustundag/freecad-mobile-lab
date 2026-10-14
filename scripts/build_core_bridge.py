@@ -10,12 +10,14 @@ BASE=ROOT.parent
 p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--android',action='store_true')
 p.add_argument('--part',action='store_true',help='Link verified original Part/Materials from the isolated Part build')
+p.add_argument('--partdesign',action='store_true',help='Register original PartDesign; implies Sketcher/Part')
 p.add_argument('--sketcher',action='store_true',help='Register the real original Sketcher builtin; implies --part')
 args=p.parse_args()
+if args.partdesign:args.sketcher=True
 if args.sketcher: args.part=True
 env=dict(os.environ)
 command=['cmake','-S',str(ROOT/'app/src/main/cpp/upstream-core'),'-G','Ninja',
-    '-DCMAKE_BUILD_TYPE=Release','-DFREECAD_SKETCHER_LIBRARY=']
+    '-DCMAKE_BUILD_TYPE=Release','-DFREECAD_SKETCHER_LIBRARY=','-DFREECAD_PARTDESIGN_LIBRARY=']
 if args.android:
     ndk=Path(env.get('ANDROID_NDK_ROOT',BASE/'toolchains/android-ndk-r27c')).resolve()
     qt=BASE/'toolchains/qt/android-arm64-16k'
@@ -47,6 +49,10 @@ command+=['-B',str(build)]
 if args.sketcher:
     platform='android' if args.android else 'host'
     command+=['-DFREECAD_SKETCHER_LIBRARY='+str(BASE/('freecad-part-'+platform)/'Mod/Sketcher/Sketcher.so')]
+if args.partdesign:
+    platform='android' if args.android else 'host'
+    core=BASE/('freecad-partdesign-'+platform)
+    command+=['-DFREECAD_CORE_LIBRARY='+str(core/'lib/FreeCAD.so'),'-DFREECAD_PART_LIBRARY='+str(core/'Mod/Part/Part.so'),'-DFREECAD_MATERIALS_LIBRARY='+str(core/'Mod/Material/Materials.so'),'-DFREECAD_SKETCHER_LIBRARY='+str(core/'Mod/Sketcher/Sketcher.so'),'-DFREECAD_PARTDESIGN_LIBRARY='+str(core/'Mod/PartDesign/_PartDesign.so')]
 subprocess.run(command,check=True,env=env)
 subprocess.run(['cmake','--build',str(build),'--parallel','2'],check=True,env=env)
 print('Built document bridge:',build)
