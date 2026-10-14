@@ -1,9 +1,50 @@
 {
   "repository": "https://github.com/erolcanustundag/freecad-mobile-lab",
-  "version": "1.15",
+  "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.15",
+  "release_id": 412838183,
   "tag": "v1.15",
-  "status": "PREPARED_NOT_PUBLISHED",
+  "status": "PUBLISHED_VERIFIED",
   "draft": false,
   "prerelease": false,
-  "android_execution": "NOT_RUN"
+  "latest": true,
+  "scope": "current mobile feature set",
+  "source_commit": "2f8affeb1e03df429fee3e8aeea674e57875c8a7",
+  "source_tree": "eae46dc78836a0957ca64bc61c7de7ed374dff1f",
+  "source_ci": 38583690146,
+  "publication_workflow": 38583981188,
+  "transport_commit": "262702338e746cfc6c02391754d55037f72a6629",
+  "transport_branch": "release-upload-1-15",
+  "transport_branch_removed": "INDEPENDENT_HTTP404_VERIFIED",
+  "assets": [
+    {
+      "id": 640692133,
+      "name": "FreeCAD-Mobile-Lab-1.15-arm64.apk",
+      "size": 163927552,
+      "digest": "sha256:898698e917a024dd05bd2611d4f33913e33272afb050b5dadff19f0ec04f5c58",
+      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.15/FreeCAD-Mobile-Lab-1.15-arm64.apk"
+    },
+    {
+      "id": 640692633,
+      "name": "FreeCAD-Mobile-Lab-1.15-corresponding-sources.zip",
+      "size": 430414494,
+      "digest": "sha256:1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
+      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.15/FreeCAD-Mobile-Lab-1.15-corresponding-sources.zip"
+    },
+    {
+      "id": 640692432,
+      "name": "FreeCAD-Mobile-Lab-1.15-native-runtime.zip",
+      "size": 62340543,
+      "digest": "sha256:305de267bec9ca8d6de6a110b8dca0c23bb82f2beb11a031660f0a3eb401e4ad",
+      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.15/FreeCAD-Mobile-Lab-1.15-native-runtime.zip"
+    },
+    {
+      "id": 640693166,
+      "name": "FreeCAD-Mobile-Lab-1.15-public-source.zip",
+      "size": 32472548,
+      "digest": "sha256:dd146b5376267f6ce0e6f9634f5eda591e9a34b2aed3e4b1123a70b4785e9377",
+      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.15/FreeCAD-Mobile-Lab-1.15-public-source.zip"
+    }
+  ],
+  "android_execution": "NOT_RUN",
+  "f_droid": "NOT_SUBMITTED"
 }
