@@ -25,7 +25,7 @@ BodySketch BODY NAME creates a new owned sketch or adopts an unused unowned orig
 
 BodyTip Body Pad selects an earlier owned solid as the Body result. Later features remain in history. Before appending or removing a feature, select the last solid Tip. RemoveBodyFeature Body Pocket removes only the last Pad/Pocket when no other feature or sketch depends on it; its profile remains. Undo restores the feature and Tip.
 
-Current limits: one connected closed solid per Body; one-sided Length Pad/Pocket; positive length up to1,000,000mm; at most1,000 document objects including seven origin frames plus origin and Body; profile up to256 edges; feature up to1,024 faces. Pocket must remove material and retain one solid. Face names may change after upstream edits; inspect selections again.
+Current limits: one connected closed solid per Body; forward/reverse/symmetric Length Pad/Pocket, one-sided native ThroughAll/planar UpToFace Pocket; positive length up to1,000,000mm; at most1,000 document objects including seven origin frames plus origin and Body; profile up to256 edges; feature up to1,024 faces. Pocket must remove material and retain one solid. Face names may change after upstream edits; inspect selections again.
 
 PartDesign patterns, dress-up features, arbitrary history reordering, more than two loft profiles/multiple solids, other extent modes, Gui and full workbench restoration remain pending. Android device execution for this version is not yet verified. Save before leaving; documents are local and the app has no network permission.
 
