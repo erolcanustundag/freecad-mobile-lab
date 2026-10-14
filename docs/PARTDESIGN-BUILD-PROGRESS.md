@@ -19,3 +19,7 @@ Full PartDesign workbench parity, other extent modes, multiple profiles/solids, 
 ##1.17 original native extrusion extents
 
 Original Reversed/SideType Symmetric Pad/Pocket, ThroughAll Pocket and planar preceding-solid UpToFace Pocket are exposed through commands/touch/EN/TR/DE controls.1149 nativeJNI geometry/history/source/placement/restoration/rollback checks passed. Saved mode, side, direction, taper/offset and stopping references are guarded before restoration. Additional native proofs for PadUpToFace/UpToLast, PocketUpToFirst and Two sides Length/Length2 pass; these next modes are not integrated into1.17.
+
+##1.18 original native stopping/two-sided extents
+
+Original PadUpToFace/UpToLast, PocketUpToFirst and TwoSidesLength/Length2 are integrated through real native properties and references.1509JNI tests qualify geometry/source/profile/body placement/history/restoration/STEP/atomic and no-op/complexity/reference/length failures. Native pre-restoration history is checked before loading, and inactive stopping Length edits are refused. Next original additive/subtractivePipe/Helix prototypes are recorded with analytic straight-path volumes and native helical approximation/integration within0.001mm³ on axis-meridian circular reference profiles; not supported in1.18 mobile workflows.

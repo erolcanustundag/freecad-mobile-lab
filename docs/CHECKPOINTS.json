@@ -520,5 +520,20 @@
     "android_runtime": "physical startup/lifecycle/SAF workflows pending",
     "signing": "retained public development identity",
     "milestone_gate": "not complete until roadmap device/workflow criteria pass"
+  },
+  {
+    "version": "1.18",
+    "version_name": "1.18",
+    "version_code": 44,
+    "channel": "release",
+    "status": "initial public mobile feature release; broader device qualification pending",
+    "scope": "current mobile feature set",
+    "apk": "FreeCAD-Mobile-Lab-1.18-arm64.apk",
+    "size_bytes": 163943936,
+    "sha256": "026f8e1f6ce4b580d4c464fd980ce46e14e6b34b5d38819a7bb76f11ab10d0c7",
+    "engineering_changes": "Original PadUpToFace/UpToLast, PocketUpToFirst and independent two-sided Length/Length2 Pad/Pocket. Positive-addition/no-op, automatic source complexity, length/reference/pre-restoration history guards;1509realJNI and2324/269/88/62/527/3/10 regressions; EN/TR/DE764controls/4guides; API26/16KiB/134ELF/1078Python/signature/static closure PASS. Android execution NOT_RUN.",
+    "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+    "signing": "retained public development identity",
+    "milestone_gate": "not complete until roadmap device/workflow criteria pass"
   }
 ]

@@ -1,6 +1,6 @@
 {
-  "version": "1.17",
-  "version_code": 43,
+  "version": "1.18",
+  "version_code": 44,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "workflows": [
@@ -23,10 +23,14 @@
     "original reversed Pad/Pocket direction",
     "original symmetric total-length Pad/Pocket",
     "original ThroughAll Pocket",
-    "original preceding-solid planar UpToFace Pocket"
+    "original preceding-solid planar UpToFace Pocket",
+    "original planar preceding-solid PadUpToFace",
+    "original PadUpToLast",
+    "original PocketUpToFirst",
+    "original independent two-sided Length/Length2 Pad/Pocket"
   ],
   "checks": {
-    "partdesign_jni": 1149,
+    "partdesign_jni": 1509,
     "sketcher_regressions": 2324,
     "part_regressions": 269,
     "app_regressions": 88,
@@ -48,7 +52,7 @@
     "feature_faces": 1024,
     "document_objects_including_origins": 1000,
     "length_mm": 1000000,
-    "extent": "Length: forward/reverse/symmetric; Pocket: directional ThroughAll/planar UpToFace",
+    "extent": "forward/reverse/symmetric Length and fixed Two sides Length/Length2; Pocket ThroughAll/UpToFirst; Pad UpToLast; planar owned UpToFace Pad/Pocket",
     "revolution_angle_deg": 360,
     "loft_profiles": 2,
     "loft_ruled": true,
@@ -59,7 +63,10 @@
     "scale_factor": 4,
     "pattern_source_faces": 64,
     "pattern_source_edges": 256,
-    "stopping_face": "preceding owned solid, planar, parallel to sketch and ahead in direction"
+    "stopping_face": "preceding owned solid, planar, parallel to sketch and ahead in direction",
+    "two_side_total_length_mm": 1000000,
+    "automatic_stop_source_faces": 64,
+    "automatic_stop_source_edges": 256
   },
   "pending": [
     "other PartDesign modes/features",
@@ -69,7 +76,7 @@
     "other axes/directions and loft modes",
     "other dress-up modes and variable radii",
     "multi-source/other pattern modes",
-    "two sides/taper/offset/custom extrusion vectors",
-    "curved/external stopping faces and other extent modes"
+    "curved/external stopping faces and other extent modes",
+    "taper/offset/custom extrusion vectors and arbitrary side stopping"
   ]
 }

@@ -1,0 +1,50 @@
+{
+  "AddPipe": {
+    "type": "PartDesign::AdditivePipe",
+    "volume_mm3": 31.415926535897924,
+    "expected_volume_mm3": 31.41592653589793,
+    "mode": "Standard",
+    "transition": "Transformed",
+    "transformation": "Constant",
+    "spine_subs": [
+      "Edge1"
+    ]
+  },
+  "CutPipe": {
+    "type": "PartDesign::SubtractivePipe",
+    "volume_mm3": 968.5840734641018,
+    "expected_volume_mm3": 968.5840734641021,
+    "mode": "Standard",
+    "transition": "Transformed",
+    "transformation": "Constant",
+    "spine_subs": [
+      "Edge1"
+    ]
+  },
+  "AddHelix": {
+    "type": "PartDesign::AdditiveHelix",
+    "volume_mm3": 49.348033677727166,
+    "ideal_axis_meridian_volume_mm3": 49.348022005446786,
+    "native_integration_tolerance_mm3": 0.001,
+    "pitch_mm": 3.0,
+    "height_mm": 6.0,
+    "turns": 2.0,
+    "mode": "pitch-height-angle",
+    "axis_role": "Z_Axis"
+  },
+  "CutHelix": {
+    "type": "PartDesign::SubtractiveHelix",
+    "volume_mm3": 1081.6253216042242,
+    "ideal_axis_meridian_volume_mm3": 1081.6253332868787,
+    "native_integration_tolerance_mm3": 0.001,
+    "pitch_mm": 3.0,
+    "height_mm": 6.0,
+    "turns": 2.0,
+    "mode": "pitch-height-angle",
+    "axis_role": "Z_Axis"
+  },
+  "status": "HOST_NATIVE_API_PROBE_PASS_MOBILE_PENDING",
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "android_execution": "NOT_RUN",
+  "freecad": "1.1.4"
+}
