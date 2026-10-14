@@ -1,0 +1,27 @@
+{
+  "freecad": "1.1.4",
+  "status": "HOST_API_PROBE_PASS_ANDROID_ADAPTER_PENDING",
+  "probe": "tests/PartDesignDressupPrototypeHostTest.py",
+  "geometry": {
+    "fillet_volume_mm3": 997.8539816339743,
+    "chamfer_volume_mm3": 995,
+    "inward_thickness_volume_mm3": 424,
+    "draft_volume_mm3": 956.2556682370378
+  },
+  "native_api": {
+    "base": "original DressUp.Base LinkSub to prior owned feature",
+    "fillet": "Radius=1mm, Edge1",
+    "chamfer": "ChamferType=Equal distance, Size=1mm, Edge1",
+    "thickness": "Value=1mm, Reversed=true, Face6",
+    "draft": "Base=Face1, NeutralPlane=Face5, PullDirection=Body original Z axis, Angle=5degrees"
+  },
+  "android_execution": "NOT_RUN",
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "remaining": [
+    "bounded selections and parameter editing",
+    "source and Tip/ownership guards",
+    "history/rollback/FCStd/STEP tests",
+    "EN/TR/DE controls",
+    "signed milestone APK"
+  ]
+}
