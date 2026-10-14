@@ -755,3 +755,10 @@ Total length (mm)|Toplam uzunluk (mm)|Gesamtlänge (mm)
 Extent: forward/reverse/symmetric|Uzama: forward/reverse/symmetric|Ausdehnung: forward/reverse/symmetric
 Direction: forward/reverse|Yön: forward/reverse|Richtung: forward/reverse
 Stopping face (FaceN)|Bitiş yüzeyi (FaceN)|Endfläche (FaceN)
+Native Pad to face|Yerel yüzeye kadar uzatma|Native Aufpolsterung bis Fläche
+Native Pad to last face|Yerel son yüzeye kadar uzatma|Native Aufpolsterung bis zur letzten Fläche
+Native Pocket to first face|Yerel ilk yüzeye kadar cep|Native Tasche bis erste Fläche
+Native two-sided Pad|Yerel iki taraflı uzatma|Native zweiseitige Aufpolsterung
+Native two-sided Pocket|Yerel iki taraflı cep|Native zweiseitige Tasche
+First-side length (mm)|Birinci taraf uzunluğu (mm)|Länge der ersten Seite (mm)
+Second-side length (mm)|İkinci taraf uzunluğu (mm)|Länge der zweiten Seite (mm)

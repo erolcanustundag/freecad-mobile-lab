@@ -1,5 +1,5 @@
 <resources>
-  <string name="ui_f4ffbcdc7b7e" formatted="false">"\n\nPython print(App.Version())\nRunMacro MyMacro.py\nApi App.Vector\nProxy Scaled Source.Width 2\n\nPython console, saved macros, command recording and the portable QuantityDriver proxy are available from the buttons. Python tracing has a two-second budget; native calls may take longer. The API browser covers available App/Base bindings. The native Part API is available when the Original Part runtime is loaded. Arbitrary addon proxy classes and Gui bindings remain pending.\n\nOnly whitelisted Part primitives/features/booleans and App metadata documents can be restored here. Native Sketcher sketches are now supported. Bounded original Body, Pad, Pocket, Revolution, Groove and ruled additive/subtractive Loft and bounded Body fillet/chamfer/draft/thickness, mirror/linear/polar/scaled patterns and forward/reverse/symmetric/through-all/planar-face extent documents are supported. Other PartDesign features and workbenches remain pending."</string>
+  <string name="ui_e1b358c4475b" formatted="false">"\n\nPython print(App.Version())\nRunMacro MyMacro.py\nApi App.Vector\nProxy Scaled Source.Width 2\n\nPython console, saved macros, command recording and the portable QuantityDriver proxy are available from the buttons. Python tracing has a two-second budget; native calls may take longer. The API browser covers available App/Base bindings. The native Part API is available when the Original Part runtime is loaded. Arbitrary addon proxy classes and Gui bindings remain pending.\n\nOnly whitelisted Part primitives/features/booleans and App metadata documents can be restored here. Native Sketcher sketches are now supported. Bounded original Body, Pad, Pocket, Revolution, Groove and ruled additive/subtractive Loft and bounded Body fillet/chamfer/draft/thickness, mirror/linear/polar/scaled patterns and forward/reverse/symmetric/two-sided and qualified native first/last/through-all/planar-face extent documents are supported. Other PartDesign features and workbenches remain pending."</string>
   <string name="ui_c9c40500c6bb" formatted="false">"\n\nUse Measure id1 id2 for exact CAD minimum distance; Distance XYZ XYZ; Angle XYZ XYZ XYZ. Mesh distance is not supported."</string>
   <string name="ui_dec0dce734eb" formatted="false">"\n0=X, 1=Y, 2=Z. This checks the bounding box; supports, adhesion and process settings are separate."</string>
   <string name="ui_65fe7eb37744" formatted="false">"\nABIs: "</string>
@@ -138,6 +138,7 @@
   <string name="ui_e864aa24d43c" formatted="false">"Add property"</string>
   <string name="ui_d0cd458818a0" formatted="false">"Add sketch constraint"</string>
   <string name="ui_4f5edc11fcbd" formatted="false">"Add to group"</string>
+  <string name="ui_c42c27b87a82" formatted="false">"AddProfile"</string>
   <string name="ui_c83b0ec2d98a" formatted="false">"Align"</string>
   <string name="ui_aa5a3afa1cfa" formatted="false">"Align matching bounds"</string>
   <string name="ui_49662530d12a" formatted="false">"Align objects"</string>
@@ -224,7 +225,7 @@
   <string name="ui_718a7e8a582e" formatted="false">"Body"</string>
   <string name="ui_b9e14a17aa5d" formatted="false">"Body A"</string>
   <string name="ui_66640b70e2fc" formatted="false">"Body B"</string>
-  <string name="ui_b7071d634fbb" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nPad Body Profile ReversePad 10 reverse\nPad Body Profile SymmetricPad 10 symmetric\nPocketThrough Body CutProfile Through\nPocketFace Body CutProfile Stopped Face5\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyFillet Body Rounded 1 1\nBodyChamfer Body Beveled 1 1\nBodyDraft Body Drafted 1 5 5\nBodyThickness Body Hollow 6 1\nBodyMirror Body Mirrored XZ\nBodyLinear Body Linear 2 8 X\nBodyPolar Body Polar 4 360 Z\nBodyScaled Body Scaled 2 2\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, forward/reverse/symmetric total-length Pad/Pocket, native through-all Pocket and planar preceding-solid face stopping, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Finishing uses current edge/face numbers on the last solid Tip; fillet/chamfer explicit edges, planar Z-axis draft up to45degrees and inward skin thickness are bounded. Patterns use one last owned additive Pad/Revolution/Loft, whole Body origin references,2–16 occurrences and bounded extents/scale. Use forward/reverse for directional cuts; symmetric lengths split equally about the sketch plane. Through/face extents have no editable Length. Select a current source FaceN parallel to the sketch plane and ahead in the cut direction. Other modes, arbitrary lofts, multi-source patterns and reorder remain pending."</string>
+  <string name="ui_118f0413fc4a" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nPad Body Profile ReversePad 10 reverse\nPad Body Profile SymmetricPad 10 symmetric\nPocketThrough Body CutProfile Through\nPocketFace Body CutProfile Stopped Face5\nPadFace Body AddProfile ToFace Face6\nPadLast Body AddProfile ToLast\nPocketFirst Body CutProfile ToFirst\nPadTwo Body Profile TwoSides 4 6\nPocketTwo Body CutProfile TwoCuts 2 3\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyFillet Body Rounded 1 1\nBodyChamfer Body Beveled 1 1\nBodyDraft Body Drafted 1 5 5\nBodyThickness Body Hollow 6 1\nBodyMirror Body Mirrored XZ\nBodyLinear Body Linear 2 8 X\nBodyPolar Body Polar 4 360 Z\nBodyScaled Body Scaled 2 2\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, forward/reverse/symmetric total-length Pad/Pocket, native through-all/first-hit Pocket, last-hit Pad and planar preceding-solid face stopping for Pad/Pocket, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Finishing uses current edge/face numbers on the last solid Tip; fillet/chamfer explicit edges, planar Z-axis draft up to45degrees and inward skin thickness are bounded. Patterns use one last owned additive Pad/Revolution/Loft, whole Body origin references,2–16 occurrences and bounded extents/scale. Use forward/reverse for directional cuts; symmetric lengths split equally about the sketch plane. Stopping extents have no editable Length. Two sides uses separate Length and Length2, both positive with total up to1,000,000mm; its direction is fixed. Automatic first/last stopping uses a preceding source up to64faces/256edges. Stopping Pad must add material. Select a current source FaceN parallel to the sketch plane and ahead in the extrusion direction. Other modes, arbitrary lofts, multi-source patterns and reorder remain pending."</string>
   <string name="ui_b8ef18d5b319" formatted="false">"Body axis (X/Y/Z)"</string>
   <string name="ui_db4ecb85e22a" formatted="false">"Body from native solid"</string>
   <string name="ui_2041a45c8dc7" formatted="false">"Body guide"</string>
@@ -659,6 +660,7 @@
   <string name="ui_a4e8a4e3e601" formatted="false">"Finishing amount (mm)"</string>
   <string name="ui_ebb5cdcc120b" formatted="false">"First solid / body"</string>
   <string name="ui_f94e25075b34" formatted="false">"First value"</string>
+  <string name="ui_bc410fa81171" formatted="false">"First-side length (mm)"</string>
   <string name="ui_dab564d8093c" formatted="false">"Fit"</string>
   <string name="ui_e0c6bc5b780d" formatted="false">"Fit / view"</string>
   <string name="ui_c02484cb2ff4" formatted="false">"Fit all visible"</string>
@@ -987,9 +989,12 @@
   <string name="ui_8c3297a25f30" formatted="false">"Native Body scaled pattern"</string>
   <string name="ui_090c75239902" formatted="false">"Native Body thickness"</string>
   <string name="ui_c5011646220e" formatted="false">"Native Pad"</string>
+  <string name="ui_8f5e43dc94e5" formatted="false">"Native Pad to face"</string>
+  <string name="ui_26146bc171a8" formatted="false">"Native Pad to last face"</string>
   <string name="ui_4862367a4934" formatted="false">"Native Part boolean"</string>
   <string name="ui_871cb729cd33" formatted="false">"Native Part placement"</string>
   <string name="ui_788019d78b2d" formatted="false">"Native Pocket"</string>
+  <string name="ui_55b6979271bb" formatted="false">"Native Pocket to first face"</string>
   <string name="ui_bbd45dd10ebf" formatted="false">"Native additive loft"</string>
   <string name="ui_45211683ce7b" formatted="false">"Native box"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Native cone"</string>
@@ -1020,6 +1025,8 @@
   <string name="ui_0888b5eb8ee9" formatted="false">"Native subtractive loft"</string>
   <string name="ui_633ab45f6fa4" formatted="false">"Native through-all Pocket"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Native torus"</string>
+  <string name="ui_ebfa6c174f0a" formatted="false">"Native two-sided Pad"</string>
+  <string name="ui_16efeb775bf2" formatted="false">"Native two-sided Pocket"</string>
   <string name="ui_7aaa9ab32d7f" formatted="false">"Native union"</string>
   <string name="ui_72a680321ead" formatted="false">"Native wedge"</string>
   <string name="ui_b3b46e64b67d" formatted="false">"Navigation cube"</string>
@@ -1123,6 +1130,9 @@
   <string name="ui_41e96472d42c" formatted="false">"Pad"</string>
   <string name="ui_f852b509bbae" formatted="false">"Pad height Z (mm)"</string>
   <string name="ui_e2b28d1105ad" formatted="false">"Pad/Pocket BODY PROFILE NAME LENGTH [forward|reverse|symmetric]"</string>
+  <string name="ui_0aee9c77ae25" formatted="false">"PadFace "</string>
+  <string name="ui_527473791e72" formatted="false">"PadFace BODY PROFILE NAME FaceN [forward|reverse]"</string>
+  <string name="ui_926ea5e93e32" formatted="false">"PadLast/PocketFirst BODY PROFILE NAME [forward|reverse]"</string>
   <string name="ui_afc129571bf0" formatted="false">"Parallel"</string>
   <string name="ui_a62da49e936f" formatted="false">"Parameter "</string>
   <string name="ui_c78ba7c727d5" formatted="false">"Parameter fraction"</string>
@@ -1389,6 +1399,7 @@
   <string name="ui_9b473b2aa252" formatted="false">"Search name, type, ID or layer"</string>
   <string name="ui_ede91343a9f1" formatted="false">"Seat depth"</string>
   <string name="ui_d4f1dc7e77fd" formatted="false">"Second solid / tool"</string>
+  <string name="ui_32881ea07517" formatted="false">"Second-side length (mm)"</string>
   <string name="ui_f2c6b564bd81" formatted="false">"Section"</string>
   <string name="ui_37173572d666" formatted="false">"Section sketch"</string>
   <string name="ui_e72675a4999d" formatted="false">"Section z · flatten horizontal section to XY"</string>
@@ -1629,6 +1640,9 @@
   <string name="ui_ce26250a7c4a" formatted="false">"ThroughAll"</string>
   <string name="ui_6209d69a9083" formatted="false">"Title limit 100, notes limit 200 characters"</string>
   <string name="ui_a430ac3065f8" formatted="false">"Title · up to 100 characters"</string>
+  <string name="ui_0d27c6add658" formatted="false">"ToFace"</string>
+  <string name="ui_bcf8be174487" formatted="false">"ToFirst"</string>
+  <string name="ui_9c486ef501dc" formatted="false">"ToLast"</string>
   <string name="ui_a09797fefea0" formatted="false">"Tolerance (mm)"</string>
   <string name="ui_7423110adc68" formatted="false">"Too many casting records"</string>
   <string name="ui_6375dd0b2851" formatted="false">"Too many cells"</string>
@@ -1671,6 +1685,9 @@
   <string name="ui_cd80f94a1e62" formatted="false">"Tube radius"</string>
   <string name="ui_a5d13a93df36" formatted="false">"Tube radius (mm)"</string>
   <string name="ui_917ac1cf92b5" formatted="false">"Turns · 0.1 to 20"</string>
+  <string name="ui_1da11c3cc804" formatted="false">"Two sides"</string>
+  <string name="ui_0ad1c0cf2ba3" formatted="false">"TwoCuts"</string>
+  <string name="ui_0e4f9af20f6c" formatted="false">"TwoSides"</string>
   <string name="ui_d5dd582170ce" formatted="false">"U end fraction"</string>
   <string name="ui_5081c5b959de" formatted="false">"U fraction"</string>
   <string name="ui_3d899b54f27a" formatted="false">"U start fraction"</string>
@@ -1720,6 +1737,8 @@
   <string name="ui_8282a0e3523f" formatted="false">"UntrimPatch · restore full UV patch"</string>
   <string name="ui_2d7749ad8168" formatted="false">"Unused angle"</string>
   <string name="ui_49afaef17729" formatted="false">"UpToFace"</string>
+  <string name="ui_96adbde8a26e" formatted="false">"UpToFirst"</string>
+  <string name="ui_ed9ac15baf4b" formatted="false">"UpToLast"</string>
   <string name="ui_6b5b87b9bec8" formatted="false">"Upper"</string>
   <string name="ui_6a195ab24b1f" formatted="false">"Upper profile"</string>
   <string name="ui_f9f4b89fd160" formatted="false">"Upstream App/Part 1.1.4 · solids, properties, expressions and transactions"</string>

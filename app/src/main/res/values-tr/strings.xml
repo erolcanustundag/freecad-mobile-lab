@@ -258,6 +258,7 @@
   <string name="ui_a4e8a4e3e601" formatted="false">"Bitirme miktarı (mm)"</string>
   <string name="ui_ebb5cdcc120b" formatted="false">"İlk katı / gövde"</string>
   <string name="ui_f94e25075b34" formatted="false">"İlk değer"</string>
+  <string name="ui_bc410fa81171" formatted="false">"Birinci taraf uzunluğu (mm)"</string>
   <string name="ui_e0c6bc5b780d" formatted="false">"Sığdır / görünüm"</string>
   <string name="ui_c02484cb2ff4" formatted="false">"Görünenlerin tümüne sığdır"</string>
   <string name="ui_231d301768c6" formatted="false">"Seçilene sığdır"</string>
@@ -380,9 +381,12 @@
   <string name="ui_8c3297a25f30" formatted="false">"Yerel ölçekli gövde örüntüsü"</string>
   <string name="ui_090c75239902" formatted="false">"Yerel gövde kabuğu"</string>
   <string name="ui_c5011646220e" formatted="false">"Yerel katı uzatma"</string>
+  <string name="ui_8f5e43dc94e5" formatted="false">"Yerel yüzeye kadar uzatma"</string>
+  <string name="ui_26146bc171a8" formatted="false">"Yerel son yüzeye kadar uzatma"</string>
   <string name="ui_4862367a4934" formatted="false">"Özgün Part katı işlemi"</string>
   <string name="ui_871cb729cd33" formatted="false">"Yerel Part yerleşimi"</string>
   <string name="ui_788019d78b2d" formatted="false">"Yerel cep"</string>
+  <string name="ui_55b6979271bb" formatted="false">"Yerel ilk yüzeye kadar cep"</string>
   <string name="ui_bbd45dd10ebf" formatted="false">"Yerel katı loft"</string>
   <string name="ui_45211683ce7b" formatted="false">"Yerel kutu"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Yerel koni"</string>
@@ -412,6 +416,8 @@
   <string name="ui_0888b5eb8ee9" formatted="false">"Yerel çıkarıcı loft"</string>
   <string name="ui_633ab45f6fa4" formatted="false">"Yerel tümünü geçen cep"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Yerel torus"</string>
+  <string name="ui_ebfa6c174f0a" formatted="false">"Yerel iki taraflı uzatma"</string>
+  <string name="ui_16efeb775bf2" formatted="false">"Yerel iki taraflı cep"</string>
   <string name="ui_7aaa9ab32d7f" formatted="false">"Özgün birleşim"</string>
   <string name="ui_72a680321ead" formatted="false">"Yerel kama"</string>
   <string name="ui_b3b46e64b67d" formatted="false">"Gezinme küpü"</string>
@@ -589,6 +595,7 @@
   <string name="ui_d8a9144ff3eb" formatted="false">"Betikli QuantityDriver"</string>
   <string name="ui_9b473b2aa252" formatted="false">"Ad, tür, kimlik veya katman ara"</string>
   <string name="ui_d4f1dc7e77fd" formatted="false">"İkinci katı / kesici"</string>
+  <string name="ui_32881ea07517" formatted="false">"İkinci taraf uzunluğu (mm)"</string>
   <string name="ui_37173572d666" formatted="false">"Kesit eskizi"</string>
   <string name="ui_8598222918d3" formatted="false">"Seç"</string>
   <string name="ui_cf5fe0f398bb" formatted="false">"Gövde ucunu seç"</string>

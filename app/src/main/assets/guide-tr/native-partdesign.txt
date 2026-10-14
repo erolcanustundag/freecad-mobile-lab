@@ -77,4 +77,14 @@ PocketThrough Body CutProfile Through forward
 PocketFace Body CutProfile Stopped Face5 forward
 
 Her işlem için gövdenin sahip olduğu ayrı, kullanılmamış bir eskiz seçin; örnekler alternatif işlemlerdir. Pad eskiz normali boyunca uzar, Pocket ters yönde keser. reverse yönü tersine çevirir. symmetric toplam uzunluğun yarısını her iki yana uygular. Tümünü geçen cep özgün FreeCAD ThroughAll özelliğini kullanır; eskizi giriş yüzeyine veya onun dışına yerleştirin. Yüzeye kadar cep, önceki gövde katısının eskiz düzlemine paralel ve kesme yönünde ileride bulunan tek düzlemsel FaceN yüzeyinde durur. Kesmeden önce ElementInfo ile yüzeyi inceleyin. Yerel yüzey bağlantısı işlem geçmişinde korunur; topoloji değişirse geçersiz bağlantı reddedilir. Cep malzeme çıkarmalı ve tek geçerli katı bırakmalıdır.
-Uzunluk kipinde Set ile birimli Length düzenlenebilir. Tek yönlü kiplerde Reversed true/false düzenlenebilir; geçersiz yön düzenlemesi geri alınır. ThroughAll ve UpToFace kiplerinde Length düzenlenemez. İki farklı yan, koniklik, ofset, özel yön vektörü, eğri bitiş yüzeyi, UpToFirst/Last/Shape, yüzeye kadar Pad ve dış bitiş referansları henüz desteklenmez. Komut belirteçleri forward/reverse/symmetric olarak kalır.
+Uzunluk kipinde Set ile birimli Length düzenlenebilir. Tek yönlü kiplerde Reversed true/false düzenlenebilir; geçersiz yön düzenlemesi geri alınır. ThroughAll ve UpToFace kiplerinde Length düzenlenemez. İki farklı yan, koniklik, ofset, özel yön vektörü, eğri bitiş yüzeyi, diğer bitiş kipleri ve UpToShape ve dış bitiş referansları henüz desteklenmez. Komut belirteçleri forward/reverse/symmetric olarak kalır.
+
+EK YEREL UZATMA SEÇENEKLERİ (1.18)
+PadFace Body AddProfile ToFace Face6 forward
+PadLast Body AddProfile ToLast forward
+PocketFirst Body CutProfile ToFirst forward
+PadTwo Body Profile TwoSides 4 6
+PocketTwo Body CutProfile TwoCuts 2 3
+
+Her örnek için gövdenin sahip olduğu ayrı, kullanılmamış bir eskiz ve son katı Tip seçilir. PadFace önceki katının eskize paralel, uzatma yönünde ileride bulunan düzlemsel yüzeyine bağlanır. İleri Pad eskiz normalinin pozitif yönünde uzar; Pocket ters yönde keser. PadLast özgün UpToLast, PocketFirst özgün UpToFirst kipini kullanır; kaynak en çok64yüzey/256kenar içerir ve bitişi yerel çekirdek belirler. Bitişli Pad malzeme eklemeli ve bağlı kalmalıdır; Pocket malzeme çıkarıp tek katı bırakmalıdır. Geçersiz, etkisiz veya kopuk değişiklik geri alınır. Topoloji düzenlemeleri adlandırılmış yüzey bağlantısını geçersizleştirebilir.
+İki taraflı kipte özgün SideType=Two sides, Type/Type2=Length kullanılır. Length ve Length2 ayrı ayrı pozitif, toplamları en çok1.000.000mm olmalıdır. Length varsayılan işlem yönünde, Length2 ters yönde çalışır; yön sabittir. Set TwoSides.Length2 1 cm ikinci tarafı birimle düzenler. symmetric toplam uzunluğu iki yana eşit dağıtmaya devam eder. Bitişli kiplerde Length düzenlenmez. İkinci tarafta farklı bitiş kipleri, koniklik, ofset, özel vektörler, eğri/dış açık bitiş referansları, PadUpToFirst ve UpToShape henüz desteklenmez. Komut belirteçleri değişmez.

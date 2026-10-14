@@ -77,4 +77,14 @@ PocketThrough Body CutProfile Through forward
 PocketFace Body CutProfile Stopped Face5 forward
 
 Use a separate unused owned sketch for each feature; the examples are alternatives. Pad grows along the sketch normal, Pocket cuts opposite it; reverse flips that direction. Symmetric uses half the total length on each side. Through-all uses original FreeCAD Type=ThroughAll and cuts in the selected direction; place the sketch on or beyond the entry face. Face stopping uses original UpToFace on one planar face of the preceding owned Body solid, parallel to the sketch plane and ahead in the cut direction. Inspect source FaceN with ElementInfo before cutting. The native face link stays in the feature history; topology changes can invalidate it and are rejected. Both cuts must retain one valid solid and remove material.
-Set Length with units for length extents. Set Reversed true/false for one-sided extents; invalid/no-removal direction edits roll back. Through/face extents have no editable Length. Two sides, taper, offset, custom vectors, curved stopping faces, UpToFirst/Last/Shape, Pad face stopping and arbitrary external stopping references remain pending.
+Set Length with units for length extents. Set Reversed true/false for one-sided extents; invalid/no-removal direction edits roll back. Through/face extents have no editable Length. Two sides, taper, offset, custom vectors, curved stopping faces, other stopping modes and UpToShape and arbitrary external stopping references remain pending.
+
+ADDITIONAL NATIVE EXTENTS (1.18)
+PadFace Body AddProfile ToFace Face6 forward
+PadLast Body AddProfile ToLast forward
+PocketFirst Body CutProfile ToFirst forward
+PadTwo Body Profile TwoSides 4 6
+PocketTwo Body CutProfile TwoCuts 2 3
+
+Each example uses a separate unused owned sketch and the current last solid Tip. PadFace links a planar face of the preceding owned solid, parallel to the sketch and ahead in its extrusion direction. Unlike Pocket, forward Pad follows the positive sketch normal. PadLast uses original UpToLast and PocketFirst uses original UpToFirst; the source is bounded to64faces/256edges and the native kernel chooses the stop. Stopping Pad must add material and remain connected; Pocket must remove material and retain one solid. Invalid/no-op/disconnected changes roll back. Native named face links may be invalidated by topology edits.
+Two sides uses original SideType=Two sides, Type/Type2=Length, separate positive Length and Length2, total at most1,000,000mm. Direction is fixed: Length follows the feature's default direction (Pad positive normal; Pocket negative normal), Length2 uses the opposite direction. Set TwoSides.Length2 1 cm edits the second side with units. Symmetric retains its previous meaning of one total length split equally. Stopping extents have no editable Length. Arbitrary second-side stopping, taper/offset/custom vectors, curved/external explicit stopping references, PadUpToFirst and UpToShape remain pending.

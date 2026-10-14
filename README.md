@@ -80,3 +80,7 @@ Application source is LGPL-2.1-or-later; each upstream component retains its own
 1.2/code28 adds original Sketcher trim, line extend/shorten, connected-line corner fillet and curve split. Native constraint updates, rollback, Undo/Redo and FCStd are covered by1,310 Sketcher checks. Full GitHub release, non-debuggable APK, retained update certificate. Device qualification and full desktop parity remain pending. Turkish/German controls and guides include669 reviewed entries each.
 
 1.3/code29 adds native mirror copies, rectangular arrays with optional constrained spacing, axis/point symmetry, and driving/reference measurements.1438 Sketcher checks pass, including native updates, history and FCStd.673 reviewed TR/DE strings and guides. The full release is non-debuggable; device/full desktop qualification remains pending.
+
+## Development batch1.18
+
+Native PadUpToFace, PadUpToLast, PocketUpToFirst and two-sided Length/Length2 adapters, ownership/history/zero-taper/reference/budget guards and EN/TR/DE controls are implemented. Existing1,149nativeJNI regressions pass; the expanded new-mode suite and signedAPK qualification are in progress. The latest verified full release remains1.17 until1.18 publication is independently checked.

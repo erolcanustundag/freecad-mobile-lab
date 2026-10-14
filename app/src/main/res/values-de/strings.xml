@@ -258,6 +258,7 @@
   <string name="ui_a4e8a4e3e601" formatted="false">"Bearbeitungsmaß (mm)"</string>
   <string name="ui_ebb5cdcc120b" formatted="false">"Erster Körper"</string>
   <string name="ui_f94e25075b34" formatted="false">"Erster Wert"</string>
+  <string name="ui_bc410fa81171" formatted="false">"Länge der ersten Seite (mm)"</string>
   <string name="ui_e0c6bc5b780d" formatted="false">"Einpassen / Ansicht"</string>
   <string name="ui_c02484cb2ff4" formatted="false">"Alle sichtbaren Objekte einpassen"</string>
   <string name="ui_231d301768c6" formatted="false">"Auswahl einpassen"</string>
@@ -380,9 +381,12 @@
   <string name="ui_8c3297a25f30" formatted="false">"Natives skaliertes Körpermuster"</string>
   <string name="ui_090c75239902" formatted="false">"Native Körperwandstärke"</string>
   <string name="ui_c5011646220e" formatted="false">"Native Aufpolsterung"</string>
+  <string name="ui_8f5e43dc94e5" formatted="false">"Native Aufpolsterung bis Fläche"</string>
+  <string name="ui_26146bc171a8" formatted="false">"Native Aufpolsterung bis zur letzten Fläche"</string>
   <string name="ui_4862367a4934" formatted="false">"Originale Part-Volumenoperation"</string>
   <string name="ui_871cb729cd33" formatted="false">"Native Part-Platzierung"</string>
   <string name="ui_788019d78b2d" formatted="false">"Native Tasche"</string>
+  <string name="ui_55b6979271bb" formatted="false">"Native Tasche bis erste Fläche"</string>
   <string name="ui_bbd45dd10ebf" formatted="false">"Nativer additiver Loft"</string>
   <string name="ui_45211683ce7b" formatted="false">"Nativer Quader"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Nativer Kegel"</string>
@@ -412,6 +416,8 @@
   <string name="ui_0888b5eb8ee9" formatted="false">"Nativer subtraktiver Loft"</string>
   <string name="ui_633ab45f6fa4" formatted="false">"Native durchgehende Tasche"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Nativer Torus"</string>
+  <string name="ui_ebfa6c174f0a" formatted="false">"Native zweiseitige Aufpolsterung"</string>
+  <string name="ui_16efeb775bf2" formatted="false">"Native zweiseitige Tasche"</string>
   <string name="ui_7aaa9ab32d7f" formatted="false">"Originale Vereinigung"</string>
   <string name="ui_72a680321ead" formatted="false">"Nativer Keil"</string>
   <string name="ui_b3b46e64b67d" formatted="false">"Navigationswürfel"</string>
@@ -589,6 +595,7 @@
   <string name="ui_d8a9144ff3eb" formatted="false">"Skriptbasierter QuantityDriver"</string>
   <string name="ui_9b473b2aa252" formatted="false">"Nach Name, Typ, ID oder Ebene suchen"</string>
   <string name="ui_d4f1dc7e77fd" formatted="false">"Zweiter Körper / Werkzeug"</string>
+  <string name="ui_32881ea07517" formatted="false">"Länge der zweiten Seite (mm)"</string>
   <string name="ui_37173572d666" formatted="false">"Querschnittsskizze"</string>
   <string name="ui_8598222918d3" formatted="false">"Auswählen"</string>
   <string name="ui_cf5fe0f398bb" formatted="false">"Körper-Tip auswählen"</string>
