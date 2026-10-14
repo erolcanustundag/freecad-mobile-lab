@@ -1,5 +1,7 @@
 # FreeCAD Mobile Lab
 
+Development1.16/code42: original Body mirror/linear/polar/scaled patterns pass777realJNI checks; native repetition guards and EN/TR/DE controls/guides included. Final regressions and release packaging in progress; latest published release1.15.
+
 **Current release: 1.15 / Android version code 41, current mobile feature set.** Native CAD for ARM64 Android 8+ (min API26, target35). **Full desktop FreeCAD/Rhino parity and the original comprehensive qualification milestone are NOT COMPLETE.** This is an independent project, not an official FreeCAD Android release.
 
 The main workspace uses OCCT 7.9.2 and the upstream FreeCAD PlaneGCS solver. An optional document lab embeds upstream FreeCAD 1.1.4 Base/App, CPython3.13 and headless Qt6.8.3. Models stay on the device; the app requests no network permission.

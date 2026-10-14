@@ -57,3 +57,13 @@ Preview Body 0.2
 For separate10mm boxes/Bodies: BodyChamfer BevelBody Beveled 1 1 creates an equal-distance chamfer. BodyDraft DraftBody Drafted 1 5 5 drafts face1 by5degrees, using face5 as neutral plane and the original Body local Z axis. BodyThickness ShellBody Hollow 6 1 opens face6 and creates an inward1mm skin wall.
 
 Limits:1–32 explicit fillet/chamfer edges;1–16 draft/open faces; positive amounts below the minimum source extent. Inward skin/arc thickness is below half the minimum extent, retains a face and removes actual interior material. Draft is planar, positive up to45degrees, with a different neutral plane perpendicular to local Z. Failures roll back. Unit edits, source updates, Undo/Redo, safe removal, FCStd and STEP preserve supported history. Move the whole Body; member feature placement follows its history. Api PartDesign and the Python console expose the original module. Other modes, arbitrary pull axes, variable radii, patterns, Gui and full workbench qualification remain pending. Android1.15 execution is not yet verified.
+
+1.16 · Original Body patterns
+BodyMirror BODY NAME XY|XZ|YZ
+BodyLinear BODY NAME COUNT EXTENT_MM X|Y|Z
+BodyPolar BODY NAME COUNT ANGLE_DEG X|Y|Z
+BodyScaled BODY NAME COUNT FACTOR
+
+Start from one last owned additive Pad/Revolution/AdditiveLoft, with up to64faces/256edges. Patterns use original Features mode and whole original Body origin axes/planes. Counts include the original and are bounded2–16 before recomputation. Linear is one forward total extent; Polar is forward total angle up to360degrees; Scaled grows from1 to a factor greater than1 and at most4 about the native source centre. Copies must form one connected solid. Spacing, second directions, multiple sources, subtractive/dress-up/pattern sources and other modes remain pending.
+
+For a10mm rectangular Pad occupying x0–10/y0–10/z0–10: BodyMirror Body Mirrored XZ gives2000mm3; on separate identical Bodies BodyLinear Body Linear 2 8 X gives1800, BodyPolar Body Polar 4 360 Z gives4000, and BodyScaled Body Scaled 2 2 gives8000. These are native unions, not summed overlapping volumes. Set Linear.Length 1 cm, Set Polar.Angle 270 deg, Set Scaled.Factor 3 and Set Linear.Occurrences 3 update original features. Tip/history/source updates/rollback/FCStd/STEP are supported. Physical Android1.16 execution remains unverified.

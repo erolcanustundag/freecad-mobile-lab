@@ -740,3 +740,12 @@ Face numbers (1-based)|Yüz numaraları (1'den başlar)|Flächennummern (ab 1)
 Edge numbers (1-based)|Kenar numaraları (1'den başlar)|Kantennummern (ab 1)
 Finishing amount (mm)|Bitirme miktarı (mm)|Bearbeitungsmaß (mm)
 Neutral face number|Nötr yüz numarası|Nummer der neutralen Fläche
+Native Body mirror|Yerel gövde aynalama|Native Körperspiegelung
+Native Body linear pattern|Yerel doğrusal gövde örüntüsü|Natives lineares Körpermuster
+Native Body polar pattern|Yerel dairesel gövde örüntüsü|Natives polares Körpermuster
+Native Body scaled pattern|Yerel ölçekli gövde örüntüsü|Natives skaliertes Körpermuster
+Body plane (XY/XZ/YZ)|Gövde düzlemi (XY/XZ/YZ)|Körperebene (XY/XZ/YZ)
+Body axis (X/Y/Z)|Gövde ekseni (X/Y/Z)|Körperachse (X/Y/Z)
+Occurrences (2–16)|Örnek sayısı (2–16)|Vorkommen (2–16)
+Total extent (mm)|Toplam uzunluk (mm)|Gesamtausdehnung (mm)
+Growth factor (1–4)|Büyütme katsayısı (1–4)|Vergrößerungsfaktor (1–4)

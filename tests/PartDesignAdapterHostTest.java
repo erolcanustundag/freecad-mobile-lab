@@ -87,6 +87,28 @@ public final class PartDesignAdapterHostTest {
         cmd("Begin \"Atomic finishing\"");cmd("Set Rounded.Radius 2 mm");bad("Set Hollow.Value 5 mm");volume("FilletBody",1000-10*(1-Math.PI/4));
         cmd("ExportStep ThicknessBody Finishing.step");cmd("ImportStep ShellCopy Finishing.step");volume("ShellCopy",424);
         cmd("RemoveBodyFeature ThicknessBody Hollow");volume("ThicknessBody",1000);cmd("Undo");volume("ThicknessBody",424);cmd("Close");cmd("Open Finishing.FCStd");volume("ThicknessBody",424);volume("FilletBody",1000-10*(1-Math.PI/4));volume("DraftBody",drafted);
+        cmd("NewDoc PatternDesign");
+        for(String name:new String[]{"MirrorBody","LinearBody","PolarBody","ScaleBody"}){
+            cmd("Body "+name);cmd("BodySketch "+name+" "+name+"Profile");String profile=name+"Profile";
+            cmd("SketchLine "+profile+" 0 0 10 0");cmd("SketchLine "+profile+" 10 0 10 10");cmd("SketchLine "+profile+" 10 10 0 10");cmd("SketchLine "+profile+" 0 10 0 0");
+            for(int i=0;i<4;i++)cmd("Constraint "+profile+" Block "+i);
+            cmd("Pad "+name+" "+profile+" "+name+"Pad 10");
+        }
+        cmd("BodyMirror MirrorBody Mirrored XZ");volume("Mirrored",2000);volume("MirrorBody",2000);
+        cmd("BodyLinear LinearBody Linear 2 8 X");volume("Linear",1800);cmd("Set Linear.Length 1 cm");volume("LinearBody",2000);cmd("Undo");volume("LinearBody",1800);cmd("Set Linear.Occurrences 3");volume("LinearBody",1800);cmd("Undo");
+        cmd("BodyPolar PolarBody Polar 4 360 Z");volume("Polar",4000);cmd("Set Polar.Angle 270 deg");volume("PolarBody",4000);cmd("Undo");
+        cmd("BodyScaled ScaleBody Scaled 2 2");volume("Scaled",8000);cmd("Set Scaled.Factor 3");volume("ScaleBody",27000);cmd("Undo");volume("ScaleBody",8000);
+        python("d=App.ActiveDocument\nassert d.Linear.TypeId=='PartDesign::LinearPattern'\nassert d.Linear.Originals==[d.LinearBodyPad]\nassert d.Polar.Axis[0].Role=='Z_Axis'\nassert d.Mirrored.MirrorPlane[0].Role=='XZ_Plane'\nassert d.Scaled.TransformMode=='Features'");
+        for(String c:new String[]{"Set Linear.Occurrences 1","Set Linear.Occurrences 17","Set Polar.Occurrences 1000000","Set Scaled.Factor 1","Set Scaled.Factor 5","Set Linear.Length 0 mm","Set Polar.Angle 361 deg","Set Linear.Reversed true","Set Linear.Occurrences2 2","BodyLinear LinearBody Nested 2 8 X","BodyMirror ScaleBody Unsupported XY"})bad(c);
+        cmd("Set LinearBodyPad.Length 20 mm");volume("LinearBody",3600);cmd("Undo");volume("LinearBody",1800);
+        cmd("PartPlacement MirrorBody 1 2 3 0 30 0");volume("MirrorBody",2000);cmd("Undo");
+        cmd("BodyTip LinearBody LinearBodyPad");bad("BodyLinear LinearBody Detached 2 20 X");cmd("BodyTip LinearBody Linear");
+        cmd("Save Patterns.FCStd");
+        python("import zipfile,xml.etree.ElementTree as ET,mobile_core\nroot=mobile_core._root\nwith zipfile.ZipFile(root/'Patterns.FCStd') as z:saved={n:z.read(n) for n in z.namelist()}\nfor filename,obj,prop,tag,value in [('Count','Linear','Occurrences','Integer','1000000000'),('Scale','Scaled','Factor','Float','1000000'),('Mode','Polar','Mode','Integer','1')]:\n    tree=ET.fromstring(saved['Document.xml'])\n    tree.find(\"./ObjectData/Object[@name='\"+obj+\"']/Properties/Property[@name='\"+prop+\"']/\"+tag).set('value',value)\n    with zipfile.ZipFile(root/('BadPattern'+filename+'.FCStd'),'w') as z:\n        for n,b in saved.items():z.writestr(n,ET.tostring(tree) if n=='Document.xml' else b)");
+        for(String name:new String[]{"Count","Scale","Mode"})bad("Open BadPattern"+name+".FCStd");volume("LinearBody",1800);
+        cmd("Begin \"Atomic pattern\"");cmd("Set Scaled.Factor 3");bad("Set Linear.Occurrences 17");volume("ScaleBody",8000);
+        cmd("ExportStep ScaleBody Scaled.step");cmd("ImportStep PatternCopy Scaled.step");volume("PatternCopy",8000);
+        cmd("RemoveBodyFeature LinearBody Linear");volume("LinearBody",1000);cmd("Undo");volume("LinearBody",1800);cmd("Close");cmd("Open Patterns.FCStd");volume("MirrorBody",2000);volume("LinearBody",1800);volume("PolarBody",4000);volume("ScaleBody",8000);
         cmd("NewDoc ObjectBudget");python("d=App.ActiveDocument\nfor i in range(992):d.addObject('App::FeaturePython','Metadata'+str(i))");bad("Body Overflow");python("assert len(App.ActiveDocument.Objects)==992\nassert App.ActiveDocument.getObject('Overflow') is None");
         cmd("Remove Metadata991");cmd("Body ExactBudget");python("assert len(App.ActiveDocument.Objects)==1000");bad("BodySketch ExactBudget OverBudget");cmd("Close");
         check(SignalProbe.preserved(),"JVM signals preserved after full workflow");System.out.println("PASS: "+checks+" original PartDesign JNI workflow checks");

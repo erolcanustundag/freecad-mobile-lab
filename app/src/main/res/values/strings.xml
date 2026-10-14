@@ -224,10 +224,12 @@
   <string name="ui_718a7e8a582e" formatted="false">"Body"</string>
   <string name="ui_b9e14a17aa5d" formatted="false">"Body A"</string>
   <string name="ui_66640b70e2fc" formatted="false">"Body B"</string>
-  <string name="ui_b942443c73c7" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyFillet Body Rounded 1 1\nBodyChamfer Body Beveled 1 1\nBodyDraft Body Drafted 1 5 5\nBodyThickness Body Hollow 6 1\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, one-sided length Pad/Pocket, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Finishing uses current edge/face numbers on the last solid Tip; fillet/chamfer explicit edges, planar Z-axis draft up to45degrees and inward skin thickness are bounded. Other modes, arbitrary lofts, reorder and patterns remain pending."</string>
+  <string name="ui_c11fbcf741cc" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyFillet Body Rounded 1 1\nBodyChamfer Body Beveled 1 1\nBodyDraft Body Drafted 1 5 5\nBodyThickness Body Hollow 6 1\nBodyMirror Body Mirrored XZ\nBodyLinear Body Linear 2 8 X\nBodyPolar Body Polar 4 360 Z\nBodyScaled Body Scaled 2 2\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, one-sided length Pad/Pocket, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Finishing uses current edge/face numbers on the last solid Tip; fillet/chamfer explicit edges, planar Z-axis draft up to45degrees and inward skin thickness are bounded. Patterns use one last owned additive Pad/Revolution/Loft, whole Body origin references,2–16 occurrences and bounded extents/scale. Other modes, arbitrary lofts, multi-source patterns and reorder remain pending."</string>
+  <string name="ui_b8ef18d5b319" formatted="false">"Body axis (X/Y/Z)"</string>
   <string name="ui_db4ecb85e22a" formatted="false">"Body from native solid"</string>
   <string name="ui_2041a45c8dc7" formatted="false">"Body guide"</string>
   <string name="ui_c4d759fa8ad2" formatted="false">"Body history"</string>
+  <string name="ui_4604624e0705" formatted="false">"Body plane (XY/XZ/YZ)"</string>
   <string name="ui_bfd562c05360" formatted="false">"BodyChamfer"</string>
   <string name="ui_921df9efefcf" formatted="false">"BodyDraft "</string>
   <string name="ui_cacbad1796f1" formatted="false">"BodyFillet"</string>
@@ -714,6 +716,7 @@
   <string name="ui_285b2e7f6ef8" formatted="false">"Group label exceeds 80 characters"</string>
   <string name="ui_18e8625bd53c" formatted="false">"Group label too long"</string>
   <string name="ui_6ef096c70437" formatted="false">"Group membership"</string>
+  <string name="ui_7322951ad806" formatted="false">"Growth factor (1–4)"</string>
   <string name="ui_bf073fae640d" formatted="false">"Guide"</string>
   <string name="ui_74a1fb4086cf" formatted="false">"Guide · offline tutorials"</string>
   <string name="ui_c166015199fe" formatted="false">"Heal"</string>
@@ -860,6 +863,7 @@
   <string name="ui_38c2a0ff8f19" formatted="false">"Length property"</string>
   <string name="ui_ea9676003762" formatted="false">"Line"</string>
   <string name="ui_77798131a4eb" formatted="false">"Line x1 y1 z1 x2 y2 z2"</string>
+  <string name="ui_af502f2b37ee" formatted="false">"Linear"</string>
   <string name="ui_24e92c277f48" formatted="false">"Linear array"</string>
   <string name="ui_09f2903343d1" formatted="false">"Linear tolerance (mm) · 0.005 fine, 0.015 normal, 0.1 coarse"</string>
   <string name="ui_d0517071aa37" formatted="false">"Link"</string>
@@ -927,6 +931,7 @@
   <string name="ui_48065392c2e7" formatted="false">"Mirror copy across plane"</string>
   <string name="ui_ef4038389812" formatted="false">"Mirror pointX pointY pointZ normalX normalY normalZ"</string>
   <string name="ui_892d7a64b2a3" formatted="false">"Mirror sketch geometry"</string>
+  <string name="ui_58b23e1d842a" formatted="false">"Mirrored"</string>
   <string name="ui_5e2a63c36aac" formatted="false">"Missing closing parenthesis"</string>
   <string name="ui_fbab88ba15fd" formatted="false">"Missing component "</string>
   <string name="ui_1468442e0847" formatted="false">"Missing expression value"</string>
@@ -973,7 +978,11 @@
   <string name="ui_e130677bc9b5" formatted="false">"Native Body draft"</string>
   <string name="ui_7b5649cd9695" formatted="false">"Native Body fillet"</string>
   <string name="ui_16711084dc3b" formatted="false">"Native Body groove"</string>
+  <string name="ui_9146c874bc12" formatted="false">"Native Body linear pattern"</string>
+  <string name="ui_2228a8f08d5d" formatted="false">"Native Body mirror"</string>
+  <string name="ui_2e12bc3c6f6f" formatted="false">"Native Body polar pattern"</string>
   <string name="ui_70a414f8d8ac" formatted="false">"Native Body revolution"</string>
+  <string name="ui_8c3297a25f30" formatted="false">"Native Body scaled pattern"</string>
   <string name="ui_090c75239902" formatted="false">"Native Body thickness"</string>
   <string name="ui_c5011646220e" formatted="false">"Native Pad"</string>
   <string name="ui_4862367a4934" formatted="false">"Native Part boolean"</string>
@@ -1058,6 +1067,7 @@
   <string name="ui_72a83add2c5e" formatted="false">"Objects"</string>
   <string name="ui_9adab2b1431c" formatted="false">"Objects / layers"</string>
   <string name="ui_dc3cd00d4b38" formatted="false">"Objects and layers"</string>
+  <string name="ui_2dfdc416f890" formatted="false">"Occurrences (2–16)"</string>
   <string name="ui_10a737d901b1" formatted="false">"Offline guide"</string>
   <string name="ui_ce667716547f" formatted="false">"Offset"</string>
   <string name="ui_5721351c711c" formatted="false">"Offset CAD shape"</string>
@@ -1173,6 +1183,7 @@
   <string name="ui_fea76ed393b7" formatted="false">"PointOnObject"</string>
   <string name="ui_00faad25c567" formatted="false">"PointOnObject 0 1 -1"</string>
   <string name="ui_2725a26b9f78" formatted="false">"Points must be finite"</string>
+  <string name="ui_b64fba6378c3" formatted="false">"Polar"</string>
   <string name="ui_d3467ec940ec" formatted="false">"Polar array"</string>
   <string name="ui_cfc2fc53ec07" formatted="false">"PolarArray"</string>
   <string name="ui_2ad3ca2c12df" formatted="false">"PolarArray count centreX centreY centreZ angle"</string>
@@ -1625,6 +1636,7 @@
   <string name="ui_d79e66257f8d" formatted="false">"Topology · indexed edges/faces"</string>
   <string name="ui_bb051365c738" formatted="false">"Torus"</string>
   <string name="ui_e33fcef6ef7e" formatted="false">"Total Z-axis angle (degrees)"</string>
+  <string name="ui_7338cfbcd713" formatted="false">"Total extent (mm)"</string>
   <string name="ui_132e2942c167" formatted="false">"Trace saved: "</string>
   <string name="ui_15cc58b37196" formatted="false">"Trace unavailable: "</string>
   <string name="ui_a327452c36ed" formatted="false">"Transaction open · commit or cancel to finish"</string>
@@ -1775,6 +1787,7 @@
   <string name="ui_7f5a68f0039c" formatted="false">"XY tangent orientation (0/1)"</string>
   <string name="ui_717c4ecc7239" formatted="false">"XYZ"</string>
   <string name="ui_026fd0cae7ea" formatted="false">"XYZ +/-10,000 mm; weight .001 to 1000"</string>
+  <string name="ui_4832fef261c6" formatted="false">"XZ"</string>
   <string name="ui_6c154ffc540d" formatted="false">"Y (mm)"</string>
   <string name="ui_732f2f64f131" formatted="false">"Y degrees"</string>
   <string name="ui_59a3dfe477fe" formatted="false">"Y mm"</string>

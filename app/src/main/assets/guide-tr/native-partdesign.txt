@@ -57,3 +57,13 @@ Preview Body 0.2
 Ayrı10mm küpler/gövdeler için: BodyChamfer BevelBody Beveled 1 1 eşit mesafeli pah açar. BodyDraft DraftBody Drafted 1 5 5 yüz1'i5derece eğimler; yüz5 nötr düzlem, çekme yönü özgün yerel Z eksenidir. BodyThickness ShellBody Hollow 6 1 yüz6'yı açar ve içeri doğru1mm duvar oluşturur.
 
 Sınırlar: yuvarlatma/pah için1–32 kenar; kalıp açısı/kabuk için1–16 yüz; pozitif miktar en küçük kaynak boyutundan az olmalı. İçeri doğru skin/arc kabuk kalınlığı bu boyutun yarısından az olmalı; en az bir yüz kalmalı ve iç malzeme çıkmalıdır. Kalıp açısı düzlemsel, pozitif ve en fazla45derecedir; nötr yüz ayrı ve yerel Z'ye dik olmalıdır. Başarısız değişiklik geri alınır. Birimli düzenleme, kaynak değişimi, Undo/Redo, güvenli silme, FCStd ve STEP desteklenir. Gövdenin tamamı taşınabilir; üyelerin yerleşimini geçmiş yönetir. Api PartDesign ve Python konsolu özgün modülü gösterir. Diğer modlar, serbest eksenler, değişken yarıçaplar, örüntüler, Gui ve tam çalışma tezgâhı desteği henüz tamamlanmadı.1.15 Android cihaz testi yapılmadı.
+
+1.16 · Özgün gövde örüntüleri
+BodyMirror BODY NAME XY|XZ|YZ
+BodyLinear BODY NAME COUNT EXTENT_MM X|Y|Z
+BodyPolar BODY NAME COUNT ANGLE_DEG X|Y|Z
+BodyScaled BODY NAME COUNT FACTOR
+
+Kaynak son gövdeye ait tek katı ekleyen Pad/Revolution/AdditiveLoft olmalı; en fazla64yüz/256kenar. Özgün Features modu ve gövdenin özgün eksen/düzlemleri kullanılır. İlk parça dahil örnek sayısı, hesaplama öncesinde2–16ile sınırlanır. Doğrusal örüntü tek yönde toplam uzunluk; dairesel örüntü en fazla360derece; ölçekli örüntü yerel kaynak merkezi etrafında1'den büyük, en fazla4katsayıya büyür. Kopyalar tek bağlı katı oluşturmalı. Aralık modu, ikinci yön, çoklu kaynak, çıkarıcı/bitirme/örüntü kaynakları ve diğer modlar henüz desteklenmez.
+
+x0–10/y0–10/z0–10boyutlu Pad için: ayrı gövdelerde BodyMirror Body Mirrored XZ hacim2000; BodyLinear Body Linear 2 8 X hacim1800; BodyPolar Body Polar 4 360 Z hacim4000; BodyScaled Body Scaled 2 2 hacim8000mm3verir. Örtüşen hacimler toplanmaz, özgün birleşim hesaplanır. Set Linear.Length 1 cm, Set Polar.Angle 270 deg, Set Scaled.Factor 3 ve Set Linear.Occurrences 3 parametreleri günceller. Uç/geçmiş/kaynak güncelleme/geri alma/FCStd/STEP desteklenir.1.16Android cihaz testi yapılmadı.

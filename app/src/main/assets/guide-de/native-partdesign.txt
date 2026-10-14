@@ -57,3 +57,13 @@ Preview Body 0.2
 Für separate10mm-Würfel/Körper: BodyChamfer BevelBody Beveled 1 1 erzeugt eine Fase mit gleichem Abstand. BodyDraft DraftBody Drafted 1 5 5 neigt Fläche1 um5Grad; Fläche5 ist neutral, Zugrichtung ist die originale lokale Z-Achse. BodyThickness ShellBody Hollow 6 1 öffnet Fläche6 und erzeugt eine1mm-Innenwand.
 
 Grenzen:1–32 explizite Verrundungs-/Fasenkanten;1–16 Formschrägen-/Öffnungsflächen; positive Maße unter der kleinsten Quellausdehnung. Innenwandstärke im Skin/Arc-Modus unter der halben kleinsten Ausdehnung; mindestens eine Fläche bleibt, Innenmaterial muss entfernt werden. Formschräge planar, positiv bis45Grad; neutrale Fläche verschieden und senkrecht zur lokalen Z-Achse. Fehler rollen Änderungen zurück. Einheiten, Quelländerungen, Undo/Redo, sicheres Entfernen, FCStd und STEP erhalten den Verlauf. Ganze Körper versetzen; Featureplatzierung folgt dem Verlauf. Api PartDesign und Python-Konsole zeigen das originale Modul. Weitere Modi, freie Achsen, variable Radien, Muster, Gui und vollständige Workbench-Qualifikation bleiben offen. Android1.15 wurde noch nicht auf einem Gerät geprüft.
+
+1.16 · Originale Körpermuster
+BodyMirror BODY NAME XY|XZ|YZ
+BodyLinear BODY NAME COUNT EXTENT_MM X|Y|Z
+BodyPolar BODY NAME COUNT ANGLE_DEG X|Y|Z
+BodyScaled BODY NAME COUNT FACTOR
+
+Quelle ist das letzte eigene additive Pad/Revolution/AdditiveLoft mit höchstens64Flächen/256Kanten. Verwendet werden originales Features-Verfahren und ursprüngliche Körperachsen/-ebenen. Vorkommen einschließlich Original werden vor der Berechnung auf2–16begrenzt. Linear: eine Vorwärtsrichtung mit Gesamtausdehnung. Polar: Gesamtwinkel bis360Grad. Skaliert: Wachstum vomOriginal bis Faktor größer als1, höchstens4, um den nativen Quellmittelpunkt. Kopien müssen einen zusammenhängenden Volumenkörper ergeben. Abstand, zweite Richtungen, mehrere Quellen, subtraktive/Bearbeitungs-/Musterquellen und weitere Modi bleiben offen.
+
+Für ein10mm-Pad x0–10/y0–10/z0–10: auf separaten Körpern ergeben BodyMirror Body Mirrored XZ=2000, BodyLinear Body Linear 2 8 X=1800, BodyPolar Body Polar 4 360 Z=4000 und BodyScaled Body Scaled 2 2=8000mm3. Native Vereinigung, keine Addition überlappender Volumen. Set Linear.Length 1 cm, Set Polar.Angle 270 deg, Set Scaled.Factor 3 und Set Linear.Occurrences 3 aktualisieren Parameter. Tip/Verlauf/Quelländerungen/Zurückrollen/FCStd/STEP unterstützt. Android1.16 wurde noch nicht auf einem Gerät geprüft.

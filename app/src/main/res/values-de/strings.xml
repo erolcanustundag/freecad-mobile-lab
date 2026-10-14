@@ -52,9 +52,11 @@
   <string name="ui_df5eaf37f6db" formatted="false">"Binär-STL · sichtbare Geometrie"</string>
   <string name="ui_7d44bc449c2a" formatted="false">"Blau"</string>
   <string name="ui_718a7e8a582e" formatted="false">"Körper"</string>
+  <string name="ui_b8ef18d5b319" formatted="false">"Körperachse (X/Y/Z)"</string>
   <string name="ui_db4ecb85e22a" formatted="false">"Körper aus nativem Volumenkörper"</string>
   <string name="ui_2041a45c8dc7" formatted="false">"Körperanleitung"</string>
   <string name="ui_c4d759fa8ad2" formatted="false">"Körperverlauf"</string>
+  <string name="ui_4604624e0705" formatted="false">"Körperebene (XY/XZ/YZ)"</string>
   <string name="ui_daf760a167a8" formatted="false">"Boolescher Wert"</string>
   <string name="ui_e772bc4d3e48" formatted="false">"Boolesche Operationen / Abrunden"</string>
   <string name="ui_cce7f2f2f0dc" formatted="false">"Unten"</string>
@@ -274,6 +276,7 @@
   <string name="ui_b37e49a1decb" formatted="false">"Gruppenbezeichnung (optional)"</string>
   <string name="ui_285b2e7f6ef8" formatted="false">"Gruppenbezeichnung überschreitet 80 Zeichen"</string>
   <string name="ui_6ef096c70437" formatted="false">"Gruppenzugehörigkeit"</string>
+  <string name="ui_7322951ad806" formatted="false">"Vergrößerungsfaktor (1–4)"</string>
   <string name="ui_bf073fae640d" formatted="false">"Anleitung"</string>
   <string name="ui_63edab638bb0" formatted="false">"CAD-Form reparieren"</string>
   <string name="ui_c0df957feb34" formatted="false">"Höhe (mm)"</string>
@@ -368,7 +371,11 @@
   <string name="ui_e130677bc9b5" formatted="false">"Native Körperformschräge"</string>
   <string name="ui_7b5649cd9695" formatted="false">"Native Körperverrundung"</string>
   <string name="ui_16711084dc3b" formatted="false">"Native Drehungsaussparung"</string>
+  <string name="ui_9146c874bc12" formatted="false">"Natives lineares Körpermuster"</string>
+  <string name="ui_2228a8f08d5d" formatted="false">"Native Körperspiegelung"</string>
+  <string name="ui_2e12bc3c6f6f" formatted="false">"Natives polares Körpermuster"</string>
   <string name="ui_70a414f8d8ac" formatted="false">"Native Körperrotation"</string>
+  <string name="ui_8c3297a25f30" formatted="false">"Natives skaliertes Körpermuster"</string>
   <string name="ui_090c75239902" formatted="false">"Native Körperwandstärke"</string>
   <string name="ui_c5011646220e" formatted="false">"Native Aufpolsterung"</string>
   <string name="ui_4862367a4934" formatted="false">"Originale Part-Volumenoperation"</string>
@@ -433,6 +440,7 @@
   <string name="ui_72a83add2c5e" formatted="false">"Objekte"</string>
   <string name="ui_9adab2b1431c" formatted="false">"Objekte / Ebenen"</string>
   <string name="ui_dc3cd00d4b38" formatted="false">"Objekte und Ebenen"</string>
+  <string name="ui_2dfdc416f890" formatted="false">"Vorkommen (2–16)"</string>
   <string name="ui_10a737d901b1" formatted="false">"Offline-Anleitung"</string>
   <string name="ui_5721351c711c" formatted="false">"CAD-Form versetzen"</string>
   <string name="ui_3051e88f42f8" formatted="false">"Ebene Kurve versetzen"</string>
@@ -685,6 +693,7 @@
   <string name="ui_19ed0b0dff13" formatted="false">"Verdrehung des oberen Käfigs (Grad)"</string>
   <string name="ui_1b03f33c6462" formatted="false">"Topologieindizes"</string>
   <string name="ui_bb051365c738" formatted="false">"Torus"</string>
+  <string name="ui_7338cfbcd713" formatted="false">"Gesamtausdehnung (mm)"</string>
   <string name="ui_a327452c36ed" formatted="false">"Transaktion offen · zum Abschließen bestätigen oder abbrechen"</string>
   <string name="ui_dea51bb13a44" formatted="false">"Transformieren"</string>
   <string name="ui_5e139f45b5e7" formatted="false">"Ausgewähltes Modell transformieren"</string>

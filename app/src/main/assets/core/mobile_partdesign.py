@@ -15,9 +15,11 @@ if '_PartDesign' in sys.builtin_module_names:
 TYPES = {'PartDesign::Body', 'PartDesign::FeatureBase', 'PartDesign::Pad', 'PartDesign::Pocket', 'PartDesign::Revolution', 'PartDesign::Groove', 'PartDesign::AdditiveLoft', 'PartDesign::SubtractiveLoft'}
 FRAMES = {'App::Origin', 'App::Line', 'App::Plane', 'App::Point'}
 DRESSUP={'PartDesign::Fillet','PartDesign::Chamfer','PartDesign::Draft','PartDesign::Thickness'}
-TYPES.update(DRESSUP)
+PATTERNS={'PartDesign::Mirrored','PartDesign::LinearPattern','PartDesign::PolarPattern','PartDesign::Scaled'}
+PATTERN_SOURCES={'PartDesign::Pad','PartDesign::Revolution','PartDesign::AdditiveLoft'}
+TYPES.update(DRESSUP|PATTERNS)
 FEATURES = TYPES - {'PartDesign::Body'}
-PROFILE_FEATURES=FEATURES-DRESSUP-{'PartDesign::FeatureBase'}
+PROFILE_FEATURES=FEATURES-DRESSUP-PATTERNS-{'PartDesign::FeatureBase'}
 SCALARS={'PartDesign::Fillet':'Radius','PartDesign::Chamfer':'Size','PartDesign::Draft':'Angle','PartDesign::Thickness':'Value'}
 
 def available():
@@ -98,6 +100,26 @@ def dressup_parameters(kind,source,names,amount,b,neutral=None):
         if len(ids)>=len(source.Shape.Faces) or amount>=minimum/2:raise ValueError('Retain at least one face and use inward wall thickness below half the minimum shape extent')
     elif amount>=minimum:raise ValueError('Finishing amount must be below the minimum shape extent')
 
+def frame(b,role):
+    items=[o for o in b.Origin.OriginFeatures if o.Role==role]
+    if len(items)!=1:raise ValueError('Choose an original Body origin axis/plane')
+    return items[0]
+
+def occurrences(value):
+    if type(value) is not int or not 2<=value<=16:raise ValueError('Pattern occurrences must be integer2–16 including the original')
+    return value
+
+def pattern_parameters(kind,source,count=2,amount=None):
+    solid(source)
+    if source.TypeId not in PATTERN_SOURCES or len(source.Shape.Faces)>64 or len(source.Shape.Edges)>256:raise ValueError('Pattern source must be one bounded owned Pad/Revolution/AdditiveLoft feature')
+    occurrences(count)
+    if kind=='PartDesign::LinearPattern':positive(amount)
+    elif kind=='PartDesign::PolarPattern':angle(amount)
+    elif kind=='PartDesign::Scaled':
+        amount=mobile_sketch.number(amount,4)
+        if not 1+1e-7<amount<=4:raise ValueError('Scaled patterns currently support growth factor greater than1 and at most4')
+        if any(abs(v)*amount>1000000 for v in mobile_part.summary(source)['bounds']):raise ValueError('Scaled geometry would exceed the coordinate budget')
+
 def edit(doc, e, get, identifier):
     require();op=e['op']
     if op=='body_create':
@@ -128,6 +150,27 @@ def edit(doc, e, get, identifier):
         if any(o!=b for o in feature.InList):raise ValueError('Remove dependent features or sketch references first')
         b.Tip=history[-2] if len(history)>1 else None
         b.removeObject(feature);doc.removeObject(feature.Name)
+    elif op in ('body_mirror','body_linear','body_polar','body_scaled'):
+        b=body(get(e['body']));name=identifier(e['name']);fresh(doc,name);doc.recompute();history=solids(b)
+        if not history or b.Tip!=history[-1]:raise ValueError('Select the last solid Tip before creating a pattern')
+        source=history[-1];kind='PartDesign::'+{'body_mirror':'Mirrored','body_linear':'LinearPattern','body_polar':'PolarPattern','body_scaled':'Scaled'}[op]
+        count=occurrences(e['count']) if kind!='PartDesign::Mirrored' else 2
+        amount=e.get('amount');pattern_parameters(kind,source,count,amount)
+        if kind=='PartDesign::Mirrored':
+            plane=e['plane']
+            if plane not in ('XY','XZ','YZ'):raise ValueError('Use an original Body XY/XZ/YZ mirror plane')
+            reference=frame(b,plane+'_Plane')
+        elif kind in ('PartDesign::LinearPattern','PartDesign::PolarPattern'):
+            axis=e['axis']
+            if axis not in ('X','Y','Z'):raise ValueError('Use an original Body X/Y/Z axis')
+            reference=frame(b,axis+'_Axis')
+        obj=b.newObject(kind,name);obj.Originals=[source];obj.TransformMode='Features'
+        if kind=='PartDesign::Mirrored':obj.MirrorPlane=(reference,[''])
+        elif kind=='PartDesign::LinearPattern':
+            obj.Direction=(reference,['']);obj.Mode='Extent';obj.Reversed=False;obj.Direction2=None;obj.Occurrences2=1;obj.Length=positive(amount);obj.Occurrences=count
+        elif kind=='PartDesign::PolarPattern':obj.Axis=(reference,['']);obj.Mode='Extent';obj.Reversed=False;obj.Angle=angle(amount);obj.Occurrences=count
+        else:obj.Factor=amount;obj.Occurrences=count
+        b.Tip=obj
     elif op in ('body_fillet','body_chamfer','body_draft','body_thickness'):
         b=body(get(e['body']));name=identifier(e['name']);fresh(doc,name);doc.recompute();history=solids(b)
         if not history or b.Tip!=history[-1]:raise ValueError('Select the last Body solid Tip before creating a finishing feature')
@@ -175,11 +218,16 @@ def protected(obj):
 
 def editable(obj,name):
     if obj.TypeId in FRAMES:return name=='Label'
-    if obj.TypeId in TYPES:return name=='Label' or obj.TypeId in DRESSUP and name==SCALARS[obj.TypeId] or obj.TypeId in FEATURES-{'PartDesign::FeatureBase'} and name=='Refine' or obj.TypeId in ('PartDesign::Pad','PartDesign::Pocket') and name=='Length' or obj.TypeId in ('PartDesign::Revolution','PartDesign::Groove') and name=='Angle'
+    if obj.TypeId in TYPES:return name=='Label' or obj.TypeId in PATTERNS and (name=='Occurrences' and obj.TypeId!='PartDesign::Mirrored' or name=={'PartDesign::LinearPattern':'Length','PartDesign::PolarPattern':'Angle','PartDesign::Scaled':'Factor'}.get(obj.TypeId)) or obj.TypeId in DRESSUP and name==SCALARS[obj.TypeId] or obj.TypeId in FEATURES-{'PartDesign::FeatureBase'} and name=='Refine' or obj.TypeId in ('PartDesign::Pad','PartDesign::Pocket') and name=='Length' or obj.TypeId in ('PartDesign::Revolution','PartDesign::Groove') and name=='Angle'
     return True
 
 def validate_edit(obj,name,value):
     if not editable(obj,name):raise ValueError('Use Body tools for native ownership, Tip and profile links; this feature mode is read-only')
+    if obj.TypeId in PATTERNS and obj.TypeId!='PartDesign::Mirrored':
+        source=obj.Originals[0];field={'PartDesign::LinearPattern':'Length','PartDesign::PolarPattern':'Angle','PartDesign::Scaled':'Factor'}[obj.TypeId]
+        count=value if name=='Occurrences' else obj.Occurrences
+        amount=value if name==field else getattr(obj,field)
+        pattern_parameters(obj.TypeId,source,count,float(amount.Value) if hasattr(amount,'Value') else amount)
     if obj.TypeId in DRESSUP and name==SCALARS[obj.TypeId]:
         source,names=obj.Base;b=body(owner(obj));neutral=obj.NeutralPlane[1][0] if obj.TypeId=='PartDesign::Draft' else None
         dressup_parameters(obj.TypeId,source,names,value,b,neutral)
@@ -222,7 +270,20 @@ def validate_document(doc):
         previous=None
         for feature in history:
             solid(feature)
-            if feature.TypeId in DRESSUP:
+            if feature.TypeId in PATTERNS:
+                if list(feature.Originals)!=[previous] or feature.BaseFeature!=previous or feature.TransformMode!='Features':raise ValueError('Pattern must transform the preceding owned additive feature')
+                count=feature.Occurrences if feature.TypeId!='PartDesign::Mirrored' else 2
+                amount=feature.Length.Value if feature.TypeId=='PartDesign::LinearPattern' else feature.Angle.Value if feature.TypeId=='PartDesign::PolarPattern' else feature.Factor if feature.TypeId=='PartDesign::Scaled' else None
+                pattern_parameters(feature.TypeId,previous,count,amount)
+                if feature.TypeId=='PartDesign::Mirrored':reference,names=feature.MirrorPlane;roles=['XY_Plane','XZ_Plane','YZ_Plane']
+                elif feature.TypeId=='PartDesign::LinearPattern':
+                    reference,names=feature.Direction;roles=['X_Axis','Y_Axis','Z_Axis']
+                    if feature.Mode!='Extent' or feature.Reversed or feature.Direction2 is not None or feature.Occurrences2!=1:raise ValueError('Linear pattern supports one forward extent direction only')
+                elif feature.TypeId=='PartDesign::PolarPattern':
+                    reference,names=feature.Axis;roles=['X_Axis','Y_Axis','Z_Axis']
+                    if feature.Mode!='Extent' or feature.Reversed:raise ValueError('Polar pattern supports forward extent angle only')
+                if feature.TypeId!='PartDesign::Scaled' and (reference not in origin.OriginFeatures or reference.Role not in roles or list(names)!=['']):raise ValueError('Pattern reference must be a whole original Body axis/plane')
+            elif feature.TypeId in DRESSUP:
                 source,names=feature.Base
                 if source!=previous or feature.BaseFeature!=previous or source not in members:raise ValueError('Body finishing source must be the preceding owned solid')
                 amount=getattr(feature,SCALARS[feature.TypeId]).Value
@@ -309,6 +370,35 @@ def validate_fcstd(tree):
         if tip and (tip not in members or types.get(tip) not in FEATURES):raise ValueError('Saved Tip must be an owned solid feature')
         previous=None
         for feature in members:
+            if types.get(feature) in PATTERNS:
+                kind=types[feature]
+                if links(feature,'Originals')!=[previous] or types.get(previous) not in PATTERN_SOURCES or link(feature,'BaseFeature')!=previous:raise ValueError('Saved pattern needs the preceding owned additive source')
+                n=node(feature,'TransformMode','Integer')
+                if n is None or n.get('value')!='0':raise ValueError('Saved pattern supports Features mode only')
+                if kind!='PartDesign::Mirrored':
+                    n=node(feature,'Occurrences','Integer')
+                    if n is None:raise ValueError('Missing saved pattern count')
+                    occurrences(int(n.get('value','0')))
+                    field={'PartDesign::LinearPattern':'Length','PartDesign::PolarPattern':'Angle','PartDesign::Scaled':'Factor'}[kind]
+                    n=node(feature,field,'Float')
+                    if n is None:raise ValueError('Missing saved pattern amount')
+                    amount=float(n.get('value','nan'))
+                    if kind=='PartDesign::LinearPattern':positive(amount)
+                    elif kind=='PartDesign::PolarPattern':angle(amount)
+                    elif not math.isfinite(amount) or not 1+1e-7<amount<=4:raise ValueError('Saved scale growth factor outside1–4')
+                if kind!='PartDesign::Scaled':
+                    prop={'PartDesign::Mirrored':'MirrorPlane','PartDesign::LinearPattern':'Direction','PartDesign::PolarPattern':'Axis'}[kind]
+                    n=node(feature,prop,'LinkSub');roles=['XY_Plane','XZ_Plane','YZ_Plane'] if kind=='PartDesign::Mirrored' else ['X_Axis','Y_Axis','Z_Axis']
+                    role=node(n.get('value'),'Role','String') if n is not None else None
+                    if n is None or n.get('value') not in links(origin,'OriginFeatures') or n.get('count')!='1' or len(n.findall('Sub'))!=1 or n.find('Sub').get('value')!='' or role is None or role.get('value') not in roles:raise ValueError('Saved pattern must reference a whole owned origin axis/plane')
+                if kind in ('PartDesign::LinearPattern','PartDesign::PolarPattern'):
+                    for prop,tag,value in [('Mode','Integer','0'),('Reversed','Bool','false')]+([('Occurrences2','Integer','1')] if kind=='PartDesign::LinearPattern' else []):
+                        n=node(feature,prop,tag)
+                        if n is None or n.get('value')!=value:raise ValueError('Saved pattern mode is unsupported')
+                    if kind=='PartDesign::LinearPattern':
+                        n=node(feature,'Direction2','LinkSub')
+                        if n is None or n.get('value'):raise ValueError('Saved second pattern direction is unsupported')
+                previous=feature;continue
             if types.get(feature) in DRESSUP:
                 kind=types[feature];base=node(feature,'Base','LinkSub');names=[c.get('value') for c in base.findall('Sub')] if base is not None else []
                 import re
