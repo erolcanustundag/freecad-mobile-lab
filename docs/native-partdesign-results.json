@@ -1,6 +1,6 @@
 {
-  "version": "1.14",
-  "version_code": 40,
+  "version": "1.15",
+  "version_code": 41,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "workflows": [
@@ -11,10 +11,14 @@
     "linked original Revolution",
     "linked original Groove",
     "two-profile original additive ruled Loft",
-    "two-profile original subtractive ruled Loft"
+    "two-profile original subtractive ruled Loft",
+    "original Body fillet",
+    "original Body equal chamfer",
+    "original Body planar Z draft",
+    "original Body inward skin thickness"
   ],
   "checks": {
-    "partdesign_jni": 436,
+    "partdesign_jni": 612,
     "sketcher_regressions": 2324,
     "part_regressions": 269,
     "app_regressions": 88,
@@ -39,13 +43,18 @@
     "extent": "one-sided Length",
     "revolution_angle_deg": 360,
     "loft_profiles": 2,
-    "loft_ruled": true
+    "loft_ruled": true,
+    "finishing_edges": 32,
+    "finishing_faces": 16,
+    "draft_angle_deg": 45
   },
   "pending": [
     "other PartDesign modes/features",
     "free history reordering",
     "Gui/Assembly/full workbench parity",
     "phone qualification",
-    "other axes/directions and loft modes"
+    "other axes/directions and loft modes",
+    "other dress-up modes and variable radii",
+    "native patterns"
   ]
 }

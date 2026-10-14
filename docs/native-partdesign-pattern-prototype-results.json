@@ -1,0 +1,12 @@
+{
+  "status": "HOST_NATIVE_API_PROBE_PASS_MOBILE_PENDING",
+  "freecad": "1.1.4",
+  "geometry_mm3": {
+    "mirrored": 2000,
+    "linear": 1800,
+    "polar": 4000,
+    "scaled": 8000
+  },
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "android_execution": "NOT_RUN"
+}

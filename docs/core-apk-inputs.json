@@ -4189,8 +4189,8 @@
     },
     {
       "path": "scripts/mobile_core.py",
-      "size": 45409,
-      "sha256": "f3cfaee7b00b77f0cd1e6112c7675ce8471fb8bbef6d77fbc3ef8e5dc07520e2"
+      "size": 46001,
+      "sha256": "c475a134f88f4948844f9fd2b0e3ebcbaedc1cfe90cf383cd2d28481c3d4e805"
     },
     {
       "path": "scripts/mobile_features.py",
@@ -4204,8 +4204,8 @@
     },
     {
       "path": "scripts/mobile_partdesign.py",
-      "size": 15184,
-      "sha256": "159fa2cd353f325f8481ea7aacb26be5b533c16fe79bc851f1e92b18a5b4b500"
+      "size": 24061,
+      "sha256": "24da01e677fbba1607aa888836ed95f558d517a947c78049bc1ad88bb9c2c628"
     },
     {
       "path": "scripts/mobile_primitives.py",
@@ -4214,8 +4214,8 @@
     },
     {
       "path": "scripts/mobile_python.py",
-      "size": 7929,
-      "sha256": "1457df08be35e1d70d517d6abe7607aea7e7c09ac5d3bc7b941d96c139cda3e4"
+      "size": 8124,
+      "sha256": "e2941645098ebbb2ad73e439895e3c976376edfff90b7d9001cb50651f8646df"
     },
     {
       "path": "scripts/mobile_sketch.py",
@@ -5483,6 +5483,6 @@
       "sha256": "17e587b5e13ac9851cdbbd769d92a8ba569dcd04dc962f3f24e8a4fec88e47e1"
     }
   ],
-  "asset_zip_sha256": "e7ccf048552541621ef9eeb1b2e3b17fe48b7f3d5ef3167a319760d155c73513",
+  "asset_zip_sha256": "6448f827ebb3cfac5865e417a524493daf1b799340628bbb9112abba35b73ade",
   "java_jar_sha256": "b4b439629c5aa21db9a3b633d77182d0b25b1c381c391fc447e6104be394bb54"
 }

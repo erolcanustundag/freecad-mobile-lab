@@ -180,3 +180,8 @@ Four bounded scopes: original Body/origin/ownership/BaseFeature; Tip and last-fe
 ### 1.14 — original PartDesign rotations and ruled lofts
 
 Four native scopes: Revolution, Groove, additive Loft and subtractive Loft.436 realJNI checks plus2324/269/88/62 regressions; original angles/axes/ownership/sections/geometry/history/FCStd/STEP, failed/nonremoving/disconnected cases, pre-restoration origin and section guards.734TR/DE entries/4guides. Native DLLs retain1.13 bytes; Python and UI match the new sealed APK. FullB08/B09/workbench/Gui/Assembly/Rhino/device gates remain pending; Android1.14 execution NOT_RUN. Next native Body fillet/chamfer/draft/thickness API proof, docs/NEXT-BATCH-1.15.md.
+
+
+### 1.15 — original Body finishing subset
+
+Four genuine workflows: fillet, equal chamfer, planar Z draft and inward skin thickness.612realJNI checks and2324/269/88/62 native regressions; units, selections, source/history, rollback, closed-solid/material-removal, malformed saved modes and origin roles. Body member placement protected; original PartDesign console/API exposed.742TR/DE entries/4guides. NativeDLLs unchanged; sealedPython/UI match APK. Android1.15 NOT_RUN, fullworkbench/device/Rhino gates pending. Next original patterns, see NEXT-BATCH-1.16.md.

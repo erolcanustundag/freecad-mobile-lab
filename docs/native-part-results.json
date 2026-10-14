@@ -1,6 +1,6 @@
 {
-  "version": "1.14",
-  "version_code": 40,
+  "version": "1.15",
+  "version_code": 41,
   "freecad": "1.1.4",
   "occt": "7.9.2",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",

@@ -292,6 +292,13 @@ def validate_fcstd(tree):
         if types.get(origin)!='App::Origin':raise ValueError('Saved Body must reference its complete origin')
         children=links(origin,'OriginFeatures')
         if len(children)!=7 or sorted(types.get(n,'') for n in children)!=sorted(['App::Line']*3+['App::Plane']*3+['App::Point']):raise ValueError('Saved Body origin frames are incomplete')
+        roles={'X_Axis':'App::Line','Y_Axis':'App::Line','Z_Axis':'App::Line','XY_Plane':'App::Plane','XZ_Plane':'App::Plane','YZ_Plane':'App::Plane','Origin':'App::Point'}
+        saved_roles=[]
+        for child in children:
+            role=node(child,'Role','String')
+            if role is None or roles.get(role.get('value'))!=types.get(child):raise ValueError('Saved origin frame roles are invalid')
+            saved_roles.append(role.get('value'))
+        if set(saved_roles)!=set(roles):raise ValueError('Saved Body origin roles must be unique')
         these=set([origin]+children)
         if frames & these:raise ValueError('Saved Bodies cannot share origin frames')
         frames.update(these)
@@ -300,6 +307,7 @@ def validate_fcstd(tree):
         owned.update(members)
         tip=link(name,'Tip')
         if tip and (tip not in members or types.get(tip) not in FEATURES):raise ValueError('Saved Tip must be an owned solid feature')
+        previous=None
         for feature in members:
             if types.get(feature) in DRESSUP:
                 kind=types[feature];base=node(feature,'Base','LinkSub');names=[c.get('value') for c in base.findall('Sub')] if base is not None else []
@@ -307,6 +315,8 @@ def validate_fcstd(tree):
                 selected='Edge' if kind in ('PartDesign::Fillet','PartDesign::Chamfer') else 'Face'
                 maximum=32 if selected=='Edge' else 16
                 if base is None or base.get('value') not in members or types.get(base.get('value')) not in FEATURES or base.get('value')==feature or str(len(names))!=base.get('count') or not 1<=len(names)<=maximum or len(names)!=len(set(names)) or any(not re.fullmatch(selected+r'([1-9][0-9]{0,5})',n or '') for n in names):raise ValueError('Saved finishing selections must reference an owned solid with bounded current names')
+                if base.get('value')!=previous or link(feature,'BaseFeature')!=previous:raise ValueError('Saved finishing source must be the preceding owned solid')
+                previous=feature
                 scalar=node(feature,SCALARS[kind],'Float')
                 if scalar is None:raise ValueError('Missing saved finishing amount')
                 amount=positive(float(scalar.get('value','nan')))
@@ -319,7 +329,9 @@ def validate_fcstd(tree):
                     n=node(feature,prop,tag)
                     if n is None or n.get('value')!=value:raise ValueError('Saved finishing mode is unsupported')
                 continue
+            if types.get(feature)=='PartDesign::FeatureBase':previous=feature;continue
             if types.get(feature) not in PROFILE_FEATURES:continue
+            previous=feature
             profile=node(feature,'Profile','LinkSub')
             if profile is None or profile.get('value') not in members or types.get(profile.get('value')) not in mobile_sketch.TYPES or profile.get('count')!='0':raise ValueError('Saved Body profile must be a whole owned sketch')
             if types[feature] in ('PartDesign::AdditiveLoft','PartDesign::SubtractiveLoft'):

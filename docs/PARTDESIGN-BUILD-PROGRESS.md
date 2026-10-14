@@ -1,4 +1,4 @@
-# Original PartDesign integration — 1.14
+# Original PartDesign integration — 1.15
 
 The genuine FreeCAD1.1.4 PartDesign module builds on Linux x86_64/CPython3.12/Qt5 and ARM64 Android API26/CPython3.13/Qt6.8.3. Its actual PyInit__PartDesign entrypoint is registered as a builtin by the JNI bridge. The unchanged upstream PartDesign package wrapper is bundled. No fake geometry classes or substitute Part solids implement these tools.
 
@@ -11,3 +11,5 @@ Build scripts accept --partdesign (implies Sketcher/Part): build_freecad_host_co
 Full PartDesign workbench parity, other extent modes, multiple profiles/solids, free history reordering, patterns/dress-up, Gui, arbitrary workbench/addon FCStd, Assembly and comprehensive phone qualification remain pending. Original native APIs may be explored in the Python console; unsupported documents are not silently accepted by the bounded persistence registry.
 
 1.14 adds original Revolution/Groove (forward-angle H/V profile axes) and two-profile ruled additive/subtractive Loft. The genuine API differs from Pad: Type=Angle, Midplane/Reversed=false, Angle2=0; LoftSections uses native XLinkSubList whole-section entry[(sketch,[empty_string])]. These are verified original features with native analytic geometry/history/FCStd/STEP. Pre-restoration origins/ownership, scalar mode and section-count checks reject malformed saved documents before native loading.734TR/DE reviewed entries/4guides. Next: investigate native Body dress-up tools; see NEXT-BATCH-1.15.md.
+
+1.15 adds original Body fillet/chamfer/draft/thickness;612realJNI checks including actual analytic geometry, units, current selections/source ownership/Tip, dependency/history/rollback, restored modes/origin roles, FCStd/STEP and whole Body placement. FilletRadius/ChamferSize use native PropertyQuantityConstraint(mm); ThicknessValue is Length; DraftAngle is Angle. Thickness native enum getters are Skin/Arc.742TR/DE entries/4guides. Broader finishing modes and patterns remain pending. Next native pattern prototypes and NEXT-BATCH-1.16.md.
