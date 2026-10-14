@@ -1,0 +1,30 @@
+Original PartDesign · Body, Pad and Pocket
+
+Open Document lab → New → Original PartDesign. These are original FreeCAD 1.1.4 features with native dependencies, not baked mobile solids. The main CAD workspace remains a separate model.
+
+Quick command example (run each line separately):
+NewDoc BodyDemo
+Body Body
+BodySketch Body Profile
+SketchCircle Profile 0 0 10
+Constraint Profile Block 0
+Pad Body Profile Pad 10
+BodySketch Body CutProfile
+SketchCircle CutProfile 0 0 2
+Constraint CutProfile Block 0
+SketchPlane CutProfile XY 0 0 10
+Pocket Body CutProfile Pocket 2
+Preview Body 0.2
+BodyInfo Body
+Save BodyDemo.FCStd
+ExportStep Body BodyDemo.step
+
+Pad creates a radius10, height10 cylinder. Pocket removes a radius2, depth2 bore from its top. Lengths in Pad/Pocket commands use mm. Set Pad.Length 2 cm accepts units; dependent features recompute. Undo and Redo use original document history.
+
+BodySketch BODY NAME creates a new owned sketch or adopts an unused unowned original sketch. Profiles must contain one valid closed wire. Origin axes/planes/point are generated and protected. BodyFrom SOLID BODY links an independent native solid through original FeatureBase; changes to the source update the Body.
+
+BodyTip Body Pad selects an earlier owned solid as the Body result. Later features remain in history. Before appending or removing a feature, select the last solid Tip. RemoveBodyFeature Body Pocket removes only the last Pad/Pocket when no other feature or sketch depends on it; its profile remains. Undo restores the feature and Tip.
+
+Current limits: one connected closed solid per Body; one-sided Length Pad/Pocket; positive length up to1,000,000mm; at most1,000 document objects including seven origin frames plus origin and Body; profile up to256 edges; feature up to1,024 faces. Pocket must remove material and retain one solid. Face names may change after upstream edits; inspect selections again.
+
+PartDesign patterns, dress-up features, arbitrary history reordering, multiple profiles/solids, other extent modes, Gui and full workbench restoration remain pending. Android device execution for this version is not yet verified. Save before leaving; documents are local and the app has no network permission.

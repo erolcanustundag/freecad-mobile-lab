@@ -1,6 +1,6 @@
 {
-  "version": "1.12",
-  "version_code": 38,
+  "version": "1.13",
+  "version_code": 39,
   "freecad": "1.1.4",
   "occt": "7.9.2",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
@@ -10,7 +10,7 @@
     "python_tools_regressions": 62,
     "language_command_fallback_unicode": 527,
     "locale_resource_tests": 3,
-    "runtime_packaging_regressions": 9
+    "runtime_packaging_regressions": 10
   },
   "host": {
     "system": "Linux x86_64",
@@ -42,5 +42,6 @@
       "sha256": "15cb8b1607a4258b002f862ddc48228f663bbff0f428e6fceca119f92a3bac57"
     }
   ],
-  "historical_rc1_assertions": 270
+  "historical_rc1_assertions": 270,
+  "partdesign_loaded": true
 }

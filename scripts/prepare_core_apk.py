@@ -95,7 +95,7 @@ def main():
             runtime.append({'path':name,'size':script.stat().st_size,'sha256':digest(script)})
         if args.part:
             for resource in sorted((assets/'resources').rglob('*')):
-                if resource.is_file():
+                if resource.is_file() and not {'__pycache__'}.intersection(resource.parts) and resource.suffix not in ('.pyc','.pyo'):
                     name='scripts/'+str(resource.relative_to(assets));z.write(resource,name)
                     runtime.append({'path':name,'size':resource.stat().st_size,'sha256':digest(resource)})
     with zipfile.ZipFile(out) as z:

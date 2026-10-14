@@ -11,8 +11,9 @@ def check(root=ROOT):
     manifest=json.loads((root/'docs/core-apk-inputs.json').read_text())
     assets=root/'app/src/main/assets/core'
     if manifest.get('sketcher'):
-        if not manifest.get('part') or manifest.get('builtin_modules')!=['FreeCAD','Materials','Part','Sketcher'] or 'libFreeCADOriginalSketcher.so' not in manifest['libraries']:
+        if not manifest.get('part') or manifest.get('builtin_modules')!=['FreeCAD','Materials','Part','Sketcher']+(['_PartDesign'] if manifest.get('partdesign') else []) or 'libFreeCADOriginalSketcher.so' not in manifest['libraries']:
             raise ValueError('Original Sketcher runtime registration/library is incomplete')
+    if manifest.get('partdesign') and (not manifest.get('sketcher') or 'libFreeCADOriginalPartDesign.so' not in manifest['libraries']):raise ValueError('Original PartDesign runtime registration/library is incomplete')
     data=(assets/'python-home.zip').read_bytes()
     if digest(data)!=manifest['asset_zip_sha256']:raise ValueError('Embedded Python archive changed; refresh the runtime manifest')
     entries={item['path']:item for item in manifest['python_assets']}
@@ -30,7 +31,7 @@ def check(root=ROOT):
             base='scripts/resources/Mod/Material/Resources/'
             required={base+name for name in ('Materials/Standard/Default.FCMat','Materials/Appearance/Default.FCMat','Models/Rendering/BasicRendering.yml','Models/Mechanical/Density.yml')}
             if not required.issubset(entries):raise ValueError('Bundled Part material resources are missing; restage the complete Part runtime')
-            resources={str(p.relative_to(assets)) for p in (assets/'resources').rglob('*') if p.is_file()}
+            resources={str(p.relative_to(assets)) for p in (assets/'resources').rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix not in ('.pyc','.pyo')}
             packaged={n[len('scripts/'):] for n in entries if n.startswith('scripts/resources/')}
             if resources!=packaged:raise ValueError('Bundled Part material resource list is stale')
             for name in resources:

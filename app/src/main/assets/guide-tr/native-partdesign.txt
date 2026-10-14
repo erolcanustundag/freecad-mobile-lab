@@ -1,0 +1,30 @@
+Özgün PartDesign · Gövde, katı uzatma ve cep
+
+Belge laboratuvarı → Yeni → Özgün PartDesign yolunu açın. Bunlar yerel bağımlılıkları koruyan özgün FreeCAD 1.1.4 özellikleridir. Ana CAD çalışma alanı ayrı bir model kullanır.
+
+Komutları sırayla, her satırı ayrı çalıştırın:
+NewDoc BodyDemo
+Body Body
+BodySketch Body Profile
+SketchCircle Profile 0 0 10
+Constraint Profile Block 0
+Pad Body Profile Pad 10
+BodySketch Body CutProfile
+SketchCircle CutProfile 0 0 2
+Constraint CutProfile Block 0
+SketchPlane CutProfile XY 0 0 10
+Pocket Body CutProfile Pocket 2
+Preview Body 0.2
+BodyInfo Body
+Save BodyDemo.FCStd
+ExportStep Body BodyDemo.step
+
+Pad, yarıçapı10 ve yüksekliği10mm olan bir silindir oluşturur. Pocket üstten yarıçapı2, derinliği2mm olan bir oyuk çıkarır. Pad/Pocket komutları mm kullanır; Set Pad.Length 2 cm birimleri kabul eder. Bağımlı özellikler yeniden hesaplanır. Undo/Redo özgün belge geçmişini kullanır. Komut adları ve nesne adları çevrilmez; Body yerine Gövde de kullanılabilir.
+
+BodySketch BODY NAME yeni bir gövde eskizi oluşturur veya kullanılmamış, başka gövdeye ait olmayan özgün eskizi gövdeye alır. Profil tek geçerli kapalı tel içermelidir. Başlangıç eksenleri, düzlemleri ve noktası otomatik oluşturulur ve korunur. BodyFrom SOLID BODY bağımsız yerel katıyı özgün FeatureBase üzerinden bağlar; kaynak değişince gövde güncellenir.
+
+BodyTip Body Pad daha önceki katı özelliği gövdenin sonucu olarak seçer; sonraki özellikler geçmişte kalır. Ekleme/silme öncesinde son katı ucu seçin. RemoveBodyFeature Body Pocket yalnızca başka bir özellik veya eskizin bağımlı olmadığı son Pad/Pocket özelliğini siler; eskizi kalır. Undo özelliği ve ucu geri getirir.
+
+Sınırlar: gövde başına tek bağlı kapalı katı; tek yönlü uzunluk modu;0'dan büyük ve en fazla1.000.000mm uzunluk; başlangıç nesneleri dahil1.000 belge nesnesi; profilde256 kenar; özellikte1.024 yüz. Cep malzeme çıkarmalı ve tek katı bırakmalıdır. Kaynak düzenlenince yüz adları değişebilir; seçimi yeniden kontrol edin.
+
+Örüntüler, köşe bitirme araçları, serbest geçmiş sıralama, çoklu profil/katı, diğer uzatma modları, Gui ve tam çalışma tezgâhı desteği henüz tamamlanmadı. Bu sürümün Android cihaz testi henüz yapılmadı. Çıkmadan kaydedin; belgeler yereldir ve uygulamanın ağ izni yoktur.

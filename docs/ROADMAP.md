@@ -170,3 +170,8 @@ Finite planar section helpers, world-space wire previews, exact current face/edg
 
 ###1.12 — native stock and spatial curve sub-batch
 2324 genuine native checks cover prism, wedge, cylindrical handed helix and planar spiral; analytic/numerical geometry, immediate setter guards/safe coupled settings, dependent helical Sweep, native history/rollback/FCStd/STEP.711 reviewedTR/DE entries/3guides. Native binaries unchanged; Android1.12 and full Part/PartDesign/Assembly/device qualification pending. Next priority: actual original PartDesign host/ARM64 module prerequisite, Body/Tip semantics and linked Pad/Pocket fixtures, subject to native build/API proof.
+
+
+### 1.13 — original PartDesign Body workflow subset
+
+Four bounded scopes: original Body/origin/ownership/BaseFeature; Tip and last-feature history; linked original Pad; linked original Pocket.213 actualJNI checks and2324/269/88/62 regressions pass. GenuineARM64PartDesign/nativewrapper is packaged;134ELF libraries/extensions pass API26 loader/strong-symbol closure and16KiB alignment.728TR/DE strings and4localizedguides. FullB08/B09/workbench/Gui/Assembly/Rhino/device gates remain PENDING; Android1.13 execution NOT_RUN. Next nativeAPI probes: Revolution/Groove/additive/subtractiveLoft; see NEXT-BATCH-1.14.md.

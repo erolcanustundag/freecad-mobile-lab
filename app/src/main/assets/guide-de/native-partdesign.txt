@@ -1,0 +1,30 @@
+Originales PartDesign · Körper, Aufpolsterung und Tasche
+
+Dokumentlabor → Neu → Originales PartDesign öffnen. Dies sind originale FreeCAD-1.1.4-Funktionen mit nativen Abhängigkeiten. Der CAD-Hauptbereich verwendet ein separates Modell.
+
+Jede Befehlszeile einzeln ausführen:
+NewDoc BodyDemo
+Body Body
+BodySketch Body Profile
+SketchCircle Profile 0 0 10
+Constraint Profile Block 0
+Pad Body Profile Pad 10
+BodySketch Body CutProfile
+SketchCircle CutProfile 0 0 2
+Constraint CutProfile Block 0
+SketchPlane CutProfile XY 0 0 10
+Pocket Body CutProfile Pocket 2
+Preview Body 0.2
+BodyInfo Body
+Save BodyDemo.FCStd
+ExportStep Body BodyDemo.step
+
+Pad erzeugt einen Zylinder mit Radius10 und Höhe10mm. Pocket entfernt oben eine Bohrung mit Radius2 und Tiefe2mm. Pad/Pocket-Befehle verwenden mm; Set Pad.Length 2 cm akzeptiert Einheiten. Abhängige Funktionen werden neu berechnet. Undo/Redo verwenden den originalen Dokumentverlauf. Befehle und Objektnamen bleiben unverändert; Körper ist auch als Alias für Body verfügbar.
+
+BodySketch BODY NAME erstellt eine zugehörige Skizze oder übernimmt eine unbenutzte originale Skizze ohne Körperzugehörigkeit. Das Profil muss einen gültigen geschlossenen Draht enthalten. Ursprungsachsen, Ebenen und Punkt werden automatisch erzeugt und geschützt. BodyFrom SOLID BODY verknüpft einen unabhängigen nativen Volumenkörper über das originale FeatureBase; Quelländerungen aktualisieren den Körper.
+
+BodyTip Body Pad wählt ein früheres eigenes Volumenfeature als Körperergebnis. Spätere Features bleiben im Verlauf. Vor dem Anhängen oder Entfernen das letzte Volumenfeature als Tip wählen. RemoveBodyFeature Body Pocket entfernt nur die letzte Aufpolsterung/Tasche ohne abhängige Features oder Skizzen; die Profilskizze bleibt erhalten. Undo stellt Feature und Tip wieder her.
+
+Grenzen: ein zusammenhängender geschlossener Volumenkörper pro Body; einseitiger Längenmodus; positive Länge bis1.000.000mm;1.000 Dokumentobjekte einschließlich Ursprungsobjekten;256 Profilkanten;1.024 Featureflächen. Eine Tasche muss Material entfernen und einen Volumenkörper erhalten. Flächennamen können sich nach Quelländerungen ändern; Auswahl erneut prüfen.
+
+Muster, Kantenbearbeitung, beliebige Verlaufsreihenfolge, mehrere Profile/Volumenkörper, andere Ausdehnungsmodi, Gui und vollständige Workbench-Wiederherstellung sind noch offen. Android-Geräteausführung dieser Version wurde noch nicht geprüft. Vor dem Verlassen speichern; Dokumente sind lokal, die App benötigt keine Netzwerkberechtigung.

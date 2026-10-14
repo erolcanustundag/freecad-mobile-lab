@@ -452,6 +452,23 @@ def _validate_fcstd(path):
             if o.get("type") not in OBJECT_TYPES})
         if unsupported:
             raise ValueError("Workbenches not yet ported: " + ", ".join(str(t) for t in unsupported))
+        objects=tree.findall("./Objects/Object")
+        if len(objects)>1000:raise ValueError("Restored document exceeds1,000 objects including origins")
+        pd={o.get("name"):o.get("type") for o in objects if o.get("type") in mobile_partdesign.TYPES}
+        for data in tree.findall("./ObjectData/Object"):
+            kind=pd.get(data.get("name"))
+            if kind=="PartDesign::Body":
+                value=data.find("./Properties/Property[@name='AllowCompound']/Bool")
+                if value is None or value.get("value")!="false":raise ValueError("Restored Body must use single-solid mode")
+            elif kind in ("PartDesign::Pad","PartDesign::Pocket"):
+                value=data.find("./Properties/Property[@name='Length']/Float")
+                if value is None:raise ValueError("Missing saved Pad/Pocket length")
+                mobile_partdesign.positive(float(value.get("value","nan")))
+                for mode in ("Type","SideType"):
+                    v=data.find("./Properties/Property[@name='"+mode+"']/Integer")
+                    if v is None or v.get("value")!="0":raise ValueError("Restored Pad/Pocket supports one-sided Length only")
+            if kind:
+                if data.findall("./Properties/Property[@name='ExpressionEngine']//Expression"):raise ValueError("Restored PartDesign expressions remain unsupported")
         # Upstream allows INT_MAX polygon sides. Reject oversized restoration
         # before loading/recomputing, rather than allocating that many edges.
         polygons={o.get("name") for o in tree.findall("./Objects/Object") if o.get("type") in ("Part::RegularPolygon","Part::Prism")}

@@ -51,6 +51,10 @@
   <string name="ui_c3afba4c4528" formatted="false">"Sıvama taş yuvası"</string>
   <string name="ui_df5eaf37f6db" formatted="false">"İkili STL · görünür geometri"</string>
   <string name="ui_7d44bc449c2a" formatted="false">"Mavi"</string>
+  <string name="ui_718a7e8a582e" formatted="false">"Gövde"</string>
+  <string name="ui_db4ecb85e22a" formatted="false">"Yerel katıdan gövde"</string>
+  <string name="ui_2041a45c8dc7" formatted="false">"Gövde rehberi"</string>
+  <string name="ui_c4d759fa8ad2" formatted="false">"Gövde geçmişi"</string>
   <string name="ui_daf760a167a8" formatted="false">"Mantıksal değer"</string>
   <string name="ui_e772bc4d3e48" formatted="false">"Katı işlemleri / yuvarlatma"</string>
   <string name="ui_cce7f2f2f0dc" formatted="false">"Alt"</string>
@@ -126,7 +130,9 @@
   <string name="ui_9f58829cdbd4" formatted="false">"STEP içe aktarmadan önce bir belge oluşturun"</string>
   <string name="ui_bc88394aaae1" formatted="false">"Bir belge oluşturun veya desteklenen bir özgün FCStd dosyasını açın."</string>
   <string name="ui_c11c2f8bcd8d" formatted="false">"Bir belge oluşturun veya desteklenen bir FCStd üstveri belgesi açın."</string>
+  <string name="ui_ce093b9128bd" formatted="false">"Yerel gövde oluştur"</string>
   <string name="ui_f0b296576b0a" formatted="false">"Özgün Part geometrisi oluştur"</string>
+  <string name="ui_0c5c20c471e2" formatted="false">"Gövde eskizi oluştur veya ekle"</string>
   <string name="ui_a0c75994670a" formatted="false">"Önce bir model oluşturun veya içe aktarın."</string>
   <string name="ui_6651e8ca2a57" formatted="false">"Önce bir nesne oluşturun veya içe aktarın"</string>
   <string name="ui_c65cbfecf121" formatted="false">"Önce bir nesne oluşturun veya seçin."</string>
@@ -233,6 +239,7 @@
   <string name="ui_ad565d9d01d0" formatted="false">"Özellik"</string>
   <string name="ui_310f395a48b0" formatted="false">"İşlem geçmişi"</string>
   <string name="ui_7e9b200cfc89" formatted="false">"İşlem geçmişi / eğri / yüzey araçları"</string>
+  <string name="ui_6a5159baf4ba" formatted="false">"Özellik adı"</string>
   <string name="ui_69fad97a6c85" formatted="false">"İşlem parametreleri"</string>
   <string name="ui_c287aea6ca6e" formatted="false">"İşlem parametreleri · mm / derece"</string>
   <string name="ui_a3cbb98ddf5e" formatted="false">"Dosya adı"</string>
@@ -281,6 +288,7 @@
   <string name="ui_24617dd70272" formatted="false">"Python dosyasını içe aktar"</string>
   <string name="ui_f2331487b964" formatted="false">"Dosyalardan içe aktar"</string>
   <string name="ui_fcf425f09b31" formatted="false">"İç çap (mm)"</string>
+  <string name="ui_b8a248deea32" formatted="false">"Gövde geçmişini incele"</string>
   <string name="ui_f93e60e895b2" formatted="false">"Yerel yüz veya kenarı incele"</string>
   <string name="ui_f8dfe69a6067" formatted="false">"Eskiz çözücüsünü incele"</string>
   <string name="ui_9edcffff4461" formatted="false">"Tam sayı"</string>
@@ -303,6 +311,7 @@
   <string name="ui_cebbb974d7b7" formatted="false">"Katmanlar / görünürlük / kilitler"</string>
   <string name="ui_8ae1c34bd37f" formatted="false">"Sol"</string>
   <string name="ui_3bade34ecbc5" formatted="false">"Uzunluk"</string>
+  <string name="ui_bd5b2da018fb" formatted="false">"Uzunluk (mm)"</string>
   <string name="ui_ea9676003762" formatted="false">"Çizgi"</string>
   <string name="ui_24e92c277f48" formatted="false">"Doğrusal çoğaltma"</string>
   <string name="ui_09f2903343d1" formatted="false">"Doğrusal tolerans (mm) · 0.005 ince, 0.015 normal, 0.1 kaba"</string>
@@ -352,8 +361,10 @@
   <string name="ui_709a23220f2c" formatted="false">"Ad"</string>
   <string name="ui_cb04729f44c1" formatted="false">"Ad / katman / kilit"</string>
   <string name="ui_ed387f007e09" formatted="false">"Eskiz kısıtını adlandır"</string>
+  <string name="ui_c5011646220e" formatted="false">"Yerel katı uzatma"</string>
   <string name="ui_4862367a4934" formatted="false">"Özgün Part katı işlemi"</string>
   <string name="ui_871cb729cd33" formatted="false">"Yerel Part yerleşimi"</string>
+  <string name="ui_788019d78b2d" formatted="false">"Yerel cep"</string>
   <string name="ui_45211683ce7b" formatted="false">"Yerel kutu"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Yerel koni"</string>
   <string name="ui_c62b92752d38" formatted="false">"Özgün çıkarma"</string>
@@ -428,6 +439,8 @@
   <string name="ui_6e349b44e371" formatted="false">"Özgün Part"</string>
   <string name="ui_f88fb371ca4e" formatted="false">"Bu çalışma ortamında özgün Part kullanılamıyor"</string>
   <string name="ui_c4044bf8f2d4" formatted="false">"Özgün Part modülü bu çalışma ortamında kullanılamıyor"</string>
+  <string name="ui_d23e7c948f04" formatted="false">"Özgün PartDesign"</string>
+  <string name="ui_0572409d5d59" formatted="false">"Bu çalışma ortamında özgün PartDesign bulunmuyor."</string>
   <string name="ui_b7772221139e" formatted="false">"Özgün Sketcher"</string>
   <string name="ui_d5b0dacfb9f5" formatted="false">"Özgün Sketcher bu sürümde kullanılamıyor"</string>
   <string name="ui_22569744952d" formatted="false">"Dik yön"</string>
@@ -497,6 +510,7 @@
   <string name="ui_471b94d402d1" formatted="false">"Yinele"</string>
   <string name="ui_d00c1074c0b3" formatted="false">"Örnek modeller"</string>
   <string name="ui_86f6ce133bd3" formatted="false">"Örnek modeller · çalışma alanına eklenir"</string>
+  <string name="ui_83095a216ce0" formatted="false">"Son gövde özelliğini sil"</string>
   <string name="ui_92d700a362c3" formatted="false">"Nesneyi kaldır"</string>
   <string name="ui_e066e80468f5" formatted="false">"Görüntüleme"</string>
   <string name="ui_02b3766e464e" formatted="false">"Görüntüleme / kesit / PNG"</string>
@@ -552,6 +566,7 @@
   <string name="ui_9b473b2aa252" formatted="false">"Ad, tür, kimlik veya katman ara"</string>
   <string name="ui_d4f1dc7e77fd" formatted="false">"İkinci katı / kesici"</string>
   <string name="ui_8598222918d3" formatted="false">"Seç"</string>
+  <string name="ui_cf5fe0f398bb" formatted="false">"Gövde ucunu seç"</string>
   <string name="ui_3975d731f5d2" formatted="false">"Bir CAD katısı seçin"</string>
   <string name="ui_9eea858822f8" formatted="false">"Bir model seçin"</string>
   <string name="ui_bb229377716a" formatted="false">"Önce bir model seçin."</string>
@@ -593,6 +608,7 @@
   <string name="ui_205d5e8826a6" formatted="false">"Eskiz elipsi"</string>
   <string name="ui_f0cf5d478e66" formatted="false">"Eskiz rehberi"</string>
   <string name="ui_3b281e4dee6e" formatted="false">"Eskiz çizgisi"</string>
+  <string name="ui_66fa5f416c4a" formatted="false">"Eskiz adı"</string>
   <string name="ui_8fdab3017915" formatted="false">"Eskiz nesnesi"</string>
   <string name="ui_3594732ca359" formatted="false">"Çizim pedi"</string>
   <string name="ui_e0ca4e6ea91e" formatted="false">"Eskiz yerleşimi"</string>
@@ -676,6 +692,7 @@
   <string name="ui_028679f571b4" formatted="false">"NURBS yüzey kırpmasını kaldır"</string>
   <string name="ui_f9f4b89fd160" formatted="false">"Özgün App/Part 1.1.4 · katılar, özellikler, ifadeler ve işlemler"</string>
   <string name="ui_83ee1bec0e9f" formatted="false">"Özgün App/Part/Sketcher 1.1.4 · katılar, eskizler ve yerel kısıtlar"</string>
+  <string name="ui_45475b570da7" formatted="false">"Özgün App/Part/Sketcher/PartDesign 1.1.4 · yerel belge işlemleri"</string>
   <string name="ui_68f1fb85d13b" formatted="false">"Yalnızca STEP dosya adını girin"</string>
   <string name="ui_7dcb3f42d312" formatted="false">"Telefonun dilini kullan"</string>
   <string name="ui_cbd3f9386e07" formatted="false">"V bitiş oranı"</string>

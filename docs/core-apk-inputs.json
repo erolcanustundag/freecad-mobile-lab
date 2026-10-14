@@ -2,29 +2,32 @@
   "scope": "opt-in upstream App/Part document lab; Android execution NOT_RUN",
   "part": true,
   "sketcher": true,
+  "partdesign": true,
   "builtin_modules": [
     "FreeCAD",
     "Materials",
     "Part",
-    "Sketcher"
+    "Sketcher",
+    "_PartDesign"
   ],
   "build_inputs": {
-    "app/src/main/cpp/upstream-core/CoreBridge.cpp": "5820d78ee0cc55b85d4ec870c1eb781294cb59358052eb09d08f6c0e632f903a",
-    "app/src/main/cpp/upstream-core/CMakeLists.txt": "04530c11a46a33aba1f50c7746faeb2f83e4b1e9d2349e9ebe83604da659efd3",
-    "scripts/build_freecad_android_core.py": "ee78845fff30be8e6bce42aaf6919e4323880e0ad79b7ca4abee2b559c869484",
+    "app/src/main/cpp/upstream-core/CoreBridge.cpp": "7ae141c3d532d9fe6835ae7975d3f1d013b849bc5bc9fd1fd00f88b92a240d3e",
+    "app/src/main/cpp/upstream-core/CMakeLists.txt": "dae75dd563ab49fb065f169cba45ceb084941b9c3c751eaba8669197f586c5b5",
+    "scripts/build_freecad_android_core.py": "bd36b0c6cb558d16d18ad21f1de48a2d2d5038cf8287841d7d56b6cda88dd5f3",
     "scripts/build_part_occt.py": "190b3cae8b386e374d4c69e3b12e5bc2c5beec650e02461ce2ac20e3c2dc668a",
-    "scripts/build_core_bridge.py": "89389715f95e4875307c0c4159103a61a8774f4132cb3587406e87e50634d59f",
+    "scripts/build_core_bridge.py": "2bf9fe32e0d2e7422ed6b2993fc6cf17af6d6b4c6986384ce7e56b173c413057",
     "scripts/patch_embedded_runtime.py": "bfd10feff45a35487112783edfa3527d03c552dce5430cdebb5337b653ae6afc",
     "scripts/patch_headless_sketcher.py": "2ade922575e4d69602454d9a6308e2a943020af73e3b020cb367cd32f67095ac"
   },
   "libraries": {
-    "libFreeCADMaterials.so": "0b7d941b1dc0304a41c9372ade89df67e4f0332a7eff76272dc3b7d4ac82786b",
-    "libFreeCADPart.so": "8df12e85f976fc4879cb50415e0ca39223747d6a231abf57644636e4e19733c7",
-    "libFreeCADOriginalSketcher.so": "f508c86e128d5f5fa461720d296b36772f6efebc9fd760f32b720181ac9a6782",
-    "libFreeCADPython.so": "210a0f6c87f7872e5bd347725d7fa92bb9860575107719ba7b2990e52fcf184d",
-    "libFreeCADApp.so": "cb2b3084e8a39c8bc842fd6741f1b1c4c04a461176ee4bf0ab17c6acdba869cd",
-    "libFreeCADBase.so": "c3a6c40f6fea529a5aa4301c029d55854756809f46eb2fb36f9ccd27af4bba6f",
-    "libfreecad_document_bridge.so": "28bc70df462ba53c61171b245ce0799a691b4c648e6c6b08086799449d217f75",
+    "libFreeCADMaterials.so": "f379ef65d7a62c6a9b2871d87a9e33fd23e010e1dbbd5f00a25b761721591eea",
+    "libFreeCADPart.so": "8ab0fd1ffa62a73d6be99da35b071e3d5bc1cbd2923a79e549478eeb0ce51a88",
+    "libFreeCADOriginalPartDesign.so": "4467be6c355f54801052cc5cdcc5422355901b3843ef3ed8e4e5d8b412420e6e",
+    "libFreeCADOriginalSketcher.so": "8628c996a31e0e8977dd27bd78c279d8b191727b0054e20c6f78c39a0aeddaef",
+    "libFreeCADPython.so": "eb106e2c6f00268877c6b7f243be0c289b8f40b9d3bb0ce4042e02bef3181157",
+    "libFreeCADApp.so": "e4fa67a1141da3aebe9345b046e2bfd7ec7586a6a86a92916dd28e982b6079a9",
+    "libFreeCADBase.so": "1d073b2e23bf7ad809c5113961f95c18adb4c05e89ec27d77b79f22c8aa60e03",
+    "libfreecad_document_bridge.so": "829c4cbba04a0bde25243b9b7632787c561351ee75a057695515b2d26aa69fba",
     "libboost_date_time.so": "4a7c20867a86b9ab93fc70ccf7edfd990834b61dfd240686fbece8f78b9e17e2",
     "libboost_program_options.so": "84b32bfe46d200af79c9008dc3fc0efd782a813d373f10f5976364fddee779b6",
     "libboost_regex.so": "594f9f32bb6dbb776feea68d43fc484e2f4abb821ffbeecf3f35ac4e9fbf20c9",
@@ -53,13 +56,14 @@
     "libssl_python.so": "9b1de9f8538f6bd0e62aff027631b0b5c3f70816cc461b92499824141fa56612"
   },
   "original_library_hashes": {
-    "libFreeCADMaterials.so": "d6bfa279eaee4c228a6ce83f8883f2b9165f79affd301c856126961b11ba3e94",
-    "libFreeCADPart.so": "33e5be06f95f3266f7623808361aab04bae0d4cb59e4fa5265542db1c83fa339",
-    "libFreeCADOriginalSketcher.so": "65fb1aebdd814ff9fe40bc583140671df468f264a312cb8e3702cc97749c2fe6",
-    "libFreeCADPython.so": "4f02863c6adc8f892139515db2e3adcb7a4be135c4c2e3b273ae977db87daf35",
-    "libFreeCADApp.so": "01cfcc5dd949035ed098349bd27a6c993eed26c664df9712261e5c93c66a8a36",
-    "libFreeCADBase.so": "050ef59bcc2ae266fd6b03af72a5874219ad6b4bf3a6d19b9338f7e883ed3dca",
-    "libfreecad_document_bridge.so": "fc369c99dc1d8126c4625ce7e275b806bc453da264046c0942fe0d221afe1064",
+    "libFreeCADMaterials.so": "6f066e9a174858d4e76c0e73cca5ed71c3891b64283caa486209671c9668b8e7",
+    "libFreeCADPart.so": "cb27e9c08d1096a2dbb659ec2d833c4fb725dcec47daf34b26fd15117675c52a",
+    "libFreeCADOriginalPartDesign.so": "ee23c8c54494f68f6db5ccf698bfbede8b3d04c51a192d636db5df0d6ebf6793",
+    "libFreeCADOriginalSketcher.so": "d2421445ff1b743d463b152cb40eaa7bb405c1288932e9a40110a8a4e345c4d6",
+    "libFreeCADPython.so": "f9f349c67c95d07cb01bccaba41001604416dd5912390508e2d4d16d218d52bd",
+    "libFreeCADApp.so": "5f38b1510ae59350cbae36f31e681bc157ba4e2b5ec4a5e7fcbc794d726e8507",
+    "libFreeCADBase.so": "a420564c331fe3800eb062c09902801fa1e53d9a35b17a9b06d111ce203da044",
+    "libfreecad_document_bridge.so": "c09320fe0712412c1623ee380b58696918a6127f5a943a996055473667920601",
     "libboost_date_time.so": "90e342e986a41fc8d0627b8069c54862af81521e6de948d6ec175039b792dc81",
     "libboost_program_options.so": "f901e84cff351495e91d887876fa0ffb3da7eabe0d931c975fa70b7026213bcb",
     "libboost_regex.so": "f8dfdb3901aff56d391d31b733d94d9e99dc0ee250985a5c1ce827c0d0972aae",
@@ -4185,8 +4189,8 @@
     },
     {
       "path": "scripts/mobile_core.py",
-      "size": 40680,
-      "sha256": "38547627ff2264c0697c8a16d0a1747ee89e164127dfd29d86ed6576d84360c8"
+      "size": 43668,
+      "sha256": "cea57bba6dd1a0bff8cbaf891bd9e56e784a2e9a9dd38ee854a984e3c6662ef8"
     },
     {
       "path": "scripts/mobile_features.py",
@@ -4197,6 +4201,11 @@
       "path": "scripts/mobile_part.py",
       "size": 21418,
       "sha256": "680dffade06e5c2aaa950c328855ef1ecedfd202e6f3fe039818e41beaaf709e"
+    },
+    {
+      "path": "scripts/mobile_partdesign.py",
+      "size": 9106,
+      "sha256": "4e30828286bd0a88c74f732bd34e1c91fcab5d6243e67fad5711b55d805d81dc"
     },
     {
       "path": "scripts/mobile_primitives.py",
@@ -5467,8 +5476,13 @@
       "path": "scripts/resources/Mod/Material/Resources/Models/Thermal/Thermal.yml",
       "size": 2877,
       "sha256": "4108f1173295667598d68c2d422fd0b8205296466d7a6cc840e733ab7c2e4a44"
+    },
+    {
+      "path": "scripts/resources/Mod/PartDesign/__init__.py",
+      "size": 62,
+      "sha256": "17e587b5e13ac9851cdbbd769d92a8ba569dcd04dc962f3f24e8a4fec88e47e1"
     }
   ],
-  "asset_zip_sha256": "be67f17fa5a8d66d9edc076d78bc5f2ce4f653f7e9c6afb1e8a1a1334aa5d426",
+  "asset_zip_sha256": "869a56faa1bd71b11b8732dd314196e71e3d1d51224145b915fd68bd8d397d93",
   "java_jar_sha256": "b4b439629c5aa21db9a3b633d77182d0b25b1c381c391fc447e6104be394bb54"
 }

@@ -51,6 +51,10 @@
   <string name="ui_c3afba4c4528" formatted="false">"Zargenfassung"</string>
   <string name="ui_df5eaf37f6db" formatted="false">"Binär-STL · sichtbare Geometrie"</string>
   <string name="ui_7d44bc449c2a" formatted="false">"Blau"</string>
+  <string name="ui_718a7e8a582e" formatted="false">"Körper"</string>
+  <string name="ui_db4ecb85e22a" formatted="false">"Körper aus nativem Volumenkörper"</string>
+  <string name="ui_2041a45c8dc7" formatted="false">"Körperanleitung"</string>
+  <string name="ui_c4d759fa8ad2" formatted="false">"Körperverlauf"</string>
   <string name="ui_daf760a167a8" formatted="false">"Boolescher Wert"</string>
   <string name="ui_e772bc4d3e48" formatted="false">"Boolesche Operationen / Abrunden"</string>
   <string name="ui_cce7f2f2f0dc" formatted="false">"Unten"</string>
@@ -126,7 +130,9 @@
   <string name="ui_9f58829cdbd4" formatted="false">"Erstellen Sie vor dem STEP-Import ein Dokument"</string>
   <string name="ui_bc88394aaae1" formatted="false">"Erstellen Sie ein Dokument oder öffnen Sie eine unterstützte native FCStd-Datei."</string>
   <string name="ui_c11c2f8bcd8d" formatted="false">"Ein Dokument erstellen oder ein unterstütztes FCStd-Metadatendokument öffnen."</string>
+  <string name="ui_ce093b9128bd" formatted="false">"Nativen Körper erstellen"</string>
   <string name="ui_f0b296576b0a" formatted="false">"Original-Part-Geometrie erstellen"</string>
+  <string name="ui_0c5c20c471e2" formatted="false">"Körperskizze erstellen oder übernehmen"</string>
   <string name="ui_a0c75994670a" formatted="false">"Zuerst ein Modell erstellen oder importieren."</string>
   <string name="ui_6651e8ca2a57" formatted="false">"Zuerst ein Objekt erstellen oder importieren"</string>
   <string name="ui_c65cbfecf121" formatted="false">"Zuerst ein Objekt erstellen oder auswählen."</string>
@@ -233,6 +239,7 @@
   <string name="ui_ad565d9d01d0" formatted="false">"Merkmal"</string>
   <string name="ui_310f395a48b0" formatted="false">"Merkmalsverlauf"</string>
   <string name="ui_7e9b200cfc89" formatted="false">"Merkmalsverlauf / Kurven- / Flächenwerkzeuge"</string>
+  <string name="ui_6a5159baf4ba" formatted="false">"Featurename"</string>
   <string name="ui_69fad97a6c85" formatted="false">"Merkmalsparameter"</string>
   <string name="ui_c287aea6ca6e" formatted="false">"Merkmalsparameter · mm / Grad"</string>
   <string name="ui_a3cbb98ddf5e" formatted="false">"Dateiname"</string>
@@ -281,6 +288,7 @@
   <string name="ui_24617dd70272" formatted="false">"Python-Datei importieren"</string>
   <string name="ui_f2331487b964" formatted="false">"Aus Dateien importieren"</string>
   <string name="ui_fcf425f09b31" formatted="false">"Innendurchmesser (mm)"</string>
+  <string name="ui_b8a248deea32" formatted="false">"Körperverlauf prüfen"</string>
   <string name="ui_f93e60e895b2" formatted="false">"Native Fläche oder Kante prüfen"</string>
   <string name="ui_f8dfe69a6067" formatted="false">"Skizzenlöser prüfen"</string>
   <string name="ui_9edcffff4461" formatted="false">"Ganzzahl"</string>
@@ -303,6 +311,7 @@
   <string name="ui_cebbb974d7b7" formatted="false">"Ebenen / Sichtbarkeit / Sperren"</string>
   <string name="ui_8ae1c34bd37f" formatted="false">"Links"</string>
   <string name="ui_3bade34ecbc5" formatted="false">"Länge"</string>
+  <string name="ui_bd5b2da018fb" formatted="false">"Länge (mm)"</string>
   <string name="ui_ea9676003762" formatted="false">"Linie"</string>
   <string name="ui_24e92c277f48" formatted="false">"Lineare Anordnung"</string>
   <string name="ui_09f2903343d1" formatted="false">"Lineare Toleranz (mm) · 0.005 fein, 0.015 normal, 0.1 grob"</string>
@@ -352,8 +361,10 @@
   <string name="ui_709a23220f2c" formatted="false">"Name"</string>
   <string name="ui_cb04729f44c1" formatted="false">"Name / Ebene / Sperre"</string>
   <string name="ui_ed387f007e09" formatted="false">"Skizzenbedingung benennen"</string>
+  <string name="ui_c5011646220e" formatted="false">"Native Aufpolsterung"</string>
   <string name="ui_4862367a4934" formatted="false">"Originale Part-Volumenoperation"</string>
   <string name="ui_871cb729cd33" formatted="false">"Native Part-Platzierung"</string>
+  <string name="ui_788019d78b2d" formatted="false">"Native Tasche"</string>
   <string name="ui_45211683ce7b" formatted="false">"Nativer Quader"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Nativer Kegel"</string>
   <string name="ui_c62b92752d38" formatted="false">"Originale Differenz"</string>
@@ -428,6 +439,8 @@
   <string name="ui_6e349b44e371" formatted="false">"Original-Part"</string>
   <string name="ui_f88fb371ca4e" formatted="false">"Original-Part ist in dieser Laufzeit nicht verfügbar"</string>
   <string name="ui_c4044bf8f2d4" formatted="false">"Das originale Part-Modul ist in dieser Laufzeit nicht verfügbar"</string>
+  <string name="ui_d23e7c948f04" formatted="false">"Originales PartDesign"</string>
+  <string name="ui_0572409d5d59" formatted="false">"Originales PartDesign ist in dieser Laufzeit nicht verfügbar."</string>
   <string name="ui_b7772221139e" formatted="false">"Originaler Sketcher"</string>
   <string name="ui_d5b0dacfb9f5" formatted="false">"Originaler Sketcher ist in dieser Laufzeit nicht verfügbar"</string>
   <string name="ui_22569744952d" formatted="false">"Orthogonal"</string>
@@ -497,6 +510,7 @@
   <string name="ui_471b94d402d1" formatted="false">"Wiederholen"</string>
   <string name="ui_d00c1074c0b3" formatted="false">"Beispielmodelle"</string>
   <string name="ui_86f6ce133bd3" formatted="false">"Beispielmodelle · zum Arbeitsbereich hinzufügen"</string>
+  <string name="ui_83095a216ce0" formatted="false">"Letztes Körperfeature entfernen"</string>
   <string name="ui_92d700a362c3" formatted="false">"Objekt entfernen"</string>
   <string name="ui_e066e80468f5" formatted="false">"Darstellung"</string>
   <string name="ui_02b3766e464e" formatted="false">"Darstellung / Schnitt / PNG"</string>
@@ -552,6 +566,7 @@
   <string name="ui_9b473b2aa252" formatted="false">"Nach Name, Typ, ID oder Ebene suchen"</string>
   <string name="ui_d4f1dc7e77fd" formatted="false">"Zweiter Körper / Werkzeug"</string>
   <string name="ui_8598222918d3" formatted="false">"Auswählen"</string>
+  <string name="ui_cf5fe0f398bb" formatted="false">"Körper-Tip auswählen"</string>
   <string name="ui_3975d731f5d2" formatted="false">"Einen CAD-Körper auswählen"</string>
   <string name="ui_9eea858822f8" formatted="false">"Ein Modell auswählen"</string>
   <string name="ui_bb229377716a" formatted="false">"Zuerst ein Modell auswählen."</string>
@@ -593,6 +608,7 @@
   <string name="ui_205d5e8826a6" formatted="false">"Skizzenellipse"</string>
   <string name="ui_f0cf5d478e66" formatted="false">"Skizzenanleitung"</string>
   <string name="ui_3b281e4dee6e" formatted="false">"Skizzenlinie"</string>
+  <string name="ui_66fa5f416c4a" formatted="false">"Skizzenname"</string>
   <string name="ui_8fdab3017915" formatted="false">"Skizzenobjekt"</string>
   <string name="ui_3594732ca359" formatted="false">"Skizzenblock"</string>
   <string name="ui_e0ca4e6ea91e" formatted="false">"Skizzenplatzierung"</string>
@@ -676,6 +692,7 @@
   <string name="ui_028679f571b4" formatted="false">"NURBS-Fläche enttrimmen"</string>
   <string name="ui_f9f4b89fd160" formatted="false">"Original App/Part 1.1.4 · Volumenkörper, Eigenschaften, Ausdrücke und Transaktionen"</string>
   <string name="ui_83ee1bec0e9f" formatted="false">"Originales App/Part/Sketcher 1.1.4 · Volumenkörper, Skizzen und native Bedingungen"</string>
+  <string name="ui_45475b570da7" formatted="false">"Originales App/Part/Sketcher/PartDesign 1.1.4 · native Dokumentabläufe"</string>
   <string name="ui_68f1fb85d13b" formatted="false">"Verwenden Sie einen einfachen STEP-Dateinamen"</string>
   <string name="ui_7dcb3f42d312" formatted="false">"Telefonsprache verwenden"</string>
   <string name="ui_cbd3f9386e07" formatted="false">"V-Endanteil"</string>

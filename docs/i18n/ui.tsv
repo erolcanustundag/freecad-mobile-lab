@@ -709,3 +709,20 @@ Native polygon prism|Yerel çokgen prizma|Natives Polygonprisma
 Native wedge|Yerel kama|Nativer Keil
 Native helix|Yerel helis|Native Helix
 Native spiral|Yerel spiral|Native Spirale
+Original PartDesign|Özgün PartDesign|Originales PartDesign
+Body guide|Gövde rehberi|Körperanleitung
+Body history|Gövde geçmişi|Körperverlauf
+Inspect Body history|Gövde geçmişini incele|Körperverlauf prüfen
+Create native Body|Yerel gövde oluştur|Nativen Körper erstellen
+Body from native solid|Yerel katıdan gövde|Körper aus nativem Volumenkörper
+Create or adopt Body sketch|Gövde eskizi oluştur veya ekle|Körperskizze erstellen oder übernehmen
+Native Pad|Yerel katı uzatma|Native Aufpolsterung
+Native Pocket|Yerel cep|Native Tasche
+Select Body Tip|Gövde ucunu seç|Körper-Tip auswählen
+Remove last Body feature|Son gövde özelliğini sil|Letztes Körperfeature entfernen
+Body|Gövde|Körper
+Sketch name|Eskiz adı|Skizzenname
+Feature name|Özellik adı|Featurename
+Length (mm)|Uzunluk (mm)|Länge (mm)
+Original PartDesign is unavailable in this runtime.|Bu çalışma ortamında özgün PartDesign bulunmuyor.|Originales PartDesign ist in dieser Laufzeit nicht verfügbar.
+Upstream App/Part/Sketcher/PartDesign 1.1.4 · native document workflows|Özgün App/Part/Sketcher/PartDesign 1.1.4 · yerel belge işlemleri|Originales App/Part/Sketcher/PartDesign 1.1.4 · native Dokumentabläufe

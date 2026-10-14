@@ -54,4 +54,7 @@ class RuntimePackaging(unittest.TestCase):
     def test_sketcher_missing_native_registration_is_rejected(self):
         path=self.root/'docs/core-apk-inputs.json';manifest=json.loads(path.read_text());manifest['sketcher']=True;path.write_text(json.dumps(manifest))
         with self.assertRaisesRegex(ValueError,'Sketcher runtime registration/library is incomplete'):module.check(self.root)
+    def test_partdesign_missing_sketcher_or_library_is_rejected(self):
+        path=self.root/'docs/core-apk-inputs.json';manifest=json.loads(path.read_text());manifest['partdesign']=True;path.write_text(json.dumps(manifest))
+        with self.assertRaisesRegex(ValueError,'PartDesign runtime registration/library is incomplete'):module.check(self.root)
 if __name__=='__main__':unittest.main()

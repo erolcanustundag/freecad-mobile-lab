@@ -1,0 +1,42 @@
+{
+  "version": "1.13",
+  "version_code": 39,
+  "freecad": "1.1.4",
+  "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
+  "workflows": [
+    "original Body/origin/ownership/BaseFeature",
+    "owned Tip and safe last-feature native history",
+    "linked original Pad",
+    "linked original Pocket"
+  ],
+  "checks": {
+    "partdesign_jni": 213,
+    "sketcher_regressions": 2324,
+    "part_regressions": 269,
+    "app_regressions": 88,
+    "python_regressions": 62,
+    "locale_resources": 3,
+    "runtime_packaging": 10
+  },
+  "android": {
+    "abi": "arm64-v8a",
+    "api": 26,
+    "python": "3.13.16",
+    "qt": "6.8.3",
+    "execution": "NOT_RUN"
+  },
+  "limits": {
+    "single_solid": true,
+    "profile_edges": 256,
+    "feature_faces": 1024,
+    "document_objects_including_origins": 1000,
+    "length_mm": 1000000,
+    "extent": "one-sided Length"
+  },
+  "pending": [
+    "other PartDesign modes/features",
+    "free history reordering",
+    "Gui/Assembly/full workbench parity",
+    "phone qualification"
+  ]
+}

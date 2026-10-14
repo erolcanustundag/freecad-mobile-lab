@@ -1,0 +1,9 @@
+# Next original PartDesign batch
+
+Keep sealed1.13/code39 inputs unchanged. Select1.14/code40 before any app inputs change. Continue from the original PartDesign host/ARM64 checkpoints and source Git repository.
+
+Candidate next four scopes: native additive Revolution, subtractive Groove, additive Loft and subtractive Loft. First prove genuine1.1.4 runtime property names, body ownership/Tip/source semantics, sketch/axis/section constraints and analytic geometry. Prefer bounded modes supported by actual native API tests. If a scope cannot be ported safely, preserve explicit investigation evidence and choose another independently verified roadmap workflow; never label a baked Part recipe as PartDesign. Add command/touch controls and EN/TR/DE guide content with actual dependency/history/FCStd/STEP tests. Reject unsupported restored modes and excessive parameters before recomputation.
+
+Pad/Pocket extension candidates include reversed direction, symmetric length, through-all and to-face only after original API proof. Branching/reordering, topology naming, additional datum attachment, fillet/chamfer/hole/patterns require separate contracts. Check foreign sketch/source references and native ownership cycles. Current Body registry deliberately supports one connected solid, whole closed sketch profiles and one-sided Length Pad/Pocket. Keep history edits safe and make unsupported modes visible.
+
+After four verified scopes: original ARM64 bridge/runtime staging, source/Python hash match, APK signature/update certificate/16KiB/API26/native closure, regressions and full GitHub release with exact asset hashes. Save source intermittently to Git and APK/expensive compiled prefixes/private CONTINUE as durable checkpoints. Android execution and broad workbench/Rhino/device gates remain NOT_RUN/PENDING, F-Droid NOT_SUBMITTED. Never publish private signing keys or private continuation. Do not use agents without explicit user authorization.

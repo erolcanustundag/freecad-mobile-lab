@@ -1,5 +1,5 @@
 <resources>
-  <string name="ui_cc0dfa4179eb" formatted="false">"\n\nPython print(App.Version())\nRunMacro MyMacro.py\nApi App.Vector\nProxy Scaled Source.Width 2\n\nPython console, saved macros, command recording and the portable QuantityDriver proxy are available from the buttons. Python tracing has a two-second budget; native calls may take longer. The API browser covers available App/Base bindings. The native Part API is available when the Original Part runtime is loaded. Arbitrary addon proxy classes and Gui bindings remain pending.\n\nOnly whitelisted Part primitives/features/booleans and App metadata documents can be restored here. Native Sketcher sketches are now supported. PartDesign and other workbench documents remain pending."</string>
+  <string name="ui_edc01b2a45a1" formatted="false">"\n\nPython print(App.Version())\nRunMacro MyMacro.py\nApi App.Vector\nProxy Scaled Source.Width 2\n\nPython console, saved macros, command recording and the portable QuantityDriver proxy are available from the buttons. Python tracing has a two-second budget; native calls may take longer. The API browser covers available App/Base bindings. The native Part API is available when the Original Part runtime is loaded. Arbitrary addon proxy classes and Gui bindings remain pending.\n\nOnly whitelisted Part primitives/features/booleans and App metadata documents can be restored here. Native Sketcher sketches are now supported. Bounded original Body, Pad and Pocket documents are supported. Other PartDesign features and workbenches remain pending."</string>
   <string name="ui_c9c40500c6bb" formatted="false">"\n\nUse Measure id1 id2 for exact CAD minimum distance; Distance XYZ XYZ; Angle XYZ XYZ XYZ. Mesh distance is not supported."</string>
   <string name="ui_dec0dce734eb" formatted="false">"\n0=X, 1=Y, 2=Z. This checks the bounding box; supports, adhesion and process settings are separate."</string>
   <string name="ui_65fe7eb37744" formatted="false">"\nABIs: "</string>
@@ -219,8 +219,13 @@
   <string name="ui_82dd2cdf36f9" formatted="false">"Block"</string>
   <string name="ui_df1214790b00" formatted="false">"Block 0"</string>
   <string name="ui_7d44bc449c2a" formatted="false">"Blue"</string>
+  <string name="ui_718a7e8a582e" formatted="false">"Body"</string>
   <string name="ui_b9e14a17aa5d" formatted="false">"Body A"</string>
   <string name="ui_66640b70e2fc" formatted="false">"Body B"</string>
+  <string name="ui_fc4f6447dcf9" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids and one-sided length Pad/Pocket. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Other PartDesign modes, reorder, patterns and dress-up tools remain pending."</string>
+  <string name="ui_db4ecb85e22a" formatted="false">"Body from native solid"</string>
+  <string name="ui_2041a45c8dc7" formatted="false">"Body guide"</string>
+  <string name="ui_c4d759fa8ad2" formatted="false">"Body history"</string>
   <string name="ui_daf760a167a8" formatted="false">"Bool"</string>
   <string name="ui_e772bc4d3e48" formatted="false">"Booleans / fillet"</string>
   <string name="ui_cce7f2f2f0dc" formatted="false">"Bottom"</string>
@@ -376,7 +381,9 @@
   <string name="ui_6875ee2b291b" formatted="false">"Create a second object to use as a reference"</string>
   <string name="ui_0f986af26953" formatted="false">"Create an extrusion, loft, Boolean or another modelling operation to record a dependency. Imports and manual transforms are geometry snapshots."</string>
   <string name="ui_dd24cc8a4cbc" formatted="false">"Create at least "</string>
+  <string name="ui_ce093b9128bd" formatted="false">"Create native Body"</string>
   <string name="ui_f0b296576b0a" formatted="false">"Create native Part geometry"</string>
+  <string name="ui_0c5c20c471e2" formatted="false">"Create or adopt Body sketch"</string>
   <string name="ui_a0c75994670a" formatted="false">"Create or import a model first."</string>
   <string name="ui_6651e8ca2a57" formatted="false">"Create or import an object first"</string>
   <string name="ui_a7c86ae48918" formatted="false">"Create or import two solids first. Use Move to position the tool where it overlaps the first solid."</string>
@@ -401,6 +408,7 @@
   <string name="ui_38d13bda5c40" formatted="false">"Cut"</string>
   <string name="ui_bfb6fdce937b" formatted="false">"Cut / subtract"</string>
   <string name="ui_79bbef211c88" formatted="false">"Cut bodyId toolId"</string>
+  <string name="ui_12e6457e0a04" formatted="false">"CutProfile"</string>
   <string name="ui_817b354dc01a" formatted="false">"Cylinder"</string>
   <string name="ui_b6c1170a9cef" formatted="false">"DTD/entity declarations are unsupported"</string>
   <string name="ui_9b3e66e8d531" formatted="false">"DXF bulged polylines require conversion to ARC entities"</string>
@@ -603,6 +611,7 @@
   <string name="ui_7e9b200cfc89" formatted="false">"Feature history / curve / surface tools"</string>
   <string name="ui_9579c0c7f963" formatted="false">"Feature history exceeds 250 operations"</string>
   <string name="ui_e7061bd455e9" formatted="false">"Feature limit reached"</string>
+  <string name="ui_6a5159baf4ba" formatted="false">"Feature name"</string>
   <string name="ui_a78736185e10" formatted="false">"Feature needs at least two inputs"</string>
   <string name="ui_a046deaacbec" formatted="false">"Feature needs one input"</string>
   <string name="ui_1c92f3270e1c" formatted="false">"Feature needs two inputs"</string>
@@ -729,8 +738,9 @@
   <string name="ui_24617dd70272" formatted="false">"Import Python file"</string>
   <string name="ui_f2331487b964" formatted="false">"Import from files"</string>
   <string name="ui_15cc73271115" formatted="false">"Import worksheet CSV"</string>
+  <string name="ui_6fe26e836676" formatted="false">"ImportedBody"</string>
   <string name="ui_0ac055066c7e" formatted="false">"ImportedStep"</string>
-  <string name="ui_a2360e35db1e" formatted="false">"Independent native Android CAD app with selected FreeCAD functionality.\n\nNative ARM64 OpenCASCADE 7.9.2 CAD kernel; actual FreeCAD PlaneGCS Sketcher solver; software 3D renderer, optional OpenGL ES 3, and Android touch UI.\n\nNew: weighted NURBS control points, interpolated splines, profiles, loft/sweep/revolve/extrude, sections, offsets, chamfer, healing, jewellery settings, bounded subdivision primitives and a small typed node graph.\n\nThe optional document lab includes original FreeCAD Base/App/Part/Materials, native parametric solids and booleans, dimensional expressions, transactions, bounded geometry preview, STEP exchange, Python console/macros and one portable scripted metadata feature. Native FCStd restoration is limited to documented App metadata and whitelisted Part types. Sketcher, PartDesign, Gui and arbitrary workbench/addon FCStd support remain pending. The new Part runtime still requires Android execution testing. The main CAD workspace keeps its independent OCCT recipe engine. STEP transfers solid geometry to desktop FreeCAD.\n\nAll work is local. The app requests no network permission.\n\nCode: LGPL-2.1-or-later. FreeCAD: LGPL-2.1-or-later. OpenCASCADE: LGPL-2.1 with OCCT exception. Eigen: MPL-2.0. Boost: Boost Software License 1.0. meshoptimizer: MIT. Optional lab: Qt6.8.3 LGPL3/GPL3 notices and CPython3.13 PSF licence. Full notices accompany the source bundle and are included in app assets."</string>
+  <string name="ui_11ac3c3f2595" formatted="false">"Independent native Android CAD app with selected FreeCAD functionality.\n\nNative ARM64 OpenCASCADE 7.9.2 CAD kernel; actual FreeCAD PlaneGCS Sketcher solver; software 3D renderer, optional OpenGL ES 3, and Android touch UI.\n\nNew: weighted NURBS control points, interpolated splines, profiles, loft/sweep/revolve/extrude, sections, offsets, chamfer, healing, jewellery settings, bounded subdivision primitives and a small typed node graph.\n\nThe optional document lab includes original FreeCAD Base/App/Part/Materials/Sketcher/PartDesign, native parametric solids and booleans, dimensional expressions, transactions, bounded geometry preview, STEP exchange, Python console/macros and one portable scripted metadata feature. Native FCStd restoration is limited to documented App metadata, whitelisted Part/Sketcher types and bounded original Body/Pad/Pocket workflows. Broader PartDesign, Gui and arbitrary workbench/addon FCStd support remain pending. This version requires Android execution testing. The main CAD workspace keeps its independent OCCT recipe engine. STEP transfers solid geometry to desktop FreeCAD.\n\nAll work is local. The app requests no network permission.\n\nCode: LGPL-2.1-or-later. FreeCAD: LGPL-2.1-or-later. OpenCASCADE: LGPL-2.1 with OCCT exception. Eigen: MPL-2.0. Boost: Boost Software License 1.0. meshoptimizer: MIT. Optional lab: Qt6.8.3 LGPL3/GPL3 notices and CPython3.13 PSF licence. Full notices accompany the source bundle and are included in app assets."</string>
   <string name="ui_ba805a89fc88" formatted="false">"Index (zero-based)"</string>
   <string name="ui_e01cd8bc414e" formatted="false">"Indices refer to this geometry. Changed topology blocks dependent selected-edge/face recipes.\n\n"</string>
   <string name="ui_4b631f698425" formatted="false">"Info"</string>
@@ -742,6 +752,7 @@
   <string name="ui_c568d584a221" formatted="false">"Input "</string>
   <string name="ui_b2d508a70498" formatted="false">"Inputs: "</string>
   <string name="ui_7538a7abe8ba" formatted="false">"Insert sample"</string>
+  <string name="ui_b8a248deea32" formatted="false">"Inspect Body history"</string>
   <string name="ui_f93e60e895b2" formatted="false">"Inspect native face or edge"</string>
   <string name="ui_f8dfe69a6067" formatted="false">"Inspect sketch solver"</string>
   <string name="ui_5f97f8775628" formatted="false">"Instance"</string>
@@ -832,6 +843,7 @@
   <string name="ui_8ae1c34bd37f" formatted="false">"Left"</string>
   <string name="ui_ca0846ea08b3" formatted="false">"Left · orthographic view"</string>
   <string name="ui_3bade34ecbc5" formatted="false">"Length"</string>
+  <string name="ui_bd5b2da018fb" formatted="false">"Length (mm)"</string>
   <string name="ui_38c2a0ff8f19" formatted="false">"Length property"</string>
   <string name="ui_ea9676003762" formatted="false">"Line"</string>
   <string name="ui_77798131a4eb" formatted="false">"Line x1 y1 z1 x2 y2 z2"</string>
@@ -943,8 +955,10 @@
   <string name="ui_709a23220f2c" formatted="false">"Name"</string>
   <string name="ui_cb04729f44c1" formatted="false">"Name / layer / lock"</string>
   <string name="ui_ed387f007e09" formatted="false">"Name sketch constraint"</string>
+  <string name="ui_c5011646220e" formatted="false">"Native Pad"</string>
   <string name="ui_4862367a4934" formatted="false">"Native Part boolean"</string>
   <string name="ui_871cb729cd33" formatted="false">"Native Part placement"</string>
+  <string name="ui_788019d78b2d" formatted="false">"Native Pocket"</string>
   <string name="ui_45211683ce7b" formatted="false">"Native box"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Native cone"</string>
   <string name="ui_c62b92752d38" formatted="false">"Native cut"</string>
@@ -1050,6 +1064,8 @@
   <string name="ui_6e349b44e371" formatted="false">"Original Part"</string>
   <string name="ui_f88fb371ca4e" formatted="false">"Original Part is not available in this runtime"</string>
   <string name="ui_c4044bf8f2d4" formatted="false">"Original Part module is not available in this runtime"</string>
+  <string name="ui_d23e7c948f04" formatted="false">"Original PartDesign"</string>
+  <string name="ui_0572409d5d59" formatted="false">"Original PartDesign is unavailable in this runtime."</string>
   <string name="ui_d182bf94dfd9" formatted="false">"Original STL: %,d triangles\nSaving and STL export retain the original mesh. The display may be simplified."</string>
   <string name="ui_b7772221139e" formatted="false">"Original Sketcher"</string>
   <string name="ui_d5b0dacfb9f5" formatted="false">"Original Sketcher is not available in this runtime"</string>
@@ -1066,6 +1082,7 @@
   <string name="ui_6c706fa8c763" formatted="false">"PNG · studio view"</string>
   <string name="ui_7fc60152f68c" formatted="false">"PNGOptions"</string>
   <string name="ui_d0b03143efff" formatted="false">"POSITION"</string>
+  <string name="ui_41e96472d42c" formatted="false">"Pad"</string>
   <string name="ui_f852b509bbae" formatted="false">"Pad height Z (mm)"</string>
   <string name="ui_afc129571bf0" formatted="false">"Parallel"</string>
   <string name="ui_a62da49e936f" formatted="false">"Parameter "</string>
@@ -1123,6 +1140,7 @@
   <string name="ui_0aae9a49aace" formatted="false">"Plane point Y"</string>
   <string name="ui_076c628bf59a" formatted="false">"Plane point Z"</string>
   <string name="ui_81e5b5b75ae4" formatted="false">"Plate · edit hidden Rectangle root"</string>
+  <string name="ui_0bd05d64fd9f" formatted="false">"Pocket"</string>
   <string name="ui_f79a28423ed1" formatted="false">"Point"</string>
   <string name="ui_310643f82fc7" formatted="false">"Point A"</string>
   <string name="ui_cefac276c2ed" formatted="false">"Point B"</string>
@@ -1161,6 +1179,7 @@
   <string name="ui_6a9c3151e8f5" formatted="false">"Prism 6 10 20"</string>
   <string name="ui_cc9b8a9dcbc7" formatted="false">"Private document"</string>
   <string name="ui_ff4fc0276e96" formatted="false">"Profile"</string>
+  <string name="ui_681bf926382b" formatted="false">"Profile sketch"</string>
   <string name="ui_21108a1b732b" formatted="false">"Project curve"</string>
   <string name="ui_a8407f5ba885" formatted="false">"Project curve onto XY plane"</string>
   <string name="ui_ab49f6d8ab55" formatted="false">"Project entry is too large"</string>
@@ -1217,6 +1236,7 @@
   <string name="ui_a9ffd589d8f1" formatted="false">"Refined"</string>
   <string name="ui_0f217179940c" formatted="false">"Region"</string>
   <string name="ui_7a3b23e6ce0b" formatted="false">"Region · one closed planar profile"</string>
+  <string name="ui_83095a216ce0" formatted="false">"Remove last Body feature"</string>
   <string name="ui_92d700a362c3" formatted="false">"Remove object"</string>
   <string name="ui_d3f4cb898fbe" formatted="false">"Rename"</string>
   <string name="ui_b6bce61bbb96" formatted="false">"Rename \"name\""</string>
@@ -1328,6 +1348,7 @@
   <string name="ui_e72675a4999d" formatted="false">"Section z · flatten horizontal section to XY"</string>
   <string name="ui_ea9edca6917c" formatted="false">"SectionPlane"</string>
   <string name="ui_8598222918d3" formatted="false">"Select"</string>
+  <string name="ui_cf5fe0f398bb" formatted="false">"Select Body Tip"</string>
   <string name="ui_3975d731f5d2" formatted="false">"Select a CAD solid"</string>
   <string name="ui_9eea858822f8" formatted="false">"Select a model"</string>
   <string name="ui_bb229377716a" formatted="false">"Select a model first."</string>
@@ -1414,6 +1435,7 @@
   <string name="ui_87d8e53ec2e8" formatted="false">"Sketch exceeds 10,000 mm"</string>
   <string name="ui_f0cf5d478e66" formatted="false">"Sketch guide"</string>
   <string name="ui_3b281e4dee6e" formatted="false">"Sketch line"</string>
+  <string name="ui_66fa5f416c4a" formatted="false">"Sketch name"</string>
   <string name="ui_8fdab3017915" formatted="false">"Sketch object"</string>
   <string name="ui_3594732ca359" formatted="false">"Sketch pad"</string>
   <string name="ui_e0ca4e6ea91e" formatted="false">"Sketch placement"</string>
@@ -1452,6 +1474,7 @@
   <string name="ui_bd390a2685ec" formatted="false">"Software 3D"</string>
   <string name="ui_e1c6f64d47b0" formatted="false">"Software 3D active"</string>
   <string name="ui_a6b985574468" formatted="false">"Software 3D active after graphics failure"</string>
+  <string name="ui_d00635865cda" formatted="false">"Solid"</string>
   <string name="ui_be829e31a1a1" formatted="false">"Solid Edge9"</string>
   <string name="ui_aafa7fd396ca" formatted="false">"Solid Face6"</string>
   <string name="ui_b04a353cab8c" formatted="false">"Solid depth (mm)"</string>
@@ -1646,6 +1669,7 @@
   <string name="ui_6a195ab24b1f" formatted="false">"Upper profile"</string>
   <string name="ui_f9f4b89fd160" formatted="false">"Upstream App/Part 1.1.4 · solids, properties, expressions and transactions"</string>
   <string name="ui_83ee1bec0e9f" formatted="false">"Upstream App/Part/Sketcher 1.1.4 · solids, sketches and native constraints"</string>
+  <string name="ui_45475b570da7" formatted="false">"Upstream App/Part/Sketcher/PartDesign 1.1.4 · native document workflows"</string>
   <string name="ui_3874f457f5c4" formatted="false">"Upstream document lab UI created"</string>
   <string name="ui_893974481948" formatted="false">"Upstream document operation"</string>
   <string name="ui_2ac5d627cb40" formatted="false">"Use Object.Property"</string>

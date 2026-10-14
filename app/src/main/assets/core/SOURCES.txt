@@ -1,5 +1,5 @@
-FreeCAD 1.1.4 Base/App/Part/Materials/Sketcher;  Qt 6.8.3 headless Core/XML/Network/Concurrent; CPython 3.13.16.
+FreeCAD 1.1.4 Base/App/Part/Materials/Sketcher/PartDesign;  Qt 6.8.3 headless Core/XML/Network/Concurrent; CPython 3.13.16.
 Frozen sources, checksums, build scripts and patches: native-cad/docs/FREECAD-ANDROID-TOOLCHAINS.json and scripts.
-This isolated document lab is experimental. Only the documented bounded Part/Sketcher adapters are included; other workbenches and Android runtime parity remain pending.
+This isolated document lab is experimental. Only the documented bounded Part/Sketcher/Body/Pad/Pocket adapters are included; other workbenches and Android runtime parity remain pending.
 Source URLs and dependency notices: native-cad/docs/FREECAD-CORE-PORT.md and the dependency manifests.
 Bundled original FreeCAD material/model resources retain their individual authors/licenses; default material data is GPL-2.0-or-later. Full GPL2 text is included in core/licenses/material-data-GPL-2.0.txt.

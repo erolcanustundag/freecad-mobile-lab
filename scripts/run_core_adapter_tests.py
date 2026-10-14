@@ -33,4 +33,4 @@ with tempfile.TemporaryDirectory(prefix='freecad-mobile-core-',dir=ROOT) as temp
     subprocess.run([str(jdk/'bin/java'),'-cp',str(classes)+os.pathsep+str(jsonjar),
         'org.freecad.mobilelab.'+test,
         str(ROOT/'core-bridge-host/libfreecad_document_bridge.so'),str(home),
-        str(ROOT/'app/src/main/assets/core'),*([str(classes/'libsignalprobe.so')] if args.sketch_tests or args.partdesign_tests else [])],check=True,env=env,timeout=90)
+        str(ROOT/'app/src/main/assets/core'),*([str(classes/'libsignalprobe.so')] if args.sketch_tests or args.partdesign_tests else [])],check=True,env=env,timeout=300 if args.sketch_tests or args.partdesign_tests else 90)
