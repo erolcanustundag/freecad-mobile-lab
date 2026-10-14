@@ -21,6 +21,22 @@
       "Edge1"
     ]
   },
+  "AddArcPipe": {
+    "type": "PartDesign::AdditivePipe",
+    "volume_mm3": 24.674011002723393,
+    "expected_volume_mm3": 24.674011002723393,
+    "path_radius_mm": 5,
+    "profile_radius_mm": 1,
+    "path_angle_rad": 1.5707963267948966
+  },
+  "CutArcPipe": {
+    "type": "PartDesign::SubtractivePipe",
+    "volume_mm3": 997.5325988997275,
+    "expected_volume_mm3": 997.5325988997276,
+    "path_radius_mm": 2,
+    "profile_radius_mm": 0.5,
+    "path_angle_rad": 1.5707963267948966
+  },
   "AddHelix": {
     "type": "PartDesign::AdditiveHelix",
     "volume_mm3": 49.348033677727166,
@@ -42,6 +58,12 @@
     "turns": 2.0,
     "mode": "pitch-height-angle",
     "axis_role": "Z_Axis"
+  },
+  "HelixDependency": {
+    "status": "PASS",
+    "pitch_edit_turns": 1.5,
+    "height_edit_turns": 3,
+    "native_axis_role": "Z_Axis"
   },
   "status": "HOST_NATIVE_API_PROBE_PASS_MOBILE_PENDING",
   "mobile_integration": "NOT_IMPLEMENTED",

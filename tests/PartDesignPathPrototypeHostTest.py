@@ -30,6 +30,18 @@ def pipe(label,kind,stock=False):
  expected=1000-10*math.pi if stock else 10*math.pi;assert abs(f.Shape.Volume-expected)<1e-5
  results[label]=dict(type=f.TypeId,volume_mm3=f.Shape.Volume,expected_volume_mm3=expected,mode=f.Mode,transition=f.Transition,transformation=f.Transformation,spine_subs=list(f.Spine[1]))
 pipe("AddPipe","AdditivePipe");pipe("CutPipe","SubtractivePipe",True)
+# Circular spines exercise genuine native curvature, not straight extrusion.
+for label,kind,stock in [("AddArcPipe","AdditivePipe",False),("CutArcPipe","SubtractivePipe",True)]:
+ b=fresh(label)
+ if stock:
+  base=profile(b,label+"Base");pad=feature(b,base,label+"Pad","Pad")
+ radius=0.5 if stock else 1;path_radius=2 if stock else 5;origin=A.Vector(5,5,2) if stock else A.Vector(0,0,0)
+ s=b.newObject("Sketcher::SketchObject",label+"Section");s.Placement.Base=origin;s.addGeometry(Part.Circle(A.Vector(0,0,0),A.Vector(0,0,1),radius),False)
+ path=b.newObject("Sketcher::SketchObject",label+"Path");path.Placement=A.Placement(origin,A.Rotation(A.Vector(1,0,0),90));path.addGeometry(Part.ArcOfCircle(Part.Circle(A.Vector(-path_radius,0,0),A.Vector(0,0,1),path_radius),0,math.pi/2),False)
+ f=b.newObject("PartDesign::"+kind,label+"Feature");f.Profile=(s,[]);f.Spine=(path,["Edge1"]);f.Mode="Standard";f.Transition="Transformed";f.Transformation="Constant";d.recompute()
+ swept=math.pi*radius*radius*path_radius*math.pi/2;expected=1000-swept if stock else swept
+ print(label,f.getStatusString(),f.Shape.Volume,expected,flush=True);assert f.Shape.isValid() and len(f.Shape.Solids)==1 and abs(f.Shape.Volume-expected)<1e-4
+ results[label]=dict(type=f.TypeId,volume_mm3=f.Shape.Volume,expected_volume_mm3=expected,path_radius_mm=path_radius,profile_radius_mm=radius,path_angle_rad=math.pi/2)
 # Axis from the original Body, profile plane XZ and radial placement.
 for label,kind in [("AddHelix","AdditiveHelix"),("CutHelix","SubtractiveHelix")]:
  b=fresh(label)
@@ -43,5 +55,11 @@ for label,kind in [("AddHelix","AdditiveHelix"),("CutHelix","SubtractiveHelix")]
  expected=5*math.pi*math.pi if kind=="AdditiveHelix" else 360*math.pi-5*math.pi*math.pi
  assert abs(f.Shape.Volume-expected)<1e-3
  results[label]=dict(type=f.TypeId,volume_mm3=f.Shape.Volume,ideal_axis_meridian_volume_mm3=expected,native_integration_tolerance_mm3=1e-3,pitch_mm=f.Pitch.Value,height_mm=f.Height.Value,turns=f.Turns,mode=f.Mode,axis_role=f.ReferenceAxis[0].Role)
+# Mode-dependent parameter recomputation retains the native axis/profile.
+add=d.getObject("AddHelixFeature");add.Pitch=4;d.recompute();expected=3.75*math.pi*math.pi
+assert abs(add.Shape.Volume-expected)<1e-3 and abs(add.Turns-1.5)<1e-10
+add.Pitch=3;add.Height=9;d.recompute();expected=7.5*math.pi*math.pi
+assert abs(add.Shape.Volume-expected)<1e-3 and abs(add.Turns-3)<1e-10
+results["HelixDependency"]=dict(status="PASS",pitch_edit_turns=1.5,height_edit_turns=3,native_axis_role=add.ReferenceAxis[0].Role)
 results.update(status="HOST_NATIVE_API_PROBE_PASS_MOBILE_PENDING",mobile_integration="NOT_IMPLEMENTED",android_execution="NOT_RUN",freecad="1.1.4")
 print("PASS original Pipe/Helix native class/property/geometry prototype",flush=True)
