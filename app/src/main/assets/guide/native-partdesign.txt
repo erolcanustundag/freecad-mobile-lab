@@ -67,3 +67,14 @@ BodyScaled BODY NAME COUNT FACTOR
 Start from one last owned additive Pad/Revolution/AdditiveLoft, with up to64faces/256edges. Patterns use original Features mode and whole original Body origin axes/planes. Counts include the original and are bounded2–16 before recomputation. Linear is one forward total extent; Polar is forward total angle up to360degrees; Scaled grows from1 to a factor greater than1 and at most4 about the native source centre. Copies must form one connected solid. Spacing, second directions, multiple sources, subtractive/dress-up/pattern sources and other modes remain pending.
 
 For a10mm rectangular Pad occupying x0–10/y0–10/z0–10: BodyMirror Body Mirrored XZ gives2000mm3; on separate identical Bodies BodyLinear Body Linear 2 8 X gives1800, BodyPolar Body Polar 4 360 Z gives4000, and BodyScaled Body Scaled 2 2 gives8000. These are native unions, not summed overlapping volumes. Set Linear.Length 1 cm, Set Polar.Angle 270 deg, Set Scaled.Factor 3 and Set Linear.Occurrences 3 update original features. Tip/history/source updates/rollback/FCStd/STEP are supported. Physical Android1.16 execution remains unverified.
+
+NATIVE EXTRUSION EXTENTS (1.17)
+Pad Body Profile ReversePad 10 reverse
+Pad Body Profile SymmetricPad 10 symmetric
+Pocket Body CutProfile ReverseCut 4 reverse
+Pocket Body CutProfile SymmetricCut 8 symmetric
+PocketThrough Body CutProfile Through forward
+PocketFace Body CutProfile Stopped Face5 forward
+
+Use a separate unused owned sketch for each feature; the examples are alternatives. Pad grows along the sketch normal, Pocket cuts opposite it; reverse flips that direction. Symmetric uses half the total length on each side. Through-all uses original FreeCAD Type=ThroughAll and cuts in the selected direction; place the sketch on or beyond the entry face. Face stopping uses original UpToFace on one planar face of the preceding owned Body solid, parallel to the sketch plane and ahead in the cut direction. Inspect source FaceN with ElementInfo before cutting. The native face link stays in the feature history; topology changes can invalidate it and are rejected. Both cuts must retain one valid solid and remove material.
+Set Length with units for length extents. Set Reversed true/false for one-sided extents; invalid/no-removal direction edits roll back. Through/face extents have no editable Length. Two sides, taper, offset, custom vectors, curved stopping faces, UpToFirst/Last/Shape, Pad face stopping and arbitrary external stopping references remain pending.

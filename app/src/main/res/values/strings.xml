@@ -224,7 +224,7 @@
   <string name="ui_718a7e8a582e" formatted="false">"Body"</string>
   <string name="ui_b9e14a17aa5d" formatted="false">"Body A"</string>
   <string name="ui_66640b70e2fc" formatted="false">"Body B"</string>
-  <string name="ui_c11fbcf741cc" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyFillet Body Rounded 1 1\nBodyChamfer Body Beveled 1 1\nBodyDraft Body Drafted 1 5 5\nBodyThickness Body Hollow 6 1\nBodyMirror Body Mirrored XZ\nBodyLinear Body Linear 2 8 X\nBodyPolar Body Polar 4 360 Z\nBodyScaled Body Scaled 2 2\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, one-sided length Pad/Pocket, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Finishing uses current edge/face numbers on the last solid Tip; fillet/chamfer explicit edges, planar Z-axis draft up to45degrees and inward skin thickness are bounded. Patterns use one last owned additive Pad/Revolution/Loft, whole Body origin references,2–16 occurrences and bounded extents/scale. Other modes, arbitrary lofts, multi-source patterns and reorder remain pending."</string>
+  <string name="ui_b7071d634fbb" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nPad Body Profile ReversePad 10 reverse\nPad Body Profile SymmetricPad 10 symmetric\nPocketThrough Body CutProfile Through\nPocketFace Body CutProfile Stopped Face5\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyFillet Body Rounded 1 1\nBodyChamfer Body Beveled 1 1\nBodyDraft Body Drafted 1 5 5\nBodyThickness Body Hollow 6 1\nBodyMirror Body Mirrored XZ\nBodyLinear Body Linear 2 8 X\nBodyPolar Body Polar 4 360 Z\nBodyScaled Body Scaled 2 2\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, forward/reverse/symmetric total-length Pad/Pocket, native through-all Pocket and planar preceding-solid face stopping, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Finishing uses current edge/face numbers on the last solid Tip; fillet/chamfer explicit edges, planar Z-axis draft up to45degrees and inward skin thickness are bounded. Patterns use one last owned additive Pad/Revolution/Loft, whole Body origin references,2–16 occurrences and bounded extents/scale. Use forward/reverse for directional cuts; symmetric lengths split equally about the sketch plane. Through/face extents have no editable Length. Select a current source FaceN parallel to the sketch plane and ahead in the cut direction. Other modes, arbitrary lofts, multi-source patterns and reorder remain pending."</string>
   <string name="ui_b8ef18d5b319" formatted="false">"Body axis (X/Y/Z)"</string>
   <string name="ui_db4ecb85e22a" formatted="false">"Body from native solid"</string>
   <string name="ui_2041a45c8dc7" formatted="false">"Body guide"</string>
@@ -462,6 +462,7 @@
   <string name="ui_b4748fa72923" formatted="false">"Dimensioned drawing sheet"</string>
   <string name="ui_9f4ca9ec0871" formatted="false">"Dimensions"</string>
   <string name="ui_f8d108dfb868" formatted="false">"Dimensions in mm. Select an object before editing. IDs appear on object chips.\nEnter repeats the previous command. Commands are local CAD actions.\n\n"</string>
+  <string name="ui_e2477866c399" formatted="false">"Direction: forward/reverse"</string>
   <string name="ui_6cc62d64e2d0" formatted="false">"Disable clipping"</string>
   <string name="ui_5e77fe9fbd46" formatted="false">"Disable multiple selection"</string>
   <string name="ui_83d0373b89b0" formatted="false">"Display bounds are too large"</string>
@@ -586,6 +587,7 @@
   <string name="ui_bfa59f13f3da" formatted="false">"Extend straight line"</string>
   <string name="ui_344956bf56ed" formatted="false">"ExtendLine"</string>
   <string name="ui_785cf64a82dd" formatted="false">"ExtendLine startLength endLength"</string>
+  <string name="ui_a2fec90fe861" formatted="false">"Extent: forward/reverse/symmetric"</string>
   <string name="ui_8d10c693b773" formatted="false">"External"</string>
   <string name="ui_d5b286d6f872" formatted="false">"External edge reference"</string>
   <string name="ui_e586bececcf9" formatted="false">"External entities unsupported"</string>
@@ -996,6 +998,7 @@
   <string name="ui_c932b089985d" formatted="false">"Native edge chamfer"</string>
   <string name="ui_4986bec31286" formatted="false">"Native edge fillet"</string>
   <string name="ui_b3af5027c8b4" formatted="false">"Native ellipsoid"</string>
+  <string name="ui_162833afc0e2" formatted="false">"Native face-stopped Pocket"</string>
   <string name="ui_e59ed0259cee" formatted="false">"Native helix"</string>
   <string name="ui_55e081e59f06" formatted="false">"Native intersection"</string>
   <string name="ui_d3b5118746d9" formatted="false">"Native linked compound"</string>
@@ -1015,6 +1018,7 @@
   <string name="ui_c2c2cc1eb77b" formatted="false">"Native sphere"</string>
   <string name="ui_5d6d243f6ba5" formatted="false">"Native spiral"</string>
   <string name="ui_0888b5eb8ee9" formatted="false">"Native subtractive loft"</string>
+  <string name="ui_633ab45f6fa4" formatted="false">"Native through-all Pocket"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Native torus"</string>
   <string name="ui_7aaa9ab32d7f" formatted="false">"Native union"</string>
   <string name="ui_72a680321ead" formatted="false">"Native wedge"</string>
@@ -1078,6 +1082,7 @@
   <string name="ui_df28da4a77e5" formatted="false">"OffsetCurve"</string>
   <string name="ui_a96f7078d777" formatted="false">"OffsetCurve distance"</string>
   <string name="ui_0b12489e740e" formatted="false">"One point per line: X Y Z [weight]. Millimetres.\nNURBS follows control points; interpolation passes through points. Maximum 64 points."</string>
+  <string name="ui_026165afe7b8" formatted="false">"One side"</string>
   <string name="ui_8fc8191265fa" formatted="false">"One slider → numbered STL / recipe ZIP"</string>
   <string name="ui_cf9b77061f7b" formatted="false">"Open"</string>
   <string name="ui_a8f03cc7dbbc" formatted="false">"Open / edit macro"</string>
@@ -1117,6 +1122,7 @@
   <string name="ui_d0b03143efff" formatted="false">"POSITION"</string>
   <string name="ui_41e96472d42c" formatted="false">"Pad"</string>
   <string name="ui_f852b509bbae" formatted="false">"Pad height Z (mm)"</string>
+  <string name="ui_e2b28d1105ad" formatted="false">"Pad/Pocket BODY PROFILE NAME LENGTH [forward|reverse|symmetric]"</string>
   <string name="ui_afc129571bf0" formatted="false">"Parallel"</string>
   <string name="ui_a62da49e936f" formatted="false">"Parameter "</string>
   <string name="ui_c78ba7c727d5" formatted="false">"Parameter fraction"</string>
@@ -1174,6 +1180,9 @@
   <string name="ui_076c628bf59a" formatted="false">"Plane point Z"</string>
   <string name="ui_81e5b5b75ae4" formatted="false">"Plate · edit hidden Rectangle root"</string>
   <string name="ui_0bd05d64fd9f" formatted="false">"Pocket"</string>
+  <string name="ui_a8c25763997a" formatted="false">"PocketFace "</string>
+  <string name="ui_666c28cbe029" formatted="false">"PocketFace BODY PROFILE NAME FaceN [forward|reverse]"</string>
+  <string name="ui_ad068afa305d" formatted="false">"PocketThrough BODY PROFILE NAME [forward|reverse]"</string>
   <string name="ui_f79a28423ed1" formatted="false">"Point"</string>
   <string name="ui_310643f82fc7" formatted="false">"Point A"</string>
   <string name="ui_cefac276c2ed" formatted="false">"Point B"</string>
@@ -1550,6 +1559,8 @@
   <string name="ui_9d9d2d9cbca2" formatted="false">"Stone seat depth (mm)"</string>
   <string name="ui_a3d17bdd5ea2" formatted="false">"Stone settings · actual CAD solids"</string>
   <string name="ui_785a9fc2144d" formatted="false">"Stone width"</string>
+  <string name="ui_51e9111b8711" formatted="false">"Stopped"</string>
+  <string name="ui_f980cfcb4921" formatted="false">"Stopping face (FaceN)"</string>
   <string name="ui_24be08509309" formatted="false">"Strided indices unsupported"</string>
   <string name="ui_3df63b7acb05" formatted="false">"String"</string>
   <string name="ui_5b23bd71b38c" formatted="false">"Studio"</string>
@@ -1614,6 +1625,8 @@
   <string name="ui_6a3fdfe6e841" formatted="false">"This object has no editable feature recipe"</string>
   <string name="ui_3a353224d16c" formatted="false">"This operation has no numeric parameters. Edit its input geometry instead."</string>
   <string name="ui_3dcedac24ee9" formatted="false">"Thread "</string>
+  <string name="ui_553658802834" formatted="false">"Through"</string>
+  <string name="ui_ce26250a7c4a" formatted="false">"ThroughAll"</string>
   <string name="ui_6209d69a9083" formatted="false">"Title limit 100, notes limit 200 characters"</string>
   <string name="ui_a430ac3065f8" formatted="false">"Title · up to 100 characters"</string>
   <string name="ui_a09797fefea0" formatted="false">"Tolerance (mm)"</string>
@@ -1637,6 +1650,7 @@
   <string name="ui_bb051365c738" formatted="false">"Torus"</string>
   <string name="ui_e33fcef6ef7e" formatted="false">"Total Z-axis angle (degrees)"</string>
   <string name="ui_7338cfbcd713" formatted="false">"Total extent (mm)"</string>
+  <string name="ui_5ee7235abca3" formatted="false">"Total length (mm)"</string>
   <string name="ui_132e2942c167" formatted="false">"Trace saved: "</string>
   <string name="ui_15cc58b37196" formatted="false">"Trace unavailable: "</string>
   <string name="ui_a327452c36ed" formatted="false">"Transaction open · commit or cancel to finish"</string>
@@ -1705,6 +1719,7 @@
   <string name="ui_edfe910cbb2a" formatted="false">"UntrimPatch"</string>
   <string name="ui_8282a0e3523f" formatted="false">"UntrimPatch · restore full UV patch"</string>
   <string name="ui_2d7749ad8168" formatted="false">"Unused angle"</string>
+  <string name="ui_49afaef17729" formatted="false">"UpToFace"</string>
   <string name="ui_6b5b87b9bec8" formatted="false">"Upper"</string>
   <string name="ui_6a195ab24b1f" formatted="false">"Upper profile"</string>
   <string name="ui_f9f4b89fd160" formatted="false">"Upstream App/Part 1.1.4 · solids, properties, expressions and transactions"</string>
@@ -1715,11 +1730,13 @@
   <string name="ui_2ac5d627cb40" formatted="false">"Use Object.Property"</string>
   <string name="ui_05f362e29902" formatted="false">"Use Source.Property"</string>
   <string name="ui_164021fae306" formatted="false">"Use a current EdgeN or FaceN"</string>
+  <string name="ui_2682915d2e19" formatted="false">"Use a current FaceN selection"</string>
   <string name="ui_65cd787faf21" formatted="false">"Use a finite camera and positive viewport"</string>
   <string name="ui_79ae0a58fc2e" formatted="false">"Use a plain .py filename"</string>
   <string name="ui_68f1fb85d13b" formatted="false">"Use a plain STEP filename"</string>
   <string name="ui_cc082228eb12" formatted="false">"Use a single-line title (100 characters) and notes (200 characters)"</string>
   <string name="ui_dbe8e28e236f" formatted="false">"Use current EdgeN selections"</string>
+  <string name="ui_87c6bbdb7d31" formatted="false">"Use forward or reverse direction"</string>
   <string name="ui_7dcb3f42d312" formatted="false">"Use phone language"</string>
   <string name="ui_e38373766d86" formatted="false">"Use true or false"</string>
   <string name="ui_ac9ccbb2f709" formatted="false">"Use world XYZ points"</string>

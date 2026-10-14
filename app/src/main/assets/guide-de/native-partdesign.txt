@@ -67,3 +67,14 @@ BodyScaled BODY NAME COUNT FACTOR
 Quelle ist das letzte eigene additive Pad/Revolution/AdditiveLoft mit höchstens64Flächen/256Kanten. Verwendet werden originales Features-Verfahren und ursprüngliche Körperachsen/-ebenen. Vorkommen einschließlich Original werden vor der Berechnung auf2–16begrenzt. Linear: eine Vorwärtsrichtung mit Gesamtausdehnung. Polar: Gesamtwinkel bis360Grad. Skaliert: Wachstum vomOriginal bis Faktor größer als1, höchstens4, um den nativen Quellmittelpunkt. Kopien müssen einen zusammenhängenden Volumenkörper ergeben. Abstand, zweite Richtungen, mehrere Quellen, subtraktive/Bearbeitungs-/Musterquellen und weitere Modi bleiben offen.
 
 Für ein10mm-Pad x0–10/y0–10/z0–10: auf separaten Körpern ergeben BodyMirror Body Mirrored XZ=2000, BodyLinear Body Linear 2 8 X=1800, BodyPolar Body Polar 4 360 Z=4000 und BodyScaled Body Scaled 2 2=8000mm3. Native Vereinigung, keine Addition überlappender Volumen. Set Linear.Length 1 cm, Set Polar.Angle 270 deg, Set Scaled.Factor 3 und Set Linear.Occurrences 3 aktualisieren Parameter. Tip/Verlauf/Quelländerungen/Zurückrollen/FCStd/STEP unterstützt. Android1.16 wurde noch nicht auf einem Gerät geprüft.
+
+NATIVE EXTRUSIONSARTEN (1.17)
+Pad Body Profile ReversePad 10 reverse
+Pad Body Profile SymmetricPad 10 symmetric
+Pocket Body CutProfile ReverseCut 4 reverse
+Pocket Body CutProfile SymmetricCut 8 symmetric
+PocketThrough Body CutProfile Through forward
+PocketFace Body CutProfile Stopped Face5 forward
+
+Verwenden Sie je Merkmal eine eigene unbenutzte Skizze desselben Körpers; die Beispiele zeigen Alternativen. Pad wächst entlang der Skizzennormalen, Pocket schneidet entgegen dieser Richtung. reverse kehrt die Richtung um. symmetric verteilt die Gesamtlänge zur Hälfte auf beide Seiten. Die durchgehende Tasche verwendet FreeCAD ThroughAll; legen Sie die Skizze auf oder vor die Eintrittsfläche. Die Tasche bis Fläche verwendet UpToFace mit einer ebenen FaceN des vorherigen Körpermerkmals, parallel zur Skizzenebene und vor der Skizze in Schnittrichtung. Prüfen Sie die Fläche vorher mit ElementInfo. Die native Flächenreferenz bleibt im Verlauf erhalten; ungültige Referenzen nach Topologieänderungen werden abgewiesen. Jede Tasche muss Material entfernen und einen gültigen zusammenhängenden Körper erhalten.
+Set bearbeitet Length mit Einheiten nur bei Längenextrusionen. Reversed true/false bearbeitet die Richtung einseitiger Extrusionen; ungültige Änderungen werden zurückgerollt. ThroughAll/UpToFace haben keine bearbeitbare Length. Zwei Seiten, Verjüngung, Versatz, eigene Richtungsvektoren, gekrümmte Endflächen, UpToFirst/Last/Shape, Pad bis Fläche und externe Endreferenzen sind noch offen. Die Befehlswerte bleiben forward/reverse/symmetric.

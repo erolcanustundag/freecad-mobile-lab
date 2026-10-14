@@ -164,6 +164,7 @@
   <string name="ui_e627cbc7fb85" formatted="false">"Skizze lösen"</string>
   <string name="ui_b4748fa72923" formatted="false">"Bemaßtes Zeichnungsblatt"</string>
   <string name="ui_9f4ca9ec0871" formatted="false">"Abmessungen"</string>
+  <string name="ui_e2477866c399" formatted="false">"Richtung: forward/reverse"</string>
   <string name="ui_6cc62d64e2d0" formatted="false">"Schnitt deaktivieren"</string>
   <string name="ui_5e77fe9fbd46" formatted="false">"Mehrfachauswahl deaktivieren"</string>
   <string name="ui_c3aeea8a6be7" formatted="false">"Darstellungsdetails"</string>
@@ -232,6 +233,7 @@
   <string name="ui_6f26fb48d63c" formatted="false">"Ausdruck (z. B. Source.Width * 2)"</string>
   <string name="ui_40efda60ef0e" formatted="false">"Skizzenlinie verlängern"</string>
   <string name="ui_bfa59f13f3da" formatted="false">"Gerade verlängern"</string>
+  <string name="ui_a2fec90fe861" formatted="false">"Ausdehnung: forward/reverse/symmetric"</string>
   <string name="ui_d5b286d6f872" formatted="false">"Externe Kantenreferenz"</string>
   <string name="ui_33272d4ea2f5" formatted="false">"Extrudieren"</string>
   <string name="ui_2522b424af88" formatted="false">"Extrusionsausdehnungen"</string>
@@ -389,6 +391,7 @@
   <string name="ui_c932b089985d" formatted="false">"Native Kantenfase"</string>
   <string name="ui_4986bec31286" formatted="false">"Native Kantenverrundung"</string>
   <string name="ui_b3af5027c8b4" formatted="false">"Natives Ellipsoid"</string>
+  <string name="ui_162833afc0e2" formatted="false">"Native Tasche bis Fläche"</string>
   <string name="ui_e59ed0259cee" formatted="false">"Native Helix"</string>
   <string name="ui_55e081e59f06" formatted="false">"Originaler Schnitt"</string>
   <string name="ui_d3b5118746d9" formatted="false">"Natives verknüpftes Formaggregat"</string>
@@ -407,6 +410,7 @@
   <string name="ui_c2c2cc1eb77b" formatted="false">"Native Kugel"</string>
   <string name="ui_5d6d243f6ba5" formatted="false">"Native Spirale"</string>
   <string name="ui_0888b5eb8ee9" formatted="false">"Nativer subtraktiver Loft"</string>
+  <string name="ui_633ab45f6fa4" formatted="false">"Native durchgehende Tasche"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Nativer Torus"</string>
   <string name="ui_7aaa9ab32d7f" formatted="false">"Originale Vereinigung"</string>
   <string name="ui_72a680321ead" formatted="false">"Nativer Keil"</string>
@@ -664,6 +668,7 @@
   <string name="ui_3b48aeda246d" formatted="false">"Steindurchmesser (mm)"</string>
   <string name="ui_9d9d2d9cbca2" formatted="false">"Steinsitztiefe (mm)"</string>
   <string name="ui_a3d17bdd5ea2" formatted="false">"Steinfassungen · echte CAD-Körper"</string>
+  <string name="ui_f980cfcb4921" formatted="false">"Endfläche (FaceN)"</string>
   <string name="ui_3df63b7acb05" formatted="false">"Text"</string>
   <string name="ui_cfb90aa95fca" formatted="false">"Studiomaterial · pro Objekt gespeichert"</string>
   <string name="ui_39676d735f34" formatted="false">"Studio · Metall- / Rauheitsvorschau"</string>
@@ -694,6 +699,7 @@
   <string name="ui_1b03f33c6462" formatted="false">"Topologieindizes"</string>
   <string name="ui_bb051365c738" formatted="false">"Torus"</string>
   <string name="ui_7338cfbcd713" formatted="false">"Gesamtausdehnung (mm)"</string>
+  <string name="ui_5ee7235abca3" formatted="false">"Gesamtlänge (mm)"</string>
   <string name="ui_a327452c36ed" formatted="false">"Transaktion offen · zum Abschließen bestätigen oder abbrechen"</string>
   <string name="ui_dea51bb13a44" formatted="false">"Transformieren"</string>
   <string name="ui_5e139f45b5e7" formatted="false">"Ausgewähltes Modell transformieren"</string>

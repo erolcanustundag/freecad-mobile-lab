@@ -1,0 +1,156 @@
+{
+  "ReversePad": {
+    "type": "PartDesign::Pad",
+    "mode": "Length",
+    "side": "One side",
+    "reversed": true,
+    "status": "Valid",
+    "volume": 999.9999999999998,
+    "bounds": [
+      -10.0,
+      0.0
+    ],
+    "valid": true,
+    "properties": {
+      "Type2": "'Length'",
+      "Length2": "10.0 mm",
+      "TaperAngle": "0.0 deg",
+      "Offset": "0.0 mm",
+      "AlongSketchNormal": "True",
+      "UseCustomVector": "False",
+      "Midplane": "False",
+      "UpToFace": "None",
+      "UpToFace2": "None",
+      "ReferenceAxis": "None"
+    }
+  },
+  "SymmetricPad": {
+    "type": "PartDesign::Pad",
+    "mode": "Length",
+    "side": "Symmetric",
+    "reversed": false,
+    "status": "Valid",
+    "volume": 999.9999999999998,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "valid": true,
+    "properties": {
+      "Type2": "'Length'",
+      "Length2": "10.0 mm",
+      "TaperAngle": "0.0 deg",
+      "Offset": "0.0 mm",
+      "AlongSketchNormal": "True",
+      "UseCustomVector": "False",
+      "Midplane": "False",
+      "UpToFace": "None",
+      "UpToFace2": "None",
+      "ReferenceAxis": "None"
+    }
+  },
+  "ReversePocket": {
+    "type": "PartDesign::Pocket",
+    "mode": "Length",
+    "side": "One side",
+    "reversed": true,
+    "status": "Valid",
+    "volume": 968.5840734641018,
+    "bounds": [
+      0.0,
+      10.0
+    ],
+    "valid": true,
+    "properties": {
+      "Type2": "'Length'",
+      "Length2": "5.0 mm",
+      "TaperAngle": "0.0 deg",
+      "Offset": "0.0 mm",
+      "AlongSketchNormal": "True",
+      "UseCustomVector": "False",
+      "Midplane": "False",
+      "UpToFace": "None",
+      "UpToFace2": "None",
+      "ReferenceAxis": "None"
+    }
+  },
+  "SymmetricPocket": {
+    "type": "PartDesign::Pocket",
+    "mode": "Length",
+    "side": "Symmetric",
+    "reversed": false,
+    "status": "Valid",
+    "volume": 968.5840734641018,
+    "bounds": [
+      0.0,
+      10.0
+    ],
+    "valid": true,
+    "properties": {
+      "Type2": "'Length'",
+      "Length2": "5.0 mm",
+      "TaperAngle": "0.0 deg",
+      "Offset": "0.0 mm",
+      "AlongSketchNormal": "True",
+      "UseCustomVector": "False",
+      "Midplane": "False",
+      "UpToFace": "None",
+      "UpToFace2": "None",
+      "ReferenceAxis": "None"
+    }
+  },
+  "ThroughPocket": {
+    "type": "PartDesign::Pocket",
+    "mode": "ThroughAll",
+    "side": "One side",
+    "reversed": false,
+    "status": "Valid",
+    "volume": 968.5840734641018,
+    "bounds": [
+      0.0,
+      10.0
+    ],
+    "valid": true,
+    "properties": {
+      "Type2": "'Length'",
+      "Length2": "5.0 mm",
+      "TaperAngle": "0.0 deg",
+      "Offset": "0.0 mm",
+      "AlongSketchNormal": "True",
+      "UseCustomVector": "False",
+      "Midplane": "False",
+      "UpToFace": "None",
+      "UpToFace2": "None",
+      "ReferenceAxis": "None"
+    }
+  },
+  "FacePocket": {
+    "type": "PartDesign::Pocket",
+    "mode": "UpToFace",
+    "side": "One side",
+    "reversed": false,
+    "status": "Valid",
+    "volume": 974.8672587712815,
+    "bounds": [
+      0.0,
+      10.0
+    ],
+    "valid": true,
+    "properties": {
+      "Type2": "'Length'",
+      "Length2": "5.0 mm",
+      "TaperAngle": "0.0 deg",
+      "Offset": "0.0 mm",
+      "AlongSketchNormal": "True",
+      "UseCustomVector": "False",
+      "Midplane": "False",
+      "UpToFace": "(<PartDesign::Pad>, ['Face5'])",
+      "UpToFace2": "None",
+      "ReferenceAxis": "None"
+    }
+  },
+  "status": "PASS",
+  "android_execution": "NOT_RUN",
+  "freecad": "1.1.4",
+  "purpose": "native API reference; mobile JNI qualification tracked separately"
+}

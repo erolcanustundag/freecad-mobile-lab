@@ -120,6 +120,32 @@ def pattern_parameters(kind,source,count=2,amount=None):
         if not 1+1e-7<amount<=4:raise ValueError('Scaled patterns currently support growth factor greater than1 and at most4')
         if any(abs(v)*amount>1000000 for v in mobile_part.summary(source)['bounds']):raise ValueError('Scaled geometry would exceed the coordinate budget')
 
+def extent_parameters(kind,profile,source,mode,side,reverse,length,face=None):
+    if mode not in (('Length',) if kind=='PartDesign::Pad' else ('Length','ThroughAll','UpToFace')):raise ValueError('Unsupported native extrusion extent')
+    if side not in ('One side','Symmetric') or side=='Symmetric' and mode!='Length':raise ValueError('Symmetric extrusion currently supports total length only')
+    if type(reverse) is not bool or side=='Symmetric' and reverse:raise ValueError('Use a boolean direction; symmetric extent has no reverse option')
+    positive(length)
+    if mode=='UpToFace':
+        if source is None:raise ValueError('Face stopping needs the preceding owned Body solid')
+        index=selection(source,[face],'Face')[0]
+        surface=source.Shape.Faces[index-1]
+        if not isinstance(surface.Surface,mobile_part.Part.Plane):raise ValueError('Pocket stopping currently supports a planar source face')
+        normal=profile.Placement.Rotation.multVec(App.Vector(0,0,1))
+        if abs(surface.normalAt(0,0).dot(normal))<1-1e-7:raise ValueError('Stopping face must be parallel to the sketch plane')
+        distance=(surface.CenterOfMass-profile.Shape.Vertexes[0].Point).dot(normal)*(1 if reverse else -1)
+        if not 1e-7<distance<=1000000:raise ValueError('Choose a source face ahead of the pocket direction within the extent budget')
+    elif face is not None:raise ValueError('A stopping face applies only to UpToFace Pocket')
+
+def validate_extent(feature,profile,source):
+    if feature.UseCustomVector or not feature.AlongSketchNormal or feature.ReferenceAxis is not None or feature.Type2!='Length' or feature.Midplane or feature.UpToFace2 is not None or feature.UpToShape or feature.UpToShape2 or any(getattr(feature,p).Value!=0 for p in ('TaperAngle','TaperAngle2','Offset','Offset2')):raise ValueError('Extrusions support the sketch normal, one or symmetric side and zero taper/offset only')
+    face=None
+    if feature.Type=='UpToFace':
+        ref,names=feature.UpToFace if feature.UpToFace is not None else (None,[])
+        if ref!=source or len(names)!=1:raise ValueError('Pocket stopping face must belong to the preceding owned solid')
+        face=names[0]
+    elif feature.UpToFace is not None:raise ValueError('This extent has no stopping-face reference')
+    extent_parameters(feature.TypeId,profile,source,feature.Type,feature.SideType,feature.Reversed,feature.Length.Value,face)
+
 def edit(doc, e, get, identifier):
     require();op=e['op']
     if op=='body_create':
@@ -193,7 +219,9 @@ def edit(doc, e, get, identifier):
         if any(o.TypeId in FEATURES for o in s.InList):raise ValueError('Use a separate sketch for each Body feature')
         if subtractive and not history:raise ValueError('Subtractive Body feature needs an existing solid')
         if history:solid(history[-1])
-        if op in ('body_pad','body_pocket'):length=positive(e['length'])
+        if op in ('body_pad','body_pocket'):
+            length=positive(e.get('length',5));mode=e.get('extent','Length');side=e.get('side','One side');reverse=e.get('reverse',False);face=e.get('face')
+            extent_parameters('PartDesign::Pad' if op=='body_pad' else 'PartDesign::Pocket',s,history[-1] if history else None,mode,side,reverse,length,face)
         elif op in ('body_revolve','body_groove'):
             amount=angle(e['angle']);axis=e['axis']
             if axis not in ('H','V'):raise ValueError('Use the profile horizontal H or vertical V axis')
@@ -205,7 +233,9 @@ def edit(doc, e, get, identifier):
             # Ruled two-profile lofts only: no silent approximation of arbitrary loft UI.
         kind={'body_pad':'Pad','body_pocket':'Pocket','body_revolve':'Revolution','body_groove':'Groove','body_add_loft':'AdditiveLoft','body_sub_loft':'SubtractiveLoft'}[op]
         obj=b.newObject('PartDesign::'+kind,name);obj.Profile=(s,[])
-        if op in ('body_pad','body_pocket'):obj.Type='Length';obj.SideType='One side';obj.Length=length
+        if op in ('body_pad','body_pocket'):
+            obj.Type=mode;obj.SideType=side;obj.Reversed=reverse;obj.Length=length
+            if mode=='UpToFace':obj.UpToFace=(history[-1],[face])
         elif op in ('body_revolve','body_groove'):
             obj.Type='Angle';obj.Midplane=False;obj.Reversed=False;obj.Angle2=0
             obj.ReferenceAxis=(s,['H_Axis' if axis=='H' else 'V_Axis']);obj.Angle=amount
@@ -218,7 +248,7 @@ def protected(obj):
 
 def editable(obj,name):
     if obj.TypeId in FRAMES:return name=='Label'
-    if obj.TypeId in TYPES:return name=='Label' or obj.TypeId in PATTERNS and (name=='Occurrences' and obj.TypeId!='PartDesign::Mirrored' or name=={'PartDesign::LinearPattern':'Length','PartDesign::PolarPattern':'Angle','PartDesign::Scaled':'Factor'}.get(obj.TypeId)) or obj.TypeId in DRESSUP and name==SCALARS[obj.TypeId] or obj.TypeId in FEATURES-{'PartDesign::FeatureBase'} and name=='Refine' or obj.TypeId in ('PartDesign::Pad','PartDesign::Pocket') and name=='Length' or obj.TypeId in ('PartDesign::Revolution','PartDesign::Groove') and name=='Angle'
+    if obj.TypeId in TYPES:return name=='Label' or obj.TypeId in PATTERNS and (name=='Occurrences' and obj.TypeId!='PartDesign::Mirrored' or name=={'PartDesign::LinearPattern':'Length','PartDesign::PolarPattern':'Angle','PartDesign::Scaled':'Factor'}.get(obj.TypeId)) or obj.TypeId in DRESSUP and name==SCALARS[obj.TypeId] or obj.TypeId in FEATURES-{'PartDesign::FeatureBase'} and name=='Refine' or obj.TypeId in ('PartDesign::Pad','PartDesign::Pocket') and (name=='Length' and obj.Type=='Length' or name=='Reversed' and obj.SideType=='One side') or obj.TypeId in ('PartDesign::Revolution','PartDesign::Groove') and name=='Angle'
     return True
 
 def validate_edit(obj,name,value):
@@ -231,7 +261,9 @@ def validate_edit(obj,name,value):
     if obj.TypeId in DRESSUP and name==SCALARS[obj.TypeId]:
         source,names=obj.Base;b=body(owner(obj));neutral=obj.NeutralPlane[1][0] if obj.TypeId=='PartDesign::Draft' else None
         dressup_parameters(obj.TypeId,source,names,value,b,neutral)
-    if obj.TypeId in ('PartDesign::Pad','PartDesign::Pocket') and name=='Length':positive(value)
+    if obj.TypeId in ('PartDesign::Pad','PartDesign::Pocket'):
+        profile=obj.Profile[0];face=obj.UpToFace[1][0] if obj.UpToFace is not None else None
+        extent_parameters(obj.TypeId,profile,obj.BaseFeature,obj.Type,obj.SideType,value if name=='Reversed' else obj.Reversed,value if name=='Length' else obj.Length.Value,face)
     if obj.TypeId in ('PartDesign::Revolution','PartDesign::Groove') and name=='Angle':angle(value)
 
 def summary(b):
@@ -305,8 +337,7 @@ def validate_document(doc):
                 if sub or profile not in members or profile.TypeId not in mobile_sketch.TYPES:raise ValueError('Pad/Pocket needs a whole sketch owned by its Body')
                 closed(profile)
                 if feature.TypeId in ('PartDesign::Pad','PartDesign::Pocket'):
-                    if feature.Type!='Length' or feature.SideType!='One side':raise ValueError('Pad/Pocket currently supports one-sided length mode only')
-                    positive(feature.Length.Value)
+                    validate_extent(feature,profile,previous)
                 elif feature.TypeId in ('PartDesign::Revolution','PartDesign::Groove'):
                     ref,axis=feature.ReferenceAxis
                     if ref!=profile or axis not in (['H_Axis'],['V_Axis']) or feature.Type!='Angle' or feature.Midplane or feature.Reversed or feature.Angle2.Value!=0:raise ValueError('Revolution/Groove supports one forward angle about its sketch H/V axis only')
@@ -421,9 +452,32 @@ def validate_fcstd(tree):
                 continue
             if types.get(feature)=='PartDesign::FeatureBase':previous=feature;continue
             if types.get(feature) not in PROFILE_FEATURES:continue
-            previous=feature
+            source=previous;previous=feature
             profile=node(feature,'Profile','LinkSub')
             if profile is None or profile.get('value') not in members or types.get(profile.get('value')) not in mobile_sketch.TYPES or profile.get('count')!='0':raise ValueError('Saved Body profile must be a whole owned sketch')
+            if types[feature] in ('PartDesign::Pad','PartDesign::Pocket'):
+                def scalar(prop,tag):
+                    n=node(feature,prop,tag)
+                    if n is None:raise ValueError('Missing saved extrusion property: '+prop)
+                    return n.get('value')
+                mode=scalar('Type','Integer');side=scalar('SideType','Integer');reverse=scalar('Reversed','Bool')
+                if mode not in (['0'] if types[feature]=='PartDesign::Pad' else ['0','1','3']) or side not in ['0','2'] or side=='2' and (mode!='0' or reverse!='false') or reverse not in ['true','false']:raise ValueError('Saved extrusion extent/direction is unsupported')
+                positive(float(scalar('Length','Float')));positive(float(scalar('Length2','Float')))
+                for prop,tag,value in [('Type2','Integer','0'),('UseCustomVector','Bool','false'),('AlongSketchNormal','Bool','true'),('Midplane','Bool','false')]:
+                    if scalar(prop,tag)!=value:raise ValueError('Saved extrusion has unsupported side or direction properties')
+                for prop in ('TaperAngle','TaperAngle2','Offset','Offset2'):
+                    if float(scalar(prop,'Float'))!=0:raise ValueError('Saved tapered/offset extrusion is unsupported')
+                for prop in ('ReferenceAxis','UpToFace2'):
+                    n=node(feature,prop,'LinkSub')
+                    if n is None or n.get('value') or n.get('count')!='0' or list(n):raise ValueError('Saved extrusion contains an unsupported reference')
+                for prop in ('UpToShape','UpToShape2'):
+                    n=node(feature,prop,'LinkSubList')
+                    if n is None or n.get('count')!='0' or list(n):raise ValueError('Saved extrusion contains an unsupported stopping shape')
+                face=node(feature,'UpToFace','LinkSub')
+                if mode=='3':
+                    import re
+                    if face is None or face.get('value')!=source or types.get(source) not in FEATURES or link(feature,'BaseFeature')!=source or face.get('count')!='1' or len(face.findall('Sub'))!=1 or not re.fullmatch(r'Face([1-9][0-9]{0,5})',face.find('Sub').get('value','')):raise ValueError('Saved stopping face must reference the preceding owned Body solid')
+                elif face is None or face.get('value') or face.get('count')!='0' or list(face):raise ValueError('Saved extrusion unexpectedly contains a stopping face')
             if types[feature] in ('PartDesign::AdditiveLoft','PartDesign::SubtractiveLoft'):
                 section=node(feature,'Sections','LinkSubList')
                 children=section.findall('Link') if section is not None else []

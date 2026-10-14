@@ -749,3 +749,9 @@ Body axis (X/Y/Z)|Gövde ekseni (X/Y/Z)|Körperachse (X/Y/Z)
 Occurrences (2–16)|Örnek sayısı (2–16)|Vorkommen (2–16)
 Total extent (mm)|Toplam uzunluk (mm)|Gesamtausdehnung (mm)
 Growth factor (1–4)|Büyütme katsayısı (1–4)|Vergrößerungsfaktor (1–4)
+Native through-all Pocket|Yerel tümünü geçen cep|Native durchgehende Tasche
+Native face-stopped Pocket|Yerel yüzeye kadar cep|Native Tasche bis Fläche
+Total length (mm)|Toplam uzunluk (mm)|Gesamtlänge (mm)
+Extent: forward/reverse/symmetric|Uzama: forward/reverse/symmetric|Ausdehnung: forward/reverse/symmetric
+Direction: forward/reverse|Yön: forward/reverse|Richtung: forward/reverse
+Stopping face (FaceN)|Bitiş yüzeyi (FaceN)|Endfläche (FaceN)

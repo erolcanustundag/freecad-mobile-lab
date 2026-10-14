@@ -469,9 +469,8 @@ def _validate_fcstd(path):
                 value=data.find("./Properties/Property[@name='Length']/Float")
                 if value is None:raise ValueError("Missing saved Pad/Pocket length")
                 mobile_partdesign.positive(float(value.get("value","nan")))
-                for mode in ("Type","SideType"):
-                    v=data.find("./Properties/Property[@name='"+mode+"']/Integer")
-                    if v is None or v.get("value")!="0":raise ValueError("Restored Pad/Pocket supports one-sided Length only")
+                # Native extent, side and owned stopping references are checked
+                # together by mobile_partdesign before document restoration.
             elif kind in ("PartDesign::Revolution","PartDesign::Groove"):
                 value=data.find("./Properties/Property[@name='Angle']/Float")
                 if value is None:raise ValueError("Missing saved revolution angle")

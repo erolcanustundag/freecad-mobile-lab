@@ -67,3 +67,14 @@ BodyScaled BODY NAME COUNT FACTOR
 Kaynak son gövdeye ait tek katı ekleyen Pad/Revolution/AdditiveLoft olmalı; en fazla64yüz/256kenar. Özgün Features modu ve gövdenin özgün eksen/düzlemleri kullanılır. İlk parça dahil örnek sayısı, hesaplama öncesinde2–16ile sınırlanır. Doğrusal örüntü tek yönde toplam uzunluk; dairesel örüntü en fazla360derece; ölçekli örüntü yerel kaynak merkezi etrafında1'den büyük, en fazla4katsayıya büyür. Kopyalar tek bağlı katı oluşturmalı. Aralık modu, ikinci yön, çoklu kaynak, çıkarıcı/bitirme/örüntü kaynakları ve diğer modlar henüz desteklenmez.
 
 x0–10/y0–10/z0–10boyutlu Pad için: ayrı gövdelerde BodyMirror Body Mirrored XZ hacim2000; BodyLinear Body Linear 2 8 X hacim1800; BodyPolar Body Polar 4 360 Z hacim4000; BodyScaled Body Scaled 2 2 hacim8000mm3verir. Örtüşen hacimler toplanmaz, özgün birleşim hesaplanır. Set Linear.Length 1 cm, Set Polar.Angle 270 deg, Set Scaled.Factor 3 ve Set Linear.Occurrences 3 parametreleri günceller. Uç/geçmiş/kaynak güncelleme/geri alma/FCStd/STEP desteklenir.1.16Android cihaz testi yapılmadı.
+
+YEREL UZATMA SEÇENEKLERİ (1.17)
+Pad Body Profile ReversePad 10 reverse
+Pad Body Profile SymmetricPad 10 symmetric
+Pocket Body CutProfile ReverseCut 4 reverse
+Pocket Body CutProfile SymmetricCut 8 symmetric
+PocketThrough Body CutProfile Through forward
+PocketFace Body CutProfile Stopped Face5 forward
+
+Her işlem için gövdenin sahip olduğu ayrı, kullanılmamış bir eskiz seçin; örnekler alternatif işlemlerdir. Pad eskiz normali boyunca uzar, Pocket ters yönde keser. reverse yönü tersine çevirir. symmetric toplam uzunluğun yarısını her iki yana uygular. Tümünü geçen cep özgün FreeCAD ThroughAll özelliğini kullanır; eskizi giriş yüzeyine veya onun dışına yerleştirin. Yüzeye kadar cep, önceki gövde katısının eskiz düzlemine paralel ve kesme yönünde ileride bulunan tek düzlemsel FaceN yüzeyinde durur. Kesmeden önce ElementInfo ile yüzeyi inceleyin. Yerel yüzey bağlantısı işlem geçmişinde korunur; topoloji değişirse geçersiz bağlantı reddedilir. Cep malzeme çıkarmalı ve tek geçerli katı bırakmalıdır.
+Uzunluk kipinde Set ile birimli Length düzenlenebilir. Tek yönlü kiplerde Reversed true/false düzenlenebilir; geçersiz yön düzenlemesi geri alınır. ThroughAll ve UpToFace kiplerinde Length düzenlenemez. İki farklı yan, koniklik, ofset, özel yön vektörü, eğri bitiş yüzeyi, UpToFirst/Last/Shape, yüzeye kadar Pad ve dış bitiş referansları henüz desteklenmez. Komut belirteçleri forward/reverse/symmetric olarak kalır.

@@ -164,6 +164,7 @@
   <string name="ui_e627cbc7fb85" formatted="false">"Eskiz bağlantısını kaldır"</string>
   <string name="ui_b4748fa72923" formatted="false">"Ölçülendirilmiş çizim sayfası"</string>
   <string name="ui_9f4ca9ec0871" formatted="false">"Ölçüler"</string>
+  <string name="ui_e2477866c399" formatted="false">"Yön: forward/reverse"</string>
   <string name="ui_6cc62d64e2d0" formatted="false">"Kesiti kapat"</string>
   <string name="ui_5e77fe9fbd46" formatted="false">"Çoklu seçimi kapat"</string>
   <string name="ui_c3aeea8a6be7" formatted="false">"Görüntü ayrıntısı"</string>
@@ -232,6 +233,7 @@
   <string name="ui_6f26fb48d63c" formatted="false">"İfade (ör. Source.Width * 2)"</string>
   <string name="ui_40efda60ef0e" formatted="false">"Eskiz çizgisini uzat"</string>
   <string name="ui_bfa59f13f3da" formatted="false">"Düz çizgiyi uzat"</string>
+  <string name="ui_a2fec90fe861" formatted="false">"Uzama: forward/reverse/symmetric"</string>
   <string name="ui_d5b286d6f872" formatted="false">"Dış kenar referansı"</string>
   <string name="ui_33272d4ea2f5" formatted="false">"Ekstrüzyon"</string>
   <string name="ui_2522b424af88" formatted="false">"Uzatma boyut modları"</string>
@@ -389,6 +391,7 @@
   <string name="ui_c932b089985d" formatted="false">"Yerel kenar pahı"</string>
   <string name="ui_4986bec31286" formatted="false">"Yerel kenar yuvarlama"</string>
   <string name="ui_b3af5027c8b4" formatted="false">"Yerel elipsoid"</string>
+  <string name="ui_162833afc0e2" formatted="false">"Yerel yüzeye kadar cep"</string>
   <string name="ui_e59ed0259cee" formatted="false">"Yerel helis"</string>
   <string name="ui_55e081e59f06" formatted="false">"Özgün kesişim"</string>
   <string name="ui_d3b5118746d9" formatted="false">"Yerel bağlantılı bileşik şekil"</string>
@@ -407,6 +410,7 @@
   <string name="ui_c2c2cc1eb77b" formatted="false">"Yerel küre"</string>
   <string name="ui_5d6d243f6ba5" formatted="false">"Yerel spiral"</string>
   <string name="ui_0888b5eb8ee9" formatted="false">"Yerel çıkarıcı loft"</string>
+  <string name="ui_633ab45f6fa4" formatted="false">"Yerel tümünü geçen cep"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Yerel torus"</string>
   <string name="ui_7aaa9ab32d7f" formatted="false">"Özgün birleşim"</string>
   <string name="ui_72a680321ead" formatted="false">"Yerel kama"</string>
@@ -664,6 +668,7 @@
   <string name="ui_3b48aeda246d" formatted="false">"Taş çapı (mm)"</string>
   <string name="ui_9d9d2d9cbca2" formatted="false">"Taş yatağı derinliği (mm)"</string>
   <string name="ui_a3d17bdd5ea2" formatted="false">"Taş yuvaları · gerçek CAD katıları"</string>
+  <string name="ui_f980cfcb4921" formatted="false">"Bitiş yüzeyi (FaceN)"</string>
   <string name="ui_3df63b7acb05" formatted="false">"Metin"</string>
   <string name="ui_cfb90aa95fca" formatted="false">"Stüdyo malzemesi · nesne bazında kaydedilir"</string>
   <string name="ui_39676d735f34" formatted="false">"Stüdyo · metaliklik / pürüzlülük önizlemesi"</string>
@@ -694,6 +699,7 @@
   <string name="ui_1b03f33c6462" formatted="false">"Topoloji indisleri"</string>
   <string name="ui_bb051365c738" formatted="false">"Torus"</string>
   <string name="ui_7338cfbcd713" formatted="false">"Toplam uzunluk (mm)"</string>
+  <string name="ui_5ee7235abca3" formatted="false">"Toplam uzunluk (mm)"</string>
   <string name="ui_a327452c36ed" formatted="false">"İşlem açık · bitirmek için onaylayın veya iptal edin"</string>
   <string name="ui_dea51bb13a44" formatted="false">"Dönüştür"</string>
   <string name="ui_5e139f45b5e7" formatted="false">"Seçili modeli dönüştür"</string>

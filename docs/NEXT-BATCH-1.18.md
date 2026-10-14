@@ -1,0 +1,7 @@
+# Next original PartDesign extent/reference batch
+
+Preserve sealed1.17/code43; choose1.18/code44 before app edits. Prove original Pad UpToFace, Pocket UpToFirst, Pad UpToLast and independent two-sided Length extents as four candidate scopes. Use native mode/reference/side properties and analytic geometry; do not approximate stopping extents with oversized lengths. Refine these candidates after actual native API evidence. Native profile ownership, preceding history, supported geometry/tolerances, material removal, source edits, rollback and reference cycles must be qualified before exposure.
+
+Original datum-plane/sketch attachment, additive/subtractive pipes and helixes, MultiTransform/multiple originals, Hole settings and desktop workbench/Gui/Assembly integration remain outstanding. Keep model import guards honest about unsupported native classes. Broader FreeCAD/Rhino workbench parity is not complete; physical device qualification remains NOT_RUN and F-Droid has not been submitted.
+
+After four verified scopes, compile/sign a new compatible APK, run meaningful geometry/history/restoration/JNI tests, review EN/TR/DE controls and guides, check API26/16KiB/native/Python/signature/input closure, save APK/continuation and publish a full/latest GitHub release with independent tag/asset/source/temporary-branch removal verification. Keep private signing key retained and unpublished. No subagents without explicit authorization.
