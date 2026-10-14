@@ -37,3 +37,23 @@ For a ring section: create a Body and owned sketch Radial; draw a closed rectang
 BodyAddLoft BODY LOWER UPPER NAME and BodySubLoft BODY LOWER UPPER NAME use exactly two different, unused, closed sketches owned by that Body. They create original ruled lofts; Closed and arbitrary multi-section/smooth loft modes are not exposed. For a cone frustum, use Lower circle radius2 atz0 and Upper circle radius1 atz5 (SketchPlane Upper XY 0 0 5). Run BodyAddLoft Body Lower Upper Loft. A second pair of radius0.4/radius0.2 sketches atz0/z5 removes a tapered bore with BodySubLoft Body BoreLower BoreUpper Bore. Subtractive tools must remove real material and retain one connected solid. Section geometry/placement edits update the native feature.
 
 These features share BodyInfo, BodyTip, safe last-feature removal, Undo/Redo, FCStd and STEP workflows. Pad/Pocket/Revolution/Groove/Loft ownership and protected origin lists are checked before restoration. Native topology names can change; inspect references after edits. Android device execution remains unverified for1.14.
+
+1.15 · Original Body finishing
+The tools use the last owned solid Tip. Inspect current elements with ElementInfo; source edits may change names. Numbers start at1; comma lists contain unique numbers.
+BodyFillet BODY NAME EDGES RADIUS_MM
+BodyChamfer BODY NAME EDGES SIZE_MM
+BodyDraft BODY NAME FACES NEUTRAL_FACE ANGLE_DEG
+BodyThickness BODY NAME OPEN_FACES WALL_MM
+
+Example, each line separately:
+NewDoc Finishing
+Add Stock Box
+BodyFrom Stock Body
+BodyFillet Body Rounded 1 1
+Set Rounded.Radius 2 mm
+Undo
+Preview Body 0.2
+
+For separate10mm boxes/Bodies: BodyChamfer BevelBody Beveled 1 1 creates an equal-distance chamfer. BodyDraft DraftBody Drafted 1 5 5 drafts face1 by5degrees, using face5 as neutral plane and the original Body local Z axis. BodyThickness ShellBody Hollow 6 1 opens face6 and creates an inward1mm skin wall.
+
+Limits:1–32 explicit fillet/chamfer edges;1–16 draft/open faces; positive amounts below the minimum source extent. Inward skin/arc thickness is below half the minimum extent, retains a face and removes actual interior material. Draft is planar, positive up to45degrees, with a different neutral plane perpendicular to local Z. Failures roll back. Unit edits, source updates, Undo/Redo, safe removal, FCStd and STEP preserve supported history. Move the whole Body; member feature placement follows its history. Api PartDesign and the Python console expose the original module. Other modes, arbitrary pull axes, variable radii, patterns, Gui and full workbench qualification remain pending. Android1.15 execution is not yet verified.

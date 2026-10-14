@@ -1,5 +1,7 @@
 # FreeCAD Mobile Lab
 
+Development1.15/code41: original Body fillet/chamfer/draft/thickness pass584 realJNI checks; touch controls and EN/TR/DE guides added. Full regression and release packaging are in progress; latest published release remains1.14.
+
 **Current release: 1.14 / Android version code 40, current mobile feature set.** Native CAD for ARM64 Android 8+ (min API26, target35). **Full desktop FreeCAD/Rhino parity and the original comprehensive qualification milestone are NOT COMPLETE.** This is an independent project, not an official FreeCAD Android release.
 
 The main workspace uses OCCT 7.9.2 and the upstream FreeCAD PlaneGCS solver. An optional document lab embeds upstream FreeCAD 1.1.4 Base/App, CPython3.13 and headless Qt6.8.3. Models stay on the device; the app requests no network permission.

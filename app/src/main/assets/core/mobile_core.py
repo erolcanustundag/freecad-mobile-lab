@@ -94,7 +94,7 @@ def _value(obj, name):
 
 
 def _supported_property(obj,name,kind):
-    return kind in PROPERTY_TYPES or kind=="App::PropertyQuantity" and obj.TypeId=="Part::Thickness" and name=="Value" or kind=="App::PropertyIntegerConstraint" and obj.TypeId in ("Part::RegularPolygon","Part::Prism") and name=="Polygon" or kind=="App::PropertyQuantityConstraint" and obj.TypeId=="Part::Spiral" and name=="Rotations"
+    return kind=="App::PropertyQuantityConstraint" and obj.TypeId in ("PartDesign::Fillet","PartDesign::Chamfer") and name==mobile_partdesign.SCALARS[obj.TypeId] or kind in PROPERTY_TYPES or kind=="App::PropertyQuantity" and obj.TypeId=="Part::Thickness" and name=="Value" or kind=="App::PropertyIntegerConstraint" and obj.TypeId in ("Part::RegularPolygon","Part::Prism") and name=="Polygon" or kind=="App::PropertyQuantityConstraint" and obj.TypeId=="Part::Spiral" and name=="Rotations"
 
 
 def _editable(obj, name):
@@ -294,6 +294,7 @@ def _edit(edit):
     elif action == "part_placement":
         obj=_object(edit["object"])
         if obj.TypeId not in mobile_part.TYPES:raise ValueError("Choose a supported native Part object")
+        if mobile_partdesign.available() and (obj.TypeId in mobile_partdesign.FEATURES or mobile_partdesign.owner(obj) is not None):raise ValueError("Move the Body or its profile sketch; native member feature placement is controlled by Body history")
         obj.Placement=mobile_sketch.placement(edit["values"])
         _doc().recompute();info=mobile_part.shape_info(obj)
         if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]):raise ValueError("Placement must preserve valid geometry within±1,000,000mm")
@@ -368,8 +369,11 @@ def _edit(edit):
             if not math.isfinite(value) or not 1e-7<abs(value)<=1000000:raise ValueError("Thickness needs a nonzero bounded length")
         elif kind == "App::PropertyQuantityConstraint":
             q=App.Units.Quantity(str(value))
-            if q.Unit!=App.Units.Quantity("1").Unit:raise ValueError("Spiral turns must be dimensionless")
-            value=float(q.Value)
+            if obj.TypeId in ("PartDesign::Fillet","PartDesign::Chamfer"):
+                value=float(q.Value if str(q.Unit)=="" else q.getValueAs("mm").Value)
+            else:
+                if q.Unit!=App.Units.Quantity("1").Unit:raise ValueError("Spiral turns must be dimensionless")
+                value=float(q.Value)
         elif kind == "App::PropertyFloatConstraint":
             if obj.TypeId!="Part::Revolution" or name!="Angle":raise ValueError("This constrained scalar is read-only in the mobile adapter")
             q=App.Units.Quantity(str(value))

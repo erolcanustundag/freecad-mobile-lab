@@ -732,3 +732,11 @@ Native additive loft|Yerel katı loft|Nativer additiver Loft
 Native subtractive loft|Yerel çıkarıcı loft|Nativer subtraktiver Loft
 Sketch axis (H or V)|Eskiz ekseni (H veya V)|Skizzenachse (H oder V)
 Section sketch|Kesit eskizi|Querschnittsskizze
+Native Body fillet|Yerel gövde yuvarlatma|Native Körperverrundung
+Native Body chamfer|Yerel gövde pahı|Native Körperfase
+Native Body draft|Yerel gövde kalıp açısı|Native Körperformschräge
+Native Body thickness|Yerel gövde kabuğu|Native Körperwandstärke
+Face numbers (1-based)|Yüz numaraları (1'den başlar)|Flächennummern (ab 1)
+Edge numbers (1-based)|Kenar numaraları (1'den başlar)|Kantennummern (ab 1)
+Finishing amount (mm)|Bitirme miktarı (mm)|Bearbeitungsmaß (mm)
+Neutral face number|Nötr yüz numarası|Nummer der neutralen Fläche

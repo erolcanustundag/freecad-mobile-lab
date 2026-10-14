@@ -182,6 +182,7 @@
   <string name="ui_972d57379db3" formatted="false">"Kopyala"</string>
   <string name="ui_6cb15df59f82" formatted="false">"Kopyala · mm cinsinden öteleme"</string>
   <string name="ui_6e444774c000" formatted="false">"Kenar / yüz indisleri"</string>
+  <string name="ui_aa06e3c97f20" formatted="false">"Kenar numaraları (1\'den başlar)"</string>
   <string name="ui_5301648dcf6b" formatted="false">"Düzenle"</string>
   <string name="ui_76518f63a8ac" formatted="false">"Düzenle / bağla"</string>
   <string name="ui_13ee5bbafe07" formatted="false">"Düzenle / yeniden boyutlandır"</string>
@@ -235,6 +236,7 @@
   <string name="ui_bf753d1d7540" formatted="false">"ÖN"</string>
   <string name="ui_0c63436993af" formatted="false">"Üretim / kalıp açısı raporu"</string>
   <string name="ui_2fa0d8e94fe5" formatted="false">"Üretim raporu"</string>
+  <string name="ui_df641964b10c" formatted="false">"Yüz numaraları (1\'den başlar)"</string>
   <string name="ui_bf8dec2b148f" formatted="false">"Hızlı · 10.000 üçgen"</string>
   <string name="ui_ad565d9d01d0" formatted="false">"Özellik"</string>
   <string name="ui_310f395a48b0" formatted="false">"İşlem geçmişi"</string>
@@ -249,6 +251,7 @@
   <string name="ui_7633fb1c78b4" formatted="false">"Yuvarlatma yarıçapı"</string>
   <string name="ui_cdc8d57e4b37" formatted="false">"Eskiz köşesini yuvarla"</string>
   <string name="ui_3d3195acfd27" formatted="false">"Ayrıntılı · 150.000 üçgen"</string>
+  <string name="ui_a4e8a4e3e601" formatted="false">"Bitirme miktarı (mm)"</string>
   <string name="ui_ebb5cdcc120b" formatted="false">"İlk katı / gövde"</string>
   <string name="ui_f94e25075b34" formatted="false">"İlk değer"</string>
   <string name="ui_e0c6bc5b780d" formatted="false">"Sığdır / görünüm"</string>
@@ -361,8 +364,12 @@
   <string name="ui_709a23220f2c" formatted="false">"Ad"</string>
   <string name="ui_cb04729f44c1" formatted="false">"Ad / katman / kilit"</string>
   <string name="ui_ed387f007e09" formatted="false">"Eskiz kısıtını adlandır"</string>
+  <string name="ui_230cf4558435" formatted="false">"Yerel gövde pahı"</string>
+  <string name="ui_e130677bc9b5" formatted="false">"Yerel gövde kalıp açısı"</string>
+  <string name="ui_7b5649cd9695" formatted="false">"Yerel gövde yuvarlatma"</string>
   <string name="ui_16711084dc3b" formatted="false">"Yerel döner oyuk"</string>
   <string name="ui_70a414f8d8ac" formatted="false">"Yerel gövde döndürme"</string>
+  <string name="ui_090c75239902" formatted="false">"Yerel gövde kabuğu"</string>
   <string name="ui_c5011646220e" formatted="false">"Yerel katı uzatma"</string>
   <string name="ui_4862367a4934" formatted="false">"Özgün Part katı işlemi"</string>
   <string name="ui_871cb729cd33" formatted="false">"Yerel Part yerleşimi"</string>
@@ -397,6 +404,7 @@
   <string name="ui_7aaa9ab32d7f" formatted="false">"Özgün birleşim"</string>
   <string name="ui_72a680321ead" formatted="false">"Yerel kama"</string>
   <string name="ui_b3b46e64b67d" formatted="false">"Gezinme küpü"</string>
+  <string name="ui_80794c90b331" formatted="false">"Nötr yüz numarası"</string>
   <string name="ui_6403f2b7eb2a" formatted="false">"Yeni"</string>
   <string name="ui_0e06e5aa9fcd" formatted="false">"Yeni makro"</string>
   <string name="ui_5407cb0fda0b" formatted="false">"Yeni yerel eskiz"</string>

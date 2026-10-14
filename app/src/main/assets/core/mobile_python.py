@@ -11,12 +11,14 @@ import traceback
 import FreeCAD as App
 import mobile_part
 import mobile_sketch
+import mobile_partdesign
 
 scope = {"App": App, "FreeCAD": App, "__name__": "__mobile_console__"}
 if mobile_part.available():
     scope["Part"] = mobile_part.Part
 if mobile_sketch.available():
     scope["Sketcher"] = mobile_sketch.Sketcher
+if mobile_partdesign.available():scope["PartDesign"]=mobile_partdesign.PartDesign
 console = {"output": "", "error": ""}
 api = None
 recording = False
@@ -103,6 +105,7 @@ def inspect(target):
         modules["Part"] = mobile_part.Part
     if mobile_sketch.available():
         modules["Sketcher"] = mobile_sketch.Sketcher
+    if mobile_partdesign.available():modules["PartDesign"]=mobile_partdesign.PartDesign
     if parts[0] not in modules or any(not re.fullmatch(r"[A-Za-z][A-Za-z_0-9]*", p) for p in parts):
         raise ValueError("Use an App API target such as App.Vector or App.Units")
     value = modules[parts[0]]

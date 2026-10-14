@@ -37,3 +37,23 @@ Für einen Ringquerschnitt eine eigene Radial-Skizze mit geschlossenem Rechteck(
 BodyAddLoft BODY LOWER UPPER NAME und BodySubLoft BODY LOWER UPPER NAME verwenden genau zwei verschiedene, unbenutzte, geschlossene Skizzen desselben Körpers. Sie erzeugen originale geradlinige Lofts; geschlossene, beliebige mehrteilige und glatte Loftmodi bleiben offen. Für einen Kegelstumpf Lower-Kreisradius2 beiz0 und Upper-Kreisradius1 beiz5 verwenden (SketchPlane Upper XY 0 0 5). BodyAddLoft Body Lower Upper Loft ausführen. Ein zweites Paar mit Kreisradien0,4/0,2 beiz0/z5 entfernt mit BodySubLoft Body BoreLower BoreUpper Bore eine konische Bohrung. Subtraktive Werkzeuge müssen Material entfernen und einen zusammenhängenden Volumenkörper erhalten. Geometrie-/Platzierungsänderungen der Querschnitte aktualisieren das Feature.
 
 BodyInfo, BodyTip, sicheres Entfernen des letzten Features, Undo/Redo, FCStd und STEP gelten auch für diese Werkzeuge. Featurezugehörigkeit und Ursprungslisten werden vor der Wiederherstellung geprüft. Flächen-/Kantennamen nach Änderungen erneut prüfen. Android-Geräteausführung für1.14 wurde noch nicht geprüft.
+
+1.15 · Originale Körperbearbeitung
+Werkzeuge verwenden das letzte eigene Volumenfeature als Tip. Aktuelle Elemente mit ElementInfo prüfen; Quelländerungen können Namen ändern. Nummern beginnen bei1, Kommalisten müssen eindeutig sein.
+BodyFillet BODY NAME EDGES RADIUS_MM
+BodyChamfer BODY NAME EDGES SIZE_MM
+BodyDraft BODY NAME FACES NEUTRAL_FACE ANGLE_DEG
+BodyThickness BODY NAME OPEN_FACES WALL_MM
+
+Jede Zeile einzeln ausführen:
+NewDoc Finishing
+Add Stock Box
+BodyFrom Stock Body
+BodyFillet Body Rounded 1 1
+Set Rounded.Radius 2 mm
+Undo
+Preview Body 0.2
+
+Für separate10mm-Würfel/Körper: BodyChamfer BevelBody Beveled 1 1 erzeugt eine Fase mit gleichem Abstand. BodyDraft DraftBody Drafted 1 5 5 neigt Fläche1 um5Grad; Fläche5 ist neutral, Zugrichtung ist die originale lokale Z-Achse. BodyThickness ShellBody Hollow 6 1 öffnet Fläche6 und erzeugt eine1mm-Innenwand.
+
+Grenzen:1–32 explizite Verrundungs-/Fasenkanten;1–16 Formschrägen-/Öffnungsflächen; positive Maße unter der kleinsten Quellausdehnung. Innenwandstärke im Skin/Arc-Modus unter der halben kleinsten Ausdehnung; mindestens eine Fläche bleibt, Innenmaterial muss entfernt werden. Formschräge planar, positiv bis45Grad; neutrale Fläche verschieden und senkrecht zur lokalen Z-Achse. Fehler rollen Änderungen zurück. Einheiten, Quelländerungen, Undo/Redo, sicheres Entfernen, FCStd und STEP erhalten den Verlauf. Ganze Körper versetzen; Featureplatzierung folgt dem Verlauf. Api PartDesign und Python-Konsole zeigen das originale Modul. Weitere Modi, freie Achsen, variable Radien, Muster, Gui und vollständige Workbench-Qualifikation bleiben offen. Android1.15 wurde noch nicht auf einem Gerät geprüft.

@@ -1,5 +1,5 @@
 <resources>
-  <string name="ui_da65d6012a5c" formatted="false">"\n\nPython print(App.Version())\nRunMacro MyMacro.py\nApi App.Vector\nProxy Scaled Source.Width 2\n\nPython console, saved macros, command recording and the portable QuantityDriver proxy are available from the buttons. Python tracing has a two-second budget; native calls may take longer. The API browser covers available App/Base bindings. The native Part API is available when the Original Part runtime is loaded. Arbitrary addon proxy classes and Gui bindings remain pending.\n\nOnly whitelisted Part primitives/features/booleans and App metadata documents can be restored here. Native Sketcher sketches are now supported. Bounded original Body, Pad, Pocket, Revolution, Groove and ruled additive/subtractive Loft documents are supported. Other PartDesign features and workbenches remain pending."</string>
+  <string name="ui_5bc36594995c" formatted="false">"\n\nPython print(App.Version())\nRunMacro MyMacro.py\nApi App.Vector\nProxy Scaled Source.Width 2\n\nPython console, saved macros, command recording and the portable QuantityDriver proxy are available from the buttons. Python tracing has a two-second budget; native calls may take longer. The API browser covers available App/Base bindings. The native Part API is available when the Original Part runtime is loaded. Arbitrary addon proxy classes and Gui bindings remain pending.\n\nOnly whitelisted Part primitives/features/booleans and App metadata documents can be restored here. Native Sketcher sketches are now supported. Bounded original Body, Pad, Pocket, Revolution, Groove and ruled additive/subtractive Loft and bounded Body fillet/chamfer/draft/thickness documents are supported. Other PartDesign features and workbenches remain pending."</string>
   <string name="ui_c9c40500c6bb" formatted="false">"\n\nUse Measure id1 id2 for exact CAD minimum distance; Distance XYZ XYZ; Angle XYZ XYZ XYZ. Mesh distance is not supported."</string>
   <string name="ui_dec0dce734eb" formatted="false">"\n0=X, 1=Y, 2=Z. This checks the bounding box; supports, adhesion and process settings are separate."</string>
   <string name="ui_65fe7eb37744" formatted="false">"\nABIs: "</string>
@@ -212,6 +212,7 @@
   <string name="ui_7ef3defd9bd0" formatted="false">"Bed dimensions must exceed twice the margin"</string>
   <string name="ui_68eca95f49dd" formatted="false">"Begin [\"Edit label\"]"</string>
   <string name="ui_58e3247bcf3a" formatted="false">"Begin edit"</string>
+  <string name="ui_c18408adb6da" formatted="false">"Beveled"</string>
   <string name="ui_ef7216d03a56" formatted="false">"Beveled 1 1"</string>
   <string name="ui_3fe832876acf" formatted="false">"Bezel"</string>
   <string name="ui_c3afba4c4528" formatted="false">"Bezel setting"</string>
@@ -223,10 +224,14 @@
   <string name="ui_718a7e8a582e" formatted="false">"Body"</string>
   <string name="ui_b9e14a17aa5d" formatted="false">"Body A"</string>
   <string name="ui_66640b70e2fc" formatted="false">"Body B"</string>
-  <string name="ui_94147dd25912" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, one-sided length Pad/Pocket, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Other PartDesign modes, arbitrary lofts, reorder, patterns and dress-up tools remain pending."</string>
+  <string name="ui_b942443c73c7" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyFillet Body Rounded 1 1\nBodyChamfer Body Beveled 1 1\nBodyDraft Body Drafted 1 5 5\nBodyThickness Body Hollow 6 1\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, one-sided length Pad/Pocket, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Finishing uses current edge/face numbers on the last solid Tip; fillet/chamfer explicit edges, planar Z-axis draft up to45degrees and inward skin thickness are bounded. Other modes, arbitrary lofts, reorder and patterns remain pending."</string>
   <string name="ui_db4ecb85e22a" formatted="false">"Body from native solid"</string>
   <string name="ui_2041a45c8dc7" formatted="false">"Body guide"</string>
   <string name="ui_c4d759fa8ad2" formatted="false">"Body history"</string>
+  <string name="ui_bfd562c05360" formatted="false">"BodyChamfer"</string>
+  <string name="ui_921df9efefcf" formatted="false">"BodyDraft "</string>
+  <string name="ui_cacbad1796f1" formatted="false">"BodyFillet"</string>
+  <string name="ui_b58547f2f781" formatted="false">"BodyThickness"</string>
   <string name="ui_daf760a167a8" formatted="false">"Bool"</string>
   <string name="ui_e772bc4d3e48" formatted="false">"Booleans / fillet"</string>
   <string name="ui_d9d91b9a7122" formatted="false">"Bore"</string>
@@ -475,6 +480,7 @@
   <string name="ui_1adff3072f22" formatted="false">"Document operation"</string>
   <string name="ui_4214822e9b88" formatted="false">"Document variables"</string>
   <string name="ui_687c82861c95" formatted="false">"Documents"</string>
+  <string name="ui_133fc4132ccb" formatted="false">"Drafted"</string>
   <string name="ui_22b3f140feb2" formatted="false">"Drag a world axis. Release commits one Undo step. Use numeric Move for exact coordinates."</string>
   <string name="ui_d8dc1f1899ed" formatted="false">"Drag an axis · 20 px = 1 mm"</string>
   <string name="ui_5ff067f4cc1d" formatted="false">"Drag to orbit · pinch to zoom · two fingers to pan"</string>
@@ -498,6 +504,7 @@
   <string name="ui_c02affb5b407" formatted="false">"Each line needs X Y Z and an optional weight"</string>
   <string name="ui_8440b9eb7d03" formatted="false">"Edge"</string>
   <string name="ui_6e444774c000" formatted="false">"Edge / face indices"</string>
+  <string name="ui_aa06e3c97f20" formatted="false">"Edge numbers (1-based)"</string>
   <string name="ui_5301648dcf6b" formatted="false">"Edit"</string>
   <string name="ui_16f01b4a1c6a" formatted="false">"Edit "</string>
   <string name="ui_76518f63a8ac" formatted="false">"Edit / connect"</string>
@@ -601,7 +608,9 @@
   <string name="ui_bf753d1d7540" formatted="false">"FRONT"</string>
   <string name="ui_0c63436993af" formatted="false">"Fabrication / draft report"</string>
   <string name="ui_2fa0d8e94fe5" formatted="false">"Fabrication report"</string>
+  <string name="ui_203bc66d7067" formatted="false">"Face"</string>
   <string name="ui_f9d7616b16e6" formatted="false">"Face height Z"</string>
+  <string name="ui_df641964b10c" formatted="false">"Face numbers (1-based)"</string>
   <string name="ui_1c003b381112" formatted="false">"Face thickness Y"</string>
   <string name="ui_c10b99356695" formatted="false">"Face width X"</string>
   <string name="ui_451edd79bd51" formatted="false">"Factor"</string>
@@ -643,6 +652,7 @@
   <string name="ui_61b2ce1179d3" formatted="false">"FilletSelected radius edgeIndex [edgeIndex ...]"</string>
   <string name="ui_3d3195acfd27" formatted="false">"Fine · 150,000 triangles"</string>
   <string name="ui_41553c4eb589" formatted="false">"FinishSettings"</string>
+  <string name="ui_a4e8a4e3e601" formatted="false">"Finishing amount (mm)"</string>
   <string name="ui_ebb5cdcc120b" formatted="false">"First solid / body"</string>
   <string name="ui_f94e25075b34" formatted="false">"First value"</string>
   <string name="ui_dab564d8093c" formatted="false">"Fit"</string>
@@ -743,7 +753,7 @@
   <string name="ui_15cc73271115" formatted="false">"Import worksheet CSV"</string>
   <string name="ui_6fe26e836676" formatted="false">"ImportedBody"</string>
   <string name="ui_0ac055066c7e" formatted="false">"ImportedStep"</string>
-  <string name="ui_3118fba5f552" formatted="false">"Independent native Android CAD app with selected FreeCAD functionality.\n\nNative ARM64 OpenCASCADE 7.9.2 CAD kernel; actual FreeCAD PlaneGCS Sketcher solver; software 3D renderer, optional OpenGL ES 3, and Android touch UI.\n\nNew: weighted NURBS control points, interpolated splines, profiles, loft/sweep/revolve/extrude, sections, offsets, chamfer, healing, jewellery settings, bounded subdivision primitives and a small typed node graph.\n\nThe optional document lab includes original FreeCAD Base/App/Part/Materials/Sketcher/PartDesign, native parametric solids and booleans, dimensional expressions, transactions, bounded geometry preview, STEP exchange, Python console/macros and one portable scripted metadata feature. Native FCStd restoration is limited to documented App metadata, whitelisted Part/Sketcher types and bounded original Body/Pad/Pocket/Revolution/Groove/Loft workflows. Broader PartDesign, Gui and arbitrary workbench/addon FCStd support remain pending. This version requires Android execution testing. The main CAD workspace keeps its independent OCCT recipe engine. STEP transfers solid geometry to desktop FreeCAD.\n\nAll work is local. The app requests no network permission.\n\nCode: LGPL-2.1-or-later. FreeCAD: LGPL-2.1-or-later. OpenCASCADE: LGPL-2.1 with OCCT exception. Eigen: MPL-2.0. Boost: Boost Software License 1.0. meshoptimizer: MIT. Optional lab: Qt6.8.3 LGPL3/GPL3 notices and CPython3.13 PSF licence. Full notices accompany the source bundle and are included in app assets."</string>
+  <string name="ui_def6ec0e1a58" formatted="false">"Independent native Android CAD app with selected FreeCAD functionality.\n\nNative ARM64 OpenCASCADE 7.9.2 CAD kernel; actual FreeCAD PlaneGCS Sketcher solver; software 3D renderer, optional OpenGL ES 3, and Android touch UI.\n\nNew: weighted NURBS control points, interpolated splines, profiles, loft/sweep/revolve/extrude, sections, offsets, chamfer, healing, jewellery settings, bounded subdivision primitives and a small typed node graph.\n\nThe optional document lab includes original FreeCAD Base/App/Part/Materials/Sketcher/PartDesign, native parametric solids and booleans, dimensional expressions, transactions, bounded geometry preview, STEP exchange, Python console/macros and one portable scripted metadata feature. Native FCStd restoration is limited to documented App metadata, whitelisted Part/Sketcher types and bounded original Body/Pad/Pocket/Revolution/Groove/Loft and finishing workflows. Broader PartDesign, Gui and arbitrary workbench/addon FCStd support remain pending. This version requires Android execution testing. The main CAD workspace keeps its independent OCCT recipe engine. STEP transfers solid geometry to desktop FreeCAD.\n\nAll work is local. The app requests no network permission.\n\nCode: LGPL-2.1-or-later. FreeCAD: LGPL-2.1-or-later. OpenCASCADE: LGPL-2.1 with OCCT exception. Eigen: MPL-2.0. Boost: Boost Software License 1.0. meshoptimizer: MIT. Optional lab: Qt6.8.3 LGPL3/GPL3 notices and CPython3.13 PSF licence. Full notices accompany the source bundle and are included in app assets."</string>
   <string name="ui_ba805a89fc88" formatted="false">"Index (zero-based)"</string>
   <string name="ui_e01cd8bc414e" formatted="false">"Indices refer to this geometry. Changed topology blocks dependent selected-edge/face recipes.\n\n"</string>
   <string name="ui_4b631f698425" formatted="false">"Info"</string>
@@ -959,8 +969,12 @@
   <string name="ui_709a23220f2c" formatted="false">"Name"</string>
   <string name="ui_cb04729f44c1" formatted="false">"Name / layer / lock"</string>
   <string name="ui_ed387f007e09" formatted="false">"Name sketch constraint"</string>
+  <string name="ui_230cf4558435" formatted="false">"Native Body chamfer"</string>
+  <string name="ui_e130677bc9b5" formatted="false">"Native Body draft"</string>
+  <string name="ui_7b5649cd9695" formatted="false">"Native Body fillet"</string>
   <string name="ui_16711084dc3b" formatted="false">"Native Body groove"</string>
   <string name="ui_70a414f8d8ac" formatted="false">"Native Body revolution"</string>
+  <string name="ui_090c75239902" formatted="false">"Native Body thickness"</string>
   <string name="ui_c5011646220e" formatted="false">"Native Pad"</string>
   <string name="ui_4862367a4934" formatted="false">"Native Part boolean"</string>
   <string name="ui_871cb729cd33" formatted="false">"Native Part placement"</string>
@@ -997,6 +1011,7 @@
   <string name="ui_72a680321ead" formatted="false">"Native wedge"</string>
   <string name="ui_b3b46e64b67d" formatted="false">"Navigation cube"</string>
   <string name="ui_611857bc810e" formatted="false">"Navigation cube. Tap a visible face for its view, or ISO for perspective."</string>
+  <string name="ui_80794c90b331" formatted="false">"Neutral face number"</string>
   <string name="ui_6403f2b7eb2a" formatted="false">"New"</string>
   <string name="ui_0e06e5aa9fcd" formatted="false">"New macro"</string>
   <string name="ui_5407cb0fda0b" formatted="false">"New native sketch"</string>
@@ -1297,6 +1312,7 @@
   <string name="ui_7eeff1045162" formatted="false">"RotateAround"</string>
   <string name="ui_47ef55b15c79" formatted="false">"RotateAround pivotXYZ axisXYZ angleDegrees"</string>
   <string name="ui_8a0e979e7a6c" formatted="false">"Roughness · .04 polished to 1 matte"</string>
+  <string name="ui_c5aa340f7ece" formatted="false">"Rounded"</string>
   <string name="ui_ad7b87946e59" formatted="false">"Rounded 1 1"</string>
   <string name="ui_2e305b3b2d28" formatted="false">"Ruled (1) or smooth (0)"</string>
   <string name="ui_b1b392607dea" formatted="false">"Run"</string>

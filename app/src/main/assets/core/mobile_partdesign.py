@@ -14,7 +14,11 @@ if '_PartDesign' in sys.builtin_module_names:
 
 TYPES = {'PartDesign::Body', 'PartDesign::FeatureBase', 'PartDesign::Pad', 'PartDesign::Pocket', 'PartDesign::Revolution', 'PartDesign::Groove', 'PartDesign::AdditiveLoft', 'PartDesign::SubtractiveLoft'}
 FRAMES = {'App::Origin', 'App::Line', 'App::Plane', 'App::Point'}
+DRESSUP={'PartDesign::Fillet','PartDesign::Chamfer','PartDesign::Draft','PartDesign::Thickness'}
+TYPES.update(DRESSUP)
 FEATURES = TYPES - {'PartDesign::Body'}
+PROFILE_FEATURES=FEATURES-DRESSUP-{'PartDesign::FeatureBase'}
+SCALARS={'PartDesign::Fillet':'Radius','PartDesign::Chamfer':'Size','PartDesign::Draft':'Angle','PartDesign::Thickness':'Value'}
 
 def available():
     return PartDesign is not None
@@ -59,6 +63,41 @@ def fresh(doc, name, count=1):
     if doc.getObject(name) is not None:raise ValueError('Object name already exists')
     if len(doc.Objects)+count>1000:raise ValueError('Body origin and features exceed the1,000-object budget')
 
+def selection(source, names, kind):
+    import re
+    maximum=16 if kind=='Face' else 32
+    elements=source.Shape.Faces if kind=='Face' else source.Shape.Edges
+    if not isinstance(names,list) or not 1<=len(names)<=maximum or len(names)!=len(set(names)):raise ValueError('Use unique current native selections within the limit')
+    ids=[]
+    for name in names:
+        match=re.fullmatch(kind+r'([1-9][0-9]{0,5})',name) if isinstance(name,str) else None
+        if not match or not 1<=int(match.group(1))<=len(elements):raise ValueError('Choose current native '+kind+'N elements from the last Body solid')
+        ids.append(int(match.group(1)))
+    if kind=='Edge' and any(elements[i-1].Length<=1e-7 for i in ids):raise ValueError('Choose nonzero native edges')
+    return ids
+
+def z_axis(b):
+    axes=[o for o in b.Origin.OriginFeatures if o.TypeId=='App::Line' and o.Role=='Z_Axis']
+    if len(axes)!=1:raise ValueError('Body must have its original Z axis')
+    return axes[0]
+
+def dressup_parameters(kind,source,names,amount,b,neutral=None):
+    solid(source);positive(amount)
+    selected='Edge' if kind in ('PartDesign::Fillet','PartDesign::Chamfer') else 'Face'
+    ids=selection(source,names,selected)
+    box=source.Shape.BoundBox;minimum=min(box.XLength,box.YLength,box.ZLength)
+    if kind=='PartDesign::Draft':
+        if amount>45:raise ValueError('Draft angle must be greater than0 and at most45degrees')
+        n=selection(source,[neutral],'Face')[0]
+        if n in ids:raise ValueError('Neutral face must differ from the drafted faces')
+        if any(not isinstance(source.Shape.Faces[i-1].Surface,mobile_part.Part.Plane) for i in ids+[n]):raise ValueError('This draft tool supports planar faces only')
+        normal=source.Shape.Faces[n-1].normalAt(0,0)
+        if abs(normal.z)<1-1e-7:raise ValueError('Neutral plane must be perpendicular to the Body local Z axis')
+        z_axis(b)
+    elif kind=='PartDesign::Thickness':
+        if len(ids)>=len(source.Shape.Faces) or amount>=minimum/2:raise ValueError('Retain at least one face and use inward wall thickness below half the minimum shape extent')
+    elif amount>=minimum:raise ValueError('Finishing amount must be below the minimum shape extent')
+
 def edit(doc, e, get, identifier):
     require();op=e['op']
     if op=='body_create':
@@ -89,6 +128,18 @@ def edit(doc, e, get, identifier):
         if any(o!=b for o in feature.InList):raise ValueError('Remove dependent features or sketch references first')
         b.Tip=history[-2] if len(history)>1 else None
         b.removeObject(feature);doc.removeObject(feature.Name)
+    elif op in ('body_fillet','body_chamfer','body_draft','body_thickness'):
+        b=body(get(e['body']));name=identifier(e['name']);fresh(doc,name);doc.recompute();history=solids(b)
+        if not history or b.Tip!=history[-1]:raise ValueError('Select the last Body solid Tip before creating a finishing feature')
+        source=history[-1];kind='PartDesign::'+{'body_fillet':'Fillet','body_chamfer':'Chamfer','body_draft':'Draft','body_thickness':'Thickness'}[op]
+        amount=positive(e['amount']);names=e['elements'];neutral=e.get('neutral')
+        dressup_parameters(kind,source,names,amount,b,neutral)
+        obj=b.newObject(kind,name);obj.Base=(source,names)
+        if kind=='PartDesign::Fillet':obj.Radius=amount;obj.UseAllEdges=False
+        elif kind=='PartDesign::Chamfer':obj.ChamferType='Equal distance';obj.Size=amount;obj.UseAllEdges=False
+        elif kind=='PartDesign::Thickness':obj.Value=amount;obj.Reversed=True;obj.Intersection=False;obj.Mode=0;obj.Join=0
+        else:obj.Angle=amount;obj.NeutralPlane=(source,[neutral]);obj.PullDirection=(z_axis(b),['']);obj.Reversed=False
+        b.Tip=obj
     elif op in ('body_pad','body_pocket','body_revolve','body_groove','body_add_loft','body_sub_loft'):
         b=body(get(e['body']));s=get(e['profile']);name=identifier(e['name']);fresh(doc,name)
         subtractive=op in ('body_pocket','body_groove','body_sub_loft')
@@ -124,11 +175,14 @@ def protected(obj):
 
 def editable(obj,name):
     if obj.TypeId in FRAMES:return name=='Label'
-    if obj.TypeId in TYPES:return name=='Label' or obj.TypeId in FEATURES-{'PartDesign::FeatureBase'} and name=='Refine' or obj.TypeId in ('PartDesign::Pad','PartDesign::Pocket') and name=='Length' or obj.TypeId in ('PartDesign::Revolution','PartDesign::Groove') and name=='Angle'
+    if obj.TypeId in TYPES:return name=='Label' or obj.TypeId in DRESSUP and name==SCALARS[obj.TypeId] or obj.TypeId in FEATURES-{'PartDesign::FeatureBase'} and name=='Refine' or obj.TypeId in ('PartDesign::Pad','PartDesign::Pocket') and name=='Length' or obj.TypeId in ('PartDesign::Revolution','PartDesign::Groove') and name=='Angle'
     return True
 
 def validate_edit(obj,name,value):
     if not editable(obj,name):raise ValueError('Use Body tools for native ownership, Tip and profile links; this feature mode is read-only')
+    if obj.TypeId in DRESSUP and name==SCALARS[obj.TypeId]:
+        source,names=obj.Base;b=body(owner(obj));neutral=obj.NeutralPlane[1][0] if obj.TypeId=='PartDesign::Draft' else None
+        dressup_parameters(obj.TypeId,source,names,value,b,neutral)
     if obj.TypeId in ('PartDesign::Pad','PartDesign::Pocket') and name=='Length':positive(value)
     if obj.TypeId in ('PartDesign::Revolution','PartDesign::Groove') and name=='Angle':angle(value)
 
@@ -168,7 +222,24 @@ def validate_document(doc):
         previous=None
         for feature in history:
             solid(feature)
-            if feature.TypeId in FEATURES-{'PartDesign::FeatureBase'}:
+            if feature.TypeId in DRESSUP:
+                source,names=feature.Base
+                if source!=previous or feature.BaseFeature!=previous or source not in members:raise ValueError('Body finishing source must be the preceding owned solid')
+                amount=getattr(feature,SCALARS[feature.TypeId]).Value
+                neutral=None
+                if feature.TypeId=='PartDesign::Draft':
+                    plane,neutral_names=feature.NeutralPlane;axis,axis_names=feature.PullDirection
+                    if plane!=source or len(neutral_names)!=1 or axis!=z_axis(b) or list(axis_names)!=[''] or feature.Reversed:raise ValueError('Draft supports a source neutral face and the Body Z axis only')
+                    neutral=neutral_names[0]
+                elif feature.TypeId=='PartDesign::Chamfer':
+                    if feature.ChamferType!='Equal distance' or feature.UseAllEdges:raise ValueError('Chamfer supports explicit equal-distance edge selections only')
+                elif feature.TypeId=='PartDesign::Fillet':
+                    if feature.UseAllEdges:raise ValueError('Fillet requires explicit bounded edge selections')
+                else:
+                    if not feature.Reversed or feature.Intersection or feature.Mode!='Skin' or feature.Join!='Arc':raise ValueError('Thickness supports inward skin/arc mode only')
+                dressup_parameters(feature.TypeId,source,names,amount,b,neutral)
+                if feature.TypeId=='PartDesign::Thickness' and not 1e-7<abs(source.Shape.Volume)-abs(feature.Shape.Volume)<abs(source.Shape.Volume):raise ValueError('Thickness must remove interior material and retain a closed single solid')
+            elif feature.TypeId in PROFILE_FEATURES:
                 profile,sub=feature.Profile
                 if sub or profile not in members or profile.TypeId not in mobile_sketch.TYPES:raise ValueError('Pad/Pocket needs a whole sketch owned by its Body')
                 closed(profile)
@@ -230,7 +301,25 @@ def validate_fcstd(tree):
         tip=link(name,'Tip')
         if tip and (tip not in members or types.get(tip) not in FEATURES):raise ValueError('Saved Tip must be an owned solid feature')
         for feature in members:
-            if types.get(feature) not in FEATURES-{'PartDesign::FeatureBase'}:continue
+            if types.get(feature) in DRESSUP:
+                kind=types[feature];base=node(feature,'Base','LinkSub');names=[c.get('value') for c in base.findall('Sub')] if base is not None else []
+                import re
+                selected='Edge' if kind in ('PartDesign::Fillet','PartDesign::Chamfer') else 'Face'
+                maximum=32 if selected=='Edge' else 16
+                if base is None or base.get('value') not in members or types.get(base.get('value')) not in FEATURES or base.get('value')==feature or str(len(names))!=base.get('count') or not 1<=len(names)<=maximum or len(names)!=len(set(names)) or any(not re.fullmatch(selected+r'([1-9][0-9]{0,5})',n or '') for n in names):raise ValueError('Saved finishing selections must reference an owned solid with bounded current names')
+                scalar=node(feature,SCALARS[kind],'Float')
+                if scalar is None:raise ValueError('Missing saved finishing amount')
+                amount=positive(float(scalar.get('value','nan')))
+                if kind=='PartDesign::Draft':
+                    if amount>45:raise ValueError('Saved draft angle exceeds45degrees')
+                    plane=node(feature,'NeutralPlane','LinkSub');axis=node(feature,'PullDirection','LinkSub')
+                    if plane is None or plane.get('value')!=base.get('value') or plane.get('count')!='1' or len(plane.findall('Sub'))!=1 or not re.fullmatch(r'Face([1-9][0-9]{0,5})',plane.find('Sub').get('value','')):raise ValueError('Saved draft needs one source neutral face')
+                    if axis is None or axis.get('count')!='1' or len(axis.findall('Sub'))!=1 or axis.find('Sub').get('value')!='' or axis.get('value') not in links(origin,'OriginFeatures'):raise ValueError('Saved draft axis must belong to this Body origin')
+                for prop,(tag,value) in ({'UseAllEdges':('Bool','false')} if kind=='PartDesign::Fillet' else {'UseAllEdges':('Bool','false'),'ChamferType':('Integer','0')} if kind=='PartDesign::Chamfer' else {'Reversed':('Bool','false')} if kind=='PartDesign::Draft' else {'Reversed':('Bool','true'),'Intersection':('Bool','false'),'Mode':('Integer','0'),'Join':('Integer','0')}).items():
+                    n=node(feature,prop,tag)
+                    if n is None or n.get('value')!=value:raise ValueError('Saved finishing mode is unsupported')
+                continue
+            if types.get(feature) not in PROFILE_FEATURES:continue
             profile=node(feature,'Profile','LinkSub')
             if profile is None or profile.get('value') not in members or types.get(profile.get('value')) not in mobile_sketch.TYPES or profile.get('count')!='0':raise ValueError('Saved Body profile must be a whole owned sketch')
             if types[feature] in ('PartDesign::AdditiveLoft','PartDesign::SubtractiveLoft'):
