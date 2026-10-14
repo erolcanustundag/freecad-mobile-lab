@@ -1,15 +1,15 @@
-# FreeCAD Mobile Lab 1.15
+# FreeCAD Mobile Lab 1.16
 
-Full release of the current mobile feature set, Android code41. Signed non-debuggable ARM64 APK with the retained compatible update certificate. Comprehensive FreeCAD/Rhino and phone qualification remain incomplete.
+Full release of the current mobile feature set, Android code42. Signed non-debuggable ARM64 APK retains the compatible update certificate. Comprehensive FreeCAD/Rhino and device qualification remain incomplete.
 
-Four original PartDesign Body finishing tools:
-- Linked fillet with explicit current edge selections and editable radius.
-- Linked equal-distance chamfer with explicit edges and unit-aware size.
-- Planar draft about the original Body local Z axis, with a source neutral face.
-- Inward skin/arc thickness with selected open faces and actual material-removal validation.
+Four original PartDesign pattern tools:
+- Mirrored about an owned original Body XY/XZ/YZ plane.
+- Forward LinearPattern with one total extent along an original Body X/Y/Z axis.
+- Forward PolarPattern with a bounded total angle about an original Body axis.
+- Scaled pattern growing about the native additive source centre of mass.
 
-Commands BodyFillet, BodyChamfer, BodyDraft and BodyThickness, touch forms, EN/TR/DE guides and742reviewed Turkish/German entries are included. Native ownership, source/current Tip, topology selections, rollback/history, saved parameter/mode/origin-role guards are retained. Member feature placement follows Body history; whole Body placement works. PartDesign is exposed in the original API browser and Python console.
+Commands BodyMirror, BodyLinear, BodyPolar and BodyScaled, touch forms and EN/TR/DE guides are included. Patterns transform one last owned Pad/Revolution/AdditiveLoft in original Features mode. Counts2–16, growth factors greater than1 up to4 and source complexity are checked before native generation/restoration. Copies must remain one connected solid. Native source updates, owned Tip/history/removal, rollback, FCStd and STEP are tested.
 
-Verification:612real PartDesignJNI checks;2324Sketcher,269Part,88App,62Python regressions;527locale/command checks;3resource and10packaging checks. Actual APK proof verifies65JNI/69Python ARM64 libraries/extensions,1078Python assets,16KiB/API26 loader/strong-symbol closure, v2/v3 signatures and compatible certificate. Physical Android1.15 execution is NOT_RUN.
+796real PartDesignJNI checks;2324Sketcher,269Part,88App,62Python regressions;527locale,3resource,10packaging checks.751reviewed TR/DE entries/4localized guides. The large Sketcher run initially timed out under concurrent work and completed on isolated retry; progress markers are retained. The actual APK passes65JNI/69Python ARM64 libraries/extensions,1078Python assets,16KiB/API26 loader/strong-symbol closure, v2/v3 signatures and compatible certificate. Physical Android1.16 execution NOT_RUN.
 
-Limits:1–32 explicit finishing edges;1–16 faces; positive lengths below the minimum source extent. Inward thickness is below half the minimum extent and must retain one closed connected solid while removing material. Draft is planar, positive up to45degrees, with a different neutral plane perpendicular to local Z. Other modes/axes, variable radii, patterns, arbitrary workbench/addon FCStd, Gui/Assembly and manufacturing/device qualification remain pending. STEP transfers geometry, not native history. F-Droid NOT_SUBMITTED. Private keys/continuation are excluded from public assets/Actions.
+Limits: one supported owned additive source up to64faces/256edges; explicit whole Body origin references; forward extent modes; one linear direction;2–16 occurrences including original; scale growth>1≤4. Multi-source, subtractive/dress-up/pattern sources, arbitrary directions, spacing/second directions, general MultiTransform and other modes remain pending. Full Gui/workbench/Assembly/Rhino/device qualification and arbitrary addon FCStd remain pending. F-Droid NOT_SUBMITTED. Private signing key/continuation excluded from public assets.

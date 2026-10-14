@@ -1,0 +1,7 @@
+# Next original PartDesign extent/attachment batch
+
+Preserve sealed1.16/code42; select1.17/code43 before app edits. Candidate four scopes: original reversed Pad/Pocket direction, symmetric extent, through-all Pocket, and to-face stopping. First prove actual1.1.4 native Type/SideType/Reversed/Length/UpToFace properties, same-Body profile/support ownership, dependency/cycle checks and analytic geometries. Refine the exact four scopes based on genuine native proof; do not silently approximate alternate extents with huge lengths or baked Part geometry.
+
+Also investigate Body-aware origin-plane sketch attachment, robust topology references and multi-source patterns. Existing patterns are deliberately one last additive Pad/Revolution/AdditiveLoft, Features mode, own origin references, forward Extent,2–16 copies, scale growth>1≤4. Retain pre-restoration origin/source/count/scalar/mode guards, material removal and one-solid checks. Full pattern/dress-up/extent workbench coverage remains pending.
+
+After four verified scopes: actual JNI/history/rollback/FCStd/STEP/source/placement tests; EN/TR/DE touch/commands/guides; compatible signedAPK, native/Python/input matching,134ELF/16KiB/API26/signature/static checks and regressions; save APK and CONTINUE; sourceGit/CI and full/latest release with independent tag/assets/source/branch404 proof. Privatekey retained/notpublished, noagents without user authorization. Physical device/full FreeCAD/Rhino/F-Droid gates remain NOT_RUN/PENDING/NOT_SUBMITTED.

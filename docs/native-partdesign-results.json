@@ -1,6 +1,6 @@
 {
-  "version": "1.15",
-  "version_code": 41,
+  "version": "1.16",
+  "version_code": 42,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "workflows": [
@@ -15,10 +15,14 @@
     "original Body fillet",
     "original Body equal chamfer",
     "original Body planar Z draft",
-    "original Body inward skin thickness"
+    "original Body inward skin thickness",
+    "original Mirrored",
+    "original LinearPattern",
+    "original PolarPattern",
+    "original Scaled"
   ],
   "checks": {
-    "partdesign_jni": 612,
+    "partdesign_jni": 796,
     "sketcher_regressions": 2324,
     "part_regressions": 269,
     "app_regressions": 88,
@@ -46,7 +50,11 @@
     "loft_ruled": true,
     "finishing_edges": 32,
     "finishing_faces": 16,
-    "draft_angle_deg": 45
+    "draft_angle_deg": 45,
+    "pattern_occurrences": 16,
+    "scale_factor": 4,
+    "pattern_source_faces": 64,
+    "pattern_source_edges": 256
   },
   "pending": [
     "other PartDesign modes/features",
@@ -55,6 +63,7 @@
     "phone qualification",
     "other axes/directions and loft modes",
     "other dress-up modes and variable radii",
-    "native patterns"
+    "native patterns",
+    "multi-source/other pattern modes"
   ]
 }

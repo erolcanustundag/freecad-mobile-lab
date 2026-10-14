@@ -185,3 +185,8 @@ Four native scopes: Revolution, Groove, additive Loft and subtractive Loft.436 r
 ### 1.15 — original Body finishing subset
 
 Four genuine workflows: fillet, equal chamfer, planar Z draft and inward skin thickness.612realJNI checks and2324/269/88/62 native regressions; units, selections, source/history, rollback, closed-solid/material-removal, malformed saved modes and origin roles. Body member placement protected; original PartDesign console/API exposed.742TR/DE entries/4guides. NativeDLLs unchanged; sealedPython/UI match APK. Android1.15 NOT_RUN, fullworkbench/device/Rhino gates pending. Next original patterns, see NEXT-BATCH-1.16.md.
+
+
+### 1.16 — original Body pattern subset
+
+Four original scopes: Mirrored, LinearPattern, PolarPattern and Scaled.796realJNI checks and2324/269/88/62 regressions pass; analytic unions, axes/planes/centres, units/count/scalar/preload guards, source/history/rollback, FCStd/STEP and disconnected cases.751TR/DE entries/4guides. Fullworkbench/Gui/Assembly/Rhino/device gates remain pending; Android1.16 NOT_RUN. Next native extent/attachment proof, NEXT-BATCH-1.17.md.

@@ -490,5 +490,20 @@
     "android_runtime": "physical startup/lifecycle/SAF workflows pending",
     "signing": "retained public development identity",
     "milestone_gate": "not complete until roadmap device/workflow criteria pass"
+  },
+  {
+    "version": "1.16",
+    "version_name": "1.16",
+    "version_code": 42,
+    "channel": "release",
+    "status": "initial public mobile feature release; broader device qualification pending",
+    "scope": "current mobile feature set",
+    "apk": "FreeCAD-Mobile-Lab-1.16-arm64.apk",
+    "size_bytes": 163927552,
+    "sha256": "a3962ed931aa1a4ec6516d42489db3428981bad9baee11539d3ac37f72b5a932",
+    "engineering_changes": "Original Body Mirrored/LinearPattern/PolarPattern/Scaled; bounded native counts, axes/planes, extent/scale and source/history.796realJNI and2324/269/88/62 regressions, EN/TR/DE controls/guides; signature/API26/16KiB/static closure PASS. Android execution NOT_RUN.",
+    "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+    "signing": "retained public development identity",
+    "milestone_gate": "not complete until roadmap device/workflow criteria pass"
   }
 ]

@@ -4,7 +4,7 @@ import org.json.*;
 import java.nio.file.*;
 public final class SketchAdapterHostTest {
     static int count;
-    static void check(boolean value,String reason){if(!value)throw new AssertionError(reason);count++;}
+    static void check(boolean value,String reason){if(!value)throw new AssertionError(reason);count++;if(count%200==0){System.out.println("Progress "+count+" "+reason);System.out.flush();}}
     static JSONObject call(JSONObject request)throws Exception{JSONObject result=new JSONObject(CoreNative.request(request.toString()));check(result.getBoolean("ok"),result.optString("error"));return result.getJSONObject("state");}
     static JSONObject cmd(String command)throws Exception{return call(CoreCommandLine.parse(command));}
     static void bad(String command)throws Exception{JSONObject r=new JSONObject(CoreNative.request(CoreCommandLine.parse(command).toString()));check(!r.getBoolean("ok"),"Must reject "+command);}

@@ -1,4 +1,4 @@
-# Original PartDesign integration — 1.15
+# Original PartDesign integration — 1.16
 
 The genuine FreeCAD1.1.4 PartDesign module builds on Linux x86_64/CPython3.12/Qt5 and ARM64 Android API26/CPython3.13/Qt6.8.3. Its actual PyInit__PartDesign entrypoint is registered as a builtin by the JNI bridge. The unchanged upstream PartDesign package wrapper is bundled. No fake geometry classes or substitute Part solids implement these tools.
 
@@ -13,3 +13,5 @@ Full PartDesign workbench parity, other extent modes, multiple profiles/solids, 
 1.14 adds original Revolution/Groove (forward-angle H/V profile axes) and two-profile ruled additive/subtractive Loft. The genuine API differs from Pad: Type=Angle, Midplane/Reversed=false, Angle2=0; LoftSections uses native XLinkSubList whole-section entry[(sketch,[empty_string])]. These are verified original features with native analytic geometry/history/FCStd/STEP. Pre-restoration origins/ownership, scalar mode and section-count checks reject malformed saved documents before native loading.734TR/DE reviewed entries/4guides. Next: investigate native Body dress-up tools; see NEXT-BATCH-1.15.md.
 
 1.15 adds original Body fillet/chamfer/draft/thickness;612realJNI checks including actual analytic geometry, units, current selections/source ownership/Tip, dependency/history/rollback, restored modes/origin roles, FCStd/STEP and whole Body placement. FilletRadius/ChamferSize use native PropertyQuantityConstraint(mm); ThicknessValue is Length; DraftAngle is Angle. Thickness native enum getters are Skin/Arc.742TR/DE entries/4guides. Broader finishing modes and patterns remain pending. Next native pattern prototypes and NEXT-BATCH-1.16.md.
+
+1.16 adds original Mirrored/LinearPattern/PolarPattern/Scaled with796realJNI checks, one additive last-Tip source, original Body references, counts2–16 and pre-restoration guards.751TR/DE strings/4guides. Scaled interpolation uses original additive-shape centre of mass; overlapping volume is an actual native union. Full pattern/extent/UI/device coverage remains pending. Isolated full Sketcher retry passed after a concurrent timeout; progress markers retained. See NEXT-BATCH-1.17.md.

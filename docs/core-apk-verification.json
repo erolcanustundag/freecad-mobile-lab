@@ -1,6 +1,6 @@
 {
-  "version": "1.15",
-  "apk_sha256": "898698e917a024dd05bd2611d4f33913e33272afb050b5dadff19f0ec04f5c58",
+  "version": "1.16",
+  "apk_sha256": "a3962ed931aa1a4ec6516d42489db3428981bad9baee11539d3ac37f72b5a932",
   "status": "STATIC_PASS",
   "android_execution": "NOT_RUN",
   "libraries_and_python_extensions": 134,
