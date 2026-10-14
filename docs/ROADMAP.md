@@ -175,3 +175,8 @@ Finite planar section helpers, world-space wire previews, exact current face/edg
 ### 1.13 — original PartDesign Body workflow subset
 
 Four bounded scopes: original Body/origin/ownership/BaseFeature; Tip and last-feature history; linked original Pad; linked original Pocket.213 actualJNI checks and2324/269/88/62 regressions pass. GenuineARM64PartDesign/nativewrapper is packaged;134ELF libraries/extensions pass API26 loader/strong-symbol closure and16KiB alignment.728TR/DE strings and4localizedguides. FullB08/B09/workbench/Gui/Assembly/Rhino/device gates remain PENDING; Android1.13 execution NOT_RUN. Next nativeAPI probes: Revolution/Groove/additive/subtractiveLoft; see NEXT-BATCH-1.14.md.
+
+
+### 1.14 — original PartDesign rotations and ruled lofts
+
+Four native scopes: Revolution, Groove, additive Loft and subtractive Loft.436 realJNI checks plus2324/269/88/62 regressions; original angles/axes/ownership/sections/geometry/history/FCStd/STEP, failed/nonremoving/disconnected cases, pre-restoration origin and section guards.734TR/DE entries/4guides. Native DLLs retain1.13 bytes; Python and UI match the new sealed APK. FullB08/B09/workbench/Gui/Assembly/Rhino/device gates remain pending; Android1.14 execution NOT_RUN. Next native Body fillet/chamfer/draft/thickness API proof, docs/NEXT-BATCH-1.15.md.

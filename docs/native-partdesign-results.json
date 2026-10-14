@@ -1,22 +1,27 @@
 {
-  "version": "1.13",
-  "version_code": 39,
+  "version": "1.14",
+  "version_code": 40,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "workflows": [
     "original Body/origin/ownership/BaseFeature",
     "owned Tip and safe last-feature native history",
     "linked original Pad",
-    "linked original Pocket"
+    "linked original Pocket",
+    "linked original Revolution",
+    "linked original Groove",
+    "two-profile original additive ruled Loft",
+    "two-profile original subtractive ruled Loft"
   ],
   "checks": {
-    "partdesign_jni": 213,
+    "partdesign_jni": 436,
     "sketcher_regressions": 2324,
     "part_regressions": 269,
     "app_regressions": 88,
     "python_regressions": 62,
     "locale_resources": 3,
-    "runtime_packaging": 10
+    "runtime_packaging": 10,
+    "language_command_fallback": 527
   },
   "android": {
     "abi": "arm64-v8a",
@@ -31,12 +36,16 @@
     "feature_faces": 1024,
     "document_objects_including_origins": 1000,
     "length_mm": 1000000,
-    "extent": "one-sided Length"
+    "extent": "one-sided Length",
+    "revolution_angle_deg": 360,
+    "loft_profiles": 2,
+    "loft_ruled": true
   },
   "pending": [
     "other PartDesign modes/features",
     "free history reordering",
     "Gui/Assembly/full workbench parity",
-    "phone qualification"
+    "phone qualification",
+    "other axes/directions and loft modes"
   ]
 }

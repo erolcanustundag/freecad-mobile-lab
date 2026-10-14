@@ -1,50 +1,9 @@
 {
   "repository": "https://github.com/erolcanustundag/freecad-mobile-lab",
-  "release": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/tag/v1.13",
-  "release_id": 412741310,
-  "tag": "v1.13",
-  "status": "PUBLISHED_VERIFIED",
+  "version": "1.14",
+  "tag": "v1.14",
+  "status": "PREPARED_NOT_PUBLISHED",
   "draft": false,
   "prerelease": false,
-  "latest": true,
-  "scope": "current mobile feature set",
-  "source_commit": "6bc50985721c2e55afa9d738639595c4806a6291",
-  "source_tree": "03ef915e839b19f499dfa4cef08e0cd235e2b958",
-  "source_ci": 38570458619,
-  "publication_workflow": 38570756151,
-  "transport_commit": "9006964fe3c561115e88ce460b3482b279c026a0",
-  "transport_branch": "release-upload-1-13",
-  "transport_branch_removed": "INDEPENDENT_HTTP404_VERIFIED",
-  "assets": [
-    {
-      "id": 640447952,
-      "name": "FreeCAD-Mobile-Lab-1.13-arm64.apk",
-      "size": 163911168,
-      "digest": "sha256:1c123cab24b6530a91435b24ee0fc87093cf7fc28e7975c79c8332b4ea0d26d4",
-      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.13/FreeCAD-Mobile-Lab-1.13-arm64.apk"
-    },
-    {
-      "id": 640448379,
-      "name": "FreeCAD-Mobile-Lab-1.13-corresponding-sources.zip",
-      "size": 430414494,
-      "digest": "sha256:1e2f22c4a8fe8ea55614291fd2852c21a1f194399332e16612707cef2e5fec51",
-      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.13/FreeCAD-Mobile-Lab-1.13-corresponding-sources.zip"
-    },
-    {
-      "id": 640448248,
-      "name": "FreeCAD-Mobile-Lab-1.13-native-runtime.zip",
-      "size": 62336311,
-      "digest": "sha256:41630c1dcaad34aeedfc736874fea4764282195e52c8e9b73ab8f4412b795c07",
-      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.13/FreeCAD-Mobile-Lab-1.13-native-runtime.zip"
-    },
-    {
-      "id": 640448999,
-      "name": "FreeCAD-Mobile-Lab-1.13-public-source.zip",
-      "size": 32449185,
-      "digest": "sha256:c65e3f94db5b01980fbd133e0bbe64d95cb2be99142a81a37f3a2d1b04ba9058",
-      "browser_download_url": "https://github.com/erolcanustundag/freecad-mobile-lab/releases/download/v1.13/FreeCAD-Mobile-Lab-1.13-public-source.zip"
-    }
-  ],
-  "android_execution": "NOT_RUN",
-  "f_droid": "NOT_SUBMITTED"
+  "android_execution": "NOT_RUN"
 }
