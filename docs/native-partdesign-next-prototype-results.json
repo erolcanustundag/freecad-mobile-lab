@@ -1,0 +1,17 @@
+{
+  "status": "HOST_API_PROBE_PASS_ANDROID_WORKFLOWS_PENDING",
+  "freecad": "1.1.4",
+  "evidence": {
+    "revolution_mm3": 691.1503837897544,
+    "groove_mm3": 671.6085670755975,
+    "additive_loft_mm3": 36.651914291880914,
+    "subtractive_loft_mm3": 35.18583772020568
+  },
+  "api_notes": [
+    "Revolution/Groove use Type=Angle, not modern Pad SideType",
+    "ReferenceAxis=(profile,[V_Axis])",
+    "Loft Sections is XLinkSubList: [(section,[empty_string])], empty sublist drops the section"
+  ],
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "android_execution": "NOT_RUN"
+}
