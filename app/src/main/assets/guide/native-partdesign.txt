@@ -27,4 +27,13 @@ BodyTip Body Pad selects an earlier owned solid as the Body result. Later featur
 
 Current limits: one connected closed solid per Body; one-sided Length Pad/Pocket; positive length up to1,000,000mm; at most1,000 document objects including seven origin frames plus origin and Body; profile up to256 edges; feature up to1,024 faces. Pocket must remove material and retain one solid. Face names may change after upstream edits; inspect selections again.
 
-PartDesign patterns, dress-up features, arbitrary history reordering, multiple profiles/solids, other extent modes, Gui and full workbench restoration remain pending. Android device execution for this version is not yet verified. Save before leaving; documents are local and the app has no network permission.
+PartDesign patterns, dress-up features, arbitrary history reordering, more than two loft profiles/multiple solids, other extent modes, Gui and full workbench restoration remain pending. Android device execution for this version is not yet verified. Save before leaving; documents are local and the app has no network permission.
+
+1.14 · Revolutions, grooves and two-profile lofts
+BodyRevolve BODY PROFILE NAME ANGLE H|V rotates a closed owned sketch about its horizontal H or vertical V axis. BodyGroove uses the same inputs to remove material from the last Body solid. Angles are forward, one-sided, greater than0 and at most360degrees. Set Revolved.Angle 180 deg updates the native feature. Other directions/extent modes and arbitrary external axes remain pending.
+
+For a ring section: create a Body and owned sketch Radial; draw a closed rectangle with corners(10,0),(12,0),(12,5),(10,5). Run BodyRevolve Body Radial Revolved 360 V. A separate radius0.3 circle centred at(11,2), owned by the same Body, can cut a toroidal groove with BodyGroove Body Cut Grooved 360 V.
+
+BodyAddLoft BODY LOWER UPPER NAME and BodySubLoft BODY LOWER UPPER NAME use exactly two different, unused, closed sketches owned by that Body. They create original ruled lofts; Closed and arbitrary multi-section/smooth loft modes are not exposed. For a cone frustum, use Lower circle radius2 atz0 and Upper circle radius1 atz5 (SketchPlane Upper XY 0 0 5). Run BodyAddLoft Body Lower Upper Loft. A second pair of radius0.4/radius0.2 sketches atz0/z5 removes a tapered bore with BodySubLoft Body BoreLower BoreUpper Bore. Subtractive tools must remove real material and retain one connected solid. Section geometry/placement edits update the native feature.
+
+These features share BodyInfo, BodyTip, safe last-feature removal, Undo/Redo, FCStd and STEP workflows. Pad/Pocket/Revolution/Groove/Loft ownership and protected origin lists are checked before restoration. Native topology names can change; inspect references after edits. Android device execution remains unverified for1.14.

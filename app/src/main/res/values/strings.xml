@@ -1,5 +1,5 @@
 <resources>
-  <string name="ui_edc01b2a45a1" formatted="false">"\n\nPython print(App.Version())\nRunMacro MyMacro.py\nApi App.Vector\nProxy Scaled Source.Width 2\n\nPython console, saved macros, command recording and the portable QuantityDriver proxy are available from the buttons. Python tracing has a two-second budget; native calls may take longer. The API browser covers available App/Base bindings. The native Part API is available when the Original Part runtime is loaded. Arbitrary addon proxy classes and Gui bindings remain pending.\n\nOnly whitelisted Part primitives/features/booleans and App metadata documents can be restored here. Native Sketcher sketches are now supported. Bounded original Body, Pad and Pocket documents are supported. Other PartDesign features and workbenches remain pending."</string>
+  <string name="ui_da65d6012a5c" formatted="false">"\n\nPython print(App.Version())\nRunMacro MyMacro.py\nApi App.Vector\nProxy Scaled Source.Width 2\n\nPython console, saved macros, command recording and the portable QuantityDriver proxy are available from the buttons. Python tracing has a two-second budget; native calls may take longer. The API browser covers available App/Base bindings. The native Part API is available when the Original Part runtime is loaded. Arbitrary addon proxy classes and Gui bindings remain pending.\n\nOnly whitelisted Part primitives/features/booleans and App metadata documents can be restored here. Native Sketcher sketches are now supported. Bounded original Body, Pad, Pocket, Revolution, Groove and ruled additive/subtractive Loft documents are supported. Other PartDesign features and workbenches remain pending."</string>
   <string name="ui_c9c40500c6bb" formatted="false">"\n\nUse Measure id1 id2 for exact CAD minimum distance; Distance XYZ XYZ; Angle XYZ XYZ XYZ. Mesh distance is not supported."</string>
   <string name="ui_dec0dce734eb" formatted="false">"\n0=X, 1=Y, 2=Z. This checks the bounding box; supports, adhesion and process settings are separate."</string>
   <string name="ui_65fe7eb37744" formatted="false">"\nABIs: "</string>
@@ -151,6 +151,7 @@
   <string name="ui_0e524de0b822" formatted="false">"Analyze"</string>
   <string name="ui_d36fa2632bfc" formatted="false">"Anchor must be Min, Centre or Max"</string>
   <string name="ui_1fd70473fb3d" formatted="false">"Angle"</string>
+  <string name="ui_dd4d071d7b79" formatted="false">"Angle (deg)"</string>
   <string name="ui_f961efd7f9ad" formatted="false">"Angle (degrees)"</string>
   <string name="ui_7ea07780c487" formatted="false">"Angle XYZ XYZ XYZ · middle point is vertex"</string>
   <string name="ui_0e0945af36d3" formatted="false">"Angle degrees"</string>
@@ -222,12 +223,13 @@
   <string name="ui_718a7e8a582e" formatted="false">"Body"</string>
   <string name="ui_b9e14a17aa5d" formatted="false">"Body A"</string>
   <string name="ui_66640b70e2fc" formatted="false">"Body B"</string>
-  <string name="ui_fc4f6447dcf9" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids and one-sided length Pad/Pocket. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Other PartDesign modes, reorder, patterns and dress-up tools remain pending."</string>
+  <string name="ui_94147dd25912" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, one-sided length Pad/Pocket, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Other PartDesign modes, arbitrary lofts, reorder, patterns and dress-up tools remain pending."</string>
   <string name="ui_db4ecb85e22a" formatted="false">"Body from native solid"</string>
   <string name="ui_2041a45c8dc7" formatted="false">"Body guide"</string>
   <string name="ui_c4d759fa8ad2" formatted="false">"Body history"</string>
   <string name="ui_daf760a167a8" formatted="false">"Bool"</string>
   <string name="ui_e772bc4d3e48" formatted="false">"Booleans / fillet"</string>
+  <string name="ui_d9d91b9a7122" formatted="false">"Bore"</string>
   <string name="ui_cce7f2f2f0dc" formatted="false">"Bottom"</string>
   <string name="ui_48726daba90e" formatted="false">"Boundary cannot be triangulated safely"</string>
   <string name="ui_9ad56d818396" formatted="false">"Boundary is not planar within welding tolerance"</string>
@@ -696,6 +698,7 @@
   <string name="ui_e8f4ed7331b3" formatted="false">"Graphics startup/drawing"</string>
   <string name="ui_78399476ef16" formatted="false">"Graphs"</string>
   <string name="ui_e66f1d0faf30" formatted="false">"Grid mm"</string>
+  <string name="ui_b7730e96c03f" formatted="false">"Grooved"</string>
   <string name="ui_171a0606f7c7" formatted="false">"Group"</string>
   <string name="ui_b37e49a1decb" formatted="false">"Group label (optional)"</string>
   <string name="ui_285b2e7f6ef8" formatted="false">"Group label exceeds 80 characters"</string>
@@ -740,7 +743,7 @@
   <string name="ui_15cc73271115" formatted="false">"Import worksheet CSV"</string>
   <string name="ui_6fe26e836676" formatted="false">"ImportedBody"</string>
   <string name="ui_0ac055066c7e" formatted="false">"ImportedStep"</string>
-  <string name="ui_11ac3c3f2595" formatted="false">"Independent native Android CAD app with selected FreeCAD functionality.\n\nNative ARM64 OpenCASCADE 7.9.2 CAD kernel; actual FreeCAD PlaneGCS Sketcher solver; software 3D renderer, optional OpenGL ES 3, and Android touch UI.\n\nNew: weighted NURBS control points, interpolated splines, profiles, loft/sweep/revolve/extrude, sections, offsets, chamfer, healing, jewellery settings, bounded subdivision primitives and a small typed node graph.\n\nThe optional document lab includes original FreeCAD Base/App/Part/Materials/Sketcher/PartDesign, native parametric solids and booleans, dimensional expressions, transactions, bounded geometry preview, STEP exchange, Python console/macros and one portable scripted metadata feature. Native FCStd restoration is limited to documented App metadata, whitelisted Part/Sketcher types and bounded original Body/Pad/Pocket workflows. Broader PartDesign, Gui and arbitrary workbench/addon FCStd support remain pending. This version requires Android execution testing. The main CAD workspace keeps its independent OCCT recipe engine. STEP transfers solid geometry to desktop FreeCAD.\n\nAll work is local. The app requests no network permission.\n\nCode: LGPL-2.1-or-later. FreeCAD: LGPL-2.1-or-later. OpenCASCADE: LGPL-2.1 with OCCT exception. Eigen: MPL-2.0. Boost: Boost Software License 1.0. meshoptimizer: MIT. Optional lab: Qt6.8.3 LGPL3/GPL3 notices and CPython3.13 PSF licence. Full notices accompany the source bundle and are included in app assets."</string>
+  <string name="ui_3118fba5f552" formatted="false">"Independent native Android CAD app with selected FreeCAD functionality.\n\nNative ARM64 OpenCASCADE 7.9.2 CAD kernel; actual FreeCAD PlaneGCS Sketcher solver; software 3D renderer, optional OpenGL ES 3, and Android touch UI.\n\nNew: weighted NURBS control points, interpolated splines, profiles, loft/sweep/revolve/extrude, sections, offsets, chamfer, healing, jewellery settings, bounded subdivision primitives and a small typed node graph.\n\nThe optional document lab includes original FreeCAD Base/App/Part/Materials/Sketcher/PartDesign, native parametric solids and booleans, dimensional expressions, transactions, bounded geometry preview, STEP exchange, Python console/macros and one portable scripted metadata feature. Native FCStd restoration is limited to documented App metadata, whitelisted Part/Sketcher types and bounded original Body/Pad/Pocket/Revolution/Groove/Loft workflows. Broader PartDesign, Gui and arbitrary workbench/addon FCStd support remain pending. This version requires Android execution testing. The main CAD workspace keeps its independent OCCT recipe engine. STEP transfers solid geometry to desktop FreeCAD.\n\nAll work is local. The app requests no network permission.\n\nCode: LGPL-2.1-or-later. FreeCAD: LGPL-2.1-or-later. OpenCASCADE: LGPL-2.1 with OCCT exception. Eigen: MPL-2.0. Boost: Boost Software License 1.0. meshoptimizer: MIT. Optional lab: Qt6.8.3 LGPL3/GPL3 notices and CPython3.13 PSF licence. Full notices accompany the source bundle and are included in app assets."</string>
   <string name="ui_ba805a89fc88" formatted="false">"Index (zero-based)"</string>
   <string name="ui_e01cd8bc414e" formatted="false">"Indices refer to this geometry. Changed topology blocks dependent selected-edge/face recipes.\n\n"</string>
   <string name="ui_4b631f698425" formatted="false">"Info"</string>
@@ -873,6 +876,7 @@
   <string name="ui_62d137664e58" formatted="false">"LoftSurface"</string>
   <string name="ui_6203671ec870" formatted="false">"LoftSurface id1 id2 [id3 ...]"</string>
   <string name="ui_6a9504e149fb" formatted="false">"Longest side in millimetres"</string>
+  <string name="ui_b91eed4b7a80" formatted="false">"Lower"</string>
   <string name="ui_d8e9409fd819" formatted="false">"Lower profile"</string>
   <string name="ui_899bd694d29a" formatted="false">"Macros"</string>
   <string name="ui_cb28836e3930" formatted="false">"Major radius"</string>
@@ -955,10 +959,13 @@
   <string name="ui_709a23220f2c" formatted="false">"Name"</string>
   <string name="ui_cb04729f44c1" formatted="false">"Name / layer / lock"</string>
   <string name="ui_ed387f007e09" formatted="false">"Name sketch constraint"</string>
+  <string name="ui_16711084dc3b" formatted="false">"Native Body groove"</string>
+  <string name="ui_70a414f8d8ac" formatted="false">"Native Body revolution"</string>
   <string name="ui_c5011646220e" formatted="false">"Native Pad"</string>
   <string name="ui_4862367a4934" formatted="false">"Native Part boolean"</string>
   <string name="ui_871cb729cd33" formatted="false">"Native Part placement"</string>
   <string name="ui_788019d78b2d" formatted="false">"Native Pocket"</string>
+  <string name="ui_bbd45dd10ebf" formatted="false">"Native additive loft"</string>
   <string name="ui_45211683ce7b" formatted="false">"Native box"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Native cone"</string>
   <string name="ui_c62b92752d38" formatted="false">"Native cut"</string>
@@ -984,6 +991,7 @@
   <string name="ui_266b14b41bae" formatted="false">"Native solid offset"</string>
   <string name="ui_c2c2cc1eb77b" formatted="false">"Native sphere"</string>
   <string name="ui_5d6d243f6ba5" formatted="false">"Native spiral"</string>
+  <string name="ui_0888b5eb8ee9" formatted="false">"Native subtractive loft"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Native torus"</string>
   <string name="ui_7aaa9ab32d7f" formatted="false">"Native union"</string>
   <string name="ui_72a680321ead" formatted="false">"Native wedge"</string>
@@ -1269,6 +1277,7 @@
   <string name="ui_717348fb5216" formatted="false">"Revolve sketch profile"</string>
   <string name="ui_9697e34ba490" formatted="false">"Revolve solid"</string>
   <string name="ui_ecd33530ce6b" formatted="false">"Revolve surface"</string>
+  <string name="ui_9ad3ae234bb8" formatted="false">"Revolved"</string>
   <string name="ui_e417261a9ae0" formatted="false">"Revolved 360 0 0 0 0 1 0"</string>
   <string name="ui_954daa8b0033" formatted="false">"Right"</string>
   <string name="ui_96ddaccf581f" formatted="false">"Ring"</string>
@@ -1345,6 +1354,7 @@
   <string name="ui_ede91343a9f1" formatted="false">"Seat depth"</string>
   <string name="ui_d4f1dc7e77fd" formatted="false">"Second solid / tool"</string>
   <string name="ui_f2c6b564bd81" formatted="false">"Section"</string>
+  <string name="ui_37173572d666" formatted="false">"Section sketch"</string>
   <string name="ui_e72675a4999d" formatted="false">"Section z · flatten horizontal section to XY"</string>
   <string name="ui_ea9edca6917c" formatted="false">"SectionPlane"</string>
   <string name="ui_8598222918d3" formatted="false">"Select"</string>
@@ -1429,6 +1439,7 @@
   <string name="ui_1901b5459594" formatted="false">"Sketch B-spline"</string>
   <string name="ui_9b14b3bcc172" formatted="false">"Sketch Profile\nSketchLine Profile 0 0 30 0\nSketchCircle Profile 10 10 5\nSketchArc Profile 0 0 10 0 180\nSketchEllipse Profile 0 0 20 10\nSketchSpline Profile 3 0,0;10,20;20,20;30,0 [1,2,2,1]\nConstruction Profile 0 true\nConstraint Profile Horizontal 0\nConstraint Profile Coincident 0 1 -1 1\nConstraint Profile Distance 0 30\nDatum Profile 2 40 mm\nMovePoint Profile 0 2 40 0\nDeleteGeometry Profile 0\nDeleteConstraint Profile 0\nSketchPreview Profile\nSketchPlane Profile XZ 0 0 10\nSketchPlacement Profile 0 0 0 0 0 0\nSketchAttach Profile Solid Face6\nSketchOffset Profile 0 0 2 0 0 0\nSketchDetach Profile\nExternal Profile Solid Edge9\nConstraint Profile Coincident 0 1 -3 1\nDeleteExternal Profile 0\nSketchTrim Profile 0 5 0\nSketchExtend Profile 0 5 2\nSketchFillet Profile 0 1 8 0 10 2 2\nSketchSplit Profile 0 5 0\nSketchMirror Profile 0,1 Y\nSketchArray Profile 0 3 2 10 0 1 false\nConstraint Profile Symmetric 0 1 0 2 -2\nConstraint Profile Symmetric 0 1 1 2 -1 1\nDriving Profile 2 false\nConstraint Profile PointOnObject 0 1 -1\nConstraint Profile DistanceX 0 20\nConstraint Profile DistanceY 0 1 -5\nConstraint Profile DistanceX 0 1 1 2 30\nConstraint Profile Block 0\nActive Profile 0 false\nConstraintName Profile 2 Width\nConstraintExpression Profile 2 Source.Width * 2\nSketchInfo Profile\nSketchExtrude Profile Extruded 10\nSketchRevolve Profile Revolved 360 0 0 0 0 1 0\nExtrusionSettings Extruded 10 5 false false\nRevolutionSettings Revolved 180 0 0 0 0 1 0 true\nPartPlacement Extruded 0 0 10 0 0 0\nShapeInfo Extruded\nPartFillet Solid Rounded 1,2 1\nPartChamfer Solid Beveled 1 1\nPartRefine Solid Refined\nPartSection Solid Tool Section\nSectionPlane Solid Slice 0 0 5 0 0 1 100\nWirePreview Slice\nElementInfo Solid Face1\nFinishSettings Rounded 1 2\nPartLoft Loft Profile,Top true false\nPartRuled Surface Lower Edge1 Upper Edge1\nPartOffset Solid Offset 1\nPartMirror Solid Mirrored 0 0 0 1 0 0\nPartSweep Swept Profile Path true false\nPartThickness Solid Hollow 6 -1\nPartOffset2D Profile Outline 1\nPartCompound Assembly Solid,Hollow\nPartPolygon Hexagon 6 10\nPartEllipsoid Oval 3 4 2\nPartLinkedRefine Solid Clean\nPartReverse Solid Reversed\nPartPrism Prism 6 10 20\nPartWedge Wedge 10 10 10 2 8 2 8\nPartHelix Helix 2 6 5 false\nHelixSettings Helix 2 6 5 true\nPartSpiral Spiral 3 2 3\nSpiralSettings Spiral 3 2 4\n\nGeometry/constraint indices start at 0. Constraint angles use degrees; dimensions use mm. Datum accepts units. Preview uses sketch-local XY coordinates. External projected edges use -3, -4, etc.; DeleteExternal uses reference indices 0, 1, etc. Placement/offset rotations use yaw pitch roll degrees. Detach preserves current world placement. Native solver edits, Undo/Redo and FCStd save/open are supported."</string>
   <string name="ui_54960a0cbf8a" formatted="false">"Sketch arc"</string>
+  <string name="ui_ece8e7e068b0" formatted="false">"Sketch axis (H or V)"</string>
   <string name="ui_71d0880598e2" formatted="false">"Sketch circle"</string>
   <string name="ui_06359beba4bf" formatted="false">"Sketch command help"</string>
   <string name="ui_205d5e8826a6" formatted="false">"Sketch ellipse"</string>
@@ -1666,6 +1677,7 @@
   <string name="ui_edfe910cbb2a" formatted="false">"UntrimPatch"</string>
   <string name="ui_8282a0e3523f" formatted="false">"UntrimPatch · restore full UV patch"</string>
   <string name="ui_2d7749ad8168" formatted="false">"Unused angle"</string>
+  <string name="ui_6b5b87b9bec8" formatted="false">"Upper"</string>
   <string name="ui_6a195ab24b1f" formatted="false">"Upper profile"</string>
   <string name="ui_f9f4b89fd160" formatted="false">"Upstream App/Part 1.1.4 · solids, properties, expressions and transactions"</string>
   <string name="ui_83ee1bec0e9f" formatted="false">"Upstream App/Part/Sketcher 1.1.4 · solids, sketches and native constraints"</string>

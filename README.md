@@ -1,5 +1,7 @@
 # FreeCAD Mobile Lab
 
+Development1.14/code40: original Revolution/Groove and two-profile ruled additive/subtractive Loft workflows pass436 actualJNI checks; release packaging and broader regressions are in progress. Last published full release is1.13.
+
 **Current release: 1.13 / Android version code 39, current mobile feature set.** Native CAD for ARM64 Android 8+ (min API26, target35). **Full desktop FreeCAD/Rhino parity and the original comprehensive qualification milestone are NOT COMPLETE.** This is an independent project, not an official FreeCAD Android release.
 
 The main workspace uses OCCT 7.9.2 and the upstream FreeCAD PlaneGCS solver. An optional document lab embeds upstream FreeCAD 1.1.4 Base/App, CPython3.13 and headless Qt6.8.3. Models stay on the device; the app requests no network permission.

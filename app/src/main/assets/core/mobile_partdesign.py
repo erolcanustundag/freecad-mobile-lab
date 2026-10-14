@@ -12,7 +12,7 @@ if '_PartDesign' in sys.builtin_module_names:
     sys.path.insert(0, str(Path(__file__).resolve().parent / 'resources/Mod'))
     import PartDesign
 
-TYPES = {'PartDesign::Body', 'PartDesign::FeatureBase', 'PartDesign::Pad', 'PartDesign::Pocket'}
+TYPES = {'PartDesign::Body', 'PartDesign::FeatureBase', 'PartDesign::Pad', 'PartDesign::Pocket', 'PartDesign::Revolution', 'PartDesign::Groove', 'PartDesign::AdditiveLoft', 'PartDesign::SubtractiveLoft'}
 FRAMES = {'App::Origin', 'App::Line', 'App::Plane', 'App::Point'}
 FEATURES = TYPES - {'PartDesign::Body'}
 
@@ -39,6 +39,16 @@ def positive(value):
     value = mobile_sketch.number(value)
     if not 1e-7 < value <= 1000000:raise ValueError('Use a positive length within1,000,000mm')
     return value
+
+def angle(value):
+    value=mobile_sketch.number(value,360)
+    if not 1e-7<value<=360:raise ValueError('Use a positive revolution angle up to360degrees')
+    return value
+
+def closed(obj):
+    mobile_part.profile(obj)
+    for edge in obj.Shape.Edges:mobile_part.curve_budget(edge)
+    return obj
 
 def solid(obj):
     mobile_part.solid_source(obj)
@@ -75,21 +85,37 @@ def edit(doc, e, get, identifier):
         solid(feature);b.Tip=feature
     elif op=='body_remove_feature':
         b=body(get(e['body']));feature=get(e['feature']);history=solids(b)
-        if not history or history[-1]!=feature or b.Tip!=feature or feature.TypeId=='PartDesign::FeatureBase':raise ValueError('Remove only the current last Pad/Pocket; select the last Tip first')
+        if not history or history[-1]!=feature or b.Tip!=feature or feature.TypeId=='PartDesign::FeatureBase':raise ValueError('Remove only the current last supported Body feature; select the last Tip first')
         if any(o!=b for o in feature.InList):raise ValueError('Remove dependent features or sketch references first')
         b.Tip=history[-2] if len(history)>1 else None
         b.removeObject(feature);doc.removeObject(feature.Name)
-    elif op in ('body_pad','body_pocket'):
-        b=body(get(e['body']));s=get(e['profile']);name=identifier(e['name']);length=positive(e['length']);fresh(doc,name)
+    elif op in ('body_pad','body_pocket','body_revolve','body_groove','body_add_loft','body_sub_loft'):
+        b=body(get(e['body']));s=get(e['profile']);name=identifier(e['name']);fresh(doc,name)
+        subtractive=op in ('body_pocket','body_groove','body_sub_loft')
         if owner(s)!=b:raise ValueError('Profile must be a sketch owned by this Body; use BodySketch to adopt it')
-        doc.recompute();mobile_part.profile(s)
+        doc.recompute();closed(s)
         history=solids(b)
         if history and b.Tip!=history[-1]:raise ValueError('Select the last solid Tip before appending a feature')
-        if any(o.TypeId in FEATURES for o in s.InList):raise ValueError('Use a separate sketch for each Pad/Pocket')
-        if op=='body_pocket' and not history:raise ValueError('Pocket needs an existing Body solid')
+        if any(o.TypeId in FEATURES for o in s.InList):raise ValueError('Use a separate sketch for each Body feature')
+        if subtractive and not history:raise ValueError('Subtractive Body feature needs an existing solid')
         if history:solid(history[-1])
-        obj=b.newObject('PartDesign::Pad' if op=='body_pad' else 'PartDesign::Pocket',name)
-        obj.Profile=(s,[]);obj.Type='Length';obj.SideType='One side';obj.Length=length
+        if op in ('body_pad','body_pocket'):length=positive(e['length'])
+        elif op in ('body_revolve','body_groove'):
+            amount=angle(e['angle']);axis=e['axis']
+            if axis not in ('H','V'):raise ValueError('Use the profile horizontal H or vertical V axis')
+        else:
+            section=get(e['section'])
+            if section==s or owner(section)!=b:raise ValueError('Loft needs two different sketches owned by this Body')
+            closed(section)
+            if any(o.TypeId in FEATURES for o in section.InList):raise ValueError('Choose an unused owned loft section')
+            # Ruled two-profile lofts only: no silent approximation of arbitrary loft UI.
+        kind={'body_pad':'Pad','body_pocket':'Pocket','body_revolve':'Revolution','body_groove':'Groove','body_add_loft':'AdditiveLoft','body_sub_loft':'SubtractiveLoft'}[op]
+        obj=b.newObject('PartDesign::'+kind,name);obj.Profile=(s,[])
+        if op in ('body_pad','body_pocket'):obj.Type='Length';obj.SideType='One side';obj.Length=length
+        elif op in ('body_revolve','body_groove'):
+            obj.Type='Angle';obj.Midplane=False;obj.Reversed=False;obj.Angle2=0
+            obj.ReferenceAxis=(s,['H_Axis' if axis=='H' else 'V_Axis']);obj.Angle=amount
+        else:obj.Sections=[(section,[''])];obj.Ruled=True;obj.Closed=False
         b.Tip=obj
     else:raise ValueError('Unknown Body operation')
 
@@ -98,12 +124,13 @@ def protected(obj):
 
 def editable(obj,name):
     if obj.TypeId in FRAMES:return name=='Label'
-    if obj.TypeId in TYPES:return name=='Label' or obj.TypeId in ('PartDesign::Pad','PartDesign::Pocket') and name in ('Length','Refine')
+    if obj.TypeId in TYPES:return name=='Label' or obj.TypeId in FEATURES-{'PartDesign::FeatureBase'} and name=='Refine' or obj.TypeId in ('PartDesign::Pad','PartDesign::Pocket') and name=='Length' or obj.TypeId in ('PartDesign::Revolution','PartDesign::Groove') and name=='Angle'
     return True
 
 def validate_edit(obj,name,value):
     if not editable(obj,name):raise ValueError('Use Body tools for native ownership, Tip and profile links; this feature mode is read-only')
     if obj.TypeId in ('PartDesign::Pad','PartDesign::Pocket') and name=='Length':positive(value)
+    if obj.TypeId in ('PartDesign::Revolution','PartDesign::Groove') and name=='Angle':angle(value)
 
 def summary(b):
     if b.TypeId!='PartDesign::Body':return None
@@ -141,17 +168,26 @@ def validate_document(doc):
         previous=None
         for feature in history:
             solid(feature)
-            if feature.TypeId in ('PartDesign::Pad','PartDesign::Pocket'):
+            if feature.TypeId in FEATURES-{'PartDesign::FeatureBase'}:
                 profile,sub=feature.Profile
                 if sub or profile not in members or profile.TypeId not in mobile_sketch.TYPES:raise ValueError('Pad/Pocket needs a whole sketch owned by its Body')
-                mobile_part.profile(profile)
-                if feature.Type!='Length' or feature.SideType!='One side':raise ValueError('Pad/Pocket currently supports one-sided length mode only')
-                positive(feature.Length.Value)
+                closed(profile)
+                if feature.TypeId in ('PartDesign::Pad','PartDesign::Pocket'):
+                    if feature.Type!='Length' or feature.SideType!='One side':raise ValueError('Pad/Pocket currently supports one-sided length mode only')
+                    positive(feature.Length.Value)
+                elif feature.TypeId in ('PartDesign::Revolution','PartDesign::Groove'):
+                    ref,axis=feature.ReferenceAxis
+                    if ref!=profile or axis not in (['H_Axis'],['V_Axis']) or feature.Type!='Angle' or feature.Midplane or feature.Reversed or feature.Angle2.Value!=0:raise ValueError('Revolution/Groove supports one forward angle about its sketch H/V axis only')
+                    angle(feature.Angle.Value)
+                else:
+                    sections=feature.Sections
+                    if len(sections)!=1 or sections[0][0]==profile or sections[0][0] not in members or list(sections[0][1])!=[''] or sections[0][0].TypeId not in mobile_sketch.TYPES or not feature.Ruled or feature.Closed:raise ValueError('Body loft supports two different owned whole sketches in open ruled mode')
+                    closed(sections[0][0])
                 if feature.BaseFeature!=previous:raise ValueError('Body solid history is branched or out of order')
-                if feature.TypeId=='PartDesign::Pocket':
-                    if previous is None:raise ValueError('Pocket needs a base solid')
+                if feature.TypeId in ('PartDesign::Pocket','PartDesign::Groove','PartDesign::SubtractiveLoft'):
+                    if previous is None:raise ValueError('Subtractive feature needs a base solid')
                     before=abs(previous.Shape.Volume);after=abs(feature.Shape.Volume)
-                    if not 1e-7 < before-after < before:raise ValueError('Pocket must remove material and retain one solid')
+                    if not 1e-7 < before-after < before:raise ValueError('Subtractive feature must remove material and retain one solid')
             previous=feature
         if b.Tip is not None:
             solid(b)
@@ -159,3 +195,46 @@ def validate_document(doc):
     for obj in doc.Objects:
         if obj.TypeId in FRAMES and obj not in frames:raise ValueError('Origin frames must belong to a Body')
         if obj.TypeId in FEATURES and obj not in owned:raise ValueError('PartDesign feature must belong to a Body')
+
+
+def validate_fcstd(tree):
+    """Validate Body reference/origin budgets before native restoration can generate objects."""
+    if not available():return
+    types={o.get('name'):o.get('type') for o in tree.findall('./Objects/Object')}
+    data={o.get('name'):o for o in tree.findall('./ObjectData/Object')}
+    frames=set();owned=set()
+    def node(name,prop,tag):
+        d=data.get(name)
+        return d.find("./Properties/Property[@name='"+prop+"']/"+tag) if d is not None else None
+    def link(name,prop):
+        n=node(name,prop,'Link')
+        return n.get('value') if n is not None else None
+    def links(name,prop):
+        n=node(name,prop,'LinkList')
+        if n is None:raise ValueError('Missing saved Body ownership/origin list')
+        result=[c.get('value') for c in n.findall('Link')]
+        if str(len(result))!=n.get('count') or len(result)!=len(set(result)):raise ValueError('Saved Body ownership list is inconsistent')
+        return result
+    for name,kind in types.items():
+        if kind!='PartDesign::Body':continue
+        origin=link(name,'Origin')
+        if types.get(origin)!='App::Origin':raise ValueError('Saved Body must reference its complete origin')
+        children=links(origin,'OriginFeatures')
+        if len(children)!=7 or sorted(types.get(n,'') for n in children)!=sorted(['App::Line']*3+['App::Plane']*3+['App::Point']):raise ValueError('Saved Body origin frames are incomplete')
+        these=set([origin]+children)
+        if frames & these:raise ValueError('Saved Bodies cannot share origin frames')
+        frames.update(these)
+        members=links(name,'Group')
+        if owned & set(members) or any(types.get(n) not in FEATURES|mobile_sketch.TYPES for n in members):raise ValueError('Saved Body feature ownership is invalid')
+        owned.update(members)
+        tip=link(name,'Tip')
+        if tip and (tip not in members or types.get(tip) not in FEATURES):raise ValueError('Saved Tip must be an owned solid feature')
+        for feature in members:
+            if types.get(feature) not in FEATURES-{'PartDesign::FeatureBase'}:continue
+            profile=node(feature,'Profile','LinkSub')
+            if profile is None or profile.get('value') not in members or types.get(profile.get('value')) not in mobile_sketch.TYPES or profile.get('count')!='0':raise ValueError('Saved Body profile must be a whole owned sketch')
+            if types[feature] in ('PartDesign::AdditiveLoft','PartDesign::SubtractiveLoft'):
+                section=node(feature,'Sections','LinkSubList')
+                children=section.findall('Link') if section is not None else []
+                if len(children)!=1 or section.get('count')!='1' or children[0].get('sub')!='' or children[0].get('obj') not in members or children[0].get('obj')==profile.get('value') or types.get(children[0].get('obj')) not in mobile_sketch.TYPES:raise ValueError('Saved loft section must be a different whole owned sketch')
+    if any(kind in FRAMES and name not in frames or kind in FEATURES and name not in owned for name,kind in types.items()):raise ValueError('Saved native frames/features need Body ownership')

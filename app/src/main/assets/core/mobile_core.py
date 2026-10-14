@@ -454,6 +454,7 @@ def _validate_fcstd(path):
             raise ValueError("Workbenches not yet ported: " + ", ".join(str(t) for t in unsupported))
         objects=tree.findall("./Objects/Object")
         if len(objects)>1000:raise ValueError("Restored document exceeds1,000 objects including origins")
+        mobile_partdesign.validate_fcstd(tree)
         pd={o.get("name"):o.get("type") for o in objects if o.get("type") in mobile_partdesign.TYPES}
         for data in tree.findall("./ObjectData/Object"):
             kind=pd.get(data.get("name"))
@@ -467,6 +468,23 @@ def _validate_fcstd(path):
                 for mode in ("Type","SideType"):
                     v=data.find("./Properties/Property[@name='"+mode+"']/Integer")
                     if v is None or v.get("value")!="0":raise ValueError("Restored Pad/Pocket supports one-sided Length only")
+            elif kind in ("PartDesign::Revolution","PartDesign::Groove"):
+                value=data.find("./Properties/Property[@name='Angle']/Float")
+                if value is None:raise ValueError("Missing saved revolution angle")
+                mobile_partdesign.angle(float(value.get("value","nan")))
+                value=data.find("./Properties/Property[@name='Type']/Integer")
+                if value is None or value.get("value")!="0":raise ValueError("Restored Revolution/Groove supports Angle mode only")
+                for name in ("Midplane","Reversed"):
+                    value=data.find("./Properties/Property[@name='"+name+"']/Bool")
+                    if value is None or value.get("value")!="false":raise ValueError("Restored revolution must be forward and one-sided")
+                value=data.find("./Properties/Property[@name='Angle2']/Float")
+                if value is None or float(value.get("value","nan"))!=0:raise ValueError("Restored revolution second angle is unsupported")
+            elif kind in ("PartDesign::AdditiveLoft","PartDesign::SubtractiveLoft"):
+                sections=data.find("./Properties/Property[@name='Sections']/LinkSubList")
+                if sections is None or sections.get("count")!="1" or len(sections.findall("Link"))!=1 or sections.find("Link").get("sub")!="":raise ValueError("Restored Body loft needs exactly one whole section")
+                for name,expected in (("Ruled","true"),("Closed","false")):
+                    value=data.find("./Properties/Property[@name='"+name+"']/Bool")
+                    if value is None or value.get("value")!=expected:raise ValueError("Restored Body loft requires open ruled mode")
             if kind:
                 if data.findall("./Properties/Property[@name='ExpressionEngine']//Expression"):raise ValueError("Restored PartDesign expressions remain unsupported")
         # Upstream allows INT_MAX polygon sides. Reject oversized restoration

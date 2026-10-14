@@ -726,3 +726,9 @@ Feature name|Özellik adı|Featurename
 Length (mm)|Uzunluk (mm)|Länge (mm)
 Original PartDesign is unavailable in this runtime.|Bu çalışma ortamında özgün PartDesign bulunmuyor.|Originales PartDesign ist in dieser Laufzeit nicht verfügbar.
 Upstream App/Part/Sketcher/PartDesign 1.1.4 · native document workflows|Özgün App/Part/Sketcher/PartDesign 1.1.4 · yerel belge işlemleri|Originales App/Part/Sketcher/PartDesign 1.1.4 · native Dokumentabläufe
+Native Body revolution|Yerel gövde döndürme|Native Körperrotation
+Native Body groove|Yerel döner oyuk|Native Drehungsaussparung
+Native additive loft|Yerel katı loft|Nativer additiver Loft
+Native subtractive loft|Yerel çıkarıcı loft|Nativer subtraktiver Loft
+Sketch axis (H or V)|Eskiz ekseni (H veya V)|Skizzenachse (H oder V)
+Section sketch|Kesit eskizi|Querschnittsskizze

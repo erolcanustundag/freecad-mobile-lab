@@ -27,4 +27,13 @@ BodyTip Body Pad daha önceki katı özelliği gövdenin sonucu olarak seçer; s
 
 Sınırlar: gövde başına tek bağlı kapalı katı; tek yönlü uzunluk modu;0'dan büyük ve en fazla1.000.000mm uzunluk; başlangıç nesneleri dahil1.000 belge nesnesi; profilde256 kenar; özellikte1.024 yüz. Cep malzeme çıkarmalı ve tek katı bırakmalıdır. Kaynak düzenlenince yüz adları değişebilir; seçimi yeniden kontrol edin.
 
-Örüntüler, köşe bitirme araçları, serbest geçmiş sıralama, çoklu profil/katı, diğer uzatma modları, Gui ve tam çalışma tezgâhı desteği henüz tamamlanmadı. Bu sürümün Android cihaz testi henüz yapılmadı. Çıkmadan kaydedin; belgeler yereldir ve uygulamanın ağ izni yoktur.
+Örüntüler, köşe bitirme araçları, serbest geçmiş sıralama, ikiden fazla loft profili veya çoklu katı, diğer uzatma modları, Gui ve tam çalışma tezgâhı desteği henüz tamamlanmadı. Bu sürümün Android cihaz testi henüz yapılmadı. Çıkmadan kaydedin; belgeler yereldir ve uygulamanın ağ izni yoktur.
+
+1.14 · Döndürme, döner oyuk ve iki profilli loft
+BodyRevolve BODY PROFILE NAME ANGLE H|V kapalı gövde eskizini kendi yatay H veya dikey V ekseni etrafında döndürür. BodyGroove aynı girdilerle son gövde katısından malzeme çıkarır. Açı tek yönde,0'dan büyük ve en fazla360derece olmalıdır. Set Revolved.Angle 180 deg özgün özelliği günceller. Ters/simetrik yönler, başka uzatma modları ve dış eksenler henüz desteklenmez.
+
+Halka kesiti için gövdeye ait Radial eskizinde köşeleri(10,0),(12,0),(12,5),(10,5) olan kapalı dikdörtgen çizin. BodyRevolve Body Radial Revolved 360 V komutunu çalıştırın. Aynı gövdeye ait ayrı Cut eskizinde(11,2) merkezli0,3mm yarıçaplı daire çizip BodyGroove Body Cut Grooved 360 V ile döner oyuk açabilirsiniz. Komutlarda ondalık ayırıcı nokta kullanılır.
+
+BodyAddLoft BODY LOWER UPPER NAME ve BodySubLoft BODY LOWER UPPER NAME aynı gövdeye ait, farklı ve kullanılmamış tam iki kapalı eskiz kullanır. Özgün çizgisel loft oluştururlar; kapalı, çok kesitli veya yumuşak loft modları henüz sunulmaz. Kesik koni için Lower eskizinez0'da yarıçap2, Upper eskizinez5'te yarıçap1 daire çizin (SketchPlane Upper XY 0 0 5). BodyAddLoft Body Lower Upper Loft çalıştırın. z0/z5'te yarıçap0,4/0,2 olan ikinci eskiz çifti BodySubLoft Body BoreLower BoreUpper Bore ile konik delik çıkarır. Çıkarma araçları gerçek malzeme çıkarmalı ve tek bağlı katı bırakmalıdır. Kesit geometrisi/yerleşimi değişince özellik yeniden hesaplanır.
+
+Bu araçlarda BodyInfo, BodyTip, güvenli son özellik silme, Undo/Redo, FCStd ve STEP kullanılabilir. Özellik/başlangıç nesnesi sahipliği geri yüklemeden önce denetlenir. Düzenleme sonrası yüz/kenar adlarını yeniden kontrol edin.1.14 Android cihaz testi henüz yapılmadı.

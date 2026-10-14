@@ -361,10 +361,13 @@
   <string name="ui_709a23220f2c" formatted="false">"Ad"</string>
   <string name="ui_cb04729f44c1" formatted="false">"Ad / katman / kilit"</string>
   <string name="ui_ed387f007e09" formatted="false">"Eskiz kısıtını adlandır"</string>
+  <string name="ui_16711084dc3b" formatted="false">"Yerel döner oyuk"</string>
+  <string name="ui_70a414f8d8ac" formatted="false">"Yerel gövde döndürme"</string>
   <string name="ui_c5011646220e" formatted="false">"Yerel katı uzatma"</string>
   <string name="ui_4862367a4934" formatted="false">"Özgün Part katı işlemi"</string>
   <string name="ui_871cb729cd33" formatted="false">"Yerel Part yerleşimi"</string>
   <string name="ui_788019d78b2d" formatted="false">"Yerel cep"</string>
+  <string name="ui_bbd45dd10ebf" formatted="false">"Yerel katı loft"</string>
   <string name="ui_45211683ce7b" formatted="false">"Yerel kutu"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Yerel koni"</string>
   <string name="ui_c62b92752d38" formatted="false">"Özgün çıkarma"</string>
@@ -389,6 +392,7 @@
   <string name="ui_266b14b41bae" formatted="false">"Yerel katı ofseti"</string>
   <string name="ui_c2c2cc1eb77b" formatted="false">"Yerel küre"</string>
   <string name="ui_5d6d243f6ba5" formatted="false">"Yerel spiral"</string>
+  <string name="ui_0888b5eb8ee9" formatted="false">"Yerel çıkarıcı loft"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Yerel torus"</string>
   <string name="ui_7aaa9ab32d7f" formatted="false">"Özgün birleşim"</string>
   <string name="ui_72a680321ead" formatted="false">"Yerel kama"</string>
@@ -565,6 +569,7 @@
   <string name="ui_d8a9144ff3eb" formatted="false">"Betikli QuantityDriver"</string>
   <string name="ui_9b473b2aa252" formatted="false">"Ad, tür, kimlik veya katman ara"</string>
   <string name="ui_d4f1dc7e77fd" formatted="false">"İkinci katı / kesici"</string>
+  <string name="ui_37173572d666" formatted="false">"Kesit eskizi"</string>
   <string name="ui_8598222918d3" formatted="false">"Seç"</string>
   <string name="ui_cf5fe0f398bb" formatted="false">"Gövde ucunu seç"</string>
   <string name="ui_3975d731f5d2" formatted="false">"Bir CAD katısı seçin"</string>
@@ -603,6 +608,7 @@
   <string name="ui_8697f432058b" formatted="false">"Gümüş"</string>
   <string name="ui_1901b5459594" formatted="false">"Eskiz B-spline eğrisi"</string>
   <string name="ui_54960a0cbf8a" formatted="false">"Eskiz yayı"</string>
+  <string name="ui_ece8e7e068b0" formatted="false">"Eskiz ekseni (H veya V)"</string>
   <string name="ui_71d0880598e2" formatted="false">"Eskiz çemberi"</string>
   <string name="ui_06359beba4bf" formatted="false">"Eskiz komut yardımı"</string>
   <string name="ui_205d5e8826a6" formatted="false">"Eskiz elipsi"</string>
