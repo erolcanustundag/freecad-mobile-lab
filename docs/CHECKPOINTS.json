@@ -580,5 +580,20 @@
     "android_runtime": "physical startup/lifecycle/SAF workflows pending",
     "signing": "retained public development identity",
     "milestone_gate": "not complete until roadmap device/workflow criteria pass"
+  },
+  {
+    "version": "1.22",
+    "version_name": "1.22",
+    "version_code": 48,
+    "channel": "release",
+    "status": "initial public mobile feature release; broader device qualification pending",
+    "scope": "current mobile feature set",
+    "apk": "FreeCAD-Mobile-Lab-1.22-arm64.apk",
+    "size_bytes": 163993428,
+    "sha256": "b9564143c2f5d67c948d01374c99c352d2ea9814cb57480a34aa55901acbdc1c",
+    "engineering_changes": "Four original support mappings/offset workflows: Plane FlatFace, Line Tangent, Point Vertex and sketch ObjectXY AttachmentOffset. 268JNI+10cold-JVM plus299Datum/13cold/302Hole/310path/1509PD/2324Sketcher/269Part/88App/62Python/527locale/3resource/10packaging PASS; same-Body cycles/modes/elements/topology/offset guards, source edits, native offset-driven Pad/Hole/Pipe/Helix, UndoRedo/rollback/19malformedFCStd/cold restore/STEP.804TRDE entries.134ELF/1082Python/API26/16KiB/signatures PASS. PhysicalAndroid22 NOT_RUN, full desktop/Gui/Assembly/Rhino NOT_COMPLETE, F-Droid NOT_SUBMITTED.",
+    "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+    "signing": "retained public development identity",
+    "milestone_gate": "not complete until roadmap device/workflow criteria pass"
   }
 ]

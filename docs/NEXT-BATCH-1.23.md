@@ -1,0 +1,9 @@
+# Original Body primitive features
+
+Preserve the sealed 1.22/code48 inputs. Select 1.23/code49 before future application edits.
+
+Four candidate original workflows: PartDesign::AdditiveBox, SubtractiveBox, AdditiveCylinder and SubtractiveCylinder. The 33-check native prototype passes real boolean union/removal volumes, original BaseFeature history and Tip, source/dimension changes, overlapping source changes, Undo, Body placement and true close/reopen FCStd restoration. Mobile integration remains NOT_IMPLEMENTED; Android execution is NOT_RUN.
+
+Qualify manual original primitive placement with native AttachEngine3D/Deactivated mapping and identity attachment offset. Limit cylinders to full360degree untapered defaults until other angles are separately proved. Bound dimensions, projected geometry/world coordinates, source topology and feature count before computation/restoration. A subtractive primitive must remove material and retain a single closed solid; an additive primitive must add material and retain a single connected solid. Reject inactive/suppressed/attached/expressed or unknown primitive modes, foreign/branched history and no-op/disconnected results. Keep source edits atomic and preserve original dependent geometry rather than baking Part features.
+
+Add commands and touch forms for dimensions and X/Y/Z/yaw/pitch/roll, dedicated protected placement edits, EN/TR/DE controls/guides, and meaningful JNI/source/units/history/UndoRedo/rollback/FCStd/STEP/malformed-file tests. Retain construction support validation when a primitive becomes an owned support source. Rebuild/sign/save a compatible APK and publish a full release after the four bounded workflows pass. Other primitives, mapped primitives, general axes/attachment, Gui/Assembly/full FreeCAD/Rhino parity and F-Droid remain pending.

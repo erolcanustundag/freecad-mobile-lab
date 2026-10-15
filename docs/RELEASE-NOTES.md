@@ -1,20 +1,18 @@
-# FreeCAD Mobile Lab 1.21
+# FreeCAD Mobile Lab 1.22
 
-Full release of the current mobile feature set, Android code47. Signed ARM64 APK retains the compatible update certificate.
+Full release of the current mobile feature set, Android code48. The signed ARM64 APK retains the compatible update certificate.
 
-Four original non-solid PartDesign construction workflows:
+Four original native attachment workflows:
 
-- Owned Datum planes with manual display sizing.
-- Owned Datum axes with manual display length.
-- Owned Datum points.
-- Owned coordinate systems.
+- Datum Plane: FlatFace on one planar face of an owned Body solid.
+- Datum Axis: Tangent along one straight edge of an owned Body solid.
+- Datum Point: Vertex on one vertex of an owned Body solid.
+- Sketch ObjectXY: native translation/rotation AttachmentOffset on an owned Datum plane or coordinate system.
 
-Native ObjectXY/AttachmentSupport on a whole owned plane or frame drives a sketch and its original Pad, Hole, Pipe or Helix. DatumPose changes the native reference; dependent geometry follows. SketchDetach retains the current placement while removing its support. Used references cannot be removed. Solid history and Tip remain separate from construction objects; construction-only Bodies can move without inventing solid measurements.
+DatumAttach BODY DATUM SOLID ELEMENT preserves original support references and follows source dimensions. DatumDetach BODY DATUM retains the current pose; detach before using DatumPose. SketchOffset composes the original source frame and offset before dependent checks. Pad, Hole, Pipe and Helix are exercised with native offsets. Touch forms, Rhino-style command input and EN/TR/DE native guides are included. DatumInfo reports the native support; DatumPreview shows finite construction guides.
 
-BodyPlane, BodyAxis, BodyPoint, BodyFrame, DatumPose, BodySketchDatum, DatumInfo, DatumPreview and RemoveDatum commands and touch forms are included with EN/TR/DE guides. Finite world-space guides and native frame inspection replace generic tessellation for mathematically unbounded references. Plane/axis display dimensions are viewport sizes, not material boundaries. Construction references and linked instances have no material mesh, solid measurements or STEP export; export a driven solid.
+Guards cover supported engines/modes, current element kind/number, source geometry, same-Body ownership, dependency cycles, finite offsets, direct-placement protection and safe removal. Saved references/counts/modes/offsets and dependency cycles are checked before native restoration. Sources are limited to64faces/256edges/512vertices; curved or multiple supports and mapped coordinate systems remain pending. Datum roots retain identity offsets; ObjectXY sketches accept finite normalized offsets within the1,000,000mm geometry budget. External geometry and expressions in those sketches remain pending.
 
-Fixed infinite-axis FCStd cache loss by marking the derived Shape transient. The original native constructor recreates the actual analytic line; placement/direction persist. A fresh JVM/interpreter verifies this independently of the saving process. Saved modes, whole owned support links, placement/quaternion, sizing and sketch geometry/constraint/reference counts are checked before native restoration.
+Validation:268new JNI workflow checks and10fresh-JVM checks;299Datum+13cold-JVM,302Hole,310path,1509PartDesign,2324Sketcher,269Part,88App,62Python,527language/command,3resource and10packaging regressions pass. Coverage includes native analytic solids, source edits, Body/world transforms, offset composition and dependent preflight, UndoRedo/atomic rollback,19malformedFCStd variants, native close/reopen, cold restoration and material STEP.804reviewed TR/DE entries. APK134ARM64 libraries/extensions and1082Python files pass API26strong-symbol/loader closure,16KiB alignment andv2/v3signature checks. Native library bytes remain unchanged.
 
-Validation:299Datum JNI workflow checks plus13cold-JVM checks,302Hole,310path and1509existing PartDesign checks.2324Sketcher,269Part,88App,62Python,527language/command,3resource and10packaging regressions. Includes source/rotation/Body placement and dimensions, closed-solid volumes, original references, detach/UndoRedo, atomic rollback,18malformedFCStd variants, validFCStd and materialSTEP.800reviewed TR/DE entries/four guide types. APK134ARM64 libraries/extensions,1081Python files, API26 loader/strong-symbol closure,16KiB alignment andv2/v3signatures verified.
-
-Limits:64Datums and64ObjectXY-attached sketches; display dimensions up to10,000mm; world coordinates within1,000,000mm; one whole same-Body plane/frame support; manual Datum placement; no offsets, external geometry or expressions in attached sketches. Existing FlatFace workflows remain separate. Other attachment/Datum modes, axis/point supports, Gui/Assembly/full FreeCAD/Rhino parity remain NOT_COMPLETE. Physical Android1.21 execution is NOT_RUN. F-Droid NOT_SUBMITTED. Private key and continuation excluded from public assets.
+Release manifests now distinguish this version's untested Android execution from the earlier unversioned user startup report. Physical Android1.22 execution is NOT_RUN. Full workbench/Gui/Assembly/FreeCAD/Rhino parity remains NOT_COMPLETE. F-Droid NOT_SUBMITTED. Signing key and private continuation are excluded from public assets.

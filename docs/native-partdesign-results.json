@@ -1,6 +1,6 @@
 {
-  "version": "1.21",
-  "version_code": 47,
+  "version": "1.22",
+  "version_code": 48,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "workflows": [
@@ -39,7 +39,11 @@
     "original owned manual Datum Plane",
     "original owned manual Datum Line",
     "original owned manual Datum Point",
-    "original owned CoordinateSystem and ObjectXY sketch attachment"
+    "original owned CoordinateSystem and ObjectXY sketch attachment",
+    "original Datum Plane FlatFace on an owned planar solid face",
+    "original Datum Line Tangent on an owned straight solid edge",
+    "original Datum Point Vertex on an owned solid vertex",
+    "original ObjectXY sketch AttachmentOffset on an owned Datum plane/frame"
   ],
   "checks": {
     "partdesign_jni": 1509,
@@ -53,7 +57,9 @@
     "partdesign_path_jni": 310,
     "partdesign_hole_jni": 302,
     "partdesign_datum_jni": 299,
-    "datum_cold_jvm": 13
+    "datum_cold_jvm": 13,
+    "partdesign_attachment_jni": 268,
+    "attachment_cold_jvm": 10
   },
   "android": {
     "abi": "arm64-v8a",
@@ -102,9 +108,13 @@
     "datums": 64,
     "datum_sketches": 64,
     "datum_display_size_mm": 10000,
-    "datum_map_mode": "Deactivated",
+    "datum_map_mode": "manual Deactivated or owned Plane FlatFace/Line Tangent/Point Vertex",
     "datum_sketch_map": "ObjectXY on whole same-Body Plane/CoordinateSystem",
-    "datum_offsets": false
+    "datum_offsets": false,
+    "datum_support_faces": 64,
+    "datum_support_edges": 256,
+    "datum_support_vertices": 512,
+    "datum_sketch_offsets": true
   },
   "pending": [
     "other PartDesign modes/features",
@@ -119,6 +129,8 @@
     "general Pipe sections/multiple edges/auxiliary spines/twist laws",
     "conical/left-handed/other Helix modes",
     "other Hole/thread/taper/drill/counterdrill/direction modes",
-    "other Datum/attachment modes, axis/point supports and attached sketch offsets/expressions/external geometry"
+    "curved/multiple/foreign Datum supports and other mapping modes",
+    "mapped CoordinateSystem",
+    "attached sketch expressions/external geometry"
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "status": "HOST_ORIGINAL_PRIMITIVE_PROBE_PASS_MOBILE_PENDING",
+  "checks": 33,
+  "types": [
+    "PartDesign::AdditiveBox",
+    "PartDesign::SubtractiveBox",
+    "PartDesign::AdditiveCylinder",
+    "PartDesign::SubtractiveCylinder"
+  ],
+  "geometry": "analytic native unions/removal, source overlap, dimensions, Undo, Body placement and true FCStd reopen",
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "android_execution": "NOT_RUN"
+}

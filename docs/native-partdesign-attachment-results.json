@@ -1,0 +1,43 @@
+{
+  "version": "1.22",
+  "version_code": 48,
+  "freecad": "1.1.4",
+  "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
+  "native_jni_checks": 268,
+  "cold_jvm_checks": 10,
+  "workflows": [
+    "original Datum Plane FlatFace on an owned planar solid face",
+    "original Datum Line Tangent on an owned straight solid edge",
+    "original Datum Point Vertex on an owned solid vertex",
+    "original ObjectXY sketch AttachmentOffset on an owned Datum plane/frame"
+  ],
+  "qualified": [
+    "source dimensions and native reference dependencies",
+    "native source-frame/offset composition for Pad/Hole/Pipe/Helix",
+    "finite world guides and Body placement",
+    "detach preserves placement; protected direct placement and dependent removal",
+    "UndoRedo and atomic rollback",
+    "19 malformed FCStd reference/mode/count/offset/cycle fixtures",
+    "fresh JVM/interpreter restoration including original infinite axis",
+    "material STEP roundtrip"
+  ],
+  "limits": {
+    "source_faces": 64,
+    "source_edges": 256,
+    "source_vertices": 512,
+    "datums": 64,
+    "datum_sketches": 64,
+    "coordinate_mm": 1000000,
+    "datum_root_offsets": false,
+    "sketch_ObjectXY_offsets": true,
+    "support": "one current same-Body original solid element",
+    "coordinate_system_mapping": "manual only"
+  },
+  "android_execution": "NOT_RUN",
+  "pending": [
+    "curved/multiple/foreign Datum supports and other mapping modes",
+    "mapped CoordinateSystem",
+    "attached sketch expressions/external geometry",
+    "Gui/Assembly/full workbench/Rhino parity"
+  ]
+}

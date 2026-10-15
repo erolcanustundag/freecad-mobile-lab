@@ -4204,13 +4204,13 @@
     },
     {
       "path": "scripts/mobile_partdesign.py",
-      "size": 41208,
-      "sha256": "bba4baa7e82bc10acc0493e3526625b94e2b928f8a17908c2d48e5465c3896f0"
+      "size": 41213,
+      "sha256": "a8d6bc9008914bea6c90be281a4109a7e93025b36550a814fe4e2740b91473b4"
     },
     {
       "path": "scripts/mobile_partdesign_datums.py",
-      "size": 13326,
-      "sha256": "885b2b38ae40065208892efbc0f1c5cef43c27e33ce2717f9da082eb77d197ff"
+      "size": 14503,
+      "sha256": "3e3b75baf6f45f31cd5530d50abe18c189bad538f658d6053fe4c728c95024bf"
     },
     {
       "path": "scripts/mobile_partdesign_holes.py",
@@ -4221,6 +4221,11 @@
       "path": "scripts/mobile_partdesign_paths.py",
       "size": 11370,
       "sha256": "1b947ab8c582905766cffa43eb5eef73b2e45181e71cdff635aec7c1fc12527c"
+    },
+    {
+      "path": "scripts/mobile_partdesign_supports.py",
+      "size": 4877,
+      "sha256": "c3444c72fcee8ed447bec8d3f24ff9977ddf0a0f1d78625a48d76b15cd94aabc"
     },
     {
       "path": "scripts/mobile_primitives.py",
@@ -4234,8 +4239,8 @@
     },
     {
       "path": "scripts/mobile_sketch.py",
-      "size": 25126,
-      "sha256": "e2ae930b6e51af6419b7e4ba405c10c29ecf0404293f8d008772bf60856a51af"
+      "size": 25145,
+      "sha256": "b795a75791d7a25394a699bc5a059e828323cc6680212607b6df26f7a0f8f3bf"
     },
     {
       "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Aluminum.FCMat",
@@ -5498,6 +5503,6 @@
       "sha256": "17e587b5e13ac9851cdbbd769d92a8ba569dcd04dc962f3f24e8a4fec88e47e1"
     }
   ],
-  "asset_zip_sha256": "dfe2d193bc74cf6c420217cf28865b3351da84d10b9fc0425ccc7a00e221bc08",
+  "asset_zip_sha256": "b3e1af4264c4334580540f52d24a2628206f457eca855602e3fdb8f4a93bef4f",
   "java_jar_sha256": "b4b439629c5aa21db9a3b633d77182d0b25b1c381c391fc447e6104be394bb54"
 }
