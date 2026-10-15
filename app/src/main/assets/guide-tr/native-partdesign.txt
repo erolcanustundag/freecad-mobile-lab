@@ -125,3 +125,12 @@ Sınırlar:64referans ve64ObjectXY-bağlı eskiz; görüntü boyutu en fazla10.0
 1.22 — yerel desteğe bağlı yardımcı geometri
 DatumAttach BODY DATUM SOLID ELEMENT, bir düzlemi aynı Body içindeki özgün katının düzlemsel FaceN yüzüne, bir ekseni düz EdgeN kenarına veya bir noktayı VertexN köşesine bağlar. Yerel FlatFace/Tangent/Vertex bağı kaynak değişikliklerini izler. Kaynak sınırı64yüz/256kenar/512köşedir; döngüler, başka Body nesneleri ve eğri destekler reddedilir. Koordinat sistemleri elle konumlandırılır. DatumDetach BODY DATUM geçerli konumu korur; DatumPose öncesinde desteği ayırın.
 SketchOffset SKETCH X Y Z YAW PITCH ROLL artık aynı Body düzlemi/koordinat sistemi üzerindeki özgün ObjectXY eskiz ötelemesini ve dönüşünü de düzenler. Ötelemeler mm, açılar derecedir. Yerel kaynak çerçevesi ile ofset birlikte uygulanır; bağımlı geometri sınırları ve katının geçerliliği korunmalıdır. Harici geometri, ifadeler ve genel bağlama kipleri henüz desteklenmez. Dokunmatik formlar için PartDesign menüsünü, bağları ve sonlu kılavuzları incelemek için DatumInfo/DatumPreview komutlarını kullanın.
+
+1.23 — özgün Body kutu ve silindir özellikleri
+BodyAddBox BODY NAME LENGTH WIDTH HEIGHT [X Y Z YAW PITCH ROLL]
+BodySubBox BODY NAME LENGTH WIDTH HEIGHT [X Y Z YAW PITCH ROLL]
+BodyAddCylinder BODY NAME RADIUS HEIGHT [X Y Z YAW PITCH ROLL]
+BodySubCylinder BODY NAME RADIUS HEIGHT [X Y Z YAW PITCH ROLL]
+BodyPrimitivePose BODY FEATURE X Y Z YAW PITCH ROLL
+Boyutlar ve ötelemeler mm, açılar derece cinsindedir. Bunlar özgün BaseFeature geçmişini koruyan bağlı PartDesign özellikleridir. Son katı Tip seçiliyken ekleyin. Eklemeli temel katı malzeme eklemeli ve tek bağlı katı oluşturmalı; çıkarıcı temel katı malzeme çıkarmalı ve tek kapalı katı bırakmalıdır. Kesme işlemi mevcut bir katı gerektirir. Yerel birimlerle düzenlemek için Set FEATURE.Height 2 cm komutunu ve uygun Length/Width/Radius alanlarını kullanın. Oluşturma ve konum formları PartDesign menüsündedir.
+Belge başına en fazla 64 temel katı; dünya koordinatları 1.000.000 mm, kaynak geometri 64 yüz/256 kenar ile sınırlıdır. Silindirler tam 360 derece ve düz uçlarla oluşturulur. Konum elle belirlenir; ifadeler, desteğe bağlı/kısmi/konik temel katılar ve diğer türler henüz desteklenmez. Desteğe bağlı Datum nesneleri bu özgün katıları kaynak olarak kullanabilir. Boyutları, kaynak bağlarını ve geçmişi korumak için FCStd kaydedin; STEP sonuç katısını dışa aktarır.

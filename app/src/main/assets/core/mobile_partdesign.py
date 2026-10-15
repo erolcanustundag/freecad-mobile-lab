@@ -9,6 +9,7 @@ import mobile_sketch
 import mobile_partdesign_paths as paths
 import mobile_partdesign_holes as holes
 import mobile_partdesign_datums as datums
+import mobile_partdesign_primitives as primitives
 DATUMS=datums.TYPES
 
 PartDesign = None
@@ -21,9 +22,9 @@ FRAMES = {'App::Origin', 'App::Line', 'App::Plane', 'App::Point'}
 DRESSUP={'PartDesign::Fillet','PartDesign::Chamfer','PartDesign::Draft','PartDesign::Thickness'}
 PATTERNS={'PartDesign::Mirrored','PartDesign::LinearPattern','PartDesign::PolarPattern','PartDesign::Scaled'}
 PATTERN_SOURCES={'PartDesign::Pad','PartDesign::Revolution','PartDesign::AdditiveLoft'}
-TYPES.update(DRESSUP|PATTERNS|paths.TYPES|{holes.TYPE}|DATUMS)
+TYPES.update(DRESSUP|PATTERNS|paths.TYPES|{holes.TYPE}|DATUMS|primitives.TYPES)
 FEATURES = TYPES - {'PartDesign::Body'} - DATUMS
-PROFILE_FEATURES=FEATURES-DRESSUP-PATTERNS-{'PartDesign::FeatureBase'}
+PROFILE_FEATURES=FEATURES-DRESSUP-PATTERNS-{'PartDesign::FeatureBase'}-primitives.TYPES
 SCALARS={'PartDesign::Fillet':'Radius','PartDesign::Chamfer':'Size','PartDesign::Draft':'Angle','PartDesign::Thickness':'Value'}
 
 def available():
@@ -162,12 +163,14 @@ def validate_extent(feature,profile,source):
         if source is None or abs(feature.Shape.Volume)-abs(source.Shape.Volume)<=1e-7:raise ValueError('A stopping Pad must add material to the preceding solid')
 
 def preflight(doc):
-    if available():datums.preflight(doc,True);paths.preflight(doc);holes.preflight(doc)
+    if available():primitives.preflight(doc);datums.preflight(doc,True);paths.preflight(doc);holes.preflight(doc)
 
 def edit(doc, e, get, identifier):
     require();op=e['op']
     if op.startswith('body_datum_'):
         datums.edit(doc,e,get,identifier)
+    elif op in ('body_primitive_create','body_primitive_pose'):
+        primitives.edit(doc,e,get,identifier)
     elif op=='body_hole':
         holes.create(doc,e,get,identifier)
     elif op in ('body_add_pipe','body_sub_pipe','body_add_helix','body_sub_helix'):
@@ -273,6 +276,7 @@ def protected(obj):
 
 def editable(obj,name):
     if obj.TypeId in DATUMS:return datums.editable(obj,name)
+    if obj.TypeId in primitives.TYPES:return primitives.editable(obj,name)
     if obj.TypeId in FRAMES:return name=='Label'
     if obj.TypeId==holes.TYPE:return holes.editable(obj,name)
     if obj.TypeId in paths.HELICES:return name in ('Label','Refine','Pitch','Height')
@@ -281,6 +285,8 @@ def editable(obj,name):
 
 def validate_edit(obj,name,value):
     if not editable(obj,name):raise ValueError('Use Body tools for native ownership, Tip and profile links; this feature mode is read-only')
+    if obj.TypeId in primitives.TYPES:
+        primitives.validate_edit(obj,name,value);return
     if obj.TypeId in DATUMS:
         if name in ('Length','Width'):datums.size(value)
         return
@@ -310,6 +316,7 @@ def summary(b):
 def validate_document(doc):
     if not available():return
     if len(doc.Objects)>1000:raise ValueError('Document exceeds1,000 objects including origin frames')
+    primitives.preflight(doc)
     datums.validate_document(doc)
     frames=set();owned=set()
     for b in doc.Objects:
@@ -337,7 +344,9 @@ def validate_document(doc):
         previous=None
         for feature in history:
             solid(feature)
-            if feature.TypeId in PATTERNS:
+            if feature.TypeId in primitives.TYPES:
+                primitives.validate(feature,previous)
+            elif feature.TypeId in PATTERNS:
                 if list(feature.Originals)!=[previous] or feature.BaseFeature!=previous or feature.TransformMode!='Features':raise ValueError('Pattern must transform the preceding owned additive feature')
                 count=feature.Occurrences if feature.TypeId!='PartDesign::Mirrored' else 2
                 amount=feature.Length.Value if feature.TypeId=='PartDesign::LinearPattern' else feature.Angle.Value if feature.TypeId=='PartDesign::PolarPattern' else feature.Factor if feature.TypeId=='PartDesign::Scaled' else None
@@ -405,6 +414,7 @@ def validate_fcstd(tree):
     datums.validate_fcstd(tree)
     types={o.get('name'):o.get('type') for o in tree.findall('./Objects/Object')}
     data={o.get('name'):o for o in tree.findall('./ObjectData/Object')}
+    if sum(t in primitives.TYPES for t in types.values())>primitives.MAXIMUM:raise ValueError('Saved Body primitive count exceeds64')
     frames=set();owned=set()
     def node(name,prop,tag):
         d=data.get(name)
@@ -441,6 +451,9 @@ def validate_fcstd(tree):
         if tip and (tip not in members or types.get(tip) not in FEATURES):raise ValueError('Saved Tip must be an owned solid feature')
         previous=None
         for feature in members:
+            if types.get(feature) in primitives.TYPES:
+                if (link(feature,'BaseFeature') or None)!=previous:raise ValueError('Saved primitive must reference the preceding owned solid')
+                primitives.validate_fcstd(node,feature,types[feature],name,previous);previous=feature;continue
             if types.get(feature) in PATTERNS:
                 kind=types[feature]
                 if links(feature,'Originals')!=[previous] or types.get(previous) not in PATTERN_SOURCES or link(feature,'BaseFeature')!=previous:raise ValueError('Saved pattern needs the preceding owned additive source')

@@ -802,3 +802,8 @@ Attach Datum to solid|Datumu katıya bağla|Datum an Volumenkörper anbinden
 Detach Datum support|Datum desteğini ayır|Datum-Referenz lösen
 Offset Datum sketch|Datum eskizini ötele/döndür|Datum-Skizze versetzen
 Support element (FaceN/EdgeN/VertexN)|Destek öğesi (FaceN/EdgeN/VertexN)|Referenzelement (FaceN/EdgeN/VertexN)
+Native additive box|Yerel eklemeli kutu|Nativer additiver Quader
+Native subtractive box|Yerel çıkarıcı kutu|Nativer subtraktiver Quader
+Native additive cylinder|Yerel eklemeli silindir|Nativer additiver Zylinder
+Native subtractive cylinder|Yerel çıkarıcı silindir|Nativer subtraktiver Zylinder
+Move Body primitive|Body temel katısını taşı|Body-Grundkörper verschieben

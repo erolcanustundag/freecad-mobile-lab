@@ -125,3 +125,12 @@ Limits:64Datums and64ObjectXY-attached sketches, guide dimensions up to10,000mm,
 1.22 — native support-driven construction
 DatumAttach BODY DATUM SOLID ELEMENT attaches a Plane to one planar FaceN, an Axis to one straight EdgeN, or a Point to one VertexN on an original solid in the same Body. The native FlatFace/Tangent/Vertex link follows source changes. Sources are limited to64faces/256edges/512vertices; cycles, foreign Bodies and curved supports are rejected. Coordinate systems retain manual placement. DatumDetach BODY DATUM preserves the current pose; detach before DatumPose.
 SketchOffset SKETCH X Y Z YAW PITCH ROLL now also edits original ObjectXY offsets on an owned Datum plane/frame. Translations are mm and rotations degrees; the original source frame and offset compose before dependent geometry checks. Offsets must keep all geometry within the coordinate budget and the resulting solid valid. External geometry, expressions and general attachment modes remain pending. Use the PartDesign menu for touch forms and DatumInfo/DatumPreview to inspect references and finite guides.
+
+1.23 — original Body box and cylinder features
+BodyAddBox BODY NAME LENGTH WIDTH HEIGHT [X Y Z YAW PITCH ROLL]
+BodySubBox BODY NAME LENGTH WIDTH HEIGHT [X Y Z YAW PITCH ROLL]
+BodyAddCylinder BODY NAME RADIUS HEIGHT [X Y Z YAW PITCH ROLL]
+BodySubCylinder BODY NAME RADIUS HEIGHT [X Y Z YAW PITCH ROLL]
+BodyPrimitivePose BODY FEATURE X Y Z YAW PITCH ROLL
+Dimensions and translations use mm; rotations use degrees. These are original linked PartDesign features with BaseFeature history. Append at the last solid Tip. An additive primitive must add material and remain one connected solid; a subtractive primitive must remove material and retain one closed solid. A cut needs existing stock. Use Set FEATURE.Height 2 cm (and Length/Width/Radius as applicable) for native quantity editing. The PartDesign menu provides creation and placement forms.
+There are at most 64 primitives per document, bounded world coordinates within 1,000,000 mm and source geometry up to 64 faces/256 edges. Cylinders use the full 360 degrees with straight default ends. Placement is manual; expressions, mapped/partial/tapered primitives and other primitive types remain pending. Native support-driven Datum references can use these original solids. Save FCStd to keep dimensions, source links and history; STEP exports the resulting solid.

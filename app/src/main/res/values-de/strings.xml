@@ -369,6 +369,7 @@
   <string name="ui_aca9f8f011ce" formatted="false">"Mobile Tabelle / CSV"</string>
   <string name="ui_14b2a2193940" formatted="false">"Modellierwerkzeuge"</string>
   <string name="ui_76cdb9507216" formatted="false">"Verschieben"</string>
+  <string name="ui_2f204cb6f7b8" formatted="false">"Body-Grundkörper verschieben"</string>
   <string name="ui_bb91d7496e90" formatted="false">"Verschiebegriff"</string>
   <string name="ui_dd749481385c" formatted="false">"Verschiebegriffe"</string>
   <string name="ui_5a7ad0f3c06e" formatted="false">"Mehrere Objekte verschieben"</string>
@@ -405,6 +406,8 @@
   <string name="ui_871cb729cd33" formatted="false">"Native Part-Platzierung"</string>
   <string name="ui_788019d78b2d" formatted="false">"Native Tasche"</string>
   <string name="ui_55b6979271bb" formatted="false">"Native Tasche bis erste Fläche"</string>
+  <string name="ui_a063c4913ad7" formatted="false">"Nativer additiver Quader"</string>
+  <string name="ui_cf1fb80fff67" formatted="false">"Nativer additiver Zylinder"</string>
   <string name="ui_76b3da299806" formatted="false">"Native additive Helix"</string>
   <string name="ui_bbd45dd10ebf" formatted="false">"Nativer additiver Loft"</string>
   <string name="ui_e041368d3a2d" formatted="false">"Natives additives Rohr"</string>
@@ -437,6 +440,8 @@
   <string name="ui_266b14b41bae" formatted="false">"Nativer Volumenkörperversatz"</string>
   <string name="ui_c2c2cc1eb77b" formatted="false">"Native Kugel"</string>
   <string name="ui_5d6d243f6ba5" formatted="false">"Native Spirale"</string>
+  <string name="ui_0865e4ebbbdb" formatted="false">"Nativer subtraktiver Quader"</string>
+  <string name="ui_b037083c4dc3" formatted="false">"Nativer subtraktiver Zylinder"</string>
   <string name="ui_6299ac8b1435" formatted="false">"Native subtraktive Helix"</string>
   <string name="ui_0888b5eb8ee9" formatted="false">"Nativer subtraktiver Loft"</string>
   <string name="ui_eef0dc2e313b" formatted="false">"Natives subtraktives Rohr"</string>

@@ -369,6 +369,7 @@
   <string name="ui_aca9f8f011ce" formatted="false">"Mobil hesap tablosu / CSV"</string>
   <string name="ui_14b2a2193940" formatted="false">"Modelleme araçları"</string>
   <string name="ui_76cdb9507216" formatted="false">"Taşı"</string>
+  <string name="ui_2f204cb6f7b8" formatted="false">"Body temel katısını taşı"</string>
   <string name="ui_bb91d7496e90" formatted="false">"Taşıma tutamacı"</string>
   <string name="ui_dd749481385c" formatted="false">"Taşıma tutamaçları"</string>
   <string name="ui_5a7ad0f3c06e" formatted="false">"Birden çok nesneyi taşı"</string>
@@ -405,6 +406,8 @@
   <string name="ui_871cb729cd33" formatted="false">"Yerel Part yerleşimi"</string>
   <string name="ui_788019d78b2d" formatted="false">"Yerel cep"</string>
   <string name="ui_55b6979271bb" formatted="false">"Yerel ilk yüzeye kadar cep"</string>
+  <string name="ui_a063c4913ad7" formatted="false">"Yerel eklemeli kutu"</string>
+  <string name="ui_cf1fb80fff67" formatted="false">"Yerel eklemeli silindir"</string>
   <string name="ui_76b3da299806" formatted="false">"Yerel eklemeli helis"</string>
   <string name="ui_bbd45dd10ebf" formatted="false">"Yerel katı loft"</string>
   <string name="ui_e041368d3a2d" formatted="false">"Yerel eklemeli boru"</string>
@@ -437,6 +440,8 @@
   <string name="ui_266b14b41bae" formatted="false">"Yerel katı ofseti"</string>
   <string name="ui_c2c2cc1eb77b" formatted="false">"Yerel küre"</string>
   <string name="ui_5d6d243f6ba5" formatted="false">"Yerel spiral"</string>
+  <string name="ui_0865e4ebbbdb" formatted="false">"Yerel çıkarıcı kutu"</string>
+  <string name="ui_b037083c4dc3" formatted="false">"Yerel çıkarıcı silindir"</string>
   <string name="ui_6299ac8b1435" formatted="false">"Yerel çıkarmalı helis"</string>
   <string name="ui_0888b5eb8ee9" formatted="false">"Yerel çıkarıcı loft"</string>
   <string name="ui_eef0dc2e313b" formatted="false">"Yerel çıkarmalı boru"</string>

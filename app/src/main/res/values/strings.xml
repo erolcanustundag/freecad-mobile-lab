@@ -139,6 +139,8 @@
   <string name="ui_d0cd458818a0" formatted="false">"Add sketch constraint"</string>
   <string name="ui_4f5edc11fcbd" formatted="false">"Add to group"</string>
   <string name="ui_c42c27b87a82" formatted="false">"AddProfile"</string>
+  <string name="ui_0225bc121235" formatted="false">"AdditiveBox"</string>
+  <string name="ui_8f321606e5f4" formatted="false">"AdditiveCylinder"</string>
   <string name="ui_c83b0ec2d98a" formatted="false">"Align"</string>
   <string name="ui_aa5a3afa1cfa" formatted="false">"Align matching bounds"</string>
   <string name="ui_49662530d12a" formatted="false">"Align objects"</string>
@@ -226,7 +228,6 @@
   <string name="ui_718a7e8a582e" formatted="false">"Body"</string>
   <string name="ui_b9e14a17aa5d" formatted="false">"Body A"</string>
   <string name="ui_66640b70e2fc" formatted="false">"Body B"</string>
-  <string name="ui_0f390acb913b" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nPad Body Profile ReversePad 10 reverse\nPad Body Profile SymmetricPad 10 symmetric\nPocketThrough Body CutProfile Through\nPocketFace Body CutProfile Stopped Face5\nPadFace Body AddProfile ToFace Face6\nPadLast Body AddProfile ToLast\nPocketFirst Body CutProfile ToFirst\nPadTwo Body Profile TwoSides 4 6\nPocketTwo Body CutProfile TwoCuts 2 3\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyFillet Body Rounded 1 1\nBodyChamfer Body Beveled 1 1\nBodyDraft Body Drafted 1 5 5\nBodyThickness Body Hollow 6 1\nBodyMirror Body Mirrored XZ\nBodyLinear Body Linear 2 8 X\nBodyPolar Body Polar 4 360 Z\nBodyScaled Body Scaled 2 2\nBodyAddPipe Body Profile Path Edge1 Pipe\nBodySubPipe Body CutProfile CutPath Edge1 PipeCut\nBodyAddHelix Body RadialProfile Helix 3 6\nBodySubHelix Body RadialCut HelixCut 3 6\nBodyHole Body HoleProfile Hole 2 4\nBodyHoleThrough Body HoleProfile ThroughHole 2\nBodyCounterbore Body HoleProfile Bore 2 4 4 1\nBodyCountersink Body HoleProfile Sink 2 4 4\nBodyPlane Body WorkPlane 100 80\nBodyAxis Body WorkAxis 100\nBodyPoint Body WorkPoint\nBodyFrame Body WorkFrame\nDatumPose Body WorkPlane 0 0 3 0 0 0\nBodySketchDatum Body WorkPlane Profile\nDatumAttach Body WorkPlane Stock Face6\nDatumAttach Body WorkAxis Stock Edge1\nDatumAttach Body WorkPoint Stock Vertex1\nDatumDetach Body WorkPoint\nSketchOffset Profile 2 3 0 20 0 0\nDatumInfo WorkPlane\nDatumPreview WorkPlane\nRemoveDatum Body WorkPoint\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, forward/reverse/symmetric total-length Pad/Pocket, native through-all/first-hit Pocket, last-hit Pad and planar preceding-solid face stopping for Pad/Pocket, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Finishing uses current edge/face numbers on the last solid Tip; fillet/chamfer explicit edges, planar Z-axis draft up to45degrees and inward skin thickness are bounded. Patterns use one last owned additive Pad/Revolution/Loft, whole Body origin references,2–16 occurrences and bounded extents/scale. Use forward/reverse for directional cuts; symmetric lengths split equally about the sketch plane. Stopping extents have no editable Length. Two sides uses separate Length and Length2, both positive with total up to1,000,000mm; its direction is fixed. Automatic first/last stopping uses a preceding source up to64faces/256edges. Stopping Pad must add material. Select a current source FaceN parallel to the sketch plane and ahead in the extrusion direction. Path tools use a single circular section: pipes follow one owned line/arc Edge1 in Standard/Transformed/Constant mode; helices use an XZ meridian circle on positive X, original Body Z axis, pitch greater than the circle diameter and at most16turns. Set Helix.Pitch or Height with units. Auxiliary paths, general sections, cone angles and other helix modes remain pending. Native Hole supports flat blind/through-all or custom counterbore/90degree countersink with one owned XY circle and unthreaded forward cuts. Set Diameter/Depth and applicable head dimensions with units. Other modes, arbitrary lofts, multi-source patterns and reorder remain pending."</string>
   <string name="ui_b8ef18d5b319" formatted="false">"Body axis (X/Y/Z)"</string>
   <string name="ui_db4ecb85e22a" formatted="false">"Body from native solid"</string>
   <string name="ui_2041a45c8dc7" formatted="false">"Body guide"</string>
@@ -239,6 +240,7 @@
   <string name="ui_daf760a167a8" formatted="false">"Bool"</string>
   <string name="ui_e772bc4d3e48" formatted="false">"Booleans / fillet"</string>
   <string name="ui_d9d91b9a7122" formatted="false">"Bore"</string>
+  <string name="ui_b7e269062400" formatted="false">"Boss"</string>
   <string name="ui_cce7f2f2f0dc" formatted="false">"Bottom"</string>
   <string name="ui_48726daba90e" formatted="false">"Boundary cannot be triangulated safely"</string>
   <string name="ui_9ad56d818396" formatted="false">"Boundary is not planar within welding tolerance"</string>
@@ -976,6 +978,7 @@
   <string name="ui_b65b53cc8d23" formatted="false">"Modulo by zero"</string>
   <string name="ui_76cdb9507216" formatted="false">"Move"</string>
   <string name="ui_e402ac7b7366" formatted="false">"Move "</string>
+  <string name="ui_2f204cb6f7b8" formatted="false">"Move Body primitive"</string>
   <string name="ui_b7a15af3a574" formatted="false">"Move committed"</string>
   <string name="ui_bb91d7496e90" formatted="false">"Move handle"</string>
   <string name="ui_dd749481385c" formatted="false">"Move handles"</string>
@@ -1020,6 +1023,8 @@
   <string name="ui_871cb729cd33" formatted="false">"Native Part placement"</string>
   <string name="ui_788019d78b2d" formatted="false">"Native Pocket"</string>
   <string name="ui_55b6979271bb" formatted="false">"Native Pocket to first face"</string>
+  <string name="ui_a063c4913ad7" formatted="false">"Native additive box"</string>
+  <string name="ui_cf1fb80fff67" formatted="false">"Native additive cylinder"</string>
   <string name="ui_76b3da299806" formatted="false">"Native additive helix"</string>
   <string name="ui_bbd45dd10ebf" formatted="false">"Native additive loft"</string>
   <string name="ui_e041368d3a2d" formatted="false">"Native additive pipe"</string>
@@ -1053,6 +1058,8 @@
   <string name="ui_266b14b41bae" formatted="false">"Native solid offset"</string>
   <string name="ui_c2c2cc1eb77b" formatted="false">"Native sphere"</string>
   <string name="ui_5d6d243f6ba5" formatted="false">"Native spiral"</string>
+  <string name="ui_0865e4ebbbdb" formatted="false">"Native subtractive box"</string>
+  <string name="ui_b037083c4dc3" formatted="false">"Native subtractive cylinder"</string>
   <string name="ui_6299ac8b1435" formatted="false">"Native subtractive helix"</string>
   <string name="ui_0888b5eb8ee9" formatted="false">"Native subtractive loft"</string>
   <string name="ui_eef0dc2e313b" formatted="false">"Native subtractive pipe"</string>
@@ -1087,6 +1094,7 @@
   <string name="ui_9677e56e681b" formatted="false">"Normal X"</string>
   <string name="ui_748053973486" formatted="false">"Normal Y"</string>
   <string name="ui_1654fa1e2d9a" formatted="false">"Normal Z"</string>
+  <string name="ui_4ed1f46bbe04" formatted="false">"Notch"</string>
   <string name="ui_8bef9011feca" formatted="false">"Notes · up to 200 characters"</string>
   <string name="ui_97c7f367c41d" formatted="false">"Nothing to redo"</string>
   <string name="ui_93509bf60439" formatted="false">"Nothing to undo"</string>
@@ -1628,6 +1636,8 @@
   <string name="ui_2f3190a37715" formatted="false">"SubD"</string>
   <string name="ui_e9e1b267887b" formatted="false">"Subdivision form"</string>
   <string name="ui_ae5f61e523ef" formatted="false">"Subtract"</string>
+  <string name="ui_1e6234f21e0b" formatted="false">"SubtractiveBox"</string>
+  <string name="ui_aadfc994ccdf" formatted="false">"SubtractiveCylinder"</string>
   <string name="ui_7420731be806" formatted="false">"Support element (FaceN/EdgeN/VertexN)"</string>
   <string name="ui_698ce1402f6e" formatted="false">"Supported: STEP, IGES, OBJ, STL, simple 3MF/GLB meshes, ASCII DXF curves, BREP, saved FCStd Part geometry, .fcml projects and .cadgraph recipes."</string>
   <string name="ui_240b383bcff1" formatted="false">"Surface Source Edge1 Tool Edge1"</string>
@@ -1796,6 +1806,8 @@
   <string name="ui_45475b570da7" formatted="false">"Upstream App/Part/Sketcher/PartDesign 1.1.4 · native document workflows"</string>
   <string name="ui_3874f457f5c4" formatted="false">"Upstream document lab UI created"</string>
   <string name="ui_893974481948" formatted="false">"Upstream document operation"</string>
+  <string name="ui_d842cabd69b7" formatted="false">"Use BODY NAME LENGTH WIDTH HEIGHT [X Y Z YAW PITCH ROLL]"</string>
+  <string name="ui_06e615204e16" formatted="false">"Use BODY NAME RADIUS HEIGHT [X Y Z YAW PITCH ROLL]"</string>
   <string name="ui_2ac5d627cb40" formatted="false">"Use Object.Property"</string>
   <string name="ui_05f362e29902" formatted="false">"Use Source.Property"</string>
   <string name="ui_164021fae306" formatted="false">"Use a current EdgeN or FaceN"</string>

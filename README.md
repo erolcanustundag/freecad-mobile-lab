@@ -1,6 +1,6 @@
 # FreeCAD Mobile Lab
 
-**Current release: 1.22 / Android version code 48, current mobile feature set.** Native CAD for ARM64 Android 8+ (min API26, target35). **Full desktop FreeCAD/Rhino parity and the original comprehensive qualification milestone are NOT COMPLETE.** This is an independent project, not an official FreeCAD Android release.
+**Current release: 1.22 / Android version code 48, current mobile feature set.** Development1.23/code49 native Body primitives are under qualification. Native CAD for ARM64 Android 8+ (min API26, target35). **Full desktop FreeCAD/Rhino parity and the original comprehensive qualification milestone are NOT COMPLETE.** This is an independent project, not an official FreeCAD Android release.
 
 The main workspace uses OCCT 7.9.2 and the upstream FreeCAD PlaneGCS solver. An optional document lab embeds upstream FreeCAD 1.1.4 Base/App, CPython3.13 and headless Qt6.8.3. Models stay on the device; the app requests no network permission.
 
