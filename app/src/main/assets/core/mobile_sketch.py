@@ -249,7 +249,7 @@ def edit(obj, request):
         obj.AttachmentOffset=App.Placement()
         obj.MapMode="FlatFace"
     elif operation=="sketch_offset":
-        if obj.MapMode!="FlatFace":raise ValueError("Attach the sketch before setting an attachment offset")
+        if obj.MapMode not in ("FlatFace","ObjectXY"):raise ValueError("Attach the sketch before setting an attachment offset")
         obj.AttachmentOffset=placement(request["values"])
     elif operation=="sketch_detach":
         world=obj.Placement

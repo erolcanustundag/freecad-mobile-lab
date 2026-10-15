@@ -2,6 +2,7 @@
 """Original non-solid Datum references and finite viewport guides."""
 import math
 import FreeCAD as App
+import mobile_partdesign_supports as supports
 
 ENGINES={'PartDesign::Plane':'Plane','PartDesign::Line':'Line','PartDesign::Point':'Point','PartDesign::CoordinateSystem':'3D'}
 TYPES=set(ENGINES)
@@ -25,7 +26,10 @@ def datum(obj):
     import mobile_partdesign as pd
     if obj is None or obj.TypeId not in TYPES or pd.owner(obj) is None:raise ValueError('Choose an original Datum owned by a Body')
     if obj.TypeId=='PartDesign::Line' and 'Transient' not in obj.getPropertyStatus('Shape'):obj.setPropertyStatus('Shape','Transient')
-    if obj.MapMode!='Deactivated' or obj.AttachmentSupport or not identity(obj.AttachmentOffset) or obj.MapReversed or obj.MapPathParameter!=0 or obj.ExpressionEngine or obj.AttacherType!='Attacher::AttachEngine'+ENGINES[obj.TypeId]:raise ValueError('Datums support manual unbound placement without attachment, expressions or offsets')
+    if not identity(obj.AttachmentOffset) or obj.MapReversed or obj.MapPathParameter!=0 or obj.ExpressionEngine or obj.AttacherType!='Attacher::AttachEngine'+ENGINES[obj.TypeId]:raise ValueError('Datum mapping requires its original engine, identity offset and no expressions/reversal')
+    if obj.MapMode=='Deactivated':
+        if obj.AttachmentSupport:raise ValueError('Manual Datum must have no support')
+    else:supports.reference(obj)
     if obj.TypeId in ('PartDesign::Plane','PartDesign::Line'):
         if obj.ResizeMode!='Manual':raise ValueError('Datum guides require Manual sizing')
         size(obj.Length.Value)
@@ -40,14 +44,15 @@ def support(sketch):
     if sketch.MapMode!='ObjectXY' or len(links)!=1 or list(links[0][1])!=['']:raise ValueError('ObjectXY requires one whole original Datum plane or coordinate system')
     source=datum(links[0][0])
     if source.TypeId not in ATTACHABLE or pd.owner(sketch)!=pd.owner(source):raise ValueError('Attach to a plane/frame owned by the same Body')
-    if sketch.MapReversed or sketch.MapPathParameter!=0 or not identity(sketch.AttachmentOffset) or sketch.AttacherType!='Attacher::AttachEnginePlane' or sketch.ExternalGeometry or sketch.ExpressionEngine:raise ValueError('Datum sketch attachment supports ObjectXY without offsets, external geometry or expressions')
+    if sketch.MapReversed or sketch.MapPathParameter!=0 or sketch.AttacherType!='Attacher::AttachEnginePlane' or sketch.ExternalGeometry or sketch.ExpressionEngine:raise ValueError('Datum sketch attachment supports ObjectXY without external geometry or expressions')
+    supports.finite_pose(sketch.AttachmentOffset)
     return source
 
 def sketch_pose(sketch):
-    return support(sketch).Placement if sketch.MapMode=='ObjectXY' else sketch.Placement
+    return support(sketch).Placement.multiply(sketch.AttachmentOffset) if sketch.MapMode=='ObjectXY' else sketch.Placement
 
 def check_sketch(sketch):
-    source=support(sketch);pose=source.getGlobalPlacement()
+    source=support(sketch);pose=source.getGlobalPlacement().multiply(sketch.AttachmentOffset)
     if sketch.GeometryCount>256 or sketch.ConstraintCount>256:raise ValueError('Attached sketch exceeds256entities/constraints')
     for g in sketch.Geometry:
         box=g.toShape().BoundBox
@@ -78,15 +83,19 @@ def preview(obj):
 def info(obj):
     datum(obj);pose=obj.getGlobalPlacement();preview(obj)
     result=dict(object=obj.Name,type=obj.TypeId,construction=True,origin_mm=list(pose.Base),axes={n:list(pose.Rotation.multVec(App.Vector(*v))) for n,v in [('X',(1,0,0)),('Y',(0,1,0)),('Z',(0,0,1))]},map_mode=obj.MapMode,material_volume_mm3=None)
+    result['support']=[dict(object=source.Name,elements=list(names)) for source,names in obj.AttachmentSupport]
     if obj.TypeId in ('PartDesign::Plane','PartDesign::Line'):result['display_length_mm']=obj.Length.Value
     if obj.TypeId=='PartDesign::Plane':result['display_width_mm']=obj.Width.Value
     return result
 
-def preflight(doc):
+def preflight(doc, update=False):
     objects=[o for o in doc.Objects if o.TypeId in TYPES]
     attached=[o for o in doc.Objects if o.TypeId=='Sketcher::SketchObject' and o.MapMode=='ObjectXY']
     if len(objects)>MAXIMUM or len(attached)>MAXIMUM:raise ValueError('Document supports at most64Datums and64attached sketches')
-    for o in objects:preview(o)
+    for o in objects:
+        datum(o)
+        if update and o.MapMode!='Deactivated':supports.refresh(o)
+        preview(o)
     for o in attached:check_sketch(o)
 
 def validate_document(doc):
@@ -124,7 +133,19 @@ def edit(doc,e,get,identifier):
     elif op=='body_datum_pose':
         obj=datum(get(e['object']))
         if pd.owner(obj)!=b:raise ValueError('Datum belongs to another Body')
+        if obj.MapMode!='Deactivated':raise ValueError('Detach the Datum before changing its manual placement')
         obj.Placement=mobile_sketch.placement(e['values'])
+    elif op in ('body_datum_attach','body_datum_detach'):
+        obj=datum(get(e['object']))
+        if pd.owner(obj)!=b:raise ValueError('Datum belongs to another Body')
+        if op=='body_datum_attach':
+            source=get(e['source']);element=e['element'];mode=supports.candidate(obj,source,element)
+            obj.MapMode='Deactivated';obj.AttachmentSupport=[(source,[element])];obj.MapMode=mode
+            supports.refresh(obj)
+        else:
+            if obj.MapMode=='Deactivated':raise ValueError('Datum has no active attachment')
+            supports.refresh(obj);pose=obj.Placement
+            obj.MapMode='Deactivated';obj.AttachmentSupport=[];obj.AttachmentOffset=App.Placement();obj.Placement=pose
     elif op=='body_datum_remove':
         obj=datum(get(e['object']))
         if pd.owner(obj)!=b or any(o!=b for o in obj.InList):raise ValueError('Detach/remove Datum dependents before removing this owned reference')
@@ -159,13 +180,13 @@ def validate_fcstd(tree):
             n=node(name,'Group','LinkList')
             if n is not None:
                 for c in n.findall('Link'):owners[c.get('value')]=name
+    supports.validate_saved(tree,types,data,owners,node,value,place)
     if sum(t in TYPES for t in types.values())>MAXIMUM:raise ValueError('Saved Datum count exceeds64')
     attached=0
     for name,kind in types.items():
         if kind in TYPES:
-            if name not in owners or value(name,'MapMode','Integer')!='0' or value(name,'AttacherType','String')!='Attacher::AttachEngine'+ENGINES[kind]:raise ValueError('Saved Datum must be an owned manual original reference')
+            if name not in owners or value(name,'AttacherType','String')!='Attacher::AttachEngine'+ENGINES[kind]:raise ValueError('Saved Datum must be an owned manual original reference')
             n=node(name,'AttachmentSupport','LinkSubList')
-            if n is None or n.get('count')!='0' or list(n):raise ValueError('Saved Datum attachment is unsupported')
             place(name,'Placement');place(name,'AttachmentOffset',True)
             if kind=='PartDesign::Line' and data[name].find("./Properties/Property[@name='Shape']") is not None:raise ValueError('Saved Datum axis must use a transient native geometry cache')
             if value(name,'MapReversed','Bool')!='false' or float(value(name,'MapPathParameter','Float'))!=0:raise ValueError('Unsupported saved Datum mapping')
@@ -182,6 +203,6 @@ def validate_fcstd(tree):
         attached+=1
         if mode!='2' or refs is None or refs.get('count')!='1' or len(links)!=1 or links[0].get('sub')!='' or types.get(links[0].get('obj')) not in ATTACHABLE or name not in owners or owners.get(links[0].get('obj'))!=owners[name]:raise ValueError('Saved ObjectXY must reference one whole same-Body Datum plane/frame')
         if value(name,'AttacherType','String')!='Attacher::AttachEnginePlane' or value(name,'MapReversed','Bool')!='false' or float(value(name,'MapPathParameter','Float'))!=0:raise ValueError('Unsupported saved ObjectXY mapping')
-        place(name,'AttachmentOffset',True);place(name,'Placement')
+        place(name,'AttachmentOffset');place(name,'Placement')
         if node(name,'ExternalGeometry','LinkSubList').get('count')!='0' or data[name].findall("./Properties/Property[@name='ExpressionEngine']//Expression"):raise ValueError('Saved Datum sketches cannot have external geometry or expressions')
     if attached>MAXIMUM:raise ValueError('Saved attached sketch count exceeds64')

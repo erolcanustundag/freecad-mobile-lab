@@ -162,7 +162,7 @@ def validate_extent(feature,profile,source):
         if source is None or abs(feature.Shape.Volume)-abs(source.Shape.Volume)<=1e-7:raise ValueError('A stopping Pad must add material to the preceding solid')
 
 def preflight(doc):
-    if available():datums.preflight(doc);paths.preflight(doc);holes.preflight(doc)
+    if available():datums.preflight(doc,True);paths.preflight(doc);holes.preflight(doc)
 
 def edit(doc, e, get, identifier):
     require();op=e['op']

@@ -798,3 +798,7 @@ Z (mm)|Z (mm)|Z (mm)
 Yaw (deg)|Sapma (derece)|Gierwinkel (Grad)
 Pitch (deg)|Yunuslama (derece)|Nickwinkel (Grad)
 Roll (deg)|Yatış (derece)|Rollwinkel (Grad)
+Attach Datum to solid|Datumu katıya bağla|Datum an Volumenkörper anbinden
+Detach Datum support|Datum desteğini ayır|Datum-Referenz lösen
+Offset Datum sketch|Datum eskizini ötele/döndür|Datum-Skizze versetzen
+Support element (FaceN/EdgeN/VertexN)|Destek öğesi (FaceN/EdgeN/VertexN)|Referenzelement (FaceN/EdgeN/VertexN)

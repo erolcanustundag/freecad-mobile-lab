@@ -29,6 +29,7 @@
   <string name="ui_853a983f6b8a" formatted="false">"Yay"</string>
   <string name="ui_2745debaa64a" formatted="false">"Alan"</string>
   <string name="ui_4130069ee1c1" formatted="false">"Eğri boyunca çoğaltma"</string>
+  <string name="ui_5d6571be1d52" formatted="false">"Datumu katıya bağla"</string>
   <string name="ui_7ed6da7e72d5" formatted="false">"Düzlemsel yüze bağla"</string>
   <string name="ui_2f0f329fa335" formatted="false">"Bağlama ofseti"</string>
   <string name="ui_58b9ff3fe0e6" formatted="false">"Otomatik · yazılımsal kare süresi"</string>
@@ -164,6 +165,7 @@
   <string name="ui_934b7522dfb3" formatted="false">"Z ötelemesi (mm)"</string>
   <string name="ui_64b365fa3ee1" formatted="false">"Derinlik (mm)"</string>
   <string name="ui_1d97595f7723" formatted="false">"Y derinliği (mm)"</string>
+  <string name="ui_766c98861b5b" formatted="false">"Datum desteğini ayır"</string>
   <string name="ui_d71a5056f84c" formatted="false">"İşlem bağını kaldır; geometriyi koru"</string>
   <string name="ui_e627cbc7fb85" formatted="false">"Eskiz bağlantısını kaldır"</string>
   <string name="ui_b4748fa72923" formatted="false">"Ölçülendirilmiş çizim sayfası"</string>
@@ -478,6 +480,7 @@
   <string name="ui_2dfdc416f890" formatted="false">"Örnek sayısı (2–16)"</string>
   <string name="ui_10a737d901b1" formatted="false">"Çevrimdışı kılavuz"</string>
   <string name="ui_5721351c711c" formatted="false">"CAD şeklini ötele"</string>
+  <string name="ui_9063bba84ed6" formatted="false">"Datum eskizini ötele/döndür"</string>
   <string name="ui_3051e88f42f8" formatted="false">"Düzlemsel eğriyi ötele"</string>
   <string name="ui_8fc8191265fa" formatted="false">"Bir sürgü → numaralı STL / tarif ZIP"</string>
   <string name="ui_cf9b77061f7b" formatted="false">"Aç"</string>
@@ -712,6 +715,7 @@
   <string name="ui_cfb90aa95fca" formatted="false">"Stüdyo malzemesi · nesne bazında kaydedilir"</string>
   <string name="ui_39676d735f34" formatted="false">"Stüdyo · metaliklik / pürüzlülük önizlemesi"</string>
   <string name="ui_e9e1b267887b" formatted="false">"Alt bölümlenmiş form"</string>
+  <string name="ui_7420731be806" formatted="false">"Destek öğesi (FaceN/EdgeN/VertexN)"</string>
   <string name="ui_7a020f9e3ec3" formatted="false">"Yüzey · açık veya kapalı profiller"</string>
   <string name="ui_6b9c2e223136" formatted="false">"Yalnızca yüzeyler"</string>
   <string name="ui_8c1998fcc55d" formatted="false">"Profili yol boyunca süpür"</string>
