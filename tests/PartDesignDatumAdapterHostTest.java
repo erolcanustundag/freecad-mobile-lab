@@ -14,12 +14,15 @@ public final class PartDesignDatumAdapterHostTest {
         System.load(a[3]);SignalProbe.capture();System.load(a[0]);CoreNative.initialize(a[1],a[2],a[1]);check(SignalProbe.preserved(),"JVM signals retained");cmd("NewDoc Datums");cmd("Body Body");
         cmd("BodyPlane Body WorkPlane 100 80");cmd("BodyAxis Body WorkAxis 100");cmd("BodyPoint Body WorkPoint");cmd("BodyFrame Body WorkFrame");
         JSONObject b=cmd("BodyInfo Body").getJSONObject("body_inspection");check(b.getJSONArray("solid_history").length()==0,"Datums excluded from solid history");check(b.getJSONArray("datums").length()==4,"Four native construction references");
+        cmd("PartPlacement Body 10 20 30 0 0 0");check(cmd("DatumInfo WorkPoint").getJSONObject("datum_inspection").getJSONArray("origin_mm").getDouble(2)==30,"Construction-only Body placement");cmd("Undo");bad("PartPlacement Body 999999 0 0 0 0 0");
         for(String n:new String[]{"WorkPlane","WorkAxis","WorkPoint","WorkFrame"}){
             JSONObject info=cmd("DatumInfo "+n).getJSONObject("datum_inspection");check(info.getBoolean("construction")&&info.isNull("material_volume_mm3"),"Construction has no material volume");
             JSONObject preview=cmd("DatumPreview "+n).getJSONObject("wire_preview");check(preview.getBoolean("construction"),"Construction preview labelled");WireFrame w=new WireFrame(preview);check(w.pointCount>1&&w.pointCount<32,"Finite bounded viewport guides");
             float[] p=w.project(0,0,0,800,600,30,20,1,0,0);check(Float.isFinite(p[0])&&Float.isFinite(p[1]),"Finite guide projection");
             bad("ShapeInfo "+n);bad("Preview "+n);bad("ExportStep "+n+" Datum.step");
         }
+        cmd("Add PlaneAlias Link");cmd("Link PlaneAlias WorkPlane");cmd("Add AxisAlias Link");cmd("Link AxisAlias WorkAxis");
+        for(String n:new String[]{"PlaneAlias","AxisAlias"}){bad("ShapeInfo "+n);bad("Preview "+n);bad("ExportStep "+n+" Alias.step");}
         cmd("DatumPose Body WorkPlane 1 2 3 0 0 0");cmd("BodySketchDatum Body WorkPlane Profile");cmd("SketchCircle Profile 0 0 1");cmd("Constraint Profile Block 0");cmd("Pad Body Profile Pad 5");volume("Body",5*Math.PI);
         python("d=App.ActiveDocument\nassert d.Profile.MapMode=='ObjectXY' and d.Profile.AttachmentSupport[0][0]==d.WorkPlane and list(d.Profile.AttachmentSupport[0][1])==['']\nassert d.Pad.Profile[0]==d.Profile and d.Body.Tip==d.Pad\nassert abs(d.Pad.Shape.CenterOfMass.z-5.5)<1e-6\nassert d.WorkPlane.TypeId=='PartDesign::Plane' and not d.WorkPlane.Shape.Edges\nassert d.WorkAxis.TypeId=='PartDesign::Line' and not d.WorkAxis.Shape.Vertexes\nassert d.WorkPoint.TypeId=='PartDesign::Point' and len(d.WorkPoint.Shape.Vertexes)==1\nassert d.WorkFrame.TypeId=='PartDesign::CoordinateSystem'");
         cmd("DatumPose Body WorkPlane 5 6 7 0 30 0");volume("Body",5*Math.PI);

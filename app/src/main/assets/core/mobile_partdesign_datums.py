@@ -8,6 +8,10 @@ TYPES=set(ENGINES)
 ATTACHABLE={'PartDesign::Plane','PartDesign::CoordinateSystem'}
 MAXIMUM=64
 
+def is_reference(obj):
+    source=obj.getLinkedObject(True) if obj.TypeId.startswith('App::Link') else obj
+    return source is not None and source.TypeId in TYPES
+
 def identity(p):
     return p.Base.Length<1e-9 and p.Rotation.Angle<1e-9
 

@@ -1,0 +1,44 @@
+{
+  "version": "1.21",
+  "version_code": 47,
+  "freecad": "1.1.4",
+  "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
+  "native_jni_checks": 299,
+  "cold_jvm_checks": 13,
+  "workflows": [
+    "original owned manual Datum Plane",
+    "original owned manual Datum Line",
+    "original owned manual Datum Point",
+    "original owned manual CoordinateSystem"
+  ],
+  "attachment": "original ObjectXY/AttachmentSupport on same-Body Plane/CoordinateSystem; native driven Pad/Hole/Pipe/Helix",
+  "qualified": [
+    "construction-only Body placement",
+    "native original shape/frame and world inspection",
+    "finite display guides without tessellating infinite geometry",
+    "native source pose/rotation/dimension/body movement",
+    "history/Tip separation and guarded removal/detachment",
+    "atomic rollback and UndoRedo",
+    "18malformedFCStd variants and pre-restoration geometry/count/reference/mode/placement guards",
+    "nativeFCStd restoration in fresh JVM/interpreter",
+    "material STEP roundtrip, construction mesh/metrics/STEP rejection",
+    "linked instances of construction references excluded from material metrics/mesh/STEP"
+  ],
+  "axis_cache": "native Shape marked Transient so original constructor recreates infinite edge during restoration",
+  "limits": {
+    "datums": 64,
+    "attached_sketches": 64,
+    "display_size_mm": 10000,
+    "world_coordinate_mm": 1000000,
+    "map_mode": "ObjectXY on whole owned Plane/CoordinateSystem",
+    "offset": false,
+    "external_geometry": false,
+    "expressions": false
+  },
+  "android_execution": "NOT_RUN",
+  "pending": [
+    "other Datum/attachment modes",
+    "arbitrary supports and axis/point attachments",
+    "full Gui/workbench/Assembly/Rhino parity"
+  ]
+}

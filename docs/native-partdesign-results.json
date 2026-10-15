@@ -1,6 +1,6 @@
 {
-  "version": "1.20",
-  "version_code": 46,
+  "version": "1.21",
+  "version_code": 47,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "workflows": [
@@ -35,7 +35,11 @@
     "original flat blind Hole",
     "original flat ThroughAll Hole",
     "original custom Counterbore Hole",
-    "original90degree Countersink Hole"
+    "original90degree Countersink Hole",
+    "original owned manual Datum Plane",
+    "original owned manual Datum Line",
+    "original owned manual Datum Point",
+    "original owned CoordinateSystem and ObjectXY sketch attachment"
   ],
   "checks": {
     "partdesign_jni": 1509,
@@ -47,7 +51,9 @@
     "runtime_packaging": 10,
     "language_command_fallback": 527,
     "partdesign_path_jni": 310,
-    "partdesign_hole_jni": 302
+    "partdesign_hole_jni": 302,
+    "partdesign_datum_jni": 299,
+    "datum_cold_jvm": 13
   },
   "android": {
     "abi": "arm64-v8a",
@@ -92,7 +98,13 @@
     "hole_stock_edges": 256,
     "hole_threaded": false,
     "hole_drill_point": "Flat",
-    "hole_countersink_angle_deg": 90
+    "hole_countersink_angle_deg": 90,
+    "datums": 64,
+    "datum_sketches": 64,
+    "datum_display_size_mm": 10000,
+    "datum_map_mode": "Deactivated",
+    "datum_sketch_map": "ObjectXY on whole same-Body Plane/CoordinateSystem",
+    "datum_offsets": false
   },
   "pending": [
     "other PartDesign modes/features",
@@ -107,6 +119,6 @@
     "general Pipe sections/multiple edges/auxiliary spines/twist laws",
     "conical/left-handed/other Helix modes",
     "other Hole/thread/taper/drill/counterdrill/direction modes",
-    "original Datum construction and attachment"
+    "other Datum/attachment modes, axis/point supports and attached sketch offsets/expressions/external geometry"
   ]
 }

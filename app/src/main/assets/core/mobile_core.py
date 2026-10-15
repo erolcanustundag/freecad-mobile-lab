@@ -297,8 +297,12 @@ def _edit(edit):
         if obj.TypeId not in mobile_part.TYPES:raise ValueError("Choose a supported native Part object")
         if mobile_partdesign.available() and (obj.TypeId in mobile_partdesign.FEATURES or mobile_partdesign.owner(obj) is not None):raise ValueError("Move the Body or its profile sketch; native member feature placement is controlled by Body history")
         obj.Placement=mobile_sketch.placement(edit["values"])
-        _doc().recompute();info=mobile_part.shape_info(obj)
-        if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]):raise ValueError("Placement must preserve valid geometry within±1,000,000mm")
+        _doc().recompute()
+        construction_only=obj.TypeId=='PartDesign::Body' and obj.Tip is None and bool(obj.Group) and all(o.TypeId in mobile_partdesign.DATUMS or o.TypeId=='Sketcher::SketchObject' and o.MapMode=='ObjectXY' for o in obj.Group)
+        if construction_only:mobile_partdesign.preflight(_doc())
+        else:
+            info=mobile_part.shape_info(obj)
+            if not info["valid"] or any(abs(v)>1000000 for v in info["bounds"]):raise ValueError("Placement must preserve valid geometry within±1,000,000mm")
     elif action == "profile_solid":
         source=mobile_part.profile(_object(edit["source"]),True)
         name=_identifier(edit["name"])
