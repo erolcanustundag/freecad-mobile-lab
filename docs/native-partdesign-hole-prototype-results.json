@@ -1,0 +1,38 @@
+{
+  "Blind": {
+    "type": "PartDesign::Hole",
+    "volume_mm3": 987.4336293856405,
+    "expected_mm3": 987.4336293856409,
+    "depth_type": "Dimension",
+    "cut": "None",
+    "drill": "Flat"
+  },
+  "Through": {
+    "type": "PartDesign::Hole",
+    "volume_mm3": 968.5840734641018,
+    "expected_mm3": 968.5840734641021,
+    "depth_type": "ThroughAll",
+    "cut": "None",
+    "drill": "Flat"
+  },
+  "Counterbore": {
+    "type": "PartDesign::Hole",
+    "volume_mm3": 978.0088514248713,
+    "expected_mm3": 978.0088514248714,
+    "depth_type": "Dimension",
+    "cut": "Counterbore",
+    "drill": "Flat"
+  },
+  "Countersink": {
+    "type": "PartDesign::Hole",
+    "volume_mm3": 983.2448391808542,
+    "expected_mm3": 983.2448391808545,
+    "depth_type": "Dimension",
+    "cut": "Countersink",
+    "drill": "Flat"
+  },
+  "status": "HOST_NATIVE_PROTOTYPE_PASS_MOBILE_PENDING",
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "android_execution": "NOT_RUN",
+  "freecad": "1.1.4"
+}
