@@ -1,6 +1,6 @@
 {
-  "version": "1.19",
-  "version_code": 45,
+  "version": "1.20",
+  "version_code": 46,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "workflows": [
@@ -31,7 +31,11 @@
     "original circular-section AdditivePipe on one line/arc sketch edge",
     "original circular-section SubtractivePipe on one line/arc sketch edge",
     "original own-Z-axis pitch/height AdditiveHelix",
-    "original own-Z-axis pitch/height SubtractiveHelix"
+    "original own-Z-axis pitch/height SubtractiveHelix",
+    "original flat blind Hole",
+    "original flat ThroughAll Hole",
+    "original custom Counterbore Hole",
+    "original90degree Countersink Hole"
   ],
   "checks": {
     "partdesign_jni": 1509,
@@ -42,7 +46,8 @@
     "locale_resources": 3,
     "runtime_packaging": 10,
     "language_command_fallback": 527,
-    "partdesign_path_jni": 310
+    "partdesign_path_jni": 310,
+    "partdesign_hole_jni": 302
   },
   "android": {
     "abi": "arm64-v8a",
@@ -80,7 +85,14 @@
     "helix_axis": "original Body Z axis; XZ positive-radial circular section",
     "helix_turns": 16,
     "helix_pitch": "greater than section diameter",
-    "helix_mode": "forward right-handed pitch-height-angle, cone angle0"
+    "helix_mode": "forward right-handed pitch-height-angle, cone angle0",
+    "hole_profile": "one whole owned circle in positive-facing BodyXY plane",
+    "hole_direction": "negative BodyZ",
+    "hole_stock_faces": 64,
+    "hole_stock_edges": 256,
+    "hole_threaded": false,
+    "hole_drill_point": "Flat",
+    "hole_countersink_angle_deg": 90
   },
   "pending": [
     "other PartDesign modes/features",
@@ -93,6 +105,8 @@
     "curved/external stopping faces and other extent modes",
     "taper/offset/custom extrusion vectors and arbitrary side stopping",
     "general Pipe sections/multiple edges/auxiliary spines/twist laws",
-    "conical/left-handed/other Helix modes"
+    "conical/left-handed/other Helix modes",
+    "other Hole/thread/taper/drill/counterdrill/direction modes",
+    "original Datum construction and attachment"
   ]
 }

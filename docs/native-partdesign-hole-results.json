@@ -1,0 +1,43 @@
+{
+  "version": "1.20",
+  "version_code": 46,
+  "freecad": "1.1.4",
+  "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
+  "native_jni_checks": 302,
+  "workflows": [
+    "original flat blind Hole",
+    "original flat ThroughAll Hole",
+    "original custom Counterbore Hole",
+    "original custom90degree Countersink Hole"
+  ],
+  "references": [
+    "whole owned unused circle sketch",
+    "preceding Body solid",
+    "last Tip"
+  ],
+  "qualified": [
+    "analytic volumes",
+    "units/diameter/depth/head edits",
+    "stock/profile/body placement updates",
+    "UndoRedo/atomic rollback/leaf deletion",
+    "19malformedFCStd modes/parameters/references",
+    "native FCStd/STEP roundtrip"
+  ],
+  "limits": {
+    "threaded": false,
+    "model_thread": false,
+    "drill_point": "Flat",
+    "direction": "forward negative BodyZ",
+    "profile": "single circle in positive-facing BodyXY",
+    "stock_faces": 64,
+    "stock_edges": 256,
+    "length_mm": 1000000,
+    "countersink_angle_deg": 90
+  },
+  "pending": [
+    "other Hole/thread/taper/drill/direction modes",
+    "Datum",
+    "full workbench/Gui/Assembly/Rhino parity",
+    "phone qualification"
+  ]
+}

@@ -550,5 +550,20 @@
     "android_runtime": "physical startup/lifecycle/SAF workflows pending",
     "signing": "retained public development identity",
     "milestone_gate": "not complete until roadmap device/workflow criteria pass"
+  },
+  {
+    "version": "1.20",
+    "version_name": "1.20",
+    "version_code": 46,
+    "channel": "release",
+    "status": "initial public mobile feature release; broader device qualification pending",
+    "scope": "current mobile feature set",
+    "apk": "FreeCAD-Mobile-Lab-1.20-arm64.apk",
+    "size_bytes": 163960488,
+    "sha256": "d2e0fe62e3449deda93e9b71465bf290f0642c82b46993cc7d5561a7bcb77bf8",
+    "engineering_changes": "Original flat blind/ThroughAll/custom Counterbore/90degree Countersink Hole workflows.302Hole+310path+1509PartDesign+2324Sketcher/269Part/88App/62Python/527locale/3resource/10packaging PASS. Units, linked sources/profiles/history, actual material removal, atomic rollback/UndoRedo/FCStd/STEP and pre-restoration guards.780TR/DEentries/fourguides. Signed compatible ARM64 APK134ELF/1080Python/API26/16KiB/signatures PASS. Android NOT_RUN/full parity NOT_COMPLETE.",
+    "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+    "signing": "retained public development identity",
+    "milestone_gate": "not complete until roadmap device/workflow criteria pass"
   }
 ]

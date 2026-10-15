@@ -1,18 +1,18 @@
-# FreeCAD Mobile Lab 1.19
+# FreeCAD Mobile Lab 1.20
 
-Full release of the current mobile feature set, Android code 45. The signed ARM64 APK keeps the compatible update certificate.
+Full release of the current mobile feature set, Android code46. The signed ARM64 APK keeps the compatible update certificate.
 
-Four new original PartDesign workflows:
+Four new original PartDesign Hole workflows:
 
-- Additive Pipe with an owned circular section and line or circular-arc path.
-- Subtractive Pipe with material-removal and closed-solid checks.
-- Additive Helix around the original Body Z axis.
-- Subtractive Helix with editable pitch and height.
+- Flat-bottom blind hole with editable diameter and depth.
+- Flat through-all hole with editable diameter.
+- Custom counterbore with editable hole and head dimensions.
+- Custom 90degree countersink with editable hole depth/diameter and head diameter.
 
-Use BodyAddPipe, BodySubPipe, BodyAddHelix and BodySubHelix in the command bar, or the Original PartDesign touch forms. English, Turkish and German controls and guides are included. Pipes retain original profile and Edge1 spine references in Standard/Transformed/Constant mode. Helices retain the owned circle profile and original axis; Set Helix.Pitch 4 mm and Set Helix.Height 9 mm accept units.
+Use BodyHole, BodyHoleThrough, BodyCounterbore and BodyCountersink in the command bar, or Original PartDesign touch forms. English, Turkish and German controls and guides are included. A separate unused owned circle sketch supplies the hole center; actual Hole.Diameter is independent of sketch radius. The native forward cut goes down Body Z. ThroughAll removes material below the profile plane, so move the plane to the new stock top after increasing stock height. Counterbore depth or derived 90degree countersink depth must fit within the main depth; head diameter must exceed hole diameter.
 
-The path tools require separate unused sketches with one geometry each and no external references or expressions. A pipe circle must be centered at the path start, normal to its tangent. Arcs are limited to 180 degrees with radius greater than twice the section radius. Helix circles lie in the XZ meridian plane entirely on positive X. Pitch must exceed the section diameter; height/pitch is limited to 16 turns. Current helix mode is forward/right-handed with zero cone angle. Stock is bounded to 64 faces/256 edges. Single-solid, positive addition/removal, ownership, history and reference checks apply; invalid operations roll back. Live sketch parameters are checked before feature recomputation, and saved scalars/modes/links before restoration.
+Native feature modes, dimensions, dormant thread values, owned profiles and preceding source/history are validated. Invalid, nonremoving and empty results roll back. Source circles cannot carry external references or expressions. Hole profiles face positive Z in a Body XY plane. Current stock limit:64faces/256edges; dimensions are finite, positive and bounded. Threading, modelled threads, taper, angled drill points, reverse, counterdrill and other modes remain pending.
 
-Validation: 310 new native path JNI checks plus 1,509 existing PartDesign checks; 2,324 Sketcher, 269 Part, 88 App and 62 Python regressions; 527 language/command, 3 resource and 10 packaging checks. Analytic curved and straight sweeps, helix volumes, source/dimension/body placement updates, Undo/Redo, transactions, FCStd, STEP and malformed saved references/modes are covered. 772 reviewed Turkish/German entries and four guide types. APK verification passes 134 ARM64 libraries/extensions, 1,079 Python files, API26 loader/strong-symbol closure, 16KiB alignment and v2/v3 signatures.
+Validation:302new Hole JNI checks,310path checks and1509existing PartDesign checks;2324Sketcher,269Part,88App,62Python regressions;527language/command,3resource and10packaging checks. Analytic volumes, units, diameter/depth/head edits, source/profile/body placement updates, Undo/Redo, transactions, leaf deletion,19malformedFCStd variants, validFCStd and STEP roundtrips are covered.780reviewed TR/DE entries andfour guide types. The APK passes134ARM64 libraries/extensions,1080Python assets, API26 loader/strong-symbol closure,16KiB alignment andv2/v3signatures.
 
-Physical Android 1.19 execution is NOT_RUN. Full FreeCAD/Rhino, Gui, Assembly, workbench and addon parity remain NOT_COMPLETE. General sections, multi-edge/auxiliary paths, other helix modes, Hole and Datum workflows remain pending. F-Droid is NOT_SUBMITTED. Private signing material and continuation notes are excluded from public assets.
+Physical Android1.20 execution is NOT_RUN. Full FreeCAD/Rhino, Gui, Assembly, workbench and addon parity remain NOT_COMPLETE. Datum construction/attachment and broader native modes remain pending. F-Droid is NOT_SUBMITTED. Private signing material and continuation notes are excluded from public assets.

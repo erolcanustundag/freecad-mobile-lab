@@ -1,0 +1,17 @@
+{
+  "status": "HOST_NATIVE_CONSTRUCTION_ATTACHMENT_PROBE_PASS_MOBILE_PENDING",
+  "types": [
+    "PartDesign::Plane",
+    "PartDesign::Line",
+    "PartDesign::Point",
+    "PartDesign::CoordinateSystem"
+  ],
+  "attachment": "original ObjectXY on owned Plane and CoordinateSystem",
+  "pad_volume_mm3": 15.707963267948958,
+  "expected_pad_volume_mm3": 15.707963267948966,
+  "source_translation_rotation": "PASS",
+  "native_fcstd_restore": "PASS",
+  "plane_and_axis": "unbounded analytical geometry; construction-specific preview/validation required",
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "android_execution": "NOT_RUN"
+}

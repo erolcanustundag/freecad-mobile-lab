@@ -203,3 +203,8 @@ Four bounded original native scopes implemented: PadUpToFace, PadUpToLast, Pocke
 ## 1.19 — original native pipes and helices
 
 Four bounded original scopes: AdditivePipe, SubtractivePipe, AdditiveHelix and SubtractiveHelix. Circular sections, owned single-line/arc Edge1 paths, right-handed own-Z-axis pitch/height helices, editable lengths, original references and history. 310 path JNI checks plus 1509 PartDesign and 2324/269/88/62/527/3/10 regressions; native analytical geometry, dependencies, placement, rollback, FCStd and STEP. EN/TR/DE772 reviewed entries/four guides. APK134ELF/1079Python/API26/16KiB/signatures verified. Physical Android execution and full parity remain pending. Next: qualify original Hole and Datum prerequisites before exposing another bounded batch; retain unresolved general Pipe/Helix modes explicitly.
+
+
+## 1.20 — original native Hole subset
+
+Four bounded original Hole scopes: flat blind, flat ThroughAll, custom counterbore and90degree countersink.302realJNI checks plus310path/1509PartDesign and2324/269/88/62/527/3/10 regressions; original linked profiles, preceding solid/Tip, editable dimensions/units, analytic geometry, source/profile/body placement, UndoRedo/rollback/leaf history/FCStd/STEP and pre-restoration mode/scalar/reference safeguards.780TR/DEentries/fourguides. APK134ELF/1080Python/API26/16KiB/signatures verified. PhysicalAndroid/fullGui/workbench/Assembly/Rhino gates remain pending. Next: original Datum classes exist, but analytic planes/axes are unbounded and require construction-specific validation/preview/attachment qualification before mobile exposure.
