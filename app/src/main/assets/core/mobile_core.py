@@ -556,6 +556,7 @@ def execute(request):
         if not _transaction:
             raise ValueError("No transaction is open")
         if action == "commit":
+            mobile_partdesign.preflight(_doc())
             _doc().recompute()
             try:
                 mobile_sketch.validate_document(_doc())
@@ -581,6 +582,7 @@ def execute(request):
         try:
             for edit in edits:
                 _edit(edit)
+                mobile_partdesign.preflight(_doc())
             _doc().recompute()
             mobile_sketch.validate_document(_doc())
             mobile_part.validate_document(_doc())
@@ -629,6 +631,7 @@ def execute(request):
         restored = App.openDocument(str(path))
         try:
             restored.UndoMode = 1
+            mobile_partdesign.preflight(restored)
             restored.recompute()
             mobile_sketch.validate_document(restored)
             mobile_part.validate_document(restored)
