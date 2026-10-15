@@ -1,6 +1,6 @@
 {
-  "version": "1.22",
-  "version_code": 48,
+  "version": "1.23",
+  "version_code": 49,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "workflows": [
@@ -43,7 +43,11 @@
     "original Datum Plane FlatFace on an owned planar solid face",
     "original Datum Line Tangent on an owned straight solid edge",
     "original Datum Point Vertex on an owned solid vertex",
-    "original ObjectXY sketch AttachmentOffset on an owned Datum plane/frame"
+    "original ObjectXY sketch AttachmentOffset on an owned Datum plane/frame",
+    "original PartDesign::AdditiveBox",
+    "original PartDesign::SubtractiveBox",
+    "original PartDesign::AdditiveCylinder",
+    "original PartDesign::SubtractiveCylinder"
   ],
   "checks": {
     "partdesign_jni": 1509,
@@ -59,7 +63,9 @@
     "partdesign_datum_jni": 299,
     "datum_cold_jvm": 13,
     "partdesign_attachment_jni": 268,
-    "attachment_cold_jvm": 10
+    "attachment_cold_jvm": 10,
+    "partdesign_primitive_jni": 278,
+    "primitive_cold_jvm": 6
   },
   "android": {
     "abi": "arm64-v8a",
@@ -114,7 +120,12 @@
     "datum_support_faces": 64,
     "datum_support_edges": 256,
     "datum_support_vertices": 512,
-    "datum_sketch_offsets": true
+    "datum_sketch_offsets": true,
+    "body_primitives": 64,
+    "primitive_source_faces": 64,
+    "primitive_source_edges": 256,
+    "primitive_cylinder_angle": 360,
+    "primitive_placement": "manual original AttachEngine3D/Deactivated with identity offset"
   },
   "pending": [
     "other PartDesign modes/features",
@@ -131,6 +142,8 @@
     "other Hole/thread/taper/drill/counterdrill/direction modes",
     "curved/multiple/foreign Datum supports and other mapping modes",
     "mapped CoordinateSystem",
-    "attached sketch expressions/external geometry"
+    "attached sketch expressions/external geometry",
+    "other original primitives and partial/angular/mapped modes",
+    "primitive expressions"
   ]
 }

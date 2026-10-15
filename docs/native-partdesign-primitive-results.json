@@ -1,0 +1,46 @@
+{
+  "version": "1.23",
+  "version_code": 49,
+  "freecad": "1.1.4",
+  "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
+  "native_jni_checks": 278,
+  "cold_jvm_checks": 6,
+  "workflows": [
+    "original PartDesign::AdditiveBox",
+    "original PartDesign::SubtractiveBox",
+    "original PartDesign::AdditiveCylinder",
+    "original PartDesign::SubtractiveCylinder"
+  ],
+  "qualified": [
+    "analytic native union/removal volumes",
+    "original BaseFeature history/Tip and source/dimension/unit edits",
+    "manual primitive and Body/world placement",
+    "positive material/no-op/disconnected/empty-stock guards",
+    "protected native modes/links/expressions",
+    "native support-driven Datum on a primitive source",
+    "UndoRedo and atomic rollback",
+    "19malformedFCStd scalar/mode/offset/placement/history variants",
+    "fresh JVM/interpreter restoration",
+    "material STEP roundtrip",
+    "64actual connected native primitives and limit rollback"
+  ],
+  "limits": {
+    "count_per_document": 64,
+    "source_faces": 64,
+    "source_edges": 256,
+    "world_coordinate_mm": 1000000,
+    "cylinder_angle_deg": 360,
+    "cylinder_end_angles_deg": [
+      0,
+      0
+    ],
+    "mapping": "original AttachEngine3D/Deactivated with identity offset"
+  },
+  "android_execution": "NOT_RUN",
+  "native_arm64_classes": "all4original class names present in the unchanged packaged original PartDesign library; static evidence only",
+  "pending": [
+    "other original primitives and partial/angular/mapped modes",
+    "primitive expressions",
+    "Gui/Assembly/full FreeCAD/Rhino parity"
+  ]
+}

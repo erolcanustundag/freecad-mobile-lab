@@ -1,0 +1,13 @@
+{
+  "status": "HOST_ORIGINAL_ROUND_PRIMITIVE_PROBE_PASS_MOBILE_PENDING",
+  "checks": 32,
+  "types": [
+    "PartDesign::AdditiveCone",
+    "PartDesign::SubtractiveCone",
+    "PartDesign::AdditiveSphere",
+    "PartDesign::SubtractiveSphere"
+  ],
+  "geometry": "analytic hemisphere/cone and spherical-cap/conical-tip clipping, source dimensions, Undo, Body placement and true FCStd reopen",
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "android_execution": "NOT_RUN"
+}
