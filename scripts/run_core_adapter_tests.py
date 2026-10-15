@@ -7,11 +7,11 @@ import tempfile
 import argparse
 
 ROOT=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('--hole-tests',action='store_true');p.add_argument('--path-tests',action='store_true');p.add_argument('--partdesign-tests',action='store_true');p.add_argument('--python-tools',action='store_true');p.add_argument('--part',action='store_true');p.add_argument('--part-tests',action='store_true');p.add_argument('--sketch-tests',action='store_true');args=p.parse_args()
-if args.path_tests or args.hole_tests:args.partdesign_tests=True
+p=argparse.ArgumentParser();p.add_argument('--datum-tests',action='store_true');p.add_argument('--hole-tests',action='store_true');p.add_argument('--path-tests',action='store_true');p.add_argument('--partdesign-tests',action='store_true');p.add_argument('--python-tools',action='store_true');p.add_argument('--part',action='store_true');p.add_argument('--part-tests',action='store_true');p.add_argument('--sketch-tests',action='store_true');args=p.parse_args()
+if args.path_tests or args.hole_tests or args.datum_tests:args.partdesign_tests=True
 if args.part_tests: args.part=True
 if args.sketch_tests or args.partdesign_tests:args.part=True
-test='PartDesignHoleAdapterHostTest' if args.hole_tests else 'PartDesignPathAdapterHostTest' if args.path_tests else 'PartDesignAdapterHostTest' if args.partdesign_tests else 'SketchAdapterHostTest' if args.sketch_tests else 'PartAdapterHostTest' if args.part_tests else 'PythonToolsHostTest' if args.python_tools else 'CoreAdapterHostTest'
+test='PartDesignDatumAdapterHostTest' if args.datum_tests else 'PartDesignHoleAdapterHostTest' if args.hole_tests else 'PartDesignPathAdapterHostTest' if args.path_tests else 'PartDesignAdapterHostTest' if args.partdesign_tests else 'SketchAdapterHostTest' if args.sketch_tests else 'PartAdapterHostTest' if args.part_tests else 'PythonToolsHostTest' if args.python_tools else 'CoreAdapterHostTest'
 BASE=ROOT.parent
 env=dict(os.environ)
 jdk=Path(env.get('JAVA_HOME',BASE/'toolchains/jdk-system17')).resolve()
@@ -26,7 +26,7 @@ if args.sketch_tests or args.partdesign_tests:
 subprocess.run([str(jdk/'bin/javac'),'--release','8','-cp',str(jsonjar),'-d',str(classes),
     str(ROOT/'app/src/main/java/org/freecad/mobilelab/CoreNative.java'),
     str(ROOT/'app/src/main/java/org/freecad/mobilelab/CoreCommandLine.java'),
-    str(ROOT/'tests'/(test+'.java')),*([str(ROOT/'tests/SignalProbe.java'),str(ROOT/'app/src/main/java/org/freecad/mobilelab/WireFrame.java')] if args.sketch_tests or args.partdesign_tests else []),*([str(ROOT/'app/src/main/java/org/freecad/mobilelab'/(name+'.java')) for name in ('PartMesh','MeshFrame','SoftwareRasterizer','RenderSettings','StudioLighting')] if args.part_tests else [])],check=True,env=env)
+    str(ROOT/'tests'/(test+'.java')),*([str(ROOT/'tests/PartDesignDatumColdRestoreHostTest.java')] if args.datum_tests else []),*([str(ROOT/'tests/SignalProbe.java'),str(ROOT/'app/src/main/java/org/freecad/mobilelab/WireFrame.java')] if args.sketch_tests or args.partdesign_tests else []),*([str(ROOT/'app/src/main/java/org/freecad/mobilelab'/(name+'.java')) for name in ('PartMesh','MeshFrame','SoftwareRasterizer','RenderSettings','StudioLighting')] if args.part_tests else [])],check=True,env=env)
 with tempfile.TemporaryDirectory(prefix='freecad-mobile-core-',dir=ROOT) as temporary:
     home=Path(temporary)
     (home/'lib').mkdir();(home/'lib/python3.12').symlink_to(python/'lib/python3.12',target_is_directory=True)

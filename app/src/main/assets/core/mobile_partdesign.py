@@ -8,6 +8,8 @@ import mobile_part
 import mobile_sketch
 import mobile_partdesign_paths as paths
 import mobile_partdesign_holes as holes
+import mobile_partdesign_datums as datums
+DATUMS=datums.TYPES
 
 PartDesign = None
 if '_PartDesign' in sys.builtin_module_names:
@@ -19,8 +21,8 @@ FRAMES = {'App::Origin', 'App::Line', 'App::Plane', 'App::Point'}
 DRESSUP={'PartDesign::Fillet','PartDesign::Chamfer','PartDesign::Draft','PartDesign::Thickness'}
 PATTERNS={'PartDesign::Mirrored','PartDesign::LinearPattern','PartDesign::PolarPattern','PartDesign::Scaled'}
 PATTERN_SOURCES={'PartDesign::Pad','PartDesign::Revolution','PartDesign::AdditiveLoft'}
-TYPES.update(DRESSUP|PATTERNS|paths.TYPES|{holes.TYPE})
-FEATURES = TYPES - {'PartDesign::Body'}
+TYPES.update(DRESSUP|PATTERNS|paths.TYPES|{holes.TYPE}|DATUMS)
+FEATURES = TYPES - {'PartDesign::Body'} - DATUMS
 PROFILE_FEATURES=FEATURES-DRESSUP-PATTERNS-{'PartDesign::FeatureBase'}
 SCALARS={'PartDesign::Fillet':'Radius','PartDesign::Chamfer':'Size','PartDesign::Draft':'Angle','PartDesign::Thickness':'Value'}
 
@@ -160,11 +162,13 @@ def validate_extent(feature,profile,source):
         if source is None or abs(feature.Shape.Volume)-abs(source.Shape.Volume)<=1e-7:raise ValueError('A stopping Pad must add material to the preceding solid')
 
 def preflight(doc):
-    if available():paths.preflight(doc);holes.preflight(doc)
+    if available():datums.preflight(doc);paths.preflight(doc);holes.preflight(doc)
 
 def edit(doc, e, get, identifier):
     require();op=e['op']
-    if op=='body_hole':
+    if op.startswith('body_datum_'):
+        datums.edit(doc,e,get,identifier)
+    elif op=='body_hole':
         holes.create(doc,e,get,identifier)
     elif op in ('body_add_pipe','body_sub_pipe','body_add_helix','body_sub_helix'):
         paths.create(doc,e,get,identifier)
@@ -268,6 +272,7 @@ def protected(obj):
     return obj.TypeId in TYPES|FRAMES or owner(obj) is not None
 
 def editable(obj,name):
+    if obj.TypeId in DATUMS:return datums.editable(obj,name)
     if obj.TypeId in FRAMES:return name=='Label'
     if obj.TypeId==holes.TYPE:return holes.editable(obj,name)
     if obj.TypeId in paths.HELICES:return name in ('Label','Refine','Pitch','Height')
@@ -276,6 +281,9 @@ def editable(obj,name):
 
 def validate_edit(obj,name,value):
     if not editable(obj,name):raise ValueError('Use Body tools for native ownership, Tip and profile links; this feature mode is read-only')
+    if obj.TypeId in DATUMS:
+        if name in ('Length','Width'):datums.size(value)
+        return
     if obj.TypeId==holes.TYPE:holes.validate_edit(obj,name,value)
     if obj.TypeId in paths.HELICES:
         paths.helix_parameters(obj.Profile[0],value if name=='Pitch' else obj.Pitch.Value,value if name=='Height' else obj.Height.Value)
@@ -297,11 +305,12 @@ def summary(b):
     return {'origin':b.Origin.Name, 'origin_features':[o.Name for o in b.Origin.OriginFeatures],
         'members':[o.Name for o in b.Group], 'solid_history':[o.Name for o in solids(b)],
         'tip':b.Tip.Name if b.Tip else None, 'base_source':b.BaseFeature.Name if b.BaseFeature else None,
-        'single_solid':not b.AllowCompound}
+        'single_solid':not b.AllowCompound,'datums':[o.Name for o in b.Group if o.TypeId in DATUMS]}
 
 def validate_document(doc):
     if not available():return
     if len(doc.Objects)>1000:raise ValueError('Document exceeds1,000 objects including origin frames')
+    datums.validate_document(doc)
     frames=set();owned=set()
     for b in doc.Objects:
         if b.TypeId!='PartDesign::Body':continue
@@ -316,7 +325,7 @@ def validate_document(doc):
         members=list(b.Group)
         if len(members)!=len(set(members)) or owned & set(members):raise ValueError('Body members must have unique ownership')
         owned.update(members)
-        if any(o.TypeId not in FEATURES|mobile_sketch.TYPES for o in members):raise ValueError('This Body contains an unsupported feature type')
+        if any(o.TypeId not in FEATURES|DATUMS|mobile_sketch.TYPES for o in members):raise ValueError('This Body contains an unsupported feature type')
         history=solids(b)
         if b.Tip is not None and b.Tip not in history:raise ValueError('Body Tip must be an owned solid feature')
         if history and b.Tip is None:raise ValueError('Body with solid history needs a Tip')
@@ -393,6 +402,7 @@ def validate_document(doc):
 def validate_fcstd(tree):
     """Validate Body reference/origin budgets before native restoration can generate objects."""
     if not available():return
+    datums.validate_fcstd(tree)
     types={o.get('name'):o.get('type') for o in tree.findall('./Objects/Object')}
     data={o.get('name'):o for o in tree.findall('./ObjectData/Object')}
     frames=set();owned=set()
@@ -425,7 +435,7 @@ def validate_fcstd(tree):
         if frames & these:raise ValueError('Saved Bodies cannot share origin frames')
         frames.update(these)
         members=links(name,'Group')
-        if owned & set(members) or any(types.get(n) not in FEATURES|mobile_sketch.TYPES for n in members):raise ValueError('Saved Body feature ownership is invalid')
+        if owned & set(members) or any(types.get(n) not in FEATURES|DATUMS|mobile_sketch.TYPES for n in members):raise ValueError('Saved Body feature ownership is invalid')
         owned.update(members)
         tip=link(name,'Tip')
         if tip and (tip not in members or types.get(tip) not in FEATURES):raise ValueError('Saved Tip must be an owned solid feature')

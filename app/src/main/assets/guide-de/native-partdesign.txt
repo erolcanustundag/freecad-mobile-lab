@@ -105,3 +105,19 @@ BodyCounterbore BODY PROFIL NAME DURCHMESSER TIEFE SENKDURCHMESSER SENKTIEFE
 BodyCountersink BODY PROFIL NAME DURCHMESSER TIEFE SENKDURCHMESSER
 Wählen Sie eine unbenutzte körpereigene Kreisskizze in einer nach +Z gerichteten XY-Ebene über der letzten Körperspitze. Der Kreismittelpunkt bestimmt die Position; Hole.Diameter bestimmt den tatsächlichen Durchmesser unabhängig vom Skizzenradius. Die native Bohrung schneidet nach -Z. Unterstützt werden flache Sack- und Durchgangsbohrungen, benutzerdefinierte Zylindersenkungen und 90-Grad-Kegelsenkungen. ThroughAll entfernt alles unterhalb der Profilebene. Nach Vergrößern der Ausgangshöhe muss die Profilebene zur neuen Oberseite verschoben werden.
 Verwenden Sie Set Hole.Diameter 3 mm, Set Hole.Depth 5 mm, Set Bore.HoleCutDiameter 6 mm oder Set Bore.HoleCutDepth 2 mm. Durchgangstiefe sowie Kegelsenkungswinkel/-tiefe sind schreibgeschützt. Der Senkdurchmesser muss größer als der Bohrungsdurchmesser sein. Die Zylindersenktiefe beziehungsweise berechnete 90-Grad-Kegelsenktiefe muss kleiner als die Bohrungstiefe sein. Ausgangsgeometrie: höchstens64Flächen/256Kanten. Positive begrenzte Maße, tatsächlicher Materialabtrag, ein geschlossener Volumenkörper, eigene Referenzen und korrekte Historie sind erforderlich. Gewinde, modellierte Gewinde, Kegel, schräge Bohrspitzen, Gegensenkungen, umgekehrte Richtung und weitere Modi bleiben ausstehend.
+
+Originale Bezugsgeometrie (1.21)
+BodyPlane BODY NAME DARSTELLUNGSLÄNGE DARSTELLUNGSBREITE
+BodyAxis BODY NAME DARSTELLUNGSLÄNGE
+BodyPoint BODY NAME
+BodyFrame BODY NAME
+DatumPose BODY BEZUG X Y Z GIER NICK ROLL
+BodySketchDatum BODY BEZUG SKIZZE
+DatumInfo BEZUG
+DatumPreview BEZUG
+RemoveDatum BODY BEZUG
+SketchDetach SKIZZE
+
+Bezüge sind originale nicht-volumetrische Körpermitglieder. Eine Ebene oder ein Koordinatensystem kann eine körpereigene Skizze über originales ObjectXY/AttachmentSupport steuern. BodySketchDatum erzeugt eine Skizze oder befestigt eine unbenutzte körpereigene Skizze. Zeichnen und beschränken Sie in lokalem XY; danach sind Pad und andere qualifizierte Werkzeuge nutzbar. Beim Verschieben des Bezugs folgen Skizze und natives Modell. Freie SketchPlane/SketchPlacement-Änderungen sind bei Befestigung gesperrt; SketchDetach erhält die aktuelle Lage und entfernt die Verknüpfung. RemoveDatum erfordert einen Bezug ohne abhängige Objekte.
+DatumPose verwendet körperlokale Millimeter und Gier/Nick/Roll in Grad. DatumInfo und endliche Ansichten verwenden die originale globale Platzierung einschließlich Körperbewegung. Ebenenlänge/-breite und Achsenlänge sind reine Darstellungsgrößen, etwa Set WorkPlane.Length 2 cm. Die originalen Ebenen/Achsen bleiben mathematisch unbeschränkt. Punktmarkierungen und Koordinatenachsen sind Ansichtshilfen, keine Ersatzvolumenkörper. Konstruktionselemente haben kein Materialvolumen, Materialnetz, Flächen-/Kantenmaß oder STEP-Materialexport; exportieren Sie den gesteuerten Volumenkörper. Der abgeleitete Cache der unendlichen Achse wird nicht gespeichert, damit der originale native Konstruktor ihn beim Öffnen von FCStd neu erzeugt.
+Grenzen:64Bezüge und64ObjectXY-befestigte Skizzen, Darstellungsmaße bis10.000mm, globale Koordinaten innerhalb±1.000.000mm, ein vollständiger körpereigener Ebenen-/Systembezug, keine zusätzlichen Bezugsabbildungen/-versätze, keine externen Geometrien/Ausdrücke in befestigten Skizzen. Bestehende FlatFace-Werkzeuge bleiben separat verfügbar. Weitere Befestigungsmodi, Achsen-/Punktverknüpfungen und erweiterte Bezugsfunktionen bleiben ausstehend.

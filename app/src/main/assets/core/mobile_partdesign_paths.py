@@ -4,6 +4,7 @@ import math
 import FreeCAD as App
 import mobile_part
 import mobile_sketch
+import mobile_partdesign_datums as datums
 
 PIPES={'PartDesign::AdditivePipe','PartDesign::SubtractivePipe'}
 HELICES={'PartDesign::AdditiveHelix','PartDesign::SubtractiveHelix'}
@@ -20,8 +21,9 @@ def circle(obj):
     if not isinstance(curve,mobile_part.Part.Circle):raise ValueError('Path profile must be a single native sketch circle')
     radius=mobile_sketch.number(curve.Radius)
     if radius<=1e-7:raise ValueError('Use a positive circular section radius')
-    center=obj.Placement.multVec(curve.Center)
-    normal=obj.Placement.Rotation.multVec(curve.Axis)
+    pose=datums.sketch_pose(obj)
+    center=pose.multVec(curve.Center)
+    normal=pose.Rotation.multVec(curve.Axis)
     return center,normal,radius
 
 def bounded_source(source):
@@ -40,7 +42,8 @@ def pipe_parameters(profile,path,edge):
         start=curve.value(curve.FirstParameter);tangent=curve.tangent(curve.FirstParameter)[0];length=curve.Radius*sweep
     else:raise ValueError('Pipe path supports one native line or circular arc')
     if not 1e-7<length<=1000000:raise ValueError('Pipe path length must be positive and within1,000,000mm')
-    start=path.Placement.multVec(start);tangent=path.Placement.Rotation.multVec(tangent);tangent.normalize()
+    pose=datums.sketch_pose(path)
+    start=pose.multVec(start);tangent=pose.Rotation.multVec(tangent);tangent.normalize()
     if (center-start).Length>1e-6 or abs(normal.dot(tangent))<1-1e-7:raise ValueError('Circle must be centered at the path start and normal to its initial tangent')
     for v in (center.x,center.y,center.z):
         if abs(v)+length+radius>1000000:raise ValueError('Sweep exceeds the coordinate budget')

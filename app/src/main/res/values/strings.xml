@@ -225,7 +225,7 @@
   <string name="ui_718a7e8a582e" formatted="false">"Body"</string>
   <string name="ui_b9e14a17aa5d" formatted="false">"Body A"</string>
   <string name="ui_66640b70e2fc" formatted="false">"Body B"</string>
-  <string name="ui_7214f39665f5" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nPad Body Profile ReversePad 10 reverse\nPad Body Profile SymmetricPad 10 symmetric\nPocketThrough Body CutProfile Through\nPocketFace Body CutProfile Stopped Face5\nPadFace Body AddProfile ToFace Face6\nPadLast Body AddProfile ToLast\nPocketFirst Body CutProfile ToFirst\nPadTwo Body Profile TwoSides 4 6\nPocketTwo Body CutProfile TwoCuts 2 3\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyFillet Body Rounded 1 1\nBodyChamfer Body Beveled 1 1\nBodyDraft Body Drafted 1 5 5\nBodyThickness Body Hollow 6 1\nBodyMirror Body Mirrored XZ\nBodyLinear Body Linear 2 8 X\nBodyPolar Body Polar 4 360 Z\nBodyScaled Body Scaled 2 2\nBodyAddPipe Body Profile Path Edge1 Pipe\nBodySubPipe Body CutProfile CutPath Edge1 PipeCut\nBodyAddHelix Body RadialProfile Helix 3 6\nBodySubHelix Body RadialCut HelixCut 3 6\nBodyHole Body HoleProfile Hole 2 4\nBodyHoleThrough Body HoleProfile ThroughHole 2\nBodyCounterbore Body HoleProfile Bore 2 4 4 1\nBodyCountersink Body HoleProfile Sink 2 4 4\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, forward/reverse/symmetric total-length Pad/Pocket, native through-all/first-hit Pocket, last-hit Pad and planar preceding-solid face stopping for Pad/Pocket, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Finishing uses current edge/face numbers on the last solid Tip; fillet/chamfer explicit edges, planar Z-axis draft up to45degrees and inward skin thickness are bounded. Patterns use one last owned additive Pad/Revolution/Loft, whole Body origin references,2–16 occurrences and bounded extents/scale. Use forward/reverse for directional cuts; symmetric lengths split equally about the sketch plane. Stopping extents have no editable Length. Two sides uses separate Length and Length2, both positive with total up to1,000,000mm; its direction is fixed. Automatic first/last stopping uses a preceding source up to64faces/256edges. Stopping Pad must add material. Select a current source FaceN parallel to the sketch plane and ahead in the extrusion direction. Path tools use a single circular section: pipes follow one owned line/arc Edge1 in Standard/Transformed/Constant mode; helices use an XZ meridian circle on positive X, original Body Z axis, pitch greater than the circle diameter and at most16turns. Set Helix.Pitch or Height with units. Auxiliary paths, general sections, cone angles and other helix modes remain pending. Native Hole supports flat blind/through-all or custom counterbore/90degree countersink with one owned XY circle and unthreaded forward cuts. Set Diameter/Depth and applicable head dimensions with units. Other modes, arbitrary lofts, multi-source patterns and reorder remain pending."</string>
+  <string name="ui_69374d46671d" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nPad Body Profile ReversePad 10 reverse\nPad Body Profile SymmetricPad 10 symmetric\nPocketThrough Body CutProfile Through\nPocketFace Body CutProfile Stopped Face5\nPadFace Body AddProfile ToFace Face6\nPadLast Body AddProfile ToLast\nPocketFirst Body CutProfile ToFirst\nPadTwo Body Profile TwoSides 4 6\nPocketTwo Body CutProfile TwoCuts 2 3\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyFillet Body Rounded 1 1\nBodyChamfer Body Beveled 1 1\nBodyDraft Body Drafted 1 5 5\nBodyThickness Body Hollow 6 1\nBodyMirror Body Mirrored XZ\nBodyLinear Body Linear 2 8 X\nBodyPolar Body Polar 4 360 Z\nBodyScaled Body Scaled 2 2\nBodyAddPipe Body Profile Path Edge1 Pipe\nBodySubPipe Body CutProfile CutPath Edge1 PipeCut\nBodyAddHelix Body RadialProfile Helix 3 6\nBodySubHelix Body RadialCut HelixCut 3 6\nBodyHole Body HoleProfile Hole 2 4\nBodyHoleThrough Body HoleProfile ThroughHole 2\nBodyCounterbore Body HoleProfile Bore 2 4 4 1\nBodyCountersink Body HoleProfile Sink 2 4 4\nBodyPlane Body WorkPlane 100 80\nBodyAxis Body WorkAxis 100\nBodyPoint Body WorkPoint\nBodyFrame Body WorkFrame\nDatumPose Body WorkPlane 0 0 3 0 0 0\nBodySketchDatum Body WorkPlane Profile\nDatumInfo WorkPlane\nDatumPreview WorkPlane\nRemoveDatum Body WorkPoint\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, forward/reverse/symmetric total-length Pad/Pocket, native through-all/first-hit Pocket, last-hit Pad and planar preceding-solid face stopping for Pad/Pocket, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Finishing uses current edge/face numbers on the last solid Tip; fillet/chamfer explicit edges, planar Z-axis draft up to45degrees and inward skin thickness are bounded. Patterns use one last owned additive Pad/Revolution/Loft, whole Body origin references,2–16 occurrences and bounded extents/scale. Use forward/reverse for directional cuts; symmetric lengths split equally about the sketch plane. Stopping extents have no editable Length. Two sides uses separate Length and Length2, both positive with total up to1,000,000mm; its direction is fixed. Automatic first/last stopping uses a preceding source up to64faces/256edges. Stopping Pad must add material. Select a current source FaceN parallel to the sketch plane and ahead in the extrusion direction. Path tools use a single circular section: pipes follow one owned line/arc Edge1 in Standard/Transformed/Constant mode; helices use an XZ meridian circle on positive X, original Body Z axis, pitch greater than the circle diameter and at most16turns. Set Helix.Pitch or Height with units. Auxiliary paths, general sections, cone angles and other helix modes remain pending. Native Hole supports flat blind/through-all or custom counterbore/90degree countersink with one owned XY circle and unthreaded forward cuts. Set Diameter/Depth and applicable head dimensions with units. Other modes, arbitrary lofts, multi-source patterns and reorder remain pending."</string>
   <string name="ui_b8ef18d5b319" formatted="false">"Body axis (X/Y/Z)"</string>
   <string name="ui_db4ecb85e22a" formatted="false">"Body from native solid"</string>
   <string name="ui_2041a45c8dc7" formatted="false">"Body guide"</string>
@@ -364,9 +364,11 @@
   <string name="ui_da33e1b7e0c4" formatted="false">"Construction"</string>
   <string name="ui_eee268b604a9" formatted="false">"Construction SKETCH INDEX true|false"</string>
   <string name="ui_13001b46e1c1" formatted="false">"Construction geometry"</string>
+  <string name="ui_b84948f8d2cc" formatted="false">"Construction reference"</string>
   <string name="ui_968df9b11bbe" formatted="false">"Contours target 0.005 mm (capped) · print at 100%, no page fit"</string>
   <string name="ui_a783eca8c9cd" formatted="false">"Control cage depth (mm)"</string>
   <string name="ui_71386f1843fe" formatted="false">"Control cage width (mm)"</string>
+  <string name="ui_60a00a18145e" formatted="false">"CoordinateSystem"</string>
   <string name="ui_58d744ee4c8e" formatted="false">"Copies"</string>
   <string name="ui_ea75a51b0189" formatted="false">"Copies including original · 2 to 100"</string>
   <string name="ui_45c7e8785f9e" formatted="false">"Copy count must be an integer"</string>
@@ -435,6 +437,8 @@
   <string name="ui_15d5b7c8fd92" formatted="false">"DXF · selected XY curve / section"</string>
   <string name="ui_df5c3008c765" formatted="false">"Datum"</string>
   <string name="ui_32967c58749f" formatted="false">"Datum SKETCH INDEX VALUE [UNIT]"</string>
+  <string name="ui_c6297b343a51" formatted="false">"Datum construction preview"</string>
+  <string name="ui_557086a944a7" formatted="false">"Datum name"</string>
   <string name="ui_808d7dca8a74" formatted="false">"Default"</string>
   <string name="ui_07ded793232a" formatted="false">"Degenerate boundary loop"</string>
   <string name="ui_ae4caa6b19e2" formatted="false">"Degenerate triangles must be repaired first"</string>
@@ -473,7 +477,9 @@
   <string name="ui_83d0373b89b0" formatted="false">"Display bounds are too large"</string>
   <string name="ui_c3aeea8a6be7" formatted="false">"Display detail"</string>
   <string name="ui_ca718436e7d7" formatted="false">"Display detail · export keeps full quality"</string>
+  <string name="ui_fd77df99477d" formatted="false">"Display length (mm)"</string>
   <string name="ui_5a83f580ae83" formatted="false">"Display performance"</string>
+  <string name="ui_2dd39a71a5d2" formatted="false">"Display width (mm)"</string>
   <string name="ui_423208095dd7" formatted="false">"Distance"</string>
   <string name="ui_8f3b337849d4" formatted="false">"Distance (mm)"</string>
   <string name="ui_eaa6c02eb9d5" formatted="false">"Distance XYZ XYZ · point distance in mm"</string>
@@ -785,6 +791,7 @@
   <string name="ui_b2d508a70498" formatted="false">"Inputs: "</string>
   <string name="ui_7538a7abe8ba" formatted="false">"Insert sample"</string>
   <string name="ui_b8a248deea32" formatted="false">"Inspect Body history"</string>
+  <string name="ui_5ddf8e305de0" formatted="false">"Inspect Datum"</string>
   <string name="ui_f93e60e895b2" formatted="false">"Inspect native face or edge"</string>
   <string name="ui_f8dfe69a6067" formatted="false">"Inspect sketch solver"</string>
   <string name="ui_5f97f8775628" formatted="false">"Instance"</string>
@@ -972,6 +979,7 @@
   <string name="ui_dd749481385c" formatted="false">"Move handles"</string>
   <string name="ui_d2f251ff5fa4" formatted="false">"Move multiple"</string>
   <string name="ui_5a7ad0f3c06e" formatted="false">"Move multiple objects"</string>
+  <string name="ui_87612c51149f" formatted="false">"Move native Datum"</string>
   <string name="ui_8118fbf12f48" formatted="false">"Move selected objects by offset"</string>
   <string name="ui_d646a0a1ea8d" formatted="false">"Move sketch point"</string>
   <string name="ui_f4f905422802" formatted="false">"Move x y z · absolute position"</string>
@@ -1000,6 +1008,9 @@
   <string name="ui_70a414f8d8ac" formatted="false">"Native Body revolution"</string>
   <string name="ui_8c3297a25f30" formatted="false">"Native Body scaled pattern"</string>
   <string name="ui_090c75239902" formatted="false">"Native Body thickness"</string>
+  <string name="ui_91f461686533" formatted="false">"Native Datum axis"</string>
+  <string name="ui_957d6bca280c" formatted="false">"Native Datum plane"</string>
+  <string name="ui_e55e4f591aea" formatted="false">"Native Datum point"</string>
   <string name="ui_c5011646220e" formatted="false">"Native Pad"</string>
   <string name="ui_8f5e43dc94e5" formatted="false">"Native Pad to face"</string>
   <string name="ui_26146bc171a8" formatted="false">"Native Pad to last face"</string>
@@ -1013,6 +1024,7 @@
   <string name="ui_ba8bb30e0b5f" formatted="false">"Native blind hole"</string>
   <string name="ui_45211683ce7b" formatted="false">"Native box"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Native cone"</string>
+  <string name="ui_09182d2f8685" formatted="false">"Native coordinate system"</string>
   <string name="ui_d59b101707b5" formatted="false">"Native counterbore"</string>
   <string name="ui_ccdc3289cc80" formatted="false">"Native countersink"</string>
   <string name="ui_c62b92752d38" formatted="false">"Native cut"</string>
@@ -1200,6 +1212,7 @@
   <string name="ui_2dcff8cab2c4" formatted="false">"Pipe along curve"</string>
   <string name="ui_289c50531d08" formatted="false">"Pipe radius"</string>
   <string name="ui_e648fafaee43" formatted="false">"PipeCut"</string>
+  <string name="ui_7d380b3732bb" formatted="false">"Pitch (deg)"</string>
   <string name="ui_4248ec8cc433" formatted="false">"Pitch per turn (mm)"</string>
   <string name="ui_f0316742b427" formatted="false">"Pivot X"</string>
   <string name="ui_7941fe8c6d14" formatted="false">"Pivot Y"</string>
@@ -1209,6 +1222,7 @@
   <string name="ui_1caac1724986" formatted="false">"Planar hole repair"</string>
   <string name="ui_53961e51b798" formatted="false">"Planar region"</string>
   <string name="ui_acad70a03d51" formatted="false">"Planar section helper"</string>
+  <string name="ui_a59e151e43c3" formatted="false">"Plane"</string>
   <string name="ui_2446f554c8a6" formatted="false">"Plane point X"</string>
   <string name="ui_0aae9a49aace" formatted="false">"Plane point Y"</string>
   <string name="ui_076c628bf59a" formatted="false">"Plane point Z"</string>
@@ -1243,6 +1257,7 @@
   <string name="ui_18712c5384a4" formatted="false">"Preset: "</string>
   <string name="ui_9d79fc518db7" formatted="false">"PresetSave"</string>
   <string name="ui_f73f97f1ba53" formatted="false">"PresetSave \"name\" · save selected primitive parameters"</string>
+  <string name="ui_1b45e2968b68" formatted="false">"Preview Datum"</string>
   <string name="ui_7277c8e83dd9" formatted="false">"Preview OBJECT [TOLERANCE_MM]"</string>
   <string name="ui_793c9c3fc481" formatted="false">"Preview tolerance (mm)"</string>
   <string name="ui_15db4eab13a3" formatted="false">"Preview tolerance must be 0.05 to 2 mm"</string>
@@ -1316,6 +1331,7 @@
   <string name="ui_7a3b23e6ce0b" formatted="false">"Region · one closed planar profile"</string>
   <string name="ui_83095a216ce0" formatted="false">"Remove last Body feature"</string>
   <string name="ui_92d700a362c3" formatted="false">"Remove object"</string>
+  <string name="ui_45e71067683c" formatted="false">"Remove unused Datum"</string>
   <string name="ui_d3f4cb898fbe" formatted="false">"Rename"</string>
   <string name="ui_b6bce61bbb96" formatted="false">"Rename \"name\""</string>
   <string name="ui_b2e402b4da01" formatted="false">"Render"</string>
@@ -1351,6 +1367,7 @@
   <string name="ui_e417261a9ae0" formatted="false">"Revolved 360 0 0 0 0 1 0"</string>
   <string name="ui_954daa8b0033" formatted="false">"Right"</string>
   <string name="ui_96ddaccf581f" formatted="false">"Ring"</string>
+  <string name="ui_489481575ce2" formatted="false">"Roll (deg)"</string>
   <string name="ui_26c03b270d9c" formatted="false">"Rollback failed"</string>
   <string name="ui_7a4f963d32cf" formatted="false">"Rose gold"</string>
   <string name="ui_87b85dca19e8" formatted="false">"Rotate"</string>
@@ -1521,6 +1538,7 @@
   <string name="ui_3b281e4dee6e" formatted="false">"Sketch line"</string>
   <string name="ui_66fa5f416c4a" formatted="false">"Sketch name"</string>
   <string name="ui_8fdab3017915" formatted="false">"Sketch object"</string>
+  <string name="ui_b80e5348f048" formatted="false">"Sketch on Datum"</string>
   <string name="ui_3594732ca359" formatted="false">"Sketch pad"</string>
   <string name="ui_e0ca4e6ea91e" formatted="false">"Sketch placement"</string>
   <string name="ui_b27023739f18" formatted="false">"Sketch plane"</string>
@@ -1824,6 +1842,10 @@
   <string name="ui_f277bde93d79" formatted="false">"Wire preview must stay within±1,000,000mm"</string>
   <string name="ui_4c764691608d" formatted="false">"WirePreview"</string>
   <string name="ui_a5be156d0e86" formatted="false">"Wireframe"</string>
+  <string name="ui_aef4af5c8a5c" formatted="false">"WorkAxis"</string>
+  <string name="ui_dfbce784f04f" formatted="false">"WorkFrame"</string>
+  <string name="ui_fb92d08dc431" formatted="false">"WorkPlane"</string>
+  <string name="ui_eaa13d44c979" formatted="false">"WorkPoint"</string>
   <string name="ui_13b7bfcac438" formatted="false">"Working…"</string>
   <string name="ui_5f0bc277d08c" formatted="false">"Worksheet addresses must be uppercase"</string>
   <string name="ui_4ca0a75c2b7f" formatted="false">"Workspace"</string>
@@ -1858,6 +1880,7 @@
   <string name="ui_fd96870f3c87" formatted="false">"Y radius (mm)"</string>
   <string name="ui_ccb5c4982ce9" formatted="false">"Y step"</string>
   <string name="ui_4766ca5c5ba1" formatted="false">"Y vector (mm)"</string>
+  <string name="ui_ede7497fff33" formatted="false">"Yaw (deg)"</string>
   <string name="ui_fe2290d0cec3" formatted="false">"Z (mm)"</string>
   <string name="ui_f332621fc819" formatted="false">"Z degrees"</string>
   <string name="ui_1d607f786bb3" formatted="false">"Z mm"</string>

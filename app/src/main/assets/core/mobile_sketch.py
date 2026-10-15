@@ -4,6 +4,7 @@ import math
 import re
 import FreeCAD as App
 import mobile_part
+import mobile_partdesign_datums as datums
 try:
     import Sketcher
 except ImportError:
@@ -56,8 +57,9 @@ def placement(values):
 
 def validate(obj):
     require(obj)
-    if obj.MapMode not in ("Deactivated","FlatFace"):
+    if obj.MapMode not in ("Deactivated","FlatFace","ObjectXY"):
         raise ValueError("This mobile adapter supports free planes and FlatFace attachment")
+    if obj.MapMode=="ObjectXY":datums.check_sketch(obj)
     if obj.MapMode=="FlatFace":
         links=obj.AttachmentSupport
         if len(links)!=1 or len(links[0][1])!=1:
@@ -177,6 +179,7 @@ def dimension_expression(obj, constraint):
 def edit(obj, request):
     require(obj)
     operation=request["op"]
+    if obj.MapMode=="ObjectXY" and (operation=="sketch_external" or operation=="sketch_expression" and request.get("expression")):raise ValueError("Datum sketches support internal geometry and direct dimensions; expressions/external geometry remain pending")
     if operation=="sketch_name":
         constraint=index(request["index"],obj.ConstraintCount);name=request["name"]
         if not isinstance(name,str) or len(name)>64 or (name and not name.isidentifier()):

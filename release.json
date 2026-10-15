@@ -1,7 +1,7 @@
 {
-  "version": "1.20",
-  "version_name": "1.20",
-  "version_code": 46,
+  "version": "1.21",
+  "version_name": "1.21",
+  "version_code": 47,
   "channel": "release",
   "status": "initial public mobile feature release; broader device qualification pending",
   "scope": "current mobile feature set"

@@ -778,3 +778,23 @@ Hole diameter (mm)|Delik çapı (mm)|Bohrungsdurchmesser (mm)
 Hole depth (mm)|Delik derinliği (mm)|Bohrungstiefe (mm)
 Head diameter (mm)|Havşa çapı (mm)|Senkungsdurchmesser (mm)
 Counterbore depth (mm)|Silindirik havşa derinliği (mm)|Zylindersenkungstiefe (mm)
+Native Datum plane|Yerel referans düzlemi|Native Bezugsebene
+Native Datum axis|Yerel referans ekseni|Native Bezugsachse
+Native Datum point|Yerel referans noktası|Nativer Bezugspunkt
+Native coordinate system|Yerel koordinat sistemi|Natives Koordinatensystem
+Move native Datum|Yerel referansı taşı|Nativen Bezug verschieben
+Sketch on Datum|Referans üzerinde eskiz|Skizze auf Bezug
+Remove unused Datum|Kullanılmayan referansı sil|Unbenutzten Bezug entfernen
+Inspect Datum|Referansı incele|Bezug prüfen
+Preview Datum|Referansı önizle|Bezug anzeigen
+Datum construction preview|Referans geometrisi önizlemesi|Vorschau der Bezugsgeometrie
+Construction reference|Referans geometrisi|Konstruktionsbezug
+Datum name|Referans adı|Bezugsname
+Display length (mm)|Görüntü uzunluğu (mm)|Darstellungslänge (mm)
+Display width (mm)|Görüntü genişliği (mm)|Darstellungsbreite (mm)
+X (mm)|X (mm)|X (mm)
+Y (mm)|Y (mm)|Y (mm)
+Z (mm)|Z (mm)|Z (mm)
+Yaw (deg)|Sapma (derece)|Gierwinkel (Grad)
+Pitch (deg)|Yunuslama (derece)|Nickwinkel (Grad)
+Roll (deg)|Yatış (derece)|Rollwinkel (Grad)

@@ -105,3 +105,19 @@ BodyCounterbore GÖVDE PROFİL AD ÇAP DERİNLİK HAVŞA_ÇAPI HAVŞA_DERİNLİ�
 BodyCountersink GÖVDE PROFİL AD ÇAP DERİNLİK HAVŞA_ÇAPI
 Son katı gövde ucunun üzerinde, +Z yönüne bakan bir XY düzleminde tek daire içeren kullanılmamış bir gövde eskizi seçin. Dairenin merkezi deliğin yerini belirler; gerçek çap eskiz yarıçapından bağımsız olarak Hole.Diameter ile ayarlanır. Yerel delik -Z yönünde keser. Düz tabanlı kör ve boydan boya delikler, özel boyutlu silindirik havşa ve 90 derecelik konik havşa desteklenir. ThroughAll profil düzleminin altındaki tüm malzemeyi keser; kaynak yüksekliğini artırınca profil düzlemini yeni üst yüzeye taşıyın.
 Set Hole.Diameter 3 mm, Set Hole.Depth 5 mm, Set Bore.HoleCutDiameter 6 mm veya Set Bore.HoleCutDepth 2 mm kullanın. Boydan boya derinlik ve konik havşa açısı/derinliği salt okunurdur. Havşa çapı delik çapından büyük olmalıdır. Silindirik havşa derinliği veya 90 derecelik konik havşanın hesaplanan derinliği ana delik derinliğinden küçük olmalıdır. Kaynak sınırı 64 yüz/256 kenardır. Pozitif sınırlı boyutlar, gerçek malzeme çıkarma, tek kapalı katı, gövdeye ait referanslar ve doğru geçmiş gereklidir. Vida dişi, modellenmiş dişler, koniklik/açılı matkap uçları, ters yön ve diğer modlar beklemededir.
+
+Özgün referans geometrisi araçları (1.21)
+BodyPlane GÖVDE AD GÖRÜNTÜ_UZUNLUĞU GÖRÜNTÜ_GENİŞLİĞİ
+BodyAxis GÖVDE AD GÖRÜNTÜ_UZUNLUĞU
+BodyPoint GÖVDE AD
+BodyFrame GÖVDE AD
+DatumPose GÖVDE REFERANS X Y Z SAPMA YUNUSLAMA YATIŞ
+BodySketchDatum GÖVDE REFERANS ESKİZ
+DatumInfo REFERANS
+DatumPreview REFERANS
+RemoveDatum GÖVDE REFERANS
+SketchDetach ESKİZ
+
+Referanslar özgün, katı olmayan gövde üyeleridir. Düzlem veya koordinat sistemi, özgün ObjectXY/AttachmentSupport bağlantısıyla aynı gövdedeki bir eskizi sürebilir. BodySketchDatum yeni bir eskiz oluşturur veya kullanılmamış bir gövde eskizini bağlar. Yerel XY düzleminde çizin ve kısıtlayın; sonra Pad ya da desteklenen diğer araçları kullanın. Referansı taşımak bağlı eskizi ve yerel modeli günceller. Bağlı eskizde SketchPlane/SketchPlacement engellenir; SketchDetach mevcut konumu koruyarak bağlantıyı kaldırır. RemoveDatum için bağımlı nesne kalmamalıdır.
+DatumPose gövdeye göre milimetre ve sapma/yunuslama/yatış açılarını derece olarak alır. DatumInfo ve sonlu görüntü kılavuzları, gövde hareketini de içeren özgün dünya konumunu kullanır. Düzlem uzunluğu/genişliği ve eksen uzunluğu yalnızca görüntü boyutlarıdır; Set WorkPlane.Length 2 cm ile düzenlenebilir. Özgün düzlemler/eksenler matematiksel olarak sınırsız kalır. Nokta işaretleri ve koordinat eksenleri yalnızca görüntü kılavuzudur; katı geometrinin yerine geçmez. Referansların malzeme hacmi, malzeme ağı, yüz/kenar ölçümü veya STEP çıktısı yoktur; sürdükleri katıyı dışa aktarın. Sonsuz eksen önbelleği kaydedilmez; FCStd açılırken özgün yerel sınıf tarafından yeniden oluşturulur.
+Sınırlar:64referans ve64ObjectXY-bağlı eskiz; görüntü boyutu en fazla10.000mm; dünya koordinatları±1.000.000mm; aynı gövdeden tek tam düzlem/koordinat sistemi; ek eşleme/ofset yok; bağlı eskizde dış geometri/ifade yok. Mevcut FlatFace araçları ayrı olarak kullanılabilir. Diğer bağlama modları, eksen/nokta bağlantıları ve ileri referans özellikleri beklemededir.

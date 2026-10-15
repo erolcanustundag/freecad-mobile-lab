@@ -27,7 +27,7 @@ if mobile_sketch.available():
     OBJECT_TYPES.update(mobile_sketch.TYPES)
 if mobile_partdesign.available():
     OBJECT_TYPES.update(mobile_partdesign.TYPES | mobile_partdesign.FRAMES)
-    mobile_part.TYPES.update(mobile_partdesign.TYPES)
+    mobile_part.TYPES.update(mobile_partdesign.TYPES - mobile_partdesign.DATUMS)
 PROPERTY_TYPES = {"App::PropertyLength", "App::PropertyAngle", "App::PropertyArea",
     "App::PropertyVolume", "App::PropertyDistance", "App::PropertyFloatConstraint", "App::PropertyFloat", "App::PropertyInteger",
     "App::PropertyString", "App::PropertyBool", "App::PropertyLink"}
@@ -122,6 +122,7 @@ def snapshot():
             objects.append({"name": obj.Name, "label": obj.Label, "type": obj.TypeId,
                 "properties": props, "expressions": list(obj.ExpressionEngine),
                 "dependencies": [o.Name for o in obj.OutList], "state": list(obj.State)})
+            if obj.TypeId in mobile_partdesign.DATUMS:objects[-1]['construction']=mobile_partdesign.datums.info(obj)
             shape = mobile_part.summary(obj) if mobile_part.available() else None
             if shape is not None:
                 objects[-1]["shape"] = shape
@@ -383,7 +384,7 @@ def _edit(edit):
             value = float(value)
             if not math.isfinite(value):
                 raise ValueError("Use a finite floating-point value")
-        elif obj.TypeId in mobile_part.TYPES and kind in ("App::PropertyLength","App::PropertyDistance","App::PropertyAngle"):
+        elif obj.TypeId in mobile_part.TYPES|mobile_partdesign.DATUMS and kind in ("App::PropertyLength","App::PropertyDistance","App::PropertyAngle"):
             unit="deg" if kind=="App::PropertyAngle" else "mm"
             q=App.Units.Quantity(str(value));value=float(q.Value if str(q.Unit)=="" else q.getValueAs(unit).Value)
             if not math.isfinite(value) or abs(value)>1000000:raise ValueError("Native dimensions must be finite and within±1,000,000")
@@ -402,6 +403,7 @@ def _edit(edit):
     elif action == "expression":
         obj = _object(edit["object"])
         name = _identifier(edit["property"])
+        if obj.TypeId=="Sketcher::SketchObject" and obj.MapMode=="ObjectXY":raise ValueError("Datum attached sketch expressions remain pending")
         if obj.TypeId in mobile_partdesign.TYPES | mobile_partdesign.FRAMES:raise ValueError("Use bounded Body feature dimensions directly; PartDesign expressions remain pending")
         if obj.TypeId in ("Part::RegularPolygon","Part::Prism") and name=="Polygon":raise ValueError("Set polygon sides directly within3–128; side expressions are unsupported")
         if obj.TypeId in ("Part::Helix","Part::Spiral") and name in mobile_primitives.FIELDS[obj.TypeId]:raise ValueError("Set bounded helix/spiral parameters directly; parameter expressions are unsupported")
@@ -684,11 +686,13 @@ def execute(request):
             _doc().recompute()
             raise
     elif action == "wire_preview":
-        result=snapshot();result["wire_preview"]=mobile_part.wire_preview(_object(request["object"]));return result
+        result=snapshot();result["wire_preview"]=mobile_partdesign.datums.preview(_object(request["object"])) if _object(request["object"]).TypeId in mobile_partdesign.DATUMS else mobile_part.wire_preview(_object(request["object"]));return result
     elif action == "element_info":
         result=snapshot();result["element_inspection"]=mobile_part.element_info(_object(request["object"]),request["kind"],request["index"]);return result
     elif action == "shape_info":
         result=snapshot();result["shape_inspection"]=mobile_part.shape_info(_object(request["object"]));return result
+    elif action == "datum_info":
+        result=snapshot();result["datum_inspection"]=mobile_partdesign.datums.info(_object(request["object"]));return result
     elif action == "body_info":
         result=snapshot();result["body_inspection"]=mobile_partdesign.summary(mobile_partdesign.body(_object(request["object"])));return result
     elif action == "sketch_inspect":

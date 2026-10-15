@@ -86,3 +86,5 @@ Application source is LGPL-2.1-or-later; each upstream component retains its own
 1.19 adds original bounded additive/subtractive Pipe and Helix workflows with owned sketch/path/axis links. Circular sections and single line/arc pipe paths, right-handed pitch/height Z-axis helices up to 16 turns, EN/TR/DE touch controls and command input are supported. Other modes and full desktop parity remain NOT COMPLETE.
 
 The 1.20 batch adds original flat Hole workflows: blind, through-all, custom counterbore and 90degree countersink, with 302 native JNI checks, editable dimensions, owned profiles and history, pre-restoration mode/scalar/reference guards, and EN/TR/DE controls and guides.
+
+Development 1.21 adds original owned Datum planes, axes, points and coordinate systems, finite construction guides and ObjectXY sketch attachment to owned planes/frames. Native validation and device qualification are tracked separately.

@@ -10,8 +10,8 @@ import org.json.*;
 final class NativeWirePreview {
     static Dialog show(Activity activity,JSONObject data) throws JSONException {
         Dialog dialog=new Dialog(activity);LinearLayout root=new LinearLayout(activity);root.setOrientation(LinearLayout.VERTICAL);
-        TextView title=new TextView(activity);title.setText(data.getString("object")+" · "+L10n.text(activity,"3D native wire preview"));title.setPadding(20,20,20,12);root.addView(title);
-        Preview view=new Preview(activity,new WireFrame(data));root.addView(view,new LinearLayout.LayoutParams(-1,0,1));
+        TextView title=new TextView(activity);title.setText(data.getString("object")+" · "+L10n.text(activity,data.optBoolean("construction")?"Datum construction preview":"3D native wire preview"));title.setPadding(20,20,20,12);root.addView(title);
+        Preview view=new Preview(activity,new WireFrame(data),data.optBoolean("construction"));root.addView(view,new LinearLayout.LayoutParams(-1,0,1));
         TextView hint=new TextView(activity);hint.setText(L10n.text(activity,"Drag to orbit · pinch to zoom · two fingers to pan"));hint.setPadding(20,12,20,12);root.addView(hint);
         LinearLayout buttons=new LinearLayout(activity);Button fit=new Button(activity);fit.setText(L10n.text(activity,"Fit"));fit.setOnClickListener(v->view.fit());buttons.addView(fit,new LinearLayout.LayoutParams(0,-2,1));
         Button close=new Button(activity);close.setText(L10n.text(activity,"Close"));close.setOnClickListener(v->dialog.dismiss());buttons.addView(close,new LinearLayout.LayoutParams(0,-2,1));root.addView(buttons);
@@ -20,7 +20,7 @@ final class NativeWirePreview {
     private static final class Preview extends View {
         final WireFrame frame;final Paint paint=new Paint(Paint.ANTI_ALIAS_FLAG);
         float yaw=-45,pitch=35.264f,zoom=1,panX=0,panY=0,lastX,lastY,lastSpan;boolean touching;
-        Preview(Context context,WireFrame frame){super(context);this.frame=frame;setBackgroundColor(0xff101820);setContentDescription(L10n.text(context,"3D native wire preview"));}
+        Preview(Context context,WireFrame frame,boolean construction){super(context);this.frame=frame;setBackgroundColor(0xff101820);setContentDescription(L10n.text(context,construction?"Datum construction preview":"3D native wire preview"));}
         void fit(){yaw=-45;pitch=35.264f;zoom=1;panX=panY=0;invalidate();}
         float[] project(double[] curve,int i){return frame.project(curve[i],curve[i+1],curve[i+2],getWidth(),getHeight(),yaw,pitch,zoom,panX,panY);}
         @Override protected void onDraw(Canvas canvas){
@@ -29,7 +29,7 @@ final class NativeWirePreview {
             for(int n=0;n<frame.curves.length;n++){
                 double[] curve=frame.curves[n];Path path=new Path();float[] first=project(curve,0);path.moveTo(first[0],first[1]);
                 for(int i=3;i<curve.length;i+=3){float[] p=project(curve,i);path.lineTo(p[0],p[1]);}
-                paint.setStyle(Paint.Style.STROKE);canvas.drawPath(path,paint);paint.setStyle(Paint.Style.FILL);canvas.drawText(Integer.toString(frame.indices[n]),first[0]+5,first[1]-5,paint);
+                paint.setStyle(Paint.Style.STROKE);canvas.drawPath(path,paint);paint.setStyle(Paint.Style.FILL);canvas.drawText(frame.labels[n],first[0]+5,first[1]-5,paint);
             }
         }
         @Override public boolean onTouchEvent(MotionEvent event){

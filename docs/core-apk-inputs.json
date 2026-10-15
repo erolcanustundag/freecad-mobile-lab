@@ -4189,8 +4189,8 @@
     },
     {
       "path": "scripts/mobile_core.py",
-      "size": 46160,
-      "sha256": "365172f5477208bdae314652f9988ba69ab546bb3eaafdeb9e8b7eee6853e68b"
+      "size": 46763,
+      "sha256": "e289582f4c094298109835aae098aa9d15880c62c0babbb5500828bdb81da005"
     },
     {
       "path": "scripts/mobile_features.py",
@@ -4199,13 +4199,18 @@
     },
     {
       "path": "scripts/mobile_part.py",
-      "size": 21418,
-      "sha256": "680dffade06e5c2aaa950c328855ef1ecedfd202e6f3fe039818e41beaaf709e"
+      "size": 21938,
+      "sha256": "bfdcf5902c8f0f796dd7d16a822e4ff95580cb7547c0bbda9758975c8b918d5a"
     },
     {
       "path": "scripts/mobile_partdesign.py",
-      "size": 40728,
-      "sha256": "763acd97e3edea468b245a25354b0472ff5a7df12820c6c23bf3425be269edf3"
+      "size": 41208,
+      "sha256": "bba4baa7e82bc10acc0493e3526625b94e2b928f8a17908c2d48e5465c3896f0"
+    },
+    {
+      "path": "scripts/mobile_partdesign_datums.py",
+      "size": 13161,
+      "sha256": "df06029d8d4a27376e4b9a0389c95dfa82342131f0fb38cc0cced22c5819c923"
     },
     {
       "path": "scripts/mobile_partdesign_holes.py",
@@ -4214,8 +4219,8 @@
     },
     {
       "path": "scripts/mobile_partdesign_paths.py",
-      "size": 11299,
-      "sha256": "018259355081ad253ec4c6ead8a79e7f6c6075a8aa8c2841504fe437f5eb44d9"
+      "size": 11370,
+      "sha256": "1b947ab8c582905766cffa43eb5eef73b2e45181e71cdff635aec7c1fc12527c"
     },
     {
       "path": "scripts/mobile_primitives.py",
@@ -4229,8 +4234,8 @@
     },
     {
       "path": "scripts/mobile_sketch.py",
-      "size": 24758,
-      "sha256": "bb3e08f1fc525f692875d566bcfc16b8c97033972495b6b9031dd56f06f4479e"
+      "size": 25126,
+      "sha256": "e2ae930b6e51af6419b7e4ba405c10c29ecf0404293f8d008772bf60856a51af"
     },
     {
       "path": "scripts/resources/Mod/Material/Resources/Materials/Appearance/Aluminum.FCMat",
@@ -5493,6 +5498,6 @@
       "sha256": "17e587b5e13ac9851cdbbd769d92a8ba569dcd04dc962f3f24e8a4fec88e47e1"
     }
   ],
-  "asset_zip_sha256": "76115cf5df39befd57d2fa5f31452bf5462e5820dcef82cb072699b767f5a22c",
+  "asset_zip_sha256": "b4e315b74ecb88a5cc4f74c4302d33fdcafafca10c139aa27efc776548badb54",
   "java_jar_sha256": "b4b439629c5aa21db9a3b633d77182d0b25b1c381c391fc447e6104be394bb54"
 }

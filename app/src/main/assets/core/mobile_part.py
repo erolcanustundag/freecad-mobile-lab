@@ -3,6 +3,7 @@
 import math
 import re
 import mobile_primitives
+import mobile_partdesign_datums as datums
 from pathlib import Path
 try:
     import Part
@@ -38,6 +39,7 @@ def configure():
     library.SetBool("ModuleReadOnly",True)
 
 def summary(obj):
+    if obj.TypeId in datums.TYPES:return None
     if not hasattr(obj, "Shape"):
         return None
     shape = obj.Shape
@@ -56,6 +58,7 @@ def summary(obj):
             "solids": len(shape.Solids), "bounds": [box.XMin,box.YMin,box.ZMin,box.XMax,box.YMax,box.ZMax]}
 
 def mesh(obj, tolerance=0.2, maximum=30000):
+    if obj.TypeId in datums.TYPES:raise ValueError('Construction references have no material mesh/metrics/STEP; use DatumInfo or DatumPreview')
     require()
     if not math.isfinite(tolerance) or not 0.05 <= tolerance <= 2:
         raise ValueError("Preview tolerance must be 0.05 to 2 mm")
@@ -77,6 +80,7 @@ def mesh(obj, tolerance=0.2, maximum=30000):
     return vertices
 
 def export_step(obj, root, name):
+    if obj.TypeId in datums.TYPES:raise ValueError('Construction references have no material mesh/metrics/STEP; use DatumInfo or DatumPreview')
     require()
     if not isinstance(name,str) or not 1 <= len(name) <= 160 or '\x00' in name or '/' in name or '\\' in name or not name.lower().endswith(('.step','.stp')):
         raise ValueError("Use a plain STEP filename")
@@ -212,6 +216,7 @@ def validate_document(doc):
 
 
 def shape_info(obj):
+    if obj.TypeId in datums.TYPES:raise ValueError('Construction references have no material mesh/metrics/STEP; use DatumInfo or DatumPreview')
     require()
     if not hasattr(obj,"Shape") or obj.Shape.isNull():raise ValueError("Choose nonempty native Part geometry")
     shape=obj.Shape

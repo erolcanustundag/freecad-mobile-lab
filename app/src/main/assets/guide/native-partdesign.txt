@@ -105,3 +105,19 @@ BodyCounterbore BODY PROFILE NAME DIAMETER DEPTH HEAD_DIAMETER HEAD_DEPTH
 BodyCountersink BODY PROFILE NAME DIAMETER DEPTH HEAD_DIAMETER
 Use one unused owned circle sketch in a Body XY plane facing +Z, over the last solid Tip. The circle center locates the hole; Hole.Diameter sets its actual diameter independently of the sketch radius. The native hole cuts toward -Z. Flat blind and through-all holes, custom cylindrical counterbores and 90degree countersinks are supported. ThroughAll cuts all material below the profile plane; move the profile plane to the stock top after increasing stock height.
 Set Hole.Diameter 3 mm, Hole.Depth 5 mm, Bore.HoleCutDiameter 6 mm or Bore.HoleCutDepth 2 mm. Through-all Depth and countersink angle/depth are read-only. Head diameter must exceed hole diameter. Counterbore head depth, or the derived 90degree countersink depth, must be smaller than the main depth. Source stock is limited to64faces/256edges; positive bounded dimensions, actual material removal, one closed solid, owned references and history are required. Threading, modelled threads, tapered/angled drill points, counterdrill, reverse and other modes remain pending.
+
+Original Datum construction tools (1.21)
+BodyPlane BODY NAME DISPLAY_LENGTH DISPLAY_WIDTH
+BodyAxis BODY NAME DISPLAY_LENGTH
+BodyPoint BODY NAME
+BodyFrame BODY NAME
+DatumPose BODY DATUM X Y Z YAW PITCH ROLL
+BodySketchDatum BODY DATUM SKETCH
+DatumInfo DATUM
+DatumPreview DATUM
+RemoveDatum BODY DATUM
+SketchDetach SKETCH
+
+Datums are original non-solid Body members. A plane or coordinate system can drive a whole owned sketch through original ObjectXY AttachmentSupport. BodySketchDatum creates a sketch or attaches an unused owned sketch. Draw and constrain geometry in local XY, then use Pad or other qualified tools. Moving the Datum updates the attached sketch and its native model. Free SketchPlane/SketchPlacement edits are blocked while attached; SketchDetach retains the current placement and removes the support link. RemoveDatum requires no remaining dependents.
+DatumPose uses Body-local millimetres and yaw/pitch/roll degrees. DatumInfo and finite viewport guides use native world placement, including Body movement. Plane length/width and axis length are display-guide dimensions only, editable with Set WorkPlane.Length 2 cm. Original planes/axes remain mathematically unbounded. Point/frame crosshairs and axes are display guides, never replacement solids. Construction objects have no material volume, mesh, face/edge measurements or STEP export; export a driven solid instead. The axis's derived infinite-edge cache is transient so the original native constructor recreates it when reopening FCStd.
+Limits:64Datums and64ObjectXY-attached sketches, guide dimensions up to10,000mm, finite world coordinates within1,000,000mm, one whole same-Body plane/frame support, no Datum mapping or offsets, no external geometry/expressions in attached sketches. Existing FlatFace workflows remain available separately. Native attachment modes, arbitrary support/axis/point attachments and advanced Datum features remain pending.
