@@ -1,0 +1,13 @@
+{
+  "status": "HOST_ORIGINAL_ATTACHMENT_PROBE_PASS_MOBILE_PENDING",
+  "checks": 35,
+  "scopes": [
+    "Datum Plane FlatFace on owned planar solid face",
+    "Datum Line Tangent on owned straight solid edge",
+    "Datum Point Vertex on owned solid vertex",
+    "Sketch ObjectXY AttachmentOffset on owned Datum plane/frame"
+  ],
+  "native_fcstd_restore": "PASS",
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "android_execution": "NOT_RUN"
+}

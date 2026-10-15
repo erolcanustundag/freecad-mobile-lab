@@ -1,0 +1,9 @@
+# Original support-driven Datum references and sketch offsets
+
+Preserve the sealed 1.21/code47 APK. Select 1.22/code48 before changing application inputs.
+
+The native prototype qualifies four candidate scopes: original Plane/FlatFace on a planar solid face, Line/Tangent on a straight solid edge, Point/Vertex on a solid vertex, and original ObjectXY sketch AttachmentOffset. Original native ownership, source dimensional changes, Body/world transforms, analytic added material, true close/reopen support reconstruction and the transient infinite-axis cache are exercised. This is host API evidence; mobile integration and Android execution remain pending.
+
+Before mobile exposure, require one supported solid owned by the same Body, a current numbered face/edge/vertex, bounded source topology and finite placement. Reject dependency cycles, foreign Bodies, curved support faces/edges and unsupported map engines/modes before assignment/restoration. Preserve the original reference links; never bake support geometry. Protect attached placements and make detach retain their current position. Keep construction objects separate from solid history and material measurements/export.
+
+Compose ObjectXY sketch offsets with the native datum placement for dependency checks, including Hole/Pipe/Helix preflight. Validate finite normalized saved placement/offsets, exact support kind/count/ownership, graph cycles and document budgets before native restoration. Add meaningful JNI tests for source changes, native references, rotation/translation, UndoRedo/atomic rollback, removal dependencies, invalid and malformed FCStd, cold restoration and material STEP. Expose EN/TR/DE commands/forms/guides; rebuild, sign, save and publish a full APK after the four bounded scopes pass. General attachment, curved supports, arbitrary multi-reference construction, Gui/Assembly/full FreeCAD/Rhino parity and F-Droid remain pending.
