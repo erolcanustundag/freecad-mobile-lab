@@ -4204,8 +4204,13 @@
     },
     {
       "path": "scripts/mobile_partdesign.py",
-      "size": 40259,
-      "sha256": "92cef870d6157e58a9599fb09e02c1d2e401532fc53783e82fc782e21da15456"
+      "size": 40728,
+      "sha256": "763acd97e3edea468b245a25354b0472ff5a7df12820c6c23bf3425be269edf3"
+    },
+    {
+      "path": "scripts/mobile_partdesign_holes.py",
+      "size": 7176,
+      "sha256": "baf9262020c27c4f66f951f5fdc37ddd9242826c37edbac07c54fa8357bdec55"
     },
     {
       "path": "scripts/mobile_partdesign_paths.py",
@@ -5488,6 +5493,6 @@
       "sha256": "17e587b5e13ac9851cdbbd769d92a8ba569dcd04dc962f3f24e8a4fec88e47e1"
     }
   ],
-  "asset_zip_sha256": "174fd709e4285a4c71bf1a53f03e694448280c81a7009dbf01c3ce428c35059f",
+  "asset_zip_sha256": "76115cf5df39befd57d2fa5f31452bf5462e5820dcef82cb072699b767f5a22c",
   "java_jar_sha256": "b4b439629c5aa21db9a3b633d77182d0b25b1c381c391fc447e6104be394bb54"
 }

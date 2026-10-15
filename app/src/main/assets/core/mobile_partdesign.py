@@ -7,6 +7,7 @@ import FreeCAD as App
 import mobile_part
 import mobile_sketch
 import mobile_partdesign_paths as paths
+import mobile_partdesign_holes as holes
 
 PartDesign = None
 if '_PartDesign' in sys.builtin_module_names:
@@ -18,7 +19,7 @@ FRAMES = {'App::Origin', 'App::Line', 'App::Plane', 'App::Point'}
 DRESSUP={'PartDesign::Fillet','PartDesign::Chamfer','PartDesign::Draft','PartDesign::Thickness'}
 PATTERNS={'PartDesign::Mirrored','PartDesign::LinearPattern','PartDesign::PolarPattern','PartDesign::Scaled'}
 PATTERN_SOURCES={'PartDesign::Pad','PartDesign::Revolution','PartDesign::AdditiveLoft'}
-TYPES.update(DRESSUP|PATTERNS|paths.TYPES)
+TYPES.update(DRESSUP|PATTERNS|paths.TYPES|{holes.TYPE})
 FEATURES = TYPES - {'PartDesign::Body'}
 PROFILE_FEATURES=FEATURES-DRESSUP-PATTERNS-{'PartDesign::FeatureBase'}
 SCALARS={'PartDesign::Fillet':'Radius','PartDesign::Chamfer':'Size','PartDesign::Draft':'Angle','PartDesign::Thickness':'Value'}
@@ -159,11 +160,13 @@ def validate_extent(feature,profile,source):
         if source is None or abs(feature.Shape.Volume)-abs(source.Shape.Volume)<=1e-7:raise ValueError('A stopping Pad must add material to the preceding solid')
 
 def preflight(doc):
-    if available():paths.preflight(doc)
+    if available():paths.preflight(doc);holes.preflight(doc)
 
 def edit(doc, e, get, identifier):
     require();op=e['op']
-    if op in ('body_add_pipe','body_sub_pipe','body_add_helix','body_sub_helix'):
+    if op=='body_hole':
+        holes.create(doc,e,get,identifier)
+    elif op in ('body_add_pipe','body_sub_pipe','body_add_helix','body_sub_helix'):
         paths.create(doc,e,get,identifier)
     elif op=='body_create':
         name=identifier(e['name']);source=get(e['source']) if e.get('source') else None
@@ -266,12 +269,14 @@ def protected(obj):
 
 def editable(obj,name):
     if obj.TypeId in FRAMES:return name=='Label'
+    if obj.TypeId==holes.TYPE:return holes.editable(obj,name)
     if obj.TypeId in paths.HELICES:return name in ('Label','Refine','Pitch','Height')
     if obj.TypeId in TYPES:return name=='Label' or obj.TypeId in PATTERNS and (name=='Occurrences' and obj.TypeId!='PartDesign::Mirrored' or name=={'PartDesign::LinearPattern':'Length','PartDesign::PolarPattern':'Angle','PartDesign::Scaled':'Factor'}.get(obj.TypeId)) or obj.TypeId in DRESSUP and name==SCALARS[obj.TypeId] or obj.TypeId in FEATURES-{'PartDesign::FeatureBase'} and name=='Refine' or obj.TypeId in ('PartDesign::Pad','PartDesign::Pocket') and (name=='Length' and obj.Type=='Length' or name=='Length2' and obj.Type=='Length' and obj.SideType=='Two sides' or name=='Reversed' and obj.SideType=='One side') or obj.TypeId in ('PartDesign::Revolution','PartDesign::Groove') and name=='Angle'
     return True
 
 def validate_edit(obj,name,value):
     if not editable(obj,name):raise ValueError('Use Body tools for native ownership, Tip and profile links; this feature mode is read-only')
+    if obj.TypeId==holes.TYPE:holes.validate_edit(obj,name,value)
     if obj.TypeId in paths.HELICES:
         paths.helix_parameters(obj.Profile[0],value if name=='Pitch' else obj.Pitch.Value,value if name=='Height' else obj.Height.Value)
     if obj.TypeId in PATTERNS and obj.TypeId!='PartDesign::Mirrored':
@@ -357,7 +362,9 @@ def validate_document(doc):
                 profile,sub=feature.Profile
                 if sub or profile not in members or profile.TypeId not in mobile_sketch.TYPES:raise ValueError('Pad/Pocket needs a whole sketch owned by its Body')
                 closed(profile)
-                if feature.TypeId in paths.TYPES:
+                if feature.TypeId==holes.TYPE:
+                    holes.validate(feature,previous)
+                elif feature.TypeId in paths.TYPES:
                     paths.validate(feature,previous)
                 elif feature.TypeId in ('PartDesign::Pad','PartDesign::Pocket'):
                     validate_extent(feature,profile,previous)
@@ -370,7 +377,7 @@ def validate_document(doc):
                     if len(sections)!=1 or sections[0][0]==profile or sections[0][0] not in members or list(sections[0][1])!=[''] or sections[0][0].TypeId not in mobile_sketch.TYPES or not feature.Ruled or feature.Closed:raise ValueError('Body loft supports two different owned whole sketches in open ruled mode')
                     closed(sections[0][0])
                 if feature.BaseFeature!=previous:raise ValueError('Body solid history is branched or out of order')
-                if feature.TypeId in ('PartDesign::Pocket','PartDesign::Groove','PartDesign::SubtractiveLoft','PartDesign::SubtractivePipe','PartDesign::SubtractiveHelix'):
+                if feature.TypeId in ('PartDesign::Pocket','PartDesign::Groove','PartDesign::SubtractiveLoft','PartDesign::SubtractivePipe','PartDesign::SubtractiveHelix','PartDesign::Hole'):
                     if previous is None:raise ValueError('Subtractive feature needs a base solid')
                     before=abs(previous.Shape.Volume);after=abs(feature.Shape.Volume)
                     if not 1e-7 < before-after < before:raise ValueError('Subtractive feature must remove material and retain one solid')
@@ -504,6 +511,7 @@ def validate_fcstd(tree):
                     import re
                     if face is None or face.get('value')!=source or types.get(source) not in FEATURES or link(feature,'BaseFeature')!=source or face.get('count')!='1' or len(face.findall('Sub'))!=1 or not re.fullmatch(r'Face([1-9][0-9]{0,5})',face.find('Sub').get('value','')):raise ValueError('Saved stopping face must reference the preceding owned Body solid')
                 elif face is None or face.get('value') or face.get('count')!='0' or list(face):raise ValueError('Saved extrusion unexpectedly contains a stopping face')
+            if types[feature]==holes.TYPE:holes.validate_fcstd(node,feature)
             if types[feature] in paths.TYPES:paths.validate_fcstd(node,types,members,feature,children)
             if types[feature] in ('PartDesign::AdditiveLoft','PartDesign::SubtractiveLoft'):
                 section=node(feature,'Sections','LinkSubList')

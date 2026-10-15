@@ -84,3 +84,5 @@ Application source is LGPL-2.1-or-later; each upstream component retains its own
 1.3/code29 adds native mirror copies, rectangular arrays with optional constrained spacing, axis/point symmetry, and driving/reference measurements.1438 Sketcher checks pass, including native updates, history and FCStd.673 reviewed TR/DE strings and guides. The full release is non-debuggable; device/full desktop qualification remains pending.
 
 1.19 adds original bounded additive/subtractive Pipe and Helix workflows with owned sketch/path/axis links. Circular sections and single line/arc pipe paths, right-handed pitch/height Z-axis helices up to 16 turns, EN/TR/DE touch controls and command input are supported. Other modes and full desktop parity remain NOT COMPLETE.
+
+Development 1.20 adds bounded original flat Hole modes: blind, through-all, custom counterbore and 90degree countersink. Qualification is in progress; the full 1.19 release remains available.

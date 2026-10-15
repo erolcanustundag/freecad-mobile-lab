@@ -125,6 +125,7 @@
   <string name="ui_b8d853b22221" formatted="false">"Dil tercihi kaydedilemedi"</string>
   <string name="ui_79b3256d8684" formatted="false">"Adet · 2 ile 10 arasında tam sayı"</string>
   <string name="ui_f0e7cc1e6789" formatted="false">"Adet · 2 ile 100 arasında tam sayı"</string>
+  <string name="ui_02e8140746f4" formatted="false">"Silindirik havşa derinliği (mm)"</string>
   <string name="ui_2f2503014962" formatted="false">"Çökme raporu / kurtarma"</string>
   <string name="ui_51f3263e2e52" formatted="false">"Çökme raporu kopyalandı"</string>
   <string name="ui_d12b417f8416" formatted="false">"Çökme raporu kaydedildi"</string>
@@ -281,6 +282,7 @@
   <string name="ui_6ef096c70437" formatted="false">"Grup üyeliği"</string>
   <string name="ui_7322951ad806" formatted="false">"Büyütme katsayısı (1–4)"</string>
   <string name="ui_bf073fae640d" formatted="false">"Kılavuz"</string>
+  <string name="ui_18b10c6e9667" formatted="false">"Havşa çapı (mm)"</string>
   <string name="ui_63edab638bb0" formatted="false">"CAD şeklini onar"</string>
   <string name="ui_c0df957feb34" formatted="false">"Yükseklik (mm)"</string>
   <string name="ui_096df703ca5a" formatted="false">"Helis"</string>
@@ -291,6 +293,8 @@
   <string name="ui_8295813677d4" formatted="false">"Tüm nesneleri gizle"</string>
   <string name="ui_f1769e281b55" formatted="false">"Birden çok nesneyi gizle"</string>
   <string name="ui_90ccd6497400" formatted="false">"Geçmiş"</string>
+  <string name="ui_c52b07034951" formatted="false">"Delik derinliği (mm)"</string>
+  <string name="ui_bd02bfc62df4" formatted="false">"Delik çapı (mm)"</string>
   <string name="ui_e886724cafe9" formatted="false">"Düz üst yüzeyi boşalt"</string>
   <string name="ui_8007fbe3ae5a" formatted="false">"Yatay / dikey ölçü"</string>
   <string name="ui_d81caee8ffee" formatted="false">"IGES · görünür CAD geometrisi"</string>
@@ -392,8 +396,11 @@
   <string name="ui_76b3da299806" formatted="false">"Yerel eklemeli helis"</string>
   <string name="ui_bbd45dd10ebf" formatted="false">"Yerel katı loft"</string>
   <string name="ui_e041368d3a2d" formatted="false">"Yerel eklemeli boru"</string>
+  <string name="ui_ba8bb30e0b5f" formatted="false">"Yerel kör delik"</string>
   <string name="ui_45211683ce7b" formatted="false">"Yerel kutu"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Yerel koni"</string>
+  <string name="ui_d59b101707b5" formatted="false">"Yerel silindirik havşa"</string>
+  <string name="ui_ccdc3289cc80" formatted="false">"Yerel konik havşa"</string>
   <string name="ui_c62b92752d38" formatted="false">"Özgün çıkarma"</string>
   <string name="ui_6117755b333f" formatted="false">"Yerel silindir"</string>
   <string name="ui_c932b089985d" formatted="false">"Yerel kenar pahı"</string>
@@ -421,6 +428,7 @@
   <string name="ui_0888b5eb8ee9" formatted="false">"Yerel çıkarıcı loft"</string>
   <string name="ui_eef0dc2e313b" formatted="false">"Yerel çıkarmalı boru"</string>
   <string name="ui_633ab45f6fa4" formatted="false">"Yerel tümünü geçen cep"</string>
+  <string name="ui_7963720bd225" formatted="false">"Yerel boydan boya delik"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Yerel torus"</string>
   <string name="ui_ebfa6c174f0a" formatted="false">"Yerel iki taraflı uzatma"</string>
   <string name="ui_16efeb775bf2" formatted="false">"Yerel iki taraflı cep"</string>

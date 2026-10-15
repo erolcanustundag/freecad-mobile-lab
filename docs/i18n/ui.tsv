@@ -770,3 +770,11 @@ Path sketch|Yol eskizi|Pfadskizze
 Path edge|Yol kenarı|Pfadkante
 Helix pitch (mm)|Helis adımı (mm)|Helixsteigung (mm)
 Helix height (mm)|Helis yüksekliği (mm)|Helixhöhe (mm)
+Native blind hole|Yerel kör delik|Natives Sackloch
+Native through-all hole|Yerel boydan boya delik|Native Durchgangsbohrung
+Native counterbore|Yerel silindirik havşa|Native Zylindersenkung
+Native countersink|Yerel konik havşa|Native Kegelsenkung
+Hole diameter (mm)|Delik çapı (mm)|Bohrungsdurchmesser (mm)
+Hole depth (mm)|Delik derinliği (mm)|Bohrungstiefe (mm)
+Head diameter (mm)|Havşa çapı (mm)|Senkungsdurchmesser (mm)
+Counterbore depth (mm)|Silindirik havşa derinliği (mm)|Zylindersenkungstiefe (mm)

@@ -225,7 +225,7 @@
   <string name="ui_718a7e8a582e" formatted="false">"Body"</string>
   <string name="ui_b9e14a17aa5d" formatted="false">"Body A"</string>
   <string name="ui_66640b70e2fc" formatted="false">"Body B"</string>
-  <string name="ui_aeb9fcb1793a" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nPad Body Profile ReversePad 10 reverse\nPad Body Profile SymmetricPad 10 symmetric\nPocketThrough Body CutProfile Through\nPocketFace Body CutProfile Stopped Face5\nPadFace Body AddProfile ToFace Face6\nPadLast Body AddProfile ToLast\nPocketFirst Body CutProfile ToFirst\nPadTwo Body Profile TwoSides 4 6\nPocketTwo Body CutProfile TwoCuts 2 3\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyFillet Body Rounded 1 1\nBodyChamfer Body Beveled 1 1\nBodyDraft Body Drafted 1 5 5\nBodyThickness Body Hollow 6 1\nBodyMirror Body Mirrored XZ\nBodyLinear Body Linear 2 8 X\nBodyPolar Body Polar 4 360 Z\nBodyScaled Body Scaled 2 2\nBodyAddPipe Body Profile Path Edge1 Pipe\nBodySubPipe Body CutProfile CutPath Edge1 PipeCut\nBodyAddHelix Body RadialProfile Helix 3 6\nBodySubHelix Body RadialCut HelixCut 3 6\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, forward/reverse/symmetric total-length Pad/Pocket, native through-all/first-hit Pocket, last-hit Pad and planar preceding-solid face stopping for Pad/Pocket, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Finishing uses current edge/face numbers on the last solid Tip; fillet/chamfer explicit edges, planar Z-axis draft up to45degrees and inward skin thickness are bounded. Patterns use one last owned additive Pad/Revolution/Loft, whole Body origin references,2–16 occurrences and bounded extents/scale. Use forward/reverse for directional cuts; symmetric lengths split equally about the sketch plane. Stopping extents have no editable Length. Two sides uses separate Length and Length2, both positive with total up to1,000,000mm; its direction is fixed. Automatic first/last stopping uses a preceding source up to64faces/256edges. Stopping Pad must add material. Select a current source FaceN parallel to the sketch plane and ahead in the extrusion direction. Path tools use a single circular section: pipes follow one owned line/arc Edge1 in Standard/Transformed/Constant mode; helices use an XZ meridian circle on positive X, original Body Z axis, pitch greater than the circle diameter and at most16turns. Set Helix.Pitch or Height with units. Auxiliary paths, general sections, cone angles and other helix modes remain pending. Other modes, arbitrary lofts, multi-source patterns and reorder remain pending."</string>
+  <string name="ui_7214f39665f5" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nPad Body Profile ReversePad 10 reverse\nPad Body Profile SymmetricPad 10 symmetric\nPocketThrough Body CutProfile Through\nPocketFace Body CutProfile Stopped Face5\nPadFace Body AddProfile ToFace Face6\nPadLast Body AddProfile ToLast\nPocketFirst Body CutProfile ToFirst\nPadTwo Body Profile TwoSides 4 6\nPocketTwo Body CutProfile TwoCuts 2 3\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyFillet Body Rounded 1 1\nBodyChamfer Body Beveled 1 1\nBodyDraft Body Drafted 1 5 5\nBodyThickness Body Hollow 6 1\nBodyMirror Body Mirrored XZ\nBodyLinear Body Linear 2 8 X\nBodyPolar Body Polar 4 360 Z\nBodyScaled Body Scaled 2 2\nBodyAddPipe Body Profile Path Edge1 Pipe\nBodySubPipe Body CutProfile CutPath Edge1 PipeCut\nBodyAddHelix Body RadialProfile Helix 3 6\nBodySubHelix Body RadialCut HelixCut 3 6\nBodyHole Body HoleProfile Hole 2 4\nBodyHoleThrough Body HoleProfile ThroughHole 2\nBodyCounterbore Body HoleProfile Bore 2 4 4 1\nBodyCountersink Body HoleProfile Sink 2 4 4\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, forward/reverse/symmetric total-length Pad/Pocket, native through-all/first-hit Pocket, last-hit Pad and planar preceding-solid face stopping for Pad/Pocket, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Finishing uses current edge/face numbers on the last solid Tip; fillet/chamfer explicit edges, planar Z-axis draft up to45degrees and inward skin thickness are bounded. Patterns use one last owned additive Pad/Revolution/Loft, whole Body origin references,2–16 occurrences and bounded extents/scale. Use forward/reverse for directional cuts; symmetric lengths split equally about the sketch plane. Stopping extents have no editable Length. Two sides uses separate Length and Length2, both positive with total up to1,000,000mm; its direction is fixed. Automatic first/last stopping uses a preceding source up to64faces/256edges. Stopping Pad must add material. Select a current source FaceN parallel to the sketch plane and ahead in the extrusion direction. Path tools use a single circular section: pipes follow one owned line/arc Edge1 in Standard/Transformed/Constant mode; helices use an XZ meridian circle on positive X, original Body Z axis, pitch greater than the circle diameter and at most16turns. Set Helix.Pitch or Height with units. Auxiliary paths, general sections, cone angles and other helix modes remain pending. Native Hole supports flat blind/through-all or custom counterbore/90degree countersink with one owned XY circle and unthreaded forward cuts. Set Diameter/Depth and applicable head dimensions with units. Other modes, arbitrary lofts, multi-source patterns and reorder remain pending."</string>
   <string name="ui_b8ef18d5b319" formatted="false">"Body axis (X/Y/Z)"</string>
   <string name="ui_db4ecb85e22a" formatted="false">"Body from native solid"</string>
   <string name="ui_2041a45c8dc7" formatted="false">"Body guide"</string>
@@ -377,6 +377,9 @@
   <string name="ui_79b3256d8684" formatted="false">"Count · integer 2 to 10"</string>
   <string name="ui_f0e7cc1e6789" formatted="false">"Count · integer 2 to 100"</string>
   <string name="ui_a291d6b844d9" formatted="false">"Count/index must be an integer from "</string>
+  <string name="ui_c55ee620dea7" formatted="false">"Counterbore"</string>
+  <string name="ui_02e8140746f4" formatted="false">"Counterbore depth (mm)"</string>
+  <string name="ui_c12716f04e75" formatted="false">"Countersink"</string>
   <string name="ui_5dc8e0006187" formatted="false">"Crash records could not be read"</string>
   <string name="ui_2f2503014962" formatted="false">"Crash report / recovery"</string>
   <string name="ui_51f3263e2e52" formatted="false">"Crash report copied"</string>
@@ -460,6 +463,7 @@
   <string name="ui_ba297950288d" formatted="false">"Detach · keep selected geometry as a snapshot"</string>
   <string name="ui_a6a7709266d3" formatted="false">"Deutsch"</string>
   <string name="ui_8314fd7f3668" formatted="false">"Diameter"</string>
+  <string name="ui_45e147abd920" formatted="false">"Dimension"</string>
   <string name="ui_b4748fa72923" formatted="false">"Dimensioned drawing sheet"</string>
   <string name="ui_9f4ca9ec0871" formatted="false">"Dimensions"</string>
   <string name="ui_f8d108dfb868" formatted="false">"Dimensions in mm. Select an object before editing. IDs appear on object chips.\nEnter repeats the previous command. Commands are local CAD actions.\n\n"</string>
@@ -723,6 +727,7 @@
   <string name="ui_7322951ad806" formatted="false">"Growth factor (1–4)"</string>
   <string name="ui_bf073fae640d" formatted="false">"Guide"</string>
   <string name="ui_74a1fb4086cf" formatted="false">"Guide · offline tutorials"</string>
+  <string name="ui_18b10c6e9667" formatted="false">"Head diameter (mm)"</string>
   <string name="ui_c166015199fe" formatted="false">"Heal"</string>
   <string name="ui_305a1ecd2b70" formatted="false">"Heal CAD"</string>
   <string name="ui_63edab638bb0" formatted="false">"Heal CAD shape"</string>
@@ -744,7 +749,11 @@
   <string name="ui_bf0e4c8638cc" formatted="false">"Hide · selected object"</string>
   <string name="ui_90ccd6497400" formatted="false">"History"</string>
   <string name="ui_f3798a707139" formatted="false">"History · recent command input"</string>
+  <string name="ui_8cada80d2bdd" formatted="false">"Hole"</string>
+  <string name="ui_c52b07034951" formatted="false">"Hole depth (mm)"</string>
+  <string name="ui_bd02bfc62df4" formatted="false">"Hole diameter (mm)"</string>
   <string name="ui_e222f2b90dfa" formatted="false">"Hole repair exceeds 512 boundary edges"</string>
+  <string name="ui_4f34ac26f302" formatted="false">"HoleProfile"</string>
   <string name="ui_891b9df41628" formatted="false">"Hollow"</string>
   <string name="ui_e886724cafe9" formatted="false">"Hollow planar top"</string>
   <string name="ui_b9483c52724d" formatted="false">"Hollow top"</string>
@@ -1001,8 +1010,11 @@
   <string name="ui_76b3da299806" formatted="false">"Native additive helix"</string>
   <string name="ui_bbd45dd10ebf" formatted="false">"Native additive loft"</string>
   <string name="ui_e041368d3a2d" formatted="false">"Native additive pipe"</string>
+  <string name="ui_ba8bb30e0b5f" formatted="false">"Native blind hole"</string>
   <string name="ui_45211683ce7b" formatted="false">"Native box"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Native cone"</string>
+  <string name="ui_d59b101707b5" formatted="false">"Native counterbore"</string>
+  <string name="ui_ccdc3289cc80" formatted="false">"Native countersink"</string>
   <string name="ui_c62b92752d38" formatted="false">"Native cut"</string>
   <string name="ui_6117755b333f" formatted="false">"Native cylinder"</string>
   <string name="ui_c932b089985d" formatted="false">"Native edge chamfer"</string>
@@ -1031,6 +1043,7 @@
   <string name="ui_0888b5eb8ee9" formatted="false">"Native subtractive loft"</string>
   <string name="ui_eef0dc2e313b" formatted="false">"Native subtractive pipe"</string>
   <string name="ui_633ab45f6fa4" formatted="false">"Native through-all Pocket"</string>
+  <string name="ui_7963720bd225" formatted="false">"Native through-all hole"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Native torus"</string>
   <string name="ui_ebfa6c174f0a" formatted="false">"Native two-sided Pad"</string>
   <string name="ui_16efeb775bf2" formatted="false">"Native two-sided Pocket"</string>
@@ -1493,6 +1506,7 @@
   <string name="ui_8697f432058b" formatted="false">"Silver"</string>
   <string name="ui_1baaf4288309" formatted="false">"Sin"</string>
   <string name="ui_579f3dfe8b29" formatted="false">"Single curve"</string>
+  <string name="ui_e53e8d5300c8" formatted="false">"Sink"</string>
   <string name="ui_b7152342a267" formatted="false">"Size"</string>
   <string name="ui_32fd056d3d4b" formatted="false">"Sketch"</string>
   <string name="ui_1901b5459594" formatted="false">"Sketch B-spline"</string>
@@ -1650,6 +1664,7 @@
   <string name="ui_3dcedac24ee9" formatted="false">"Thread "</string>
   <string name="ui_553658802834" formatted="false">"Through"</string>
   <string name="ui_ce26250a7c4a" formatted="false">"ThroughAll"</string>
+  <string name="ui_b19135023358" formatted="false">"ThroughHole"</string>
   <string name="ui_6209d69a9083" formatted="false">"Title limit 100, notes limit 200 characters"</string>
   <string name="ui_a430ac3065f8" formatted="false">"Title · up to 100 characters"</string>
   <string name="ui_0d27c6add658" formatted="false">"ToFace"</string>

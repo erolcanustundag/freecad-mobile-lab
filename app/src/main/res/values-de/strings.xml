@@ -125,6 +125,7 @@
   <string name="ui_b8d853b22221" formatted="false">"Spracheinstellung konnte nicht gespeichert werden"</string>
   <string name="ui_79b3256d8684" formatted="false">"Anzahl · ganze Zahl von 2 bis 10"</string>
   <string name="ui_f0e7cc1e6789" formatted="false">"Anzahl · ganze Zahl von 2 bis 100"</string>
+  <string name="ui_02e8140746f4" formatted="false">"Zylindersenkungstiefe (mm)"</string>
   <string name="ui_2f2503014962" formatted="false">"Absturzbericht / Wiederherstellung"</string>
   <string name="ui_51f3263e2e52" formatted="false">"Absturzbericht kopiert"</string>
   <string name="ui_d12b417f8416" formatted="false">"Absturzbericht gespeichert"</string>
@@ -281,6 +282,7 @@
   <string name="ui_6ef096c70437" formatted="false">"Gruppenzugehörigkeit"</string>
   <string name="ui_7322951ad806" formatted="false">"Vergrößerungsfaktor (1–4)"</string>
   <string name="ui_bf073fae640d" formatted="false">"Anleitung"</string>
+  <string name="ui_18b10c6e9667" formatted="false">"Senkungsdurchmesser (mm)"</string>
   <string name="ui_63edab638bb0" formatted="false">"CAD-Form reparieren"</string>
   <string name="ui_c0df957feb34" formatted="false">"Höhe (mm)"</string>
   <string name="ui_096df703ca5a" formatted="false">"Helix"</string>
@@ -291,6 +293,8 @@
   <string name="ui_8295813677d4" formatted="false">"Alle Objekte ausblenden"</string>
   <string name="ui_f1769e281b55" formatted="false">"Mehrere Objekte ausblenden"</string>
   <string name="ui_90ccd6497400" formatted="false">"Verlauf"</string>
+  <string name="ui_c52b07034951" formatted="false">"Bohrungstiefe (mm)"</string>
+  <string name="ui_bd02bfc62df4" formatted="false">"Bohrungsdurchmesser (mm)"</string>
   <string name="ui_e886724cafe9" formatted="false">"Körper an ebener Oberseite aushöhlen"</string>
   <string name="ui_8007fbe3ae5a" formatted="false">"Horizontales / vertikales Maß"</string>
   <string name="ui_d81caee8ffee" formatted="false">"IGES · sichtbare CAD-Geometrie"</string>
@@ -392,8 +396,11 @@
   <string name="ui_76b3da299806" formatted="false">"Native additive Helix"</string>
   <string name="ui_bbd45dd10ebf" formatted="false">"Nativer additiver Loft"</string>
   <string name="ui_e041368d3a2d" formatted="false">"Natives additives Rohr"</string>
+  <string name="ui_ba8bb30e0b5f" formatted="false">"Natives Sackloch"</string>
   <string name="ui_45211683ce7b" formatted="false">"Nativer Quader"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Nativer Kegel"</string>
+  <string name="ui_d59b101707b5" formatted="false">"Native Zylindersenkung"</string>
+  <string name="ui_ccdc3289cc80" formatted="false">"Native Kegelsenkung"</string>
   <string name="ui_c62b92752d38" formatted="false">"Originale Differenz"</string>
   <string name="ui_6117755b333f" formatted="false">"Nativer Zylinder"</string>
   <string name="ui_c932b089985d" formatted="false">"Native Kantenfase"</string>
@@ -421,6 +428,7 @@
   <string name="ui_0888b5eb8ee9" formatted="false">"Nativer subtraktiver Loft"</string>
   <string name="ui_eef0dc2e313b" formatted="false">"Natives subtraktives Rohr"</string>
   <string name="ui_633ab45f6fa4" formatted="false">"Native durchgehende Tasche"</string>
+  <string name="ui_7963720bd225" formatted="false">"Native Durchgangsbohrung"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Nativer Torus"</string>
   <string name="ui_ebfa6c174f0a" formatted="false">"Native zweiseitige Aufpolsterung"</string>
   <string name="ui_16efeb775bf2" formatted="false">"Native zweiseitige Tasche"</string>
