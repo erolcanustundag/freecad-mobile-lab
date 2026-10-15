@@ -1,0 +1,46 @@
+{
+  "status": "HOST_ORIGINAL_BOUNDARY_PROBE_PASS_MOBILE_PENDING",
+  "checks": 16,
+  "observed": {
+    "point_contact_Cone": {
+      "state": [
+        "Up-to-date"
+      ],
+      "solids": 1,
+      "material_delta_mm3": 5.684341886080802e-14
+    },
+    "point_contact_Sphere": {
+      "state": [
+        "Up-to-date"
+      ],
+      "solids": 1,
+      "material_delta_mm3": 5.684341886080802e-14
+    },
+    "zero_Cone": {
+      "state": [
+        "Up-to-date"
+      ],
+      "valid": false,
+      "volume_mm3": 0.0
+    },
+    "zero_Sphere": {
+      "state": [
+        "Up-to-date"
+      ],
+      "valid": true,
+      "volume_mm3": 3.351032163829111e-20
+    }
+  },
+  "qualified": [
+    "zero base radius cone as a valid first native solid",
+    "equal cone radii retain the original cone class with native cylinder-equivalent geometry",
+    "true native FCStd reopening"
+  ],
+  "required_mobile_guards": [
+    "nonnegative cone radii with at least one positive radius; equal radii are supported by the native kernel",
+    "positive sphere radius before computation",
+    "one valid closed solid, positive material delta and explicit geometry validation; object state alone is insufficient"
+  ],
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "android_execution": "NOT_RUN"
+}
