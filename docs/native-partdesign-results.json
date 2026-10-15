@@ -1,6 +1,6 @@
 {
-  "version": "1.18",
-  "version_code": 44,
+  "version": "1.19",
+  "version_code": 45,
   "freecad": "1.1.4",
   "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
   "workflows": [
@@ -27,7 +27,11 @@
     "original planar preceding-solid PadUpToFace",
     "original PadUpToLast",
     "original PocketUpToFirst",
-    "original independent two-sided Length/Length2 Pad/Pocket"
+    "original independent two-sided Length/Length2 Pad/Pocket",
+    "original circular-section AdditivePipe on one line/arc sketch edge",
+    "original circular-section SubtractivePipe on one line/arc sketch edge",
+    "original own-Z-axis pitch/height AdditiveHelix",
+    "original own-Z-axis pitch/height SubtractiveHelix"
   ],
   "checks": {
     "partdesign_jni": 1509,
@@ -37,7 +41,8 @@
     "python_regressions": 62,
     "locale_resources": 3,
     "runtime_packaging": 10,
-    "language_command_fallback": 527
+    "language_command_fallback": 527,
+    "partdesign_path_jni": 310
   },
   "android": {
     "abi": "arm64-v8a",
@@ -66,7 +71,16 @@
     "stopping_face": "preceding owned solid, planar, parallel to sketch and ahead in direction",
     "two_side_total_length_mm": 1000000,
     "automatic_stop_source_faces": 64,
-    "automatic_stop_source_edges": 256
+    "automatic_stop_source_edges": 256,
+    "path_stock_faces": 64,
+    "path_stock_edges": 256,
+    "pipe_profile": "one native circle; one owned line/arc Edge1",
+    "pipe_arc_angle_deg": 180,
+    "pipe_arc_minimum_radius": "greater than twice section radius",
+    "helix_axis": "original Body Z axis; XZ positive-radial circular section",
+    "helix_turns": 16,
+    "helix_pitch": "greater than section diameter",
+    "helix_mode": "forward right-handed pitch-height-angle, cone angle0"
   },
   "pending": [
     "other PartDesign modes/features",
@@ -77,6 +91,8 @@
     "other dress-up modes and variable radii",
     "multi-source/other pattern modes",
     "curved/external stopping faces and other extent modes",
-    "taper/offset/custom extrusion vectors and arbitrary side stopping"
+    "taper/offset/custom extrusion vectors and arbitrary side stopping",
+    "general Pipe sections/multiple edges/auxiliary spines/twist laws",
+    "conical/left-handed/other Helix modes"
   ]
 }

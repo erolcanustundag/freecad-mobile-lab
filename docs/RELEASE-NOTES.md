@@ -1,15 +1,18 @@
-# FreeCAD Mobile Lab 1.18
+# FreeCAD Mobile Lab 1.19
 
-Full release of the current mobile feature set, Android code44. Signed non-debuggable ARM64 APK retains the compatible update certificate. Comprehensive FreeCAD/Rhino and device qualification remain incomplete.
+Full release of the current mobile feature set, Android code 45. The signed ARM64 APK keeps the compatible update certificate.
 
-Four original PartDesign extrusion scopes:
-- Native PadUpToFace linked to one preceding-solid planar face.
-- Native PadUpToLast with automatic original-kernel stopping.
-- Native PocketUpToFirst in either cut direction.
-- Independent two-sided Length/Length2 for Pad and Pocket.
+Four new original PartDesign workflows:
 
-PadFace, PadLast, PocketFirst, PadTwo and PocketTwo commands, touch forms and EN/TR/DE guides are included. A stopping Pad must add material to the previous solid; ineffective/disconnected results roll back. Face stopping requires a parallel source plane ahead in the extrusion direction. Automatic first/last sources are bounded to64faces/256edges. Two sides uses positive separate lengths with total up to1,000,000mm and fixed direction; Length2 accepts units. All stopping extents have no editable Length. Pre-restoration native history, mode, second-side, total-length and stopping references are validated before generation.
+- Additive Pipe with an owned circular section and line or circular-arc path.
+- Subtractive Pipe with material-removal and closed-solid checks.
+- Additive Helix around the original Body Z axis.
+- Subtractive Helix with editable pitch and height.
 
-1,509real PartDesignJNI checks;2,324Sketcher,269Part,88App,62Python regressions;527locale,3resource,10packaging checks.764reviewed TR/DE entries/4localized guides. Native geometry/source/profile/body-placement updates, Undo/Redo, atomic rollback, leaf deletion, no-op/complexity/reference guards, FCStd and STEP are tested. The actual APK passes65JNI/69Python ARM64 libraries/extensions,1078Python assets,16KiB/API26 loader/strong-symbol closure, v2/v3 signatures and compatible certificate. Physical Android1.18 execution NOT_RUN.
+Use BodyAddPipe, BodySubPipe, BodyAddHelix and BodySubHelix in the command bar, or the Original PartDesign touch forms. English, Turkish and German controls and guides are included. Pipes retain original profile and Edge1 spine references in Standard/Transformed/Constant mode. Helices retain the owned circle profile and original axis; Set Helix.Pitch 4 mm and Set Helix.Height 9 mm accept units.
 
-Limits: one connected solid, whole owned unused profiles, last solid Tip, positive bounded lengths, zero taper/offset and sketch-normal directions. Named native face references can become invalid after topology changes. Arbitrary second-side stopping, curved/external explicit stopping references, other modes, Pipe/Helix/Hole/Datum/general patterns, full Gui/workbench/Assembly/Rhino/addon qualification remain pending. Four next original Pipe/Helix host prototypes and analytical reference volumes are recorded; mobile integration remains pending. F-Droid NOT_SUBMITTED. Private signing key/continuation excluded from public assets.
+The path tools require separate unused sketches with one geometry each and no external references or expressions. A pipe circle must be centered at the path start, normal to its tangent. Arcs are limited to 180 degrees with radius greater than twice the section radius. Helix circles lie in the XZ meridian plane entirely on positive X. Pitch must exceed the section diameter; height/pitch is limited to 16 turns. Current helix mode is forward/right-handed with zero cone angle. Stock is bounded to 64 faces/256 edges. Single-solid, positive addition/removal, ownership, history and reference checks apply; invalid operations roll back. Live sketch parameters are checked before feature recomputation, and saved scalars/modes/links before restoration.
+
+Validation: 310 new native path JNI checks plus 1,509 existing PartDesign checks; 2,324 Sketcher, 269 Part, 88 App and 62 Python regressions; 527 language/command, 3 resource and 10 packaging checks. Analytic curved and straight sweeps, helix volumes, source/dimension/body placement updates, Undo/Redo, transactions, FCStd, STEP and malformed saved references/modes are covered. 772 reviewed Turkish/German entries and four guide types. APK verification passes 134 ARM64 libraries/extensions, 1,079 Python files, API26 loader/strong-symbol closure, 16KiB alignment and v2/v3 signatures.
+
+Physical Android 1.19 execution is NOT_RUN. Full FreeCAD/Rhino, Gui, Assembly, workbench and addon parity remain NOT_COMPLETE. General sections, multi-edge/auxiliary paths, other helix modes, Hole and Datum workflows remain pending. F-Droid is NOT_SUBMITTED. Private signing material and continuation notes are excluded from public assets.

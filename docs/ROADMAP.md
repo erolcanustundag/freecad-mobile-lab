@@ -198,3 +198,8 @@ Four bounded native scopes implemented: reversed direction for Pad/Pocket, symme
 ##1.18 original native stopping/two-sided extents
 
 Four bounded original native scopes implemented: PadUpToFace, PadUpToLast, PocketUpToFirst and independentTwoSidesLength/Length2 Pad/Pocket. Positive added-material/no-op guards for stopping Pad; automatic source64faces/256edges; whole owned profiles/current lastTip/native history; total two-sided length≤1M and strict pre-restoration reference/order/mode guards.1509realPartDesignJNI+2324/269/88/62/527/3/10 regressions PASS;764EN/TR/DEcontrols/4guides. Signed compatibleAPK static134ELF/1078Python/API26/16KiB/signatures closurePASS and saved. PhysicalAndroid18NOT_RUN/fullGui/workbench/Assembly/RhinoNOT_COMPLETE/F-DroidNOT_SUBMITTED. Next original Pipe/Helix host prototypes pass with mobile integration pending per NEXT-BATCH-1.19.md.
+
+
+## 1.19 — original native pipes and helices
+
+Four bounded original scopes: AdditivePipe, SubtractivePipe, AdditiveHelix and SubtractiveHelix. Circular sections, owned single-line/arc Edge1 paths, right-handed own-Z-axis pitch/height helices, editable lengths, original references and history. 310 path JNI checks plus 1509 PartDesign and 2324/269/88/62/527/3/10 regressions; native analytical geometry, dependencies, placement, rollback, FCStd and STEP. EN/TR/DE772 reviewed entries/four guides. APK134ELF/1079Python/API26/16KiB/signatures verified. Physical Android execution and full parity remain pending. Next: qualify original Hole and Datum prerequisites before exposing another bounded batch; retain unresolved general Pipe/Helix modes explicitly.
