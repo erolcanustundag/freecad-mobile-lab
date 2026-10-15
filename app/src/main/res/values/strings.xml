@@ -225,7 +225,7 @@
   <string name="ui_718a7e8a582e" formatted="false">"Body"</string>
   <string name="ui_b9e14a17aa5d" formatted="false">"Body A"</string>
   <string name="ui_66640b70e2fc" formatted="false">"Body B"</string>
-  <string name="ui_118f0413fc4a" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nPad Body Profile ReversePad 10 reverse\nPad Body Profile SymmetricPad 10 symmetric\nPocketThrough Body CutProfile Through\nPocketFace Body CutProfile Stopped Face5\nPadFace Body AddProfile ToFace Face6\nPadLast Body AddProfile ToLast\nPocketFirst Body CutProfile ToFirst\nPadTwo Body Profile TwoSides 4 6\nPocketTwo Body CutProfile TwoCuts 2 3\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyFillet Body Rounded 1 1\nBodyChamfer Body Beveled 1 1\nBodyDraft Body Drafted 1 5 5\nBodyThickness Body Hollow 6 1\nBodyMirror Body Mirrored XZ\nBodyLinear Body Linear 2 8 X\nBodyPolar Body Polar 4 360 Z\nBodyScaled Body Scaled 2 2\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, forward/reverse/symmetric total-length Pad/Pocket, native through-all/first-hit Pocket, last-hit Pad and planar preceding-solid face stopping for Pad/Pocket, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Finishing uses current edge/face numbers on the last solid Tip; fillet/chamfer explicit edges, planar Z-axis draft up to45degrees and inward skin thickness are bounded. Patterns use one last owned additive Pad/Revolution/Loft, whole Body origin references,2–16 occurrences and bounded extents/scale. Use forward/reverse for directional cuts; symmetric lengths split equally about the sketch plane. Stopping extents have no editable Length. Two sides uses separate Length and Length2, both positive with total up to1,000,000mm; its direction is fixed. Automatic first/last stopping uses a preceding source up to64faces/256edges. Stopping Pad must add material. Select a current source FaceN parallel to the sketch plane and ahead in the extrusion direction. Other modes, arbitrary lofts, multi-source patterns and reorder remain pending."</string>
+  <string name="ui_aeb9fcb1793a" formatted="false">"Body Body\nBodyFrom Solid ImportedBody\nBodySketch Body Profile\nSketchCircle Profile 0 0 10\nPad Body Profile Pad 10\nBodySketch Body CutProfile\nSketchCircle CutProfile 0 0 2\nSketchPlane CutProfile XY 0 0 10\nPocket Body CutProfile Pocket 2\nPad Body Profile ReversePad 10 reverse\nPad Body Profile SymmetricPad 10 symmetric\nPocketThrough Body CutProfile Through\nPocketFace Body CutProfile Stopped Face5\nPadFace Body AddProfile ToFace Face6\nPadLast Body AddProfile ToLast\nPocketFirst Body CutProfile ToFirst\nPadTwo Body Profile TwoSides 4 6\nPocketTwo Body CutProfile TwoCuts 2 3\nBodyRevolve Body RadialProfile Revolved 360 V\nBodyGroove Body CutProfile Grooved 360 V\nBodyAddLoft Body Lower Upper Loft\nBodySubLoft Body BoreLower BoreUpper Bore\nBodyFillet Body Rounded 1 1\nBodyChamfer Body Beveled 1 1\nBodyDraft Body Drafted 1 5 5\nBodyThickness Body Hollow 6 1\nBodyMirror Body Mirrored XZ\nBodyLinear Body Linear 2 8 X\nBodyPolar Body Polar 4 360 Z\nBodyScaled Body Scaled 2 2\nBodyAddPipe Body Profile Path Edge1 Pipe\nBodySubPipe Body CutProfile CutPath Edge1 PipeCut\nBodyAddHelix Body RadialProfile Helix 3 6\nBodySubHelix Body RadialCut HelixCut 3 6\nBodyInfo Body\nBodyTip Body Pad\nBodyTip Body Pocket\nRemoveBodyFeature Body Pocket\n\nOriginal PartDesign Body origin/ownership, linked base solids, forward/reverse/symmetric total-length Pad/Pocket, native through-all/first-hit Pocket, last-hit Pad and planar preceding-solid face stopping for Pad/Pocket, forward-angle Revolution/Groove about sketch H/V axes and two-profile ruled additive/subtractive lofts. BodySketch creates a sketch or adopts an unused unowned sketch. Tip selects an owned solid feature; append/remove requires the last solid Tip. Origin frames are protected. Pocket must remove material while retaining a single solid. Lengths use mm; Set Pad.Length 2 cm accepts units. Finishing uses current edge/face numbers on the last solid Tip; fillet/chamfer explicit edges, planar Z-axis draft up to45degrees and inward skin thickness are bounded. Patterns use one last owned additive Pad/Revolution/Loft, whole Body origin references,2–16 occurrences and bounded extents/scale. Use forward/reverse for directional cuts; symmetric lengths split equally about the sketch plane. Stopping extents have no editable Length. Two sides uses separate Length and Length2, both positive with total up to1,000,000mm; its direction is fixed. Automatic first/last stopping uses a preceding source up to64faces/256edges. Stopping Pad must add material. Select a current source FaceN parallel to the sketch plane and ahead in the extrusion direction. Path tools use a single circular section: pipes follow one owned line/arc Edge1 in Standard/Transformed/Constant mode; helices use an XZ meridian circle on positive X, original Body Z axis, pitch greater than the circle diameter and at most16turns. Set Helix.Pitch or Height with units. Auxiliary paths, general sections, cone angles and other helix modes remain pending. Other modes, arbitrary lofts, multi-source patterns and reorder remain pending."</string>
   <string name="ui_b8ef18d5b319" formatted="false">"Body axis (X/Y/Z)"</string>
   <string name="ui_db4ecb85e22a" formatted="false">"Body from native solid"</string>
   <string name="ui_2041a45c8dc7" formatted="false">"Body guide"</string>
@@ -731,6 +731,9 @@
   <string name="ui_c0df957feb34" formatted="false">"Height (mm)"</string>
   <string name="ui_096df703ca5a" formatted="false">"Helix"</string>
   <string name="ui_cc7565366ca4" formatted="false">"Helix 2 6 5 false"</string>
+  <string name="ui_48504fb9ecec" formatted="false">"Helix height (mm)"</string>
+  <string name="ui_bda5e2df1a8a" formatted="false">"Helix pitch (mm)"</string>
+  <string name="ui_5b3a244cff78" formatted="false">"HelixCut"</string>
   <string name="ui_c47ae15370cf" formatted="false">"Help"</string>
   <string name="ui_1e5bed900418" formatted="false">"Help [command] · show commands"</string>
   <string name="ui_c3637a3ff5e5" formatted="false">"Hexagon 6 10"</string>
@@ -995,7 +998,9 @@
   <string name="ui_871cb729cd33" formatted="false">"Native Part placement"</string>
   <string name="ui_788019d78b2d" formatted="false">"Native Pocket"</string>
   <string name="ui_55b6979271bb" formatted="false">"Native Pocket to first face"</string>
+  <string name="ui_76b3da299806" formatted="false">"Native additive helix"</string>
   <string name="ui_bbd45dd10ebf" formatted="false">"Native additive loft"</string>
+  <string name="ui_e041368d3a2d" formatted="false">"Native additive pipe"</string>
   <string name="ui_45211683ce7b" formatted="false">"Native box"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Native cone"</string>
   <string name="ui_c62b92752d38" formatted="false">"Native cut"</string>
@@ -1022,7 +1027,9 @@
   <string name="ui_266b14b41bae" formatted="false">"Native solid offset"</string>
   <string name="ui_c2c2cc1eb77b" formatted="false">"Native sphere"</string>
   <string name="ui_5d6d243f6ba5" formatted="false">"Native spiral"</string>
+  <string name="ui_6299ac8b1435" formatted="false">"Native subtractive helix"</string>
   <string name="ui_0888b5eb8ee9" formatted="false">"Native subtractive loft"</string>
+  <string name="ui_eef0dc2e313b" formatted="false">"Native subtractive pipe"</string>
   <string name="ui_633ab45f6fa4" formatted="false">"Native through-all Pocket"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Native torus"</string>
   <string name="ui_ebfa6c174f0a" formatted="false">"Native two-sided Pad"</string>
@@ -1167,6 +1174,9 @@
   <string name="ui_12b358eec8d3" formatted="false">"PartThickness"</string>
   <string name="ui_c946dfeecf15" formatted="false">"PartWedge"</string>
   <string name="ui_190aa842474f" formatted="false">"Patch"</string>
+  <string name="ui_519e39132bb9" formatted="false">"Path"</string>
+  <string name="ui_c01bf170b3d4" formatted="false">"Path edge"</string>
+  <string name="ui_7c149bdf187a" formatted="false">"Path sketch"</string>
   <string name="ui_1fff6a31661b" formatted="false">"Pattern"</string>
   <string name="ui_67b4d6aa8d08" formatted="false">"Pavilion depth (mm)"</string>
   <string name="ui_7db58cff8134" formatted="false">"Pendant frame"</string>
@@ -1176,6 +1186,7 @@
   <string name="ui_00dae071c082" formatted="false">"Pipe"</string>
   <string name="ui_2dcff8cab2c4" formatted="false">"Pipe along curve"</string>
   <string name="ui_289c50531d08" formatted="false">"Pipe radius"</string>
+  <string name="ui_e648fafaee43" formatted="false">"PipeCut"</string>
   <string name="ui_4248ec8cc433" formatted="false">"Pitch per turn (mm)"</string>
   <string name="ui_f0316742b427" formatted="false">"Pivot X"</string>
   <string name="ui_7941fe8c6d14" formatted="false">"Pivot Y"</string>
@@ -1256,6 +1267,7 @@
   <string name="ui_7cb8efa2f261" formatted="false">"Python macros"</string>
   <string name="ui_a60f2c73604f" formatted="false">"Quality"</string>
   <string name="ui_95253203f793" formatted="false">"RIGHT"</string>
+  <string name="ui_78dfdcf47256" formatted="false">"RadialProfile"</string>
   <string name="ui_e5aaeaac2e19" formatted="false">"Radius"</string>
   <string name="ui_b527ad3e5740" formatted="false">"Radius (mm)"</string>
   <string name="ui_3114cd27eef6" formatted="false">"Radius / distance / inward wall (mm)"</string>

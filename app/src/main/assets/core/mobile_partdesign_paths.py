@@ -62,10 +62,12 @@ def references(feature):
     if feature.Profile is None:raise ValueError('Path feature requires its owned circle profile')
     profile,subs=feature.Profile
     if subs or pd.owner(profile)!=b:raise ValueError('Path profile must be a whole sketch owned by the same Body')
+    if any(o!=feature and o.TypeId in pd.FEATURES for o in profile.InList):raise ValueError('Path feature requires its own separate profile sketch')
     if feature.TypeId in PIPES:
         if feature.Spine is None:raise ValueError('Pipe requires its owned path sketch')
         path,names=feature.Spine
         if pd.owner(path)!=b or list(names)!=['Edge1']:raise ValueError('Pipe spine must be Edge1 of a sketch owned by the same Body')
+        if any(o!=feature and o.TypeId in pd.FEATURES for o in path.InList):raise ValueError('Pipe requires its own separate path sketch')
         pipe_parameters(profile,path,'Edge1')
     else:
         if feature.ReferenceAxis is None or feature.ReferenceAxis[0]!=pd.z_axis(b) or list(feature.ReferenceAxis[1])!=['']:
@@ -133,7 +135,8 @@ def validate_fcstd(node,types,members,feature,children):
         if n is None or n.get('value') or n.get('count')!='0' or list(n):raise ValueError('Unsupported saved path reference: '+prop)
     for prop,tag,v in [('Midplane','Bool','false'),('Reversed','Bool','false'),('Suppressed','Bool','false'),('AllowMultiFace','Bool','true'),('FuzzyTolerance','Float','-1')]:
         actual=value(prop,tag)
-        if (float(actual)!=float(v)) if tag=='Float' else actual!=v:raise ValueError('Unsupported saved path mode: '+prop)
+        different=float(actual)!=float(v) if tag=='Float' else actual!=v
+        if different:raise ValueError('Unsupported saved path mode: '+prop)
     for prop in ('UpToFace','UpToFace2'):empty(prop,'LinkSub')
     for prop in ('UpToShape','UpToShape2'):empty(prop,'LinkSubList')
     if types[feature] in PIPES:

@@ -762,3 +762,11 @@ Native two-sided Pad|Yerel iki taraflı uzatma|Native zweiseitige Aufpolsterung
 Native two-sided Pocket|Yerel iki taraflı cep|Native zweiseitige Tasche
 First-side length (mm)|Birinci taraf uzunluğu (mm)|Länge der ersten Seite (mm)
 Second-side length (mm)|İkinci taraf uzunluğu (mm)|Länge der zweiten Seite (mm)
+Native additive pipe|Yerel eklemeli boru|Natives additives Rohr
+Native subtractive pipe|Yerel çıkarmalı boru|Natives subtraktives Rohr
+Native additive helix|Yerel eklemeli helis|Native additive Helix
+Native subtractive helix|Yerel çıkarmalı helis|Native subtraktive Helix
+Path sketch|Yol eskizi|Pfadskizze
+Path edge|Yol kenarı|Pfadkante
+Helix pitch (mm)|Helis adımı (mm)|Helixsteigung (mm)
+Helix height (mm)|Helis yüksekliği (mm)|Helixhöhe (mm)
