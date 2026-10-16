@@ -367,8 +367,8 @@
     {
       "name": "FreeCAD-Mobile-Lab-1.24-public-source.zip",
       "kind": "application-source",
-      "size_bytes": 32603310,
-      "sha256": "b1a6b12b2281ec9253c1083a60530c405d6ce58d03513bfb55cd7dd7fcab03a6"
+      "size_bytes": 32601733,
+      "sha256": "fb3702ecf4d0049d19231e371bbbe733f857e1095a47618a9ae82bdf39ddbdd6"
     }
   ]
 }
