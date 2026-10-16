@@ -1,0 +1,37 @@
+{
+  "status": "HOST_NATIVE_MASS_PROTOTYPE_PASS_MOBILE_NOT_IMPLEMENTED",
+  "checks": 22,
+  "ellipsoid_observation": {
+    "volume": 8.377580538266674,
+    "signed_volume": 8.377580538266674,
+    "centroid": [
+      -3.537007212711326e-17,
+      -9.887923661172456e-17,
+      -5.3009243876746415e-17
+    ],
+    "estimated_relative_integration_error": 1.1657341579487537e-15,
+    "requested_relative_tolerance": 1e-10,
+    "faces": 1,
+    "edges": 3,
+    "analytic_volume": 8.377580409572781,
+    "default_native_volume": 8.373916503586532,
+    "ideal_volume_discrepancy": 1.2869389287573085e-07
+  },
+  "android_execution": "NOT_RUN",
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "limits": {
+    "brep_bytes": 4194304,
+    "faces": 64,
+    "edges": 256,
+    "world_coordinate_mm": 1000000,
+    "relative_tolerance": [
+      1e-10,
+      0.0001
+    ]
+  },
+  "pending": [
+    "production integration and consistent material validation",
+    "Android execution and malformed/geometry/performance qualification",
+    "ellipsoid factories/angles and JNI/cold/UI qualification"
+  ]
+}

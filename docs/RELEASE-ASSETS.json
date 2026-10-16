@@ -7,7 +7,7 @@
   "milestone_gate": "NOT_COMPLETE",
   "android_runtime": "NOT_RUN",
   "historical_unversioned_startup_report": "USER_REPORTED_STARTUP",
-  "publication": "PENDING",
+  "publication": "PUBLISHED_VERIFIED",
   "assets": [
     {
       "name": "FreeCAD-Mobile-Lab-1.26-arm64.apk",

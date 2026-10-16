@@ -1,0 +1,28 @@
+{
+  "status": "EXPERIMENTAL_ARM64_STATIC_PASS_MOBILE_NOT_PACKAGED",
+  "architecture": "AArch64",
+  "minimum_alignment": 16384,
+  "python_entrypoint": "PyInit__mobile_gprops",
+  "native_loader_closure": true,
+  "strong_symbol_api26_closure": true,
+  "needed": [
+    "libpython3.13.so",
+    "libc++_shared.so",
+    "libTKTopAlgo.so",
+    "libTKBRep.so",
+    "libTKGeomAlgo.so",
+    "libTKGeomBase.so",
+    "libTKG3d.so",
+    "libTKG2d.so",
+    "libTKMath.so",
+    "libTKernel.so",
+    "libm.so",
+    "libdl.so",
+    "libc.so"
+  ],
+  "size_bytes": 69952,
+  "sha256": "f217f6e22e318e6129d0fb9ad843a227c1426d2934aa18440ba2171c183f0bb6",
+  "source_sha256": "b533c5382f70a54f2ec5637a1204dbefc2003c58992c651d6825358cad608f35",
+  "android_execution": "NOT_RUN",
+  "app_integration": "NOT_IMPLEMENTED"
+}
