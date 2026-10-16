@@ -26,7 +26,7 @@ public final class PartDesignRoundPrimitiveAdapterHostTest {
         cmd("BodyPrimitivePose Body SphereCut 6 5 5 30 20 10");volume("Body",1100+53*Math.PI/108);cmd("Undo");
         cmd("PartPlacement Body 1 2 3 30 20 10");volume("Body",1100+53*Math.PI/108);cmd("Undo");bad("PartPlacement Body 999999 0 0 0 0 0");
         cmd("BodyTip Body Stock");bad("BodyAddSphere Body Branched 1 5 5 11 0 0 0");cmd("BodyTip Body ConeCut");
-        cmd("Begin RoundAtomic");cmd("Set Stock.Height 12 mm");bad("BodyPrimitivePose Body Dome 5 5 100 0 0 0");volume("Body",1100+53*Math.PI/108);python("assert abs(App.ActiveDocument.Stock.Height.Value-11)<1e-8");
+        cmd("Begin RoundAtomic");cmd("Set Stock.Height 11.5 mm");bad("BodyPrimitivePose Body Dome 5 5 100 0 0 0");volume("Body",1100+53*Math.PI/108);python("assert abs(App.ActiveDocument.Stock.Height.Value-11)<1e-8");
         cmd("Body OtherBody");cmd("BodyAddSphere OtherBody Ball 2");volume("OtherBody",32*Math.PI/3);bad("BodyPrimitivePose Body Ball 0 0 0 0 0 0");
         cmd("Body ApexBody");cmd("BodyAddCone ApexBody Apex 0 2 3");volume("ApexBody",4*Math.PI);cmd("Set Apex.Radius1 2 mm");volume("ApexBody",12*Math.PI);cmd("Undo");
         cmd("Body EqualBody");cmd("BodyAddCone EqualBody Equal 1 1 3");volume("EqualBody",3*Math.PI);python("assert App.ActiveDocument.Equal.TypeId=='PartDesign::AdditiveCone'");

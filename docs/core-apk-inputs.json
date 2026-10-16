@@ -4224,8 +4224,8 @@
     },
     {
       "path": "scripts/mobile_partdesign_primitives.py",
-      "size": 7184,
-      "sha256": "f2c6310ffda074a3177623383a761e47514e59921f9ff19e44f34b585547535d"
+      "size": 8122,
+      "sha256": "ee604e42d162a19765a0bcbf7b1bb43c97c8ebe708a275ef91f43ef28f4f67ca"
     },
     {
       "path": "scripts/mobile_partdesign_supports.py",
@@ -5508,6 +5508,6 @@
       "sha256": "17e587b5e13ac9851cdbbd769d92a8ba569dcd04dc962f3f24e8a4fec88e47e1"
     }
   ],
-  "asset_zip_sha256": "f19b1b514994922fd50614da29dd92e77fb31b9df78c21006bcabd53579ab675",
+  "asset_zip_sha256": "ab1b0d83d05e7ac1f48c09ee4f1b39bc8b61a8f96fdfdc37d2450851920209a3",
   "java_jar_sha256": "b4b439629c5aa21db9a3b633d77182d0b25b1c381c391fc447e6104be394bb54"
 }

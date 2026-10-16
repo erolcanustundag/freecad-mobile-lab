@@ -40,7 +40,7 @@ public final class PartDesignPrimitiveAdapterHostTest {
         cmd("Close");cmd("Open Primitives.FCStd");volume("Body",1180+10*Math.PI);python("d=App.ActiveDocument\nassert d.Bore.BaseFeature==d.Notch and d.Notch.BaseFeature==d.Boss and d.Boss.BaseFeature==d.Block and d.Body.Tip==d.Bore\nassert d.WorkPlane.AttachmentSupport[0][0]==d.Block and d.Marker.AttachmentSupport[0][0]==d.WorkPlane");
         cmd("NewDoc PrimitiveBudget");cmd("Body BudgetBody");
         for(int i=0;i<64;i++)cmd("BodyAddBox BudgetBody Block"+i+" 1 1 1 "+i+" 0 0 0 0 0");
-        volume("BudgetBody",64);bad("BodyAddBox BudgetBody TooMany 1 1 1 64 0 0 0 0 0");check(cmd("BodyInfo BudgetBody").getJSONObject("body_inspection").getJSONArray("solid_history").length()==64,"Native primitive budget rollback");
+        volume("BudgetBody",64);bad("BodyAddSphere BudgetBody TooManySphere 1 64 0 0 0 0 0");bad("BodyAddCone BudgetBody TooManyCone 1 0 2 64 0 0 0 0 0");bad("BodyAddBox BudgetBody TooMany 1 1 1 64 0 0 0 0 0");check(cmd("BodyInfo BudgetBody").getJSONObject("body_inspection").getJSONArray("solid_history").length()==64,"Native primitive budget rollback");
         System.out.println("PASS original primitive JNI checks: "+checks);
     }
 }
