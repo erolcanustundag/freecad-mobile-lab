@@ -137,3 +137,6 @@ Belge başına en fazla 64 temel katı; dünya koordinatları 1.000.000 mm, kayn
 
 Özgün Gövde konileri ve küreleri
 Tam koniler sıfır veya pozitif Radius1/Radius2 (en az biri pozitif) ve pozitif Height kabul eder. Eşit yarıçaplar ve sıfır yarıçaplı uçlar desteklenir. Tam kürelerde Radius pozitiftir. BodyAddCone/BodySubCone BODY NAME R1 R2 HEIGHT ve BodyAddSphere/BodySubSphere BODY NAME RADIUS komutlarına isteğe bağlı X Y Z YAW PITCH ROLL ekleyin. Set birim kabul eder; BodyPrimitivePose özgün özellikleri taşır. Ekleme bağlantılı malzeme eklemeli; kesme malzeme kaldırmalı ve tek kapalı katıyı korumalıdır. Açılar, ifadeler ve bağlı eşleme kısıtlıdır.
+
+Özgün torus ve düzgün prizma Gövde araçları
+BodyAddTorus/BodySubTorus BODY NAME MAJOR MINOR [X Y Z YAW PITCH ROLL] tam halka torus oluşturur; yarıçaplar pozitif olmalı ve ana yarıçap kesit yarıçapından büyük olmalıdır. BodyAddPrism/BodySubPrism BODY NAME SIDES CIRCUMRADIUS HEIGHT [konum]3–32 tam sayı kenarlı düz düzgün prizma oluşturur. Radius1/Radius2/Circumradius/Height için Set uzunluk birimi kabul eder; Polygon tam sayı ister. Tam özgün açılar, elle eşleme, tek bağlantılı katı, pozitif malzeme değişimi ve mevcut sınırlar korunur.

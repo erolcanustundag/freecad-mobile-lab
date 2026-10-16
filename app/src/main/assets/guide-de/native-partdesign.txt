@@ -137,3 +137,6 @@ Höchstens 64 Grundelemente pro Dokument, Weltkoordinaten innerhalb von 1.000.00
 
 Originale Körperkegel und Kugeln
 Vollständige Kegel benötigen nichtnegative Radius1/Radius2 (mindestens einer positiv) und positive Height. Gleiche Radien und Spitzen mit Radius null sind möglich. Vollständige Kugeln benötigen positive Radius. BodyAddCone/BodySubCone BODY NAME R1 R2 HEIGHT und BodyAddSphere/BodySubSphere BODY NAME RADIUS akzeptieren optional X Y Z YAW PITCH ROLL. Set akzeptiert Einheiten; BodyPrimitivePose verschiebt die Originalmerkmale. Additionen müssen verbundenes Material hinzufügen; Schnitte müssen Material entfernen und einen geschlossenen Körper erhalten. Winkel, Ausdrücke und angehängte Zuordnungen bleiben eingeschränkt.
+
+Originale Ringtorus- und regelmäßige Prisma-Werkzeuge
+BodyAddTorus/BodySubTorus BODY NAME MAJOR MINOR [X Y Z YAW PITCH ROLL] erzeugt einen vollständigen Ringtorus; beide Radien müssen positiv sein und der Hauptradius muss größer sein. BodyAddPrism/BodySubPrism BODY NAME SIDES CIRCUMRADIUS HEIGHT [Position] erzeugt ein gerades regelmäßiges Prisma mit3–32 ganzzahligen Seiten. Set akzeptiert Längeneinheiten für Radius1/Radius2/Circumradius/Height; Polygon benötigt eine Ganzzahl. Vollständige native Winkel, manuelle Zuordnung, ein verbundener Körper, positive Materialänderung und bestehende Grenzen bleiben erforderlich.

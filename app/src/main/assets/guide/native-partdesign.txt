@@ -137,3 +137,6 @@ There are at most 64 primitives per document, bounded world coordinates within 1
 
 Original Body cones and spheres
 Full cones accept nonnegative Radius1/Radius2 (at least one positive) and positive Height. Equal radii and zero-radius apices are supported. Full spheres use positive Radius. Use BodyAddCone/BodySubCone BODY NAME R1 R2 HEIGHT and BodyAddSphere/BodySubSphere BODY NAME RADIUS, optionally followed by X Y Z YAW PITCH ROLL. Set accepts units; BodyPrimitivePose moves these original features. Additions must add connected material; cuts must remove material and retain one closed solid. Angles, expressions and attached mapping remain restricted.
+
+Original ring torus and regular prism Body tools
+BodyAddTorus/BodySubTorus BODY NAME MAJOR MINOR [X Y Z YAW PITCH ROLL] creates a full ring torus; both radii must be positive and major must exceed minor. BodyAddPrism/BodySubPrism BODY NAME SIDES CIRCUMRADIUS HEIGHT [pose] creates a straight regular prism with3–32 integer sides. Set Radius1/Radius2/Circumradius/Height with length units; Set Polygon uses an integer. Full native angles, manual mapping, one connected solid, positive material change and existing budgets remain required.

@@ -142,7 +142,9 @@
   <string name="ui_0225bc121235" formatted="false">"AdditiveBox"</string>
   <string name="ui_fe04722a0522" formatted="false">"AdditiveCone"</string>
   <string name="ui_8f321606e5f4" formatted="false">"AdditiveCylinder"</string>
+  <string name="ui_669093305a83" formatted="false">"AdditivePrism"</string>
   <string name="ui_177cbfdc1ae2" formatted="false">"AdditiveSphere"</string>
+  <string name="ui_e1953f5e96b4" formatted="false">"AdditiveTorus"</string>
   <string name="ui_c83b0ec2d98a" formatted="false">"Align"</string>
   <string name="ui_aa5a3afa1cfa" formatted="false">"Align matching bounds"</string>
   <string name="ui_49662530d12a" formatted="false">"Align objects"</string>
@@ -316,6 +318,7 @@
   <string name="ui_48ea67c14d15" formatted="false">"Chamfer distance"</string>
   <string name="ui_86330e4cdd10" formatted="false">"ChamferSelected"</string>
   <string name="ui_2015aba5fc12" formatted="false">"ChamferSelected distance edgeIndex [edgeIndex ...]"</string>
+  <string name="ui_879f0b1bef59" formatted="false">"Channel"</string>
   <string name="ui_0062c851307d" formatted="false">"Check bed envelope / axis permutations"</string>
   <string name="ui_cc76f6f1e953" formatted="false">"Checking the previous session…"</string>
   <string name="ui_bcf399c7ae68" formatted="false">"Choose "</string>
@@ -328,6 +331,8 @@
   <string name="ui_771b3d15b506" formatted="false">"Choose rail · selected curve is the profile"</string>
   <string name="ui_d8d96531afb1" formatted="false">"Choose two different objects"</string>
   <string name="ui_1cc7820a08e2" formatted="false">"Circle"</string>
+  <string name="ui_2c3afa9ddaf1" formatted="false">"Circumradius"</string>
+  <string name="ui_15af57e221de" formatted="false">"Circumradius (mm)"</string>
   <string name="ui_719ea396ad92" formatted="false">"Clear"</string>
   <string name="ui_a5880260dd6b" formatted="false">"Clear expression"</string>
   <string name="ui_9dd6875c99f9" formatted="false">"Clear · empty workspace; Undo restores it"</string>
@@ -757,6 +762,8 @@
   <string name="ui_5b3a244cff78" formatted="false">"HelixCut"</string>
   <string name="ui_c47ae15370cf" formatted="false">"Help"</string>
   <string name="ui_1e5bed900418" formatted="false">"Help [command] · show commands"</string>
+  <string name="ui_d5d921bf7faf" formatted="false">"HexBoss"</string>
+  <string name="ui_7acc0182e19f" formatted="false">"HexCut"</string>
   <string name="ui_c3637a3ff5e5" formatted="false">"Hexagon 6 10"</string>
   <string name="ui_34d8b60fe253" formatted="false">"Hide"</string>
   <string name="ui_8295813677d4" formatted="false">"Hide all objects"</string>
@@ -959,6 +966,7 @@
   <string name="ui_f5985f19f738" formatted="false">"Minimum distance requires exact CAD objects"</string>
   <string name="ui_8dfb742fd17b" formatted="false">"Minimum draft angle to +Z pull direction (degrees)"</string>
   <string name="ui_897165b5f2b0" formatted="false">"Minimum geometric distance"</string>
+  <string name="ui_2f72c2b7b7c7" formatted="false">"Minor radius (mm)"</string>
   <string name="ui_74adc5789ce9" formatted="false">"Mirror"</string>
   <string name="ui_03fc6d3db034" formatted="false">"Mirror copy"</string>
   <string name="ui_48065392c2e7" formatted="false">"Mirror copy across plane"</string>
@@ -1035,7 +1043,9 @@
   <string name="ui_76b3da299806" formatted="false">"Native additive helix"</string>
   <string name="ui_bbd45dd10ebf" formatted="false">"Native additive loft"</string>
   <string name="ui_e041368d3a2d" formatted="false">"Native additive pipe"</string>
+  <string name="ui_554cad4fb886" formatted="false">"Native additive prism"</string>
   <string name="ui_9b72bcb27a54" formatted="false">"Native additive sphere"</string>
+  <string name="ui_60c3641d08f8" formatted="false">"Native additive torus"</string>
   <string name="ui_ba8bb30e0b5f" formatted="false">"Native blind hole"</string>
   <string name="ui_45211683ce7b" formatted="false">"Native box"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Native cone"</string>
@@ -1072,7 +1082,9 @@
   <string name="ui_6299ac8b1435" formatted="false">"Native subtractive helix"</string>
   <string name="ui_0888b5eb8ee9" formatted="false">"Native subtractive loft"</string>
   <string name="ui_eef0dc2e313b" formatted="false">"Native subtractive pipe"</string>
+  <string name="ui_e2f429829daa" formatted="false">"Native subtractive prism"</string>
   <string name="ui_12a90a38dbf7" formatted="false">"Native subtractive sphere"</string>
+  <string name="ui_dc52ea24735a" formatted="false">"Native subtractive torus"</string>
   <string name="ui_633ab45f6fa4" formatted="false">"Native through-all Pocket"</string>
   <string name="ui_7963720bd225" formatted="false">"Native through-all hole"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Native torus"</string>
@@ -1266,6 +1278,8 @@
   <string name="ui_cfc2fc53ec07" formatted="false">"PolarArray"</string>
   <string name="ui_2ad3ca2c12df" formatted="false">"PolarArray count centreX centreY centreZ angle"</string>
   <string name="ui_38acfbcb5a78" formatted="false">"Pole "</string>
+  <string name="ui_85066b2ca9c0" formatted="false">"Polygon"</string>
+  <string name="ui_149b93911f5a" formatted="false">"Polygon sides (3–32)"</string>
   <string name="ui_dd0c89e0c5bb" formatted="false">"Polyline"</string>
   <string name="ui_88a33c0a1ce7" formatted="false">"Polyline XYZ triples · 2 to 16 points"</string>
   <string name="ui_ee2ddac07f73" formatted="false">"Position in millimetres"</string>
@@ -1650,7 +1664,9 @@
   <string name="ui_1e6234f21e0b" formatted="false">"SubtractiveBox"</string>
   <string name="ui_76f2dea17eb6" formatted="false">"SubtractiveCone"</string>
   <string name="ui_aadfc994ccdf" formatted="false">"SubtractiveCylinder"</string>
+  <string name="ui_5c71093ba6d1" formatted="false">"SubtractivePrism"</string>
   <string name="ui_fde31f4afd23" formatted="false">"SubtractiveSphere"</string>
+  <string name="ui_861c5d4e12b0" formatted="false">"SubtractiveTorus"</string>
   <string name="ui_7420731be806" formatted="false">"Support element (FaceN/EdgeN/VertexN)"</string>
   <string name="ui_698ce1402f6e" formatted="false">"Supported: STEP, IGES, OBJ, STL, simple 3MF/GLB meshes, ASCII DXF curves, BREP, saved FCStd Part geometry, .fcml projects and .cadgraph recipes."</string>
   <string name="ui_240b383bcff1" formatted="false">"Surface Source Edge1 Tool Edge1"</string>
@@ -1821,9 +1837,11 @@
   <string name="ui_3874f457f5c4" formatted="false">"Upstream document lab UI created"</string>
   <string name="ui_893974481948" formatted="false">"Upstream document operation"</string>
   <string name="ui_d842cabd69b7" formatted="false">"Use BODY NAME LENGTH WIDTH HEIGHT [X Y Z YAW PITCH ROLL]"</string>
+  <string name="ui_fa845852d2a5" formatted="false">"Use BODY NAME MAJOR_RADIUS MINOR_RADIUS [X Y Z YAW PITCH ROLL]"</string>
   <string name="ui_06e615204e16" formatted="false">"Use BODY NAME RADIUS HEIGHT [X Y Z YAW PITCH ROLL]"</string>
   <string name="ui_a191f00fd5b1" formatted="false">"Use BODY NAME RADIUS [X Y Z YAW PITCH ROLL]"</string>
   <string name="ui_84adaacafa8a" formatted="false">"Use BODY NAME RADIUS1 RADIUS2 HEIGHT [X Y Z YAW PITCH ROLL]"</string>
+  <string name="ui_511a60510e10" formatted="false">"Use BODY NAME SIDES CIRCUMRADIUS HEIGHT [X Y Z YAW PITCH ROLL]"</string>
   <string name="ui_2ac5d627cb40" formatted="false">"Use Object.Property"</string>
   <string name="ui_05f362e29902" formatted="false">"Use Source.Property"</string>
   <string name="ui_164021fae306" formatted="false">"Use a current EdgeN or FaceN"</string>

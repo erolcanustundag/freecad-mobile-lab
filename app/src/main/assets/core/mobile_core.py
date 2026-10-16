@@ -94,7 +94,7 @@ def _value(obj, name):
 
 
 def _supported_property(obj,name,kind):
-    return kind=="App::PropertyQuantityConstraint" and obj.TypeId in ("PartDesign::Fillet","PartDesign::Chamfer") and name==mobile_partdesign.SCALARS[obj.TypeId] or kind in PROPERTY_TYPES or kind=="App::PropertyQuantity" and obj.TypeId=="Part::Thickness" and name=="Value" or kind=="App::PropertyIntegerConstraint" and obj.TypeId in ("Part::RegularPolygon","Part::Prism") and name=="Polygon" or kind=="App::PropertyIntegerConstraint" and obj.TypeId in mobile_partdesign.PATTERNS and name=="Occurrences" or kind=="App::PropertyQuantityConstraint" and obj.TypeId=="Part::Spiral" and name=="Rotations"
+    return kind=="App::PropertyQuantityConstraint" and obj.TypeId in ("PartDesign::Fillet","PartDesign::Chamfer") and name==mobile_partdesign.SCALARS[obj.TypeId] or kind in PROPERTY_TYPES or kind=="App::PropertyQuantity" and obj.TypeId=="Part::Thickness" and name=="Value" or kind=="App::PropertyIntegerConstraint" and obj.TypeId in ("Part::RegularPolygon","Part::Prism","PartDesign::AdditivePrism","PartDesign::SubtractivePrism") and name=="Polygon" or kind=="App::PropertyIntegerConstraint" and obj.TypeId in mobile_partdesign.PATTERNS and name=="Occurrences" or kind=="App::PropertyQuantityConstraint" and obj.TypeId=="Part::Spiral" and name=="Rotations"
 
 
 def _editable(obj, name):

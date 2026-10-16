@@ -12,7 +12,11 @@ FIELDS={'PartDesign::AdditiveBox':('Length','Width','Height'),
         'PartDesign::AdditiveCone':('Radius1','Radius2','Height'),
         'PartDesign::SubtractiveCone':('Radius1','Radius2','Height'),
         'PartDesign::AdditiveSphere':('Radius',),
-        'PartDesign::SubtractiveSphere':('Radius',)}
+        'PartDesign::SubtractiveSphere':('Radius',),
+        'PartDesign::AdditivePrism':('Polygon','Circumradius','Height'),
+        'PartDesign::SubtractivePrism':('Polygon','Circumradius','Height'),
+        'PartDesign::AdditiveTorus':('Radius1','Radius2'),
+        'PartDesign::SubtractiveTorus':('Radius1','Radius2')}
 TYPES=set(FIELDS)
 SUBTRACTIVE={kind for kind in TYPES if 'Subtractive' in kind}
 MAXIMUM=64
@@ -22,17 +26,25 @@ def dimensions(kind, values):
     result={}
     for name in FIELDS[kind]:
         value=float(values[name])
-        if kind.endswith('Cone') and name in ('Radius1','Radius2'):
+        if name=='Polygon':
+            if not math.isfinite(value) or value!=int(value) or not 3<=value<=32:raise ValueError('Body prism sides must be an integer between3 and32')
+            result[name]=int(value)
+        elif kind.endswith('Cone') and name in ('Radius1','Radius2'):
             if not math.isfinite(value) or not 0<=value<=1000000:raise ValueError('Cone radii must be finite and between0 and1,000,000mm')
             result[name]=value
         else:result[name]=pd.positive(value)
     if kind.endswith('Cone') and max(result['Radius1'],result['Radius2'])<=1e-7:raise ValueError('A cone needs at least one positive radius above1e-7mm')
+    if kind.endswith('Torus') and result['Radius1']-result['Radius2']<=1e-7:raise ValueError('Ring torus needs Radius1 greater than Radius2, both positive')
     return result
 
 def bounds(kind, values, pose, body_pose):
     supports.finite_pose(pose);supports.finite_pose(body_pose)
     world=body_pose.multiply(pose)
     if kind.endswith('Box'):axes=[(0,values['Length']),(0,values['Width']),(0,values['Height'])]
+    elif kind.endswith('Torus'):
+        radius=values['Radius1']+values['Radius2'];axes=[(-radius,radius),(-radius,radius),(-values['Radius2'],values['Radius2'])]
+    elif kind.endswith('Prism'):
+        radius=values['Circumradius'];axes=[(-radius,radius),(-radius,radius),(0,values['Height'])]
     else:
         radius=max(values['Radius1'],values['Radius2']) if kind.endswith('Cone') else values['Radius']
         axes=[(-radius,radius),(-radius,radius),(-radius,radius) if kind.endswith('Sphere') else (0,values['Height'])]
@@ -43,9 +55,11 @@ def bounds(kind, values, pose, body_pose):
                 if any(not math.isfinite(v) or abs(v)>1000000 for v in point):raise ValueError('Primitive bounds must remain within1,000,000mm in world coordinates')
 
 def values(obj, name=None, value=None):
-    return {p:value if p==name else getattr(obj,p).Value for p in FIELDS[obj.TypeId]}
+    return {p:value if p==name else getattr(getattr(obj,p),'Value',getattr(obj,p)) for p in FIELDS[obj.TypeId]}
 
 def angles(kind):
+    if kind.endswith('Torus'):return {'Angle1':-180,'Angle2':180,'Angle3':360}
+    if kind.endswith('Prism'):return {'FirstAngle':0,'SecondAngle':0}
     if kind.endswith('Sphere'):return {'Angle1':-90,'Angle2':90,'Angle3':360}
     if kind.endswith('Cone'):return {'Angle':360}
     if kind.endswith('Cylinder'):return {'Angle':360,'FirstAngle':0,'SecondAngle':0}
@@ -113,7 +127,7 @@ def validate_fcstd(node, name, kind, body_name, previous):
         n=node(name,prop,tag)
         if n is None:raise ValueError('Missing saved primitive property: '+prop)
         return n.get('value')
-    dims=dimensions(kind,{p:float(raw(p,'Float')) for p in FIELDS[kind]})
+    dims=dimensions(kind,{p:int(raw(p,'Integer')) if p=='Polygon' else float(raw(p,'Float')) for p in FIELDS[kind]})
     if raw('MapMode','Integer')!='0' or raw('AttacherType','String')!='Attacher::AttachEngine3D' or raw('MapReversed','Bool')!='false' or float(raw('MapPathParameter','Float'))!=0 or raw('Suppressed','Bool')!='false' or float(raw('FuzzyTolerance','Float'))!=-1:raise ValueError('Unsupported saved primitive mapping or mode')
     links=node(name,'AttachmentSupport','LinkSubList')
     if links is None or links.get('count')!='0' or list(links):raise ValueError('Saved primitive attachment is unsupported')

@@ -813,3 +813,10 @@ Native additive sphere|Yerel eklemeli küre|Native additive Kugel
 Native subtractive sphere|Yerel çıkarmalı küre|Native subtraktive Kugel
 Base radius (mm)|Taban yarıçapı (mm)|Basisradius (mm)
 Top radius (mm)|Üst yarıçap (mm)|Oberer Radius (mm)
+Native additive prism|Yerel eklemeli prizma|Natives additives Prisma
+Native subtractive prism|Yerel çıkarmalı prizma|Natives subtraktives Prisma
+Native additive torus|Yerel eklemeli torus|Nativer additiver Torus
+Native subtractive torus|Yerel çıkarmalı torus|Nativer subtraktiver Torus
+Polygon sides (3–32)|Çokgen kenar sayısı (3–32)|Polygonseiten (3–32)
+Circumradius (mm)|Çevrel çember yarıçapı (mm)|Umkreisradius (mm)
+Minor radius (mm)|Kesit yarıçapı (mm)|Nebenradius (mm)
