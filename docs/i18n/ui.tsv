@@ -807,3 +807,7 @@ Native subtractive box|Yerel çıkarıcı kutu|Nativer subtraktiver Quader
 Native additive cylinder|Yerel eklemeli silindir|Nativer additiver Zylinder
 Native subtractive cylinder|Yerel çıkarıcı silindir|Nativer subtraktiver Zylinder
 Move Body primitive|Body temel katısını taşı|Body-Grundkörper verschieben
+Native additive cone|Yerel eklemeli koni|Nativer additiver Kegel
+Native subtractive cone|Yerel çıkarmalı koni|Nativer subtraktiver Kegel
+Native additive sphere|Yerel eklemeli küre|Native additive Kugel
+Native subtractive sphere|Yerel çıkarmalı küre|Native subtraktive Kugel

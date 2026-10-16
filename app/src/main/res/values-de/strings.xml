@@ -407,10 +407,12 @@
   <string name="ui_788019d78b2d" formatted="false">"Native Tasche"</string>
   <string name="ui_55b6979271bb" formatted="false">"Native Tasche bis erste Fläche"</string>
   <string name="ui_a063c4913ad7" formatted="false">"Nativer additiver Quader"</string>
+  <string name="ui_943ddc1a7363" formatted="false">"Nativer additiver Kegel"</string>
   <string name="ui_cf1fb80fff67" formatted="false">"Nativer additiver Zylinder"</string>
   <string name="ui_76b3da299806" formatted="false">"Native additive Helix"</string>
   <string name="ui_bbd45dd10ebf" formatted="false">"Nativer additiver Loft"</string>
   <string name="ui_e041368d3a2d" formatted="false">"Natives additives Rohr"</string>
+  <string name="ui_9b72bcb27a54" formatted="false">"Native additive Kugel"</string>
   <string name="ui_ba8bb30e0b5f" formatted="false">"Natives Sackloch"</string>
   <string name="ui_45211683ce7b" formatted="false">"Nativer Quader"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Nativer Kegel"</string>
@@ -441,10 +443,12 @@
   <string name="ui_c2c2cc1eb77b" formatted="false">"Native Kugel"</string>
   <string name="ui_5d6d243f6ba5" formatted="false">"Native Spirale"</string>
   <string name="ui_0865e4ebbbdb" formatted="false">"Nativer subtraktiver Quader"</string>
+  <string name="ui_58dd2e6fd6db" formatted="false">"Nativer subtraktiver Kegel"</string>
   <string name="ui_b037083c4dc3" formatted="false">"Nativer subtraktiver Zylinder"</string>
   <string name="ui_6299ac8b1435" formatted="false">"Native subtraktive Helix"</string>
   <string name="ui_0888b5eb8ee9" formatted="false">"Nativer subtraktiver Loft"</string>
   <string name="ui_eef0dc2e313b" formatted="false">"Natives subtraktives Rohr"</string>
+  <string name="ui_12a90a38dbf7" formatted="false">"Native subtraktive Kugel"</string>
   <string name="ui_633ab45f6fa4" formatted="false">"Native durchgehende Tasche"</string>
   <string name="ui_7963720bd225" formatted="false">"Native Durchgangsbohrung"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Nativer Torus"</string>

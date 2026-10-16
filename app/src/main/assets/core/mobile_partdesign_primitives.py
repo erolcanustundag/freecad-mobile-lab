@@ -8,19 +8,34 @@ import mobile_partdesign_supports as supports
 FIELDS={'PartDesign::AdditiveBox':('Length','Width','Height'),
         'PartDesign::SubtractiveBox':('Length','Width','Height'),
         'PartDesign::AdditiveCylinder':('Radius','Height'),
-        'PartDesign::SubtractiveCylinder':('Radius','Height')}
+        'PartDesign::SubtractiveCylinder':('Radius','Height'),
+        'PartDesign::AdditiveCone':('Radius1','Radius2','Height'),
+        'PartDesign::SubtractiveCone':('Radius1','Radius2','Height'),
+        'PartDesign::AdditiveSphere':('Radius',),
+        'PartDesign::SubtractiveSphere':('Radius',)}
 TYPES=set(FIELDS)
-SUBTRACTIVE={'PartDesign::SubtractiveBox','PartDesign::SubtractiveCylinder'}
+SUBTRACTIVE={kind for kind in TYPES if 'Subtractive' in kind}
 MAXIMUM=64
 
 def dimensions(kind, values):
     import mobile_partdesign as pd
-    return {name:pd.positive(values[name]) for name in FIELDS[kind]}
+    result={}
+    for name in FIELDS[kind]:
+        value=float(values[name])
+        if kind.endswith('Cone') and name in ('Radius1','Radius2'):
+            if not math.isfinite(value) or not 0<=value<=1000000:raise ValueError('Cone radii must be finite and between0 and1,000,000mm')
+            result[name]=value
+        else:result[name]=pd.positive(value)
+    if kind.endswith('Cone') and max(result['Radius1'],result['Radius2'])<=1e-7:raise ValueError('A cone needs at least one positive radius above1e-7mm')
+    return result
 
 def bounds(kind, values, pose, body_pose):
     supports.finite_pose(pose);supports.finite_pose(body_pose)
     world=body_pose.multiply(pose)
-    axes=[(0,values['Length']),(0,values['Width']),(0,values['Height'])] if kind.endswith('Box') else [(-values['Radius'],values['Radius']),(-values['Radius'],values['Radius']),(0,values['Height'])]
+    if kind.endswith('Box'):axes=[(0,values['Length']),(0,values['Width']),(0,values['Height'])]
+    else:
+        radius=max(values['Radius1'],values['Radius2']) if kind.endswith('Cone') else values['Radius']
+        axes=[(-radius,radius),(-radius,radius),(-radius,radius) if kind.endswith('Sphere') else (0,values['Height'])]
     for x in axes[0]:
         for y in axes[1]:
             for z in axes[2]:
@@ -30,10 +45,16 @@ def bounds(kind, values, pose, body_pose):
 def values(obj, name=None, value=None):
     return {p:value if p==name else getattr(obj,p).Value for p in FIELDS[obj.TypeId]}
 
+def angles(kind):
+    if kind.endswith('Sphere'):return {'Angle1':-90,'Angle2':90,'Angle3':360}
+    if kind.endswith('Cone'):return {'Angle':360}
+    if kind.endswith('Cylinder'):return {'Angle':360,'FirstAngle':0,'SecondAngle':0}
+    return {}
+
 def modes(obj):
     import mobile_partdesign_datums as datums
     if obj.MapMode!='Deactivated' or obj.AttachmentSupport or not datums.identity(obj.AttachmentOffset) or obj.MapReversed or obj.MapPathParameter!=0 or obj.AttacherType!='Attacher::AttachEngine3D' or obj.ExpressionEngine or obj.Suppressed or obj.FuzzyTolerance!=-1:raise ValueError('Body primitives require original manual unsuppressed default-tolerance mapping without expressions')
-    if obj.TypeId.endswith('Cylinder') and (obj.Angle.Value!=360 or obj.FirstAngle.Value!=0 or obj.SecondAngle.Value!=0):raise ValueError('Body cylinders support full360degree straight primitives only')
+    if any(getattr(obj,p).Value!=v for p,v in angles(obj.TypeId).items()):raise ValueError('Body primitives require full native angular defaults')
 
 def preflight(doc):
     import mobile_partdesign as pd
@@ -75,7 +96,7 @@ def edit(doc,e,get,identifier):
         bounds(obj.TypeId,dimensions(obj.TypeId,values(obj)),pose,b.getGlobalPlacement());obj.Placement=pose
         return
     kind='PartDesign::'+e['kind']
-    if kind not in TYPES:raise ValueError('Choose AdditiveBox, SubtractiveBox, AdditiveCylinder or SubtractiveCylinder')
+    if kind not in TYPES:raise ValueError('Choose a supported original additive or subtractive Body primitive')
     if sum(o.TypeId in TYPES for o in doc.Objects)>=MAXIMUM:raise ValueError('Body primitive limit is64')
     name=identifier(e['name']);pd.fresh(doc,name)
     dims=dimensions(kind,e['dimensions']);pose=mobile_sketch.placement(e.get('values',[0]*6));bounds(kind,dims,pose,b.getGlobalPlacement())
@@ -96,7 +117,7 @@ def validate_fcstd(node, name, kind, body_name, previous):
     if raw('MapMode','Integer')!='0' or raw('AttacherType','String')!='Attacher::AttachEngine3D' or raw('MapReversed','Bool')!='false' or float(raw('MapPathParameter','Float'))!=0 or raw('Suppressed','Bool')!='false' or float(raw('FuzzyTolerance','Float'))!=-1:raise ValueError('Unsupported saved primitive mapping or mode')
     links=node(name,'AttachmentSupport','LinkSubList')
     if links is None or links.get('count')!='0' or list(links):raise ValueError('Saved primitive attachment is unsupported')
-    if kind.endswith('Cylinder') and any(float(raw(p,'Float'))!=v for p,v in [('Angle',360),('FirstAngle',0),('SecondAngle',0)]):raise ValueError('Saved cylinder must retain full360degree straight defaults')
+    if any(float(raw(p,'Float'))!=v for p,v in angles(kind).items()):raise ValueError('Saved primitive must retain full native angular defaults')
     def pose(obj,prop,identity=False):
         n=node(obj,prop,'PropertyPlacement')
         if n is None:raise ValueError('Missing saved primitive/Body placement')

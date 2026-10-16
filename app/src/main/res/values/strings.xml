@@ -140,7 +140,9 @@
   <string name="ui_4f5edc11fcbd" formatted="false">"Add to group"</string>
   <string name="ui_c42c27b87a82" formatted="false">"AddProfile"</string>
   <string name="ui_0225bc121235" formatted="false">"AdditiveBox"</string>
+  <string name="ui_fe04722a0522" formatted="false">"AdditiveCone"</string>
   <string name="ui_8f321606e5f4" formatted="false">"AdditiveCylinder"</string>
+  <string name="ui_177cbfdc1ae2" formatted="false">"AdditiveSphere"</string>
   <string name="ui_c83b0ec2d98a" formatted="false">"Align"</string>
   <string name="ui_aa5a3afa1cfa" formatted="false">"Align matching bounds"</string>
   <string name="ui_49662530d12a" formatted="false">"Align objects"</string>
@@ -207,6 +209,7 @@
   <string name="ui_04c123bdc64a" formatted="false">"Bangle"</string>
   <string name="ui_077fe9c54ed5" formatted="false">"Base"</string>
   <string name="ui_3e2cdbeee1e4" formatted="false">"Base object"</string>
+  <string name="ui_5ecc4f0230a6" formatted="false">"Base radius (mm)"</string>
   <string name="ui_9230747798f6" formatted="false">"Basic solids"</string>
   <string name="ui_2a5292adbbd6" formatted="false">"Batch export currently needs one graph output"</string>
   <string name="ui_e77948f7ca23" formatted="false">"Batch transforms need independent roots. Detach derived outputs before selecting them with their inputs."</string>
@@ -357,6 +360,8 @@
   <string name="ui_717354ee1f25" formatted="false">"Command · Set Source.Width 2 cm"</string>
   <string name="ui_0ca5450f81f6" formatted="false">"Command: "</string>
   <string name="ui_1a1873ab51c7" formatted="false">"Commit"</string>
+  <string name="ui_90bd7b949241" formatted="false">"Cone"</string>
+  <string name="ui_15b498e3befb" formatted="false">"ConeCut"</string>
   <string name="ui_3b258fe3d277" formatted="false">"Connect every input on "</string>
   <string name="ui_cdd87b7907fb" formatted="false">"Constraint"</string>
   <string name="ui_4ea93f5b4e48" formatted="false">"Constraint SKETCH KIND ARGUMENTS"</string>
@@ -498,6 +503,7 @@
   <string name="ui_1adff3072f22" formatted="false">"Document operation"</string>
   <string name="ui_4214822e9b88" formatted="false">"Document variables"</string>
   <string name="ui_687c82861c95" formatted="false">"Documents"</string>
+  <string name="ui_afda4861e62e" formatted="false">"Dome"</string>
   <string name="ui_133fc4132ccb" formatted="false">"Drafted"</string>
   <string name="ui_22b3f140feb2" formatted="false">"Drag a world axis. Release commits one Undo step. Use numeric Move for exact coordinates."</string>
   <string name="ui_d8dc1f1899ed" formatted="false">"Drag an axis · 20 px = 1 mm"</string>
@@ -1024,10 +1030,12 @@
   <string name="ui_788019d78b2d" formatted="false">"Native Pocket"</string>
   <string name="ui_55b6979271bb" formatted="false">"Native Pocket to first face"</string>
   <string name="ui_a063c4913ad7" formatted="false">"Native additive box"</string>
+  <string name="ui_943ddc1a7363" formatted="false">"Native additive cone"</string>
   <string name="ui_cf1fb80fff67" formatted="false">"Native additive cylinder"</string>
   <string name="ui_76b3da299806" formatted="false">"Native additive helix"</string>
   <string name="ui_bbd45dd10ebf" formatted="false">"Native additive loft"</string>
   <string name="ui_e041368d3a2d" formatted="false">"Native additive pipe"</string>
+  <string name="ui_9b72bcb27a54" formatted="false">"Native additive sphere"</string>
   <string name="ui_ba8bb30e0b5f" formatted="false">"Native blind hole"</string>
   <string name="ui_45211683ce7b" formatted="false">"Native box"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Native cone"</string>
@@ -1059,10 +1067,12 @@
   <string name="ui_c2c2cc1eb77b" formatted="false">"Native sphere"</string>
   <string name="ui_5d6d243f6ba5" formatted="false">"Native spiral"</string>
   <string name="ui_0865e4ebbbdb" formatted="false">"Native subtractive box"</string>
+  <string name="ui_58dd2e6fd6db" formatted="false">"Native subtractive cone"</string>
   <string name="ui_b037083c4dc3" formatted="false">"Native subtractive cylinder"</string>
   <string name="ui_6299ac8b1435" formatted="false">"Native subtractive helix"</string>
   <string name="ui_0888b5eb8ee9" formatted="false">"Native subtractive loft"</string>
   <string name="ui_eef0dc2e313b" formatted="false">"Native subtractive pipe"</string>
+  <string name="ui_12a90a38dbf7" formatted="false">"Native subtractive sphere"</string>
   <string name="ui_633ab45f6fa4" formatted="false">"Native through-all Pocket"</string>
   <string name="ui_7963720bd225" formatted="false">"Native through-all hole"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Native torus"</string>
@@ -1602,6 +1612,7 @@
   <string name="ui_a8bf8702d77d" formatted="false">"Solids only"</string>
   <string name="ui_54ba4f63254d" formatted="false">"Source object"</string>
   <string name="ui_0446c388357c" formatted="false">"Sphere"</string>
+  <string name="ui_8ebd524c2a5c" formatted="false">"SphereCut"</string>
   <string name="ui_6bdf37bb6aad" formatted="false">"Spiral 3 2 3"</string>
   <string name="ui_d2e53076a72b" formatted="false">"Split sketch curve"</string>
   <string name="ui_cc6fdf1b0963" formatted="false">"Spreadsheet"</string>
@@ -1637,7 +1648,9 @@
   <string name="ui_e9e1b267887b" formatted="false">"Subdivision form"</string>
   <string name="ui_ae5f61e523ef" formatted="false">"Subtract"</string>
   <string name="ui_1e6234f21e0b" formatted="false">"SubtractiveBox"</string>
+  <string name="ui_76f2dea17eb6" formatted="false">"SubtractiveCone"</string>
   <string name="ui_aadfc994ccdf" formatted="false">"SubtractiveCylinder"</string>
+  <string name="ui_fde31f4afd23" formatted="false">"SubtractiveSphere"</string>
   <string name="ui_7420731be806" formatted="false">"Support element (FaceN/EdgeN/VertexN)"</string>
   <string name="ui_698ce1402f6e" formatted="false">"Supported: STEP, IGES, OBJ, STL, simple 3MF/GLB meshes, ASCII DXF curves, BREP, saved FCStd Part geometry, .fcml projects and .cadgraph recipes."</string>
   <string name="ui_240b383bcff1" formatted="false">"Surface Source Edge1 Tool Edge1"</string>
@@ -1718,6 +1731,7 @@
   <string name="ui_cae0435c41e8" formatted="false">"Top"</string>
   <string name="ui_c0c80372338a" formatted="false">"Top cage scale · 0.1 to 3"</string>
   <string name="ui_19ed0b0dff13" formatted="false">"Top cage twist (degrees)"</string>
+  <string name="ui_f3a0a89dd81a" formatted="false">"Top radius (mm)"</string>
   <string name="ui_3aedd475cec6" formatted="false">"Topology"</string>
   <string name="ui_1b03f33c6462" formatted="false">"Topology indices"</string>
   <string name="ui_d79e66257f8d" formatted="false">"Topology · indexed edges/faces"</string>
@@ -1808,6 +1822,8 @@
   <string name="ui_893974481948" formatted="false">"Upstream document operation"</string>
   <string name="ui_d842cabd69b7" formatted="false">"Use BODY NAME LENGTH WIDTH HEIGHT [X Y Z YAW PITCH ROLL]"</string>
   <string name="ui_06e615204e16" formatted="false">"Use BODY NAME RADIUS HEIGHT [X Y Z YAW PITCH ROLL]"</string>
+  <string name="ui_a191f00fd5b1" formatted="false">"Use BODY NAME RADIUS [X Y Z YAW PITCH ROLL]"</string>
+  <string name="ui_84adaacafa8a" formatted="false">"Use BODY NAME RADIUS1 RADIUS2 HEIGHT [X Y Z YAW PITCH ROLL]"</string>
   <string name="ui_2ac5d627cb40" formatted="false">"Use Object.Property"</string>
   <string name="ui_05f362e29902" formatted="false">"Use Source.Property"</string>
   <string name="ui_164021fae306" formatted="false">"Use a current EdgeN or FaceN"</string>
