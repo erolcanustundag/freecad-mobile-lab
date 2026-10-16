@@ -169,7 +169,7 @@ def edit(doc, e, get, identifier):
     require();op=e['op']
     if op.startswith('body_datum_'):
         datums.edit(doc,e,get,identifier)
-    elif op in ('body_primitive_create','body_primitive_pose'):
+    elif op in ('body_primitive_create','body_primitive_pose','body_primitive_angles'):
         primitives.edit(doc,e,get,identifier)
     elif op=='body_hole':
         holes.create(doc,e,get,identifier)

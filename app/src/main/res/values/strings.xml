@@ -145,6 +145,7 @@
   <string name="ui_669093305a83" formatted="false">"AdditivePrism"</string>
   <string name="ui_177cbfdc1ae2" formatted="false">"AdditiveSphere"</string>
   <string name="ui_e1953f5e96b4" formatted="false">"AdditiveTorus"</string>
+  <string name="ui_c491a28ba440" formatted="false">"AdditiveWedge"</string>
   <string name="ui_c83b0ec2d98a" formatted="false">"Align"</string>
   <string name="ui_aa5a3afa1cfa" formatted="false">"Align matching bounds"</string>
   <string name="ui_49662530d12a" formatted="false">"Align objects"</string>
@@ -195,6 +196,7 @@
   <string name="ui_016f2cc0cb75" formatted="false">"Axis point X"</string>
   <string name="ui_30afd07ccc07" formatted="false">"Axis point Y"</string>
   <string name="ui_b177e05ab8b4" formatted="false">"Axis point Z"</string>
+  <string name="ui_82f6307593ff" formatted="false">"Azimuth (deg)"</string>
   <string name="ui_587eac1112fa" formatted="false">"BACK"</string>
   <string name="ui_44d0fd52d22b" formatted="false">"BOTTOM"</string>
   <string name="ui_c10df8d19608" formatted="false">"BREP curve"</string>
@@ -558,6 +560,10 @@
   <string name="ui_bd97ca585fa7" formatted="false">"Empty workspace · create or import a model"</string>
   <string name="ui_1880c7fdf083" formatted="false">"Enable multiple selection"</string>
   <string name="ui_a2bb9d34b8a1" formatted="false">"End"</string>
+  <string name="ui_488f04a93b2b" formatted="false">"End X maximum (mm)"</string>
+  <string name="ui_8a1b17cfc7af" formatted="false">"End X minimum (mm)"</string>
+  <string name="ui_b20b6f96e5b7" formatted="false">"End Z maximum (mm)"</string>
+  <string name="ui_0f5b15235c22" formatted="false">"End Z minimum (mm)"</string>
   <string name="ui_a4bedcc00e9c" formatted="false">"End extension (mm)"</string>
   <string name="ui_c3efd7bc0e9e" formatted="false">"End parameter fraction (0 to 1)"</string>
   <string name="ui_649df08a448e" formatted="false">"English"</string>
@@ -931,6 +937,7 @@
   <string name="ui_6203671ec870" formatted="false">"LoftSurface id1 id2 [id3 ...]"</string>
   <string name="ui_6a9504e149fb" formatted="false">"Longest side in millimetres"</string>
   <string name="ui_b91eed4b7a80" formatted="false">"Lower"</string>
+  <string name="ui_716db54999f0" formatted="false">"Lower latitude (deg)"</string>
   <string name="ui_d8e9409fd819" formatted="false">"Lower profile"</string>
   <string name="ui_899bd694d29a" formatted="false">"Macros"</string>
   <string name="ui_cb28836e3930" formatted="false">"Major radius"</string>
@@ -1046,9 +1053,11 @@
   <string name="ui_554cad4fb886" formatted="false">"Native additive prism"</string>
   <string name="ui_9b72bcb27a54" formatted="false">"Native additive sphere"</string>
   <string name="ui_60c3641d08f8" formatted="false">"Native additive torus"</string>
+  <string name="ui_1c9fde1fde39" formatted="false">"Native additive wedge"</string>
   <string name="ui_ba8bb30e0b5f" formatted="false">"Native blind hole"</string>
   <string name="ui_45211683ce7b" formatted="false">"Native box"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Native cone"</string>
+  <string name="ui_e5437b08e3b3" formatted="false">"Native cone sector angle"</string>
   <string name="ui_09182d2f8685" formatted="false">"Native coordinate system"</string>
   <string name="ui_d59b101707b5" formatted="false">"Native counterbore"</string>
   <string name="ui_ccdc3289cc80" formatted="false">"Native countersink"</string>
@@ -1075,6 +1084,7 @@
   <string name="ui_d87971ad1308" formatted="false">"Native signal "</string>
   <string name="ui_266b14b41bae" formatted="false">"Native solid offset"</string>
   <string name="ui_c2c2cc1eb77b" formatted="false">"Native sphere"</string>
+  <string name="ui_8b6eef494e8d" formatted="false">"Native sphere segment angles"</string>
   <string name="ui_5d6d243f6ba5" formatted="false">"Native spiral"</string>
   <string name="ui_0865e4ebbbdb" formatted="false">"Native subtractive box"</string>
   <string name="ui_58dd2e6fd6db" formatted="false">"Native subtractive cone"</string>
@@ -1085,6 +1095,7 @@
   <string name="ui_e2f429829daa" formatted="false">"Native subtractive prism"</string>
   <string name="ui_12a90a38dbf7" formatted="false">"Native subtractive sphere"</string>
   <string name="ui_dc52ea24735a" formatted="false">"Native subtractive torus"</string>
+  <string name="ui_d6550e61eaea" formatted="false">"Native subtractive wedge"</string>
   <string name="ui_633ab45f6fa4" formatted="false">"Native through-all Pocket"</string>
   <string name="ui_7963720bd225" formatted="false">"Native through-all hole"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Native torus"</string>
@@ -1667,6 +1678,7 @@
   <string name="ui_5c71093ba6d1" formatted="false">"SubtractivePrism"</string>
   <string name="ui_fde31f4afd23" formatted="false">"SubtractiveSphere"</string>
   <string name="ui_861c5d4e12b0" formatted="false">"SubtractiveTorus"</string>
+  <string name="ui_c3cf965dc918" formatted="false">"SubtractiveWedge"</string>
   <string name="ui_7420731be806" formatted="false">"Support element (FaceN/EdgeN/VertexN)"</string>
   <string name="ui_698ce1402f6e" formatted="false">"Supported: STEP, IGES, OBJ, STL, simple 3MF/GLB meshes, ASCII DXF curves, BREP, saved FCStd Part geometry, .fcml projects and .cadgraph recipes."</string>
   <string name="ui_240b383bcff1" formatted="false">"Surface Source Edge1 Tool Edge1"</string>
@@ -1830,6 +1842,7 @@
   <string name="ui_96adbde8a26e" formatted="false">"UpToFirst"</string>
   <string name="ui_ed9ac15baf4b" formatted="false">"UpToLast"</string>
   <string name="ui_6b5b87b9bec8" formatted="false">"Upper"</string>
+  <string name="ui_7572adaee4bf" formatted="false">"Upper latitude (deg)"</string>
   <string name="ui_6a195ab24b1f" formatted="false">"Upper profile"</string>
   <string name="ui_f9f4b89fd160" formatted="false">"Upstream App/Part 1.1.4 · solids, properties, expressions and transactions"</string>
   <string name="ui_83ee1bec0e9f" formatted="false">"Upstream App/Part/Sketcher 1.1.4 · solids, sketches and native constraints"</string>
@@ -1842,6 +1855,7 @@
   <string name="ui_a191f00fd5b1" formatted="false">"Use BODY NAME RADIUS [X Y Z YAW PITCH ROLL]"</string>
   <string name="ui_84adaacafa8a" formatted="false">"Use BODY NAME RADIUS1 RADIUS2 HEIGHT [X Y Z YAW PITCH ROLL]"</string>
   <string name="ui_511a60510e10" formatted="false">"Use BODY NAME SIDES CIRCUMRADIUS HEIGHT [X Y Z YAW PITCH ROLL]"</string>
+  <string name="ui_e9763f71ad98" formatted="false">"Use BODY NAME XMIN XMAX YMIN YMAX ZMIN ZMAX X2MIN X2MAX Z2MIN Z2MAX [X Y Z YAW PITCH ROLL]"</string>
   <string name="ui_2ac5d627cb40" formatted="false">"Use Object.Property"</string>
   <string name="ui_05f362e29902" formatted="false">"Use Source.Property"</string>
   <string name="ui_164021fae306" formatted="false">"Use a current EdgeN or FaceN"</string>
@@ -1879,7 +1893,9 @@
   <string name="ui_c4633c096745" formatted="false">"Wall"</string>
   <string name="ui_f1d107a15b94" formatted="false">"Wall (mm)"</string>
   <string name="ui_e75b3f729f43" formatted="false">"Wall thickness (mm)"</string>
+  <string name="ui_3f43a7562d8a" formatted="false">"Wedge"</string>
   <string name="ui_6bd4ea3ddb42" formatted="false">"Wedge 10 10 10 2 8 2 8"</string>
+  <string name="ui_fe9c22fbb6ed" formatted="false">"WedgeCut"</string>
   <string name="ui_69c0b81540bd" formatted="false">"Weight"</string>
   <string name="ui_c790195277fc" formatted="false">"Weighted freeform curve"</string>
   <string name="ui_47adf35d4345" formatted="false">"Welding / planarity tolerance (mm)"</string>
@@ -1912,6 +1928,8 @@
   <string name="ui_e57e1696dd74" formatted="false">"Wrong number of command arguments"</string>
   <string name="ui_ddafd9c7c568" formatted="false">"X (mm)"</string>
   <string name="ui_f82f6396994d" formatted="false">"X degrees"</string>
+  <string name="ui_26ccce1ffa13" formatted="false">"X maximum (mm)"</string>
+  <string name="ui_238370267160" formatted="false">"X minimum (mm)"</string>
   <string name="ui_26f15614cab2" formatted="false">"X mm"</string>
   <string name="ui_22bfe76c39d3" formatted="false">"X offset"</string>
   <string name="ui_2186f223e3c8" formatted="false">"X radius (mm)"</string>
@@ -1924,22 +1942,32 @@
   <string name="ui_717c4ecc7239" formatted="false">"XYZ"</string>
   <string name="ui_026fd0cae7ea" formatted="false">"XYZ +/-10,000 mm; weight .001 to 1000"</string>
   <string name="ui_4832fef261c6" formatted="false">"XZ"</string>
+  <string name="ui_3dc273ad4d7c" formatted="false">"Xmax"</string>
+  <string name="ui_cbd1d8c25c90" formatted="false">"Xmin"</string>
   <string name="ui_6c154ffc540d" formatted="false">"Y (mm)"</string>
   <string name="ui_732f2f64f131" formatted="false">"Y degrees"</string>
+  <string name="ui_8174c1dd4f33" formatted="false">"Y maximum (mm)"</string>
+  <string name="ui_f6eaf5019354" formatted="false">"Y minimum (mm)"</string>
   <string name="ui_59a3dfe477fe" formatted="false">"Y mm"</string>
   <string name="ui_c23bd7f616ad" formatted="false">"Y offset"</string>
   <string name="ui_fd96870f3c87" formatted="false">"Y radius (mm)"</string>
   <string name="ui_ccb5c4982ce9" formatted="false">"Y step"</string>
   <string name="ui_4766ca5c5ba1" formatted="false">"Y vector (mm)"</string>
   <string name="ui_ede7497fff33" formatted="false">"Yaw (deg)"</string>
+  <string name="ui_46299d51340d" formatted="false">"Ymax"</string>
+  <string name="ui_dc98fefdbec8" formatted="false">"Ymin"</string>
   <string name="ui_fe2290d0cec3" formatted="false">"Z (mm)"</string>
   <string name="ui_f332621fc819" formatted="false">"Z degrees"</string>
+  <string name="ui_013749d5a4a4" formatted="false">"Z maximum (mm)"</string>
+  <string name="ui_f13d68fe8a4b" formatted="false">"Z minimum (mm)"</string>
   <string name="ui_1d607f786bb3" formatted="false">"Z mm"</string>
   <string name="ui_6db64b7138c0" formatted="false">"Z offset"</string>
   <string name="ui_53478231bb71" formatted="false">"Z step"</string>
   <string name="ui_07a22b7a716f" formatted="false">"Z vector (mm)"</string>
   <string name="ui_b2d43dc84d9f" formatted="false">"Zebra"</string>
   <string name="ui_5e5de9014312" formatted="false">"Zebra · normal stripes"</string>
+  <string name="ui_07ba47424fe0" formatted="false">"Zmax"</string>
+  <string name="ui_31ddecb21c44" formatted="false">"Zmin"</string>
   <string name="ui_1dab62edbcfd" formatted="false">"curve profiles"</string>
   <string name="ui_3eb7c606006d" formatted="false">"diameter pavilionDepth clearanceHeight"</string>
   <string name="ui_67fdbefff60d" formatted="false">"dimensions; Help / template dialog shows fields"</string>

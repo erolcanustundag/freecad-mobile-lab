@@ -16,7 +16,9 @@ FIELDS={'PartDesign::AdditiveBox':('Length','Width','Height'),
         'PartDesign::AdditivePrism':('Polygon','Circumradius','Height'),
         'PartDesign::SubtractivePrism':('Polygon','Circumradius','Height'),
         'PartDesign::AdditiveTorus':('Radius1','Radius2'),
-        'PartDesign::SubtractiveTorus':('Radius1','Radius2')}
+        'PartDesign::SubtractiveTorus':('Radius1','Radius2'),
+        'PartDesign::AdditiveWedge':('Xmin','Xmax','Ymin','Ymax','Zmin','Zmax','X2min','X2max','Z2min','Z2max'),
+        'PartDesign::SubtractiveWedge':('Xmin','Xmax','Ymin','Ymax','Zmin','Zmax','X2min','X2max','Z2min','Z2max')}
 TYPES=set(FIELDS)
 SUBTRACTIVE={kind for kind in TYPES if 'Subtractive' in kind}
 MAXIMUM=64
@@ -26,7 +28,10 @@ def dimensions(kind, values):
     result={}
     for name in FIELDS[kind]:
         value=float(values[name])
-        if name=='Polygon':
+        if kind.endswith('Wedge'):
+            if not math.isfinite(value) or abs(value)>1000000:raise ValueError('Wedge coordinates must be finite and within1,000,000mm')
+            result[name]=value
+        elif name=='Polygon':
             if not math.isfinite(value) or value!=int(value) or not 3<=value<=32:raise ValueError('Body prism sides must be an integer between3 and32')
             result[name]=int(value)
         elif kind.endswith('Cone') and name in ('Radius1','Radius2'):
@@ -35,12 +40,17 @@ def dimensions(kind, values):
         else:result[name]=pd.positive(value)
     if kind.endswith('Cone') and max(result['Radius1'],result['Radius2'])<=1e-7:raise ValueError('A cone needs at least one positive radius above1e-7mm')
     if kind.endswith('Torus') and result['Radius1']-result['Radius2']<=1e-7:raise ValueError('Ring torus needs Radius1 greater than Radius2, both positive')
+    if kind.endswith('Wedge'):
+        for low,high in [('Xmin','Xmax'),('Ymin','Ymax'),('Zmin','Zmax'),('X2min','X2max'),('Z2min','Z2max')]:
+            if not 1e-7<result[high]-result[low]<=1000000:raise ValueError('Wedge endpoint rectangle dimensions must be positive and bounded')
     return result
 
 def bounds(kind, values, pose, body_pose):
     supports.finite_pose(pose);supports.finite_pose(body_pose)
     world=body_pose.multiply(pose)
     if kind.endswith('Box'):axes=[(0,values['Length']),(0,values['Width']),(0,values['Height'])]
+    elif kind.endswith('Wedge'):
+        axes=[(min(values['Xmin'],values['X2min']),max(values['Xmax'],values['X2max'])),(values['Ymin'],values['Ymax']),(min(values['Zmin'],values['Z2min']),max(values['Zmax'],values['Z2max']))]
     elif kind.endswith('Torus'):
         radius=values['Radius1']+values['Radius2'];axes=[(-radius,radius),(-radius,radius),(-values['Radius2'],values['Radius2'])]
     elif kind.endswith('Prism'):
@@ -65,10 +75,22 @@ def angles(kind):
     if kind.endswith('Cylinder'):return {'Angle':360,'FirstAngle':0,'SecondAngle':0}
     return {}
 
+def check_angles(kind, values):
+    expected=angles(kind)
+    if set(values)!=set(expected):raise ValueError('Use the native angle fields for this primitive')
+    result={p:float(values[p]) for p in expected}
+    if any(not math.isfinite(v) for v in result.values()):raise ValueError('Primitive angles must be finite')
+    if kind.endswith('Cone'):
+        if not 1e-7<result['Angle']<=360:raise ValueError('Cone azimuth must be positive and at most360degrees')
+    elif kind.endswith('Sphere'):
+        if not -90<=result['Angle1']<result['Angle2']<=90 or result['Angle2']-result['Angle1']<=1e-7 or not 1e-7<result['Angle3']<=360:raise ValueError('Use ordered sphere latitudes within-90..90 and positive azimuth up to360degrees')
+    elif result!=expected:raise ValueError('This primitive requires its full native angular defaults')
+    return result
+
 def modes(obj):
     import mobile_partdesign_datums as datums
     if obj.MapMode!='Deactivated' or obj.AttachmentSupport or not datums.identity(obj.AttachmentOffset) or obj.MapReversed or obj.MapPathParameter!=0 or obj.AttacherType!='Attacher::AttachEngine3D' or obj.ExpressionEngine or obj.Suppressed or obj.FuzzyTolerance!=-1:raise ValueError('Body primitives require original manual unsuppressed default-tolerance mapping without expressions')
-    if any(getattr(obj,p).Value!=v for p,v in angles(obj.TypeId).items()):raise ValueError('Body primitives require full native angular defaults')
+    check_angles(obj.TypeId,{p:getattr(obj,p).Value for p in angles(obj.TypeId)})
 
 def preflight(doc):
     import mobile_partdesign as pd
@@ -103,6 +125,12 @@ def edit(doc,e,get,identifier):
     import mobile_partdesign as pd
     import mobile_partdesign_paths as paths
     b=pd.body(get(e['body']))
+    if e['op']=='body_primitive_angles':
+        obj=get(e['object'])
+        if obj.TypeId not in TYPES or not obj.TypeId.endswith(('Cone','Sphere')) or pd.owner(obj)!=b:raise ValueError('Choose an owned original cone or sphere')
+        modes(obj);requested=check_angles(obj.TypeId,e['angles'])
+        for field,value in requested.items():setattr(obj,field,value)
+        return
     if e['op']=='body_primitive_pose':
         obj=get(e['object'])
         if obj.TypeId not in TYPES or pd.owner(obj)!=b:raise ValueError('Choose an original primitive owned by this Body')
@@ -131,7 +159,7 @@ def validate_fcstd(node, name, kind, body_name, previous):
     if raw('MapMode','Integer')!='0' or raw('AttacherType','String')!='Attacher::AttachEngine3D' or raw('MapReversed','Bool')!='false' or float(raw('MapPathParameter','Float'))!=0 or raw('Suppressed','Bool')!='false' or float(raw('FuzzyTolerance','Float'))!=-1:raise ValueError('Unsupported saved primitive mapping or mode')
     links=node(name,'AttachmentSupport','LinkSubList')
     if links is None or links.get('count')!='0' or list(links):raise ValueError('Saved primitive attachment is unsupported')
-    if any(float(raw(p,'Float'))!=v for p,v in angles(kind).items()):raise ValueError('Saved primitive must retain full native angular defaults')
+    check_angles(kind,{p:float(raw(p,'Float')) for p in angles(kind)})
     def pose(obj,prop,identity=False):
         n=node(obj,prop,'PropertyPlacement')
         if n is None:raise ValueError('Missing saved primitive/Body placement')

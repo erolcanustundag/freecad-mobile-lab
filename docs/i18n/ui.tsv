@@ -820,3 +820,20 @@ Native subtractive torus|Yerel çıkarmalı torus|Nativer subtraktiver Torus
 Polygon sides (3–32)|Çokgen kenar sayısı (3–32)|Polygonseiten (3–32)
 Circumradius (mm)|Çevrel çember yarıçapı (mm)|Umkreisradius (mm)
 Minor radius (mm)|Kesit yarıçapı (mm)|Nebenradius (mm)
+Native additive wedge|Yerel eklemeli kama|Nativer additiver Keil
+Native subtractive wedge|Yerel çıkarmalı kama|Nativer subtraktiver Keil
+Native cone sector angle|Yerel koni dilim açısı|Nativer Kegelsektorwinkel
+Native sphere segment angles|Yerel küre parça açıları|Native Kugelsegmentwinkel
+Azimuth (deg)|Azimut (derece)|Azimut (Grad)
+Lower latitude (deg)|Alt enlem (derece)|Untere Breite (Grad)
+Upper latitude (deg)|Üst enlem (derece)|Obere Breite (Grad)
+X minimum (mm)|X en küçük (mm)|X-Minimum (mm)
+X maximum (mm)|X en büyük (mm)|X-Maximum (mm)
+Y minimum (mm)|Y en küçük (mm)|Y-Minimum (mm)
+Y maximum (mm)|Y en büyük (mm)|Y-Maximum (mm)
+Z minimum (mm)|Z en küçük (mm)|Z-Minimum (mm)
+Z maximum (mm)|Z en büyük (mm)|Z-Maximum (mm)
+End X minimum (mm)|Uç X en küçük (mm)|Ende X-Minimum (mm)
+End X maximum (mm)|Uç X en büyük (mm)|Ende X-Maximum (mm)
+End Z minimum (mm)|Uç Z en küçük (mm)|Ende Z-Minimum (mm)
+End Z maximum (mm)|Uç Z en büyük (mm)|Ende Z-Maximum (mm)

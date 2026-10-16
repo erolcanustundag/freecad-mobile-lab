@@ -37,6 +37,7 @@
   <string name="ui_1df6251b4693" formatted="false">"Eksen X"</string>
   <string name="ui_27b791621ace" formatted="false">"Eksen Y"</string>
   <string name="ui_e2f1c650f3a2" formatted="false">"Eksen Z"</string>
+  <string name="ui_82f6307593ff" formatted="false">"Azimut (derece)"</string>
   <string name="ui_587eac1112fa" formatted="false">"ARKA"</string>
   <string name="ui_44d0fd52d22b" formatted="false">"ALT"</string>
   <string name="ui_337a1344ed75" formatted="false">"BREP · görünür CAD geometrisi"</string>
@@ -214,6 +215,10 @@
   <string name="ui_8580e3175f4e" formatted="false">"Elips"</string>
   <string name="ui_bd97ca585fa7" formatted="false">"Boş çalışma alanı · model oluşturun veya içe aktarın"</string>
   <string name="ui_1880c7fdf083" formatted="false">"Çoklu seçimi etkinleştir"</string>
+  <string name="ui_488f04a93b2b" formatted="false">"Uç X en büyük (mm)"</string>
+  <string name="ui_8a1b17cfc7af" formatted="false">"Uç X en küçük (mm)"</string>
+  <string name="ui_b20b6f96e5b7" formatted="false">"Uç Z en büyük (mm)"</string>
+  <string name="ui_0f5b15235c22" formatted="false">"Uç Z en küçük (mm)"</string>
   <string name="ui_a4bedcc00e9c" formatted="false">"Bitiş uzatması (mm)"</string>
   <string name="ui_c3efd7bc0e9e" formatted="false">"Bitiş parametresi (0 ile 1)"</string>
   <string name="ui_56237f0f403d" formatted="false">"Yüzde 0 ile 20 arasında değer girin."</string>
@@ -349,6 +354,7 @@
   <string name="ui_e143585c0ba6" formatted="false">"Geometriyi kilitle"</string>
   <string name="ui_545377f346d1" formatted="false">"Geometri düzenlemesini ve görünümden seçimi kilitle"</string>
   <string name="ui_cc7c4b4c6f24" formatted="false">"Profiller arasında yüzey oluştur"</string>
+  <string name="ui_716db54999f0" formatted="false">"Alt enlem (derece)"</string>
   <string name="ui_899bd694d29a" formatted="false">"Makrolar"</string>
   <string name="ui_3540cb5c297d" formatted="false">"Ana yarıçap (mm)"</string>
   <string name="ui_a2a2624901f7" formatted="false">"Malzeme yoğunluğu (g/cm³) · alaşımınızın değerini girin"</string>
@@ -418,9 +424,11 @@
   <string name="ui_554cad4fb886" formatted="false">"Yerel eklemeli prizma"</string>
   <string name="ui_9b72bcb27a54" formatted="false">"Yerel eklemeli küre"</string>
   <string name="ui_60c3641d08f8" formatted="false">"Yerel eklemeli torus"</string>
+  <string name="ui_1c9fde1fde39" formatted="false">"Yerel eklemeli kama"</string>
   <string name="ui_ba8bb30e0b5f" formatted="false">"Yerel kör delik"</string>
   <string name="ui_45211683ce7b" formatted="false">"Yerel kutu"</string>
   <string name="ui_129f379f9d3a" formatted="false">"Yerel koni"</string>
+  <string name="ui_e5437b08e3b3" formatted="false">"Yerel koni dilim açısı"</string>
   <string name="ui_09182d2f8685" formatted="false">"Yerel koordinat sistemi"</string>
   <string name="ui_d59b101707b5" formatted="false">"Yerel silindirik havşa"</string>
   <string name="ui_ccdc3289cc80" formatted="false">"Yerel konik havşa"</string>
@@ -446,6 +454,7 @@
   <string name="ui_95917cac62a7" formatted="false">"Yerel şekil kesiti"</string>
   <string name="ui_266b14b41bae" formatted="false">"Yerel katı ofseti"</string>
   <string name="ui_c2c2cc1eb77b" formatted="false">"Yerel küre"</string>
+  <string name="ui_8b6eef494e8d" formatted="false">"Yerel küre parça açıları"</string>
   <string name="ui_5d6d243f6ba5" formatted="false">"Yerel spiral"</string>
   <string name="ui_0865e4ebbbdb" formatted="false">"Yerel çıkarıcı kutu"</string>
   <string name="ui_58dd2e6fd6db" formatted="false">"Yerel çıkarmalı koni"</string>
@@ -456,6 +465,7 @@
   <string name="ui_e2f429829daa" formatted="false">"Yerel çıkarmalı prizma"</string>
   <string name="ui_12a90a38dbf7" formatted="false">"Yerel çıkarmalı küre"</string>
   <string name="ui_dc52ea24735a" formatted="false">"Yerel çıkarmalı torus"</string>
+  <string name="ui_d6550e61eaea" formatted="false">"Yerel çıkarmalı kama"</string>
   <string name="ui_633ab45f6fa4" formatted="false">"Yerel tümünü geçen cep"</string>
   <string name="ui_7963720bd225" formatted="false">"Yerel boydan boya delik"</string>
   <string name="ui_850e15bfcf21" formatted="false">"Yerel torus"</string>
@@ -780,6 +790,7 @@
   <string name="ui_79dc1391f805" formatted="false">"Geometri kilidini kaldır"</string>
   <string name="ui_6e217f978cea" formatted="false">"Kaydedilmemiş laboratuvar belgeleri kapanacak. Kayıtlı FCStd dosyaları ve makrolar korunur. CAD çalışma alanı ayrı sürecinde kalır."</string>
   <string name="ui_028679f571b4" formatted="false">"NURBS yüzey kırpmasını kaldır"</string>
+  <string name="ui_7572adaee4bf" formatted="false">"Üst enlem (derece)"</string>
   <string name="ui_f9f4b89fd160" formatted="false">"Özgün App/Part 1.1.4 · katılar, özellikler, ifadeler ve işlemler"</string>
   <string name="ui_83ee1bec0e9f" formatted="false">"Özgün App/Part/Sketcher 1.1.4 · katılar, eskizler ve yerel kısıtlar"</string>
   <string name="ui_45475b570da7" formatted="false">"Özgün App/Part/Sketcher/PartDesign 1.1.4 · yerel belge işlemleri"</string>
@@ -809,15 +820,21 @@
   <string name="ui_4337329c5887" formatted="false">"Dünya Z düzlemi (mm)"</string>
   <string name="ui_8daa34bd2dff" formatted="false">"Dünya ekseni"</string>
   <string name="ui_ddafd9c7c568" formatted="false">"X (mm)"</string>
+  <string name="ui_26ccce1ffa13" formatted="false">"X en büyük (mm)"</string>
+  <string name="ui_238370267160" formatted="false">"X en küçük (mm)"</string>
   <string name="ui_26f15614cab2" formatted="false">"X (mm)"</string>
   <string name="ui_2186f223e3c8" formatted="false">"X yarıçapı (mm)"</string>
   <string name="ui_1f48d503c02a" formatted="false">"XY kontrol noktaları · noktaları sürükleyin · Z / ağırlık için Nokta"</string>
   <string name="ui_2d825843e49c" formatted="false">"XY çizimi · eklemek için dokunun, düzenlemek için sürükleyin · kıstırın / iki parmakla kaydırın"</string>
   <string name="ui_6c154ffc540d" formatted="false">"Y (mm)"</string>
+  <string name="ui_8174c1dd4f33" formatted="false">"Y en büyük (mm)"</string>
+  <string name="ui_f6eaf5019354" formatted="false">"Y en küçük (mm)"</string>
   <string name="ui_59a3dfe477fe" formatted="false">"Y (mm)"</string>
   <string name="ui_fd96870f3c87" formatted="false">"Y yarıçapı (mm)"</string>
   <string name="ui_ede7497fff33" formatted="false">"Sapma (derece)"</string>
   <string name="ui_fe2290d0cec3" formatted="false">"Z (mm)"</string>
+  <string name="ui_013749d5a4a4" formatted="false">"Z en büyük (mm)"</string>
+  <string name="ui_f13d68fe8a4b" formatted="false">"Z en küçük (mm)"</string>
   <string name="ui_1d607f786bb3" formatted="false">"Z (mm)"</string>
   <string name="ui_5e5de9014312" formatted="false">"Zebra · normal yönü çizgileri"</string>
   <string name="ui_3cd3b258c914" formatted="false">"kontrol edilmedi (100.000\'den fazla üçgen)"</string>
