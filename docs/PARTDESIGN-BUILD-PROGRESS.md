@@ -27,3 +27,7 @@ Original PadUpToFace/UpToLast, PocketUpToFirst and TwoSidesLength/Length2 are in
 ##1.24 original cone and sphere Body features
 
 Original Additive/SubtractiveCone and Sphere are integrated through native dimensions, manual placement and linked BaseFeature history. Cone radii may be zero individually or equal; at least one positive radius and positive height are required. Sphere native Angle1/2/3 remain -90/90/360.227JNI+6cold checks cover analytic cap/tip clipping/source edits, native references and units,23malformedFCStd, no-op/point-contact guards, Undo/atomic rollback, true restoration and STEP.134ELF1083Python static verification passes; physicalAndroidNOT_RUN. Next torus/prism native proof passes35+10checks, mobilepending. Ellipsoid measurement investigation is explicitly deferred.
+
+##1.25 original regular prism and ring torus Body features
+
+Four original native scopes support analytic polygonal prisms and ring tori, native BaseFeature/Tip, source and dimension edits, scoped IntegerConstraint Polygon editing and length units.229JNI+6cold checks include22malformedFCStd, integer exponent/fraction pre-restoration guards, original history/placement, Undo/atomic rollback and STEP.822TR/DE UI entries;134ELF1083Python static closure/alignment/signatures pass. AndroidNOT_RUN. Next native wedge and cone/sphere sector proof31+23checks is recorded separately, mobilepending.

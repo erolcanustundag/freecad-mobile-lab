@@ -1,0 +1,8 @@
+{
+  "status": "HOST_ORIGINAL_WEDGE_SECTOR_BOUNDARY_PASS_MOBILE_PENDING",
+  "checks": 23,
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "android_execution": "NOT_RUN",
+  "qualified": "positive rectangular ends including signed/slanted coordinates; full and bounded cone/sphere angles",
+  "pending": "degenerate wedge endpoint rectangles; tiny-angle/material policy and mobile pre-compute guards"
+}

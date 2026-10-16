@@ -1,0 +1,72 @@
+{
+  "version": "1.25",
+  "version_code": 51,
+  "freecad": "1.1.4",
+  "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
+  "native_jni_checks": 229,
+  "cold_jvm_checks": 6,
+  "workflows": [
+    "original PartDesign::AdditivePrism",
+    "original PartDesign::SubtractivePrism",
+    "original PartDesign::AdditiveTorus",
+    "original PartDesign::SubtractiveTorus"
+  ],
+  "qualified": [
+    "analytic regular-prism and ring-torus unions/removal",
+    "native radius/polygon/source/units/history/Tip edits",
+    "integer sides3..32 and ring-radius relation before compute",
+    "native manual and Body/world placement",
+    "positive material and one closed connected solid, no-op/disconnected/cut guards",
+    "UndoRedo and atomic rollback",
+    "22 malformed FCStd dimension/angular/mapping/placement/history cases, including fractional and exponential Integer text",
+    "fresh JVM original-class restoration and native STEP roundtrip"
+  ],
+  "limits": {
+    "primitives_per_document": 64,
+    "source_faces": 64,
+    "source_edges": 256,
+    "world_coordinate_mm": 1000000,
+    "prism_sides": [
+      3,
+      32
+    ],
+    "prism_end_angles_deg": [
+      0,
+      0
+    ],
+    "torus_angles_deg": [
+      -180,
+      180,
+      360
+    ],
+    "torus": "Radius1>Radius2>0",
+    "mapping": "original AttachEngine3D/Deactivated with identity offset"
+  },
+  "android_execution": "NOT_RUN",
+  "native_arm64_classes": "all four original class names present in unchanged packaged PartDesign library; static evidence only",
+  "pending": [
+    "wedge and ellipsoid qualification",
+    "other angular/mapped/expressed modes",
+    "Gui/Assembly/full FreeCAD/Rhino parity"
+  ],
+  "regressions": {
+    "round_primitive_jni": 227,
+    "round_primitive_cold": 6,
+    "primitive_jni": 280,
+    "primitive_cold": 6,
+    "attachment_jni": 268,
+    "attachment_cold": 10,
+    "datum_jni": 299,
+    "datum_cold": 13,
+    "hole_jni": 302,
+    "path_jni": 310,
+    "partdesign_jni": 1509,
+    "sketcher_jni": 2324,
+    "part_jni": 269,
+    "app_jni": 88,
+    "python_tools": 62,
+    "locale": 527,
+    "localization_resources": 3,
+    "runtime_packaging": 10
+  }
+}

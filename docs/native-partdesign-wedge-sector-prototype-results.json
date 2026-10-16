@@ -1,0 +1,12 @@
+{
+  "status": "HOST_ORIGINAL_WEDGE_SECTOR_PROBE_PASS_MOBILE_PENDING",
+  "checks": 31,
+  "scopes": [
+    "PartDesign::AdditiveWedge",
+    "PartDesign::SubtractiveWedge",
+    "original Cone angular sector",
+    "original Sphere latitude/azimuth segment"
+  ],
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "android_execution": "NOT_RUN"
+}

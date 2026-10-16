@@ -625,5 +625,20 @@
     "android_runtime": "physical startup/lifecycle/SAF workflows pending",
     "signing": "retained public development identity",
     "milestone_gate": "not complete until roadmap device/workflow criteria pass"
+  },
+  {
+    "version": "1.25",
+    "version_name": "1.25",
+    "version_code": 51,
+    "channel": "release",
+    "status": "initial public mobile feature release; broader device qualification pending",
+    "scope": "current mobile feature set",
+    "apk": "FreeCAD-Mobile-Lab-1.25-arm64.apk",
+    "size_bytes": 164009901,
+    "sha256": "e07a7ec7d684dcc111c692f2352a3eac98b7552050fa2988fe0223b052f743c3",
+    "engineering_changes": "Four original additive/subtractive regular prism and ring torus Body tools;229JNI+6cold,227round/280primitive/268attachment/299Datum/302Hole/310path/1509PD/2324Sketcher/269Part/88App/62Python/527locale/3resource/10packaging PASS;822TR/DE entries;134ELF1083Python/API26/16KiB/signatures PASS; physicalAndroidNOT_RUN/fullparityNOT_COMPLETE.",
+    "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+    "signing": "retained public development identity",
+    "milestone_gate": "not complete until roadmap device/workflow criteria pass"
   }
 ]

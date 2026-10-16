@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: LGPL-2.1-or-later
 """Prepare verified public release transports locally; no network or ref mutation."""
-import argparse,hashlib,json,re,zipfile
+import argparse,hashlib,json,re,zipfile,subprocess
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def digest(path):
     with path.open('rb') as stream:return hashlib.file_digest(stream,'sha256').hexdigest()
 def prepare(source_commit,output):
     if not re.fullmatch('[0-9a-f]{40}',source_commit):raise ValueError('Use the exact sealed source commit')
+    if subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()!=source_commit:raise ValueError('Check out the sealed source commit before preparing transport')
+    if subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip():raise ValueError('Commit all intended source changes before preparing transport')
     release=json.loads((ROOT/'release.json').read_text());version=release['version'];lock=json.loads((ROOT/'docs/RELEASE-ASSETS.json').read_text())
     if lock['version']!=version or lock['prerelease'] or len(lock['assets'])!=4:raise ValueError('Expected four matching full-release assets')
     sealed=json.loads((ROOT/'docs/apk-inputs.json').read_text())

@@ -9,3 +9,7 @@ Extend the existing original primitive adapter, keeping one connected solid, pos
 Add meaningful JNI/geometry/units/source/history/UndoRedo/rollback/FCStd/STEP/malformed-file/cold-restoration tests, EN/TR/DE commands/forms/guides, then rebuild/sign/save a compatible APK and publish a full release after all four scopes pass. General primitive/attachment/Gui/Assembly/FreeCAD/Rhino parity and F-Droid remain pending.
 
 Additional boundary proof passes16checks (48combined host prototype checks). The original Cone supports a zero base radius and equal radii (the latter retains the original cone class with cylinder-equivalent geometry), including true FCStd reopening. Do not reject equal radii based on an assumed OCCT limitation. With AllowCompound=false, point-only additions can leave a valid unchanged source result; both valid-single-solid and positive-material-delta guards are necessary. Zero-radius native outputs may report Up-to-date or tiny kernel-clamped geometry, so validate requested radii and material thresholds before computation. See native-partdesign-round-boundary-results.json for observed native values.
+
+## Integration checkpoint
+
+Implemented in1.24 with227actualJNI+6cold-JVM checks, bounded native history/geometry/restoration and localized controls. See native-partdesign-round-primitive-results.json. Physical Android execution remains NOT_RUN; earlier prototype notes describe the pre-integration checkpoint.
