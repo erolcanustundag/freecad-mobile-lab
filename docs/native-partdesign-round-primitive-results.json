@@ -1,0 +1,61 @@
+{
+  "version": "1.24",
+  "version_code": 50,
+  "freecad": "1.1.4",
+  "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
+  "native_jni_checks": 227,
+  "cold_jvm_checks": 6,
+  "workflows": [
+    "original PartDesign::AdditiveCone",
+    "original PartDesign::SubtractiveCone",
+    "original PartDesign::AdditiveSphere",
+    "original PartDesign::SubtractiveSphere"
+  ],
+  "qualified": [
+    "analytic hemisphere/cone/spherical-cap/conical-tip material",
+    "native source/radius/height/units/history/Tip and Body pose",
+    "zero-radius apex and equal-radius original cone",
+    "positive material and one closed connected solid, no-op/point-contact/disconnected/cut guards",
+    "UndoRedo and atomic rollback",
+    "23 malformed FCStd dimension/angular/mapping/pose/history cases",
+    "fresh JVM restoration of original classes and references",
+    "native STEP roundtrip"
+  ],
+  "limits": {
+    "primitives_per_document": 64,
+    "source_faces": 64,
+    "source_edges": 256,
+    "world_coordinate_mm": 1000000,
+    "cone_angle_deg": 360,
+    "sphere_angles_deg": [
+      -90,
+      90,
+      360
+    ],
+    "mapping": "original AttachEngine3D/Deactivated with identity offset"
+  },
+  "android_execution": "NOT_RUN",
+  "native_arm64_classes": "all four class names present in unchanged original ARM64 PartDesign library; static evidence only",
+  "pending": [
+    "other primitive/angular/mapped/expressed workflows",
+    "Gui/Assembly/full FreeCAD/Rhino parity"
+  ],
+  "regressions": {
+    "primitive_jni": 280,
+    "primitive_cold": 6,
+    "attachment_jni": 268,
+    "attachment_cold": 10,
+    "datum_jni": 299,
+    "datum_cold": 13,
+    "hole_jni": 302,
+    "path_jni": 310,
+    "partdesign_jni": 1509,
+    "sketcher_jni": 2324,
+    "part_jni": 269,
+    "app_jni": 88,
+    "python_tools": 62,
+    "locale": 527,
+    "localization_resources": 3,
+    "runtime_packaging": 10
+  }
+}

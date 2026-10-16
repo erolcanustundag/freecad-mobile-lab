@@ -1,0 +1,56 @@
+{
+  "status": "HOST_ORIGINAL_TORUS_PRISM_BOUNDARY_PASS_MOBILE_PENDING",
+  "checks": 10,
+  "observations": [
+    {
+      "major": 2,
+      "minor": 0.5,
+      "state": [
+        "Up-to-date"
+      ],
+      "valid": true,
+      "volume": 9.869604401089354
+    },
+    {
+      "major": 1,
+      "minor": 1,
+      "state": [
+        "Up-to-date"
+      ],
+      "valid": true,
+      "volume": 19.739208802178716
+    },
+    {
+      "major": 0.5,
+      "minor": 1,
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "valid": false,
+      "volume": null
+    },
+    {
+      "major": 2,
+      "minor": 0,
+      "state": [
+        "Up-to-date"
+      ],
+      "valid": true,
+      "volume": 1.5791367033276155e-12
+    },
+    {
+      "major": 0,
+      "minor": 1,
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "valid": false,
+      "volume": null
+    }
+  ],
+  "mobile_policy": "integer Polygon3..32; positive Circumradius/Height; ring torus Radius1>Radius2>0, full native defaults; reject horn/spindle/zero",
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "android_execution": "NOT_RUN"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "HOST_ORIGINAL_TORUS_PRISM_PROBE_PASS_MOBILE_PENDING",
+  "checks": 35,
+  "types": [
+    "PartDesign::AdditivePrism",
+    "PartDesign::SubtractivePrism",
+    "PartDesign::AdditiveTorus",
+    "PartDesign::SubtractiveTorus"
+  ],
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "android_execution": "NOT_RUN"
+}

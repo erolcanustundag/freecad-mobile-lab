@@ -1,20 +1,16 @@
-# FreeCAD Mobile Lab 1.23
+# FreeCAD Mobile Lab 1.24
 
-Full release of the current mobile feature set, Android code49. Signed ARM64 APK with the compatible update certificate.
+Full release of the current mobile feature set, Android code50. Signed ARM64 APK retains the compatible update certificate.
 
-Four original PartDesign workflows in the native Document Lab:
+Four original PartDesign Body workflows:
 
-- AdditiveBox: linked native box union.
-- SubtractiveBox: linked native box cut.
-- AdditiveCylinder: linked native cylinder union.
-- SubtractiveCylinder: linked native cylinder cut.
+- AdditiveCone and SubtractiveCone: native linked conical unions/cuts, including zero-radius apices and equal-radius cones.
+- AdditiveSphere and SubtractiveSphere: native linked full-sphere unions/cuts.
 
-BodyAddBox, BodySubBox, BodyAddCylinder and BodySubCylinder accept dimensions and optional X/Y/Z/yaw/pitch/roll. BodyPrimitivePose moves an owned primitive. Set FEATURE.Height 2 cm edits an original quantity; Length/Width/Radius are available where applicable. PartDesign touch forms and EN/TR/DE guides are included. Native BaseFeature links, preceding-solid history and Tip remain editable. Source dimensions and placements update actual downstream geometry. Original Datum references can attach to primitive faces/edges/vertices.
+Use `BodyAddCone` / `BodySubCone BODY NAME R1 R2 HEIGHT` and `BodyAddSphere` / `BodySubSphere BODY NAME RADIUS`, optionally followed by `X Y Z YAW PITCH ROLL`. Touch forms and native guides support English, Turkish and German; 815 reviewed Turkish/German UI entries. `Set` accepts length units; `BodyPrimitivePose` edits the original feature placement.
 
-An additive primitive must add material and retain one connected solid. A subtractive primitive needs existing stock, must remove material and must retain one closed solid. Empty, no-op, disconnected, foreign or branched edits roll back. Dimensions and projected world bounds are checked before computation/restoration. Modes, engines, offsets, angles, suppression, tolerance, saved history and placements are guarded. Dedicated tools protect native ownership and placement.
+227 actual JNI checks plus6 fresh-JVM checks qualify analytic geometry, clipped source updates, dimensions/units, original history, Undo/Redo, atomic rollback,23 malformed FCStd cases, native reopening and STEP. Shared primitive budgets include64 actual connected native features and rejection of further cone/sphere operations. All existing native regressions pass:280primitive/268attachment/299Datum/302Hole/310path/1509PartDesign/2324Sketcher/269Part/88App/62Python, plus527locale/3resource/10packaging checks.
 
-Limits:64primitives per document; sources up to64faces/256edges; world coordinates within1,000,000mm. Cylinders use full360degree geometry with straight default ends. Mapping is original AttachEngine3D/Deactivated with identity offset. Expressions, mapped/partial primitives and other primitive types remain pending.
+Full angular defaults/manual mapping, source64faces/256edges,64primitives and1,000,000mm world limits remain enforced. Additions must add connected material; cuts must remove material and retain one closed solid. Invalid requests roll back.
 
-Validation:278new JNI workflow checks plus6fresh-JVM checks, including64actual connected primitives and limit rollback.19malformedFCStd variants, analytical native volumes, source/unit/pose/world transforms, original references, UndoRedo/atomic rollback, cold restoration and material STEP. Regressions:268attachment+10cold,299Datum+13cold,302Hole,310path,1509PartDesign,2324Sketcher,269Part,88App,62Python,527language/command,3resource and10packaging pass.809reviewed TR/DE entries and localized native guides. APK134ARM64 libraries/extensions and1083Python files pass API26strong-symbol/loader closure,16KiB alignment andv2/v3signature checks. Native library bytes remain unchanged; the four original ARM64 class names are present.
-
-Physical Android1.23 execution is NOT_RUN. Full workbench/Gui/Assembly/FreeCAD/Rhino parity remains NOT_COMPLETE. F-Droid NOT_SUBMITTED. Signing key and private continuation are excluded from public assets. Native cone/sphere prototypes are saved for the next batch and are not mobile features of this release.
+APK static verification:134 ARM64 libraries/extensions,1083 Python assets, API26 native dependency/strong-symbol closure,16KiB alignment and compatible v2/v3 signatures. Physical Android1.24 execution is NOT_RUN. Full desktop FreeCAD/Rhino/Gui/Assembly parity is NOT COMPLETE; F-Droid submission remains pending. Original torus/prism host prototypes are saved for the next batch; they are not mobile features in1.24.

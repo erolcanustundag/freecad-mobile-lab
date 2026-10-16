@@ -610,5 +610,20 @@
     "android_runtime": "physical startup/lifecycle/SAF workflows pending",
     "signing": "retained public development identity",
     "milestone_gate": "not complete until roadmap device/workflow criteria pass"
+  },
+  {
+    "version": "1.24",
+    "version_name": "1.24",
+    "version_code": 50,
+    "channel": "release",
+    "status": "initial public mobile feature release; broader device qualification pending",
+    "scope": "current mobile feature set",
+    "apk": "FreeCAD-Mobile-Lab-1.24-arm64.apk",
+    "size_bytes": 164009901,
+    "sha256": "e88a57f4f8f9003858287b338f90664626961caf71b78abf11a9d2dccd45121b",
+    "engineering_changes": "Four original additive/subtractive cone and sphere Body workflows;227JNI+6cold,280primitive/268attachment/299Datum/302Hole/310path/1509PD/2324Sketcher/269Part/88App/62Python/527locale/3resource/10packaging PASS;815TR/DE entries;134ELF1083Python/API26/16KiB/signatures PASS; physicalAndroidNOT_RUN/fullparityNOT_COMPLETE.",
+    "android_runtime": "physical startup/lifecycle/SAF workflows pending",
+    "signing": "retained public development identity",
+    "milestone_gate": "not complete until roadmap device/workflow criteria pass"
   }
 ]

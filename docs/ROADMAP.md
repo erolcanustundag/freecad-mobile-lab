@@ -1,6 +1,6 @@
 # FreeCAD Mobile Lab — complete desktop parity roadmap
 
-Updated 13 October 2026. Current native checkpoint: **1.12 / code38**. Product1.0 was the first public mobile feature release. B01–B04 and the bounded original Part/Sketcher sub-batches below have host evidence; broader workbench/device parity and the original comprehensive qualification milestone remain **NOT COMPLETE**. The user previously reported startup works on their phone; automated execution of1.12 isNOT_RUN. English, Turkish and German UI/guides are supported. See LANGUAGES.md, RHINO-GAPS.md and RELEASE-SCOPE-1.0.md.
+Updated 16 October 2026. Current native checkpoint: **1.24 / code50**. Product1.0 was the first public mobile feature release. B01–B04 and the bounded original Part/Sketcher sub-batches below have host evidence; broader workbench/device parity and the original comprehensive qualification milestone remain **NOT COMPLETE**. The user previously reported startup works on their phone; automated execution of1.24 isNOT_RUN. English, Turkish and German UI/guides are supported. See LANGUAGES.md, RHINO-GAPS.md and RELEASE-SCOPE-1.0.md.
 
 ## Baseline and scope
 
@@ -223,3 +223,7 @@ Four bounded scopes: Datum Plane FlatFace on an owned planar solid face, Line Ta
 ## 1.23 — original Body box/cylinder primitives
 
 Four original scopes: AdditiveBox/SubtractiveBox/AdditiveCylinder/SubtractiveCylinder, linked BaseFeature/Tip history, native length units and protected manual pose.278JNI+6fresh-JVM checks include analytic unions/removal, source overlaps, dimensions/world frames, native Datum supports, no-op/disconnected/empty-stock guards, UndoRedo/atomic rollback,19malformedFCStd variants, close/cold reopening, material STEP and64actual connected primitives with limit rollback.268+10/299+13/302/310/1509/2324/269/88/62/527/3/10 regressions pass.809TR/DE entries/localized guides. APK134ELF/1083Python/API26/16KiB/signatures verified. Full cylinder defaults/manual mapping only; sources64faces256edges/world1M/64primitives. PhysicalAndroid/fullparity/F-Droid gates pending. Next24original additive/subtractive Cone/Sphere host prototype passes32analytic/source/history/restore checks; mobile integration pending per NEXT-BATCH-1.24.md.
+
+## 1.24 — original Body cone/sphere primitives
+
+Four original additive/subtractive Cone/Sphere scopes use native classes, protected full angular defaults, cone zero-apex/equal-radius support, unit dimensions/manual poses, one connected closed solid and positive material guards.227JNI+6cold-JVM checks qualify analytic clipped geometry, native history/UndoRedo/atomic rollback,23malformedFCStd cases and STEP.815TR/DE entries and localized guides. SignedAPK/static134ELF1083Python/API26/16KiB/signatures pass; physicalAndroid24NOT_RUN. Next torus/prism native prototypes35+10checks pass; mobile exposure pending per NEXT-BATCH-1.25.md. Native ellipsoid volume accuracy requires investigation. FullGui/Assembly/FreeCAD/Rhino andF-Droid gates remain open.

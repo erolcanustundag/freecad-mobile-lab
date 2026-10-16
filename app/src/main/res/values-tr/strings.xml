@@ -44,6 +44,7 @@
   <string name="ui_c59203db9a48" formatted="false">"Dengeli · 50.000 üçgen"</string>
   <string name="ui_78a8bd5c5cc2" formatted="false">"Yüzük kolu genişliği / yüksekliği (mm)"</string>
   <string name="ui_3e2cdbeee1e4" formatted="false">"Ana nesne"</string>
+  <string name="ui_5ecc4f0230a6" formatted="false">"Taban yarıçapı (mm)"</string>
   <string name="ui_9230747798f6" formatted="false">"Temel katılar"</string>
   <string name="ui_40af4dcb42fc" formatted="false">"Toplu varyantlar"</string>
   <string name="ui_6c5f4cb5f461" formatted="false">"Tabla X (mm)"</string>
@@ -748,6 +749,7 @@
   <string name="ui_cae0435c41e8" formatted="false">"Üst"</string>
   <string name="ui_c0c80372338a" formatted="false">"Üst kafes ölçeği · 0.1 ile 3"</string>
   <string name="ui_19ed0b0dff13" formatted="false">"Üst kafes burulması (derece)"</string>
+  <string name="ui_f3a0a89dd81a" formatted="false">"Üst yarıçap (mm)"</string>
   <string name="ui_1b03f33c6462" formatted="false">"Topoloji indisleri"</string>
   <string name="ui_bb051365c738" formatted="false">"Torus"</string>
   <string name="ui_7338cfbcd713" formatted="false">"Toplam uzunluk (mm)"</string>

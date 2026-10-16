@@ -44,6 +44,7 @@
   <string name="ui_c59203db9a48" formatted="false">"Ausgewogen · 50.000 Dreiecke"</string>
   <string name="ui_78a8bd5c5cc2" formatted="false">"Ringbandbreite / Höhe (mm)"</string>
   <string name="ui_3e2cdbeee1e4" formatted="false">"Basisobjekt"</string>
+  <string name="ui_5ecc4f0230a6" formatted="false">"Basisradius (mm)"</string>
   <string name="ui_9230747798f6" formatted="false">"Grundkörper"</string>
   <string name="ui_40af4dcb42fc" formatted="false">"Variantenserie"</string>
   <string name="ui_6c5f4cb5f461" formatted="false">"Druckbett X (mm)"</string>
@@ -748,6 +749,7 @@
   <string name="ui_cae0435c41e8" formatted="false">"Oben"</string>
   <string name="ui_c0c80372338a" formatted="false">"Oberer Käfigmaßstab · 0.1 bis 3"</string>
   <string name="ui_19ed0b0dff13" formatted="false">"Verdrehung des oberen Käfigs (Grad)"</string>
+  <string name="ui_f3a0a89dd81a" formatted="false">"Oberer Radius (mm)"</string>
   <string name="ui_1b03f33c6462" formatted="false">"Topologieindizes"</string>
   <string name="ui_bb051365c738" formatted="false">"Torus"</string>
   <string name="ui_7338cfbcd713" formatted="false">"Gesamtausdehnung (mm)"</string>

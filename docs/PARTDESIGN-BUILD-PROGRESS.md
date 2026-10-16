@@ -23,3 +23,7 @@ Original Reversed/SideType Symmetric Pad/Pocket, ThroughAll Pocket and planar pr
 ##1.18 original native stopping/two-sided extents
 
 Original PadUpToFace/UpToLast, PocketUpToFirst and TwoSidesLength/Length2 are integrated through real native properties and references.1509JNI tests qualify geometry/source/profile/body placement/history/restoration/STEP/atomic and no-op/complexity/reference/length failures. Native pre-restoration history is checked before loading, and inactive stopping Length edits are refused. Next original additive/subtractivePipe/Helix prototypes are recorded with analytic straight-path volumes and native helical approximation/integration within0.001mm³ on axis-meridian circular reference profiles; not supported in1.18 mobile workflows.
+
+##1.24 original cone and sphere Body features
+
+Original Additive/SubtractiveCone and Sphere are integrated through native dimensions, manual placement and linked BaseFeature history. Cone radii may be zero individually or equal; at least one positive radius and positive height are required. Sphere native Angle1/2/3 remain -90/90/360.227JNI+6cold checks cover analytic cap/tip clipping/source edits, native references and units,23malformedFCStd, no-op/point-contact guards, Undo/atomic rollback, true restoration and STEP.134ELF1083Python static verification passes; physicalAndroidNOT_RUN. Next torus/prism native proof passes35+10checks, mobilepending. Ellipsoid measurement investigation is explicitly deferred.

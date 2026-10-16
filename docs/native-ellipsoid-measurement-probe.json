@@ -1,0 +1,12 @@
+{
+  "status": "NATIVE_ELLIPSOID_MEASUREMENT_INVESTIGATION_REQUIRED",
+  "native_type": "PartDesign::AdditiveEllipsoid",
+  "analytic_volume": 8.377580409572781,
+  "native_volume": 8.373916503586532,
+  "absolute_error": 0.0036639059862491052,
+  "relative_error": 0.0004373465615516483,
+  "surface_type": "BSplineSurface",
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "qualification": "NOT_QUALIFIED",
+  "note": "Native BSpline-surface volume integration differs from analytic ellipsoid volume; investigate accurate integration and bounding before exposure."
+}

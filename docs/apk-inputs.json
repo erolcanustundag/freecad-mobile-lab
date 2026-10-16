@@ -1,7 +1,7 @@
 {
   "version_name": "1.24",
   "apk": "FreeCAD-Mobile-Lab-1.24-arm64.apk",
-  "sha256": "ef49c87019aefb185d358f03feb53f25719294cf75efd4a2fe9445b09c75e1c4",
+  "sha256": "e88a57f4f8f9003858287b338f90664626961caf71b78abf11a9d2dccd45121b",
   "inputs": {
     "app/libs/Qt6Android.jar": "b4b439629c5aa21db9a3b633d77182d0b25b1c381c391fc447e6104be394bb54",
     "app/src/main/AndroidManifest.xml": "ec97c9abf625cc7889c6c27d1b5ba9a6be2cf00467f7d20b5077a75952c9b6c4",
@@ -473,8 +473,8 @@
     "app/src/main/res/values/ids.xml": "44e9056e8add6009171f3b9b63b147529ad06fa2259919b0f41287f4294ce259",
     "app/src/main/res/values/strings.xml": "947bca5f2a12f3660067d07e8c658ea7cdd38956c9e1807e5000c7a4d03cc434",
     "app/src/main/res/values/styles.xml": "2887ba59e2dd59fa5b2268b38575e08f2dd691609ab04f085d93b73cbfca88e3",
-    "app/src/main/res/values-de/strings.xml": "910dc4b9f8201ed64e490fe759da1b14be425a331b1ed4b2d72158586e91465e",
-    "app/src/main/res/values-tr/strings.xml": "dfea2d962a1e82fca99f92e4b9c5e48982576cff1646d296110dae3203c99c90",
+    "app/src/main/res/values-de/strings.xml": "2524e53918f304b9c0081efc27fcb071599843e5ccdcba05c853b0b13f3d87a9",
+    "app/src/main/res/values-tr/strings.xml": "c080a5fc7319a00a9eeefae0023b25416e9ffe19f458ade76decf0a480fb6e90",
     "release.json": "76a6a60f14dad3edbb4c572fb181ad9d113dca40aa8b10ba5de7dcd3dcb1637b"
   },
   "native_build": "verified 0.9 prebuilts",
