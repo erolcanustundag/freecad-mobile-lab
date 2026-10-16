@@ -31,3 +31,7 @@ Original Additive/SubtractiveCone and Sphere are integrated through native dimen
 ##1.25 original regular prism and ring torus Body features
 
 Four original native scopes support analytic polygonal prisms and ring tori, native BaseFeature/Tip, source and dimension edits, scoped IntegerConstraint Polygon editing and length units.229JNI+6cold checks include22malformedFCStd, integer exponent/fraction pre-restoration guards, original history/placement, Undo/atomic rollback and STEP.822TR/DE UI entries;134ELF1083Python static closure/alignment/signatures pass. AndroidNOT_RUN. Next native wedge and cone/sphere sector proof31+23checks is recorded separately, mobilepending.
+
+##1.26 original wedges and round-sector controls
+
+Original Additive/SubtractiveWedge and dedicated owned Cone/Sphere angle operations qualify with204JNI+6cold checks. Finite signed/slanted positive endpoint rectangles, pre-compute world bounds, native angular ranges, source clipping/no-op failures, units/history/Undo/atomic rollback,17malformedFCStd and nativeSTEP/restoration are covered.839TR/DE UI entries and static134ELF1083Python closure/alignment/signatures pass; AndroidNOT_RUN. Adaptive OCCT mass research improves native ellipsoid integration accuracy, with remaining geometry discrepancy explicitly recorded; no ellipsoid mobile exposure yet.

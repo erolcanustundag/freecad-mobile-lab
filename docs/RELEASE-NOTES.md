@@ -1,16 +1,17 @@
-# FreeCAD Mobile Lab 1.25
+# FreeCAD Mobile Lab 1.26
 
-Full release of the current mobile feature set, Android code51. Signed ARM64 APK retains the compatible update certificate.
+Full release of the current mobile feature set, Android code52. Signed ARM64 APK retains the compatible update certificate.
 
 Four original PartDesign Body workflows:
 
-- AdditivePrism and SubtractivePrism: linked regular polygonal stock and cuts, with3–32 sides.
-- AdditiveTorus and SubtractiveTorus: linked ring-shaped stock and channels.
+- AdditiveWedge and SubtractiveWedge with signed/slanted native endpoint rectangles.
+- Cone sector azimuth control through `BodyConeAngle BODY FEATURE ANGLE`.
+- Sphere latitude/azimuth control through `BodySphereAngles BODY FEATURE LOWER_LAT UPPER_LAT AZIMUTH`.
 
-Use `BodyAddPrism` / `BodySubPrism BODY NAME SIDES CIRCUMRADIUS HEIGHT` and `BodyAddTorus` / `BodySubTorus BODY NAME MAJOR_RADIUS MINOR_RADIUS`, optionally followed by `X Y Z YAW PITCH ROLL`. Touch forms and native guides support English, Turkish and German, with822 reviewed Turkish/German UI entries. `Set` accepts length units; Polygon requires an integer. `BodyPrimitivePose` moves the original feature.
+`BodyAddWedge` / `BodySubWedge BODY NAME XMIN XMAX YMIN YMAX ZMIN ZMAX X2MIN X2MAX Z2MIN Z2MAX` accepts optional `X Y Z YAW PITCH ROLL`. `Set` accepts length units for wedge coordinates. Endpoint rectangles must have positive dimensions; cone azimuth is positive up to360degrees; sphere latitudes are ordered within-90..90 and azimuth is positive up to360degrees. Dedicated angle controls preserve original native features and history. Touch forms and native guides support English, Turkish and German, with839 reviewed Turkish/German entries.
 
-229 actual JNI checks plus6 fresh-JVM checks qualify analytic volumes, native source/radius/polygon/unit edits, original history, Undo/Redo, atomic rollback,22 malformed FCStd cases, original reopening and STEP. Saved integer validation rejects fractional and exponential text before native restoration. Ring torus radii require major>minor>0; prisms retain straight end angles. Additions must add connected material; cuts must remove material and retain one closed solid. Source64faces/256edges,64primitives and1,000,000mm world budgets remain enforced.
+204 actual JNI checks plus6 fresh-JVM checks qualify analytic wedge/sector volumes, source clipping and swallowing/no-op rollback, native dimension/units/history, Undo/Redo, atomic rollback,17 malformed FCStd cases, original reopening and STEP. Source64faces/256edges,64primitives, one connected closed solid, positive material change and1,000,000mm world budgets remain enforced.
 
-APK static verification:134 ARM64 libraries/extensions,1083 Python assets, API26 native dependency/strong-symbol closure,16KiB alignment and compatible v2/v3 signatures. Physical Android1.25 execution is NOT_RUN. Full desktop FreeCAD/Rhino/Gui/Assembly parity is NOT COMPLETE; F-Droid submission remains pending. Next wedge/cone-sector/sphere-segment native proofs are recorded; they are not mobile features in1.25. Ellipsoid measurement accuracy remains under investigation.
+APK static verification:134 ARM64 libraries/extensions,1083 Python assets, API26 native dependency/strong-symbol closure,16KiB alignment and compatible v2/v3 signatures. Physical Android1.26 execution is NOT_RUN. Full desktop FreeCAD/Rhino/Gui/Assembly parity is NOT COMPLETE; F-Droid submission remains pending. Adaptive volume/ellipsoid host research is saved for the next batch and is not a mobile feature in1.26.
 
-All existing native regressions pass:227round/280primitive/268attachment/299Datum/302Hole/310path/1509PartDesign/2324Sketcher/269Part/88App/62Python plus527locale/3resource/10packaging checks.
+All existing native regressions pass:229torus/prism/227round/280primitive/268attachment/299Datum/302Hole/310path/1509PartDesign/2324Sketcher/269Part/88App/62Python plus527locale/3resource/10packaging checks.

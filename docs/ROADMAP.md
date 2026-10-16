@@ -1,6 +1,6 @@
 # FreeCAD Mobile Lab — complete desktop parity roadmap
 
-Updated 16 October 2026. Current native checkpoint: **1.25 / code51**. Product1.0 was the first public mobile feature release. B01–B04 and the bounded original Part/Sketcher sub-batches below have host evidence; broader workbench/device parity and the original comprehensive qualification milestone remain **NOT COMPLETE**. The user previously reported startup works on their phone; automated execution of1.25 isNOT_RUN. English, Turkish and German UI/guides are supported. See LANGUAGES.md, RHINO-GAPS.md and RELEASE-SCOPE-1.0.md.
+Updated 16 October 2026. Current native checkpoint: **1.26 / code52**. Product1.0 was the first public mobile feature release. B01–B04 and the bounded original Part/Sketcher sub-batches below have host evidence; broader workbench/device parity and the original comprehensive qualification milestone remain **NOT COMPLETE**. The user previously reported startup works on their phone; automated execution of1.26 isNOT_RUN. English, Turkish and German UI/guides are supported. See LANGUAGES.md, RHINO-GAPS.md and RELEASE-SCOPE-1.0.md.
 
 ## Baseline and scope
 
@@ -231,3 +231,7 @@ Four original additive/subtractive Cone/Sphere scopes use native classes, protec
 ## 1.25 — original regular prism and ring torus Body features
 
 Original Additive/SubtractivePrism and Torus use native class dimensions/history.229JNI+6cold checks cover analytic regular polygons/rings, source and scalar/unit updates, native ownership/poses, Undo/atomic rollback,22malformedFCStd cases including integer fractions/exponents, true restoration and STEP. Ring radii require major>minor>0; Polygon is an integer3..32 with straight end defaults.822TR/DE UI entries and localized guides. SignedAPK/static134ELF1083Python/API26/16KiB/signatures pass; Android25NOT_RUN. Next wedges/round-sector host proofs31+23checks pass; mobile integration pending per NEXT-BATCH-1.26.md. Ellipsoid measurement precision remains unqualified. FullGui/Assembly/FreeCAD/Rhino/F-Droid gates remain open.
+
+## 1.26 — original wedges and cone/sphere angle controls
+
+Four scopes: native AdditiveWedge/SubtractiveWedge with signed/slanted endpoint rectangles, cone azimuth and sphere latitude/azimuth controls.204JNI+6cold checks qualify analytic source clipping, dimensions/units/history/world frames, positive material/no-op guards, Undo/atomic rollback,17malformedFCStd, true reopening and STEP.839TR/DE UI entries and localized guides.134ELF1083Python/API26/16KiB/signatures verified; Android26NOT_RUN. Degenerate wedges, ellipsoid/adaptive native mass, mapped/expressed primitives and fullGui/Assembly/FreeCAD/Rhino/F-Droid gates remain open. See NEXT-BATCH-1.27.md and recorded adaptive-volume research.

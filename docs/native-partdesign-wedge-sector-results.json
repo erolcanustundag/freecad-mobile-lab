@@ -1,0 +1,64 @@
+{
+  "version": "1.26",
+  "version_code": 52,
+  "freecad": "1.1.4",
+  "status": "HOST_REFERENCE_PASS_ANDROID_NOT_RUN",
+  "native_jni_checks": 204,
+  "cold_jvm_checks": 6,
+  "workflows": [
+    "original PartDesign::AdditiveWedge",
+    "original PartDesign::SubtractiveWedge",
+    "original native Cone azimuth control",
+    "original native Sphere latitude/azimuth control"
+  ],
+  "qualified": [
+    "analytic tapered wedges and signed/slanted endpoint rectangles",
+    "analytic additive/subtractive cone sectors and spherical segments",
+    "source clipping through wedge/cone/sphere and swallowing/no-op rollback",
+    "native source/dimension/units/history/Tip and Body placement",
+    "dedicated owned angle controls and protected direct setters",
+    "UndoRedo and atomic rollback",
+    "17malformedFCStd dimension/angle/pose/history cases",
+    "fresh JVM original-class restoration and native STEP roundtrip"
+  ],
+  "limits": {
+    "primitives_per_document": 64,
+    "source_faces": 64,
+    "source_edges": 256,
+    "world_coordinate_mm": 1000000,
+    "wedge": "positive ordered endpoint rectangles; signed finite coordinates and bounded spans",
+    "cone_azimuth": "0<Angle<=360",
+    "sphere": "-90<=Angle1<Angle2<=90;0<Angle3<=360",
+    "mapping": "original AttachEngine3D/Deactivated with identity offset"
+  },
+  "android_execution": "NOT_RUN",
+  "native_arm64_classes": "both original wedge class names present in unchanged packaged PartDesign library; static evidence only",
+  "pending": [
+    "degenerate wedge endpoint rectangles",
+    "native adaptive mass/ellipsoid qualification",
+    "other angular/mapped/expressed modes",
+    "Gui/Assembly/full FreeCAD/Rhino parity"
+  ],
+  "regressions": {
+    "torus_prism_jni": 229,
+    "torus_prism_cold": 6,
+    "round_primitive_jni": 227,
+    "round_primitive_cold": 6,
+    "primitive_jni": 280,
+    "primitive_cold": 6,
+    "attachment_jni": 268,
+    "attachment_cold": 10,
+    "datum_jni": 299,
+    "datum_cold": 13,
+    "hole_jni": 302,
+    "path_jni": 310,
+    "partdesign_jni": 1509,
+    "sketcher_jni": 2324,
+    "part_jni": 269,
+    "app_jni": 88,
+    "python_tools": 62,
+    "locale": 527,
+    "localization_resources": 3,
+    "runtime_packaging": 10
+  }
+}

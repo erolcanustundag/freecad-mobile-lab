@@ -1,0 +1,28 @@
+{
+  "status": "HOST_ADAPTIVE_VOLUME_RESEARCH_PASS_MOBILE_PENDING",
+  "checks": 6,
+  "observation": {
+    "default_volume": 8.37391650358653,
+    "adaptive_volume": 8.377580538266674,
+    "estimated_relative_error": 1.1657341579487537e-15,
+    "centroid": [
+      -3.537007212711326e-17,
+      -9.887923661172456e-17,
+      -5.3009243876746415e-17
+    ],
+    "analytic_volume": 8.377580409572781,
+    "native_python_volume": 8.373916503586532,
+    "absolute_adaptive_error": 1.2869389287573085e-07,
+    "absolute_default_error": 0.0036639059862508816,
+    "maximum_shape_tolerance_mm": 2e-07
+  },
+  "original_getter": "TopoShapePyImp.cpp getVolume calls default BRepGProp::VolumeProperties",
+  "research": "Adaptive OCCT integration improves the observed mass error. The remaining1.29e-7mm3 ideal-geometry discrepancy is recorded, not hidden or qualified as exact.",
+  "mobile_integration": "NOT_IMPLEMENTED",
+  "android_execution": "NOT_RUN",
+  "pending": [
+    "bounded Android native adapter and matching source/runtime checkpoints",
+    "integration error versus geometry tolerance and performance qualification",
+    "original additive/subtractive ellipsoid workflow qualification"
+  ]
+}
